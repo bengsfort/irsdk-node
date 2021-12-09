@@ -38,6 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:16.11.12"],
             ["bindings", "npm:1.5.0"],
             ["nan", "npm:2.15.0"],
+            ["node-gyp", "npm:8.4.1"],
             ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=ddd1e8"]
           ],
           "linkType": "SOFT",
@@ -538,6 +539,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:16.11.12"],
             ["bindings", "npm:1.5.0"],
             ["nan", "npm:2.15.0"],
+            ["node-gyp", "npm:8.4.1"],
             ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=ddd1e8"]
           ],
           "linkType": "SOFT",

@@ -1,4 +1,8 @@
 {
+  "include": [
+    "./src/*",
+    "./types/irsdk-node.d.ts",
+  ],
   "compilerOptions": {
     // Targets
     "target": "ESNext",
@@ -8,6 +12,14 @@
     // Sources
     "outDir": "./dist/",
     "rootDir": "./src/",
+    "baseUrl": ".",
+    "typeRoots": [
+      "types",
+      "node_modules/@types"
+    ],
+    "paths": {
+      "build/Release/irsdk-node": ["../build/Release/irsdk-node"]
+    },
 
     // Options
     "strict": true,
