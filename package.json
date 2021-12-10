@@ -16,11 +16,15 @@
   "packageManager": "yarn@3.1.0",
   "dependencies": {
     "bindings": "^1.5.0",
+    "module-alias": "^2.2.2",
     "nan": "^2.15.0"
   },
   "devDependencies": {
     "@types/node": "^16.11.12",
     "node-gyp": "^8.4.1",
     "typescript": "^4.5.2"
+  },
+  "_moduleAliases": {
+    "@release": "build/Release"
   }
 }

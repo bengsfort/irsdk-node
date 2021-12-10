@@ -1,5 +1,7 @@
-// @todo: add https://www.npmjs.com/package/module-alias
-// @see: https://github.com/microsoft/TypeScript/issues/10866
-import { world } from "build/Release/irsdk-node";
+import { NativeSDK } from "./bridge";
 
-console.log("Hello", world());
+console.log("Hello", NativeSDK);
+
+const instance = new NativeSDK();
+console.log("Do we have an instance?", instance);
+console.log("Is it initialized?", instance.init());

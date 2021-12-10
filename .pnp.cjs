@@ -37,6 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@types/node", "npm:16.11.12"],
             ["bindings", "npm:1.5.0"],
+            ["module-alias", "npm:2.2.2"],
             ["nan", "npm:2.15.0"],
             ["node-gyp", "npm:8.4.1"],
             ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=ddd1e8"]
@@ -538,6 +539,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["irsdk-node", "workspace:."],
             ["@types/node", "npm:16.11.12"],
             ["bindings", "npm:1.5.0"],
+            ["module-alias", "npm:2.2.2"],
             ["nan", "npm:2.15.0"],
             ["node-gyp", "npm:8.4.1"],
             ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=ddd1e8"]
@@ -696,6 +698,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/mkdirp-npm-1.0.4-37f6ef56b9-a96865108c.zip/node_modules/mkdirp/",
           "packageDependencies": [
             ["mkdirp", "npm:1.0.4"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["module-alias", [
+        ["npm:2.2.2", {
+          "packageLocation": "./.yarn/cache/module-alias-npm-2.2.2-576bd37c03-4b5543f834.zip/node_modules/module-alias/",
+          "packageDependencies": [
+            ["module-alias", "npm:2.2.2"]
           ],
           "linkType": "HARD",
         }]

@@ -4,3 +4,10 @@ NodeJS bindings for the iRacing SDK. Aims to provide a thin barrier of entry to 
 
 ## Getting started
 
+```ts
+
+import { iRacingSDK } from "irsdk-node";
+
+const sdk = new iRacingSDK();
+
+```

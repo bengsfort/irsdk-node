@@ -3,8 +3,10 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**",
                 "${workspaceFolder}/lib",
+                "${workspaceFolder}/src",
+                "${env:USERPROFILE}/AppData/Local/node-gyp/Cache/**",
+                "${workspaceFolder}/.yarn/**",
                 "${workspaceFolder}/.yarn/unplugged/nan-npm-2.15.0-505c98ef4d/node_modules/nan"
             ],
             "defines": [
