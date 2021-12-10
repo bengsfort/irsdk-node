@@ -7,6 +7,7 @@ Nan::Persistent<Function> iRacingSdkNode::constructor;
 iRacingSdkNode::iRacingSdkNode() : _init(true) {}
 iRacingSdkNode::~iRacingSdkNode() {}
 
+// Improve @see https://nodejs.org/api/addons.html#wrapping-c-objects
 // Boilerplate setup
 void iRacingSdkNode::Init(Local<Object> exports)
 {
@@ -16,7 +17,7 @@ void iRacingSdkNode::Init(Local<Object> exports)
   // Prepare constructor template
   v8::Local<v8::FunctionTemplate> tmpl = Nan::New<v8::FunctionTemplate>(New);
   tmpl->SetClassName(Nan::New("iRacingSdkNode").ToLocalChecked());
-  tmpl->InstanceTemplate()->SetInternalFieldCount(1);
+  tmpl->InstanceTemplate()->SetInternalFieldCount(0);
 
   // Prototype
   Nan::SetPrototypeMethod(tmpl, "init", GetInit);
