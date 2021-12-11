@@ -6,10 +6,14 @@
     "email": "bengsfort@gmail.com"
   },
   "scripts": {
-    "clean": "rm -rf build dist",
+    "clean": "rm -rf build dist && node-gyp clean",
     "build": "yarn build-cpp && yarn build-ts",
     "build-cpp": "node-gyp configure && node-gyp rebuild",
+    "build-cpp:debug": "node-gyp configure && node-gyp rebuild --debug",
     "build-ts": "tsc",
+    "build:debug": "yarn build-cpp:debug && yarn build-ts",
+    "watch": "tsc --watch",
+    "run-debug": "node ./dist/bridge-test.js",
     "prepare": "yarn build",
     "install": "yarn build-cpp"
   },

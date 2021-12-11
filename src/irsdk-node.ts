@@ -1,18 +1,26 @@
 import { NativeSDK } from "./bridge";
 
-// @todo: We'll have to make a TS class here first so that we don't expose the native functions.
-// That way we can add protection against doing dumb things, along with some nice helpers, such
-// as doing a `fetch` before allowing to start the SDK to ensure a session is actually running.
+export class iRacingSDK {
+  private _sdk: NativeSDK;
 
-const instance = new NativeSDK();
-console.log("Do we have an instance?", instance);
+  constructor() {
+    this._sdk = new NativeSDK();
+  }
 
-console.log("Is it initialized?", instance.isRunning());
-instance.defaultTimeout = 60;
+  /**
+   * The default amount of time to wait for new data from the SDK.
+   * @property {number}
+   * @default 30
+   */
+  public get defaultTimeout(): number {
+    return this._sdk.defaultTimeout;
+  }
+  public set defaultTimeout(value: number) {
+    this._sdk.defaultTimeout = value;
+  }
 
-const result = instance.startSDK();
-console.log("Attempted to start sdk", result);
-
-setTimeout(() => {
-    console.log("Initialized now?", instance.isRunning());
-}, 2500);
+  // @todo: Add more checks here (ie. `fetch` to see if session is running)
+  public get isRunning(): boolean {
+    return this._sdk.isRunning();
+  }
+}

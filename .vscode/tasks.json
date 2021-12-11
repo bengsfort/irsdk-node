@@ -1,0 +1,23 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build:debug",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [],
+			"label": "yarn: build:debug",
+			"detail": "yarn build-cpp:debug && yarn build-ts"
+		},
+    {
+      "type": "npm",
+      "script": "watch",
+      "group": "build",
+      "label": "yarn: watch",
+      "detail": "yarn watch",
+    }
+	]
+}

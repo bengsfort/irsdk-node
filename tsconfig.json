@@ -16,9 +16,6 @@
       "types",
       "node_modules/@types"
     ],
-    "paths": {
-      "@release/*": ["../build/Release/*"]
-    },
 
     // Options
     "allowJs": true,

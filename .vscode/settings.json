@@ -8,5 +8,6 @@
     "**/Thumbs.db": true,
     "build/**": true,
     ".yarn/**": true,
-  }
+  },
+  "npm.packageManager": "yarn"
 }

@@ -95,6 +95,7 @@ void iRacingSdkNode::StartSdk(const Nan::FunctionCallbackInfo<Value>& info)
 {
   if (!irsdk_isConnected()) {
     info.GetReturnValue().Set(irsdk_startup());
+    return;
   }
   info.GetReturnValue().Set(false);
 }
