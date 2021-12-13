@@ -3,6 +3,7 @@ import { SIM_STATUS_URI } from '../constants';
 
 /**
  * Makes an http localhots request to check whether or not the iRacing sim is running.
+ * If the iRacing service is not running, it will throw with `err.code === ECONNREFUSED`.
  *
  * @returns {Promise<boolean>} Whether the sim is running or not.
  * @throws {Error} A generic NodeJS.ErrnoException / Error if something goes wrong.
@@ -26,10 +27,6 @@ export const getSimStatus = (): Promise<boolean> => new Promise((resolve, reject
       resolve(data.includes('running:1'));
     });
   }).on('error', (err: NodeJS.ErrnoException) => {
-    // Sim/iRacing in general is not active
-    if (err.code === 'ECONNREFUSED') {
-      resolve(false);
-    }
     reject(err);
   });
 });
