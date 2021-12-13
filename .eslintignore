@@ -1,0 +1,5 @@
+node_modules
+dist
+.yarn
+src/bridge.js
+src/bridge.debug.js

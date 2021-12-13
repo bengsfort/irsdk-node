@@ -1,48 +1,17 @@
-import http from "http";
-// import { Stream } from "stream";
-
-import { NativeSDK } from "../bridge.debug";
-import { SIM_STATUS_URI } from "../constants";
+// Change 'bridge' to 'bridge.debug' in irsdk-node to enable debugging!
+import { IRacingSDK } from '../irsdk-node';
 
 // REMEMBER TO TURN TELEMETRY ON UNTIL WE SUPPORT AUTO TURNING IT ON!
 // ALT+L
-const instance = new NativeSDK();
+const instance = new IRacingSDK();
 
-const getSimStatus = () => {
-  return new Promise((resolve, reject) => {
-    http.get(SIM_STATUS_URI, (res) => {
-      console.log('statusCode:', res.statusCode);
-      console.log('headers:', res.headers);
-
-      let data = "";
-
-      res.on("data", (d) => {
-        data += d;
-      });
-
-      res.on("end", () => {
-        if (typeof data !== "string") {
-          reject(new Error("Invalid payload from sim received"));
-        }
-        // This could be done more elegantly, but there is no need really :D
-        resolve(data.includes('running:1'));
-      });
-    }).on('error', (err: NodeJS.ErrnoException) => {
-      // Sim/iRacing in general is not active
-      if (err.code === "ECONNREFUSED") {
-        resolve(false);
-      }
-      reject(err)
-    });
-  });
-};
-
-async function main() {
+async function main(): Promise<void> {
   instance.defaultTimeout = 60;
-  await getSimStatus();
+  const simRunning = await IRacingSDK.isSimRunning();
+  console.log('Is sim running?', simRunning);
 }
 
-main();
+void main();
 
 // console.log("Do we have an instance?", instance);
 
