@@ -6,8 +6,9 @@
                 "${workspaceFolder}/lib",
                 "${workspaceFolder}/src",
                 "${env:USERPROFILE}/AppData/Local/node-gyp/Cache/**",
+                "${workspaceFolder}/node_modules/**",
                 "${workspaceFolder}/.yarn/**",
-                "${workspaceFolder}/.yarn/unplugged/nan-npm-2.15.0-505c98ef4d/node_modules/nan"
+                "${workspaceFolder}/node_modules/nan"
             ],
             "defines": [
                 "_DEBUG",

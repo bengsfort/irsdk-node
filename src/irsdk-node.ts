@@ -1,4 +1,5 @@
 import { NativeSDK } from "./bridge";
+import { getSimStatus } from "./utils";
 
 export class iRacingSDK {
   private _sdk: NativeSDK;
@@ -17,6 +18,16 @@ export class iRacingSDK {
   }
   public set defaultTimeout(value: number) {
     this._sdk.defaultTimeout = value;
+  }
+
+  public async getSimStatus(): Promise<boolean> {
+    try {
+      const result = await getSimStatus();
+      return result;
+    } catch (e) {
+      console.error("Could not successfully determine sim status:", e);
+    }
+    return false;
   }
 
   // @todo: Add more checks here (ie. `fetch` to see if session is running)

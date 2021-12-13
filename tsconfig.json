@@ -17,10 +17,6 @@
     "outDir": "./dist/",
     "rootDir": "./src/",
     "baseUrl": ".",
-    "typeRoots": [
-      "types",
-      "node_modules/@types"
-    ],
 
     // Options
     "allowJs": true,

@@ -1,14 +1,13 @@
 import http from "http";
-// import { Stream } from "stream";
-
-import { NativeSDK } from "../bridge.debug";
 import { SIM_STATUS_URI } from "../constants";
 
-// REMEMBER TO TURN TELEMETRY ON UNTIL WE SUPPORT AUTO TURNING IT ON!
-// ALT+L
-const instance = new NativeSDK();
-
-const getSimStatus = () => {
+/**
+ * Makes an http localhots request to check whether or not the iRacing sim is running.
+ * 
+ * @returns {Promise<boolean>} Whether the sim is running or not.
+ * @throws {Error} A generic NodeJS.ErrnoException / Error if something goes wrong.
+ */
+export const getSimStatus = (): Promise<boolean> => {
   return new Promise((resolve, reject) => {
     http.get(SIM_STATUS_URI, (res) => {
       console.log('statusCode:', res.statusCode);
@@ -36,23 +35,3 @@ const getSimStatus = () => {
     });
   });
 };
-
-async function main() {
-  instance.defaultTimeout = 60;
-  await getSimStatus();
-}
-
-main();
-
-// console.log("Do we have an instance?", instance);
-
-// console.log("Is it initialized?", instance.isRunning());
-// instance.defaultTimeout = 60;
-
-// if ()
-// const result = instance.startSDK();
-// console.log("Attempted to start sdk", result);
-
-// setTimeout(() => {
-//     console.log("Initialized now?", instance.isRunning());
-// }, 2500);
