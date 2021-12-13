@@ -1,12 +1,17 @@
 {
   "include": [
     "./src/*",
+    "./src/**/*"
   ],
   "compilerOptions": {
     // Targets
     "target": "ESNext",
     "module": "CommonJS",
     "declaration": true,
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
 
     // Sources
     "outDir": "./dist/",
