@@ -136,12 +136,6 @@ void iRacingSdkNode::GetTelemetryData(const Nan::FunctionCallbackInfo<v8::Value>
   info.GetReturnValue().Set(true);
 }
 
-// void iRacingSdkNode::GetInit(const Nan::FunctionCallbackInfo<Value>& info)
-// {
-//   iRacingSdkNode* obj = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
-//   info.GetReturnValue().Set(Nan::New(obj->_init));
-// }
-
 // Addon initialization
 void InitAddon(Local<Object> exports)
 {

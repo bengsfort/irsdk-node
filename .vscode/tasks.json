@@ -19,5 +19,19 @@
       "label": "yarn: watch",
       "detail": "yarn watch",
     }
+    {
+      "type": "npm",
+      "script": "test-active-sim",
+      "group": "test",
+      "label": "yarn: active sim tests",
+      "detail": "yarn test-active-sim"
+    },
+    {
+      "type": "npm",
+      "script": "test-inactive-sim",
+      "group": "test",
+      "label": "yarn: inactive sim tests",
+      "detail": "yarn test-inactive-sim"
+    }
 	]
 }

@@ -10,9 +10,6 @@ import { SIM_STATUS_URI } from '../constants';
  */
 export const getSimStatus = (): Promise<boolean> => new Promise((resolve, reject) => {
   http.get(SIM_STATUS_URI, (res) => {
-    console.log('statusCode:', res.statusCode);
-    console.log('headers:', res.headers);
-
     let data = '';
 
     res.on('data', (d) => {
