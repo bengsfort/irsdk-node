@@ -13,6 +13,7 @@
     "build-ts": "tsc",
     "build:debug": "yarn build-cpp:debug && yarn build-ts",
     "watch": "tsc --watch",
+    "prewatch": "yarn build && yarn watch",
     "run-debug": "node ./dist/tests/bridge-test.js",
     "lint": "eslint ./src --ext .js,.ts",
     "prepare": "yarn build",
