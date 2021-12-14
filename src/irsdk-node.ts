@@ -1,4 +1,7 @@
 import { NativeSDK } from './bridge.debug';
+import {
+  BroadcastMessages, CameraState, ChatCommand, FFBCommand, PitCommand, ReloadTexturesCommand, ReplayPositionCommand, ReplaySearchCommand, ReplayStateCommand, TelemetryCommand, VideoCaptureCommand,
+} from './constants';
 import { getSimStatus } from './utils';
 
 export class IRacingSDK {
@@ -63,5 +66,99 @@ export class IRacingSDK {
       return true;
     }
     return true;
+  }
+
+  // Broadcast commands
+  // @todo: Some commands need to be more thoroughly tested (unsure of correct types)
+  public enableTelemetry(enabled: boolean): void {
+    const command = enabled ? TelemetryCommand.Start : TelemetryCommand.Stop;
+    this._sdk.broadcast(BroadcastMessages.TelemCommand, command);
+  }
+
+  public restartTelemetry(): void {
+    this._sdk.broadcast(BroadcastMessages.TelemCommand, TelemetryCommand.Restart);
+  }
+
+  public changeCameraPosition(position: number, group: number, camera: number): void {
+    this._sdk.broadcast(BroadcastMessages.CameraSwitchPos, position, group, camera);
+  }
+
+  // @todo: (Native) does driver need to be padded? (ie. #001 instead of 1)
+  public changeCameraNumber(driver: number, group: number, camera: number): void {
+    this._sdk.broadcast(BroadcastMessages.CameraSwitchNum, driver, group, camera);
+  }
+
+  public changeCameraState(state: CameraState): void {
+    this._sdk.broadcast(BroadcastMessages.CameraSetState, state);
+  }
+
+  // @todo: Figure out wtf slowMotion should be (ie. 0.5? 0.25? speed has to be an int...)
+  public changeReplaySpeed(speed: number, slowMotion: number): void {
+    this._sdk.broadcast(BroadcastMessages.ReplaySetPlaySpeed, speed, slowMotion);
+  }
+
+  // @todo: Is frame ACTUALLY a float?
+  public changeReplayPosition(position: ReplayPositionCommand, frame: number): void {
+    this._sdk.broadcast(BroadcastMessages.ReplaySetPlayPosition, position, frame);
+  }
+
+  public searchReplay(command: ReplaySearchCommand): void {
+    this._sdk.broadcast(BroadcastMessages.ReplaySearch, command);
+  }
+
+  public changeReplayState(state: ReplayStateCommand): void {
+    this._sdk.broadcast(BroadcastMessages.ReplaySetState, state);
+  }
+
+  public triggerReplaySessionSearch(session: number, time: number): void {
+    this._sdk.broadcast(BroadcastMessages.ReplaySearchSessionTime, session, time);
+  }
+
+  public reloadAllTextures(): void {
+    this._sdk.broadcast(BroadcastMessages.ReloadTextures, ReloadTexturesCommand.All, 0);
+  }
+
+  // @todo: (Native) does car need to be padded? (ie. #001 instead of 1)
+  public reloadCarTextures(car: number): void {
+    this._sdk.broadcast(BroadcastMessages.ReloadTextures, ReloadTexturesCommand.CarIndex, car);
+  }
+
+  public triggerChatState(state: ChatCommand.BeginChat | ChatCommand.Cancel | ChatCommand.Reply): void {
+    this._sdk.broadcast(BroadcastMessages.ChatCommand, state, 1);
+  }
+
+  /**
+   * @param {number} macro Between 1 - 15
+   */
+  public triggerChatMacro(macro: number): void {
+    const clamped = Math.min(15, Math.max(1, macro));
+    this._sdk.broadcast(BroadcastMessages.ChatCommand, ChatCommand.Macro, clamped);
+  }
+
+  public triggerPitClearCommand(
+    command: PitCommand.Clear | PitCommand.ClearTires | PitCommand.ClearWS | PitCommand.ClearFR | PitCommand.ClearFuel,
+  ): void {
+    this._sdk.broadcast(BroadcastMessages.PitCommand, command);
+  }
+
+  public triggerPitCommand(
+    command: PitCommand.WS | PitCommand.FR,
+  ): void {
+    this._sdk.broadcast(BroadcastMessages.PitCommand, command);
+  }
+
+  public triggerPitChange(
+    command: PitCommand.Fuel | PitCommand.LF | PitCommand.RF | PitCommand.LR | PitCommand.RR,
+    amount: number,
+  ): void {
+    this._sdk.broadcast(BroadcastMessages.PitCommand, command, amount);
+  }
+
+  public changeFFB(mode: FFBCommand, amount: number): void {
+    this._sdk.broadcast(BroadcastMessages.FFBCommand, mode, amount);
+  }
+
+  public triggerVideoCapture(command: VideoCaptureCommand): void {
+    this._sdk.broadcast(BroadcastMessages.VideoCapture, command);
   }
 }

@@ -28,6 +28,8 @@ private:
     static void GetSessionData(const Nan::FunctionCallbackInfo<v8::Value>& info);
     static void GetTelemetryData(const Nan::FunctionCallbackInfo<v8::Value>& info);
 
+    static NAN_METHOD(BroadcastMessage);
+
     // @todo: prob need to refactor these so we can have different instances
     static char* _irsdkData;
     static int _irsdkDataLen;

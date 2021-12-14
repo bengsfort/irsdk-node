@@ -15,45 +15,45 @@ export enum BroadcastMessages {
   /** Enter replay search mode. */
   ReplaySearch,
   /** Change the replay state.  */
-	ReplaySetState,
+  ReplaySetState,
   /** Trigger a texture reload. */
-	ReloadTextures,
+  ReloadTextures,
   /** Broadcast a chat command. */
-	ChatCommand,
+  ChatCommand,
   /** Broadcast a pit command. */
-	PitCommand,
+  PitCommand,
   /** Broadcast a telemetry command. */
-	TelemCommand,
+  TelemCommand,
   /** Broadcast a force feedback command. */
-	FFBCommand,
+  FFBCommand,
   /** Trigger searching to a replay time. */
-	ReplaySearchSessionTime,
+  ReplaySearchSessionTime,
   /** Trigger video capture. */
-	VideoCapture,
+  VideoCapture,
   /** Unused. */
-	Last
+  Last
 }
 
 export enum CameraState {
   /** the camera tool can only be activated if viewing the session screen (out of car) */
   irsdk_IsSessionScreen = 0x0001,
   /** the scenic camera is active (no focus car) */
-	irsdk_IsScenicActive = 0x0002,
+  irsdk_IsScenicActive = 0x0002,
 
-	/** CAN be changed with a broadcast message */
-	irsdk_CamToolActive = 0x0004,
   /** CAN be changed with a broadcast message */
-	irsdk_UIHidden = 0x0008,
+  irsdk_CamToolActive = 0x0004,
   /** CAN be changed with a broadcast message */
-	irsdk_UseAutoShotSelection = 0x0010,
+  irsdk_UIHidden = 0x0008,
   /** CAN be changed with a broadcast message */
-	irsdk_UseTemporaryEdits = 0x0020,
+  irsdk_UseAutoShotSelection = 0x0010,
   /** CAN be changed with a broadcast message */
-	irsdk_UseKeyAcceleration = 0x0040,
+  irsdk_UseTemporaryEdits = 0x0020,
   /** CAN be changed with a broadcast message */
-	irsdk_UseKey10xAcceleration = 0x0080,
+  irsdk_UseKeyAcceleration = 0x0040,
   /** CAN be changed with a broadcast message */
-	irsdk_UseMouseAimMode = 0x0100,
+  irsdk_UseKey10xAcceleration = 0x0080,
+  /** CAN be changed with a broadcast message */
+  irsdk_UseMouseAimMode = 0x0100,
 }
 
 export enum ChatCommand {
@@ -72,43 +72,43 @@ export enum PitCommand {
   /** Clear all pit checkboxes */
   Clear = 0,
   /** Clean the winshield, using one tear off */
-	WS,
+  WS,
   /** Add fuel, optionally specify the amount to add in liters or pass '0' to use existing amount */
-	Fuel,
+  Fuel,
   /** Change the left front tire, optionally specifying the pressure in KPa or pass '0' to use existing pressure */
-	LF,
+  LF,
   /** right front */
-	RF,
+  RF,
   /** left rear */
-	LR,
+  LR,
   /** right rear */
-	RR,
+  RR,
   /** Clear tire pit checkboxes */
-	ClearTires,
+  ClearTires,
   /** Request a fast repair */
-	FR,
+  FR,
   /** Uncheck Clean the windshield checkbox */
-	ClearWS,
+  ClearWS,
   /** Uncheck request a fast repair */
-	ClearFR,
+  ClearFR,
   /** Uncheck add fuel */
-	ClearFuel,
+  ClearFuel,
 }
 
 export enum TelemetryCommand {
   /** Turn telemetry recording off */
   Stop = 0,
   /** Turn telemetry recording on */
-	Start,
+  Start,
   /** Write current file to disk and start a new one */
-	Restart,
+  Restart,
 }
 
 export enum ReplayStateCommand {
   /** clear any data in the replay tape */
-	EraseTape = 0,
+  EraseTape = 0,
   /** unused place holder */
-	Last,
+  Last,
 }
 
 export enum ReloadTexturesCommand {
@@ -122,25 +122,25 @@ export enum ReplaySearchCommand {
   /** Start of session */
   ToStart = 0,
   /** End of session */
-	ToEnd,
+  ToEnd,
   /** Previous session */
-	PrevSession,
+  PrevSession,
   /** Next session */
-	NextSession,
+  NextSession,
   /** Previous lap */
-	PrevLap,
+  PrevLap,
   /** Next lap */
-	NextLap,
+  NextLap,
   /** Previous frame */
-	PrevFrame,
+  PrevFrame,
   /** Next frame */
-	NextFrame,
+  NextFrame,
   /** Previous incident */
-	PrevIncident,
+  PrevIncident,
   /** Next incident */
-	NextIncident,
+  NextIncident,
   /** Unused */
-	Last,
+  Last,
 }
 
 export enum ReplayPositionCommand {
@@ -168,25 +168,23 @@ export enum FFBCommand {
  */
 export enum CameraFocusCommand {
   FocusAtIncident = -3,
-	FocusAtLeader = -2,
-	FocusAtExiting = -1,
-	/** FocusAtDriver + car number... */
-	FocusAtDriver = 0,
+  FocusAtLeader = -2,
+  FocusAtExiting = -1,
+  /** FocusAtDriver + car number... */
+  FocusAtDriver = 0,
 }
 
 export enum VideoCaptureCommand {
   /** save a screenshot to disk */
   TriggerScreenShot = 0,
   /** start capturing video */
-	StartVideoCapture,
+  StartVideoCapture,
   /** stop capturing video */
-	EndVideoCapture,
+  EndVideoCapture,
   /** toggle video capture on/off */
-	ToggleVideoCapture,
+  ToggleVideoCapture,
   /** show video timer in upper left corner of display */
-	ShowVideoTimer,
+  ShowVideoTimer,
   /** hide video timer */
-	HideVideoTimer,
+  HideVideoTimer,
 }
-
-

@@ -43,6 +43,7 @@ void iRacingSdkNode::Init(Local<Object> exports)
   Nan::SetPrototypeMethod(tmpl, "getHeader", GetHeader);
   Nan::SetPrototypeMethod(tmpl, "getSessionData", GetSessionData);
   Nan::SetPrototypeMethod(tmpl, "getTelemetryData", GetTelemetryData);
+  Nan::SetPrototypeMethod(tmpl, "broadcast", BroadcastMessage);
 
   // Create export
   constructor.Reset(tmpl->GetFunction(context).ToLocalChecked());
@@ -131,8 +132,70 @@ void iRacingSdkNode::GetSessionData(const Nan::FunctionCallbackInfo<v8::Value>& 
 {
   info.GetReturnValue().Set(true);
 }
+
 void iRacingSdkNode::GetTelemetryData(const Nan::FunctionCallbackInfo<v8::Value>& info)
 {
+  info.GetReturnValue().Set(true);
+}
+
+// Broadcasting
+NAN_METHOD(iRacingSdkNode::BroadcastMessage)
+{
+  iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
+
+  // Determine message type
+  Nan::Maybe<int> msgEnumIndex = Nan::To<int>(info[0]);
+  irsdk_BroadcastMsg msgType = static_cast<irsdk_BroadcastMsg>(msgEnumIndex.FromJust());
+
+  // Args
+  int arg1 = Nan::To<int>(info[1]).FromJust();
+  Local<Number> arg2 = info[2].As<Number>();
+  Nan::Maybe<int> arg3 = Nan::To<int>(info[3]);
+
+  // these defs are in irsdk_defines.cpp
+  // @todo: Do we need to use irsdk_padCarNum() to encode car nums? ie do they need to be #001?
+  switch (msgType)
+  {
+  // irsdk_BroadcastMsg msg, int arg1, int arg2, int var3
+  case irsdk_BroadcastCamSwitchPos:
+  case irsdk_BroadcastCamSwitchNum:
+    printf("BroadcastMessage(msgType: %d, arg1: %d, arg2: %d, arg3: %d)\n", msgType, arg1, Nan::To<int>(arg2).FromMaybe(1), arg3.FromMaybe(-1));
+    irsdk_broadcastMsg(msgType, arg1, Nan::To<int>(arg2).FromMaybe(1), arg3.FromMaybe(-1));
+    break;
+  
+  // irsdk_BroadcastMsg msg, int arg1, int unused, int unused
+  case irsdk_BroadcastReplaySearch: // arg1 == irsdk_RpySrchMode
+  case irsdk_BroadcastReplaySetState: // arg1 == irsdk_RpyStateMode
+  case irsdk_BroadcastCamSetState: // arg1 == irsdk_CameraState
+  case irsdk_BroadcastTelemCommand: // arg1 == irsdk_TelemCommandMode
+  case irsdk_BroadcastVideoCapture: // arg1 == irsdk_VideoCaptureMode
+    printf("BroadcastMessage(msgType: %d, arg1: %d, arg2: -1, arg3: -1)\n", msgType, arg1);
+    irsdk_broadcastMsg(msgType, arg1, -1, -1);
+    break;
+
+  // irsdk_BroadcastMsg msg, int arg1, int arg2, int unused
+  case irsdk_BroadcastReloadTextures: // arg1 == irsdk_ReloadTexturesMode
+  case irsdk_BroadcastChatComand: // arg1 == irsdk_ChatCommandMode
+  case irsdk_BroadcastReplaySetPlaySpeed:
+    printf("BroadcastMessage(msgType: %d, arg1: %d, arg2: %d, arg3: -1)\n", msgType, arg1, Nan::To<int>(arg2).FromMaybe(1));
+    irsdk_broadcastMsg(msgType, arg1, Nan::To<int>(arg2).FromMaybe(1), -1);
+    break;
+  
+  // irsdk_BroadcastMsg msg, int arg1, float arg2
+  case irsdk_BroadcastPitCommand: // arg1 == irsdk_PitCommandMode
+  case irsdk_BroadcastFFBCommand: // arg1 == irsdk_FFBCommandMode
+  case irsdk_BroadcastReplaySearchSessionTime:
+  case irskd_BroadcastReplaySetPlayPosition:
+    printf("BroadcastMessage(msgType: %d, arg1: %d, arg2: %f)\n", msgType, arg1, (float) Nan::To<double>(arg2).FromMaybe(1));
+    irsdk_broadcastMsg(msgType, arg1, (float) Nan::To<double>(arg2).FromMaybe(1));
+    break;
+
+  default:
+    printf("Attempted to broadcast an unsupported message.");
+    info.GetReturnValue().Set(false);
+    return;
+  }
+
   info.GetReturnValue().Set(true);
 }
 
