@@ -30,7 +30,7 @@ private:
 
     static NAN_METHOD(BroadcastMessage);
 
-    // @todo: prob need to refactor these so we can have different instances
+    // @todo: add support for dumping data to a file + loading from file
     static char* _irsdkData;
     static int _irsdkDataLen;
     int _defaultTimeout;

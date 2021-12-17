@@ -39,7 +39,6 @@ export enum CameraState {
   irsdk_IsSessionScreen = 0x0001,
   /** the scenic camera is active (no focus car) */
   irsdk_IsScenicActive = 0x0002,
-
   /** CAN be changed with a broadcast message */
   irsdk_CamToolActive = 0x0004,
   /** CAN be changed with a broadcast message */

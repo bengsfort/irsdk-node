@@ -20,6 +20,8 @@ export class IRacingSDK {
 
   constructor() {
     this._sdk = new NativeSDK();
+    this._sdk.startSDK();
+    IRacingSDK.isSimRunning();
   }
 
   /**
@@ -68,8 +70,25 @@ export class IRacingSDK {
     return true;
   }
 
+  /**
+   * Wait for new data from the sdk.
+   * @param {number} timeout Timeout (in ms). Max is 60fps (1/60)
+   */
+  public waitForData(timeout?: number): boolean {
+    console.log("javascript waitForData before call");
+    const success = this._sdk.waitForData(timeout);
+    console.log("javascript waitForData after call", success);
+    return success;
+  }
+
+  /**
+   * Gets the current session data.
+   */
+  public getSessionData(): string {
+    return this._sdk.getSessionData();
+  }
+
   // Broadcast commands
-  // @todo: Some commands need to be more thoroughly tested (unsure of correct types)
   public enableTelemetry(enabled: boolean): void {
     const command = enabled ? TelemetryCommand.Start : TelemetryCommand.Stop;
     this._sdk.broadcast(BroadcastMessages.TelemCommand, command);
@@ -83,7 +102,7 @@ export class IRacingSDK {
     this._sdk.broadcast(BroadcastMessages.CameraSwitchPos, position, group, camera);
   }
 
-  // @todo: (Native) does driver need to be padded? (ie. #001 instead of 1)
+  // @todo: needs to be padded
   public changeCameraNumber(driver: number, group: number, camera: number): void {
     this._sdk.broadcast(BroadcastMessages.CameraSwitchNum, driver, group, camera);
   }
@@ -92,12 +111,10 @@ export class IRacingSDK {
     this._sdk.broadcast(BroadcastMessages.CameraSetState, state);
   }
 
-  // @todo: Figure out wtf slowMotion should be (ie. 0.5? 0.25? speed has to be an int...)
-  public changeReplaySpeed(speed: number, slowMotion: number): void {
-    this._sdk.broadcast(BroadcastMessages.ReplaySetPlaySpeed, speed, slowMotion);
+  public changeReplaySpeed(speed: number, slowMotion: boolean): void {
+    this._sdk.broadcast(BroadcastMessages.ReplaySetPlaySpeed, speed, slowMotion ? 1 : 0);
   }
 
-  // @todo: Is frame ACTUALLY a float?
   public changeReplayPosition(position: ReplayPositionCommand, frame: number): void {
     this._sdk.broadcast(BroadcastMessages.ReplaySetPlayPosition, position, frame);
   }
@@ -118,7 +135,6 @@ export class IRacingSDK {
     this._sdk.broadcast(BroadcastMessages.ReloadTextures, ReloadTexturesCommand.All, 0);
   }
 
-  // @todo: (Native) does car need to be padded? (ie. #001 instead of 1)
   public reloadCarTextures(car: number): void {
     this._sdk.broadcast(BroadcastMessages.ReloadTextures, ReloadTexturesCommand.CarIndex, car);
   }

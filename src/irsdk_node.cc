@@ -1,11 +1,12 @@
 #include "./irsdk_node.h"
 #include "../lib/irsdk_defines.h"
+#include "../lib/irsdk_client.h"
 
 using namespace v8;
 
 Nan::Persistent<Function> iRacingSdkNode::constructor;
 
-iRacingSdkNode::iRacingSdkNode() : _defaultTimeout(30) {}
+iRacingSdkNode::iRacingSdkNode() : _defaultTimeout(16) {}
 iRacingSdkNode::~iRacingSdkNode()
 {
   // Just in case...
@@ -109,7 +110,7 @@ void iRacingSdkNode::StopSdk(const Nan::FunctionCallbackInfo<Value>& info)
 
 void iRacingSdkNode::IsRunning(const Nan::FunctionCallbackInfo<Value>& info)
 {
-  info.GetReturnValue().Set(irsdk_isConnected());
+  info.GetReturnValue().Set(irsdkClient::instance().isConnected());
 }
 
 void iRacingSdkNode::WaitForData(const Nan::FunctionCallbackInfo<Value>& info)
@@ -119,7 +120,14 @@ void iRacingSdkNode::WaitForData(const Nan::FunctionCallbackInfo<Value>& info)
   // Figure out the time to wait
   // This will default to the timeout set on the class
   const Nan::Maybe<int> timeout = Nan::To<int>(info[0]);
-  bool result = irsdk_waitForDataReady(timeout.FromMaybe(holder->_defaultTimeout), _irsdkData);
+  if (!irsdkClient::instance().isConnected()) {
+    irsdk_startup();
+  }
+  
+  // @todo: try to do this async instead
+  printf("Attempting to wait for data (timeout: %d)", timeout.FromMaybe(holder->_defaultTimeout));
+  irsdkClient::instance().waitForData(timeout.FromMaybe(holder->_defaultTimeout));
+  printf("done!");
 }
 
 // Data getters
@@ -130,7 +138,8 @@ void iRacingSdkNode::GetHeader(const Nan::FunctionCallbackInfo<v8::Value>& info)
 
 void iRacingSdkNode::GetSessionData(const Nan::FunctionCallbackInfo<v8::Value>& info)
 {
-  info.GetReturnValue().Set(true);
+  const char* sessionData = irsdkClient::instance().getSessionStr();
+  info.GetReturnValue().Set(Nan::New(sessionData).ToLocalChecked());
 }
 
 void iRacingSdkNode::GetTelemetryData(const Nan::FunctionCallbackInfo<v8::Value>& info)
@@ -153,11 +162,10 @@ NAN_METHOD(iRacingSdkNode::BroadcastMessage)
   Nan::Maybe<int> arg3 = Nan::To<int>(info[3]);
 
   // these defs are in irsdk_defines.cpp
-  // @todo: Do we need to use irsdk_padCarNum() to encode car nums? ie do they need to be #001?
   switch (msgType)
   {
   // irsdk_BroadcastMsg msg, int arg1, int arg2, int var3
-  case irsdk_BroadcastCamSwitchPos:
+  case irsdk_BroadcastCamSwitchPos: // @todo we need to use irsdk_padCarNum for arg1
   case irsdk_BroadcastCamSwitchNum:
     printf("BroadcastMessage(msgType: %d, arg1: %d, arg2: %d, arg3: %d)\n", msgType, arg1, Nan::To<int>(arg2).FromMaybe(1), arg3.FromMaybe(-1));
     irsdk_broadcastMsg(msgType, arg1, Nan::To<int>(arg2).FromMaybe(1), arg3.FromMaybe(-1));

@@ -17,7 +17,7 @@ export class NativeSDK {
 
   getHeader(): boolean;
 
-  getSessionData(): boolean;
+  getSessionData(): string;
 
   getTelemetryData(): boolean;
 
