@@ -1,6 +1,7 @@
 # Build
 dist
 build
+out
 
 # Yarn
 /.yarn/*

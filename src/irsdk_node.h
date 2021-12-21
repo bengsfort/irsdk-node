@@ -2,6 +2,8 @@
 #define IRSDK_NODE_H
 
 #include <nan.h>
+#include "../lib/irsdk_defines.h"
+#include "../lib/irsdk_client.h"
 
 class iRacingSdkNode : public Nan::ObjectWrap
 {
@@ -31,8 +33,7 @@ private:
     static NAN_METHOD(BroadcastMessage);
 
     // @todo: add support for dumping data to a file + loading from file
-    static char* _irsdkData;
-    static int _irsdkDataLen;
+    static irsdkCVar* _telemVars;
     int _defaultTimeout;
 };
 

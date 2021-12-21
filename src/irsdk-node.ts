@@ -88,6 +88,10 @@ export class IRacingSDK {
     return this._sdk.getSessionData();
   }
 
+  public getTelemetry(): string {
+    return this._sdk.getTelemetryData();
+  }
+
   // Broadcast commands
   public enableTelemetry(enabled: boolean): void {
     const command = enabled ? TelemetryCommand.Start : TelemetryCommand.Stop;

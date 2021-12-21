@@ -1,6 +1,4 @@
 #include "./irsdk_node.h"
-#include "../lib/irsdk_defines.h"
-#include "../lib/irsdk_client.h"
 
 using namespace v8;
 
@@ -13,8 +11,7 @@ iRacingSdkNode::~iRacingSdkNode()
   irsdk_shutdown();
 }
 
-char* iRacingSdkNode::_irsdkData = NULL;
-int iRacingSdkNode::_irsdkDataLen = 0;
+irsdkCVar* iRacingSdkNode::_telemVars = new irsdkCVar();
 
 // Improve @see https://nodejs.org/api/addons.html#wrapping-c-objects
 // Boilerplate setup
@@ -95,11 +92,11 @@ NAN_SETTER(iRacingSdkNode::SetDefaultTimeout)
 // Control
 void iRacingSdkNode::StartSdk(const Nan::FunctionCallbackInfo<Value>& info)
 {
-  if (!irsdk_isConnected()) {
+  if (!irsdkClient::instance().isConnected()) {
     info.GetReturnValue().Set(irsdk_startup());
     return;
   }
-  info.GetReturnValue().Set(false);
+  info.GetReturnValue().Set(true);
 }
 
 void iRacingSdkNode::StopSdk(const Nan::FunctionCallbackInfo<Value>& info)
@@ -144,7 +141,82 @@ void iRacingSdkNode::GetSessionData(const Nan::FunctionCallbackInfo<v8::Value>& 
 
 void iRacingSdkNode::GetTelemetryData(const Nan::FunctionCallbackInfo<v8::Value>& info)
 {
-  info.GetReturnValue().Set(true);
+  Local<Context> context = Nan::GetCurrentContext();
+  const irsdk_header* header = irsdk_getHeader();
+
+  auto telemVars = Nan::New<Object>();
+  auto telemEntry = Nan::New<Object>();
+  const irsdk_varHeader *headerVar;
+
+  bool boolVal;
+  int32_t intVal;
+  float floatVal;
+  double doubleVal;
+
+  int count = header->numVars;
+  for (int i = 0; i < count; i++) {
+    headerVar = irsdk_getVarHeaderEntry(i);
+
+    // Create entry object
+    telemEntry->Set(context,
+                    Nan::New("countAsTime").ToLocalChecked(),
+                    Nan::New(headerVar->countAsTime));
+    telemEntry->Set(context,
+                    Nan::New("length").ToLocalChecked(),
+                    Nan::New(headerVar->count));
+    telemEntry->Set(context,
+                    Nan::New("name").ToLocalChecked(),
+                    Nan::New(headerVar->name).ToLocalChecked());
+    telemEntry->Set(context,
+                    Nan::New("description").ToLocalChecked(),
+                    Nan::New(headerVar->desc).ToLocalChecked());
+    telemEntry->Set(context,
+                    Nan::New("unit").ToLocalChecked(),
+                    Nan::New(headerVar->unit).ToLocalChecked());
+    telemEntry->Set(context,
+                    Nan::New("varType").ToLocalChecked(),
+                    Nan::New(headerVar->type));
+    
+    // @todo: these are not correct. (bools are, all numbers are not)
+    if (headerVar->count == 1) {
+      switch(headerVar->type)
+      {
+        case irsdk_VarType::irsdk_bool:
+          boolVal = irsdkClient::instance().getVarBool(i, 0);
+          printf("Got bool: %d\n", boolVal);
+          telemEntry->Set(context,
+                      Nan::New("value").ToLocalChecked(),
+                      Nan::New(boolVal));
+          break;
+        case irsdk_VarType::irsdk_int:
+          intVal = irsdkClient::instance().getVarInt(i, 0);
+          printf("Got int: %d\n", intVal);
+          telemEntry->Set(context,
+                      Nan::New("value").ToLocalChecked(),
+                      Nan::New(intVal));
+          break;
+        case irsdk_VarType::irsdk_float:
+          floatVal = irsdkClient::instance().getVarFloat(i, 0);
+          printf("Got float: %f\n", floatVal);
+          telemEntry->Set(context,
+                      Nan::New("value").ToLocalChecked(),
+                      Nan::New(floatVal));
+          break;
+        case irsdk_VarType::irsdk_double:
+          doubleVal = irsdkClient::instance().getVarDouble(i, 0);
+          printf("Got double: %f\n", doubleVal);
+          telemEntry->Set(context,
+                      Nan::New("value").ToLocalChecked(),
+                      Nan::New(doubleVal));
+          break;
+      }
+    }
+
+    printf("index: %d\tname: %s\n", i, irsdk_getVarHeaderEntry(i)->name);
+    telemVars->Set(context, Nan::New(headerVar->name).ToLocalChecked(), telemEntry->Clone());
+  }
+
+  info.GetReturnValue().Set(telemVars);
 }
 
 // Broadcasting

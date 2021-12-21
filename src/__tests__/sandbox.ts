@@ -5,10 +5,12 @@ function loop(sdk: IRacingSDK) {
   console.log("session status ok?", sdk.sessionStatusOK);
   const timeout = Math.floor(1000);
   const wait = sdk.waitForData(timeout);
-  if (sdk.sessionStatusOK) {
-    const data = sdk.getSessionData();
-    console.log("Data:", data);
-  }
+  // if (sdk.sessionStatusOK) {
+    // const data = sdk.getSessionData();
+    // console.log("Data:", data);
+    const data = sdk.getTelemetry();
+    console.log("getTelemetry data:", data);
+  // }
   console.log("Wait complete", wait);
 }
 

@@ -19,7 +19,7 @@ export class NativeSDK {
 
   getSessionData(): string;
 
-  getTelemetryData(): boolean;
+  getTelemetryData(): string;
 
   // Broadcast command overloads
   // This is handled in the cpp side so no need to mess with it in js

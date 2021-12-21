@@ -9,8 +9,8 @@
             "type": "lldb",
             "request": "launch",
             "program": "node",
-            "args": ["${workspaceFolder}/dist/bridge-test.js"],
-            "preLaunchTask": "yarn: build:debug"
+            "args": ["${workspaceFolder}/dist/__tests__/dump-data.js", "out/active-telem-debug.txt"],
+            // "preLaunchTask": "yarn: build:debug"
         }
     ]
 }
