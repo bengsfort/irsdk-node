@@ -34,7 +34,12 @@ private:
 
     // @todo: add support for dumping data to a file + loading from file
     static irsdkCVar* _telemVars;
+
     int _defaultTimeout;
+    char* _data;
+    int _bufLineLen;
+    int _sessionStatusID;
+    int _lastSessionCt;
 };
 
 #endif

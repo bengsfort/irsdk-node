@@ -4,7 +4,12 @@ using namespace v8;
 
 Nan::Persistent<Function> iRacingSdkNode::constructor;
 
-iRacingSdkNode::iRacingSdkNode() : _defaultTimeout(16) {}
+iRacingSdkNode::iRacingSdkNode()
+                : _defaultTimeout(16)
+                , _data(NULL)
+                , _bufLineLen(0)
+                , _sessionStatusID(0)
+                , _lastSessionCt(-1) {}
 iRacingSdkNode::~iRacingSdkNode()
 {
   // Just in case...
@@ -92,22 +97,29 @@ NAN_SETTER(iRacingSdkNode::SetDefaultTimeout)
 // Control
 void iRacingSdkNode::StartSdk(const Nan::FunctionCallbackInfo<Value>& info)
 {
-  if (!irsdkClient::instance().isConnected()) {
-    info.GetReturnValue().Set(irsdk_startup());
-    return;
+  // @todo: store this in class
+  iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
+
+  if (!irsdk_isConnected()) {
+    bool result = irsdk_startup();
+    info.GetReturnValue().Set(result);
   }
+
   info.GetReturnValue().Set(true);
 }
 
 void iRacingSdkNode::StopSdk(const Nan::FunctionCallbackInfo<Value>& info)
 {
   irsdk_shutdown();
-  info.GetReturnValue().SetUndefined();
+  info.GetReturnValue().Set(true);
 }
 
 void iRacingSdkNode::IsRunning(const Nan::FunctionCallbackInfo<Value>& info)
 {
-  info.GetReturnValue().Set(irsdkClient::instance().isConnected());
+  iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
+
+  bool result = irsdk_isConnected();
+  info.GetReturnValue().Set(result);
 }
 
 void iRacingSdkNode::WaitForData(const Nan::FunctionCallbackInfo<Value>& info)
@@ -117,14 +129,63 @@ void iRacingSdkNode::WaitForData(const Nan::FunctionCallbackInfo<Value>& info)
   // Figure out the time to wait
   // This will default to the timeout set on the class
   const Nan::Maybe<int> timeout = Nan::To<int>(info[0]);
-  if (!irsdkClient::instance().isConnected()) {
-    irsdk_startup();
+
+  if (!irsdk_isConnected() && !irsdk_startup()) {
+    info.GetReturnValue().Set(false);
   }
-  
+
   // @todo: try to do this async instead
-  printf("Attempting to wait for data (timeout: %d)", timeout.FromMaybe(holder->_defaultTimeout));
-  irsdkClient::instance().waitForData(timeout.FromMaybe(holder->_defaultTimeout));
-  printf("done!");
+  int waitForMs = timeout.FromMaybe(holder->_defaultTimeout);
+  printf("Attempting to wait for data (timeout: %d)\n", waitForMs);
+
+  // wait for start of sesh or new data
+  bool dataReady = irsdk_waitForDataReady(waitForMs, holder->_data);
+  const irsdk_header* header = irsdk_getHeader();
+  if (dataReady && header)
+  {
+    printf("Session started or we have new data.\n");
+
+    // New connection or data changed length
+    if (!holder->_data || holder->_bufLineLen != header->bufLen) {
+      printf("Connection started / data changed length.\n");
+
+      // Allocate mem
+      if (holder->_data) delete [] holder->_data;
+      holder->_bufLineLen = header->bufLen;
+      holder->_data = new char[holder->_bufLineLen];
+
+      // Increment connection
+      holder->_sessionStatusID++;
+
+      // Reset info str status
+      holder->_lastSessionCt = -1;
+
+      // Attempt to get data
+      bool gotData = irsdk_getNewData(holder->_data);
+      // if (gotData) {
+        printf("Data retrieved? %d\n", gotData);
+        info.GetReturnValue().Set(true); // temp
+        return;
+      // }
+    } else if (holder->_data) {
+      printf("Data initialized and ready to process.\n");
+      // already initialized and ready to process
+      info.GetReturnValue().Set(true);
+      return;
+    }
+  }
+  else if (!(holder->_data != NULL && irsdk_isConnected()))
+  {
+    printf("Session ended. Cleaning up.\n");
+    // Session ended
+    if (holder->_data) delete[] holder->_data;
+    holder->_data = NULL;
+
+    // Reset Info str
+    holder->_lastSessionCt = -1;
+  }
+  printf("Session ended or something went wrong. Not successful.\n");
+  info.GetReturnValue().Set(false);
 }
 
 // Data getters
@@ -135,12 +196,15 @@ void iRacingSdkNode::GetHeader(const Nan::FunctionCallbackInfo<v8::Value>& info)
 
 void iRacingSdkNode::GetSessionData(const Nan::FunctionCallbackInfo<v8::Value>& info)
 {
-  const char* sessionData = irsdkClient::instance().getSessionStr();
+  iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
+  const char* sessionData = irsdk_getSessionInfoStr();
   info.GetReturnValue().Set(Nan::New(sessionData).ToLocalChecked());
 }
 
 void iRacingSdkNode::GetTelemetryData(const Nan::FunctionCallbackInfo<v8::Value>& info)
 {
+  iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
+
   Local<Context> context = Nan::GetCurrentContext();
   const irsdk_header* header = irsdk_getHeader();
 
@@ -148,68 +212,63 @@ void iRacingSdkNode::GetTelemetryData(const Nan::FunctionCallbackInfo<v8::Value>
   auto telemEntry = Nan::New<Object>();
   const irsdk_varHeader *headerVar;
 
-  bool boolVal;
-  int32_t intVal;
-  float floatVal;
-  double doubleVal;
+  bool boolVal = false;
+  int32_t intVal = 0;
+  float floatVal = 0.0F;
+  double doubleVal = 0.0;
+
+  Local<Value> entryVal;
+  Local<String> valueLabel = Nan::New("value").ToLocalChecked();
+  Local<String> isTimeLabel = Nan::New("countAsTime").ToLocalChecked();
+  Local<String> lenLabel = Nan::New("length").ToLocalChecked();
+  Local<String> nameLabel = Nan::New("name").ToLocalChecked();
+  Local<String> descLabel = Nan::New("description").ToLocalChecked();
+  Local<String> unitLabel = Nan::New("unit").ToLocalChecked();
+  Local<String> typeLabel = Nan::New("varType").ToLocalChecked();
 
   int count = header->numVars;
   for (int i = 0; i < count; i++) {
     headerVar = irsdk_getVarHeaderEntry(i);
 
     // Create entry object
-    telemEntry->Set(context,
-                    Nan::New("countAsTime").ToLocalChecked(),
-                    Nan::New(headerVar->countAsTime));
-    telemEntry->Set(context,
-                    Nan::New("length").ToLocalChecked(),
-                    Nan::New(headerVar->count));
-    telemEntry->Set(context,
-                    Nan::New("name").ToLocalChecked(),
-                    Nan::New(headerVar->name).ToLocalChecked());
-    telemEntry->Set(context,
-                    Nan::New("description").ToLocalChecked(),
-                    Nan::New(headerVar->desc).ToLocalChecked());
-    telemEntry->Set(context,
-                    Nan::New("unit").ToLocalChecked(),
-                    Nan::New(headerVar->unit).ToLocalChecked());
-    telemEntry->Set(context,
-                    Nan::New("varType").ToLocalChecked(),
-                    Nan::New(headerVar->type));
+    telemEntry->Set(context, isTimeLabel, Nan::New(headerVar->countAsTime));
+    telemEntry->Set(context, lenLabel, Nan::New(headerVar->count));
+    telemEntry->Set(context, nameLabel, Nan::New(headerVar->name).ToLocalChecked());
+    telemEntry->Set(context, descLabel, Nan::New(headerVar->desc).ToLocalChecked());
+    telemEntry->Set(context, unitLabel, Nan::New(headerVar->unit).ToLocalChecked());
+    telemEntry->Set(context, typeLabel, Nan::New(headerVar->type));
     
     // @todo: these are not correct. (bools are, all numbers are not)
     if (headerVar->count == 1) {
+// @todo: abstract
+      const char *data = holder->_data + headerVar->offset;
       switch(headerVar->type)
       {
         case irsdk_VarType::irsdk_bool:
-          boolVal = irsdkClient::instance().getVarBool(i, 0);
+          boolVal = (bool)(((const char *)data)[0]);
+          entryVal = Nan::New(boolVal);
           printf("Got bool: %d\n", boolVal);
-          telemEntry->Set(context,
-                      Nan::New("value").ToLocalChecked(),
-                      Nan::New(boolVal));
           break;
+
         case irsdk_VarType::irsdk_int:
-          intVal = irsdkClient::instance().getVarInt(i, 0);
+          intVal = (int)(((const char *)data)[0]);
+          entryVal = Int32::New(info.GetIsolate(), intVal);
           printf("Got int: %d\n", intVal);
-          telemEntry->Set(context,
-                      Nan::New("value").ToLocalChecked(),
-                      Nan::New(intVal));
           break;
+
         case irsdk_VarType::irsdk_float:
-          floatVal = irsdkClient::instance().getVarFloat(i, 0);
+          floatVal = (float)(((const char *)data)[0]);
+          entryVal = Int32::New(info.GetIsolate(), floatVal);
           printf("Got float: %f\n", floatVal);
-          telemEntry->Set(context,
-                      Nan::New("value").ToLocalChecked(),
-                      Nan::New(floatVal));
           break;
+
         case irsdk_VarType::irsdk_double:
-          doubleVal = irsdkClient::instance().getVarDouble(i, 0);
+          doubleVal = (double)(((const char *)data)[0]);
+          entryVal = Int32::New(info.GetIsolate(), doubleVal);
           printf("Got double: %f\n", doubleVal);
-          telemEntry->Set(context,
-                      Nan::New("value").ToLocalChecked(),
-                      Nan::New(doubleVal));
           break;
       }
+      telemEntry->Set(context, valueLabel, entryVal);
     }
 
     printf("index: %d\tname: %s\n", i, irsdk_getVarHeaderEntry(i)->name);
