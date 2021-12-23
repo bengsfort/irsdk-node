@@ -8,7 +8,7 @@ async function main(out: string) {
 
   console.log("SDK Started?", sdk);
   
-  // sdk.enableTelemetry(true);
+  sdk.enableTelemetry(true);
   sdk.startSDK();
   sdk.waitForData(1000);
   console.log("session status ok?", sdk.sessionStatusOK);

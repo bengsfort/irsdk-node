@@ -10,6 +10,12 @@ class iRacingSdkNode : public Nan::ObjectWrap
 public:
     static void Init(v8::Local<v8::Object> exports);
 
+    // Helpers
+    bool GetTelemetryBool(int entry, int index = 0);
+    int GetTelemetryInt(int entry, int index = 0);
+    float GetTelemetryFloat(int entry, int index = 0);
+    double GetTelemetryDouble(int entry, int index = 0);
+
 private:
     explicit iRacingSdkNode();
     ~iRacingSdkNode();
@@ -29,7 +35,6 @@ private:
     static void GetData(const Nan::FunctionCallbackInfo<v8::Value>& info);
     static void GetSessionData(const Nan::FunctionCallbackInfo<v8::Value>& info);
     static void GetTelemetryData(const Nan::FunctionCallbackInfo<v8::Value>& info);
-
     static NAN_METHOD(BroadcastMessage);
 
     // @todo: add support for dumping data to a file + loading from file

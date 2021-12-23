@@ -94,6 +94,34 @@ NAN_SETTER(iRacingSdkNode::SetDefaultTimeout)
   }
 }
 
+// Helpers
+bool iRacingSdkNode::GetTelemetryBool(int entry, int index)
+{
+  const irsdk_varHeader *headerVar = irsdk_getVarHeaderEntry(entry);
+  return *(reinterpret_cast<bool const *>(_data + headerVar->offset) + index);
+}
+
+int iRacingSdkNode::GetTelemetryInt(int entry, int index)
+{
+  // Each int is 4 bytes
+  const irsdk_varHeader *headerVar = irsdk_getVarHeaderEntry(entry);
+  return *(reinterpret_cast<int const *>(_data + headerVar->offset) + index * 4);
+}
+
+float iRacingSdkNode::GetTelemetryFloat(int entry, int index)
+{
+  // Each float is 4 bytes
+  const irsdk_varHeader *headerVar = irsdk_getVarHeaderEntry(entry);
+  return *(reinterpret_cast<float const *>(_data + headerVar->offset) + index * 4);
+}
+
+double iRacingSdkNode::GetTelemetryDouble(int entry, int index)
+{
+  // Each double is 8 bytes
+  const irsdk_varHeader *headerVar = irsdk_getVarHeaderEntry(entry);
+  return *(reinterpret_cast<double const *>(_data + headerVar->offset) + index * 8);
+}
+
 // Control
 void iRacingSdkNode::StartSdk(const Nan::FunctionCallbackInfo<Value>& info)
 {
@@ -217,7 +245,7 @@ void iRacingSdkNode::GetTelemetryData(const Nan::FunctionCallbackInfo<v8::Value>
   float floatVal = 0.0F;
   double doubleVal = 0.0;
 
-  Local<Value> entryVal;
+  Local<Array> entryVal;
   Local<String> valueLabel = Nan::New("value").ToLocalChecked();
   Local<String> isTimeLabel = Nan::New("countAsTime").ToLocalChecked();
   Local<String> lenLabel = Nan::New("length").ToLocalChecked();
@@ -225,11 +253,6 @@ void iRacingSdkNode::GetTelemetryData(const Nan::FunctionCallbackInfo<v8::Value>
   Local<String> descLabel = Nan::New("description").ToLocalChecked();
   Local<String> unitLabel = Nan::New("unit").ToLocalChecked();
   Local<String> typeLabel = Nan::New("varType").ToLocalChecked();
-
-  int latest = 0;
-		for(int i=1; i< header->numBuf; i++)
-			if(header->varBuf[latest].tickCount < header->varBuf[i].tickCount)
-			   latest = i;
 
   int count = header->numVars;
   for (int i = 0; i < count; i++) {
@@ -243,39 +266,30 @@ void iRacingSdkNode::GetTelemetryData(const Nan::FunctionCallbackInfo<v8::Value>
     telemEntry->Set(context, unitLabel, Nan::New(headerVar->unit).ToLocalChecked());
     telemEntry->Set(context, typeLabel, Nan::New(headerVar->type));
     
-    if (headerVar->count == 1) {
-      // @todo: abstract this into a function (give index AND array index (default to 0))
-      // ex: auto value = *(reinterpret_cast<ELEMENT_TYPE const *>(holder->data_ + headerVar->offset) + k);
-
-      const char *data = holder->_data + headerVar->offset;
+    entryVal = Nan::New<Array>();
+    for (unsigned int e = 0; e < headerVar->count; e++) {
       switch(headerVar->type)
       {
-        case irsdk_VarType::irsdk_bool: // 1
-          boolVal = *reinterpret_cast<bool const *>(data);
-          entryVal = Nan::New(boolVal);
-          printf("Got bool: %d\n", boolVal);
+        case irsdk_VarType::irsdk_bool:
+          entryVal->Set(context, e, Nan::New(holder->GetTelemetryBool(i, e)));
           break;
 
-        case irsdk_VarType::irsdk_int: // 4
-          intVal = *reinterpret_cast<int const *>(data);
-          entryVal = Int32::New(info.GetIsolate(), intVal);
-          printf("Got int: %d\n", intVal);
+        case irsdk_VarType::irsdk_int:
+          entryVal->Set(context, e, Int32::New(info.GetIsolate(), holder->GetTelemetryInt(i, e)));
+          //entryVal = Int32::New(info.GetIsolate(), holder->GetTelemetryInt(i));
           break;
 
-        case irsdk_VarType::irsdk_float: // 4
-          floatVal = *reinterpret_cast<float const *>(data);
-          entryVal = Int32::New(info.GetIsolate(), floatVal);
-          printf("Got float: %f\n", floatVal);
+        case irsdk_VarType::irsdk_float:
+          entryVal->Set(context, e, Int32::New(info.GetIsolate(), holder->GetTelemetryFloat(i, e)));
           break;
 
-        case irsdk_VarType::irsdk_double: // 8
-          doubleVal = *reinterpret_cast<double const *>(data);
-          entryVal = Int32::New(info.GetIsolate(), doubleVal);
-          printf("Got double: %f\n", doubleVal);
+        case irsdk_VarType::irsdk_double:
+          entryVal->Set(context, e, Int32::New(info.GetIsolate(), holder->GetTelemetryDouble(i, e)));
           break;
       }
-      telemEntry->Set(context, valueLabel, entryVal);
     }
+  
+   telemEntry->Set(context, valueLabel, entryVal);
 
     printf("index: %d\tname: %s\n", i, irsdk_getVarHeaderEntry(i)->name);
     telemVars->Set(context, Nan::New(headerVar->name).ToLocalChecked(), telemEntry->Clone());
