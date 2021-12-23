@@ -3,11 +3,13 @@
     {
       "target_name": "irsdk_node",
       "sources": [
+        "src/addon.cc",
+        "src/sdk_client.cc",
         "src/irsdk_node.cc",
         "lib/irsdk_client.cpp",
         "lib/irsdk_utils.cpp",
         "lib/yaml_parser.cpp",
-        "lib/irsdk_defines.h"
+        "lib/irsdk_defines.h",
       ],
       "include_dirs": [
         "<!(node -e \"require('nan')\")"

@@ -26,7 +26,6 @@ void iRacingSdkNode::Init(Local<Object> exports)
   Nan::HandleScope scope;
 
   // Prepare constructor template
-  
   Local<FunctionTemplate> tmpl = Nan::New<FunctionTemplate>(New);
   tmpl->SetClassName(Nan::New("iRacingSdkNode").ToLocalChecked());
   tmpl->InstanceTemplate()->SetInternalFieldCount(1);
