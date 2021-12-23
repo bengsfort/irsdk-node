@@ -26,7 +26,7 @@ private:
     static void StopSdk(const Nan::FunctionCallbackInfo<v8::Value>& info);
     static void IsRunning(const Nan::FunctionCallbackInfo<v8::Value>& info);
     static void WaitForData(const Nan::FunctionCallbackInfo<v8::Value>& info);
-    static void GetHeader(const Nan::FunctionCallbackInfo<v8::Value>& info);
+    static void GetData(const Nan::FunctionCallbackInfo<v8::Value>& info);
     static void GetSessionData(const Nan::FunctionCallbackInfo<v8::Value>& info);
     static void GetTelemetryData(const Nan::FunctionCallbackInfo<v8::Value>& info);
 

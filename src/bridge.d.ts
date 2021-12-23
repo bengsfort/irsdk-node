@@ -15,7 +15,7 @@ export class NativeSDK {
 
   waitForData(timeout?: number): boolean;
 
-  getHeader(): boolean;
+  getData(): string;
 
   getSessionData(): string;
 

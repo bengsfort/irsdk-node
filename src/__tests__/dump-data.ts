@@ -13,13 +13,15 @@ async function main(out: string) {
   sdk.waitForData(1000);
   console.log("session status ok?", sdk.sessionStatusOK);
   // if (haveData) {
-    const telem  = JSON.stringify(sdk.getTelemetry());
+    const data = sdk.getRawData();
+    const telem = JSON.stringify(sdk.getTelemetry());
     const session = sdk.getSessionData();
     
     // Save
     const dir = dirname(out);
     console.log("Saving in:", dir);
     await Promise.all([
+      await writeFile(`${out}/data.txt`, data, "binary"),
       await writeFile(`${out}/telemetry.txt`, telem, "utf-8"),
       await writeFile(`${out}/session.yml`, session, "utf-8"),
     ]);

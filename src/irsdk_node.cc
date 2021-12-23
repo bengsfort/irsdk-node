@@ -43,7 +43,7 @@ void iRacingSdkNode::Init(Local<Object> exports)
   Nan::SetPrototypeMethod(tmpl, "stopSDK", StopSdk);
   Nan::SetPrototypeMethod(tmpl, "isRunning", IsRunning);
   Nan::SetPrototypeMethod(tmpl, "waitForData", WaitForData);
-  Nan::SetPrototypeMethod(tmpl, "getHeader", GetHeader);
+  Nan::SetPrototypeMethod(tmpl, "getData", GetData);
   Nan::SetPrototypeMethod(tmpl, "getSessionData", GetSessionData);
   Nan::SetPrototypeMethod(tmpl, "getTelemetryData", GetTelemetryData);
   Nan::SetPrototypeMethod(tmpl, "broadcast", BroadcastMessage);
@@ -138,35 +138,34 @@ void iRacingSdkNode::WaitForData(const Nan::FunctionCallbackInfo<Value>& info)
   int waitForMs = timeout.FromMaybe(holder->_defaultTimeout);
   printf("Attempting to wait for data (timeout: %d)\n", waitForMs);
 
+  const irsdk_header* header = irsdk_getHeader();
+
+  // @todo: This isn't the best way of doing this. Need to improve, but this works for now
+  if (!holder->_data) {
+    printf("Data is not initialized");
+    info.GetReturnValue().Set(false);
+    holder->_data = new char[header->bufLen];
+  }
+
   // wait for start of sesh or new data
   bool dataReady = irsdk_waitForDataReady(waitForMs, holder->_data);
-  const irsdk_header* header = irsdk_getHeader();
   if (dataReady && header)
   {
     printf("Session started or we have new data.\n");
 
     // New connection or data changed length
-    if (!holder->_data || holder->_bufLineLen != header->bufLen) {
+    if (holder->_bufLineLen != header->bufLen) {
       printf("Connection started / data changed length.\n");
 
-      // Allocate mem
-      if (holder->_data) delete [] holder->_data;
       holder->_bufLineLen = header->bufLen;
-      holder->_data = new char[holder->_bufLineLen];
 
       // Increment connection
       holder->_sessionStatusID++;
 
       // Reset info str status
       holder->_lastSessionCt = -1;
-
-      // Attempt to get data
-      bool gotData = irsdk_waitForDataReady(waitForMs, holder->_data);
-      printf("Data retrieved? %d\n", gotData);
-      if (gotData) {
-        info.GetReturnValue().Set(true);
-        return;
-      }
+      info.GetReturnValue().Set(true);
+      return;
     } else if (holder->_data) {
       printf("Data initialized and ready to process.\n");
       // already initialized and ready to process
@@ -189,9 +188,10 @@ void iRacingSdkNode::WaitForData(const Nan::FunctionCallbackInfo<Value>& info)
 }
 
 // Data getters
-void iRacingSdkNode::GetHeader(const Nan::FunctionCallbackInfo<v8::Value>& info)
+void iRacingSdkNode::GetData(const Nan::FunctionCallbackInfo<v8::Value>& info)
 {
-  info.GetReturnValue().Set(true);
+  iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
+  info.GetReturnValue().Set(Nan::New(holder->_data).ToLocalChecked());
 }
 
 void iRacingSdkNode::GetSessionData(const Nan::FunctionCallbackInfo<v8::Value>& info)
@@ -226,6 +226,11 @@ void iRacingSdkNode::GetTelemetryData(const Nan::FunctionCallbackInfo<v8::Value>
   Local<String> unitLabel = Nan::New("unit").ToLocalChecked();
   Local<String> typeLabel = Nan::New("varType").ToLocalChecked();
 
+  int latest = 0;
+		for(int i=1; i< header->numBuf; i++)
+			if(header->varBuf[latest].tickCount < header->varBuf[i].tickCount)
+			   latest = i;
+
   int count = header->numVars;
   for (int i = 0; i < count; i++) {
     headerVar = irsdk_getVarHeaderEntry(i);
@@ -238,32 +243,33 @@ void iRacingSdkNode::GetTelemetryData(const Nan::FunctionCallbackInfo<v8::Value>
     telemEntry->Set(context, unitLabel, Nan::New(headerVar->unit).ToLocalChecked());
     telemEntry->Set(context, typeLabel, Nan::New(headerVar->type));
     
-    // @todo: these are not correct. (bools are, all numbers are not)
     if (headerVar->count == 1) {
-// @todo: abstract
+      // @todo: abstract this into a function (give index AND array index (default to 0))
+      // ex: auto value = *(reinterpret_cast<ELEMENT_TYPE const *>(holder->data_ + headerVar->offset) + k);
+
       const char *data = holder->_data + headerVar->offset;
       switch(headerVar->type)
       {
-        case irsdk_VarType::irsdk_bool:
-          boolVal = (bool)(((const char *)data)[0]);
+        case irsdk_VarType::irsdk_bool: // 1
+          boolVal = *reinterpret_cast<bool const *>(data);
           entryVal = Nan::New(boolVal);
           printf("Got bool: %d\n", boolVal);
           break;
 
-        case irsdk_VarType::irsdk_int:
-          intVal = (int)(((const char *)data)[0]);
+        case irsdk_VarType::irsdk_int: // 4
+          intVal = *reinterpret_cast<int const *>(data);
           entryVal = Int32::New(info.GetIsolate(), intVal);
           printf("Got int: %d\n", intVal);
           break;
 
-        case irsdk_VarType::irsdk_float:
-          floatVal = (float)(((const char *)data)[0]);
+        case irsdk_VarType::irsdk_float: // 4
+          floatVal = *reinterpret_cast<float const *>(data);
           entryVal = Int32::New(info.GetIsolate(), floatVal);
           printf("Got float: %f\n", floatVal);
           break;
 
-        case irsdk_VarType::irsdk_double:
-          doubleVal = (double)(((const char *)data)[0]);
+        case irsdk_VarType::irsdk_double: // 8
+          doubleVal = *reinterpret_cast<double const *>(data);
           entryVal = Int32::New(info.GetIsolate(), doubleVal);
           printf("Got double: %f\n", doubleVal);
           break;

@@ -70,6 +70,10 @@ export class IRacingSDK {
     return true;
   }
 
+  public getRawData(): string {
+    return this._sdk.getData();
+  }
+
   /**
    * Wait for new data from the sdk.
    * @param {number} timeout Timeout (in ms). Max is 60fps (1/60)
