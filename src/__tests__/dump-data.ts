@@ -8,11 +8,11 @@ async function main(out: string) {
 
   console.log("SDK Started?", sdk);
   
-  sdk.enableTelemetry(true);
+  // sdk.enableTelemetry(true);
   sdk.startSDK();
-  const haveData = sdk.waitForData(1000);
+  sdk.waitForData(1000);
   console.log("session status ok?", sdk.sessionStatusOK);
-  if (haveData) {
+  // if (haveData) {
     const telem  = JSON.stringify(sdk.getTelemetry());
     const session = sdk.getSessionData();
     
@@ -24,9 +24,9 @@ async function main(out: string) {
       await writeFile(`${out}/session.yml`, session, "utf-8"),
     ]);
     console.log("finished.");
-  } else {
-    console.log("No data! Exiting.");
-  }
+  // } else {
+  //   console.log("No data! Exiting.");
+  // }
 }
 
 const [,, outFile] = process.argv;

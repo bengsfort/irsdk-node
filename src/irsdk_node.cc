@@ -161,12 +161,12 @@ void iRacingSdkNode::WaitForData(const Nan::FunctionCallbackInfo<Value>& info)
       holder->_lastSessionCt = -1;
 
       // Attempt to get data
-      bool gotData = irsdk_getNewData(holder->_data);
-      // if (gotData) {
-        printf("Data retrieved? %d\n", gotData);
-        info.GetReturnValue().Set(true); // temp
+      bool gotData = irsdk_waitForDataReady(waitForMs, holder->_data);
+      printf("Data retrieved? %d\n", gotData);
+      if (gotData) {
+        info.GetReturnValue().Set(true);
         return;
-      // }
+      }
     } else if (holder->_data) {
       printf("Data initialized and ready to process.\n");
       // already initialized and ready to process
