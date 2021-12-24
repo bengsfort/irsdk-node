@@ -12,8 +12,24 @@ NodeJS bindings for the iRacing SDK. Aims to provide a thin barrier of entry to 
 ## Usage
 
 ```ts
-
 import { IRacingSDK } from "irsdk-node";
+
+const TIMEOUT = Math.floor((1 / 60) * 1000); // 60fps
+
+// Create a loop to use if the service is running.
+function loop(sdk: IRacingSDK): void {
+    if (sdk.waitForData(TIMEOUT)) {
+        const session = sdk.getSessionData();
+        const telemetry = sdk.getTelemetry();
+
+        // Do something with the data
+
+        // Wait for new data
+        loop(sdk);
+    } else {
+        // Disconnected.
+    }
+}
 
 // Check the iRacing service is running
 if (await IRacingSDK.isSimRunning()) {
@@ -23,9 +39,9 @@ if (await IRacingSDK.isSimRunning()) {
     sdk.autoEnableTelemetry = true;
     
     // Start the SDK
-    const started = sdk.startSdk();
-    if (started && sdk.sessionStatusOK()) {
-        // get data
+    if (sdk.startSdk() && sdk.sessionStatusOK()) {
+        // Create a loop
+        loop(sdk);
     }
 }
 ```
@@ -39,6 +55,31 @@ Everything should be quite straightforward, but as the project needs to be built
 - `yarn clean`: Clean all build directories.
 - `yarn build`: Builds the native module + typescript.
 - `yarn watch`: Watch the ts codebase for changes + recompile.
+
+### Regenerating types
+
+This project includes automatically generated types for the data provided by the SDK. To update these, make sure you run the sim and enter the car, then run the following:
+
+```
+$ yarn build:debug # build the debug version of the SDK
+$ yarn generate-types
+```
+
+This will generate a `telemetry.d.ts` exporting an interface (`TelemetryVarList`) with every available variable typed based on their name. You should be able to have typed results after that, so you can easily find what you need via:
+
+```ts
+const telemetry = sdk.getTelemetry();
+const RPM = telemetry.RPM;
+
+// RPM will contain:
+RPM.name;
+RPM.description;
+RPM.unit;
+RPM.countAsTime;
+RPM.length;
+RPM.varType;
+RPM.value;
+```
 
 ### Debugging
 

@@ -1,6 +1,15 @@
 export const SIM_STATUS_URI = 'http://127.0.0.1:32034/get_sim_status?object=simStatus';
 
 // Enums
+export type VarTypes = {
+  0: string;
+  1: boolean;
+  2: number;
+  3: number;
+  4: number;
+  5: number;
+};
+
 export enum BroadcastMessages {
   /** Switch the camera position. */
   CameraSwitchPos = 0,

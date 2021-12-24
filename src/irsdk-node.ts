@@ -1,7 +1,8 @@
-import { NativeSDK } from './bridge.debug';
+import { NativeSDK } from './bridge';
 import {
   BroadcastMessages, CameraState, ChatCommand, FFBCommand, PitCommand, ReloadTexturesCommand, ReplayPositionCommand, ReplaySearchCommand, ReplayStateCommand, TelemetryCommand, VideoCaptureCommand,
 } from './constants';
+import { TelemetryVarList } from './generated/telemetry';
 import { getSimStatus } from './utils';
 
 export class IRacingSDK {
@@ -37,6 +38,10 @@ export class IRacingSDK {
     this._sdk.defaultTimeout = value;
   }
 
+  /**
+   * Checks whether the simulation service is running.
+   * @returns {boolean} True if the service is running.
+   */
   public static async isSimRunning(): Promise<boolean> {
     try {
       IRacingSDK._IR_SERVICE_ACTIVE = true;
@@ -60,18 +65,12 @@ export class IRacingSDK {
   public startSDK(): boolean {
     if (!this._sdk.isRunning()) {
       const successful = this._sdk.startSDK();
-      if (!successful && this.autoEnableTelemetry) {
-        // @todo: enable telem
-        // try again
-        return false;
+      if (this.autoEnableTelemetry) {
+        this.enableTelemetry(true);
       }
-      return true;
+      return successful;
     }
     return true;
-  }
-
-  public getRawData(): string {
-    return this._sdk.getData();
   }
 
   /**
@@ -79,20 +78,20 @@ export class IRacingSDK {
    * @param {number} timeout Timeout (in ms). Max is 60fps (1/60)
    */
   public waitForData(timeout?: number): boolean {
-    console.log("javascript waitForData before call");
-    const success = this._sdk.waitForData(timeout);
-    console.log("javascript waitForData after call", success);
-    return success;
+    return this._sdk.waitForData(timeout);
   }
 
   /**
-   * Gets the current session data.
+   * Gets the current session data (in yaml format).
    */
   public getSessionData(): string {
     return this._sdk.getSessionData();
   }
 
-  public getTelemetry(): string {
+  /**
+   * Get the current value of the telemetry variables.
+   */
+  public getTelemetry(): TelemetryVarList {
     return this._sdk.getTelemetryData();
   }
 

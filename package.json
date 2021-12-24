@@ -5,6 +5,8 @@
     "name": "Matt Bengston",
     "email": "bengsfort@gmail.com"
   },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "clean": "rm -rf build dist && node-gyp clean",
     "build": "yarn build-cpp && yarn build-ts",
@@ -14,11 +16,12 @@
     "build:debug": "yarn build-cpp:debug && yarn build-ts",
     "watch": "tsc --watch",
     "prewatch": "yarn build && yarn watch",
-    "run-debug": "node ./dist/__tests__/sandbox.js",
-    "dump-data": "node ./dist/__tests__/dump-data.js",
     "lint": "eslint ./src --ext .js,.ts",
     "prepare": "yarn build",
     "install": "yarn build-cpp",
+    "generate-types": "node ./scripts/generate-var-types.js",
+    "run-debug": "node ./dist/__tests__/sandbox.js",
+    "dump-data": "node ./dist/__tests__/dump-data.js",
     "test": "jest",
     "test-inactive-sim": "jest ./src/__tests__/sim-inactive/*",
     "test-active-sim": "jest ./src/__tests__/sim-running/*"

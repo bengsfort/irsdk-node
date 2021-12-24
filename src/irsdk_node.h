@@ -32,10 +32,12 @@ private:
     static void StopSdk(const Nan::FunctionCallbackInfo<v8::Value>& info);
     static void IsRunning(const Nan::FunctionCallbackInfo<v8::Value>& info);
     static void WaitForData(const Nan::FunctionCallbackInfo<v8::Value>& info);
-    static void GetData(const Nan::FunctionCallbackInfo<v8::Value>& info);
     static void GetSessionData(const Nan::FunctionCallbackInfo<v8::Value>& info);
     static void GetTelemetryData(const Nan::FunctionCallbackInfo<v8::Value>& info);
     static NAN_METHOD(BroadcastMessage);
+
+    // Helper Scripts
+    static NAN_METHOD(__GetTelemetryTypes);
 
     // @todo: add support for dumping data to a file + loading from file
     static irsdkCVar* _telemVars;

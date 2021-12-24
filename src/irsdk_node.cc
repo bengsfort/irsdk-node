@@ -43,10 +43,12 @@ void iRacingSdkNode::Init(Local<Object> exports)
   Nan::SetPrototypeMethod(tmpl, "stopSDK", StopSdk);
   Nan::SetPrototypeMethod(tmpl, "isRunning", IsRunning);
   Nan::SetPrototypeMethod(tmpl, "waitForData", WaitForData);
-  Nan::SetPrototypeMethod(tmpl, "getData", GetData);
   Nan::SetPrototypeMethod(tmpl, "getSessionData", GetSessionData);
   Nan::SetPrototypeMethod(tmpl, "getTelemetryData", GetTelemetryData);
   Nan::SetPrototypeMethod(tmpl, "broadcast", BroadcastMessage);
+  
+  // Helper Script Methods
+  Nan::SetPrototypeMethod(tmpl, "__getTelemetryTypes", __GetTelemetryTypes);
 
   // Create export
   constructor.Reset(tmpl->GetFunction(context).ToLocalChecked());
@@ -216,12 +218,6 @@ void iRacingSdkNode::WaitForData(const Nan::FunctionCallbackInfo<Value>& info)
 }
 
 // Data getters
-void iRacingSdkNode::GetData(const Nan::FunctionCallbackInfo<v8::Value>& info)
-{
-  iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
-  info.GetReturnValue().Set(Nan::New(holder->_data).ToLocalChecked());
-}
-
 void iRacingSdkNode::GetSessionData(const Nan::FunctionCallbackInfo<v8::Value>& info)
 {
   iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
@@ -267,7 +263,7 @@ void iRacingSdkNode::GetTelemetryData(const Nan::FunctionCallbackInfo<v8::Value>
     telemEntry->Set(context, typeLabel, Nan::New(headerVar->type));
     
     entryVal = Nan::New<Array>();
-    for (unsigned int e = 0; e < headerVar->count; e++) {
+    for (int e = 0; e < headerVar->count; e++) {
       switch(headerVar->type)
       {
         case irsdk_VarType::irsdk_bool:
@@ -289,7 +285,7 @@ void iRacingSdkNode::GetTelemetryData(const Nan::FunctionCallbackInfo<v8::Value>
       }
     }
   
-   telemEntry->Set(context, valueLabel, entryVal);
+   telemEntry->Set(context, valueLabel, entryVal->Clone());
 
     printf("index: %d\tname: %s\n", i, irsdk_getVarHeaderEntry(i)->name);
     telemVars->Set(context, Nan::New(headerVar->name).ToLocalChecked(), telemEntry->Clone());
@@ -356,6 +352,25 @@ NAN_METHOD(iRacingSdkNode::BroadcastMessage)
   }
 
   info.GetReturnValue().Set(true);
+}
+
+// Helper Scripts
+NAN_METHOD(iRacingSdkNode::__GetTelemetryTypes)
+{
+  iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
+  Local<Context> context = Nan::GetCurrentContext();
+  Local<Object> result = Nan::New<Object>();
+
+  const int count = irsdk_getHeader()->numVars;
+  const irsdk_varHeader *varHeader;
+  for (int i = 0; i < count; i++) {
+    varHeader = irsdk_getVarHeaderEntry(i);
+    result->Set(context,
+                Nan::New(varHeader->name).ToLocalChecked(),
+                Nan::New(varHeader->type));
+  }
+
+  info.GetReturnValue().Set(result->Clone());
 }
 
 // Addon initialization
