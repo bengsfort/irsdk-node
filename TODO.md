@@ -4,6 +4,9 @@
 - Publish via github packages
 - Should this package parse the yaml session info?
     - if so, we need to generate types for that as well
+    - implement similar to irsdkClient::GetSessionStrVal
+    - how do we know its changed?
 - Provide helper getters for retrieving larger chunks of data (for ex. session info only, local driver only, etc?)
 - Make `dump-data.ts` script into a proper utility script (similar to generate types)
 - Create new package for actual event detection
+- async

@@ -125,7 +125,7 @@ double iRacingSdkNode::GetTelemetryDouble(int entry, int index)
 }
 
 // Control
-void iRacingSdkNode::StartSdk(const Nan::FunctionCallbackInfo<Value>& info)
+NAN_METHOD(iRacingSdkNode::StartSdk)
 {
   // @todo: store this in class
   iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
@@ -138,13 +138,13 @@ void iRacingSdkNode::StartSdk(const Nan::FunctionCallbackInfo<Value>& info)
   info.GetReturnValue().Set(true);
 }
 
-void iRacingSdkNode::StopSdk(const Nan::FunctionCallbackInfo<Value>& info)
+NAN_METHOD(iRacingSdkNode::StopSdk)
 {
   irsdk_shutdown();
   info.GetReturnValue().Set(true);
 }
 
-void iRacingSdkNode::IsRunning(const Nan::FunctionCallbackInfo<Value>& info)
+NAN_METHOD(iRacingSdkNode::IsRunning)
 {
   iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
 
@@ -152,7 +152,7 @@ void iRacingSdkNode::IsRunning(const Nan::FunctionCallbackInfo<Value>& info)
   info.GetReturnValue().Set(result);
 }
 
-void iRacingSdkNode::WaitForData(const Nan::FunctionCallbackInfo<Value>& info)
+NAN_METHOD(iRacingSdkNode::WaitForData)
 {
   iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
   
@@ -218,14 +218,14 @@ void iRacingSdkNode::WaitForData(const Nan::FunctionCallbackInfo<Value>& info)
 }
 
 // Data getters
-void iRacingSdkNode::GetSessionData(const Nan::FunctionCallbackInfo<v8::Value>& info)
+NAN_METHOD(iRacingSdkNode::GetSessionData)
 {
   iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
   const char* sessionData = irsdk_getSessionInfoStr();
   info.GetReturnValue().Set(Nan::New(sessionData).ToLocalChecked());
 }
 
-void iRacingSdkNode::GetTelemetryData(const Nan::FunctionCallbackInfo<v8::Value>& info)
+NAN_METHOD(iRacingSdkNode::GetTelemetryData)
 {
   iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
 

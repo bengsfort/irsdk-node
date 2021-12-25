@@ -28,12 +28,12 @@ private:
     static NAN_SETTER(SetDefaultTimeout);
 
     // Methods
-    static void StartSdk(const Nan::FunctionCallbackInfo<v8::Value>& info);
-    static void StopSdk(const Nan::FunctionCallbackInfo<v8::Value>& info);
-    static void IsRunning(const Nan::FunctionCallbackInfo<v8::Value>& info);
-    static void WaitForData(const Nan::FunctionCallbackInfo<v8::Value>& info);
-    static void GetSessionData(const Nan::FunctionCallbackInfo<v8::Value>& info);
-    static void GetTelemetryData(const Nan::FunctionCallbackInfo<v8::Value>& info);
+    static NAN_METHOD(StartSdk);
+    static NAN_METHOD(StopSdk);
+    static NAN_METHOD(IsRunning);
+    static NAN_METHOD(WaitForData);
+    static NAN_METHOD(GetSessionData);
+    static NAN_METHOD(GetTelemetryData);
     static NAN_METHOD(BroadcastMessage);
 
     // Helper Scripts
