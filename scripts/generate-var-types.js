@@ -2,7 +2,7 @@ const NativeSDK = require("../build/Debug/irsdk_node.node").iRacingSdkNode;
 const path = require("path");
 const fs = require("fs");
 
-const TARGET_FILE = "generated/telemetry.d.ts"
+const TARGET_FILE = "generated/telemetry.ts"
 const OUT_PATH = path.resolve(process.cwd(), "src/", TARGET_FILE);
 
 console.log("Generating iRacing telemetry variable types.");
@@ -53,7 +53,7 @@ export interface TelemetryVariable<VarType = number[]> {
 
 export interface TelemetryVarList {
 ${Object.keys(types).map((varName) => 
-  `\t${varName}: TelemetryVariable<${varTypes[types[varName]]}[]>`
+  `  ${varName}: TelemetryVariable<${varTypes[types[varName]]}[]>`
 ).join(";\n")};
 }
 `;

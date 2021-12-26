@@ -24,14 +24,14 @@ private:
     static void New(const Nan::FunctionCallbackInfo<v8::Value>& info);
     
     // Properties
-    static NAN_GETTER(GetDefaultTimeout);
-    static NAN_SETTER(SetDefaultTimeout);
+    static NAN_GETTER(GetCurrSessionDataVersion);
 
     // Methods
     static NAN_METHOD(StartSdk);
     static NAN_METHOD(StopSdk);
     static NAN_METHOD(IsRunning);
     static NAN_METHOD(WaitForData);
+    static NAN_METHOD(GetSessionVersionNum);
     static NAN_METHOD(GetSessionData);
     static NAN_METHOD(GetTelemetryData);
     static NAN_METHOD(BroadcastMessage);
@@ -39,7 +39,6 @@ private:
     // Helper Scripts
     static NAN_METHOD(__GetTelemetryTypes);
 
-    int _defaultTimeout;
     char* _data;
     int _bufLineLen;
     int _sessionStatusID;

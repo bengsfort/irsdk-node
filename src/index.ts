@@ -1,2 +1,2 @@
-export * from "./generated/telemetry";
-export * from "./irsdk-node";
+export * from './generated/telemetry';
+export * from './irsdk-node';

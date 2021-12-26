@@ -1,4 +1,3 @@
-
 export interface SessionResultsPosition {
   Position: number;
   ClassPosition: number;
@@ -23,7 +22,7 @@ export interface SessionResultsFastestLap {
   FastestTime: number;
 }
 
-export interface Session {
+export interface SessionInfo {
   SessionNum: number;
    SessionLaps: string;
    SessionTime: string;

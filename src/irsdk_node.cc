@@ -6,8 +6,7 @@ using namespace v8;
 Nan::Persistent<Function> iRacingSdkNode::constructor;
 
 iRacingSdkNode::iRacingSdkNode()
-                : _defaultTimeout(16)
-                , _data(NULL)
+                : _data(NULL)
                 , _bufLineLen(0)
                 , _sessionStatusID(0)
                 , _lastSessionCt(-1)
@@ -34,9 +33,8 @@ void iRacingSdkNode::Init(Local<Object> exports)
   // Properties
   // This is causing field count assertion failures
   Nan::SetAccessor(tmpl->InstanceTemplate(), 
-                  Nan::New("defaultTimeout").ToLocalChecked(), 
-                  GetDefaultTimeout,
-                  SetDefaultTimeout);
+                  Nan::New("currDataVersion").ToLocalChecked(), 
+                  GetCurrSessionDataVersion);
 
   // Prototype Methods
   Nan::SetPrototypeMethod(tmpl, "startSDK", StartSdk);
@@ -44,6 +42,7 @@ void iRacingSdkNode::Init(Local<Object> exports)
   Nan::SetPrototypeMethod(tmpl, "isRunning", IsRunning);
   Nan::SetPrototypeMethod(tmpl, "waitForData", WaitForData);
   Nan::SetPrototypeMethod(tmpl, "getSessionData", GetSessionData);
+  Nan::SetPrototypeMethod(tmpl, "getSessionVersionNum", GetSessionVersionNum);
   Nan::SetPrototypeMethod(tmpl, "getTelemetryData", GetTelemetryData);
   Nan::SetPrototypeMethod(tmpl, "broadcast", BroadcastMessage);
   
@@ -82,18 +81,10 @@ void iRacingSdkNode::New(const Nan::FunctionCallbackInfo<Value>& info)
 }
 
 // Properties
-NAN_GETTER(iRacingSdkNode::GetDefaultTimeout)
+NAN_GETTER(iRacingSdkNode::GetCurrSessionDataVersion)
 {
   iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
-  info.GetReturnValue().Set(Nan::New(holder->_defaultTimeout));
-}
-NAN_SETTER(iRacingSdkNode::SetDefaultTimeout)
-{
-  iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
-  const Nan::Maybe<int> timeout = Nan::To<int>(value);
-  if (!timeout.IsNothing()) {
-    holder->_defaultTimeout = timeout.FromJust();
-  }
+  info.GetReturnValue().Set(Nan::New(holder->_lastSessionCt));
 }
 
 // Helpers
@@ -165,7 +156,7 @@ NAN_METHOD(iRacingSdkNode::WaitForData)
   }
 
   // @todo: try to do this async instead
-  int waitForMs = timeout.FromMaybe(holder->_defaultTimeout);
+  int waitForMs = timeout.FromMaybe(16);
   printf("Attempting to wait for data (timeout: %d)\n", waitForMs);
 
   const irsdk_header* header = irsdk_getHeader();
@@ -218,6 +209,11 @@ NAN_METHOD(iRacingSdkNode::WaitForData)
 }
 
 // Data getters
+NAN_METHOD(iRacingSdkNode::GetSessionVersionNum)
+{
+  info.GetReturnValue().Set(irsdk_getSessionInfoStrUpdate());
+}
+
 NAN_METHOD(iRacingSdkNode::GetSessionData)
 {
   iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());

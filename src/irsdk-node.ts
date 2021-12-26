@@ -1,10 +1,13 @@
-import yaml from "js-yaml";
+import yaml from 'js-yaml';
 import { NativeSDK } from './bridge';
 import {
   BroadcastMessages, CameraState, ChatCommand, FFBCommand, PitCommand, ReloadTexturesCommand, ReplayPositionCommand, ReplaySearchCommand, ReplayStateCommand, TelemetryCommand, VideoCaptureCommand,
 } from './constants';
 import { TelemetryVarList } from './generated/telemetry';
-import { WeekendInfo } from "./types";
+import {
+  CameraInfo, CarSetupInfo, DriverInfo, RadioInfo, SessionInfo, SplitTimeInfo, WeekendInfo,
+} from './types';
+import { SessionData } from './types/session-yaml';
 import { getSimStatus } from './utils';
 
 export class IRacingSDK {
@@ -19,25 +22,25 @@ export class IRacingSDK {
   public autoEnableTelemetry = false;
 
   // Private
+  private _dataVer = -1;
+
+  private _sessionData: SessionData | null = null;
+
   private _sdk: NativeSDK;
 
   constructor() {
     this._sdk = new NativeSDK();
     this._sdk.startSDK();
-    IRacingSDK.isSimRunning();
+    void IRacingSDK.isSimRunning();
   }
 
   /**
-   * The default amount of time to wait for new data from the SDK.
+   * The current version number of the session data. Increments internally every time data changes.
    * @property {number}
-   * @default 30
+   * @readonly
    */
-  public get defaultTimeout(): number {
-    return this._sdk.defaultTimeout;
-  }
-
-  public set defaultTimeout(value: number) {
-    this._sdk.defaultTimeout = value;
+  public get currDataVersion(): number {
+    return this._sdk.currDataVersion;
   }
 
   // @todo: add getter for current session string version
@@ -86,21 +89,83 @@ export class IRacingSDK {
   }
 
   /**
-   * Gets the current session data (in yaml format).
+   * Gets the current session data (from yaml format).
+   * @returns {SessionData}
    */
-  public getSessionData(): string {
-    return this._sdk.getSessionData();
+  public getSessionData(): SessionData | null {
+    if (!this.sessionStatusOK) return null;
+    if (this._sessionData && this._dataVer === this.currDataVersion) return this._sessionData;
+    try {
+      const seshString = this._sdk.getSessionData();
+      this._sessionData = yaml.load(seshString) as SessionData;
+      return this._sessionData;
+    } catch (err) {
+      console.error('There was an error getting session data:', err);
+    }
+    return null;
   }
 
   /**
-   * Gets the current weekend info from the session data 
-   * @todo cache session
-   * @returns 
+   * Gets the current weekend info from the session data
+   * @returns {WeekendInfo}
    */
-  public getWeekendInfo(): WeekendInfo {
+  public getWeekendInfo(): WeekendInfo | null {
     const session = this.getSessionData();
-    const weekend = yaml.load(session) as WeekendInfo;
-    return weekend;
+    return session?.WeekendInfo ?? null;
+  }
+
+  /**
+   * Gets the current session info from the session data.
+   * @returns {SessionInfo}
+   */
+  public getSessionInfo(): SessionInfo | null {
+    const session = this.getSessionData();
+    return session?.SessionInfo ?? null;
+  }
+
+  /**
+   * Gets the current camera info from the session data.
+   * @returns {CameraInfo}
+   */
+  public getCameraInfo(): CameraInfo | null {
+    const session = this.getSessionData();
+    return session?.CameraInfo ?? null;
+  }
+
+  /**
+   * Gets the current radio info from the session data.
+   * @returns {RadioInfo}
+   */
+  public getRadioInfo(): RadioInfo | null {
+    const session = this.getSessionData();
+    return session?.RadioInfo ?? null;
+  }
+
+  /**
+   * Gets the current driver info from the session data.
+   * @returns {DriverInfo}
+   */
+  public getDriverInfo(): DriverInfo | null {
+    const session = this.getSessionData();
+    return session?.DriverInfo ?? null;
+  }
+
+  /**
+   * Gets the current split time info from the session data.
+   * @returns {SplitTimeInfo}
+   */
+  public getSplitInfo(): SplitTimeInfo | null {
+    const session = this.getSessionData();
+    return session?.SplitTimeInfo ?? null;
+  }
+
+  /**
+   * Gets the current session info from the session data.
+   * @returns {CarSetupInfo}
+   */
+  public getCarSetupInfo(): CarSetupInfo | null {
+    const session = this.getSessionData();
+    return session?.CarSetup ?? null;
   }
 
   /**
