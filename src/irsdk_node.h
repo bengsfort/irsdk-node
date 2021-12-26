@@ -39,14 +39,12 @@ private:
     // Helper Scripts
     static NAN_METHOD(__GetTelemetryTypes);
 
-    // @todo: add support for dumping data to a file + loading from file
-    static irsdkCVar* _telemVars;
-
     int _defaultTimeout;
     char* _data;
     int _bufLineLen;
     int _sessionStatusID;
     int _lastSessionCt;
+    const char* _sessionData;
 };
 
 #endif

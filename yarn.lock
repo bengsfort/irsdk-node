@@ -1703,6 +1703,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/js-yaml@npm:^4.0.5":
+  version: 4.0.5
+  resolution: "@types/js-yaml@npm:4.0.5"
+  checksum: 7dcac8c50fec31643cc9d6444b5503239a861414cdfaa7ae9a38bc22597c4d850c4b8cec3d82d73b3fbca408348ce223b0408d598b32e094470dfffc6d486b4d
+  languageName: node
+  linkType: hard
+
 "@types/json-schema@npm:^7.0.9":
   version: 7.0.9
   resolution: "@types/json-schema@npm:7.0.9"
@@ -3631,6 +3638,7 @@ __metadata:
     "@babel/preset-env": ^7.16.4
     "@babel/preset-typescript": ^7.16.0
     "@types/jest": ^27.0.3
+    "@types/js-yaml": ^4.0.5
     "@types/node": ^16.11.12
     "@typescript-eslint/eslint-plugin": ^5.6.0
     "@typescript-eslint/parser": ^5.6.0
@@ -3640,6 +3648,7 @@ __metadata:
     eslint-config-airbnb-base: ^15.0.0
     eslint-plugin-import: ^2.25.3
     jest: ^27.4.4
+    js-yaml: ^4.1.0
     module-alias: ^2.2.2
     nan: ^2.15.0
     node-gyp: ^8.4.1

@@ -30,7 +30,7 @@ export class NativeSDK {
   // State
   isRunning(): boolean;
   waitForData(timeout?: number): boolean;
-  getSessionData(): string;
+  getSessionData(): string; // full yaml
   getTelemetryData(): TelemetryVarList;
 
   // Private helpers

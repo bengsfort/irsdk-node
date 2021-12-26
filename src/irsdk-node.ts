@@ -1,8 +1,10 @@
+import yaml from "js-yaml";
 import { NativeSDK } from './bridge';
 import {
   BroadcastMessages, CameraState, ChatCommand, FFBCommand, PitCommand, ReloadTexturesCommand, ReplayPositionCommand, ReplaySearchCommand, ReplayStateCommand, TelemetryCommand, VideoCaptureCommand,
 } from './constants';
 import { TelemetryVarList } from './generated/telemetry';
+import { WeekendInfo } from "./types";
 import { getSimStatus } from './utils';
 
 export class IRacingSDK {
@@ -37,6 +39,8 @@ export class IRacingSDK {
   public set defaultTimeout(value: number) {
     this._sdk.defaultTimeout = value;
   }
+
+  // @todo: add getter for current session string version
 
   /**
    * Checks whether the simulation service is running.
@@ -86,6 +90,17 @@ export class IRacingSDK {
    */
   public getSessionData(): string {
     return this._sdk.getSessionData();
+  }
+
+  /**
+   * Gets the current weekend info from the session data 
+   * @todo cache session
+   * @returns 
+   */
+  public getWeekendInfo(): WeekendInfo {
+    const session = this.getSessionData();
+    const weekend = yaml.load(session) as WeekendInfo;
+    return weekend;
   }
 
   /**

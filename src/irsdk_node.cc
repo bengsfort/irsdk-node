@@ -1,4 +1,5 @@
 #include "./irsdk_node.h"
+#include "../lib/yaml_parser.h"
 
 using namespace v8;
 
@@ -9,14 +10,13 @@ iRacingSdkNode::iRacingSdkNode()
                 , _data(NULL)
                 , _bufLineLen(0)
                 , _sessionStatusID(0)
-                , _lastSessionCt(-1) {}
+                , _lastSessionCt(-1)
+                , _sessionData(NULL) {}
 iRacingSdkNode::~iRacingSdkNode()
 {
   // Just in case...
   irsdk_shutdown();
 }
-
-irsdkCVar* iRacingSdkNode::_telemVars = new irsdkCVar();
 
 // Improve @see https://nodejs.org/api/addons.html#wrapping-c-objects
 // Boilerplate setup
@@ -221,8 +221,13 @@ NAN_METHOD(iRacingSdkNode::WaitForData)
 NAN_METHOD(iRacingSdkNode::GetSessionData)
 {
   iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
-  const char* sessionData = irsdk_getSessionInfoStr();
-  info.GetReturnValue().Set(Nan::New(sessionData).ToLocalChecked());
+  int latestUpdate = irsdk_getSessionInfoStrUpdate();
+  if (holder->_lastSessionCt != latestUpdate) {
+    printf("Session data has been updated (prev: %d, new: %d)", holder->_lastSessionCt, latestUpdate);
+    holder->_lastSessionCt = latestUpdate;
+    holder->_sessionData = irsdk_getSessionInfoStr();
+  }
+  info.GetReturnValue().Set(Nan::New(holder->_sessionData).ToLocalChecked());
 }
 
 NAN_METHOD(iRacingSdkNode::GetTelemetryData)
