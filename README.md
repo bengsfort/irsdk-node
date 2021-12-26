@@ -7,7 +7,7 @@ NodeJS bindings for the iRacing SDK. Aims to provide a thin barrier of entry to 
 - [X] Start / stop the iRacing SDK
 - [X] Check status of iRacing Sessions
 - [X] Broadcast messages to/trigger commands in iRacing sim
-- [ ] Expose data of active iRacing session
+- [X] Expose data of active iRacing session
 
 ## Usage
 
@@ -39,7 +39,7 @@ if (await IRacingSDK.isSimRunning()) {
     sdk.autoEnableTelemetry = true;
     
     // Start the SDK
-    if (sdk.startSdk() && sdk.sessionStatusOK()) {
+    if (sdk.startSdk()) {
         // Create a loop
         loop(sdk);
     }

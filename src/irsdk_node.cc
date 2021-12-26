@@ -157,13 +157,10 @@ NAN_METHOD(iRacingSdkNode::WaitForData)
 
   // @todo: try to do this async instead
   int waitForMs = timeout.FromMaybe(16);
-  printf("Attempting to wait for data (timeout: %d)\n", waitForMs);
-
   const irsdk_header* header = irsdk_getHeader();
 
   // @todo: This isn't the best way of doing this. Need to improve, but this works for now
   if (!holder->_data) {
-    printf("Data is not initialized");
     info.GetReturnValue().Set(false);
     holder->_data = new char[header->bufLen];
   }
@@ -219,7 +216,7 @@ NAN_METHOD(iRacingSdkNode::GetSessionData)
   iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
   int latestUpdate = irsdk_getSessionInfoStrUpdate();
   if (holder->_lastSessionCt != latestUpdate) {
-    printf("Session data has been updated (prev: %d, new: %d)", holder->_lastSessionCt, latestUpdate);
+    printf("Session data has been updated (prev: %d, new: %d)\n", holder->_lastSessionCt, latestUpdate);
     holder->_lastSessionCt = latestUpdate;
     holder->_sessionData = irsdk_getSessionInfoStr();
   }
@@ -273,7 +270,6 @@ NAN_METHOD(iRacingSdkNode::GetTelemetryData)
 
         case irsdk_VarType::irsdk_int:
           entryVal->Set(context, e, Int32::New(info.GetIsolate(), holder->GetTelemetryInt(i, e)));
-          //entryVal = Int32::New(info.GetIsolate(), holder->GetTelemetryInt(i));
           break;
 
         case irsdk_VarType::irsdk_float:
@@ -286,9 +282,7 @@ NAN_METHOD(iRacingSdkNode::GetTelemetryData)
       }
     }
   
-   telemEntry->Set(context, valueLabel, entryVal->Clone());
-
-    printf("index: %d\tname: %s\n", i, irsdk_getVarHeaderEntry(i)->name);
+    telemEntry->Set(context, valueLabel, entryVal->Clone());
     telemVars->Set(context, Nan::New(headerVar->name).ToLocalChecked(), telemEntry->Clone());
   }
 
