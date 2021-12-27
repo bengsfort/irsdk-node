@@ -5,6 +5,17 @@
     "name": "Matt Bengston",
     "email": "bengsfort@gmail.com"
   },
+  "files": [
+    "package.json",
+    "./dist",
+    "./build",
+    "./scripts",
+    "./binding.gyp",
+    "./README.md",
+    "./yarn.lock",
+    "./.gitignore",
+    "./.yarnrc.yml"
+  ],
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
