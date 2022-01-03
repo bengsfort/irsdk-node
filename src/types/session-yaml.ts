@@ -1,6 +1,6 @@
 import { RadioInfo } from './radio-info';
 import { CameraInfo } from './camera-info';
-import { SessionInfo } from './session-info';
+import { SessionList } from './session-info';
 import { WeekendInfo } from './weekend-info';
 import { DriverInfo } from './driver-info';
 import { SplitTimeInfo } from './split-info';
@@ -13,7 +13,7 @@ import { CarSetupInfo } from './setup-info';
  */
 export interface SessionData {
   WeekendInfo: WeekendInfo;
-  SessionInfo: SessionInfo;
+  SessionInfo: SessionList;
   CameraInfo: CameraInfo;
   RadioInfo: RadioInfo;
   DriverInfo: DriverInfo;

@@ -24,21 +24,25 @@ export interface SessionResultsFastestLap {
 
 export interface SessionInfo {
   SessionNum: number;
-   SessionLaps: string;
-   SessionTime: string;
-   SessionNumLapsToAvg: number;
-   SessionType: string;
-   SessionTrackRubberState: string;
-   SessionName: string;
-   SessionSubType: string;
-   SessionSkipped: number;
-   SessionRunGroupsUsed: number;
-   ResultsPositions: SessionResultsPosition[];
-   ResultsFastestLap: SessionResultsFastestLap[];
-   ResultsAverageLapTime: number;
-   ResultsNumCautionFlags: number;
-   ResultsNumCautionLaps: number;
-   ResultsNumLeadChanges: number;
-   ResultsLapsComplete: number;
-   ResultsOfficial: number; // bool?
+  SessionLaps: string;
+  SessionTime: string;
+  SessionNumLapsToAvg: number;
+  SessionType: string;
+  SessionTrackRubberState: string;
+  SessionName: string;
+  SessionSubType: string;
+  SessionSkipped: number;
+  SessionRunGroupsUsed: number;
+  ResultsPositions: SessionResultsPosition[];
+  ResultsFastestLap: SessionResultsFastestLap[];
+  ResultsAverageLapTime: number;
+  ResultsNumCautionFlags: number;
+  ResultsNumCautionLaps: number;
+  ResultsNumLeadChanges: number;
+  ResultsLapsComplete: number;
+  ResultsOfficial: number; // bool?
+}
+
+export interface SessionList {
+  Sessions: SessionInfo[];
 }

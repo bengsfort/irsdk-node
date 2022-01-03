@@ -5,7 +5,7 @@ import {
 } from './constants';
 import { TelemetryVarList } from './generated/telemetry';
 import {
-  CameraInfo, CarSetupInfo, DriverInfo, RadioInfo, SessionInfo, SplitTimeInfo, WeekendInfo,
+  CameraInfo, CarSetupInfo, DriverInfo, RadioInfo, SessionList, SplitTimeInfo, WeekendInfo,
 } from './types';
 import { SessionData } from './types/session-yaml';
 import { getSimStatus } from './utils';
@@ -47,6 +47,7 @@ export class IRacingSDK {
   public get enableLogging(): boolean {
     return this._sdk.enableLogging;
   }
+
   public set enableLogging(value: boolean) {
     this._sdk.enableLogging = value;
   }
@@ -123,7 +124,7 @@ export class IRacingSDK {
    * Gets the current session info from the session data.
    * @returns {SessionInfo}
    */
-  public getSessionInfo(): SessionInfo | null {
+  public getSessionInfo(): SessionList | null {
     const session = this.getSessionData();
     return session?.SessionInfo ?? null;
   }
