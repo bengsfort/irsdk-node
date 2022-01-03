@@ -11,8 +11,6 @@ import { SessionData } from './types/session-yaml';
 import { getSimStatus } from './utils';
 
 export class IRacingSDK {
-  private static _IR_SERVICE_ACTIVE = false;
-
   // Public
   /**
    * Enable attempting to auto-start telemetry when starting the SDK (if it is not running).
@@ -43,6 +41,16 @@ export class IRacingSDK {
     return this._sdk.currDataVersion;
   }
 
+  /** Whether or not to enable verbose logging in the SDK.
+   * @property {boolean}
+   */
+  public get enableLogging(): boolean {
+    return this._sdk.enableLogging;
+  }
+  public set enableLogging(value: boolean) {
+    this._sdk.enableLogging = value;
+  }
+
   // @todo: add getter for current session string version
 
   /**
@@ -51,18 +59,16 @@ export class IRacingSDK {
    */
   public static async isSimRunning(): Promise<boolean> {
     try {
-      IRacingSDK._IR_SERVICE_ACTIVE = true;
       const result = await getSimStatus();
       return result;
     } catch (e) {
       console.error('Could not successfully determine sim status:', e);
     }
-    IRacingSDK._IR_SERVICE_ACTIVE = false;
     return false;
   }
 
   public get sessionStatusOK(): boolean {
-    return IRacingSDK._IR_SERVICE_ACTIVE && this._sdk.isRunning();
+    return this._sdk.isRunning();
   }
 
   /**
@@ -93,7 +99,6 @@ export class IRacingSDK {
    * @returns {SessionData}
    */
   public getSessionData(): SessionData | null {
-    if (!this.sessionStatusOK) return null;
     if (this._sessionData && this._dataVer === this.currDataVersion) return this._sessionData;
     try {
       const seshString = this._sdk.getSessionData();

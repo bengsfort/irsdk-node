@@ -22,6 +22,7 @@ export class NativeSDK {
   constructor();
 
   public readonly currDataVersion: number;
+  public enableLogging: boolean;
 
   // Main API
   // Control

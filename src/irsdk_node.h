@@ -25,6 +25,8 @@ private:
     
     // Properties
     static NAN_GETTER(GetCurrSessionDataVersion);
+    static NAN_GETTER(GetEnableLogging);
+    static NAN_SETTER(SetEnableLogging);
 
     // Methods
     static NAN_METHOD(StartSdk);
@@ -39,6 +41,7 @@ private:
     // Helper Scripts
     static NAN_METHOD(__GetTelemetryTypes);
 
+    bool _loggingEnabled;
     char* _data;
     int _bufLineLen;
     int _sessionStatusID;

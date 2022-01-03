@@ -5,12 +5,14 @@ using namespace v8;
 
 Nan::Persistent<Function> iRacingSdkNode::constructor;
 
+
 iRacingSdkNode::iRacingSdkNode()
                 : _data(NULL)
                 , _bufLineLen(0)
                 , _sessionStatusID(0)
                 , _lastSessionCt(-1)
-                , _sessionData(NULL) {}
+                , _sessionData(NULL)
+                , _loggingEnabled(false) {}
 iRacingSdkNode::~iRacingSdkNode()
 {
   // Just in case...
@@ -35,6 +37,10 @@ void iRacingSdkNode::Init(Local<Object> exports)
   Nan::SetAccessor(tmpl->InstanceTemplate(), 
                   Nan::New("currDataVersion").ToLocalChecked(), 
                   GetCurrSessionDataVersion);
+  Nan::SetAccessor(tmpl->InstanceTemplate(),
+                  Nan::New("enableLogging").ToLocalChecked(),
+                  GetEnableLogging,
+                  SetEnableLogging);
 
   // Prototype Methods
   Nan::SetPrototypeMethod(tmpl, "startSDK", StartSdk);
@@ -85,6 +91,17 @@ NAN_GETTER(iRacingSdkNode::GetCurrSessionDataVersion)
 {
   iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
   info.GetReturnValue().Set(Nan::New(holder->_lastSessionCt));
+}
+NAN_GETTER(iRacingSdkNode::GetEnableLogging)
+{
+  iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
+  info.GetReturnValue().Set(Nan::New(holder->_loggingEnabled));
+}
+NAN_SETTER(iRacingSdkNode::SetEnableLogging)
+{
+  iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
+  const Nan::Maybe<bool> enabled = Nan::To<bool>(value);
+  holder->_loggingEnabled = enabled.ToChecked();
 }
 
 // Helpers
@@ -169,11 +186,11 @@ NAN_METHOD(iRacingSdkNode::WaitForData)
   bool dataReady = irsdk_waitForDataReady(waitForMs, holder->_data);
   if (dataReady && header)
   {
-    printf("Session started or we have new data.\n");
+    if (holder->_loggingEnabled) ("Session started or we have new data.\n");
 
     // New connection or data changed length
     if (holder->_bufLineLen != header->bufLen) {
-      printf("Connection started / data changed length.\n");
+      if (holder->_loggingEnabled) printf("Connection started / data changed length.\n");
 
       holder->_bufLineLen = header->bufLen;
 
@@ -185,7 +202,7 @@ NAN_METHOD(iRacingSdkNode::WaitForData)
       info.GetReturnValue().Set(true);
       return;
     } else if (holder->_data) {
-      printf("Data initialized and ready to process.\n");
+      if (holder->_loggingEnabled) printf("Data initialized and ready to process.\n");
       // already initialized and ready to process
       info.GetReturnValue().Set(true);
       return;

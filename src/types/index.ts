@@ -5,3 +5,4 @@ export * from './session-info';
 export * from './setup-info';
 export * from './split-info';
 export * from './weekend-info';
+export * from './session-yaml';
