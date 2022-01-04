@@ -88,6 +88,14 @@ export class IRacingSDK {
   }
 
   /**
+   * Stops the SDK from running and resets the data version.
+   */
+  public stopSDK(): void {
+    this._sdk.stopSDK();
+    this._dataVer = -1;
+  }
+
+  /**
    * Wait for new data from the sdk.
    * @param {number} timeout Timeout (in ms). Max is 60fps (1/60)
    */
