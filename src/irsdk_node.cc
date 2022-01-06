@@ -290,7 +290,7 @@ NAN_METHOD(iRacingSdkNode::GetTelemetryData)
           break;
 
         case irsdk_VarType::irsdk_float:
-          entryVal->Set(context, e, Int32::New(info.GetIsolate(), holder->GetTelemetryFloat(i, e)));
+          entryVal->Set(context, e, Nan::New(holder->GetTelemetryFloat(i, e)));
           break;
 
         case irsdk_VarType::irsdk_double:
