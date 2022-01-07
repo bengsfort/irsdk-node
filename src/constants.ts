@@ -1,5 +1,112 @@
 export const SIM_STATUS_URI = 'http://127.0.0.1:32034/get_sim_status?object=simStatus';
 
+export enum SessionState {
+  Invalid = 0,
+  GetInCar,
+  Warmup,
+  ParadeLaps,
+  Racing,
+  Checkered,
+  CoolDown,
+}
+
+export enum GlobalFlags {
+  // Global
+  Checkered = 0x00000001,
+  White = 0x00000002,
+  Green = 0x00000004,
+  Yellow = 0x00000008,
+  Red = 0x00000010,
+  Blue = 0x00000020,
+  Debris = 0x00000040,
+  Crossed = 0x00000080,
+  YellowWaving = 0x00000100,
+  OneLapToGreen = 0x00000200,
+  GreenHeld = 0x00000400,
+  TenToGo = 0x00000800,
+  FiveToGo = 0x00001000,
+  RandomWaving = 0x00002000,
+  Caution = 0x00004000,
+  CautionWaving = 0x00008000,
+
+  // Drivers black flags
+  Black = 0x00010000,
+  Disqualify = 0x00020000,
+  Servicible = 0x00040000,
+  Furled = 0x00080000,
+  Repair = 0x00100000,
+
+  // Start lights
+  StartHidden = 0x10000000,
+  StartReady = 0x20000000,
+  StartSet = 0x40000000,
+  StartGo = 0x80000000,
+}
+
+export enum PitSvFlags {
+  LFTireChange = 0x0001,
+  RFTireChange = 0x0002,
+  LRTireChange = 0x0004,
+  RRTireChange = 0x0008,
+  // Non-tires
+  FuelFill = 0x0010,
+  WindshieldTearoff = 0x0020,
+  FastRepair = 0x0040,
+}
+
+export enum PitSvStatus {
+  // Status
+  None = 0,
+  InProgress,
+  Complete,
+
+  // Errors
+  TooFarLeft = 100,
+  TooFarRight,
+  TooFarForward,
+  TooFarBack,
+  BadAngle,
+  CantFixThat,
+}
+
+export enum PaceMode {
+  SingleFileStart = 0,
+  DoubleFileStart,
+  SingleFileRestart,
+  DoubleFileRestart,
+  NotPacing,
+}
+
+export enum PaceFlags {
+  EndOfLine = 0x01,
+  FreePass = 0x02,
+  WavedAround = 0x04,
+}
+
+export enum CarLeftRight {
+  Off,
+  /** No cars around us */
+  Clear,
+  /** Car to our left */
+  CarLeft,
+  /** Car to our right */
+  CarRight,
+  /** Cars on both sides  */
+  CarLeftRight,
+  /** 2 cars to our left */
+  Cars2Left,
+  /** 2 cars to our right */
+  Cars2Right,
+}
+
+export enum TrackLocation {
+  NotInWorld = -1,
+  OffTrack,
+  InPitStall,
+  ApproachingPits,
+  OnTrack,
+}
+
 // Enums
 export type VarTypes = {
   0: string;
