@@ -279,7 +279,7 @@ NAN_METHOD(iRacingSdkNode::GetTelemetryData)
 
     dataSize = headerVar->count * irsdk_VarTypeBytes[headerVar->type];
     auto entryVal = ArrayBuffer::New(context->GetIsolate(), dataSize);
-    memcpy(entryVal->GetContents().Data(), holder->_data + headerVar->offset, dataSize);
+    memcpy(entryVal->GetBackingStore()->Data(), holder->_data + headerVar->offset, dataSize);
   
     telemEntry->Set(context, valueLabel, entryVal);
     telemVars->Set(context, Nan::New(headerVar->name).ToLocalChecked(), telemEntry);
