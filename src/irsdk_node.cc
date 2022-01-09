@@ -248,7 +248,6 @@ NAN_METHOD(iRacingSdkNode::GetTelemetryData)
   const irsdk_header* header = irsdk_getHeader();
 
   auto telemVars = Nan::New<Object>();
-  auto telemEntry = Nan::New<Object>();
   const irsdk_varHeader *headerVar;
 
   bool boolVal = false;
@@ -256,7 +255,6 @@ NAN_METHOD(iRacingSdkNode::GetTelemetryData)
   float floatVal = 0.0F;
   double doubleVal = 0.0;
 
-  Local<Array> entryVal;
   Local<String> valueLabel = Nan::New("value").ToLocalChecked();
   Local<String> isTimeLabel = Nan::New("countAsTime").ToLocalChecked();
   Local<String> lenLabel = Nan::New("length").ToLocalChecked();
@@ -265,9 +263,11 @@ NAN_METHOD(iRacingSdkNode::GetTelemetryData)
   Local<String> unitLabel = Nan::New("unit").ToLocalChecked();
   Local<String> typeLabel = Nan::New("varType").ToLocalChecked();
 
+  int dataSize = 0;
   int count = header->numVars;
   for (int i = 0; i < count; i++) {
     headerVar = irsdk_getVarHeaderEntry(i);
+    auto telemEntry = Nan::New<Object>();
 
     // Create entry object
     telemEntry->Set(context, isTimeLabel, Nan::New(headerVar->countAsTime));
@@ -276,31 +276,13 @@ NAN_METHOD(iRacingSdkNode::GetTelemetryData)
     telemEntry->Set(context, descLabel, Nan::New(headerVar->desc).ToLocalChecked());
     telemEntry->Set(context, unitLabel, Nan::New(headerVar->unit).ToLocalChecked());
     telemEntry->Set(context, typeLabel, Nan::New(headerVar->type));
-    
-    entryVal = Nan::New<Array>();
-    for (int e = 0; e < headerVar->count; e++) {
-      switch(headerVar->type)
-      {
-        case irsdk_VarType::irsdk_bool:
-          entryVal->Set(context, e, Nan::New(holder->GetTelemetryBool(i, e)));
-          break;
 
-        case irsdk_VarType::irsdk_int:
-          entryVal->Set(context, e, Int32::New(info.GetIsolate(), holder->GetTelemetryInt(i, e)));
-          break;
-
-        case irsdk_VarType::irsdk_float:
-          entryVal->Set(context, e, Nan::New(holder->GetTelemetryFloat(i, e)));
-          break;
-
-        case irsdk_VarType::irsdk_double:
-          entryVal->Set(context, e, Int32::New(info.GetIsolate(), holder->GetTelemetryDouble(i, e)));
-          break;
-      }
-    }
+    dataSize = headerVar->count * irsdk_VarTypeBytes[headerVar->type];
+    auto entryVal = ArrayBuffer::New(context->GetIsolate(), dataSize);
+    memcpy(entryVal->GetContents().Data(), holder->_data + headerVar->offset, dataSize);
   
-    telemEntry->Set(context, valueLabel, entryVal->Clone());
-    telemVars->Set(context, Nan::New(headerVar->name).ToLocalChecked(), telemEntry->Clone());
+    telemEntry->Set(context, valueLabel, entryVal);
+    telemVars->Set(context, Nan::New(headerVar->name).ToLocalChecked(), telemEntry);
   }
 
   info.GetReturnValue().Set(telemVars);

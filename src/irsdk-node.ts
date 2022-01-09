@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import yaml from 'js-yaml';
 import { NativeSDK } from './bridge';
 import {
@@ -9,6 +10,30 @@ import {
 } from './types';
 import { SessionData } from './types/session-yaml';
 import { getSimStatus } from './utils';
+
+function _copyTelemData<
+K extends keyof TelemetryVarList = keyof TelemetryVarList,
+T extends TelemetryVarList[K] = TelemetryVarList[K]
+>(src: T, key: K, dest: TelemetryVarList): void {
+  dest[key] = { ...src };
+  // bool
+  if (src.varType === 1) {
+    dest[key].value = [];
+    const arr = new Int8Array(src.value as number[]);
+    arr.forEach((val, i) => {
+      dest[key].value[i] = !!val;
+    });
+    return;
+  }
+  // numbers
+  if (src.varType === 2 || src.varType === 3) { // int
+    dest[key].value = [...new Int32Array(src.value as number[])];
+  } else if (src.varType === 4) { // float
+    dest[key].value = [...new Float32Array(src.value as number[])];
+  } else if (src.varType === 5) { // double
+    dest[key].value = [...new Float64Array(src.value as number[])];
+  }
+}
 
 export class IRacingSDK {
   // Public
@@ -186,7 +211,18 @@ export class IRacingSDK {
    * Get the current value of the telemetry variables.
    */
   public getTelemetry(): TelemetryVarList {
-    return this._sdk.getTelemetryData();
+    const rawData = this._sdk.getTelemetryData();
+    const data: Partial<TelemetryVarList> = {};
+
+    Object.keys(rawData).forEach((dataKey) => {
+      _copyTelemData(
+        rawData[dataKey as keyof TelemetryVarList],
+        dataKey as keyof TelemetryVarList,
+        data as TelemetryVarList,
+      );
+    });
+
+    return data as TelemetryVarList;
   }
 
   // Broadcast commands
