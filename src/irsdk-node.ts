@@ -4,7 +4,7 @@ import { NativeSDK } from './bridge';
 import {
   BroadcastMessages, CameraState, ChatCommand, FFBCommand, PitCommand, ReloadTexturesCommand, ReplayPositionCommand, ReplaySearchCommand, ReplayStateCommand, TelemetryCommand, VideoCaptureCommand,
 } from './constants';
-import { TelemetryVarList } from './generated/telemetry';
+import { TelemetryVariable, TelemetryVarList } from './generated/telemetry';
 import {
   CameraInfo, CarSetupInfo, DriverInfo, RadioInfo, SessionList, SplitTimeInfo, WeekendInfo,
 } from './types';
@@ -223,6 +223,28 @@ export class IRacingSDK {
     });
 
     return data as TelemetryVarList;
+  }
+
+  /**
+   * Request the value of the given telemetry variable.
+   * @param index The number index of the variable. Only use if you know what you are doing!
+   */
+  public getTelemetryVariable<T extends any = any>(index: number): TelemetryVariable<T>;
+  /**
+   * Request the value of the given telemetry variable.
+   * @param varName The name of the variable to retrieve.
+   */
+  public getTelemetryVariable<T extends any = any>(varName: keyof TelemetryVarList): TelemetryVariable<T>;
+  public getTelemetryVariable<T extends any = any>(telemVar: any): TelemetryVariable<T> {
+    const rawData = this._sdk.getTelemetryVariable(telemVar);
+    const parsed: Partial<TelemetryVarList> = {};
+    // @todo good grief these types need to be fixed asap 
+    _copyTelemData(
+      rawData as TelemetryVariable<any>,
+      rawData.name as keyof TelemetryVarList,
+      parsed as TelemetryVarList,
+    );
+    return parsed[rawData.name as keyof TelemetryVarList] as TelemetryVariable<T>;
   }
 
   // Broadcast commands

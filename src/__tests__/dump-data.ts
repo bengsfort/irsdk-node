@@ -13,11 +13,15 @@ function telemSandbox(varList: TelemetryVarList) {
 async function main(out: string) {
   console.log('Starting...');
   const sdk = new IRacingSDK();
+  sdk.enableLogging = true;
 
   console.log('SDK Started?', sdk);
 
   sdk.enableTelemetry(true);
   sdk.startSDK();
+
+  console.log('SDK after startSDK?', sdk);
+  console.log('Triggering SDK wait...?', sdk);
   if (sdk.waitForData(1000)) {
     const telem = sdk.getTelemetry();
     telemSandbox(telem);

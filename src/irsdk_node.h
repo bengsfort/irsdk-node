@@ -1,45 +1,43 @@
 #ifndef IRSDK_NODE_H
 #define IRSDK_NODE_H
 
-#include <nan.h>
+#include <napi.h>
 #include "../lib/irsdk_defines.h"
 #include "../lib/irsdk_client.h"
 
-class iRacingSdkNode : public Nan::ObjectWrap
+class iRacingSdkNode : public Napi::ObjectWrap<iRacingSdkNode>
 {
 public:
-    static void Init(v8::Local<v8::Object> exports);
-
-    // Helpers
-    bool GetTelemetryBool(int entry, int index = 0);
-    int GetTelemetryInt(int entry, int index = 0);
-    float GetTelemetryFloat(int entry, int index = 0);
-    double GetTelemetryDouble(int entry, int index = 0);
+    static Napi::Object Init(Napi::Env env, Napi::Object exports);
+    iRacingSdkNode(const Napi::CallbackInfo& info);
 
 private:
-    explicit iRacingSdkNode();
-    ~iRacingSdkNode();
-
-    static Nan::Persistent<v8::Function> constructor;
-    static void New(const Nan::FunctionCallbackInfo<v8::Value>& info);
-    
     // Properties
-    static NAN_GETTER(GetCurrSessionDataVersion);
-    static NAN_GETTER(GetEnableLogging);
-    static NAN_SETTER(SetEnableLogging);
+    Napi::Value GetCurrSessionDataVersion(const Napi::CallbackInfo &info);
+    Napi::Value GetEnableLogging(const Napi::CallbackInfo &info);
+    void SetEnableLogging(const Napi::CallbackInfo &info, const Napi::Value &value);
 
     // Methods
-    static NAN_METHOD(StartSdk);
-    static NAN_METHOD(StopSdk);
-    static NAN_METHOD(IsRunning);
-    static NAN_METHOD(WaitForData);
-    static NAN_METHOD(GetSessionVersionNum);
-    static NAN_METHOD(GetSessionData);
-    static NAN_METHOD(GetTelemetryData);
-    static NAN_METHOD(BroadcastMessage);
+    // Control
+    Napi::Value StartSdk(const Napi::CallbackInfo &info);
+    Napi::Value StopSdk(const Napi::CallbackInfo &info);
+    Napi::Value WaitForData(const Napi::CallbackInfo &info);
+    Napi::Value BroadcastMessage(const Napi::CallbackInfo &info);
+    // Getters
+    Napi::Value IsRunning(const Napi::CallbackInfo &info);
+    Napi::Value GetSessionVersionNum(const Napi::CallbackInfo &info);
+    Napi::Value GetSessionData(const Napi::CallbackInfo &info);
+    Napi::Value GetTelemetryData(const Napi::CallbackInfo &info);
+    // Helpers
+    Napi::Value __GetTelemetryTypes(const Napi::CallbackInfo &info);
+    Napi::Value GetTelemetryVar(const Napi::CallbackInfo &info);
 
-    // Helper Scripts
-    static NAN_METHOD(__GetTelemetryTypes);
+    bool iRacingSdkNode::GetTelemetryBool(int entry, int index);
+    int iRacingSdkNode::GetTelemetryInt(int entry, int index);
+    float iRacingSdkNode::GetTelemetryFloat(int entry, int index);
+    double iRacingSdkNode::GetTelemetryDouble(int entry, int index);
+    Napi::Object iRacingSdkNode::GetTelemetryVarByIndex(const Napi::Env env, int index);
+    Napi::Object iRacingSdkNode::GetTelemetryVar(const Napi::Env env, const char *varName);
 
     bool _loggingEnabled;
     char* _data;

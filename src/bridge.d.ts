@@ -12,7 +12,7 @@ import {
   VideoCaptureCommand,
 
 } from './constants';
-import { TelemetryVarList } from './generated/telemetry';
+import { TelemetryVariable, TelemetryVarList } from './generated/telemetry';
 
 type TelemetryTypesDict = {
   [variableName: string]: number;
@@ -39,6 +39,9 @@ export class NativeSDK {
   getSessionData(): string; // full yaml
 
   getTelemetryData(): TelemetryVarList;
+
+  getTelemetryVariable<T>(index: number): TelemetryVariable<T>;
+  getTelemetryVariable<T>(name: string): TelemetryVariable<T>;
 
   // Private helpers
   __getTelemetryTypes(): TelemetryTypesDict;

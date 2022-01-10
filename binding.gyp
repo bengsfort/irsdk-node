@@ -8,8 +8,11 @@
         "lib/yaml_parser.cpp",
         "lib/irsdk_defines.h"
       ],
+      "defines": [
+        "NAPI_DISABLE_CPP_EXCEPTIONS",
+      ],
       "include_dirs": [
-        "<!(node -e \"require('nan')\")"
+        "<!(node -p \"require('node-addon-api').include_dir\")",
       ]
     }
   ]

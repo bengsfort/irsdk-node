@@ -8,7 +8,7 @@
                 "${env:USERPROFILE}/AppData/Local/node-gyp/Cache/**",
                 "${workspaceFolder}/node_modules/**",
                 "${workspaceFolder}/.yarn/**",
-                "${workspaceFolder}/node_modules/nan"
+                "${workspaceFolder}/node_modules/node-addon-api/**"
             ],
             "defines": [
                 "_DEBUG",

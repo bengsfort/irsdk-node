@@ -3650,7 +3650,7 @@ __metadata:
     jest: ^27.4.4
     js-yaml: ^4.1.0
     module-alias: ^2.2.2
-    nan: ^2.15.0
+    node-addon-api: "*"
     node-gyp: ^8.4.1
     node-notifier: ^10.0.0
     typescript: ^4.5.2
@@ -4829,15 +4829,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nan@npm:^2.15.0":
-  version: 2.15.0
-  resolution: "nan@npm:2.15.0"
-  dependencies:
-    node-gyp: latest
-  checksum: 33e1bb4dfca447fe37d4bb5889be55de154828632c8d38646db67293a21afd61ed9909cdf1b886214a64707d935926c4e60e2b09de9edfc2ad58de31d6ce8f39
-  languageName: node
-  linkType: hard
-
 "natural-compare@npm:^1.4.0":
   version: 1.4.0
   resolution: "natural-compare@npm:1.4.0"
@@ -4849,6 +4840,15 @@ __metadata:
   version: 0.6.2
   resolution: "negotiator@npm:0.6.2"
   checksum: dfddaff6c06792f1c4c3809e29a427b8daef8cd437c83b08dd51d7ee11bbd1c29d9512d66b801144d6c98e910ffd8723f2432e0cbf8b18d41d2a09599c975ab3
+  languageName: node
+  linkType: hard
+
+"node-addon-api@npm:*":
+  version: 4.2.0
+  resolution: "node-addon-api@npm:4.2.0"
+  dependencies:
+    node-gyp: latest
+  checksum: 52ea6ff01a882766ceec74a0752c0cf9571fa72559a7a3e8969779fa5ae113a2d63cb54dd267fa83a533ab2b7617131d4a6996114701f4ca27246d2513b0e5a5
   languageName: node
   linkType: hard
 

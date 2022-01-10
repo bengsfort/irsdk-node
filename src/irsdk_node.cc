@@ -1,110 +1,317 @@
 #include "./irsdk_node.h"
 #include "../lib/yaml_parser.h"
 
-using namespace v8;
+/*
+Nan::SetPrototypeMethod(tmpl, "getSessionData", GetSessionData);
+Nan::SetPrototypeMethod(tmpl, "getSessionVersionNum", GetSessionVersionNum);
+Nan::SetPrototypeMethod(tmpl, "getTelemetryData", GetTelemetryData);
+Nan::SetPrototypeMethod(tmpl, "broadcast", BroadcastMessage);
+Nan::SetPrototypeMethod(tmpl, "__getTelemetryTypes", __GetTelemetryTypes);
+*/
 
-Nan::Persistent<Function> iRacingSdkNode::constructor;
-
-
-iRacingSdkNode::iRacingSdkNode()
-                : _data(NULL)
-                , _bufLineLen(0)
-                , _sessionStatusID(0)
-                , _lastSessionCt(-1)
-                , _sessionData(NULL)
-                , _loggingEnabled(false) {}
-iRacingSdkNode::~iRacingSdkNode()
+// ---------------------------
+// Constructors
+// ---------------------------
+Napi::Object iRacingSdkNode::Init(Napi::Env env, Napi::Object exports)
 {
-  // Just in case...
-  irsdk_shutdown();
+  Napi::Function func = DefineClass(env, "iRacingSdkNode", {
+    // Properties
+    InstanceAccessor<&iRacingSdkNode::GetCurrSessionDataVersion>("currDataVersion"),
+    InstanceAccessor<&iRacingSdkNode::GetEnableLogging, &iRacingSdkNode::SetEnableLogging>("enableLogging"),
+    // Methods
+    //Control
+    InstanceMethod<&iRacingSdkNode::StartSdk>("startSDK"),
+    InstanceMethod("stopSDK", &iRacingSdkNode::StopSdk),
+    InstanceMethod("waitForData", &iRacingSdkNode::WaitForData),
+    InstanceMethod("broadcast", &iRacingSdkNode::BroadcastMessage),
+    // Getters
+    InstanceMethod("isRunning", &iRacingSdkNode::IsRunning),
+    InstanceMethod("getSessionVersionNum", &iRacingSdkNode::GetSessionVersionNum),
+    InstanceMethod("getSessionData", &iRacingSdkNode::GetSessionData),
+    InstanceMethod("getTelemetryData", &iRacingSdkNode::GetTelemetryData),
+    InstanceMethod("getTelemetryVariable", &iRacingSdkNode::GetTelemetryVar),
+    // Helpers
+    InstanceMethod("__getTelemetryTypes", &iRacingSdkNode::__GetTelemetryTypes)
+  });
+
+  Napi::FunctionReference* constructor = new Napi::FunctionReference();
+  *constructor = Napi::Persistent(func);
+  env.SetInstanceData(constructor);
+
+  exports.Set("iRacingSdkNode", func);
+  return exports;
 }
 
-// Improve @see https://nodejs.org/api/addons.html#wrapping-c-objects
-// Boilerplate setup
-void iRacingSdkNode::Init(Local<Object> exports)
+iRacingSdkNode::iRacingSdkNode(const Napi::CallbackInfo &info)
+  : Napi::ObjectWrap<iRacingSdkNode>(info)
+  , _data(NULL)
+  , _bufLineLen(0)
+  , _sessionStatusID(0)
+  , _lastSessionCt(-1)
+  , _sessionData(NULL)
+  , _loggingEnabled(false)
 {
-  Local<Context> context = exports->CreationContext();
-  Nan::HandleScope scope;
-
-  // Prepare constructor template
-  
-  Local<FunctionTemplate> tmpl = Nan::New<FunctionTemplate>(New);
-  tmpl->SetClassName(Nan::New("iRacingSdkNode").ToLocalChecked());
-  tmpl->InstanceTemplate()->SetInternalFieldCount(1);
-
-  // Properties
-  // This is causing field count assertion failures
-  Nan::SetAccessor(tmpl->InstanceTemplate(), 
-                  Nan::New("currDataVersion").ToLocalChecked(), 
-                  GetCurrSessionDataVersion);
-  Nan::SetAccessor(tmpl->InstanceTemplate(),
-                  Nan::New("enableLogging").ToLocalChecked(),
-                  GetEnableLogging,
-                  SetEnableLogging);
-
-  // Prototype Methods
-  Nan::SetPrototypeMethod(tmpl, "startSDK", StartSdk);
-  Nan::SetPrototypeMethod(tmpl, "stopSDK", StopSdk);
-  Nan::SetPrototypeMethod(tmpl, "isRunning", IsRunning);
-  Nan::SetPrototypeMethod(tmpl, "waitForData", WaitForData);
-  Nan::SetPrototypeMethod(tmpl, "getSessionData", GetSessionData);
-  Nan::SetPrototypeMethod(tmpl, "getSessionVersionNum", GetSessionVersionNum);
-  Nan::SetPrototypeMethod(tmpl, "getTelemetryData", GetTelemetryData);
-  Nan::SetPrototypeMethod(tmpl, "broadcast", BroadcastMessage);
-  
-  // Helper Script Methods
-  Nan::SetPrototypeMethod(tmpl, "__getTelemetryTypes", __GetTelemetryTypes);
-
-  // Create export
-  constructor.Reset(tmpl->GetFunction(context).ToLocalChecked());
-  exports->Set(context,
-              Nan::New("iRacingSdkNode").ToLocalChecked(),
-              tmpl->GetFunction(context).ToLocalChecked());
+  printf("Initializing cpp class instance...\n");
 }
 
-void iRacingSdkNode::New(const Nan::FunctionCallbackInfo<Value>& info)
+// ---------------------------
+// Property implementations
+// ---------------------------
+Napi::Value iRacingSdkNode::GetCurrSessionDataVersion(const Napi::CallbackInfo &info)
 {
-  v8::Local<v8::Context> context = info.GetIsolate()->GetCurrentContext();
-    
-  // invoked as constructor
-  if (info.IsConstructCall()) {
-    iRacingSdkNode* instance = new iRacingSdkNode();
-    instance->Wrap(info.This());
-    info.GetReturnValue().Set(info.This());
+  int ver = this->_lastSessionCt;
+  return Napi::Number::New(info.Env(), ver);
+}
+
+Napi::Value iRacingSdkNode::GetEnableLogging(const Napi::CallbackInfo &info)
+{
+  bool enabled = this->_loggingEnabled;
+  return Napi::Boolean::New(info.Env(), enabled);
+}
+
+void iRacingSdkNode::SetEnableLogging(const Napi::CallbackInfo &info, const Napi::Value &value)
+{
+  Napi::Boolean enable;
+  if (info.Length() <= 0 || !info[0].IsBoolean()) {
+    enable = Napi::Boolean::New(info.Env(), false);
   } else {
-    // Invoked as a plain fn, convert to construct call
-    /**
-     * to get the args:
-     * const int argc = 1;
-     * Local<v8::Value> argv[argc] = {info[0]};
-     */
-    const int argc = 1;
-    v8::Local<v8::Value> argv[argc] = {};
-    v8::Local<v8::Function> cnstrct = Nan::New<v8::Function>(constructor);
-    info.GetReturnValue().Set(
-        cnstrct->NewInstance(context, argc, argv).ToLocalChecked());
+    enable = info[0].As<Napi::Boolean>();
   }
+  printf("Setting logging enabled: %i\n", info[0]);
+  this->_loggingEnabled = enable;
 }
 
-// Properties
-NAN_GETTER(iRacingSdkNode::GetCurrSessionDataVersion)
+// ---------------------------
+// Instance implementations
+// ---------------------------
+// SDK Control
+Napi::Value iRacingSdkNode::StartSdk(const Napi::CallbackInfo &info)
 {
-  iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
-  info.GetReturnValue().Set(Nan::New(holder->_lastSessionCt));
+  printf("Starting SDK...\n");
+  if (!irsdk_isConnected()) {
+    bool result = irsdk_startup();
+    printf("Connected at least! %i\n", result);
+    return Napi::Boolean::New(info.Env(), result);
+  }
+  return Napi::Boolean::New(info.Env(), true);
 }
-NAN_GETTER(iRacingSdkNode::GetEnableLogging)
+
+Napi::Value iRacingSdkNode::StopSdk(const Napi::CallbackInfo &info)
 {
-  iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
-  info.GetReturnValue().Set(Nan::New(holder->_loggingEnabled));
+  irsdk_shutdown();
+  return Napi::Boolean::New(info.Env(), true);
 }
-NAN_SETTER(iRacingSdkNode::SetEnableLogging)
+
+Napi::Value iRacingSdkNode::WaitForData(const Napi::CallbackInfo &info)
 {
-  iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
-  const Nan::Maybe<bool> enabled = Nan::To<bool>(value);
-  holder->_loggingEnabled = enabled.ToChecked();
+  // Figure out the time to wait
+  // This will default to the timeout set on the class
+  Napi::Number timeout;
+  if (info.Length() <= 0 || !info[0].IsNumber()) {
+    timeout = Napi::Number::New(info.Env(), 16);
+  } else {
+    timeout = info[0].As<Napi::Number>();
+  }
+
+  if (!irsdk_isConnected() && !irsdk_startup()) {
+    return Napi::Boolean::New(info.Env(), false);
+  }
+
+  // @todo: try to do this async instead
+  const irsdk_header* header = irsdk_getHeader();
+
+  // @todo: This isn't the best way of doing this. Need to improve, but this works for now
+  if (!this->_data) {
+    this->_data = new char[header->bufLen];
+  }
+
+  // wait for start of sesh or new data
+  bool dataReady = irsdk_waitForDataReady(timeout, this->_data);
+  if (dataReady && header)
+  {
+    if (this->_loggingEnabled) ("Session started or we have new data.\n");
+
+    // New connection or data changed length
+    if (this->_bufLineLen != header->bufLen) {
+      if (this->_loggingEnabled) printf("Connection started / data changed length.\n");
+
+      this->_bufLineLen = header->bufLen;
+
+      // Increment connection
+      this->_sessionStatusID++;
+
+      // Reset info str status
+      this->_lastSessionCt = -1;
+      return Napi::Boolean::New(info.Env(), true);
+    } else if (this->_data) {
+      if (this->_loggingEnabled) printf("Data initialized and ready to process.\n");
+      // already initialized and ready to process
+      return Napi::Boolean::New(info.Env(), true);
+    }
+  }
+  else if (!(this->_data != NULL && irsdk_isConnected()))
+  {
+    printf("Session ended. Cleaning up.\n");
+    // Session ended
+    if (this->_data) delete[] this->_data;
+    this->_data = NULL;
+
+    // Reset Info str
+    this->_lastSessionCt = -1;
+  }
+  printf("Session ended or something went wrong. Not successful.\n");
+  return Napi::Boolean::New(info.Env(), false);
+}
+
+Napi::Value iRacingSdkNode::BroadcastMessage(const Napi::CallbackInfo &info)
+{
+  auto env = info.Env();
+
+  // Determine message type
+  if (info.Length() <= 2 || !info[0].IsNumber()) {
+    return Napi::Boolean::New(env, false);
+  }
+
+  if (info.Length() == 4 && !info[2].IsNumber()) {
+    return Napi::Boolean::New(env, false);
+  }
+
+  int msgEnumIndex = info[0].As<Napi::Number>();
+  irsdk_BroadcastMsg msgType = static_cast<irsdk_BroadcastMsg>(msgEnumIndex);
+
+  // Args
+  int arg1 = info[1].As<Napi::Number>();
+  auto arg2 = info[2].As<Napi::Number>();
+  auto arg3 = info[3].As<Napi::Number>();
+
+  // these defs are in irsdk_defines.cpp
+  switch (msgType)
+  {
+  // irsdk_BroadcastMsg msg, int arg1, int arg2, int var3
+  case irsdk_BroadcastCamSwitchPos: // @todo we need to use irsdk_padCarNum for arg1
+  case irsdk_BroadcastCamSwitchNum:
+    printf("BroadcastMessage(msgType: %d, arg1: %d, arg2: %d, arg3: %d)\n", msgType, arg1, arg2.Int32Value(), arg3.Int32Value());
+    irsdk_broadcastMsg(msgType, arg1, arg2, arg3);
+    break;
+  
+  // irsdk_BroadcastMsg msg, int arg1, int unused, int unused
+  case irsdk_BroadcastReplaySearch: // arg1 == irsdk_RpySrchMode
+  case irsdk_BroadcastReplaySetState: // arg1 == irsdk_RpyStateMode
+  case irsdk_BroadcastCamSetState: // arg1 == irsdk_CameraState
+  case irsdk_BroadcastTelemCommand: // arg1 == irsdk_TelemCommandMode
+  case irsdk_BroadcastVideoCapture: // arg1 == irsdk_VideoCaptureMode
+    printf("BroadcastMessage(msgType: %d, arg1: %d, arg2: -1, arg3: -1)\n", msgType, arg1);
+    irsdk_broadcastMsg(msgType, arg1, -1, -1);
+    break;
+
+  // irsdk_BroadcastMsg msg, int arg1, int arg2, int unused
+  case irsdk_BroadcastReloadTextures: // arg1 == irsdk_ReloadTexturesMode
+  case irsdk_BroadcastChatComand: // arg1 == irsdk_ChatCommandMode
+  case irsdk_BroadcastReplaySetPlaySpeed:
+    printf("BroadcastMessage(msgType: %d, arg1: %d, arg2: %d, arg3: -1)\n", msgType, arg1, arg2.Int32Value());
+    irsdk_broadcastMsg(msgType, arg1, arg2, -1);
+    break;
+  
+  // irsdk_BroadcastMsg msg, int arg1, float arg2
+  case irsdk_BroadcastPitCommand: // arg1 == irsdk_PitCommandMode
+  case irsdk_BroadcastFFBCommand: // arg1 == irsdk_FFBCommandMode
+  case irsdk_BroadcastReplaySearchSessionTime:
+  case irskd_BroadcastReplaySetPlayPosition:
+    printf("BroadcastMessage(msgType: %d, arg1: %d, arg2: %f)\n", msgType, arg1, (float)arg2.FloatValue());
+    irsdk_broadcastMsg(msgType, arg1, (float)arg2.FloatValue());
+    break;
+
+  default:
+    printf("Attempted to broadcast an unsupported message.");
+    return Napi::Boolean::New(env, false);
+  }
+
+  return Napi::Boolean::New(env, true);
+}
+
+// SDK State Getters
+Napi::Value iRacingSdkNode::IsRunning(const Napi::CallbackInfo &info)
+{
+  bool result = irsdk_isConnected();
+  return Napi::Boolean::New(info.Env(), result);
+}
+
+Napi::Value iRacingSdkNode::GetSessionVersionNum(const Napi::CallbackInfo &info)
+{
+  int sessVer = irsdk_getSessionInfoStrUpdate();
+  return Napi::Number::New(info.Env(), sessVer);
+}
+
+Napi::Value iRacingSdkNode::GetSessionData(const Napi::CallbackInfo &info)
+{
+  int latestUpdate = irsdk_getSessionInfoStrUpdate();
+  if (this->_lastSessionCt != latestUpdate) {
+    printf("Session data has been updated (prev: %d, new: %d)\n", this->_lastSessionCt, latestUpdate);
+    this->_lastSessionCt = latestUpdate;
+    this->_sessionData = irsdk_getSessionInfoStr();
+  }
+  const char *session = this->_sessionData;
+  if (session == NULL) {
+    return Napi::String::New(info.Env(), "");
+  }
+  return Napi::String::New(info.Env(), session);
+}
+
+Napi::Value iRacingSdkNode::GetTelemetryVar(const Napi::CallbackInfo &info)
+{
+  Napi::Env env = info.Env();
+
+  int varIndex;
+  if (info.Length() <= 0) {
+    varIndex = 0;
+  } else if (!info[0].IsNumber()) {
+    if (info[0].IsString()) {
+      const char *name = info[0].As<Napi::String>().Utf8Value().c_str();
+      return this->GetTelemetryVar(env, name);
+    }
+    varIndex = 0;
+  }
+
+  return this->GetTelemetryVarByIndex(env, varIndex);
+}
+
+Napi::Value iRacingSdkNode::GetTelemetryData(const Napi::CallbackInfo &info)
+{
+  const irsdk_header* header = irsdk_getHeader();
+  auto env = info.Env();
+  auto telemVars = Napi::Object::New(env);
+  
+  int count = header->numVars;
+  for (int i = 0; i < count; i++) {
+    auto telemVariable = this->GetTelemetryVarByIndex(env, i);
+    if (telemVariable.IsObject() && telemVariable.Has("name")) {
+      telemVars.Set(telemVariable.Get("name"), telemVariable);
+    }
+  }
+
+  return telemVars;
 }
 
 // Helpers
+Napi::Value iRacingSdkNode::__GetTelemetryTypes(const Napi::CallbackInfo &info)
+{
+  auto env = info.Env();
+  auto result = Napi::Object::New(env);
+
+  const int count = irsdk_getHeader()->numVars;
+  const irsdk_varHeader *varHeader;
+  for (int i = 0; i < count; i++) {
+    varHeader = irsdk_getVarHeaderEntry(i);
+    result.Set(varHeader->name, Napi::Number::New(env, varHeader->type));
+  }
+
+  return result;
+}
+
+
+// ---------------------------
+// Helper functions
+// ---------------------------
 bool iRacingSdkNode::GetTelemetryBool(int entry, int index)
 {
   const irsdk_varHeader *headerVar = irsdk_getVarHeaderEntry(entry);
@@ -132,245 +339,37 @@ double iRacingSdkNode::GetTelemetryDouble(int entry, int index)
   return *(reinterpret_cast<double const *>(_data + headerVar->offset) + index * 8);
 }
 
-// Control
-NAN_METHOD(iRacingSdkNode::StartSdk)
+Napi::Object iRacingSdkNode::GetTelemetryVarByIndex(const Napi::Env env, int index)
 {
-  // @todo: store this in class
-  iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
+  auto headerVar = irsdk_getVarHeaderEntry(index);
+  auto telemVar = Napi::Object::New(env);
 
-  if (!irsdk_isConnected()) {
-    bool result = irsdk_startup();
-    info.GetReturnValue().Set(result);
-  }
+  // Create entry object
+  telemVar.Set("countAsTime", headerVar->countAsTime);
+  telemVar.Set("length", headerVar->count);
+  telemVar.Set("name", headerVar->name);
+  telemVar.Set("description", headerVar->desc);
+  telemVar.Set("unit", headerVar->unit);
+  telemVar.Set("varType", headerVar->type);
 
-  info.GetReturnValue().Set(true);
+  int dataSize = headerVar->count * irsdk_VarTypeBytes[headerVar->type];
+  auto entryVal = Napi::ArrayBuffer::New(env, dataSize);
+  memcpy(entryVal.Data(), this->_data + headerVar->offset, dataSize);
+
+  telemVar.Set("value", entryVal);
+  return telemVar;
 }
 
-NAN_METHOD(iRacingSdkNode::StopSdk)
+Napi::Object iRacingSdkNode::GetTelemetryVar(const Napi::Env env, const char *varName)
 {
-  irsdk_shutdown();
-  info.GetReturnValue().Set(true);
+  int varIndex = irsdk_varNameToIndex(varName);
+  return this->GetTelemetryVarByIndex(env, varIndex);
 }
 
-NAN_METHOD(iRacingSdkNode::IsRunning)
+Napi::Object InitAll(Napi::Env env, Napi::Object exports)
 {
-  iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
-
-  bool result = irsdk_isConnected();
-  info.GetReturnValue().Set(result);
+  iRacingSdkNode::Init(env, exports);
+  return exports;
 }
 
-NAN_METHOD(iRacingSdkNode::WaitForData)
-{
-  iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
-  
-  // Figure out the time to wait
-  // This will default to the timeout set on the class
-  const Nan::Maybe<int> timeout = Nan::To<int>(info[0]);
-
-  if (!irsdk_isConnected() && !irsdk_startup()) {
-    info.GetReturnValue().Set(false);
-  }
-
-  // @todo: try to do this async instead
-  int waitForMs = timeout.FromMaybe(16);
-  const irsdk_header* header = irsdk_getHeader();
-
-  // @todo: This isn't the best way of doing this. Need to improve, but this works for now
-  if (!holder->_data) {
-    info.GetReturnValue().Set(false);
-    holder->_data = new char[header->bufLen];
-  }
-
-  // wait for start of sesh or new data
-  bool dataReady = irsdk_waitForDataReady(waitForMs, holder->_data);
-  if (dataReady && header)
-  {
-    if (holder->_loggingEnabled) ("Session started or we have new data.\n");
-
-    // New connection or data changed length
-    if (holder->_bufLineLen != header->bufLen) {
-      if (holder->_loggingEnabled) printf("Connection started / data changed length.\n");
-
-      holder->_bufLineLen = header->bufLen;
-
-      // Increment connection
-      holder->_sessionStatusID++;
-
-      // Reset info str status
-      holder->_lastSessionCt = -1;
-      info.GetReturnValue().Set(true);
-      return;
-    } else if (holder->_data) {
-      if (holder->_loggingEnabled) printf("Data initialized and ready to process.\n");
-      // already initialized and ready to process
-      info.GetReturnValue().Set(true);
-      return;
-    }
-  }
-  else if (!(holder->_data != NULL && irsdk_isConnected()))
-  {
-    printf("Session ended. Cleaning up.\n");
-    // Session ended
-    if (holder->_data) delete[] holder->_data;
-    holder->_data = NULL;
-
-    // Reset Info str
-    holder->_lastSessionCt = -1;
-  }
-  printf("Session ended or something went wrong. Not successful.\n");
-  info.GetReturnValue().Set(false);
-}
-
-// Data getters
-NAN_METHOD(iRacingSdkNode::GetSessionVersionNum)
-{
-  info.GetReturnValue().Set(irsdk_getSessionInfoStrUpdate());
-}
-
-NAN_METHOD(iRacingSdkNode::GetSessionData)
-{
-  iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
-  int latestUpdate = irsdk_getSessionInfoStrUpdate();
-  if (holder->_lastSessionCt != latestUpdate) {
-    printf("Session data has been updated (prev: %d, new: %d)\n", holder->_lastSessionCt, latestUpdate);
-    holder->_lastSessionCt = latestUpdate;
-    holder->_sessionData = irsdk_getSessionInfoStr();
-  }
-  info.GetReturnValue().Set(Nan::New(holder->_sessionData).ToLocalChecked());
-}
-
-NAN_METHOD(iRacingSdkNode::GetTelemetryData)
-{
-  iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
-
-  Local<Context> context = Nan::GetCurrentContext();
-  const irsdk_header* header = irsdk_getHeader();
-
-  auto telemVars = Nan::New<Object>();
-  const irsdk_varHeader *headerVar;
-
-  bool boolVal = false;
-  int32_t intVal = 0;
-  float floatVal = 0.0F;
-  double doubleVal = 0.0;
-
-  Local<String> valueLabel = Nan::New("value").ToLocalChecked();
-  Local<String> isTimeLabel = Nan::New("countAsTime").ToLocalChecked();
-  Local<String> lenLabel = Nan::New("length").ToLocalChecked();
-  Local<String> nameLabel = Nan::New("name").ToLocalChecked();
-  Local<String> descLabel = Nan::New("description").ToLocalChecked();
-  Local<String> unitLabel = Nan::New("unit").ToLocalChecked();
-  Local<String> typeLabel = Nan::New("varType").ToLocalChecked();
-
-  int dataSize = 0;
-  int count = header->numVars;
-  for (int i = 0; i < count; i++) {
-    headerVar = irsdk_getVarHeaderEntry(i);
-    auto telemEntry = Nan::New<Object>();
-
-    // Create entry object
-    telemEntry->Set(context, isTimeLabel, Nan::New(headerVar->countAsTime));
-    telemEntry->Set(context, lenLabel, Nan::New(headerVar->count));
-    telemEntry->Set(context, nameLabel, Nan::New(headerVar->name).ToLocalChecked());
-    telemEntry->Set(context, descLabel, Nan::New(headerVar->desc).ToLocalChecked());
-    telemEntry->Set(context, unitLabel, Nan::New(headerVar->unit).ToLocalChecked());
-    telemEntry->Set(context, typeLabel, Nan::New(headerVar->type));
-
-    dataSize = headerVar->count * irsdk_VarTypeBytes[headerVar->type];
-    auto entryVal = ArrayBuffer::New(context->GetIsolate(), dataSize);
-    memcpy(entryVal->GetBackingStore()->Data(), holder->_data + headerVar->offset, dataSize);
-  
-    telemEntry->Set(context, valueLabel, entryVal);
-    telemVars->Set(context, Nan::New(headerVar->name).ToLocalChecked(), telemEntry);
-  }
-
-  info.GetReturnValue().Set(telemVars);
-}
-
-// Broadcasting
-NAN_METHOD(iRacingSdkNode::BroadcastMessage)
-{
-  iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
-
-  // Determine message type
-  Nan::Maybe<int> msgEnumIndex = Nan::To<int>(info[0]);
-  irsdk_BroadcastMsg msgType = static_cast<irsdk_BroadcastMsg>(msgEnumIndex.FromJust());
-
-  // Args
-  int arg1 = Nan::To<int>(info[1]).FromJust();
-  Local<Number> arg2 = info[2].As<Number>();
-  Nan::Maybe<int> arg3 = Nan::To<int>(info[3]);
-
-  // these defs are in irsdk_defines.cpp
-  switch (msgType)
-  {
-  // irsdk_BroadcastMsg msg, int arg1, int arg2, int var3
-  case irsdk_BroadcastCamSwitchPos: // @todo we need to use irsdk_padCarNum for arg1
-  case irsdk_BroadcastCamSwitchNum:
-    printf("BroadcastMessage(msgType: %d, arg1: %d, arg2: %d, arg3: %d)\n", msgType, arg1, Nan::To<int>(arg2).FromMaybe(1), arg3.FromMaybe(-1));
-    irsdk_broadcastMsg(msgType, arg1, Nan::To<int>(arg2).FromMaybe(1), arg3.FromMaybe(-1));
-    break;
-  
-  // irsdk_BroadcastMsg msg, int arg1, int unused, int unused
-  case irsdk_BroadcastReplaySearch: // arg1 == irsdk_RpySrchMode
-  case irsdk_BroadcastReplaySetState: // arg1 == irsdk_RpyStateMode
-  case irsdk_BroadcastCamSetState: // arg1 == irsdk_CameraState
-  case irsdk_BroadcastTelemCommand: // arg1 == irsdk_TelemCommandMode
-  case irsdk_BroadcastVideoCapture: // arg1 == irsdk_VideoCaptureMode
-    printf("BroadcastMessage(msgType: %d, arg1: %d, arg2: -1, arg3: -1)\n", msgType, arg1);
-    irsdk_broadcastMsg(msgType, arg1, -1, -1);
-    break;
-
-  // irsdk_BroadcastMsg msg, int arg1, int arg2, int unused
-  case irsdk_BroadcastReloadTextures: // arg1 == irsdk_ReloadTexturesMode
-  case irsdk_BroadcastChatComand: // arg1 == irsdk_ChatCommandMode
-  case irsdk_BroadcastReplaySetPlaySpeed:
-    printf("BroadcastMessage(msgType: %d, arg1: %d, arg2: %d, arg3: -1)\n", msgType, arg1, Nan::To<int>(arg2).FromMaybe(1));
-    irsdk_broadcastMsg(msgType, arg1, Nan::To<int>(arg2).FromMaybe(1), -1);
-    break;
-  
-  // irsdk_BroadcastMsg msg, int arg1, float arg2
-  case irsdk_BroadcastPitCommand: // arg1 == irsdk_PitCommandMode
-  case irsdk_BroadcastFFBCommand: // arg1 == irsdk_FFBCommandMode
-  case irsdk_BroadcastReplaySearchSessionTime:
-  case irskd_BroadcastReplaySetPlayPosition:
-    printf("BroadcastMessage(msgType: %d, arg1: %d, arg2: %f)\n", msgType, arg1, (float) Nan::To<double>(arg2).FromMaybe(1));
-    irsdk_broadcastMsg(msgType, arg1, (float) Nan::To<double>(arg2).FromMaybe(1));
-    break;
-
-  default:
-    printf("Attempted to broadcast an unsupported message.");
-    info.GetReturnValue().Set(false);
-    return;
-  }
-
-  info.GetReturnValue().Set(true);
-}
-
-// Helper Scripts
-NAN_METHOD(iRacingSdkNode::__GetTelemetryTypes)
-{
-  iRacingSdkNode* holder = ObjectWrap::Unwrap<iRacingSdkNode>(info.Holder());
-  Local<Context> context = Nan::GetCurrentContext();
-  Local<Object> result = Nan::New<Object>();
-
-  const int count = irsdk_getHeader()->numVars;
-  const irsdk_varHeader *varHeader;
-  for (int i = 0; i < count; i++) {
-    varHeader = irsdk_getVarHeaderEntry(i);
-    result->Set(context,
-                Nan::New(varHeader->name).ToLocalChecked(),
-                Nan::New(varHeader->type));
-  }
-
-  info.GetReturnValue().Set(result->Clone());
-}
-
-// Addon initialization
-void InitAddon(Local<Object> exports)
-{
-  iRacingSdkNode::Init(exports);
-}
-
-NODE_MODULE(NODE_GYP_MODULE_NAME, InitAddon);
+NODE_API_MODULE(NODE_GYP_MODULE_NAME, InitAll);
