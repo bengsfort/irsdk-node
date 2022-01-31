@@ -1,0 +1,24 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "exclude": [
+    "./scripts/**/*"
+  ],
+  "include": [
+    "src/**/*.ts"
+  ],
+  "references": [
+    {
+      "path": "../irsdk-node-types"
+    }
+  ],
+  "compilerOptions": {
+    "paths": {
+      "@irsdk-node/types": ["../irsdk-node-types"],
+    },
+    "composite": true,
+    "rootDir": "src",
+    "outDir": "dist",
+    "baseUrl": "./src",
+    "declarationDir": "dist"
+  }
+}

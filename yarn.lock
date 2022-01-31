@@ -1325,6 +1325,40 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@irsdk-node/native@^2.1.0, @irsdk-node/native@workspace:packages/irsdk-node-native":
+  version: 0.0.0-use.local
+  resolution: "@irsdk-node/native@workspace:packages/irsdk-node-native"
+  dependencies:
+    "@irsdk-node/types": ^2.1.0
+    bindings: ^1.5.0
+    node-addon-api: "*"
+    node-gyp: ^8.4.1
+    node-notifier: ^10.0.0
+    typescript: ^4.5.2
+  languageName: unknown
+  linkType: soft
+
+"@irsdk-node/types@^2.1.0, @irsdk-node/types@workspace:packages/irsdk-node-types":
+  version: 0.0.0-use.local
+  resolution: "@irsdk-node/types@workspace:packages/irsdk-node-types"
+  dependencies:
+    typescript: ^4.5.2
+  languageName: unknown
+  linkType: soft
+
+"@irsdk-node/workspace@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@irsdk-node/workspace@workspace:."
+  dependencies:
+    "@typescript-eslint/eslint-plugin": ^5.6.0
+    "@typescript-eslint/parser": ^5.6.0
+    eslint: ^8.4.1
+    eslint-config-airbnb-base: ^15.0.0
+    eslint-plugin-import: ^2.25.3
+    typescript: ^4.5.2
+  languageName: unknown
+  linkType: soft
+
 "@istanbuljs/load-nyc-config@npm:^1.0.0":
   version: 1.1.0
   resolution: "@istanbuljs/load-nyc-config@npm:1.1.0"
@@ -3630,30 +3664,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"irsdk-node@workspace:.":
+"irsdk-node@workspace:packages/irsdk-node":
   version: 0.0.0-use.local
-  resolution: "irsdk-node@workspace:."
+  resolution: "irsdk-node@workspace:packages/irsdk-node"
   dependencies:
     "@babel/core": ^7.16.0
     "@babel/preset-env": ^7.16.4
     "@babel/preset-typescript": ^7.16.0
+    "@irsdk-node/native": ^2.1.0
+    "@irsdk-node/types": ^2.1.0
     "@types/jest": ^27.0.3
     "@types/js-yaml": ^4.0.5
     "@types/node": ^16.11.12
-    "@typescript-eslint/eslint-plugin": ^5.6.0
-    "@typescript-eslint/parser": ^5.6.0
     babel-jest: ^27.4.4
-    bindings: ^1.5.0
-    eslint: ^8.4.1
-    eslint-config-airbnb-base: ^15.0.0
-    eslint-plugin-import: ^2.25.3
     jest: ^27.4.4
     js-yaml: ^4.1.0
     module-alias: ^2.2.2
-    node-addon-api: "*"
-    node-gyp: ^8.4.1
     node-notifier: ^10.0.0
     typescript: ^4.5.2
+  dependenciesMeta:
+    "@irsdk-node/native":
+      optional: true
   languageName: unknown
   linkType: soft
 

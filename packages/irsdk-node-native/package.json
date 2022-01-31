@@ -1,0 +1,48 @@
+{
+  "name": "@irsdk-node/native",
+  "version": "2.1.0",
+  "author": {
+    "name": "Matt Bengston",
+    "email": "bengsfort@gmail.com"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "files": [
+    "package.json",
+    "./build",
+    "./lib",
+    "./src/irsdk_node.h",
+    "./src/irsdk_node.cc",
+    "./scripts",
+    "./binding.gyp",
+    "./README.md"
+  ],
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf dist && node-gyp clean",
+    "build": "node-gyp configure && yarn run build-cpp:release && yarn run build-cpp:debug",
+    "prebuild": "node-gyp clean",
+    "build-cpp:release": "node-gyp build",
+    "build-cpp:debug": "node-gyp build --debug",
+    "lint": "eslint ./src --ext .js,.ts",
+    "prepack": "yarn build",
+    "generate-types": "node ./scripts/generate-var-types.js"
+  },
+  "packageManager": "yarn@3.1.0",
+  "preferUnplugged": false,
+  "os": [
+    "win32"
+  ],
+  "dependencies": {
+    "@irsdk-node/types": "^2.1.0",
+    "bindings": "^1.5.0",
+    "node-addon-api": "*",
+    "node-gyp": "^8.4.1"
+  },
+  "devDependencies": {
+    "node-notifier": "^10.0.0",
+    "typescript": "^4.5.2"
+  }
+}
