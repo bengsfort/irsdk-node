@@ -21,32 +21,34 @@ function telemSandbox(varList: TelemetryVarList) {
 async function main(out: string) {
   console.log('Starting...');
   const sdk = new IRacingSDK();
-  sdk.enableLogging = true;
 
-  console.log('SDK Started?', sdk);
+  if (await sdk.ready()) {
+    sdk.enableLogging = true;
 
-  sdk.enableTelemetry(true);
-  sdk.startSDK();
+    console.log('SDK Started?', sdk);
+    sdk.enableTelemetry(true);
+    sdk.startSDK();
 
-  console.log('SDK after startSDK?', sdk);
-  console.log('Triggering SDK wait...?', sdk);
-  if (sdk.waitForData(1000)) {
-    const telem = sdk.getTelemetry();
-    telemSandbox(telem);
-    const session = JSON.stringify(sdk.getSessionData(), null, 2);
+    console.log('SDK after startSDK?', sdk);
+    console.log('Triggering SDK wait...?', sdk);
+    if (sdk.waitForData(1000)) {
+      const telem = sdk.getTelemetry();
+      telemSandbox(telem);
+      const session = JSON.stringify(sdk.getSessionData(), null, 2);
 
-    console.log('session status ok?', sdk.sessionStatusOK);
+      console.log('session status ok?', sdk.sessionStatusOK);
 
-    // Save
-    const dir = dirname(out);
-    console.log('Saving in:', dir);
-    await Promise.all([
-      await writeFile(`${out}/telemetry.json`, JSON.stringify(telem, null, 2), 'utf-8'),
-      await writeFile(`${out}/session.json`, session, 'utf-8'),
-    ]);
-    console.log('finished.');
-  } else {
-    console.log('No data! Exiting.');
+      // Save
+      const dir = dirname(out);
+      console.log('Saving in:', dir);
+      await Promise.all([
+        await writeFile(`${out}/telemetry.json`, JSON.stringify(telem, null, 2), 'utf-8'),
+        await writeFile(`${out}/session.json`, session, 'utf-8'),
+      ]);
+      console.log('finished.');
+    } else {
+      console.log('No data! Exiting.');
+    }
   }
 }
 

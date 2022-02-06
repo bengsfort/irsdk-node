@@ -61,13 +61,12 @@ export class IRacingSDK {
 
   // Private
   private _dataVer = -1;
-
   private _sessionData: SessionData | null = null;
-
   private _sdk?: INativeSDK;
+  private _sdkReq: Promise<void>;
 
   constructor() {
-    void this._loadSDK();
+    this._sdkReq = this._loadSDK();
     void IRacingSDK.isSimRunning();
   }
 
@@ -75,6 +74,11 @@ export class IRacingSDK {
     const sdk = await getSdkOrMock();
     this._sdk = sdk;
     this._sdk.startSDK();
+  }
+
+  public async ready(): Promise<boolean> {
+    await this._sdkReq;
+    return true;
   }
 
   /**
