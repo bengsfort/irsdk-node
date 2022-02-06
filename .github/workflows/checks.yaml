@@ -17,6 +17,9 @@ jobs:
       with:
         node-version: '16'
         cache: 'yarn'
+
+    - name: "Set yarn version (3.1.0)"
+      run: yarn set version 3.1.0
     
     - name: "Setup lerna"
       run: yarn dlx lerna bootstrap --force-local
