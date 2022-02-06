@@ -9,7 +9,7 @@
     "**/build": true,
     "**/dist": false,
     "**/node_modules": false,
-    ".yarn/**": true
+    ".yarn/**": false
   },
   "npm.packageManager": "yarn",
   "search.exclude": {
