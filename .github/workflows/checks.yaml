@@ -17,9 +17,9 @@ jobs:
       with:
         node-version: '16'
         cache: 'yarn'
+    
+    - name: "Setup lerna"
+      run: yarn dlx lerna bootstrap --force-local
 
     - name: "Install deps"
       run: yarn install
-    
-    - name: "Setup lerna"
-      run: yarn bootstrap
