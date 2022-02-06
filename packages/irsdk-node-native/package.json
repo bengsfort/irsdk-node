@@ -11,6 +11,7 @@
   "files": [
     "package.json",
     "./build",
+    "./dist",
     "./lib",
     "./src",
     "./scripts",
@@ -20,12 +21,15 @@
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
   "scripts": {
-    "clean": "node-gyp clean",
-    "preversion": "yarn clean && yarn build",
-    "build": "node-gyp configure && yarn run build-cpp:release && yarn run build-cpp:debug",
-    "prebuild": "node-gyp clean",
-    "build-cpp:release": "node-gyp build",
-    "build-cpp:debug": "node-gyp build --debug",
+    "clean": "node-gyp clean && rm -rf dist",
+    "preversion": "yarn clean && yarn run build-ts && yarn run build",
+    "build": "node-gyp configure && concurrently \"yarn:build-ts\" \"yarn:build-cpp\"",
+    "prebuild": "node-gyp clean && yarn run configure",
+    "build-ts": "tsc --build --force",
+    "build-cpp": "concurrently \"yarn:build-cpp-release\" \"yarn:build-cpp-debug\"",
+    "build-cpp-release": "node-gyp build",
+    "build-cpp-debug": "node-gyp configure && node-gyp build --debug",
+    "watch": "tsc --watch",
     "lint": "eslint ./src --ext .js,.ts",
     "prepack": "yarn build",
     "generate-types": "node ./scripts/generate-var-types.js"
@@ -42,6 +46,7 @@
     "node-gyp": "^8.4.1"
   },
   "devDependencies": {
+    "concurrently": "^7.0.0",
     "node-notifier": "^10.0.0",
     "typescript": "^4.5.2"
   }

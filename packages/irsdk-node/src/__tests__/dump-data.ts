@@ -3,6 +3,14 @@ import { dirname, resolve } from 'path';
 import { TelemetryVarList } from '@irsdk-node/types';
 import { IRacingSDK } from '../irsdk-node';
 
+/**
+ * Script usage:
+ * 
+ * yarn dump-data <folder>/<file>
+ * 
+ * File isn't really needed, will fix that eventually. Folder needs to exist.
+ */
+
 function telemSandbox(varList: TelemetryVarList) {
   console.log('Got lap distance values (float)', varList.CarIdxLapDistPct.value);
   console.log('Got session time values (double)', varList.SessionTime.value);

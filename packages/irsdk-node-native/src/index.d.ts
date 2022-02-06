@@ -96,3 +96,7 @@ export class NativeSDK implements INativeSDK {
 }
 
 export class DebugSDK extends NativeSDK {}
+
+declare module '../build/Release/irsdk_node.node' {
+  export const iRacingSdkNode: NativeSDK;
+}

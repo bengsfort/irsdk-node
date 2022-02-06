@@ -3,6 +3,9 @@ dist
 build
 out
 
+# TS incremental build info
+*.tsbuildinfo
+
 # Yarn
 /.yarn/*
 !/.yarn/patches

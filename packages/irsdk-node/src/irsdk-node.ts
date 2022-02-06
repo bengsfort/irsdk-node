@@ -24,7 +24,7 @@ import {
   SessionData,
 } from '@irsdk-node/types';
 import { getSimStatus } from './utils';
-import { getSdkOrMock } from 'get-sdk';
+import { getSdkOrMock } from './get-sdk';
 import { INativeSDK } from '@irsdk-node/native';
 
 function _copyTelemData<

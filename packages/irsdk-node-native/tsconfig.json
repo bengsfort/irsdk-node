@@ -4,7 +4,9 @@
     "./scripts/**/*"
   ],
   "include": [
-    "src/**/*.ts"
+    "./src/**/*.ts",
+    "./src/index.d.ts",
+    "./src/index.js"
   ],
   "references": [
     {
@@ -15,6 +17,7 @@
     "paths": {
       "@irsdk-node/types": ["../irsdk-node-types"],
     },
+    "allowJs": true,
     "composite": true,
     "rootDir": "src",
     "outDir": "dist",

@@ -24,6 +24,8 @@ In debug mode, you are going to need to swap to using the `DebugSDK` rather than
 
 This package contains a utility script for generating Typescript types based on the actual Telemetry values present during runtime. To do so you can run `yarn generate-types` while you have iRacing running and connected to a server. This will generate a new .ts types file in the [@irsdk-node/types](../irsdk-node-types) package.
 
+Please refer to the readme in the types package for more info.
+
 ## Commands
 
 ```sh
