@@ -34,12 +34,12 @@ function loop(sdk: IRacingSDK): void {
 // Check the iRacing service is running
 if (await IRacingSDK.isSimRunning()) {
     const sdk = new IRacingSDK();
-
-    // If you want the SDK to auto-enable telemetry
-    sdk.autoEnableTelemetry = true;
     
     // Start the SDK
-    if (sdk.startSdk()) {
+    if (await sdk.ready()) {
+        // If you want the SDK to auto-enable telemetry
+        sdk.autoEnableTelemetry = true;
+
         // Create a loop
         loop(sdk);
     }
