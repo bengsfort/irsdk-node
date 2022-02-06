@@ -15,13 +15,6 @@
     "packages/irsdk-node"
   ],
   "scripts": {
-    "bootstrap": "lerna bootstrap",
-    "link": "lerna link",
-    "link:local": "lerna link --force-local",
-    "changed": "lerna changed",
-    "diff": "lerna diff",
-    "version": "lerna version",
-    "publish": "lerna publish",
     "dev": "yarn workspaces foreach -pvi run watch",
     "build": "yarn workspaces foreach -pvi run build"
   },
@@ -33,7 +26,6 @@
     "eslint": "^8.4.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.3",
-    "lerna": "^4.0.0",
     "typescript": "^4.5.2"
   }
 }
