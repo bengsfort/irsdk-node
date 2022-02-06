@@ -11,6 +11,8 @@ jobs:
     steps:
     - name: "Check out repo"
       uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
 
     - name: "Use Node.js ${{ matrix.node-version }}"
       uses: actions/setup-node@v2
@@ -23,3 +25,12 @@ jobs:
 
     - name: "Install deps"
       run: yarn install
+
+    - name: "Lint codebase"
+      run: yarn lint
+    
+    - name: "Version check"
+      run: yarn version check
+
+    - name: "Build packages"
+      run: yarn build
