@@ -11,6 +11,9 @@
         "**/out/*",
         "*.md"
       ]
+    },
+    "version": {
+      "allowBranch": "main"
     }
   }
 }
