@@ -1,5 +1,5 @@
 import type { INativeSDK } from "@irsdk-node/native";
-import { TelemetryVarList, TelemetryVariable, BroadcastMessages, CameraState, ReplayPositionCommand, ReplaySearchCommand, ReplayStateCommand, ReloadTexturesCommand, ChatCommand, PitCommand, TelemetryCommand, FFBCommand, VideoCaptureCommand, SessionInfo, SessionData } from "@irsdk-node/types";
+import { TelemetryVarList, TelemetryVariable, BroadcastMessages, CameraState, ReplayPositionCommand, ReplaySearchCommand, ReplayStateCommand, ReloadTexturesCommand, ChatCommand, PitCommand, TelemetryCommand, FFBCommand, VideoCaptureCommand } from "@irsdk-node/types";
 import { loadMockSessionData, loadMockTelemetry } from "./mock-data/loader";
 
 let mockTelemetry: TelemetryVarList | null = null;

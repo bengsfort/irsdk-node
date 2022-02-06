@@ -12,8 +12,7 @@
     "package.json",
     "./build",
     "./lib",
-    "./src/irsdk_node.h",
-    "./src/irsdk_node.cc",
+    "./src",
     "./scripts",
     "./binding.gyp",
     "./README.md"
@@ -21,7 +20,8 @@
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
   "scripts": {
-    "clean": "rm -rf dist && node-gyp clean",
+    "clean": "node-gyp clean",
+    "preversion": "yarn clean && yarn build",
     "build": "node-gyp configure && yarn run build-cpp:release && yarn run build-cpp:debug",
     "prebuild": "node-gyp clean",
     "build-cpp:release": "node-gyp build",

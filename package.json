@@ -14,6 +14,17 @@
     "packages/irsdk-node-native",
     "packages/irsdk-node"
   ],
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "link": "lerna link",
+    "link:local": "lerna link --force-local",
+    "changed": "lerna changed",
+    "diff": "lerna diff",
+    "version": "lerna version",
+    "publish": "lerna publish",
+    "dev": "yarn workspaces foreach --include '{irsdk-node,@irsdk-node/types}' -pvi run watch",
+    "build": "yarn workspaces foreach -pvi run build"
+  },
   "packageManager": "yarn@3.1.0",
   "preferUnplugged": false,
   "devDependencies": {

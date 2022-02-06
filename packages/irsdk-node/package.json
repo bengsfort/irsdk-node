@@ -10,29 +10,22 @@
   },
   "files": [
     "package.json",
+    "./tsconfig.json",
+    "./src",
     "./dist",
-    "./build",
-    "./lib",
-    "./src/irsdk_node.h",
-    "./src/irsdk_node.cc",
-    "./scripts",
-    "./binding.gyp",
-    "./README.md",
-    "./yarn.lock",
-    "./.gitignore",
-    "./.yarnrc.yml"
+    "./README.md"
   ],
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "clean": "rm -rf build dist",
+    "clean": "rm -rf dist",
+    "preversion": "yarn build",
     "build": "tsc",
     "watch": "tsc --watch",
     "lint": "eslint ./src --ext .js,.ts",
     "prepack": "yarn build",
     "run-debug": "node ./dist/__tests__/sandbox.js",
-    "dump-data": "node ./dist/__tests__/dump-data.js",
-    "test": "jest"
+    "dump-data": "node ./dist/__tests__/dump-data.js"
   },
   "packageManager": "yarn@3.1.0",
   "preferUnplugged": false,
