@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-import yaml from 'js-yaml';
+import yaml from "js-yaml";
 import {
   BroadcastMessages,
   CameraState,
@@ -22,10 +22,10 @@ import {
   SplitTimeInfo,
   WeekendInfo,
   SessionData,
-} from '@irsdk-node/types';
-import { INativeSDK } from '@irsdk-node/native';
-import { getSimStatus } from './utils';
-import { getSdkOrMock } from './get-sdk';
+} from "@irsdk-node/types";
+import { INativeSDK } from "@irsdk-node/native";
+import { getSimStatus } from "./utils";
+import { getSdkOrMock } from "./get-sdk";
 
 function _copyTelemData<
 K extends keyof TelemetryVarList = keyof TelemetryVarList,
@@ -115,7 +115,7 @@ export class IRacingSDK {
       const result = await getSimStatus();
       return result;
     } catch (e) {
-      console.error('Could not successfully determine sim status:', e);
+      console.error("Could not successfully determine sim status:", e);
     }
     return false;
   }
@@ -168,7 +168,7 @@ export class IRacingSDK {
       this._sessionData = yaml.load(seshString) as SessionData;
       return this._sessionData;
     } catch (err) {
-      console.error('There was an error getting session data:', err);
+      console.error("There was an error getting session data:", err);
     }
 
     return null;

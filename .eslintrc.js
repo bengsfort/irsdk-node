@@ -23,6 +23,23 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    // General codestyle
+    "indent": [
+      "error",
+      2
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "double"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
     "max-len": "off",
     "no-void": "off",
     "no-console": "off",

@@ -1,8 +1,8 @@
-import type { INativeSDK } from '@irsdk-node/native';
+import type { INativeSDK } from "@irsdk-node/native";
 import {
   TelemetryVarList, TelemetryVariable, BroadcastMessages, CameraState, ReplayPositionCommand, ReplaySearchCommand, ReplayStateCommand, ReloadTexturesCommand, ChatCommand, PitCommand, TelemetryCommand, FFBCommand, VideoCaptureCommand,
-} from '@irsdk-node/types';
-import { loadMockSessionData, loadMockTelemetry } from './mock-data/loader';
+} from "@irsdk-node/types";
+import { loadMockSessionData, loadMockTelemetry } from "./mock-data/loader";
 
 let mockTelemetry: TelemetryVarList | null = null;
 let mockSession: string | null = null;
@@ -20,8 +20,8 @@ export class MockSDK implements INativeSDK {
     this._isRunning = false;
     this._loadMockData();
     console.warn(
-      'Attempting to access iRacing SDK on unsupported platform!',
-      '\nReturning mock SDK for testing purposes. (Only win32 supported)',
+      "Attempting to access iRacing SDK on unsupported platform!",
+      "\nReturning mock SDK for testing purposes. (Only win32 supported)",
     );
   }
 
@@ -52,7 +52,7 @@ export class MockSDK implements INativeSDK {
   }
 
   getSessionData(): string {
-    return mockSession ?? '';
+    return mockSession ?? "";
   }
 
   getTelemetryData(): TelemetryVarList {
@@ -97,6 +97,6 @@ export class MockSDK implements INativeSDK {
   broadcast(message: BroadcastMessages.VideoCapture, command: VideoCaptureCommand): void;
 
   broadcast(...args: any[]): void {
-    console.log('Pretending to trigger SDK call:', ...args);
+    console.log("Pretending to trigger SDK call:", ...args);
   }
 }

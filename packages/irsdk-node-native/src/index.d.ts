@@ -12,7 +12,7 @@ import {
   VideoCaptureCommand,
   TelemetryVariable,
   TelemetryVarList,
-} from '@irsdk-node/types';
+} from "@irsdk-node/types";
 
 type TelemetryTypesDict = {
   [variableName: string]: number;
@@ -116,6 +116,6 @@ export class NativeSDK implements INativeSDK {
 
 export class DebugSDK extends NativeSDK {}
 
-declare module '../build/Release/irsdk_node.node' {
+declare module "../build/Release/irsdk_node.node" {
   export const iRacingSdkNode: NativeSDK;
 }
