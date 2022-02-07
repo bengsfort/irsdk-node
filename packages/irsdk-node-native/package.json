@@ -22,8 +22,7 @@
   "types": "./src/index.d.ts",
   "scripts": {
     "clean": "node-gyp clean && rm -rf dist",
-    "preversion": "yarn clean && yarn run build-ts && yarn run build",
-    "build": "node-gyp configure && concurrently \"yarn:build-ts\" \"yarn:build-cpp\"",
+    "build": "yarn run prebuild && concurrently \"yarn:build-ts\" \"yarn:build-cpp\"",
     "prebuild": "node-gyp clean && yarn run configure",
     "build-ts": "tsc --build --force",
     "build-cpp": "concurrently \"yarn:build-cpp-release\" \"yarn:build-cpp-debug\"",

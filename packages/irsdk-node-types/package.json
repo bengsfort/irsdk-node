@@ -18,7 +18,6 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "preversion": "yarn build",
     "build": "tsc",
     "watch": "tsc --watch",
     "clean": "rm -rf build dist",

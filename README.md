@@ -12,16 +12,4 @@ You can find the main module via the [irsdk-node](./packages/irsdk-node) package
 
 ## Updating packages
 
-The packages in this repo are managed via yarn workspaces + lerna. Yarn is used for the main linking / dependency consolidation between packages, whereas lerna is used for publishing and versioning the packages.
-
-The main commands that we use from lerna are included within the root workspace [package.json](./package.json).
-
-- `yarn bootstrap`: Installs dependencies, links dependent packages.
-- `yarn link`: Links all packages dependent on each other.
-- `yarn link:local`: Links all packages dependent on each other, forcing the local package no matter what.
-- `yarn changed`: List the packages that have changed since last release.
-- `yarn diff`: Print out a diff of changes since last release, from all packages.
-- `yarn version`: Bump the version of packages that have changed since last release.
-- `yarn publish`: Publish the packages that have changed since last release.
-
-Please refer to the [lerna docs](https://github.com/lerna/lerna/tree/main/commands/version#lifecycle-scripts) for more info about the lifecycle script interaction with lerna publishing.
+The packages in this repo are managed via yarn workspaces. We utilize the yarn workspaces and yarn version plugins to make this process much easier.
