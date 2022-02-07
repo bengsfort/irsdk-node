@@ -2,12 +2,7 @@
 
 NodeJS bindings for the iRacing SDK. Aims to provide a thin barrier of entry to use the SDK from Node based apps. This repo just adds bindings for the current version of the SDK and is not a full node.js implementation. That would be a lot of fun (something like [pyirsdk](https://github.com/kutu/pyirsdk) or [iracing-sdk](https://github.com/quimcalpe/iracing-sdk)), but unfortunately I do not have the time atm :)
 
-## Tested Features
-
-- [X] Start / stop the iRacing SDK
-- [X] Check status of iRacing Sessions
-- [X] Broadcast messages to/trigger commands in iRacing sim
-- [X] Expose data of active iRacing session
+> ⚠️ **BREAKING CHANGE!** v3.0.0 introduced a new multi-package workspace for this project, and as such has introduced some breaking changes. You should still be able to import _just_ `irsdk-node`, but do note that it will include the dependent sub-packages, namely: `@irsdk-node/native` and `@irsdk-node/types`. Further, you will now be required to wait for the SDK to load via: `if (await sdk.ready())` before trying to use it. Please refer to the [changelog](./CHANGELOG.md) for more info.
 
 ## Usage
 

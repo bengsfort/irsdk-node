@@ -30,10 +30,10 @@
   "packageManager": "yarn@3.1.0",
   "preferUnplugged": false,
   "optionalDependencies": {
-    "@irsdk-node/native": "^2.1.0"
+    "@irsdk-node/native": "workspace:*"
   },
   "dependencies": {
-    "@irsdk-node/types": "^2.1.0",
+    "@irsdk-node/types": "workspace:^",
     "js-yaml": "^4.1.0",
     "module-alias": "^2.2.2"
   },
