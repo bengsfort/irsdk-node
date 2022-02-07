@@ -16,6 +16,7 @@
   ],
   "scripts": {
     "dev": "yarn workspaces foreach -pvi run watch",
+    "lint": "yarn workspaces foreach -pvi run lint",
     "build": "yarn workspaces foreach -pvi run build"
   },
   "packageManager": "yarn@3.1.0",

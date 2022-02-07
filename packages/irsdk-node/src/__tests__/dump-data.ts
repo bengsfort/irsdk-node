@@ -5,9 +5,9 @@ import { IRacingSDK } from '../irsdk-node';
 
 /**
  * Script usage:
- * 
+ *
  * yarn dump-data <folder>/<file>
- * 
+ *
  * File isn't really needed, will fix that eventually. Folder needs to exist.
  */
 

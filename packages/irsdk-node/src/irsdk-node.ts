@@ -23,9 +23,9 @@ import {
   WeekendInfo,
   SessionData,
 } from '@irsdk-node/types';
+import { INativeSDK } from '@irsdk-node/native';
 import { getSimStatus } from './utils';
 import { getSdkOrMock } from './get-sdk';
-import { INativeSDK } from '@irsdk-node/native';
 
 function _copyTelemData<
 K extends keyof TelemetryVarList = keyof TelemetryVarList,
@@ -57,12 +57,15 @@ export class IRacingSDK {
    * Enable attempting to auto-start telemetry when starting the SDK (if it is not running).
    * @default false
    */
-  public autoEnableTelemetry: boolean = false;
+  public autoEnableTelemetry = false;
 
   // Private
   private _dataVer = -1;
+
   private _sessionData: SessionData | null = null;
+
   private _sdk?: INativeSDK;
+
   private _sdkReq: Promise<void>;
 
   constructor() {
@@ -98,8 +101,7 @@ export class IRacingSDK {
   }
 
   public set enableLogging(value: boolean) {
-    if (this._sdk)
-      this._sdk.enableLogging = value;
+    if (this._sdk) this._sdk.enableLogging = value;
   }
 
   // @todo: add getter for current session string version
@@ -259,19 +261,21 @@ export class IRacingSDK {
    * Request the value of the given telemetry variable.
    * @param index The number index of the variable. Only use if you know what you are doing!
    */
-  public getTelemetryVariable<T extends any = any>(index: number): TelemetryVariable<T>;
+  public getTelemetryVariable<T = any>(index: number): TelemetryVariable<T>;
+
   /**
    * Request the value of the given telemetry variable.
    * @param varName The name of the variable to retrieve.
    */
-  public getTelemetryVariable<T extends any = any>(varName: keyof TelemetryVarList): TelemetryVariable<T>;
-  public getTelemetryVariable<T extends any = any>(telemVar: any): TelemetryVariable<T> | null {
+  public getTelemetryVariable<T = any>(varName: keyof TelemetryVarList): TelemetryVariable<T>;
+
+  public getTelemetryVariable<T = any>(telemVar: any): TelemetryVariable<T> | null {
     if (!this._sdk) return null;
 
     const rawData = this._sdk?.getTelemetryVariable(telemVar);
     const parsed: Partial<TelemetryVarList> = {};
 
-    // @todo good grief these types need to be fixed asap 
+    // @todo good grief these types need to be fixed asap
     _copyTelemData(
       rawData as TelemetryVariable<any>,
       rawData.name as keyof TelemetryVarList,
