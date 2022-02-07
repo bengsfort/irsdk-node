@@ -17,7 +17,8 @@
   "scripts": {
     "dev": "yarn workspaces foreach -pvi run watch",
     "lint": "yarn workspaces foreach -pvi run lint",
-    "build": "yarn workspaces foreach -pt run build"
+    "build": "yarn workspaces foreach -pt run build",
+    "publish": "yarn version apply --all && yarn workspaces foreach npm publish --tolerate-republish"
   },
   "packageManager": "yarn@3.1.0",
   "preferUnplugged": false,
