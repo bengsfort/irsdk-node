@@ -13,3 +13,7 @@ You can find the main module via the [irsdk-node](./packages/irsdk-node) package
 ## Updating packages
 
 The packages in this repo are managed via yarn workspaces. We utilize the yarn workspaces and yarn version plugins to make this process much easier.
+
+Use [`yarn version`](https://yarnpkg.com/cli/version) to version the different packages, preferrably in `--deferred` mode. You can use the interactive prompt to do this.
+
+When ready to publish, just run `yarn publish` from the root and the script should take care of everything. Make sure to add a git tag after. Ideally this would be automated via github actions + changesets, but maybe in the future.
