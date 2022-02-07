@@ -3,8 +3,8 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/lib",
-                "${workspaceFolder}/src",
+                "${workspaceFolder}/packages/irsdk-node-native/lib",
+                "${workspaceFolder}/packages/irsdk-node-native/src",
                 "${env:USERPROFILE}/AppData/Local/node-gyp/Cache/**",
                 "${workspaceFolder}/node_modules/**",
                 "${workspaceFolder}/.yarn/**",

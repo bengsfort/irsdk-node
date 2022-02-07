@@ -1,0 +1,7 @@
+releases:
+  "@irsdk-node/native": major
+  "@irsdk-node/types": major
+  irsdk-node: major
+
+declined:
+  - "@irsdk-node/workspace"

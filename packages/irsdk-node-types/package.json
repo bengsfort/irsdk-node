@@ -1,0 +1,32 @@
+{
+  "name": "@irsdk-node/types",
+  "version": "2.1.0",
+  "author": {
+    "name": "Matt Bengston",
+    "email": "bengsfort@gmail.com"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "files": [
+    "package.json",
+    "./tsconfig.json",
+    "./src",
+    "./dist",
+    "./README.md"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "clean": "rm -rf build dist",
+    "lint": "eslint ./src --ext .js,.ts",
+    "prepack": "yarn build"
+  },
+  "packageManager": "yarn@3.1.0",
+  "preferUnplugged": false,
+  "devDependencies": {
+    "typescript": "^4.5.2"
+  }
+}

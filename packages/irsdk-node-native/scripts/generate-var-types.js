@@ -2,8 +2,8 @@ const NativeSDK = require("../build/Debug/irsdk_node.node").iRacingSdkNode;
 const path = require("path");
 const fs = require("fs");
 
-const TARGET_FILE = "generated/telemetry.ts"
-const OUT_PATH = path.resolve(process.cwd(), "src/", TARGET_FILE);
+const TARGET_FILE = "_GENERATED_telemetry.ts";
+const OUT_PATH = path.resolve(process.cwd(), "../irsdk-node-types/src/", TARGET_FILE);
 
 console.log("Generating iRacing telemetry variable types.");
 console.log("Make sure the sim is running!");
@@ -31,6 +31,9 @@ const varTypes = [
 // Get all the types
 const types = sdk.__getTelemetryTypes();
 const out = `
+// ! THIS FILE IS AUTO-GENERATED, EDITS WILL BE OVERRIDDEN !
+// ! Make changes to the generate-var-types in @irsk-node/native !
+
 /**
  * A variable included in the telemetry.
  */

@@ -1,0 +1,42 @@
+{
+  "exclude": [
+    "**/node_modules",
+    "**/dist",
+  ],
+  "compilerOptions": {
+    // Targets
+    "target": "ESNext",
+    "module": "CommonJS",
+    "declaration": true,
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
+
+    // Sources
+    "outDir": "dist/",
+    "baseUrl": "packages/",
+    "typeRoots": [
+      "node_modules/@types",
+      "types",
+    ],
+
+    // Options
+    "allowJs": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+
+    // Additional
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+
+    // Resolution
+    "isolatedModules": true,
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+  }
+}
