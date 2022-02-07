@@ -1,1 +1,1 @@
-export * from "./sim-status";
+export * from './sim-status';

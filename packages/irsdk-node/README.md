@@ -32,7 +32,7 @@ function loop(sdk: IRacingSDK): void {
 }
 
 // Check the iRacing service is running
-if (await IRacingSDK.isSimRunning()) {
+if (await IRacingSDK.IsSimRunning()) {
     const sdk = new IRacingSDK();
     
     // Start the SDK

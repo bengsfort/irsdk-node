@@ -30,7 +30,7 @@
     "build-cpp-release": "node-gyp build",
     "build-cpp-debug": "node-gyp configure && node-gyp build --debug",
     "watch": "tsc --watch",
-    "lint": "eslint ./src --ext .js,.ts",
+    "lint": "eslint ./src --ext .ts",
     "prepack": "yarn build",
     "generate-types": "node ./scripts/generate-var-types.js"
   },

@@ -26,11 +26,11 @@ jobs:
     - name: "Install deps"
       run: yarn install
 
+    - name: "Build packages"
+      run: yarn build
+
     - name: "Lint codebase"
       run: yarn lint
     
     - name: "Version check"
       run: yarn version check
-
-    - name: "Build packages"
-      run: yarn build

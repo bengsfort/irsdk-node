@@ -1,5 +1,6 @@
-import http from "http";
-import { SIM_STATUS_URI } from "../constants";
+import http from 'http';
+
+import { SIM_STATUS_URI } from '../constants';
 
 /**
  * Makes an http localhots request to check whether or not the iRacing sim is running.
@@ -10,20 +11,20 @@ import { SIM_STATUS_URI } from "../constants";
  */
 export const getSimStatus = (): Promise<boolean> => new Promise((resolve, reject) => {
   http.get(SIM_STATUS_URI, (res) => {
-    let data = "";
+    let data = '';
 
-    res.on("data", (d) => {
+    res.on('data', (d) => {
       data += d;
     });
 
-    res.on("end", () => {
-      if (typeof data !== "string") {
-        reject(new Error("Invalid payload from sim received"));
+    res.on('end', () => {
+      if (typeof data !== 'string') {
+        reject(new Error('Invalid payload from sim received'));
       }
       // This could be done more elegantly, but there is no need really :D
-      resolve(data.includes("running:1"));
+      resolve(data.includes('running:1'));
     });
-  }).on("error", (err: NodeJS.ErrnoException) => {
+  }).on('error', (err: NodeJS.ErrnoException) => {
     reject(err);
   });
 });

@@ -12,7 +12,7 @@ import {
   VideoCaptureCommand,
   TelemetryVariable,
   TelemetryVarList,
-} from "@irsdk-node/types";
+} from '@irsdk-node/types';
 
 type TelemetryTypesDict = {
   [variableName: string]: number;
@@ -55,67 +55,63 @@ export interface INativeSDK {
 }
 
 export class NativeSDK implements INativeSDK {
-  constructor();
-
   public readonly currDataVersion: number;
 
   public enableLogging: boolean;
 
+  constructor();
+
   // Main API
   // Control
-  startSDK(): boolean;
+  public startSDK(): boolean;
 
-  stopSDK(): void;
+  public stopSDK(): void;
 
   // State
-  isRunning(): boolean;
+  public isRunning(): boolean;
 
-  waitForData(timeout?: number): boolean;
+  public waitForData(timeout?: number): boolean;
 
-  getSessionData(): string; // full yaml
+  public getSessionData(): string; // full yaml
 
-  getTelemetryData(): TelemetryVarList;
+  public getTelemetryData(): TelemetryVarList;
 
-  getTelemetryVariable<T>(index: number): TelemetryVariable<T>;
+  public getTelemetryVariable<T extends number | boolean | string>(index: number): TelemetryVariable<T[]>;
 
-  getTelemetryVariable<T>(name: string): TelemetryVariable<T>;
+  public getTelemetryVariable<T extends number | boolean | string>(name: string): TelemetryVariable<T[]>;
 
   // Private helpers
-  __getTelemetryTypes(): TelemetryTypesDict;
+  public __getTelemetryTypes(): TelemetryTypesDict;
 
   // Broadcast command overloads
   // This is handled in the cpp side so no need to mess with it in js
-  broadcast(message: BroadcastMessages.CameraSwitchPos, pos: number, group: number, camera: number): void;
+  public broadcast(message: BroadcastMessages.CameraSwitchPos, pos: number, group: number, camera: number): void;
 
-  broadcast(message: BroadcastMessages.CameraSwitchNum, driver: number, group: number, camera: number): void;
+  public broadcast(message: BroadcastMessages.CameraSwitchNum, driver: number, group: number, camera: number): void;
 
-  broadcast(message: BroadcastMessages.CameraSetState, state: CameraState): void;
+  public broadcast(message: BroadcastMessages.CameraSetState, state: CameraState): void;
 
-  broadcast(message: BroadcastMessages.ReplaySetPlaySpeed, speed: number, slowMotion: number): void;
+  public broadcast(message: BroadcastMessages.ReplaySetPlaySpeed, speed: number, slowMotion: number): void;
 
-  broadcast(message: BroadcastMessages.ReplaySetPlayPosition, pos: ReplayPositionCommand, frame: number): void;
+  public broadcast(message: BroadcastMessages.ReplaySetPlayPosition, pos: ReplayPositionCommand, frame: number): void;
 
-  broadcast(message: BroadcastMessages.ReplaySearch, mode: ReplaySearchCommand): void;
+  public broadcast(message: BroadcastMessages.ReplaySearch, mode: ReplaySearchCommand): void;
 
-  broadcast(message: BroadcastMessages.ReplaySetState, state: ReplayStateCommand): void;
+  public broadcast(message: BroadcastMessages.ReplaySetState, state: ReplayStateCommand): void;
 
-  broadcast(message: BroadcastMessages.ReloadTextures, command: ReloadTexturesCommand, carIndex?: number): void;
+  public broadcast(message: BroadcastMessages.ReloadTextures, command: ReloadTexturesCommand, carIndex?: number): void;
 
-  broadcast(message: BroadcastMessages.ChatCommand, command: ChatCommand, macro?: number): void;
+  public broadcast(message: BroadcastMessages.ChatCommand, command: ChatCommand, macro?: number): void;
 
-  broadcast(message: BroadcastMessages.PitCommand, command: PitCommand, param?: number): void;
+  public broadcast(message: BroadcastMessages.PitCommand, command: PitCommand, param?: number): void;
 
-  broadcast(message: BroadcastMessages.TelemCommand, command: TelemetryCommand): void;
+  public broadcast(message: BroadcastMessages.TelemCommand, command: TelemetryCommand): void;
 
-  broadcast(message: BroadcastMessages.FFBCommand, command: FFBCommand, value: number): void;
+  public broadcast(message: BroadcastMessages.FFBCommand, command: FFBCommand, value: number): void;
 
-  broadcast(message: BroadcastMessages.ReplaySearchSessionTime, session: number, time: number): void;
+  public broadcast(message: BroadcastMessages.ReplaySearchSessionTime, session: number, time: number): void;
 
-  broadcast(message: BroadcastMessages.VideoCapture, command: VideoCaptureCommand): void;
+  public broadcast(message: BroadcastMessages.VideoCapture, command: VideoCaptureCommand): void;
 }
 
-export class DebugSDK extends NativeSDK {}
-
-declare module "../build/Release/irsdk_node.node" {
-  export const iRacingSdkNode: NativeSDK;
-}
+export const DebugSDK: typeof NativeSDK;

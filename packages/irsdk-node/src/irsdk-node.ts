@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-import yaml from "js-yaml";
+import yaml from 'js-yaml';
 import {
   BroadcastMessages,
   CameraState,
@@ -22,12 +22,13 @@ import {
   SplitTimeInfo,
   WeekendInfo,
   SessionData,
-} from "@irsdk-node/types";
-import { INativeSDK } from "@irsdk-node/native";
-import { getSimStatus } from "./utils";
-import { getSdkOrMock } from "./get-sdk";
+} from '@irsdk-node/types';
+import { type INativeSDK } from '@irsdk-node/native';
 
-function _copyTelemData<
+import { getSimStatus } from './utils';
+import { getSdkOrMock } from './get-sdk';
+
+function copyTelemData<
 K extends keyof TelemetryVarList = keyof TelemetryVarList,
 T extends TelemetryVarList[K] = TelemetryVarList[K]
 >(src: T, key: K, dest: TelemetryVarList): void {
@@ -70,7 +71,7 @@ export class IRacingSDK {
 
   constructor() {
     this._sdkReq = this._loadSDK();
-    void IRacingSDK.isSimRunning();
+    void IRacingSDK.IsSimRunning();
   }
 
   private async _loadSDK(): Promise<void> {
@@ -110,12 +111,12 @@ export class IRacingSDK {
    * Checks whether the simulation service is running.
    * @returns {boolean} True if the service is running.
    */
-  public static async isSimRunning(): Promise<boolean> {
+  public static async IsSimRunning(): Promise<boolean> {
     try {
       const result = await getSimStatus();
       return result;
     } catch (e) {
-      console.error("Could not successfully determine sim status:", e);
+      console.error('Could not successfully determine sim status:', e);
     }
     return false;
   }
@@ -168,7 +169,7 @@ export class IRacingSDK {
       this._sessionData = yaml.load(seshString) as SessionData;
       return this._sessionData;
     } catch (err) {
-      console.error("There was an error getting session data:", err);
+      console.error('There was an error getting session data:', err);
     }
 
     return null;
@@ -246,7 +247,7 @@ export class IRacingSDK {
 
     if (rawData) {
       Object.keys(rawData).forEach((dataKey) => {
-        _copyTelemData(
+        copyTelemData(
           rawData[dataKey as keyof TelemetryVarList],
           dataKey as keyof TelemetryVarList,
           data as TelemetryVarList,
@@ -261,28 +262,29 @@ export class IRacingSDK {
    * Request the value of the given telemetry variable.
    * @param index The number index of the variable. Only use if you know what you are doing!
    */
-  public getTelemetryVariable<T = any>(index: number): TelemetryVariable<T>;
+  public getTelemetryVariable<T extends boolean | number | string>(index: number): TelemetryVariable<T[]> | null;
 
   /**
    * Request the value of the given telemetry variable.
    * @param varName The name of the variable to retrieve.
    */
-  public getTelemetryVariable<T = any>(varName: keyof TelemetryVarList): TelemetryVariable<T>;
+  public getTelemetryVariable<T extends boolean | number | string>(varName: keyof TelemetryVarList): TelemetryVariable<T[]> | null;
 
-  public getTelemetryVariable<T = any>(telemVar: any): TelemetryVariable<T> | null {
+  public getTelemetryVariable<T extends boolean | number | string>(telemVar: number | keyof TelemetryVarList): TelemetryVariable<T[]> | null {
     if (!this._sdk) return null;
 
-    const rawData = this._sdk?.getTelemetryVariable(telemVar);
+    // @todo Need to fix this type.
+    const rawData = this._sdk?.getTelemetryVariable(telemVar as string);
     const parsed: Partial<TelemetryVarList> = {};
 
     // @todo good grief these types need to be fixed asap
-    _copyTelemData(
-      rawData as TelemetryVariable<any>,
+    copyTelemData(
+      rawData as TelemetryVariable<any>, // eslint-disable-line
       rawData.name as keyof TelemetryVarList,
       parsed as TelemetryVarList,
     );
 
-    return parsed[rawData.name as keyof TelemetryVarList] as TelemetryVariable<T>;
+    return parsed[rawData.name as keyof TelemetryVarList] as TelemetryVariable<T[]>;
   }
 
   // Broadcast commands
