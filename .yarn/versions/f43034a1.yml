@@ -1,0 +1,5 @@
+releases:
+  "@irsdk-node/native": minor
+
+undecided:
+  - "@irsdk-node/workspace"
