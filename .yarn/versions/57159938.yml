@@ -1,5 +1,0 @@
-releases:
-  irsdk-node: minor
-
-undecided:
-  - "@irsdk-node/workspace"
