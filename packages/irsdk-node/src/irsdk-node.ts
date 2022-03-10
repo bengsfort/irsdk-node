@@ -23,7 +23,7 @@ import {
   WeekendInfo,
   SessionData,
 } from '@irsdk-node/types';
-import { type INativeSDK } from '@irsdk-node/native';
+import type { INativeSDK } from '@irsdk-node/native';
 
 import { getSimStatus } from './utils';
 import { getSdkOrMock } from './get-sdk';
