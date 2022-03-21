@@ -114,4 +114,4 @@ export class NativeSDK implements INativeSDK {
   public broadcast(message: BroadcastMessages.VideoCapture, command: VideoCaptureCommand): void;
 }
 
-export const DebugSDK: typeof NativeSDK;
+// export const DebugSDK: typeof NativeSDK;
