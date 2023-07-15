@@ -167,6 +167,7 @@ export class IRacingSDK {
     try {
       const seshString = this._sdk?.getSessionData();
       this._sessionData = yaml.load(seshString) as SessionData;
+      this._dataVer = this.currDataVersion;
       return this._sessionData;
     } catch (err) {
       console.error('There was an error getting session data:', err);
