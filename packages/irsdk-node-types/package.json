@@ -21,7 +21,7 @@
     "build": "tsc",
     "watch": "tsc --watch",
     "check-types": "tsc --noEmit",
-    "clean": "rm -rf build dist",
+    "clean": "rm -rf build dist *.tsbuildinfo",
     "lint": "eslint ./src --color",
     "prepack": "yarn build"
   },

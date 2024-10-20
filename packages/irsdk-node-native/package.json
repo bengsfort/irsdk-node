@@ -21,7 +21,7 @@
   "main": "./dist/index.js",
   "types": "./src/index.d.ts",
   "scripts": {
-    "clean-ts": "rm -rf dist",
+    "clean-ts": "rm -rf dist *.tsbuildinfo",
     "clean-cpp": "node-gyp clean",
     "clean": "yarn run clean-ts && yarn run clean-cpp",
     "configure": "yarn clean-cpp && node-gyp configure",

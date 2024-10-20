@@ -15,8 +15,9 @@
   "scripts": {
     "dev": "yarn workspaces foreach -Apvi run watch",
     "lint": "yarn workspaces foreach -Apvi run lint",
+    "clean": "yarn workspaces foreach -Apvi run clean",
     "check-types": "yarn workspaces foreach -Apvi run check-types",
-    "build": "yarn workspaces foreach -Apt run build",
+    "build": "yarn workspaces foreach -Apvti run build",
     "publish": "yarn version apply --all && yarn workspaces foreach -Apt npm publish --tolerate-republish"
   },
   "packageManager": "yarn@4.5.1",
