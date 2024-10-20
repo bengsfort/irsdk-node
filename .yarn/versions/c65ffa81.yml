@@ -1,0 +1,5 @@
+declined:
+  - "@irsdk-node/workspace"
+  - irsdk-node
+  - "@irsdk-node/native"
+  - "@irsdk-node/types"
