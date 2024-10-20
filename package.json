@@ -13,10 +13,11 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "yarn workspaces foreach -pvi run watch",
-    "lint": "yarn workspaces foreach -pvi run lint",
-    "build": "yarn workspaces foreach -pt run build",
-    "publish": "yarn version apply --all && yarn workspaces foreach -pt npm publish --tolerate-republish"
+    "dev": "yarn workspaces foreach -Apvi run watch",
+    "lint": "yarn workspaces foreach -Apvi run lint",
+    "check-types": "yarn workspaces foreach -Apvi run check-types",
+    "build": "yarn workspaces foreach -Apt run build",
+    "publish": "yarn version apply --all && yarn workspaces foreach -Apt npm publish --tolerate-republish"
   },
   "packageManager": "yarn@4.5.1",
   "preferUnplugged": false,

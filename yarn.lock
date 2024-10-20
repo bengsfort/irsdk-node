@@ -1330,11 +1330,18 @@ __metadata:
   resolution: "@irsdk-node/native@workspace:packages/irsdk-node-native"
   dependencies:
     "@irsdk-node/types": "workspace:^"
+    "@typescript-eslint/eslint-plugin": "npm:^5.6.0"
+    "@typescript-eslint/parser": "npm:^5.6.0"
     bindings: "npm:^1.5.0"
     concurrently: "npm:^7.0.0"
+    eslint: "npm:^8.4.1"
+    eslint-config-airbnb-base: "npm:^15.0.0"
+    eslint-plugin-import: "npm:^2.25.3"
+    eslint-plugin-prettier: "npm:^4.0.0"
     node-addon-api: "npm:^8.2.1"
     node-gyp: "npm:^10.2.0"
     node-notifier: "npm:^10.0.0"
+    prettier: "npm:^2.5.1"
     typescript: "npm:^4.5.2"
   languageName: unknown
   linkType: soft
@@ -1343,6 +1350,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@irsdk-node/types@workspace:packages/irsdk-node-types"
   dependencies:
+    "@typescript-eslint/eslint-plugin": "npm:^5.6.0"
+    "@typescript-eslint/parser": "npm:^5.6.0"
+    eslint: "npm:^8.4.1"
+    eslint-config-airbnb-base: "npm:^15.0.0"
+    eslint-plugin-import: "npm:^2.25.3"
+    eslint-plugin-prettier: "npm:^4.0.0"
+    prettier: "npm:^2.5.1"
     typescript: "npm:^4.5.2"
   languageName: unknown
   linkType: soft
@@ -3933,11 +3947,18 @@ __metadata:
     "@types/jest": "npm:^27.0.3"
     "@types/js-yaml": "npm:^4.0.5"
     "@types/node": "npm:^16.11.12"
+    "@typescript-eslint/eslint-plugin": "npm:^5.6.0"
+    "@typescript-eslint/parser": "npm:^5.6.0"
     babel-jest: "npm:^27.4.4"
+    eslint: "npm:^8.4.1"
+    eslint-config-airbnb-base: "npm:^15.0.0"
+    eslint-plugin-import: "npm:^2.25.3"
+    eslint-plugin-prettier: "npm:^4.0.0"
     jest: "npm:^27.4.4"
     js-yaml: "npm:^4.1.0"
     module-alias: "npm:^2.2.2"
     node-notifier: "npm:^10.0.0"
+    prettier: "npm:^2.5.1"
     typescript: "npm:^4.5.2"
   dependenciesMeta:
     "@irsdk-node/native":
