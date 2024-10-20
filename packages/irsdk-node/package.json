@@ -1,12 +1,12 @@
 {
   "name": "irsdk-node",
-  "version": "3.3.0",
+  "version": "4.0.0",
   "author": {
     "name": "Matt Bengston",
     "email": "bengsfort@gmail.com"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   },
   "files": [
     "package.json",
@@ -18,18 +18,19 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist *.tsbuildinfo",
     "build": "tsc",
     "watch": "tsc --watch",
-    "lint": "eslint ./src --ext .js,.ts",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint ./src --color",
     "prepack": "yarn build",
     "run-debug": "node ./dist/__tests__/sandbox.js",
     "dump-data": "node ./dist/__tests__/dump-data.js"
   },
-  "packageManager": "yarn@3.1.0",
+  "packageManager": "yarn@4.5.1",
   "preferUnplugged": false,
   "optionalDependencies": {
-    "@irsdk-node/native": "^3.3.0"
+    "@irsdk-node/native": "^4.0.0"
   },
   "dependencies": {
     "@irsdk-node/types": "workspace:^",
@@ -43,9 +44,16 @@
     "@types/jest": "^27.0.3",
     "@types/js-yaml": "^4.0.5",
     "@types/node": "^16.11.12",
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "@typescript-eslint/parser": "^5.6.0",
     "babel-jest": "^27.4.4",
+    "eslint": "^8.4.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.4.4",
     "node-notifier": "^10.0.0",
+    "prettier": "^2.5.1",
     "typescript": "^4.5.2"
   }
 }

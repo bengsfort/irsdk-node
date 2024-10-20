@@ -10,25 +10,32 @@ jobs:
 
     steps:
     - name: "Check out repo"
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         fetch-depth: 0
+        lfs: true
 
-    - name: "Use Node.js ${{ matrix.node-version }}"
-      uses: actions/setup-node@v2
+    # We need to skip corepack check because the windows runner (specifically)
+    # is inconsistent with the yarn version it uses See actions/setup-node#889
+    - name: Set up Node 
+      uses: actions/setup-node@v4
       with:
-        node-version: '16'
-        cache: 'yarn'
-
-    - name: "Set yarn version (3.1.0)"
-      run: yarn set version 3.1.0
+        node-version: 18
+        node-version-file: .nvmrc
+        cache: "yarn"
+        cache-dependency-path: yarn.lock
+      env:
+        SKIP_YARN_COREPACK_CHECK: 1
 
     - name: "Install deps"
-      run: yarn install
+      run: |
+        corepack enable
+        yarn install
 
     - name: "Build packages"
       run: yarn build
 
+    # We need to lint after building so we have access to types (could use references but)
     - name: "Lint codebase"
       run: yarn lint
     

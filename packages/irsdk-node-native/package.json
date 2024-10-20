@@ -1,12 +1,12 @@
 {
   "name": "@irsdk-node/native",
-  "version": "3.3.0",
+  "version": "4.0.0",
   "author": {
     "name": "Matt Bengston",
     "email": "bengsfort@gmail.com"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   },
   "files": [
     "package.json",
@@ -21,19 +21,22 @@
   "main": "./dist/index.js",
   "types": "./src/index.d.ts",
   "scripts": {
-    "clean": "node-gyp clean && rm -rf dist",
-    "build": "yarn run pre-build && concurrently \"yarn:build-ts\" \"yarn:build-cpp\"",
-    "pre-build": "node-gyp clean && node-gyp configure",
+    "clean-ts": "rm -rf dist *.tsbuildinfo",
+    "clean-cpp": "node-gyp clean",
+    "clean": "yarn run clean-ts && yarn run clean-cpp",
+    "configure": "yarn clean-cpp && node-gyp configure",
+    "build": "yarn run configure && concurrently \"yarn:build-ts\" \"yarn:build-cpp\"",
     "build-ts": "tsc --build --force",
     "build-cpp": "yarn build-cpp-release && yarn build-cpp-debug",
     "build-cpp-release": "node-gyp build",
     "build-cpp-debug": "node-gyp build --debug",
     "watch": "tsc --watch",
-    "lint": "eslint ./src --ext .ts",
+    "lint": "eslint ./src --color",
+    "check-types": "tsc --noEmit",
     "prepack": "yarn build",
     "generate-types": "node ./scripts/generate-var-types.js"
   },
-  "packageManager": "yarn@3.1.0",
+  "packageManager": "yarn@4.5.1",
   "preferUnplugged": false,
   "os": [
     "win32"
@@ -41,12 +44,19 @@
   "dependencies": {
     "@irsdk-node/types": "workspace:^",
     "bindings": "^1.5.0",
-    "node-addon-api": "*",
-    "node-gyp": "^8.4.1"
+    "node-addon-api": "^8.2.1",
+    "node-gyp": "^10.2.0"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "@typescript-eslint/parser": "^5.6.0",
     "concurrently": "^7.0.0",
+    "eslint": "^8.4.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-prettier": "^4.0.0",
     "node-notifier": "^10.0.0",
+    "prettier": "^2.5.1",
     "typescript": "^4.5.2"
   }
 }
