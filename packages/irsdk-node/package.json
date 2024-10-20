@@ -26,7 +26,7 @@
     "run-debug": "node ./dist/__tests__/sandbox.js",
     "dump-data": "node ./dist/__tests__/dump-data.js"
   },
-  "packageManager": "yarn@3.1.0",
+  "packageManager": "yarn@4.5.1",
   "preferUnplugged": false,
   "optionalDependencies": {
     "@irsdk-node/native": "^4.0.0"

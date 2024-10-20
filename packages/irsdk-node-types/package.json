@@ -24,7 +24,7 @@
     "lint": "eslint ./src --ext .js,.ts",
     "prepack": "yarn build"
   },
-  "packageManager": "yarn@3.1.0",
+  "packageManager": "yarn@4.5.1",
   "preferUnplugged": false,
   "devDependencies": {
     "typescript": "^4.5.2"
