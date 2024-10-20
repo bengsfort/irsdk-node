@@ -41,8 +41,8 @@
   "dependencies": {
     "@irsdk-node/types": "workspace:^",
     "bindings": "^1.5.0",
-    "node-addon-api": "*",
-    "node-gyp": "^8.4.1"
+    "node-addon-api": "^8.2.1",
+    "node-gyp": "^10.2.0"
   },
   "devDependencies": {
     "concurrently": "^7.0.0",
