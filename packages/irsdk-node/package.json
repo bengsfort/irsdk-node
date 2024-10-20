@@ -6,7 +6,7 @@
     "email": "bengsfort@gmail.com"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   },
   "files": [
     "package.json",

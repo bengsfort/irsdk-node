@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.0.0
+
+- BREAKING: Upgrades all API's to support modern node versions. Minimum version increased to Node v18.
+
 ## v3.0.0
 
 - BREAKING: Splits irsdk-node package into multiple packages.
