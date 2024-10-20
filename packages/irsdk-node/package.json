@@ -29,7 +29,7 @@
   "packageManager": "yarn@3.1.0",
   "preferUnplugged": false,
   "optionalDependencies": {
-    "@irsdk-node/native": "^3.3.0"
+    "@irsdk-node/native": "^4.0.0"
   },
   "dependencies": {
     "@irsdk-node/types": "workspace:^",

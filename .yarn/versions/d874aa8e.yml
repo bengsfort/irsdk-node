@@ -1,5 +1,6 @@
 releases:
   "@irsdk-node/native": major
+  irsdk-node: major
 
 undecided:
   - "@irsdk-node/workspace"
