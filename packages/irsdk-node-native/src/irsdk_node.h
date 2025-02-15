@@ -32,12 +32,12 @@ private:
     Napi::Value __GetTelemetryTypes(const Napi::CallbackInfo &info);
     Napi::Value GetTelemetryVar(const Napi::CallbackInfo &info);
 
-    bool iRacingSdkNode::GetTelemetryBool(int entry, int index);
-    int iRacingSdkNode::GetTelemetryInt(int entry, int index);
-    float iRacingSdkNode::GetTelemetryFloat(int entry, int index);
-    double iRacingSdkNode::GetTelemetryDouble(int entry, int index);
-    Napi::Object iRacingSdkNode::GetTelemetryVarByIndex(const Napi::Env env, int index);
-    Napi::Object iRacingSdkNode::GetTelemetryVar(const Napi::Env env, const char *varName);
+    bool GetTelemetryBool(int entry, int index);
+    int GetTelemetryInt(int entry, int index);
+    float GetTelemetryFloat(int entry, int index);
+    double GetTelemetryDouble(int entry, int index);
+    Napi::Object GetTelemetryVarByIndex(const Napi::Env env, int index);
+    Napi::Object GetTelemetryVar(const Napi::Env env, const char *varName);
 
     bool _loggingEnabled;
     char* _data;

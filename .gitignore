@@ -21,3 +21,6 @@ out
 
 # Dependencies
 node_modules
+
+# Coverage
+coverage
