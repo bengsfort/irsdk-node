@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.0.2
+
+- `irsdk-node` Fixes Electron compilation issues (Thank you @tariknz)
+- `@irsdk-node/types` Update to generated telemetry types (Thank you @justinmakaila)
+
 ## v4.0.0
 
 - BREAKING: Upgrades all API's to support modern node versions. Minimum version increased to Node v18.

@@ -1325,7 +1325,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@irsdk-node/native@npm:^4.0.0, @irsdk-node/native@workspace:packages/irsdk-node-native":
+"@irsdk-node/native@npm:^4.0.1, @irsdk-node/native@workspace:packages/irsdk-node-native":
   version: 0.0.0-use.local
   resolution: "@irsdk-node/native@workspace:packages/irsdk-node-native"
   dependencies:
@@ -3942,7 +3942,7 @@ __metadata:
     "@babel/core": "npm:^7.16.0"
     "@babel/preset-env": "npm:^7.16.4"
     "@babel/preset-typescript": "npm:^7.16.0"
-    "@irsdk-node/native": "npm:^4.0.0"
+    "@irsdk-node/native": "npm:^4.0.1"
     "@irsdk-node/types": "workspace:^"
     "@types/jest": "npm:^27.0.3"
     "@types/js-yaml": "npm:^4.0.5"
