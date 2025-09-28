@@ -1,10 +1,10 @@
-import { RadioInfo } from './radio-info';
 import { CameraInfo } from './camera-info';
-import { SessionList } from './session-info';
-import { WeekendInfo } from './weekend-info';
 import { DriverInfo } from './driver-info';
-import { SplitTimeInfo } from './split-info';
+import { RadioInfo } from './radio-info';
+import { SessionList } from './session-info';
 import { CarSetupInfo } from './setup-info';
+import { SplitTimeInfo } from './split-info';
+import { WeekendInfo } from './weekend-info';
 
 /**
  * Information about the current session, stored as yaml.

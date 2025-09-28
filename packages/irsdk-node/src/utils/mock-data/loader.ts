@@ -1,9 +1,9 @@
 import { TelemetryVarList } from '@irsdk-node/types';
-import yaml from 'js-yaml';
+import { dump as dumpYaml } from 'js-yaml';
 
 export const loadMockSessionData = async (): Promise<string> => {
   const json = await import('./session.json');
-  return yaml.dump(json.default);
+  return dumpYaml(json.default);
 };
 
 export const loadMockTelemetry = async (): Promise<TelemetryVarList> => {

@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 import { writeFile } from 'fs/promises';
 import { dirname, resolve } from 'path';
 
@@ -13,14 +15,14 @@ import { IRacingSDK } from '../irsdk-node';
  * File isn't really needed, will fix that eventually. Folder needs to exist.
  */
 
-function telemSandbox(varList: TelemetryVarList) {
+function telemSandbox(varList: TelemetryVarList): void {
   console.log('Got lap distance values (float)', varList.CarIdxLapDistPct.value);
   console.log('Got session time values (double)', varList.SessionTime.value);
   console.log('Got car positions by index (int)', varList.CarIdxPosition.value);
   console.log('got player car in pit stall (bool)', varList.PlayerCarInPitStall.value);
 }
 
-async function main(out: string) {
+async function main(out: string): Promise<void> {
   console.log('Starting...');
   const sdk = new IRacingSDK();
   sdk.autoEnableTelemetry = true;
@@ -45,8 +47,8 @@ async function main(out: string) {
       const dir = dirname(out);
       console.log('Saving in:', dir);
       await Promise.all([
-        await writeFile(`${out}/telemetry.json`, JSON.stringify(telem, null, 2), 'utf-8'),
-        await writeFile(`${out}/session.json`, session, 'utf-8'),
+        writeFile(`${out}/telemetry.json`, JSON.stringify(telem, null, 2), 'utf-8'),
+        writeFile(`${out}/session.json`, session, 'utf-8'),
       ]);
       console.log('finished.');
     } else {
@@ -55,7 +57,7 @@ async function main(out: string) {
   }
 }
 
-const [,, OUT_FILE] = process.argv;
+const [, , OUT_FILE] = process.argv;
 const TARGET = resolve(process.cwd(), OUT_FILE);
 
 console.log('target:', TARGET);

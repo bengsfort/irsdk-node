@@ -1,6 +1,7 @@
 {
   "name": "@irsdk-node/native",
   "version": "4.0.2",
+  "type": "module",
   "author": {
     "name": "Matt Bengston",
     "email": "bengsfort@gmail.com",
@@ -36,10 +37,11 @@
     "build:cpp-release": "node-gyp build",
     "build:cpp-debug": "node-gyp build --debug",
     "watch": "tsc --watch",
-    "lint": "eslint ./src --color",
+    "lint": "eslint",
     "check-types": "tsc --noEmit",
     "generate-types": "node ./scripts/generate-var-types.js"
   },
+  "prettier": "@bengsfort/eslint-config-flat/prettier.config.js",
   "packageManager": "pnpm@10.17.1",
   "os": [
     "win32"
@@ -51,15 +53,9 @@
     "node-gyp": "^10.2.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.6.0",
-    "@typescript-eslint/parser": "^5.6.0",
-    "concurrently": "^7.0.0",
-    "eslint": "^8.4.1",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-prettier": "^4.0.0",
+    "@bengsfort/eslint-config-flat": "^0.2.5",
+    "eslint": "^9.36.0",
     "node-notifier": "^10.0.0",
-    "prettier": "^2.5.1",
-    "typescript": "^4.5.2"
+    "typescript": "^5.9.2"
   }
 }

@@ -1,5 +1,4 @@
-/* eslint-disable no-param-reassign */
-import yaml from 'js-yaml';
+import type { INativeSDK } from '@irsdk-node/native';
 import {
   BroadcastMessages,
   CameraState,
@@ -23,15 +22,16 @@ import {
   WeekendInfo,
   SessionData,
 } from '@irsdk-node/types';
-import type { INativeSDK } from '@irsdk-node/native';
+import { load as loadYaml } from 'js-yaml';
 
-import { getSimStatus } from './utils';
 import { getSdkOrMock } from './get-sdk';
+import { getSimStatus } from './utils';
 
-function copyTelemData<
-K extends keyof TelemetryVarList = keyof TelemetryVarList,
-T extends TelemetryVarList[K] = TelemetryVarList[K]
->(src: T, key: K, dest: TelemetryVarList): void {
+function copyTelemData<K extends keyof TelemetryVarList = keyof TelemetryVarList>(
+  src: TelemetryVarList[K],
+  key: K,
+  dest: TelemetryVarList,
+): void {
   dest[key] = { ...src };
   // bool
   if (src.varType === 1) {
@@ -42,12 +42,16 @@ T extends TelemetryVarList[K] = TelemetryVarList[K]
     });
     return;
   }
+
   // numbers
-  if (src.varType === 2 || src.varType === 3) { // int
+  if (src.varType === 2 || src.varType === 3) {
+    // int
     dest[key].value = [...new Int32Array(src.value as number[])];
-  } else if (src.varType === 4) { // float
+  } else if (src.varType === 4) {
+    // float
     dest[key].value = [...new Float32Array(src.value as number[])];
-  } else if (src.varType === 5) { // double
+  } else if (src.varType === 5) {
+    // double
     dest[key].value = [...new Float64Array(src.value as number[])];
   }
 }
@@ -116,6 +120,7 @@ export class IRacingSDK {
       const result = await getSimStatus();
       return result;
     } catch (e) {
+      // eslint-disable-next-line no-console
       console.error('Could not successfully determine sim status:', e);
     }
     return false;
@@ -161,14 +166,17 @@ export class IRacingSDK {
    * @returns {SessionData}
    */
   public getSessionData(): SessionData | null {
-    if (this._sessionData && this._dataVer === this.currDataVersion) return this._sessionData;
+    if (this._sessionData && this._dataVer === this.currDataVersion)
+      return this._sessionData;
+
     if (!this._sdk) return null;
 
     try {
-      const seshString = this._sdk?.getSessionData();
-      this._sessionData = yaml.load(seshString) as SessionData;
+      const seshString = this._sdk.getSessionData();
+      this._sessionData = loadYaml(seshString) as SessionData;
       return this._sessionData;
     } catch (err) {
+      // eslint-disable-next-line no-console
       console.error('There was an error getting session data:', err);
     }
 
@@ -262,19 +270,26 @@ export class IRacingSDK {
    * Request the value of the given telemetry variable.
    * @param index The number index of the variable. Only use if you know what you are doing!
    */
-  public getTelemetryVariable<T extends boolean | number | string>(index: number): TelemetryVariable<T[]> | null;
+  public getTelemetryVariable<T extends boolean | number | string>(
+    index: number,
+  ): TelemetryVariable<T[]> | null;
 
   /**
    * Request the value of the given telemetry variable.
    * @param varName The name of the variable to retrieve.
    */
-  public getTelemetryVariable<T extends boolean | number | string>(varName: keyof TelemetryVarList): TelemetryVariable<T[]> | null;
+  public getTelemetryVariable<T extends boolean | number | string>(
+    // eslint-disable-next-line @typescript-eslint/unified-signatures
+    varName: keyof TelemetryVarList,
+  ): TelemetryVariable<T[]> | null;
 
-  public getTelemetryVariable<T extends boolean | number | string>(telemVar: number | keyof TelemetryVarList): TelemetryVariable<T[]> | null {
+  public getTelemetryVariable<T extends boolean | number | string>(
+    telemVar: number | keyof TelemetryVarList,
+  ): TelemetryVariable<T[]> | null {
     if (!this._sdk) return null;
 
     // @todo Need to fix this type.
-    const rawData = this._sdk?.getTelemetryVariable(telemVar as string);
+    const rawData = this._sdk.getTelemetryVariable(telemVar as string);
     const parsed: Partial<TelemetryVarList> = {};
 
     // @todo good grief these types need to be fixed asap
@@ -335,10 +350,16 @@ export class IRacingSDK {
   }
 
   public reloadCarTextures(car: number): void {
-    this._sdk?.broadcast(BroadcastMessages.ReloadTextures, ReloadTexturesCommand.CarIndex, car);
+    this._sdk?.broadcast(
+      BroadcastMessages.ReloadTextures,
+      ReloadTexturesCommand.CarIndex,
+      car,
+    );
   }
 
-  public triggerChatState(state: ChatCommand.BeginChat | ChatCommand.Cancel | ChatCommand.Reply): void {
+  public triggerChatState(
+    state: ChatCommand.BeginChat | ChatCommand.Cancel | ChatCommand.Reply,
+  ): void {
     this._sdk?.broadcast(BroadcastMessages.ChatCommand, state, 1);
   }
 
@@ -351,19 +372,27 @@ export class IRacingSDK {
   }
 
   public triggerPitClearCommand(
-    command: PitCommand.Clear | PitCommand.ClearTires | PitCommand.ClearWS | PitCommand.ClearFR | PitCommand.ClearFuel,
+    command:
+      | PitCommand.Clear
+      | PitCommand.ClearTires
+      | PitCommand.ClearWS
+      | PitCommand.ClearFR
+      | PitCommand.ClearFuel,
   ): void {
     this._sdk?.broadcast(BroadcastMessages.PitCommand, command);
   }
 
-  public triggerPitCommand(
-    command: PitCommand.WS | PitCommand.FR,
-  ): void {
+  public triggerPitCommand(command: PitCommand.WS | PitCommand.FR): void {
     this._sdk?.broadcast(BroadcastMessages.PitCommand, command);
   }
 
   public triggerPitChange(
-    command: PitCommand.Fuel | PitCommand.LF | PitCommand.RF | PitCommand.LR | PitCommand.RR,
+    command:
+      | PitCommand.Fuel
+      | PitCommand.LF
+      | PitCommand.RF
+      | PitCommand.LR
+      | PitCommand.RR,
     amount: number,
   ): void {
     this._sdk?.broadcast(BroadcastMessages.PitCommand, command, amount);
