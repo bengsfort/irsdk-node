@@ -23,6 +23,7 @@ function telemSandbox(varList: TelemetryVarList) {
 async function main(out: string) {
   console.log('Starting...');
   const sdk = new IRacingSDK();
+  sdk.autoEnableTelemetry = true;
 
   if (await sdk.ready()) {
     sdk.enableLogging = true;

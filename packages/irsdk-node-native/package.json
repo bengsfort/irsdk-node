@@ -3,7 +3,12 @@
   "version": "4.0.2",
   "author": {
     "name": "Matt Bengston",
-    "email": "bengsfort@gmail.com"
+    "email": "bengsfort@gmail.com",
+    "url": "http://bengsfort.dev/"
+  },
+  "bugs": {
+    "email": "bengsfort@gmail.com",
+    "url": "https://github.com/bengsfort/irsdk-node/issues"
   },
   "engines": {
     "node": ">=18"
@@ -21,23 +26,21 @@
   "main": "./dist/index.js",
   "types": "./src/index.d.ts",
   "scripts": {
-    "clean-ts": "rm -rf dist *.tsbuildinfo",
-    "clean-cpp": "node-gyp clean",
-    "clean": "yarn run clean-ts && yarn run clean-cpp",
-    "configure": "yarn clean-cpp && node-gyp configure",
-    "build": "yarn run configure && concurrently \"yarn:build-ts\" \"yarn:build-cpp\"",
-    "build-ts": "tsc --build --force",
-    "build-cpp": "yarn build-cpp-release && yarn build-cpp-debug",
-    "build-cpp-release": "node-gyp build",
-    "build-cpp-debug": "node-gyp build --debug",
+    "clean:ts": "rm -rf dist *.tsbuildinfo",
+    "clean:cpp": "node-gyp clean",
+    "clean": "pnpm run \"/^clean:.*/\"",
+    "configure": "pnpm run clean:cpp && node-gyp configure",
+    "build": "pnpm run configure && pnpm run \"/^build:(ts|cpp)$/\"",
+    "build:ts": "tsc --build --force",
+    "build:cpp": "pnpm run \"/^build:cpp\\-.*/\"",
+    "build:cpp-release": "node-gyp build",
+    "build:cpp-debug": "node-gyp build --debug",
     "watch": "tsc --watch",
     "lint": "eslint ./src --color",
     "check-types": "tsc --noEmit",
-    "prepack": "yarn build",
     "generate-types": "node ./scripts/generate-var-types.js"
   },
-  "packageManager": "yarn@4.5.1",
-  "preferUnplugged": false,
+  "packageManager": "pnpm@10.17.1",
   "os": [
     "win32"
   ],
