@@ -1,6 +1,6 @@
 import http from 'http';
 
-import { SIM_STATUS_URI } from '../constants';
+import { SIM_STATUS_URI } from '../constants.js';
 
 /**
  * Makes an http localhost request to check whether or not the iRacing sim is running.

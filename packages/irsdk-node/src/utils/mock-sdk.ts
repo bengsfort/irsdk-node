@@ -17,7 +17,7 @@ import {
   VideoCaptureCommand,
 } from '@irsdk-node/types';
 
-import { loadMockSessionData, loadMockTelemetry } from './mock-data/loader';
+import { loadMockSessionData, loadMockTelemetry } from './mock-data/loader.js';
 
 let mockTelemetry: TelemetryVarList | null = null;
 let mockSession: string | null = null;

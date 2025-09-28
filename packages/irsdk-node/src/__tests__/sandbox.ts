@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 
-import { IRacingSDK } from '../irsdk-node';
+import { IRacingSDK } from '../irsdk-node.js';
 
 function loop(sdk: IRacingSDK): void {
   console.log('session status ok?', sdk.sessionStatusOK);

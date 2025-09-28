@@ -13,16 +13,10 @@
     "src/utils/mock-data/session.json",
     "src/utils/mock-data/telemetry.json",
   ],
+
   "compilerOptions": {
-    "paths": {
-      "@irsdk-node/native": ["../irsdk-node-native"],
-      "@irsdk-node/types": ["../irsdk-node-types"],
-    },
-    "composite": true,
-    "rootDir": "src",
-    "outDir": "dist",
-    "baseUrl": "./src",
-    "declarationDir": "dist",
+    "rootDir": "./src",
+    "outDir": "./dist",
     "resolveJsonModule": true,
   }
 }

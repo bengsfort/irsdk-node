@@ -1,11 +1,11 @@
 /* eslint-disable no-console */
 
-import { writeFile } from 'fs/promises';
-import { dirname, resolve } from 'path';
+import { writeFile } from 'node:fs/promises';
+import { dirname, resolve } from 'node:path';
 
 import { TelemetryVarList } from '@irsdk-node/types';
 
-import { IRacingSDK } from '../irsdk-node';
+import { IRacingSDK } from '../irsdk-node.js';
 
 /**
  * Script usage:

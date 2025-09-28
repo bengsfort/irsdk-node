@@ -6,7 +6,7 @@
     "**/CVS": true,
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
-    "**/build": true,
+    "**/build": false,
     "**/dist": false,
     "**/node_modules": true,
   },
@@ -18,7 +18,9 @@
   "eslint.useFlatConfig": true,
   "eslint.format.enable": true,
   "eslint.workingDirectories": [
-    "."
+    "./packages/irsdk-node",
+    "./packages/irsdk-node-native",
+    "./packages/irsdk-node-types",
   ],
   "typescript.format.enable": true,
   "editor.formatOnSave": true,

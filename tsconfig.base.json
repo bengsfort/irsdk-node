@@ -1,42 +1,31 @@
 {
-  "exclude": [
-    "**/node_modules",
-    "**/dist",
-  ],
   "compilerOptions": {
-    // Targets
-    "target": "ESNext",
-    "module": "CommonJS",
+    "target": "esnext",
+    "lib": ["ESNext"],
+    "module": "NodeNext",
+    "skipLibCheck": true,
     "declaration": true,
-    "lib": [
-      "DOM",
-      "ESNext"
-    ],
 
-    // Sources
-    "outDir": "dist/",
-    "baseUrl": "packages/",
-    "typeRoots": [
-      "node_modules/@types",
-      "types",
-    ],
-
-    // Options
+    /* Compilation */
+    "composite": true,
+    "moduleResolution": "nodenext",
+    "allowImportingTsExtensions": false,
+    "isolatedModules": true,
+    "moduleDetection": "force",
     "allowJs": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+
+    /* Linting */
     "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
     "strictPropertyInitialization": true,
-
-    // Additional
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
     "noImplicitReturns": true,
-
-    // Resolution
-    "isolatedModules": true,
-    "moduleResolution": "Node",
-    "esModuleInterop": true,
-  }
+  },
 }

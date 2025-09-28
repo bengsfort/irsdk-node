@@ -21,6 +21,16 @@
     "./dist",
     "./README.md"
   ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./sdk": {
+      "types": "./dist/get-sdk.d.ts",
+      "default": "./dist/get-sdk.js"
+    }
+  },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {

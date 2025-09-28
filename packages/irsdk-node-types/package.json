@@ -15,19 +15,24 @@
     "node": ">=18"
   },
   "files": [
-    "package.json",
+    "./package.json",
     "./tsconfig.json",
-    "./src",
     "./dist",
     "./README.md"
   ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
     "check-types": "tsc --noEmit",
-    "clean": "rm -rf build dist *.tsbuildinfo",
+    "clean": "rm -rf build dist .tsbuildinfo",
     "lint": "eslint"
   },
   "prettier": "@bengsfort/eslint-config-flat/prettier.config.js",

@@ -24,8 +24,8 @@ import {
 } from '@irsdk-node/types';
 import { load as loadYaml } from 'js-yaml';
 
-import { getSdkOrMock } from './get-sdk';
-import { getSimStatus } from './utils';
+import { getSdkOrMock } from './get-sdk.js';
+import { getSimStatus } from './utils/sim-status.js';
 
 function copyTelemData<K extends keyof TelemetryVarList = keyof TelemetryVarList>(
   src: TelemetryVarList[K],
