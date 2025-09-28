@@ -3,7 +3,12 @@
   "version": "4.0.2",
   "author": {
     "name": "Matt Bengston",
-    "email": "bengsfort@gmail.com"
+    "email": "bengsfort@gmail.com",
+    "url": "http://bengsfort.dev/"
+  },
+  "bugs": {
+    "email": "bengsfort@gmail.com",
+    "url": "https://github.com/bengsfort/irsdk-node/issues"
   },
   "engines": {
     "node": ">=18"
@@ -23,14 +28,12 @@
     "watch": "tsc --watch",
     "check-types": "tsc --noEmit",
     "lint": "eslint ./src --color",
-    "prepack": "yarn build",
     "run-debug": "node ./dist/__tests__/sandbox.js",
     "dump-data": "node ./dist/__tests__/dump-data.js"
   },
-  "packageManager": "yarn@4.5.1",
-  "preferUnplugged": false,
+  "packageManager": "pnpm@10.17.1",
   "optionalDependencies": {
-    "@irsdk-node/native": "^4.0.1"
+    "@irsdk-node/native": "workspace:^"
   },
   "dependencies": {
     "@irsdk-node/types": "workspace:^",
