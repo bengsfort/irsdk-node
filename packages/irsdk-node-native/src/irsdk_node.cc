@@ -51,7 +51,7 @@ iRacingSdkNode::iRacingSdkNode(const Napi::CallbackInfo &info)
   , _sessionData(NULL)
   , _loggingEnabled(false)
 {
-  printf("Initializing cpp class instance...\n");
+  printf("Initializing iRacingSdkNode\n");
 }
 
 // ---------------------------
@@ -77,8 +77,9 @@ void iRacingSdkNode::SetEnableLogging(const Napi::CallbackInfo &info, const Napi
   } else {
     enable = info[0].As<Napi::Boolean>();
   }
-  printf("Setting logging enabled: %i\n", info[0]);
   this->_loggingEnabled = enable;
+  if (this->_loggingEnabled) printf("iRacingSDK Logging enabled\n");
+
 }
 
 // ---------------------------
@@ -87,10 +88,10 @@ void iRacingSdkNode::SetEnableLogging(const Napi::CallbackInfo &info, const Napi
 // SDK Control
 Napi::Value iRacingSdkNode::StartSdk(const Napi::CallbackInfo &info)
 {
-  printf("Starting SDK...\n");
+  if (this->_loggingEnabled) printf("Starting SDK...\n");
   if (!irsdk_isConnected()) {
     bool result = irsdk_startup();
-    printf("Connected at least! %i\n", result);
+    if (this->_loggingEnabled) printf("Connected at least! %i\n", result);
     return Napi::Boolean::New(info.Env(), result);
   }
   return Napi::Boolean::New(info.Env(), true);
@@ -151,7 +152,7 @@ Napi::Value iRacingSdkNode::WaitForData(const Napi::CallbackInfo &info)
   }
   else if (!(this->_data != NULL && irsdk_isConnected()))
   {
-    printf("Session ended. Cleaning up.\n");
+    if (this->_loggingEnabled) printf("Session ended. Cleaning up.\n");
     // Session ended
     if (this->_data) delete[] this->_data;
     this->_data = NULL;
@@ -159,7 +160,7 @@ Napi::Value iRacingSdkNode::WaitForData(const Napi::CallbackInfo &info)
     // Reset Info str
     this->_lastSessionCt = -1;
   }
-  printf("Session ended or something went wrong. Not successful.\n");
+  if (this->_loggingEnabled) printf("Session ended or something went wrong. Not successful.\n");
   return Napi::Boolean::New(info.Env(), false);
 }
 
@@ -190,7 +191,7 @@ Napi::Value iRacingSdkNode::BroadcastMessage(const Napi::CallbackInfo &info)
   // irsdk_BroadcastMsg msg, int arg1, int arg2, int var3
   case irsdk_BroadcastCamSwitchPos: // @todo we need to use irsdk_padCarNum for arg1
   case irsdk_BroadcastCamSwitchNum:
-    printf("BroadcastMessage(msgType: %d, arg1: %d, arg2: %d, arg3: %d)\n", msgType, arg1, arg2.Int32Value(), arg3.Int32Value());
+    if (this->_loggingEnabled) printf("BroadcastMessage(msgType: %d, arg1: %d, arg2: %d, arg3: %d)\n", msgType, arg1, arg2.Int32Value(), arg3.Int32Value());
     irsdk_broadcastMsg(msgType, arg1, arg2, arg3);
     break;
   
@@ -200,7 +201,7 @@ Napi::Value iRacingSdkNode::BroadcastMessage(const Napi::CallbackInfo &info)
   case irsdk_BroadcastCamSetState: // arg1 == irsdk_CameraState
   case irsdk_BroadcastTelemCommand: // arg1 == irsdk_TelemCommandMode
   case irsdk_BroadcastVideoCapture: // arg1 == irsdk_VideoCaptureMode
-    printf("BroadcastMessage(msgType: %d, arg1: %d, arg2: -1, arg3: -1)\n", msgType, arg1);
+    if (this->_loggingEnabled) printf("BroadcastMessage(msgType: %d, arg1: %d, arg2: -1, arg3: -1)\n", msgType, arg1);
     irsdk_broadcastMsg(msgType, arg1, -1, -1);
     break;
 
@@ -208,7 +209,7 @@ Napi::Value iRacingSdkNode::BroadcastMessage(const Napi::CallbackInfo &info)
   case irsdk_BroadcastReloadTextures: // arg1 == irsdk_ReloadTexturesMode
   case irsdk_BroadcastChatComand: // arg1 == irsdk_ChatCommandMode
   case irsdk_BroadcastReplaySetPlaySpeed:
-    printf("BroadcastMessage(msgType: %d, arg1: %d, arg2: %d, arg3: -1)\n", msgType, arg1, arg2.Int32Value());
+    if (this->_loggingEnabled) printf("BroadcastMessage(msgType: %d, arg1: %d, arg2: %d, arg3: -1)\n", msgType, arg1, arg2.Int32Value());
     irsdk_broadcastMsg(msgType, arg1, arg2, -1);
     break;
   
@@ -217,12 +218,12 @@ Napi::Value iRacingSdkNode::BroadcastMessage(const Napi::CallbackInfo &info)
   case irsdk_BroadcastFFBCommand: // arg1 == irsdk_FFBCommandMode
   case irsdk_BroadcastReplaySearchSessionTime:
   case irskd_BroadcastReplaySetPlayPosition:
-    printf("BroadcastMessage(msgType: %d, arg1: %d, arg2: %f)\n", msgType, arg1, (float)arg2.FloatValue());
+    if (this->_loggingEnabled) printf("BroadcastMessage(msgType: %d, arg1: %d, arg2: %f)\n", msgType, arg1, (float)arg2.FloatValue());
     irsdk_broadcastMsg(msgType, arg1, (float)arg2.FloatValue());
     break;
 
   default:
-    printf("Attempted to broadcast an unsupported message.");
+    if (this->_loggingEnabled) printf("Attempted to broadcast an unsupported message.");
     return Napi::Boolean::New(env, false);
   }
 
@@ -246,7 +247,7 @@ Napi::Value iRacingSdkNode::GetSessionData(const Napi::CallbackInfo &info)
 {
   int latestUpdate = irsdk_getSessionInfoStrUpdate();
   if (this->_lastSessionCt != latestUpdate) {
-    printf("Session data has been updated (prev: %d, new: %d)\n", this->_lastSessionCt, latestUpdate);
+    if (this->_loggingEnabled) printf("Session data has been updated (prev: %d, new: %d)\n", this->_lastSessionCt, latestUpdate);
     this->_lastSessionCt = latestUpdate;
     this->_sessionData = irsdk_getSessionInfoStr();
   }
