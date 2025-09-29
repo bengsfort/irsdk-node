@@ -18,9 +18,8 @@
     },
     "allowJs": true,
     "composite": true,
-    "rootDir": "src",
-    "outDir": "dist",
-    "baseUrl": "./src",
-    "declarationDir": "dist"
+    "rootDir": ".",
+    "outDir": "./dist",
+    "declarationDir": "./dist"
   }
 }

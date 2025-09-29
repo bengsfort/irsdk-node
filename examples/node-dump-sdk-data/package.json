@@ -1,0 +1,17 @@
+{
+  "name": "@irsdk-node/example-node-dump-sdk-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/main.js ./out"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.17.1",
+  "dependencies": {
+    "fs-extra": "^11.3.2",
+    "irsdk-node": "workspace:^"
+  }
+}
