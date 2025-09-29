@@ -25,6 +25,12 @@
     "./binding.gyp",
     "./README.md"
   ],
+  "exports": {
+    "." : {
+      "types": "./index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
   "main": "./dist/index.js",
   "types": "./index.d.ts",
   "scripts": {
@@ -41,9 +47,6 @@
     "generate-types": "node ./scripts/generate-var-types.js"
   },
   "packageManager": "pnpm@10.17.1",
-  "os": [
-    "win32"
-  ],
   "dependencies": {
     "@irsdk-node/types": "workspace:^",
     "bindings": "^1.5.0",
