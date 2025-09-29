@@ -1,5 +1,7 @@
 #include "./irsdk_node.h"
-#include "../lib/yaml_parser.h"
+#include "./yaml_parser.h"
+#include "./irsdk_defines.h"
+#include "./irsdk_client.h"
 
 /*
 Nan::SetPrototypeMethod(tmpl, "getSessionData", GetSessionData);
@@ -19,7 +21,7 @@ Napi::Object iRacingSdkNode::Init(Napi::Env env, Napi::Object exports)
     InstanceAccessor<&iRacingSdkNode::GetCurrSessionDataVersion>("currDataVersion"),
     InstanceAccessor<&iRacingSdkNode::GetEnableLogging, &iRacingSdkNode::SetEnableLogging>("enableLogging"),
     // Methods
-    //Control
+    //Control 
     InstanceMethod<&iRacingSdkNode::StartSdk>("startSDK"),
     InstanceMethod("stopSDK", &iRacingSdkNode::StopSdk),
     InstanceMethod("waitForData", &iRacingSdkNode::WaitForData),
@@ -91,7 +93,7 @@ Napi::Value iRacingSdkNode::StartSdk(const Napi::CallbackInfo &info)
   if (this->_loggingEnabled) printf("Starting SDK...\n");
   if (!irsdk_isConnected()) {
     bool result = irsdk_startup();
-    if (this->_loggingEnabled) printf("Connected at least! %i\n", result);
+    printf("Connected to iRacing SDK (%i)", result);
     return Napi::Boolean::New(info.Env(), result);
   }
   return Napi::Boolean::New(info.Env(), true);

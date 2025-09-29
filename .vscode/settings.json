@@ -6,9 +6,9 @@
     "**/CVS": true,
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
-    "**/build": true,
+    "**/build": false,
     "**/dist": false,
-    "**/node_modules": true,
+    "**/node_modules": false,
     ".yarn/**": false
   },
   "npm.packageManager": "yarn",
