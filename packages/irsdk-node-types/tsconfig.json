@@ -5,6 +5,9 @@
     "src/**/*.ts"
   ],
   "compilerOptions": {
+    "lib": [
+      "ESNext"
+    ],
     "composite": true,
     "rootDir": "./src",
     "outDir": "./dist",
