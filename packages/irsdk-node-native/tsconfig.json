@@ -4,9 +4,8 @@
     "./scripts/**/*"
   ],
   "include": [
-    "./src/**/*.ts",
-    "./src/index.d.ts",
-    "./src/index.js"
+    "./index.d.ts",
+    "./index.js"
   ],
   "references": [
     {
