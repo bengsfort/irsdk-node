@@ -20,6 +20,8 @@ Napi::Object iRacingSdkNode::Init(Napi::Env env, Napi::Object exports)
     // Properties
     InstanceAccessor<&iRacingSdkNode::GetCurrSessionDataVersion>("currDataVersion"),
     InstanceAccessor<&iRacingSdkNode::GetEnableLogging, &iRacingSdkNode::SetEnableLogging>("enableLogging"),
+    InstanceAccessor<&iRacingSdkNode::GetIsMocked>("isMocked"),
+    
     // Methods
     //Control 
     InstanceMethod<&iRacingSdkNode::StartSdk>("startSDK"),
@@ -81,7 +83,11 @@ void iRacingSdkNode::SetEnableLogging(const Napi::CallbackInfo &info, const Napi
   }
   this->_loggingEnabled = enable;
   if (this->_loggingEnabled) printf("iRacingSDK Logging enabled\n");
+}
 
+Napi::Value iRacingSdkNode::GetIsMocked(const Napi::CallbackInfo &info)
+{
+  return Napi::Boolean::New(info.Env(), false);
 }
 
 // ---------------------------
@@ -367,6 +373,11 @@ Napi::Object iRacingSdkNode::GetTelemetryVar(const Napi::Env env, const char *va
 {
   int varIndex = irsdk_varNameToIndex(varName);
   return this->GetTelemetryVarByIndex(env, varIndex);
+}
+
+Napi::Value iRacingSdkNode::IsMocked(const Napi::CallbackInfo &info)
+{
+  return Napi::Boolean::New(info.Env(), false);
 }
 
 Napi::Object InitAll(Napi::Env env, Napi::Object exports)

@@ -12,6 +12,8 @@ Napi::Object iRacingSdkNode::Init(Napi::Env env, Napi::Object exports)
     // Properties
     InstanceAccessor<&iRacingSdkNode::GetCurrSessionDataVersion>("currDataVersion"),
     InstanceAccessor<&iRacingSdkNode::GetEnableLogging, &iRacingSdkNode::SetEnableLogging>("enableLogging"),
+    InstanceAccessor<&iRacingSdkNode::GetIsMocked>("isMocked"),
+
     // Methods
     //Control
     InstanceMethod<&iRacingSdkNode::StartSdk>("startSDK"),
@@ -25,7 +27,7 @@ Napi::Object iRacingSdkNode::Init(Napi::Env env, Napi::Object exports)
     InstanceMethod("getTelemetryData", &iRacingSdkNode::GetTelemetryData),
     InstanceMethod("getTelemetryVariable", &iRacingSdkNode::GetTelemetryVar),
     // Helpers
-    InstanceMethod("__getTelemetryTypes", &iRacingSdkNode::__GetTelemetryTypes)
+    InstanceMethod("__getTelemetryTypes", &iRacingSdkNode::__GetTelemetryTypes),
   });
 
   Napi::FunctionReference* constructor = new Napi::FunctionReference();
@@ -45,7 +47,7 @@ iRacingSdkNode::iRacingSdkNode(const Napi::CallbackInfo &info)
   , _sessionData(NULL)
   , _loggingEnabled(false)
 {
-  printf("Initializing iRacingSdkNode\n");
+  printf("Initializing mock iRacingSdkNode\n");
 }
 
 // ---------------------------
@@ -73,7 +75,11 @@ void iRacingSdkNode::SetEnableLogging(const Napi::CallbackInfo &info, const Napi
   }
   this->_loggingEnabled = enable;
   if (this->_loggingEnabled) printf("iRacingSDK Logging enabled\n");
+}
 
+Napi::Value iRacingSdkNode::GetIsMocked(const Napi::CallbackInfo &info)
+{
+  return Napi::Boolean::New(info.Env(), true);
 }
 
 // ---------------------------

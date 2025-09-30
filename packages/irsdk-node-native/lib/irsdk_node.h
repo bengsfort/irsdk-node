@@ -14,6 +14,7 @@ private:
     Napi::Value GetCurrSessionDataVersion(const Napi::CallbackInfo &info);
     Napi::Value GetEnableLogging(const Napi::CallbackInfo &info);
     void SetEnableLogging(const Napi::CallbackInfo &info, const Napi::Value &value);
+    Napi::Value GetIsMocked(const Napi::CallbackInfo &info);
 
     // Methods
     // Control

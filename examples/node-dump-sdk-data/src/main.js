@@ -12,6 +12,7 @@ const { IRacingSDK } = require('irsdk-node');
  */
 
 function telemSandbox(varList) {
+  console.log("VARLIST:", varList);
   console.log('Got lap distance values (float)', varList.CarIdxLapDistPct.value);
   console.log('Got session time values (double)', varList.SessionTime.value);
   console.log('Got car positions by index (int)', varList.CarIdxPosition.value);
@@ -30,7 +31,7 @@ async function main(out) {
     sdk.enableTelemetry(true);
     sdk.startSDK();
 
-    console.log('SDK after startSDK?', sdk);
+    console.log('SDK after startSDK?', sdk._sdk);
     console.log('Triggering SDK wait...?', sdk);
     
     if (sdk.waitForData(1000)) {

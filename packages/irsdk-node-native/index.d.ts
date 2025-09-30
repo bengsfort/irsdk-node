@@ -20,6 +20,7 @@ type TelemetryTypesDict = {
 
 export interface INativeSDK {
   readonly currDataVersion: number;
+  readonly isMocked: boolean;
   enableLogging: boolean;
 
   // Main API
@@ -56,6 +57,8 @@ export interface INativeSDK {
 
 export class NativeSDK implements INativeSDK {
   public readonly currDataVersion: number;
+
+  public readonly isMocked: boolean;
 
   public enableLogging: boolean;
 
