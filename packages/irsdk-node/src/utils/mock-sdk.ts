@@ -11,6 +11,8 @@ let MOCK_SESSION: string | null = null;
 export class MockSDK implements INativeSDK {
   public currDataVersion: number;
 
+  public isMocked: boolean;
+
   public enableLogging: boolean;
 
   private _isRunning: boolean;
@@ -18,6 +20,7 @@ export class MockSDK implements INativeSDK {
   constructor() {
     this.currDataVersion = 1;
     this.enableLogging = false;
+    this.isMocked = true;
     this._isRunning = false;
     void this._loadMockData();
     console.warn(

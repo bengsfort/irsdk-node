@@ -54,7 +54,6 @@ T extends TelemetryVarList[K] = TelemetryVarList[K]
 
 // TODO: This class should return the mock data, not the mock SDK.
 // Return the general API flow to sync, not async.
-
 export class IRacingSDK {
   // Public
   /**
