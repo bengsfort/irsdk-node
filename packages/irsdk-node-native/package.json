@@ -28,10 +28,10 @@
   "exports": {
     "." : {
       "types": "./index.d.ts",
-      "default": "./dist/index.js"
+      "default": "./index.js"
     }
   },
-  "main": "./dist/index.js",
+  "main": "./index.js",
   "types": "./index.d.ts",
   "scripts": {
     "install": "node-gyp-build",

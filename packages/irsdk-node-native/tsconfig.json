@@ -4,8 +4,9 @@
     "./scripts/**/*"
   ],
   "include": [
-    "./index.d.ts",
-    "./index.js"
+    "./src/**/*.ts",
+    "./src/mock-data/session.json",
+    "./src/mock-data/telemetry.json",
   ],
   "references": [
     {
@@ -13,13 +14,11 @@
     }
   ],
   "compilerOptions": {
-    "paths": {
-      "@irsdk-node/types": ["../irsdk-node-types"],
-    },
     "allowJs": true,
     "composite": true,
-    "rootDir": ".",
+    "rootDir": "./src",
     "outDir": "./dist",
-    "declarationDir": "./dist"
+    "declarationDir": "./dist",
+    "resolveJsonModule": true,
   }
 }

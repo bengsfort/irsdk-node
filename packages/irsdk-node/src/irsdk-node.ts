@@ -24,9 +24,9 @@ import {
   SessionData,
 } from '@irsdk-node/types';
 import type { INativeSDK } from '@irsdk-node/native';
+import { NativeSDK } from '@irsdk-node/native';
 
 import { getSimStatus } from './utils';
-import { getSdkOrMock } from './get-sdk';
 
 function copyTelemData<
 K extends keyof TelemetryVarList = keyof TelemetryVarList,
@@ -67,24 +67,16 @@ export class IRacingSDK {
 
   private _sessionData: SessionData | null = null;
 
-  private _sdk?: INativeSDK;
+  private _sdk: INativeSDK;
 
-  private _sdkReq: Promise<void>;
 
   constructor() {
-    this._sdkReq = this._loadSDK();
+    this._sdk = new NativeSDK();
     void IRacingSDK.IsSimRunning();
   }
 
-  private async _loadSDK(): Promise<void> {
-    const sdk = await getSdkOrMock();
-    this._sdk = sdk;
-    this._sdk.startSDK();
-  }
-
   public async ready(): Promise<boolean> {
-    await this._sdkReq;
-    return true;
+    return Promise.resolve(true);
   }
 
   /**
@@ -93,14 +85,14 @@ export class IRacingSDK {
    * @readonly
    */
   public get currDataVersion(): number {
-    return this._sdk?.currDataVersion ?? -1;
+    return this._sdk.currDataVersion ?? -1;
   }
 
   /** Whether or not to enable verbose logging in the SDK.
    * @property {boolean}
    */
   public get enableLogging(): boolean {
-    return this._sdk?.enableLogging ?? false;
+    return this._sdk.enableLogging ?? false;
   }
 
   public set enableLogging(value: boolean) {
@@ -124,7 +116,7 @@ export class IRacingSDK {
   }
 
   public get sessionStatusOK(): boolean {
-    return this._sdk?.isRunning() ?? false;
+    return this._sdk.isRunning() ?? false;
   }
 
   /**
@@ -132,8 +124,8 @@ export class IRacingSDK {
    * @returns {boolean} If the SDK started successfully.
    */
   public startSDK(): boolean {
-    if (!this._sdk?.isRunning()) {
-      const successful = this._sdk?.startSDK() ?? false;
+    if (!this._sdk.isRunning()) {
+      const successful = this._sdk.startSDK() ?? false;
       if (this.autoEnableTelemetry) {
         this.enableTelemetry(true);
       }
@@ -146,7 +138,7 @@ export class IRacingSDK {
    * Stops the SDK from running and resets the data version.
    */
   public stopSDK(): void {
-    this._sdk?.stopSDK();
+    this._sdk.stopSDK();
     this._dataVer = -1;
   }
 
@@ -155,7 +147,7 @@ export class IRacingSDK {
    * @param {number} timeout Timeout (in ms). Max is 60fps (1/60)
    */
   public waitForData(timeout?: number): boolean {
-    return this._sdk?.waitForData(timeout) ?? false;
+    return this._sdk.waitForData(timeout) ?? false;
   }
 
   /**
@@ -167,7 +159,7 @@ export class IRacingSDK {
     if (!this._sdk) return null;
 
     try {
-      const seshString = this._sdk?.getSessionData();
+      const seshString = this._sdk.getSessionData();
       this._sessionData = yaml.load(seshString) as SessionData;
       return this._sessionData;
     } catch (err) {
@@ -244,7 +236,7 @@ export class IRacingSDK {
    * Get the current value of the telemetry variables.
    */
   public getTelemetry(): TelemetryVarList {
-    const rawData = this._sdk?.getTelemetryData();
+    const rawData = this._sdk.getTelemetryData();
     const data: Partial<TelemetryVarList> = {};
 
     if (rawData) {
@@ -276,7 +268,7 @@ export class IRacingSDK {
     if (!this._sdk) return null;
 
     // @todo Need to fix this type.
-    const rawData = this._sdk?.getTelemetryVariable(telemVar as string);
+    const rawData = this._sdk.getTelemetryVariable(telemVar as string);
     const parsed: Partial<TelemetryVarList> = {};
 
     // @todo good grief these types need to be fixed asap
@@ -292,56 +284,56 @@ export class IRacingSDK {
   // Broadcast commands
   public enableTelemetry(enabled: boolean): void {
     const command = enabled ? TelemetryCommand.Start : TelemetryCommand.Stop;
-    this._sdk?.broadcast(BroadcastMessages.TelemCommand, command);
+    this._sdk.broadcast(BroadcastMessages.TelemCommand, command);
   }
 
   public restartTelemetry(): void {
-    this._sdk?.broadcast(BroadcastMessages.TelemCommand, TelemetryCommand.Restart);
+    this._sdk.broadcast(BroadcastMessages.TelemCommand, TelemetryCommand.Restart);
   }
 
   public changeCameraPosition(position: number, group: number, camera: number): void {
-    this._sdk?.broadcast(BroadcastMessages.CameraSwitchPos, position, group, camera);
+    this._sdk.broadcast(BroadcastMessages.CameraSwitchPos, position, group, camera);
   }
 
   // @todo: needs to be padded
   public changeCameraNumber(driver: number, group: number, camera: number): void {
-    this._sdk?.broadcast(BroadcastMessages.CameraSwitchNum, driver, group, camera);
+    this._sdk.broadcast(BroadcastMessages.CameraSwitchNum, driver, group, camera);
   }
 
   public changeCameraState(state: CameraState): void {
-    this._sdk?.broadcast(BroadcastMessages.CameraSetState, state);
+    this._sdk.broadcast(BroadcastMessages.CameraSetState, state);
   }
 
   public changeReplaySpeed(speed: number, slowMotion: boolean): void {
-    this._sdk?.broadcast(BroadcastMessages.ReplaySetPlaySpeed, speed, slowMotion ? 1 : 0);
+    this._sdk.broadcast(BroadcastMessages.ReplaySetPlaySpeed, speed, slowMotion ? 1 : 0);
   }
 
   public changeReplayPosition(position: ReplayPositionCommand, frame: number): void {
-    this._sdk?.broadcast(BroadcastMessages.ReplaySetPlayPosition, position, frame);
+    this._sdk.broadcast(BroadcastMessages.ReplaySetPlayPosition, position, frame);
   }
 
   public searchReplay(command: ReplaySearchCommand): void {
-    this._sdk?.broadcast(BroadcastMessages.ReplaySearch, command);
+    this._sdk.broadcast(BroadcastMessages.ReplaySearch, command);
   }
 
   public changeReplayState(state: ReplayStateCommand): void {
-    this._sdk?.broadcast(BroadcastMessages.ReplaySetState, state);
+    this._sdk.broadcast(BroadcastMessages.ReplaySetState, state);
   }
 
   public triggerReplaySessionSearch(session: number, time: number): void {
-    this._sdk?.broadcast(BroadcastMessages.ReplaySearchSessionTime, session, time);
+    this._sdk.broadcast(BroadcastMessages.ReplaySearchSessionTime, session, time);
   }
 
   public reloadAllTextures(): void {
-    this._sdk?.broadcast(BroadcastMessages.ReloadTextures, ReloadTexturesCommand.All, 0);
+    this._sdk.broadcast(BroadcastMessages.ReloadTextures, ReloadTexturesCommand.All, 0);
   }
 
   public reloadCarTextures(car: number): void {
-    this._sdk?.broadcast(BroadcastMessages.ReloadTextures, ReloadTexturesCommand.CarIndex, car);
+    this._sdk.broadcast(BroadcastMessages.ReloadTextures, ReloadTexturesCommand.CarIndex, car);
   }
 
   public triggerChatState(state: ChatCommand.BeginChat | ChatCommand.Cancel | ChatCommand.Reply): void {
-    this._sdk?.broadcast(BroadcastMessages.ChatCommand, state, 1);
+    this._sdk.broadcast(BroadcastMessages.ChatCommand, state, 1);
   }
 
   /**
@@ -349,33 +341,33 @@ export class IRacingSDK {
    */
   public triggerChatMacro(macro: number): void {
     const clamped = Math.min(15, Math.max(1, macro));
-    this._sdk?.broadcast(BroadcastMessages.ChatCommand, ChatCommand.Macro, clamped);
+    this._sdk.broadcast(BroadcastMessages.ChatCommand, ChatCommand.Macro, clamped);
   }
 
   public triggerPitClearCommand(
     command: PitCommand.Clear | PitCommand.ClearTires | PitCommand.ClearWS | PitCommand.ClearFR | PitCommand.ClearFuel,
   ): void {
-    this._sdk?.broadcast(BroadcastMessages.PitCommand, command);
+    this._sdk.broadcast(BroadcastMessages.PitCommand, command);
   }
 
   public triggerPitCommand(
     command: PitCommand.WS | PitCommand.FR,
   ): void {
-    this._sdk?.broadcast(BroadcastMessages.PitCommand, command);
+    this._sdk.broadcast(BroadcastMessages.PitCommand, command);
   }
 
   public triggerPitChange(
     command: PitCommand.Fuel | PitCommand.LF | PitCommand.RF | PitCommand.LR | PitCommand.RR,
     amount: number,
   ): void {
-    this._sdk?.broadcast(BroadcastMessages.PitCommand, command, amount);
+    this._sdk.broadcast(BroadcastMessages.PitCommand, command, amount);
   }
 
   public changeFFB(mode: FFBCommand, amount: number): void {
-    this._sdk?.broadcast(BroadcastMessages.FFBCommand, mode, amount);
+    this._sdk.broadcast(BroadcastMessages.FFBCommand, mode, amount);
   }
 
   public triggerVideoCapture(command: VideoCaptureCommand): void {
-    this._sdk?.broadcast(BroadcastMessages.VideoCapture, command);
+    this._sdk.broadcast(BroadcastMessages.VideoCapture, command);
   }
 }

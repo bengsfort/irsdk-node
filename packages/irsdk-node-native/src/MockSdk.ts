@@ -1,0 +1,120 @@
+import { log, warn } from 'node:console';
+
+import { BroadcastMessages,
+  CameraState,
+  ChatCommand,
+  FFBCommand,
+  PitCommand,
+  ReloadTexturesCommand,
+  ReplayPositionCommand,
+  ReplaySearchCommand,
+  ReplayStateCommand,
+  TelemetryCommand,
+  TelemetryVariable,
+  TelemetryVarList,
+  VideoCaptureCommand
+} from "@irsdk-node/types";
+
+import { loadMockSessionData, loadMockTelemetry } from './mock-data/loader';
+import type { INativeSDK } from "./INativeSDK";
+
+type TelemetryVarKey = keyof TelemetryVarList;
+type TelemetryResultTypes = boolean | number | string;
+
+let MOCK_TELEMETRY: TelemetryVarList | null = null;
+let MOCK_SESSION: string | null = null;
+
+/**
+ * Mock SDK class intended for use on non-win32 platforms for development.
+ * Implements the native sdk interface supplemented with mock data suitable for
+ * iterating on projects with.
+ * 
+ * @todo - This should really be handled differently, for example via a wrapper
+ *         class around the native class that gets exposed.
+ */
+export class MockSDK implements INativeSDK {
+  public currDataVersion = 1;
+  public isMocked = true;
+  public enableLogging = false;
+
+  private _isRunning = false;
+  
+  constructor() {
+    this._loadMockData();
+    warn(
+      'Attempting to access iRacing SDK on unsupported platform!',
+      '\nReturning mock SDK for testing purposes. (Only win32 supported)',
+    );
+  }
+
+  startSDK(): boolean {
+    this._isRunning = true;
+    return true;
+  }
+
+  stopSDK(): void {
+    this._isRunning = false;
+  }
+
+  isRunning(): boolean {
+    return this._isRunning;
+  }
+
+  waitForData(_timeout?: number): boolean {
+    return this._isRunning;
+  }
+
+  getSessionData(): string {
+    return MOCK_SESSION ?? '';
+  }
+
+  getTelemetryData(): TelemetryVarList {
+    if (!MOCK_TELEMETRY) {
+      throw new Error("Attempted accessing mock telemetry before it was loaded.");
+    }
+
+    return MOCK_TELEMETRY;
+  }
+
+  getTelemetryVariable<T extends TelemetryResultTypes>(index: number): TelemetryVariable<T[]>;
+  getTelemetryVariable<T extends TelemetryResultTypes>(name: TelemetryVarKey): TelemetryVariable<T[]>;
+  getTelemetryVariable<T extends TelemetryResultTypes>(name: TelemetryVarKey | number): TelemetryVariable<T[]> {
+    if (!MOCK_TELEMETRY) {
+      throw new Error("Attempted accessing mock telemetry before it was loaded.");
+    }
+
+    if (typeof name === 'number') {
+      return Object.values(MOCK_TELEMETRY)[name] as TelemetryVariable<T[]>;
+    }
+
+    return MOCK_TELEMETRY[name] as TelemetryVariable<T[]>;
+  }
+
+  broadcast(message: BroadcastMessages.CameraSwitchPos, pos: number, group: number, camera: number): void;
+  broadcast(message: BroadcastMessages.CameraSwitchNum, driver: number, group: number, camera: number): void;
+  broadcast(message: BroadcastMessages.CameraSetState, state: CameraState): void;
+  broadcast(message: BroadcastMessages.ReplaySetPlaySpeed, speed: number, slowMotion: number): void;
+  broadcast(message: BroadcastMessages.ReplaySetPlayPosition, pos: ReplayPositionCommand, frame: number): void;
+  broadcast(message: BroadcastMessages.ReplaySearch, mode: ReplaySearchCommand): void;
+  broadcast(message: BroadcastMessages.ReplaySetState, state: ReplayStateCommand): void;
+  broadcast(message: BroadcastMessages.ReloadTextures, command: ReloadTexturesCommand, carIndex?: number): void;
+  broadcast(message: BroadcastMessages.ChatCommand, command: ChatCommand, macro?: number): void;
+  broadcast(message: BroadcastMessages.PitCommand, command: PitCommand, param?: number): void;
+  broadcast(message: BroadcastMessages.TelemCommand, command: TelemetryCommand): void;
+  broadcast(message: BroadcastMessages.FFBCommand, command: FFBCommand, value: number): void;
+  broadcast(message: BroadcastMessages.ReplaySearchSessionTime, session: number, time: number): void;
+  broadcast(message: BroadcastMessages.VideoCapture, command: VideoCaptureCommand): void;
+  broadcast(...args: number[]): void {
+    log('Mocking SDK call:', ...args);
+  }
+
+  private async _loadMockData(): Promise<void> {
+    const [session, telemetry] = await Promise.all([
+      !MOCK_SESSION ? loadMockSessionData() : Promise.resolve(MOCK_SESSION),
+      !MOCK_TELEMETRY ? loadMockTelemetry() : Promise.resolve(MOCK_TELEMETRY),
+    ]);
+    
+    MOCK_SESSION = session;
+    MOCK_TELEMETRY = telemetry;
+  }
+}
