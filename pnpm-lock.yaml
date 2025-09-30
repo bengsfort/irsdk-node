@@ -36,12 +36,6 @@ importers:
         specifier: ^4.5.2
         version: 4.9.5
 
-  examples/node-app:
-    dependencies:
-      irsdk-node:
-        specifier: workspace:^
-        version: link:../../packages/irsdk-node
-
   examples/node-dump-sdk-data:
     dependencies:
       fs-extra:
