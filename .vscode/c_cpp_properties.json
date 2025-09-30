@@ -1,26 +1,43 @@
 {
-    "configurations": [
-        {
-            "name": "Win32",
-            "includePath": [
-                "${workspaceFolder}/packages/irsdk-node-native/lib",
-                "${workspaceFolder}/packages/irsdk-node-native/src",
-                "${env:USERPROFILE}/AppData/Local/node-gyp/Cache/**",
-                "${workspaceFolder}/node_modules/**",
-                "${workspaceFolder}/.yarn/**",
-                "${workspaceFolder}/node_modules/node-addon-api/**"
-            ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
-            ],
-            "windowsSdkVersion": "10.0.19041.0",
-            "compilerPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64\\cl.exe",
-            "cStandard": "c17",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "windows-msvc-x64"
-        }
-    ],
-    "version": 4
+  "configurations": [
+    {
+      "name": "Win32",
+      "includePath": [
+        "${workspaceFolder}/packages/irsdk-node-native/lib",
+        "${workspaceFolder}/packages/irsdk-node-native/node_modules/node-addon-api/**"
+        "${env:USERPROFILE}/AppData/Local/node-gyp/Cache/**",
+        "${workspaceFolder}/node_modules/**"
+      ],
+      "defines": [
+        "_DEBUG",
+        "UNICODE",
+        "_UNICODE"
+      ],
+      "windowsSdkVersion": "10.0.19041.0",
+      "compilerPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64\\cl.exe",
+      "cStandard": "c17",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "windows-msvc-x64"
+    },
+    {
+      "name": "Mac",
+      "includePath": [
+        "${workspaceFolder}/packages/irsdk-node-native/lib",
+        "${workspaceFolder}/packages/irsdk-node-native/node_modules/node-addon-api/**",
+        "${env:USERPROFILE}/Library/Caches/node-gyp/**/include",
+        "${workspaceFolder}/node_modules/**",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include"
+      ],
+      "defines": [
+        "_DEBUG",
+        "UNICODE",
+        "_UNICODE"
+      ],
+      "compilerPath": "/usr/bin/clang",
+      "cStandard": "c17",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "macos-clang-x64"
+    }
+  ],
+  "version": 4
 }
