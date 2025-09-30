@@ -15,8 +15,7 @@
   "eslint.format.enable": true,
   "editor.formatOnSave": true,
   "eslint.workingDirectories": [
-    "./packages/**",
-    "./examples/**",
+    "."
   ],
   "eslint.validate": [
     "javascript, typescript",
