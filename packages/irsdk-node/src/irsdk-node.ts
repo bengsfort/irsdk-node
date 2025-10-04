@@ -125,12 +125,15 @@ export class IRacingSDK {
    */
   public startSDK(): boolean {
     if (!this._sdk.isRunning()) {
+
       const successful = this._sdk.startSDK() ?? false;
       if (this.autoEnableTelemetry) {
         this.enableTelemetry(true);
       }
+
       return successful;
     }
+
     return true;
   }
 
@@ -234,6 +237,10 @@ export class IRacingSDK {
 
   /**
    * Get the current value of the telemetry variables.
+   * 
+   * Telemetry gets updated every tick. This is a large object, so large amounts
+   * of processing between ticks should attempt to cache this data instead of
+   * re-requesting it via this function.
    */
   public getTelemetry(): TelemetryVarList {
     const rawData = this._sdk.getTelemetryData();

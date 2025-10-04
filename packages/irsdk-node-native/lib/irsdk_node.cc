@@ -77,10 +77,12 @@ Napi::Value iRacingSdkNode::StartSdk(const Napi::CallbackInfo &info)
 {
   if (this->_loggingEnabled)
     printf("Starting SDK...\n");
+
   if (!irsdk_isConnected())
   {
     bool result = irsdk_startup();
-    printf("Connected to iRacing SDK (%i)", result);
+    if (this->_loggingEnabled)
+      printf("Connected to iRacing SDK (%i)\n", result);
     return Napi::Boolean::New(info.Env(), result);
   }
   return Napi::Boolean::New(info.Env(), true);
@@ -233,7 +235,7 @@ Napi::Value iRacingSdkNode::BroadcastMessage(const Napi::CallbackInfo &info)
 
   default:
     if (this->_loggingEnabled)
-      printf("Attempted to broadcast an unsupported message.");
+      printf("Attempted to broadcast an unsupported message.\n");
     return Napi::Boolean::New(env, false);
   }
 
