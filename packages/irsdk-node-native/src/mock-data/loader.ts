@@ -1,3 +1,5 @@
+// eslint-disable @typescript-eslint/no-unsafe-return
+
 import { TelemetryVarList } from '@irsdk-node/types';
 import yaml from 'js-yaml';
 
