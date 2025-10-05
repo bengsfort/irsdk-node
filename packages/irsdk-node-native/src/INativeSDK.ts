@@ -11,8 +11,8 @@ import {
   TelemetryCommand,
   TelemetryVariable,
   TelemetryVarList,
-  VideoCaptureCommand
-} from "@irsdk-node/types";
+  VideoCaptureCommand,
+} from '@irsdk-node/types';
 
 export interface INativeSDK {
   readonly currDataVersion: number;

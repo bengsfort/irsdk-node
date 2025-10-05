@@ -85,7 +85,7 @@ jobs:
 
       # TODO: Cache build.
       - name: Compile
-        run: pnpm --filter "@irsdk-node/types" build
+        run: pnpm run --filter "@irsdk-node/types" build
 
   build-native-ubuntu:
     name: Build @irsdk-node/native for ubuntu
@@ -123,7 +123,7 @@ jobs:
 
       # TODO: Cache build.
       - name: Compile
-        run: pnpm --filter "@irsdk-node/native" build
+        run: pnpm run --filter "@irsdk-node/native" build
 
   build-native-windows-x64:
     name: Build @irsdk-node/native for windows x64
@@ -161,7 +161,7 @@ jobs:
 
       # TODO: Cache build.
       - name: Compile
-        run: pnpm --filter "@irsdk-node/native" build
+        run: pnpm run --filter "@irsdk-node/native" build
 
   build-native-windows-arm64:
     name: Build @irsdk-node/native for windows arm64
@@ -199,7 +199,7 @@ jobs:
 
       # TODO: Cache build.
       - name: Compile
-        run: pnpm --filter "@irsdk-node/native" build
+        run: pnpm run --filter "@irsdk-node/native" build
 
   build-native-mac:
     name: Build @irsdk-node/native for mac
@@ -237,7 +237,7 @@ jobs:
 
       # TODO: Cache build.
       - name: Compile
-        run: pnpm --filter "@irsdk-node/native" build
+        run: pnpm run --filter "@irsdk-node/native" build
 
   build-irsdk-node:
     name: Build irsdk-node
@@ -275,7 +275,7 @@ jobs:
 
       # TODO: Cache build.
       - name: Compile
-        run: pnpm --filter "irsdk-node" build
+        run: pnpm run --filter "irsdk-node" build
 
   # pull_request:
   #   runs-on: windows-2022
