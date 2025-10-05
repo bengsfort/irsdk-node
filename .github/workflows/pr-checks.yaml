@@ -1,0 +1,315 @@
+# Cache builds better.
+# Only build the affected packages.
+name: Check PR
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+env:
+  CI: true
+  NODE_VERSION: 18
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: Setup Node ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "pnpm"
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        id: cache
+        with:
+          path: |
+            ~/.pnpm-store
+            ./node_modules
+          key: pnpm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            pnpm-${{ runner.os }}-
+
+      - name: Init pnpm dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: pnpm install
+
+      - name: Lint codebase
+        run: pnpm run lint
+
+  build-types:
+    name: Build @irsdk-node/types
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: Setup Node ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "pnpm"
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        id: cache
+        with:
+          path: |
+            ~/.pnpm-store
+            ./node_modules
+          key: pnpm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            pnpm-${{ runner.os }}-
+
+      - name: Init pnpm dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: pnpm install
+
+      # TODO: Cache build.
+      - name: Compile
+        run: pnpm --filter "@irsdk-node/types" build
+
+  build-native-ubuntu:
+    name: Build @irsdk-node/native for ubuntu
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: Setup Node ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "pnpm"
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        id: cache
+        with:
+          path: |
+            ~/.pnpm-store
+            ./node_modules
+          key: pnpm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            pnpm-${{ runner.os }}-
+
+      - name: Init pnpm dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: pnpm install
+
+      # TODO: Cache build.
+      - name: Compile
+        run: pnpm --filter "@irsdk-node/native" build
+
+  build-native-windows-x64:
+    name: Build @irsdk-node/native for windows x64
+    runs-on: windows-2022
+    needs: lint
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: Setup Node ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "pnpm"
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        id: cache
+        with:
+          path: |
+            ~/.pnpm-store
+            ./node_modules
+          key: pnpm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            pnpm-${{ runner.os }}-
+
+      - name: Init pnpm dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: pnpm install
+
+      # TODO: Cache build.
+      - name: Compile
+        run: pnpm --filter "@irsdk-node/native" build
+
+  build-native-windows-arm64:
+    name: Build @irsdk-node/native for windows arm64
+    runs-on: windows-11-arm
+    needs: lint
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: Setup Node ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "pnpm"
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        id: cache
+        with:
+          path: |
+            ~/.pnpm-store
+            ./node_modules
+          key: pnpm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            pnpm-${{ runner.os }}-
+
+      - name: Init pnpm dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: pnpm install
+
+      # TODO: Cache build.
+      - name: Compile
+        run: pnpm --filter "@irsdk-node/native" build
+
+  build-native-mac:
+    name: Build @irsdk-node/native for mac
+    runs-on: macos-latest
+    needs: lint
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: Setup Node ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "pnpm"
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        id: cache
+        with:
+          path: |
+            ~/.pnpm-store
+            ./node_modules
+          key: pnpm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            pnpm-${{ runner.os }}-
+
+      - name: Init pnpm dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: pnpm install
+
+      # TODO: Cache build.
+      - name: Compile
+        run: pnpm --filter "@irsdk-node/native" build
+
+  build-irsdk-node:
+    name: Build irsdk-node
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: Setup Node ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "pnpm"
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        id: cache
+        with:
+          path: |
+            ~/.pnpm-store
+            ./node_modules
+          key: pnpm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            pnpm-${{ runner.os }}-
+
+      - name: Init pnpm dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: pnpm install
+
+      # TODO: Cache build.
+      - name: Compile
+        run: pnpm --filter "irsdk-node" build
+
+  # pull_request:
+  #   runs-on: windows-2022
+
+  #   steps:
+  #   - name: "Check out repo"
+  #     uses: actions/checkout@v4
+  #     with:
+  #       fetch-depth: 0
+  #       lfs: true
+
+  #   # We need to skip corepack check because the windows runner (specifically)
+  #   # is inconsistent with the yarn version it uses See actions/setup-node#889
+  #   - name: Set up Node
+  #     uses: actions/setup-node@v4
+  #     with:
+  #       node-version: 18
+  #       node-version-file: .nvmrc
+  #       cache: "yarn"
+  #       cache-dependency-path: yarn.lock
+  #     env:
+  #       SKIP_YARN_COREPACK_CHECK: 1
+
+  #   - name: "Install deps"
+  #     run: |
+  #       corepack enable
+  #       yarn install
+
+  #   - name: "Build packages"
+  #     run: yarn build
+
+  #   # We need to lint after building so we have access to types (could use references but)
+  #   - name: "Lint codebase"
+  #     run: yarn lint
+
+  #   - name: "Version check"
+  #     run: yarn version check

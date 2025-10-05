@@ -7,8 +7,6 @@ See the [Test Usage](#Test-usage) section for more details.
 
 ## Examples
 
-- [electron-app](./electron-app/) - Example integration with Electron, where it 
-simply renders the current SDK data. Can be used for testing/debugging.
 - [node-dump-sdk-data](./node-dump-sdk-data/) - Simple commonjs node.js app that 
 dumps the current SDK data to output files. Useful for generating test data.
 - [node-sdk-server](./node-sdk-server/) - ESM Node.js server exposing the current 
