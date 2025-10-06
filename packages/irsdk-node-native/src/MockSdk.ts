@@ -1,5 +1,3 @@
-import { log, warn } from 'node:console';
-
 import {
   BroadcastMessages,
   CameraState,
@@ -47,7 +45,7 @@ export class MockSDK implements INativeSDK {
     this._loadMockData().catch((reason) => {
       console.error('Error loading mock data for mock SDK:', reason);
     });
-    warn(
+    console.warn(
       'Attempting to access iRacing SDK on unsupported platform!',
       '\nReturning mock SDK for testing purposes. (Only win32 supported)',
     );
@@ -137,6 +135,6 @@ export class MockSDK implements INativeSDK {
   public broadcast(message: BroadcastMessages.VideoCapture, command: VideoCaptureCommand): void;
 
   public broadcast(...args: number[]): void {
-    log('Mocking SDK call:', ...args);
+    console.log('Mocking SDK call:', ...args);
   }
 }

@@ -44,7 +44,7 @@ jobs:
   #           pnpm-${{ runner.os }}-
 
   #     - name: Init pnpm dependencies
-  #       if: steps.cache.outputs.cache-hit != 'true'
+
   #       run: pnpm install
 
   #     - name: Lint codebase
@@ -81,7 +81,6 @@ jobs:
             pnpm-${{ runner.os }}-
 
       - name: Init pnpm dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
         run: pnpm install
 
       # TODO: Cache build.
@@ -121,7 +120,6 @@ jobs:
             pnpm-${{ runner.os }}-
 
       - name: Init pnpm dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
         run: pnpm install
 
       # TODO: Cache build.
@@ -161,7 +159,6 @@ jobs:
             pnpm-${{ runner.os }}-
 
       - name: Init pnpm dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
         run: pnpm install
 
       # TODO: Cache build.
@@ -201,7 +198,6 @@ jobs:
             pnpm-${{ runner.os }}-
 
       - name: Init pnpm dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
         run: pnpm install
 
       # TODO: Cache build.
@@ -241,7 +237,6 @@ jobs:
             pnpm-${{ runner.os }}-
 
       - name: Init pnpm dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
         run: pnpm install
 
       # TODO: Cache build.
@@ -285,7 +280,6 @@ jobs:
             pnpm-${{ runner.os }}-
 
       - name: Init pnpm dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
         run: pnpm install
 
       # TODO: Cache build.
