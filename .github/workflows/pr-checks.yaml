@@ -10,7 +10,7 @@ on:
 
 env:
   CI: true
-  NODE_VERSION: 16
+  NODE_VERSION: 20
 
 jobs:
   # Re-enable once eslint is updated. Everything is outdated and a pain.
