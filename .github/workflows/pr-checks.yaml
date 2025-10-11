@@ -1,5 +1,6 @@
-# Cache builds better.
-# Only build the affected packages.
+# TODO: Cache builds better.
+# TODO: Only build the affected packages.
+# TODO: Add back in lint step once toolchain is modernized.
 name: Check PR
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
@@ -53,275 +54,48 @@ jobs:
   build-types:
     name: Build @irsdk-node/types
     runs-on: ubuntu-latest
-    # needs: lint
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/build-library
         with:
-          run_install: false
+          package-name: "@irsdk-node/types"
+          node-version: 20
 
-      - name: Setup Node ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: "pnpm"
-
-      - name: Cache dependencies
-        uses: actions/cache@v4
-        id: cache
-        with:
-          path: |
-            ~/.pnpm-store
-            ./node_modules
-          key: pnpm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
-          restore-keys: |
-            pnpm-${{ runner.os }}-
-
-      - name: Init pnpm dependencies
-        run: pnpm install
-
-      # TODO: Cache build.
-      - name: Compile
-        run: pnpm run --filter "@irsdk-node/types" build
-
-  build-native-ubuntu:
-    name: Build @irsdk-node/native for ubuntu
+  build-native-ts:
+    name: Build @irsdk-node/native
+    needs: build-types
     runs-on: ubuntu-latest
-    needs:
-      # - lint
-      - build-types
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/build-library
         with:
-          run_install: false
+          package-name: "@irsdk-node/native"
+          node-version: 20
 
-      - name: Setup Node ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: "pnpm"
-
-      - name: Cache dependencies
-        uses: actions/cache@v4
-        id: cache
-        with:
-          path: |
-            ~/.pnpm-store
-            ./node_modules
-          key: pnpm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
-          restore-keys: |
-            pnpm-${{ runner.os }}-
-
-      - name: Init pnpm dependencies
-        run: pnpm install
-
-      # TODO: Cache build.
-      - name: Compile
-        run: pnpm run --filter "@irsdk-node/native" build
-
-  build-native-windows-x64:
-    name: Build @irsdk-node/native for windows x64
-    runs-on: windows-2022
-    needs:
-      # - lint
-      - build-types
+  build-native-modules:
+    name: Build @irsdk-node/native ${{ matrix.runner }}
+    needs: build-native-ts
+    strategy:
+      matrix:
+        runner: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.runner }}
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/build-native-library
         with:
-          run_install: false
+          package-name: "@irsdk-node/native"
+          node-version: 20
+          artifact-dir: ./packages/irsdk-node-native/prebuilds
 
-      - name: Setup Node ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: "pnpm"
-
-      - name: Cache dependencies
-        uses: actions/cache@v4
-        id: cache
-        with:
-          path: |
-            ~/.pnpm-store
-            ./node_modules
-          key: pnpm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
-          restore-keys: |
-            pnpm-${{ runner.os }}-
-
-      - name: Init pnpm dependencies
-        run: pnpm install
-
-      # TODO: Cache build.
-      - name: Compile
-        run: pnpm run --filter "@irsdk-node/native" build
-
-  build-native-windows-arm64:
-    name: Build @irsdk-node/native for windows arm64
-    runs-on: windows-11-arm
+  build-core-lib:
     needs:
-      # - lint
       - build-types
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          run_install: false
-
-      - name: Setup Node ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: "pnpm"
-
-      - name: Cache dependencies
-        uses: actions/cache@v4
-        id: cache
-        with:
-          path: |
-            ~/.pnpm-store
-            ./node_modules
-          key: pnpm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
-          restore-keys: |
-            pnpm-${{ runner.os }}-
-
-      - name: Init pnpm dependencies
-        run: pnpm install
-
-      # TODO: Cache build.
-      - name: Compile
-        run: pnpm run --filter "@irsdk-node/native" build
-
-  build-native-mac:
-    name: Build @irsdk-node/native for mac
-    runs-on: macos-latest
-    needs:
-      # - lint
-      - build-types
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          run_install: false
-
-      - name: Setup Node ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: "pnpm"
-
-      - name: Cache dependencies
-        uses: actions/cache@v4
-        id: cache
-        with:
-          path: |
-            ~/.pnpm-store
-            ./node_modules
-          key: pnpm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
-          restore-keys: |
-            pnpm-${{ runner.os }}-
-
-      - name: Init pnpm dependencies
-        run: pnpm install
-
-      # TODO: Cache build.
-      - name: Compile
-        run: pnpm run --filter "@irsdk-node/native" build
-
-  build-irsdk-node:
+      - build-native-ts
     name: Build irsdk-node
     runs-on: ubuntu-latest
-    # needs:
-    # - lint
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/build-library
         with:
-          run_install: false
-
-      - name: Setup Node ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: "pnpm"
-
-      - name: Cache dependencies
-        uses: actions/cache@v4
-        id: cache
-        with:
-          path: |
-            ~/.pnpm-store
-            ./node_modules
-          key: pnpm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
-          restore-keys: |
-            pnpm-${{ runner.os }}-
-
-      - name: Init pnpm dependencies
-        run: pnpm install
-
-      # TODO: Fix, this is redundant. Re-use other builds?
-      - name: Build types package
-        run: pnpm run --filter "@irsdk-node/types" build
-
-      # TODO: Fix, this is redundant. Re-use other builds?
-      - name: Build native package ts
-        run: pnpm run --filter "@irsdk-node/native" build:ts
-
-      # TODO: Cache build.
-      - name: Compile
-        run: pnpm run --filter "irsdk-node" build
-
-  # pull_request:
-  #   runs-on: windows-2022
-
-  #   steps:
-  #   - name: "Check out repo"
-  #     uses: actions/checkout@v4
-  #     with:
-  #       fetch-depth: 0
-  #       lfs: true
-
-  #   # We need to skip corepack check because the windows runner (specifically)
-  #   # is inconsistent with the yarn version it uses See actions/setup-node#889
-  #   - name: Set up Node
-  #     uses: actions/setup-node@v4
-  #     with:
-  #       node-version: 18
-  #       node-version-file: .nvmrc
-  #       cache: "yarn"
-  #       cache-dependency-path: yarn.lock
-  #     env:
-  #       SKIP_YARN_COREPACK_CHECK: 1
-
-  #   - name: "Install deps"
-  #     run: |
-  #       corepack enable
-  #       yarn install
-
-  #   - name: "Build packages"
-  #     run: yarn build
-
-  #   # We need to lint after building so we have access to types (could use references but)
-  #   - name: "Lint codebase"
-  #     run: yarn lint
-
-  #   - name: "Version check"
-  #     run: yarn version check
+          package-name: "irsdk-node"
+          node-version: 20

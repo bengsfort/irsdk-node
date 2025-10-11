@@ -1,0 +1,37 @@
+name: Setup PNPM Monorepo
+
+description: Run common pnpm initialization steps
+inputs:
+  node-version:
+    required: true
+    description: The Node version to install and use
+    default: "20"
+
+runs:
+  using: composite
+  steps:
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4
+      with:
+        run_install: false
+
+    - name: Setup Node ${{ inputs.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
+        cache: "pnpm"
+
+    - name: Cache dependencies
+      uses: actions/cache@v4
+      id: cache
+      with:
+        path: |
+          ~/.pnpm-store
+          ./node_modules
+        key: pnpm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+        restore-keys: |
+          pnpm-${{ runner.os }}-
+
+    - name: Init pnpm dependencies
+      run: pnpm install
+      shell: bash
