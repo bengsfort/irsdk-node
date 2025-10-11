@@ -14,9 +14,11 @@
   "engines": {
     "node": ">=18"
   },
+  "license": "MIT",
   "scripts": {
     "changes:add": "pnpm changeset",
     "changes:commit": "pnpm changeset version",
+    "changes:status": "pnpm changeset status",
     "dev": "pnpm run -r watch",
     "lint": "pnpm run -r lint",
     "clean": "pnpm run -r clean",
