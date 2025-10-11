@@ -36,3 +36,5 @@ jobs:
       lib: ${{ inputs.lib }}
       dry-run: ${{ inputs.dry-run }}
       node-version: 20
+    secrets:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

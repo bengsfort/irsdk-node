@@ -20,6 +20,9 @@ on:
       node-version:
         required: true
         type: number
+    secrets:
+      NPM_TOKEN:
+        required: true
 
 jobs:
   publish-types:
