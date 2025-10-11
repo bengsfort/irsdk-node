@@ -1,5 +1,15 @@
 # Changelog
 
+## 4.0.3
+
+### Patch Changes
+
+- fa4206a: Update codebase to use pnpm as a package manager for more workspace feature stability.
+- c1138e9: Minor inline documentation changes.
+- 09e935a: Compile a mock SDK on non-windows platforms instead of nothing at all.
+- Updated dependencies [fa4206a]
+  - @irsdk-node/types@3.0.2
+
 ## v4.0.2
 
 - `irsdk-node` Fixes Electron compilation issues (Thank you @tariknz)
