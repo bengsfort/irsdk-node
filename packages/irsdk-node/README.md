@@ -66,3 +66,9 @@ $ yarn lint
 ## Contributing
 
 Everything should be quite straightforward, but as the project needs to be built via node-gyp + typescript there are a couple of different commands you need to considering your needs.
+
+## Why is `@irsdk-node/native` an optional dependency?
+
+The [irsdk-node](./irsdk-node) package was split up in to separate packages to solve the issue that this SDK is windows-only, which means that the package wasn't able to be used in any other environment. For most cases this is fine, however it becomes a big issue if you want to do something as simple as use the types in a webview or in an electron renderer process. Splitting the types into their own package solves this issue, but another issue that immediately comes up is that if the consumers machine does not have the toolchain to build the native module (both the actual SDK or the mock one), they cannot work on their project at all.
+
+Providing the native module as an optional dependency solves this and enables projects to be continually iterated on even on different platforms; for example if someone wants to iterate on the UI of their app from their macbook. The mock SDK will be used in these cases, allowing for a hopefully seamless experience.
