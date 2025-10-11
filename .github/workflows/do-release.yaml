@@ -75,6 +75,8 @@ jobs:
           path: ./_artifacts
       - name: Ensure native build dir
         run: mkdir -p ./packages/irsdk-node-native/prebuilds
+      - name: Clean native build dir
+        run: rm -rf ./packages/irsdk-node-native/prebuilds/*
       - name: Inject native modules
         run: mv -v ./_artifacts/**/* ./packages/irsdk-node-native/prebuilds
       - name: Set publishing config
