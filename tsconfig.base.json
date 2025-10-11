@@ -9,17 +9,12 @@
     "module": "CommonJS",
     "declaration": true,
     "lib": [
-      "DOM",
-      "ESNext"
+      "ESNext",
     ],
 
     // Sources
     "outDir": "dist/",
     "baseUrl": "packages/",
-    "typeRoots": [
-      "node_modules/@types",
-      "types",
-    ],
 
     // Options
     "allowJs": true,

@@ -1,0 +1,40 @@
+name: Trigger release
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        required: true
+        description: Do a dry-run release.
+        type: boolean
+      native:
+        required: true
+        description: Publish @irsdk-sandbox/native
+        type: boolean
+      types:
+        required: true
+        description: Publish @irsdk-sandbox/types
+        type: boolean
+      lib:
+        required: true
+        description: Publish @irsdk-sandbox/lib
+        type: boolean
+      node-version:
+        required: true
+        description: Node version to build with.
+        type: number
+        default: 20
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  build-and-publish:
+    uses: ./.github/workflows/do-release.yaml
+    with:
+      native: ${{ inputs.native }}
+      types: ${{ inputs.types }}
+      lib: ${{ inputs.lib }}
+      dry-run: ${{ inputs.dry-run }}
+      node-version: 20
+    secrets:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,0 +1,102 @@
+# TODO: Use changesets publish instead of manual publishing
+# TODO: Create git tag + release
+name: Release libraries
+
+on:
+  workflow_call:
+    inputs:
+      dry-run:
+        required: true
+        type: boolean
+      native:
+        required: true
+        type: boolean
+      types:
+        required: true
+        type: boolean
+      lib:
+        required: true
+        type: boolean
+      node-version:
+        required: true
+        type: number
+    secrets:
+      NPM_TOKEN:
+        required: true
+
+jobs:
+  publish-types:
+    name: Publish @irsdk-node/types
+    runs-on: ubuntu-latest
+    if: ${{ inputs.types == true }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/build-library
+        with:
+          package-name: "@irsdk-node/types"
+          node-version: ${{ inputs.node-version }}
+      - name: Set publishing config
+        run: pnpm config set '//registry.npmjs.org/:_authToken' "${NODE_AUTH_TOKEN}"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Publish
+        run: pnpm publish --filter "@irsdk-node/types" --access=public ${{ inputs.dry-run && '--dry-run'}}
+
+  build-native-lib:
+    name: Build @irsdk-node/native binaries
+    if: ${{ inputs.native == true }}
+    strategy:
+      matrix:
+        runner: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/build-native-library
+        with:
+          package-name: "@irsdk-node/native"
+          node-version: ${{ inputs.node-version }}
+          artifact-dir: ./packages/irsdk-node-native/prebuilds
+          upload-artifacts: true
+
+  publish-native-lib:
+    needs: build-native-lib
+    name: Build and publish @irsdk-node/native
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/build-library
+        with:
+          package-name: "@irsdk-node/native"
+          node-version: ${{ inputs.node-version }}
+
+      - name: Download native artifacts
+        uses: actions/download-artifact@v5
+        with:
+          path: ./_artifacts
+      - name: Ensure native build dir
+        run: mkdir -p ./packages/irsdk-node-native/prebuilds
+      - name: Inject native modules
+        run: mv -v ./_artifacts/**/* ./packages/irsdk-node-native/prebuilds
+      - name: Set publishing config
+        run: pnpm config set '//registry.npmjs.org/:_authToken' "${NODE_AUTH_TOKEN}"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Publish @irsdk-node/native
+        run: pnpm publish --filter "@irsdk-node/native" --access=public ${{ inputs.dry-run && '--dry-run'}}
+
+  publish-core-lib:
+    name: Publish irsdk-node
+    if: ${{ inputs.lib == true }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/build-library
+        with:
+          package-name: "irsdk-node"
+          node-version: ${{ inputs.node-version }}
+      - name: Set publishing config
+        run: pnpm config set '//registry.npmjs.org/:_authToken' "${NODE_AUTH_TOKEN}"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Publish
+        run: pnpm publish --filter "irsdk-node" --access=public ${{ inputs.dry-run && '--dry-run'}}

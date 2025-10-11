@@ -9,12 +9,25 @@
     "**/build": true,
     "**/dist": true,
     "**/node_modules": true,
-    ".yarn/**": false
   },
-  "npm.packageManager": "yarn",
-  "search.exclude": {
-    "**/.yarn": true,
-    "**/.pnp.*": true
+  "npm.packageManager": "pnpm",
+  "typescript.format.enable": true,
+  "eslint.format.enable": true,
+  "editor.formatOnSave": true,
+  "eslint.workingDirectories": [
+    "./packages/**",
+    "./examples/**",
+  ],
+  "eslint.validate": [
+    "javascript, typescript",
+    "json"
+  ],
+  "eslint.useFlatConfig": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   },
-  "jest.autoRun": null,
+  "[javascript]": {
+    "editor.maxTokenizationLineLength": 2500,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  }
 }

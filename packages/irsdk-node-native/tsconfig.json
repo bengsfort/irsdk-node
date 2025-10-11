@@ -5,8 +5,8 @@
   ],
   "include": [
     "./src/**/*.ts",
-    "./src/index.d.ts",
-    "./src/index.js"
+    "./src/mock-data/session.json",
+    "./src/mock-data/telemetry.json",
   ],
   "references": [
     {
@@ -14,14 +14,17 @@
     }
   ],
   "compilerOptions": {
-    "paths": {
-      "@irsdk-node/types": ["../irsdk-node-types"],
-    },
+    "lib": [
+      "DOM",
+      "ESNext",
+    ],
     "allowJs": true,
     "composite": true,
-    "rootDir": "src",
-    "outDir": "dist",
-    "baseUrl": "./src",
-    "declarationDir": "dist"
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "declarationDir": "./dist",
+    "resolveJsonModule": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
   }
 }

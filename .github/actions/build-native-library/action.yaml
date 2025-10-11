@@ -1,0 +1,43 @@
+name: Build native package
+
+description: Run the native build for a given package.
+inputs:
+  package-name:
+    required: true
+    description: The package to build.
+  artifact-dir:
+    required: true
+    description: The directory of the built artifacts.
+  upload-artifacts:
+    required: false
+    description: Whether to upload the build artifacts or not.
+    default: "false"
+  node-version:
+    required: true
+    description: The Node version to install and use
+    default: "20"
+  skip-setup:
+    required: false
+    description: Whether to skip the monorepo setup.
+    default: "false"
+
+runs:
+  using: composite
+  steps:
+    - name: Setup PNPM
+      uses: ./.github/actions/setup-packages
+      if: ${{ inputs.skip-setup != 'true' }}
+      with:
+        node-version: ${{ inputs.node-version }}
+
+    - name: Run native build for ${{ inputs.package-name }}
+      shell: bash
+      run: pnpm run --filter "${{ inputs.package-name }}..." build:cpp
+
+    - name: Upload module artifacts
+      if: ${{ inputs.upload-artifacts == 'true' }}
+      uses: actions/upload-artifact@v4
+      with:
+        retention-days: 5
+        name: ${{ runner.os }}_${{ runner.arch }}
+        path: ${{ inputs.artifact-dir }}

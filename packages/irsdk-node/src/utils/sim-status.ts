@@ -1,4 +1,4 @@
-import http from 'http';
+import http from 'node:http';
 
 import { SIM_STATUS_URI } from '../constants';
 
@@ -10,7 +10,7 @@ import { SIM_STATUS_URI } from '../constants';
  * @throws {Error} A generic NodeJS.ErrnoException / Error if something goes wrong.
  */
 export const getSimStatus = (): Promise<boolean> => new Promise((resolve, reject) => {
-  http.get(SIM_STATUS_URI, (res) => {
+  const req = http.get(SIM_STATUS_URI, (res) => {
     let data = '';
 
     res.on('data', (d) => {
@@ -24,7 +24,9 @@ export const getSimStatus = (): Promise<boolean> => new Promise((resolve, reject
       // This could be done more elegantly, but there is no need really :D
       resolve(data.includes('running:1'));
     });
-  }).on('error', (err: NodeJS.ErrnoException) => {
+  });
+
+  req.on('error', (err: NodeJS.ErrnoException) => {
     reject(err);
   });
 });

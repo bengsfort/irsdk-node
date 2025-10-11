@@ -3,7 +3,12 @@
   "version": "4.0.2",
   "author": {
     "name": "Matt Bengston",
-    "email": "bengsfort@gmail.com"
+    "email": "bengsfort@gmail.com",
+    "url": "http://bengsfort.dev/"
+  },
+  "bugs": {
+    "email": "bengsfort@gmail.com",
+    "url": "https://github.com/bengsfort/irsdk-node/issues"
   },
   "engines": {
     "node": ">=18"
@@ -13,41 +18,45 @@
     "./build",
     "./dist",
     "./lib",
-    "./src",
+    "./index.js",
+    "./index.d.ts",
+    "./prebuilds",
     "./scripts",
     "./binding.gyp",
     "./README.md"
   ],
-  "main": "./dist/index.js",
-  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    }
+  },
+  "main": "./index.js",
+  "types": "./index.d.ts",
   "scripts": {
-    "clean-ts": "rm -rf dist *.tsbuildinfo",
-    "clean-cpp": "node-gyp clean",
-    "clean": "yarn run clean-ts && yarn run clean-cpp",
-    "configure": "yarn clean-cpp && node-gyp configure",
-    "build": "yarn run configure && concurrently \"yarn:build-ts\" \"yarn:build-cpp\"",
-    "build-ts": "tsc --build --force",
-    "build-cpp": "yarn build-cpp-release && yarn build-cpp-debug",
-    "build-cpp-release": "node-gyp build",
-    "build-cpp-debug": "node-gyp build --debug",
+    "install": "node-gyp-build",
+    "clean:ts": "rm -rf dist *.tsbuildinfo",
+    "clean:cpp": "rm -rf ./prebuilds ./build",
+    "clean": "pnpm run \"/^clean:.*/\"",
+    "build": "pnpm run clean && pnpm run \"/^build:(ts|cpp)$/\"",
+    "build:ts": "tsc --build --force",
+    "build:cpp": "prebuildify --napi --electron-compat",
     "watch": "tsc --watch",
-    "lint": "eslint ./src --color",
+    "lint": "eslint ./src/**/*.ts --color",
     "check-types": "tsc --noEmit",
-    "prepack": "yarn build",
     "generate-types": "node ./scripts/generate-var-types.js"
   },
-  "packageManager": "yarn@4.5.1",
-  "preferUnplugged": false,
-  "os": [
-    "win32"
-  ],
+  "packageManager": "pnpm@10.17.1",
   "dependencies": {
     "@irsdk-node/types": "workspace:^",
     "bindings": "^1.5.0",
+    "js-yaml": "^4.1.0",
     "node-addon-api": "^8.2.1",
-    "node-gyp": "^10.2.0"
+    "node-gyp": "^10.2.0",
+    "node-gyp-build": "^4.8.4"
   },
   "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
     "@typescript-eslint/eslint-plugin": "^5.6.0",
     "@typescript-eslint/parser": "^5.6.0",
     "concurrently": "^7.0.0",
@@ -56,6 +65,7 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-prettier": "^4.0.0",
     "node-notifier": "^10.0.0",
+    "prebuildify": "^6.0.1",
     "prettier": "^2.5.1",
     "typescript": "^4.5.2"
   }

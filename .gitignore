@@ -1,6 +1,7 @@
 # Build
 dist
 build
+prebuilds
 out
 
 # TS incremental build info

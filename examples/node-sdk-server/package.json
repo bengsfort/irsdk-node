@@ -1,0 +1,21 @@
+{
+  "name": "@irsdk-node/example-node-sdk-server",
+  "version": "0.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.17.1",
+  "dependencies": {
+    "@hono/node-server": "^1.19.5",
+    "@hono/node-ws": "^1.2.0",
+    "fs-extra": "^11.3.2",
+    "hono": "^4.9.9",
+    "irsdk-node": "workspace:^"
+  }
+}

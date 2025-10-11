@@ -1,0 +1,28 @@
+name: Build package
+
+description: Run the build command for a given package.
+inputs:
+  package-name:
+    required: true
+    description: The package to build.
+  node-version:
+    required: true
+    description: The Node version to install and use
+    default: "20"
+  skip-setup:
+    required: false
+    description: Whether to skip the monorepo setup.
+    default: "false"
+
+runs:
+  using: composite
+  steps:
+    - name: Setup PNPM
+      uses: ./.github/actions/setup-packages
+      if: ${{ inputs.node-version != 'true' }}
+      with:
+        node-version: ${{ inputs.node-version }}
+      
+    - name: Run build for ${{ inputs.package-name }}
+      shell: bash
+      run: pnpm run --filter "${{ inputs.package-name }}..." build
