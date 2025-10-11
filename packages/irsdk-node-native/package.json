@@ -15,7 +15,6 @@
   },
   "files": [
     "package.json",
-    "./build",
     "./dist",
     "./lib",
     "./index.js",
