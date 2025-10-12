@@ -1,0 +1,25 @@
+{
+  "name": "@irsdk-node/example-node-lap-timer",
+  "version": "1.0.1",
+  "description": "",
+  "main": "src/main.ts",
+  "type": "module",
+  "scripts": {
+    "start": "pnpm dlx tsx ./src/main.ts",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "clean": "rm -rf dist *.tsbuildinfo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.17.1",
+  "dependencies": {
+    "fs-extra": "^11.3.2",
+    "irsdk-node": "workspace:^"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.6",
+    "typescript": "^4.5.2"
+  }
+}
