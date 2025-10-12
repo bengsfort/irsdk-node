@@ -8,7 +8,7 @@ verify library compatability.
 
 ## Usage
 
-1. Clone and run install: `pnpm install`
+1. Clone and run install via `pnpm install`
 2. Start the server via `pnpm start`.
 2. Join a session on iRacing (online, local, test drive, whatever).
 4. Hit the server endpoints to receive real-time state data, or connect via
