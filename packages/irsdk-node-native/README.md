@@ -63,7 +63,7 @@ if (sdk.waitForData(TICK_RATE)) {
     const allTelemetry: TelemetryVarList = sdk.getTelemetryData();
 
     // Get just one telemetry variable by name or index. Usually by name.
-    const incidentCount: TelemetryVariable<number[]> = sdk.TelemetryVariable('PlayerCarMyIncidentCount');
+    const incidentCount: TelemetryVariable<number[]> = sdk.getTelemetryVariable('PlayerCarMyIncidentCount');
 }
 
 // Close the SDK once you are done.
