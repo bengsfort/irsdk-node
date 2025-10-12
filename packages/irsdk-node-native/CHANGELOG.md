@@ -1,5 +1,15 @@
 # @irsdk-node/native
 
+## 4.1.1
+
+### Patch Changes
+
+- f44e36d: Updated readme
+- 86eeabe: Updated license to MIT.
+- Updated dependencies [fc577ee]
+- Updated dependencies [86eeabe]
+  - @irsdk-node/types@3.0.3
+
 ## 4.1.0
 
 ### Minor Changes

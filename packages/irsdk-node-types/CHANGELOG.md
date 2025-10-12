@@ -1,5 +1,12 @@
 # @irsdk-node/types
 
+## 3.0.3
+
+### Patch Changes
+
+- fc577ee: Readme updated.
+- 86eeabe: Updated license to MIT.
+
 ## 3.0.2
 
 ### Patch Changes

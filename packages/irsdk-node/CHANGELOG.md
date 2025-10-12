@@ -1,5 +1,15 @@
 # Changelog
 
+## 4.0.4
+
+### Patch Changes
+
+- 2830fbd: Updated readme.
+- 86eeabe: Updated license to MIT.
+- Updated dependencies [fc577ee]
+- Updated dependencies [86eeabe]
+  - @irsdk-node/types@3.0.3
+
 ## 4.0.3
 
 ### Patch Changes

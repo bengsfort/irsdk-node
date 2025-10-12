@@ -1,5 +1,14 @@
 # @irsdk-node/example-node-sdk-server
 
+## 1.0.1
+
+### Patch Changes
+
+- 86eeabe: Updated license to MIT.
+- Updated dependencies [2830fbd]
+- Updated dependencies [86eeabe]
+  - irsdk-node@4.0.4
+
 ## 1.0.0
 
 ### Major Changes
