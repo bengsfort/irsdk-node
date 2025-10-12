@@ -16,6 +16,12 @@ This library is split up into several packages to provide more freedom and to al
 
 > ⚠️ It's recommended to use the irsdk-node package for easy usage, which will include the types and native module automatically. If you have more custom needs or just want types/native bindings on their own, then feel free to use them directly without the main package.
 
+## Examples
+
+A collection of example scripts and apps that show how to use the library exist in the [`examples/`](./examples/) directory. These can be run by cloning the repo and then navigating to the desired example and running the correct start command, usually `pnpm run start`.
+
+More of these examples will be added in the future, as well as independently downloadable versions.
+
 ## Monorepo management
 
 Due to the This monorepo uses [pnpm](https://pnpm.io/workspaces) for workspace management and [changesets](https://github.com/changesets/changesets) for version/changelog management. This allows for a pleasant monorepo experience where during local development, all packages can reference the local versions of their dependencies while having reliable and managed versioning.
