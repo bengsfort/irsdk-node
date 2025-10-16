@@ -19,12 +19,9 @@
       "ESNext",
     ],
     "allowJs": true,
-    "composite": true,
     "rootDir": "./src",
     "outDir": "./dist",
     "declarationDir": "./dist",
     "resolveJsonModule": true,
-    "skipDefaultLibCheck": true,
-    "skipLibCheck": true,
   }
 }
