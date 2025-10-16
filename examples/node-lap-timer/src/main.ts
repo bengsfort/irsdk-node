@@ -1,6 +1,6 @@
 import { exit } from 'node:process';
 import { log } from 'node:console';
-import { IRacingSDK, SessionData, TelemetryVarList } from 'irsdk-node';
+import { IRacingSDK } from 'irsdk-node';
 import { formatDuration } from './utils.js';
 
 const LOG_WAIT_DELAY = 5000; // 5s.
@@ -16,7 +16,6 @@ async function main() {
   let connected = false;
   let startTriggered = false;
   let lastWaitingLog = -1;
-  let localDriverIdx = -1;
   let currentLapNum = -1;
 
   // Try to start the SDK. If there is already a session running, it will connect
@@ -57,7 +56,6 @@ async function main() {
 
         // Log driver information if data is available.
         if (sessionData) {
-          localDriverIdx = getLocalDriverIdx(telemetry, sessionData);
           const [driverData] = sessionData.DriverInfo.Drivers;
           log(`Local driver detected ${driverData.UserName} (${driverData.CarScreenName})`);
         } else {
@@ -112,11 +110,3 @@ async function main() {
 }
 
 main();
-
-// Utils
-function getLocalDriverIdx(telemetry: TelemetryVarList, session: SessionData) {
-  if (telemetry.PlayerCarIdx.value.length > 0) {
-    return telemetry.PlayerCarIdx.value[0];
-  }
-  return session.DriverInfo.DriverCarIdx;
-}
