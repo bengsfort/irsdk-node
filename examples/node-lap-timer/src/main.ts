@@ -59,17 +59,14 @@ async function main() {
       // Cache telemetry variables.
       const lapNum = telemetry.LapCompleted.value[0];
       const lapTime = telemetry.LapCurrentLapTime.value[0];
-      const bestLapNum = telemetry.LapBestLap.value[0];
       const bestLapTime = telemetry.LapBestLapTime.value[0];
       const deltaToBest = lapTime - bestLapTime;
       
       // If the lap number has increased, log the last lap data.
-      if (currentLapNum != lapNum) {
+      if (lapNum > 0 && currentLapNum != lapNum) {
         currentLapNum = lapNum;
-        const isBestLap = bestLapNum === lapNum;
-        const bestLapStr = isBestLap ? 'NEW BEST' : formatDuration(Math.abs(deltaToBest));
-        const deltaSign = (!isBestLap && deltaToBest < 0) ? '-' : '';
-        log(`${lapNum}: ${formatDuration(lapTime)} (${deltaSign + bestLapStr})`);
+        const deltaSign = deltaToBest < 0 ? '-' : '';
+        log(`${lapNum}: ${formatDuration(lapTime)} (${deltaSign + formatDuration(Math.abs(deltaToBest))})`);
       }
     } else {
       // User is not in a session.
@@ -99,7 +96,6 @@ async function main() {
 main();
 
 // Utils
-
 function getLocalDriverIdx(telemetry: TelemetryVarList, session: SessionData) {
   if (telemetry.PlayerCarIdx.value.length > 0) {
     return telemetry.PlayerCarIdx.value[0];

@@ -18,28 +18,15 @@ export function restrictDecimals(value: number, maxDecimalPlaces: number): numbe
  * string value suitable for logging or display.
  */
 export function formatDuration(durationSecs: number): string {
-  // Show microseconds when below 0.1ms
-  if (0.001 > durationSecs) {
-    return `${restrictDecimals(durationSecs * 10000, 0)}μs`;
-  }
+  const roundedSecs = restrictDecimals(durationSecs, 3);
 
-  // Show milliseconds when below 1s
-  if (1 > durationSecs) {
-    return `${restrictDecimals(durationSecs * 1000, 2)}ms`;
-  }
+  // Calculate each individual portion of final time.
+  const minutesStr = Math.floor(roundedSecs / 60);
+  const seconds = roundedSecs % 60;
+  const [
+    secondsStrRaw = '00',
+    msStrRaw = '000',
+  ] = `${seconds}`.split('.');
 
-  // Handle just seconds
-  if (60 > durationSecs) {
-    return `${durationSecs}s`;
-  }
-
-  // Handle seconds/minutes handling
-  const minutes = Math.floor(durationSecs / 60);
-  const seconds = durationSecs % 60;
-
-  const formatted: string[] = [];
-  if (1 >= minutes) formatted.push(`${minutes}m`);
-  formatted.push(`${seconds}s`);
-
-  return formatted.join(' ');
+   return `${minutesStr}:${secondsStrRaw.padStart(2, '0')}.${msStrRaw.slice(0, 3).padEnd(3, '0')}`;
 }
