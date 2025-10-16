@@ -1,6 +1,7 @@
 import { exit } from 'node:process';
 import { log } from 'node:console';
 import { IRacingSDK, SessionData, TelemetryVarList } from 'irsdk-node';
+import { formatDuration } from './utils.js';
 
 // Every 5 seconds.
 const LOG_WAIT_DELAY = 5000;
@@ -65,7 +66,10 @@ async function main() {
       // If the lap number has increased, log the last lap data.
       if (currentLapNum != lapNum) {
         currentLapNum = lapNum;
-        log(`${lapNum}: ${lapTime}s (${bestLapNum === lapNum ? 'NEW BEST' : deltaToBest + 's'})`);
+        const isBestLap = bestLapNum === lapNum;
+        const bestLapStr = isBestLap ? 'NEW BEST' : formatDuration(Math.abs(deltaToBest));
+        const deltaSign = (!isBestLap && deltaToBest < 0) ? '-' : '';
+        log(`${lapNum}: ${formatDuration(lapTime)} (${deltaSign + bestLapStr})`);
       }
     } else {
       // User is not in a session.
@@ -75,6 +79,7 @@ async function main() {
         lastWaitingLog = now;
         startTriggered = false;
         currentLapNum = 0;
+        setTimeout(tick, 16);
         return;
       }
 
