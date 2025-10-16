@@ -3,41 +3,51 @@ import { log } from 'node:console';
 import { IRacingSDK, SessionData, TelemetryVarList } from 'irsdk-node';
 import { formatDuration } from './utils.js';
 
-// Every 5 seconds.
-const LOG_WAIT_DELAY = 5000;
+const LOG_WAIT_DELAY = 5000; // 5s.
+const DATA_INIT_BUFFER = 1000; // 1s
+const MAX_TICK_LENGTH = 1 / 60; // 60fps
 
 async function main() {
+  // Init SDK instance.
   const sdk = new IRacingSDK();
   sdk.autoEnableTelemetry = true;
 
+  // Initialize state.
   let connected = false;
   let startTriggered = false;
   let lastWaitingLog = -1;
   let localDriverIdx = -1;
   let currentLapNum = -1;
 
+  // Try to start the SDK. If there is already a session running, it will connect
+  // and internally cache the first batch of data.
   sdk.startSDK();
 
-  // TODO: log the sessionStatusOK and other status-related things here.
-  // Need to make sure they are working as expected.
+  // Create a data loop.
+  //
+  // This is what will be called every tick, and where your actual logic will go.
   const tick = () => {
     const now = Date.now();
 
-    if (sdk.waitForData(16)) { // 60fps
+    // Wait a maximum of 16ms (60fps) for data.
+    if (sdk.waitForData(MAX_TICK_LENGTH)) {
+      // We have data.
+      //
+      // Try to cache the session and telemetry immediately, and use the cached
+      // data for the remainder of the tick.
       const sessionData = sdk.getSessionData();
       const telemetry = sdk.getTelemetry();
 
-      // Getting data, user is in a session.
-      // 
-      // Log to the console and swap the wait time to the 'active' MS.
+      // If our `connected` variable was false, it means we have just connected.
+      // We initialize our 'active session' state. 
       if (!connected) {
         // When a session starts, this MIGHT toggle quickly between connected
         // and disconnected. To prevent this, the first time we detect data we
-        // delay further input for 500ms to give the SDK a moment to fully init.
+        // delay further input for 1s to give the SDK a moment to fully init.
         if (!startTriggered) {
-          log('Detected session - delaying...');
+          log('Detected session - waiting for init...');
           startTriggered = true;
-          setTimeout(tick, 500);
+          setTimeout(tick, DATA_INIT_BUFFER);
           return;
         }
 
@@ -68,15 +78,19 @@ async function main() {
         const deltaSign = deltaToBest < 0 ? '-' : '';
         log(`${lapNum}: ${formatDuration(lapTime)} (${deltaSign + formatDuration(Math.abs(deltaToBest))})`);
       }
-    } else {
-      // User is not in a session.
+    } else { // User is not in a session.
+      // If our `connected` variable was true, that means we have just left a
+      // session. Reset all of our state variables so they do not corrupt our
+      // next session.
       if (connected) {
         log('Session left - no longer getting data.');
         connected = false;
         lastWaitingLog = now;
         startTriggered = false;
         currentLapNum = 0;
-        setTimeout(tick, 16);
+
+        // Since we have fully reset -- early out.
+        setTimeout(tick, MAX_TICK_LENGTH);
         return;
       }
 
@@ -87,9 +101,13 @@ async function main() {
       }
     }
 
-    setTimeout(tick, 16);
+    // Register the next tick.
+    // You could do this with setImmediate as well, but in most cases setTimeout
+    // with your target FPS is sufficient and more performant.
+    setTimeout(tick, MAX_TICK_LENGTH);
   };
 
+  // Run the first tick.
   tick();
 }
 
