@@ -9,7 +9,7 @@ export default bengsfort.defineConfig([
     files: ['./src/**/*.ts'],
     extends: bengsfort.configs.strictTypeChecked(import.meta.dirname),
   },
-  
+
   // Configs
   {
     files: ['./*.config.js'],

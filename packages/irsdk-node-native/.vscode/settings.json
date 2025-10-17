@@ -7,7 +7,7 @@
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
     "**/build": true,
-    "**/dist": false,
+    "**/dist": true,
     "**/node_modules": true,
   },
   "npm.packageManager": "pnpm",
@@ -18,10 +18,11 @@
     "."
   ],
   "eslint.validate": [
-    "javascript, typescript",
+    "javascript",
+    "typescript",
     "json"
   ],
-  "eslint.useFlatConfig": false,
+  "eslint.useFlatConfig": true,
   "[typescript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   },
