@@ -8,6 +8,9 @@ export default bengsfort.defineConfig([
   {
     files: ['./src/**/*.ts'],
     extends: bengsfort.configs.strictTypeChecked(import.meta.dirname),
+    rules: {
+      '@typescript-eslint/unified-signatures': 'off',
+    },
   },
 
   // Configs

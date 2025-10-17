@@ -1,5 +1,7 @@
-/* eslint-disable no-param-reassign */
-import yaml from 'js-yaml';
+import { error } from 'node:console';
+
+import type { INativeSDK } from '@irsdk-node/native';
+import { NativeSDK } from '@irsdk-node/native';
 import {
   BroadcastMessages,
   CameraState,
@@ -23,15 +25,15 @@ import {
   WeekendInfo,
   SessionData,
 } from '@irsdk-node/types';
-import type { INativeSDK } from '@irsdk-node/native';
-import { NativeSDK } from '@irsdk-node/native';
+import { load as yamlLoad } from 'js-yaml';
 
 import { getSimStatus } from './utils/sim-status.js';
 
-function copyTelemData<
-K extends keyof TelemetryVarList = keyof TelemetryVarList,
-T extends TelemetryVarList[K] = TelemetryVarList[K]
->(src: T, key: K, dest: TelemetryVarList): void {
+function copyTelemData<K extends keyof TelemetryVarList = keyof TelemetryVarList>(
+  src: TelemetryVarList[K],
+  key: K,
+  dest: TelemetryVarList,
+): void {
   dest[key] = { ...src };
   // bool
   if (src.varType === 1) {
@@ -42,18 +44,20 @@ T extends TelemetryVarList[K] = TelemetryVarList[K]
     });
     return;
   }
+
   // numbers
-  if (src.varType === 2 || src.varType === 3) { // int
+  if (src.varType === 2 || src.varType === 3) {
+    // int
     dest[key].value = [...new Int32Array(src.value as number[])];
-  } else if (src.varType === 4) { // float
+  } else if (src.varType === 4) {
+    // float
     dest[key].value = [...new Float32Array(src.value as number[])];
-  } else if (src.varType === 5) { // double
+  } else if (src.varType === 5) {
+    // double
     dest[key].value = [...new Float64Array(src.value as number[])];
   }
 }
 
-// TODO: This class should return the mock data, not the mock SDK.
-// Return the general API flow to sync, not async.
 export class IRacingSDK {
   // Public
   /**
@@ -69,12 +73,15 @@ export class IRacingSDK {
 
   private _sdk: INativeSDK;
 
-
   constructor() {
     this._sdk = new NativeSDK();
     void IRacingSDK.IsSimRunning();
   }
 
+  /**
+   * Wait for the SDK module to resolve and load.
+   * @deprecated This is no longer needed as of v4.0.3. Please remove.
+   */
   public async ready(): Promise<boolean> {
     return Promise.resolve(true);
   }
@@ -85,18 +92,18 @@ export class IRacingSDK {
    * @readonly
    */
   public get currDataVersion(): number {
-    return this._sdk.currDataVersion ?? -1;
+    return this._sdk.currDataVersion;
   }
 
   /** Whether or not to enable verbose logging in the SDK.
    * @property {boolean}
    */
   public get enableLogging(): boolean {
-    return this._sdk.enableLogging ?? false;
+    return this._sdk.enableLogging;
   }
 
   public set enableLogging(value: boolean) {
-    if (this._sdk) this._sdk.enableLogging = value;
+    this._sdk.enableLogging = value;
   }
 
   // @todo: add getter for current session string version
@@ -110,13 +117,13 @@ export class IRacingSDK {
       const result = await getSimStatus();
       return result;
     } catch (e) {
-      console.error('Could not successfully determine sim status:', e);
+      error('Could not successfully determine sim status:', e);
     }
     return false;
   }
 
   public get sessionStatusOK(): boolean {
-    return this._sdk.isRunning() ?? false;
+    return this._sdk.isRunning();
   }
 
   /**
@@ -125,8 +132,7 @@ export class IRacingSDK {
    */
   public startSDK(): boolean {
     if (!this._sdk.isRunning()) {
-
-      const successful = this._sdk.startSDK() ?? false;
+      const successful = this._sdk.startSDK();
       if (this.autoEnableTelemetry) {
         this.enableTelemetry(true);
       }
@@ -150,7 +156,7 @@ export class IRacingSDK {
    * @param {number} timeout Timeout (in ms). Max is 60fps (1/60)
    */
   public waitForData(timeout?: number): boolean {
-    return this._sdk.waitForData(timeout) ?? false;
+    return this._sdk.waitForData(timeout);
   }
 
   /**
@@ -158,15 +164,15 @@ export class IRacingSDK {
    * @returns {SessionData}
    */
   public getSessionData(): SessionData | null {
-    if (this._sessionData && this._dataVer === this.currDataVersion) return this._sessionData;
-    if (!this._sdk) return null;
+    if (this._sessionData && this._dataVer === this.currDataVersion)
+      return this._sessionData;
 
     try {
       const seshString = this._sdk.getSessionData();
-      this._sessionData = yaml.load(seshString) as SessionData;
+      this._sessionData = yamlLoad(seshString) as SessionData;
       return this._sessionData;
     } catch (err) {
-      console.error('There was an error getting session data:', err);
+      error('There was an error getting session data:', err);
     }
 
     return null;
@@ -237,7 +243,7 @@ export class IRacingSDK {
 
   /**
    * Get the current value of the telemetry variables.
-   * 
+   *
    * Telemetry gets updated every tick. This is a large object, so large amounts
    * of processing between ticks should attempt to cache this data instead of
    * re-requesting it via this function.
@@ -246,7 +252,7 @@ export class IRacingSDK {
     const rawData = this._sdk.getTelemetryData();
     const data: Partial<TelemetryVarList> = {};
 
-    if (rawData) {
+    if (Object.keys(rawData).length > 0) {
       Object.keys(rawData).forEach((dataKey) => {
         copyTelemData(
           rawData[dataKey as keyof TelemetryVarList],
@@ -263,17 +269,21 @@ export class IRacingSDK {
    * Request the value of the given telemetry variable.
    * @param index The number index of the variable. Only use if you know what you are doing!
    */
-  public getTelemetryVariable<T extends boolean | number | string>(index: number): TelemetryVariable<T[]> | null;
+  public getTelemetryVariable<T extends boolean | number | string>(
+    index: number,
+  ): TelemetryVariable<T[]> | null;
 
   /**
    * Request the value of the given telemetry variable.
    * @param varName The name of the variable to retrieve.
    */
-  public getTelemetryVariable<T extends boolean | number | string>(varName: keyof TelemetryVarList): TelemetryVariable<T[]> | null;
+  public getTelemetryVariable<T extends boolean | number | string>(
+    varName: keyof TelemetryVarList,
+  ): TelemetryVariable<T[]> | null;
 
-  public getTelemetryVariable<T extends boolean | number | string>(telemVar: number | keyof TelemetryVarList): TelemetryVariable<T[]> | null {
-    if (!this._sdk) return null;
-
+  public getTelemetryVariable<T extends boolean | number | string>(
+    telemVar: number | keyof TelemetryVarList,
+  ): TelemetryVariable<T[]> | null {
     // @todo Need to fix this type.
     const rawData = this._sdk.getTelemetryVariable(telemVar as string);
     const parsed: Partial<TelemetryVarList> = {};
@@ -336,10 +346,16 @@ export class IRacingSDK {
   }
 
   public reloadCarTextures(car: number): void {
-    this._sdk.broadcast(BroadcastMessages.ReloadTextures, ReloadTexturesCommand.CarIndex, car);
+    this._sdk.broadcast(
+      BroadcastMessages.ReloadTextures,
+      ReloadTexturesCommand.CarIndex,
+      car,
+    );
   }
 
-  public triggerChatState(state: ChatCommand.BeginChat | ChatCommand.Cancel | ChatCommand.Reply): void {
+  public triggerChatState(
+    state: ChatCommand.BeginChat | ChatCommand.Cancel | ChatCommand.Reply,
+  ): void {
     this._sdk.broadcast(BroadcastMessages.ChatCommand, state, 1);
   }
 
@@ -352,19 +368,27 @@ export class IRacingSDK {
   }
 
   public triggerPitClearCommand(
-    command: PitCommand.Clear | PitCommand.ClearTires | PitCommand.ClearWS | PitCommand.ClearFR | PitCommand.ClearFuel,
+    command:
+      | PitCommand.Clear
+      | PitCommand.ClearTires
+      | PitCommand.ClearWS
+      | PitCommand.ClearFR
+      | PitCommand.ClearFuel,
   ): void {
     this._sdk.broadcast(BroadcastMessages.PitCommand, command);
   }
 
-  public triggerPitCommand(
-    command: PitCommand.WS | PitCommand.FR,
-  ): void {
+  public triggerPitCommand(command: PitCommand.WS | PitCommand.FR): void {
     this._sdk.broadcast(BroadcastMessages.PitCommand, command);
   }
 
   public triggerPitChange(
-    command: PitCommand.Fuel | PitCommand.LF | PitCommand.RF | PitCommand.LR | PitCommand.RR,
+    command:
+      | PitCommand.Fuel
+      | PitCommand.LF
+      | PitCommand.RF
+      | PitCommand.LR
+      | PitCommand.RR,
     amount: number,
   ): void {
     this._sdk.broadcast(BroadcastMessages.PitCommand, command, amount);
