@@ -7,30 +7,35 @@
 // Import from JS so that we can type the API in a nicer way (without aliases)
 // The alternative would be to somehow get types generated, or use aliases to
 // fake a module and then define that module... but those are gross, so no thanks
-const nodePath = require('node:path');
-const { warn } = require('node:console');
-const MockSdk = require('./dist/MockSDK');
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { warn } from 'node:console';
+import importNativeModule from 'node-gyp-build';
 
-let sdkBinding;
-let isMocked;
+import { MockSDK } from './MockSdk.js';
+import { NativeSDKImpl } from './INativeSDK.js';
+
+const DIR_NAME = __dirname || dirname(fileURLToPath(import.meta.url));
+
+let sdkBinding: NativeSDKImpl;
+let isMocked: boolean;
 
 try {
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-  const binding = require('node-gyp-build')(nodePath.join(__dirname, '.'));
+  const rootDir = join(DIR_NAME, '../..');
+  const binding = importNativeModule(rootDir);
   isMocked = binding.mockedSdk;
 
   if (isMocked) {
-    sdkBinding = MockSdk;
+    sdkBinding = MockSDK;
   } else {
     sdkBinding = binding.iRacingSdkNode;
   }
 } catch (err) {
   warn('Failed to load native iRacing SDK module. Loading mock SDK instead.');
   isMocked = true;
-  sdkBinding = MockSdk;
+  sdkBinding = MockSDK;
 }
 
-module.exports = {
-  NativeSDK: sdkBinding,
-  mockedSdk: isMocked,
-};
+export const NativeSDK = sdkBinding;
+export const sdkIsMocked = isMocked;
+export type { INativeSDK, TelemetryTypesDict } from './INativeSDK.js';

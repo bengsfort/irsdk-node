@@ -14,8 +14,8 @@ import {
   VideoCaptureCommand,
 } from '@irsdk-node/types';
 
-import { loadMockSessionData, loadMockTelemetry } from './mock-data/loader';
-import type { INativeSDK } from './INativeSDK';
+import { loadMockSessionData, loadMockTelemetry } from './mock-data/loader.js';
+import type { INativeSDK, TelemetryTypesDict } from './INativeSDK.js';
 
 type TelemetryVarKey = keyof TelemetryVarList;
 type TelemetryResultTypes = boolean | number | string;
@@ -136,5 +136,9 @@ export class MockSDK implements INativeSDK {
 
   public broadcast(...args: number[]): void {
     console.log('Mocking SDK call:', ...args);
+  }
+
+  __getTelemetryTypes(): TelemetryTypesDict {
+    return {};
   }
 }

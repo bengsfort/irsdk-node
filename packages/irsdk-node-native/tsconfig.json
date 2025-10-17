@@ -21,7 +21,7 @@
     "allowJs": true,
     "rootDir": "./src",
     "outDir": "./dist",
-    "declarationDir": "./dist",
+    "declarationDir": "./dist/types",
     "resolveJsonModule": true,
   }
 }

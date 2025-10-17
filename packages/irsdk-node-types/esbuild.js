@@ -22,6 +22,7 @@ async function doBuild(format) {
     outdir: `./dist/${format}`,
     platform: 'neutral',
     format,
+    packages: 'external',
     outExtension: {
       '.js': extension,
     },

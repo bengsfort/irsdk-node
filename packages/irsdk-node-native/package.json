@@ -1,11 +1,7 @@
 {
   "name": "@irsdk-node/native",
   "version": "4.1.1",
-  "author": {
-    "name": "Matt Bengston",
-    "email": "bengsfort@gmail.com",
-    "url": "http://bengsfort.dev/"
-  },
+  "author": "Matt Bengston <bengsfort@gmail.com> (https://bengsfort.dev/)",
   "bugs": {
     "email": "bengsfort@gmail.com",
     "url": "https://github.com/bengsfort/irsdk-node/issues"
@@ -17,30 +13,35 @@
     "package.json",
     "./dist",
     "./lib",
-    "./index.js",
     "./index.d.ts",
     "./prebuilds",
     "./scripts",
     "./binding.gyp",
     "./README.md"
   ],
+  "type": "module",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
-      "types": "./index.d.ts",
-      "default": "./index.js"
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.cjs"
     }
   },
-  "main": "./index.js",
-  "types": "./index.d.ts",
   "scripts": {
     "install": "node-gyp-build",
+    "clean": "pnpm run \"/^clean:.*/\"",
     "clean:ts": "rm -rf dist *.tsbuildinfo",
     "clean:cpp": "rm -rf ./prebuilds ./build",
-    "clean": "pnpm run \"/^clean:.*/\"",
-    "build": "pnpm run clean && pnpm run \"/^build:(ts|cpp)$/\"",
-    "build:ts": "tsc --build --force",
+    "build": "pnpm run clean && pnpm run \"/^build:(ts|types|cpp)$/\"",
+    "build:ts": "node esbuild.js",
     "build:cpp": "prebuildify --napi --electron-compat",
-    "watch": "tsc --watch",
+    "build:types": "tsc --emitDeclarationOnly",
+    "watch": "pnpm run \"/^watch:.*/\"",
+    "watch:ts": "node esbuild.js --watch",
+    "watch:types": "tsc --watch --emitDeclarationOnly",
     "lint": "eslint ./src/**/*.ts --color",
     "check-types": "tsc --noEmit",
     "generate-types": "node ./scripts/generate-var-types.js"
@@ -56,6 +57,7 @@
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",
+    "esbuild": "^0.25.11",
     "node-notifier": "^10.0.0",
     "prebuildify": "^6.0.1",
     "typescript": "^5.9.3"

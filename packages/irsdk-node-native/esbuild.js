@@ -23,14 +23,18 @@ async function doBuild(format) {
     platform: 'node',
     format,
     packages: 'external',
+    external: [
+      '@irsdk-node/types',
+      'node-gyp-build',
+      'js-yaml',
+    ],
     outExtension: {
       '.js': extension,
     },
     bundle: true,
-    external: [
-      '@irsdk-node/types',
-      '@irsdk-node/native',
-    ],
+    logOverride: {
+      'empty-import-meta': 'silent',
+    },
   });
 }
 

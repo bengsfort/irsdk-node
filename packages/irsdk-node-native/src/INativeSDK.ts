@@ -14,6 +14,16 @@ import {
   VideoCaptureCommand,
 } from '@irsdk-node/types';
 
+export interface TelemetryTypesDict {
+  [key: string | keyof TelemetryVarList]: number;
+}
+
+/**
+ * Interface of the iRacing SDK native module.
+ * 
+ * This should map 1:1 to the API implemented within the C++ addon, and anything
+ * added, changed, or removed from the C++ addon API will be documented here.
+ */
 export interface INativeSDK {
   readonly currDataVersion: number;
   readonly isMocked: boolean;
@@ -33,6 +43,9 @@ export interface INativeSDK {
   getTelemetryVariable<T>(index: number): TelemetryVariable<T>;
   getTelemetryVariable<T>(name: string): TelemetryVariable<T>;
 
+  // Debug utility used for type generation purposes.
+  __getTelemetryTypes(): TelemetryTypesDict;
+
   // Broadcast command overloads
   // This is handled in the cpp side so no need to mess with it in js
   broadcast(message: BroadcastMessages.CameraSwitchPos, pos: number, group: number, camera: number): void;
@@ -50,3 +63,7 @@ export interface INativeSDK {
   broadcast(message: BroadcastMessages.ReplaySearchSessionTime, session: number, time: number): void;
   broadcast(message: BroadcastMessages.VideoCapture, command: VideoCaptureCommand): void;
 }
+
+export type NativeSDKImpl = {
+  new (): INativeSDK;
+};
