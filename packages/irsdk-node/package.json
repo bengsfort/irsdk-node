@@ -26,6 +26,7 @@
       "require": "./dist/cjs/index.cjs"
     }
   },
+  "prettier": "@bengsfort/eslint-config-flat/prettier.config.js",
   "scripts": {
     "clean": "rm -rf dist *.tsbuildinfo",
     "build": "pnpm run \"/^build:.*/\"",
@@ -34,9 +35,7 @@
     "watch": "pnpm run \"/^watch:.*/\"",
     "watch:ts": "node ./esbuild.js --watch",
     "watch:types": "tsc --watch --emitDeclarationOnly",
-    "lint": "eslint ./src --color",
-    "run-debug": "node ./dist/__tests__/sandbox.js",
-    "dump-data": "node ./dist/__tests__/dump-data.js"
+    "lint": "eslint"
   },
   "packageManager": "pnpm@10.17.1",
   "optionalDependencies": {
@@ -48,9 +47,11 @@
     "module-alias": "^2.2.2"
   },
   "devDependencies": {
+    "@bengsfort/eslint-config-flat": "^0.2.5",
     "@types/js-yaml": "^4.0.5",
     "@types/node": "^16.18.126",
     "esbuild": "^0.25.11",
+    "eslint": "^9.38.0",
     "node-notifier": "^10.0.0",
     "typescript": "^5.9.3"
   }
