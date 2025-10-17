@@ -1,6 +1,5 @@
+/* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/unified-signatures */
-
-import { error, warn, log } from 'node:console';
 
 import {
   BroadcastMessages,
@@ -46,9 +45,9 @@ export class MockSDK implements INativeSDK {
 
   constructor() {
     this._loadMockData().catch((reason: unknown) => {
-      error('Error loading mock data for mock SDK:', reason);
+      console.error('Error loading mock data for mock SDK:', reason as string);
     });
-    warn(
+    console.warn(
       'Attempting to access iRacing SDK on unsupported platform!',
       '\nReturning mock SDK for testing purposes. (Only win32 supported)',
     );
@@ -194,7 +193,7 @@ export class MockSDK implements INativeSDK {
   ): void;
 
   public broadcast(...args: number[]): void {
-    log('Mocking SDK call:', ...args);
+    console.log('Mocking SDK call:', ...args);
   }
 
   public __getTelemetryTypes(): TelemetryTypesDict {

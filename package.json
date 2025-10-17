@@ -22,9 +22,7 @@
     "dev": "pnpm run -r watch",
     "lint": "pnpm run -r lint",
     "clean": "pnpm run -r clean",
-    "check-types": "pnpm run -r check-types",
-    "build": "pnpm run -r build",
-    "publish": "echo \"OLD: yarn version apply --all && yarn workspaces foreach -Apt npm publish --tolerate-republish\""
+    "build": "pnpm run -r build"
   },
   "packageManager": "pnpm@10.17.1",
   "devDependencies": {

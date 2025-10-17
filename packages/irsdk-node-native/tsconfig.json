@@ -15,9 +15,9 @@
   ],
   "compilerOptions": {
     "lib": [
-      "DOM",
       "ESNext",
     ],
+    "target": "esnext",
     "allowJs": true,
     "rootDir": "./src",
     "outDir": "./dist",
