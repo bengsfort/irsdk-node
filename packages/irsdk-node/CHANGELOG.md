@@ -1,5 +1,16 @@
 # Changelog
 
+## 4.1.0
+
+### Minor Changes
+
+- d7e45e5: Revamp internal build system to support both ESM and CJS modules.
+
+### Patch Changes
+
+- Updated dependencies [75d6955]
+  - @irsdk-node/types@3.1.0
+
 ## 4.0.4
 
 ### Patch Changes

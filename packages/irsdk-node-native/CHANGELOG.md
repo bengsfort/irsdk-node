@@ -1,5 +1,16 @@
 # @irsdk-node/native
 
+## 4.2.0
+
+### Minor Changes
+
+- 9c42558: Update to esmodule, revamp build process to support CJS and ESM.
+
+### Patch Changes
+
+- Updated dependencies [75d6955]
+  - @irsdk-node/types@3.1.0
+
 ## 4.1.1
 
 ### Patch Changes

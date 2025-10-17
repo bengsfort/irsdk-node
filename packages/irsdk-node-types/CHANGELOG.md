@@ -1,5 +1,11 @@
 # @irsdk-node/types
 
+## 3.1.0
+
+### Minor Changes
+
+- 75d6955: Update to ESM module, revamp internal build to support both CJS and ESM.
+
 ## 3.0.3
 
 ### Patch Changes
