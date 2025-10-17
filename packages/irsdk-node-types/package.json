@@ -1,11 +1,7 @@
 {
   "name": "@irsdk-node/types",
   "version": "3.0.3",
-  "author": {
-    "name": "Matt Bengston",
-    "email": "bengsfort@gmail.com",
-    "url": "http://bengsfort.dev/"
-  },
+  "author": "Matt Bengston <bengsfort@gmail.com> (https://bengsfort.dev/)",
   "bugs": {
     "email": "bengsfort@gmail.com",
     "url": "https://github.com/bengsfort/irsdk-node/issues"
@@ -15,29 +11,37 @@
   },
   "files": [
     "package.json",
-    "./tsconfig.json",
-    "./src",
     "./dist",
-    "./README.md"
+    "./README.md",
+    "./CHANGELOG.md"
   ],
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "type": "module",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.cjs"
+    }
+  },
+  "prettier": "@bengsfort/eslint-config-flat/prettier.config.js",
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc --watch",
-    "check-types": "tsc --noEmit",
-    "clean": "rm -rf build dist *.tsbuildinfo",
-    "lint": "eslint ./src --color"
+    "build": "pnpm run \"/^build:.*/\"",
+    "build:ts": "node ./esbuild.js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "watch": "pnpm run \"/^watch:.*/\"",
+    "watch:ts": "node ./esbuild.js --watch",
+    "watch:types": "tsc --watch --emitDeclarationOnly",
+    "clean": "rm -rf build dist .tsbuildinfo/*",
+    "lint": "eslint"
   },
   "packageManager": "pnpm@10.17.1",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.6.0",
-    "@typescript-eslint/parser": "^5.6.0",
-    "eslint": "^8.4.1",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.5.1",
-    "typescript": "^4.5.2"
+    "@bengsfort/eslint-config-flat": "^0.2.5",
+    "esbuild": "^0.25.11",
+    "eslint": "^9.38.0",
+    "typescript": "^5.9.3"
   }
 }

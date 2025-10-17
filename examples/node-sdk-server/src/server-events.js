@@ -1,8 +1,8 @@
 /**
  * @typedef StreamConnection
- * 
+ *
  * State holder for any given stream connection.
- * 
+ *
  * @property {import('hono/streaming').SSEStreamingApi} stream
  * @property {() => boolean} isActive
  * @property {(event: Object) => Promise<void>} sendEvent
@@ -11,7 +11,7 @@
 
 /**
  * Helper function for creating an SSE-compat event.
- * 
+ *
  * @param {string} event - The event name.
  * @param {any} data - The payload. Will be stringified.
  * @returns {import('hono/streaming').SSEMessage} an SSE event.
@@ -26,10 +26,10 @@ function makeServerEvent(event, data) {
 /**
  * Dispatches state updates to all active connections, returning a list of the
  * connections no longer active which should be discarded.
- * 
- * @param {StreamConnection[]} connections 
- * @param {number} currentVersion 
- * @param {import('irsdk-node').TelemetryVarList} telemetry 
+ *
+ * @param {StreamConnection[]} connections
+ * @param {number} currentVersion
+ * @param {import('irsdk-node').TelemetryVarList} telemetry
  * @param {import('irsdk-node').SessionData} sessionData
  * @returns {StreamConnection[]} An array of stale connections to be removed.
  */
@@ -66,7 +66,9 @@ export function dispatchSSEMesages(connections, currentVersion, telemetry, sessi
     // to a given connection enables us to selectively send updates only as they
     // happen, as well as trigger 'now active' / 'now inactive' events.
     if (currentVersion !== -1) {
-      console.log(`Session active (data version ${currentVersion}), sending events to connection ${i}`);
+      console.log(
+        `Session active (data version ${currentVersion}), sending events to connection ${i}`,
+      );
 
       if (connection.lastReceivedDataVersion === -1) {
         console.log(`Connection is new, sending status event`);
@@ -74,7 +76,9 @@ export function dispatchSSEMesages(connections, currentVersion, telemetry, sessi
       }
 
       if (connection.lastReceivedDataVersion !== currentVersion) {
-        console.log(`Connection data version mismatch (${connection.lastReceivedDataVersion} vs ${currentVersion})`);
+        console.log(
+          `Connection data version mismatch (${connection.lastReceivedDataVersion} vs ${currentVersion})`,
+        );
         connection.sendEvent(sessionEvent);
         connection.lastReceivedDataVersion = currentVersion;
       }
@@ -83,9 +87,9 @@ export function dispatchSSEMesages(connections, currentVersion, telemetry, sessi
       connection.sendEvent(telemEvent);
       continue;
     }
-    
+
     console.log(`Session is inactive, updating any unaware connections`);
-    
+
     // If the connection is not already at -1 for the version, it assumes
     // the session is still active. Dispatch a status update to reset.
     if (connection.lastReceivedDataVersion !== -1) {
@@ -100,7 +104,7 @@ export function dispatchSSEMesages(connections, currentVersion, telemetry, sessi
 /**
  * Creates a state holder for a given SSE stream instance. This can be used to
  * track and dispatch messages to the connection as long as it is open.
- * 
+ *
  * @param {import('hono/streaming').SSEStreamingApi} stream
  * @returns {StreamConnection}
  */
@@ -108,15 +112,17 @@ export function createConnection(stream) {
   const isActive = () => !stream.aborted && !stream.closed;
 
   const sendEvent = async (event) => {
-      try {
-        await stream.writeSSE(event);
-      } catch (err) {
-        console.error(
-          'Error dispatching event, closing connection.',
-          '\nEvent:', event,
-          '\nError:', err,
-        );
-      }
+    try {
+      await stream.writeSSE(event);
+    } catch (err) {
+      console.error(
+        'Error dispatching event, closing connection.',
+        '\nEvent:',
+        event,
+        '\nError:',
+        err,
+      );
+    }
   };
 
   const closeStream = async () => {

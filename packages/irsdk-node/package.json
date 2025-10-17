@@ -1,11 +1,7 @@
 {
   "name": "irsdk-node",
   "version": "4.0.4",
-  "author": {
-    "name": "Matt Bengston",
-    "email": "bengsfort@gmail.com",
-    "url": "http://bengsfort.dev/"
-  },
+  "author": "Matt Bengston <bengsfort@gmail.com> (https://bengsfort.dev/)",
   "bugs": {
     "email": "bengsfort@gmail.com",
     "url": "https://github.com/bengsfort/irsdk-node/issues"
@@ -15,21 +11,31 @@
   },
   "files": [
     "package.json",
-    "./tsconfig.json",
-    "./src",
     "./dist",
-    "./README.md"
+    "./README.md",
+    "./CHANGELOG.md"
   ],
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "type": "module",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.cjs"
+    }
+  },
+  "prettier": "@bengsfort/eslint-config-flat/prettier.config.js",
   "scripts": {
     "clean": "rm -rf dist *.tsbuildinfo",
-    "build": "tsc",
-    "watch": "tsc --watch",
-    "check-types": "tsc --noEmit",
-    "lint": "eslint ./src --color",
-    "run-debug": "node ./dist/__tests__/sandbox.js",
-    "dump-data": "node ./dist/__tests__/dump-data.js"
+    "build": "pnpm run \"/^build:.*/\"",
+    "build:ts": "node ./esbuild.js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "watch": "pnpm run \"/^watch:.*/\"",
+    "watch:ts": "node ./esbuild.js --watch",
+    "watch:types": "tsc --watch --emitDeclarationOnly",
+    "lint": "eslint"
   },
   "packageManager": "pnpm@10.17.1",
   "optionalDependencies": {
@@ -41,22 +47,12 @@
     "module-alias": "^2.2.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/preset-env": "^7.16.4",
-    "@babel/preset-typescript": "^7.16.0",
-    "@types/jest": "^27.0.3",
+    "@bengsfort/eslint-config-flat": "^0.2.5",
     "@types/js-yaml": "^4.0.5",
-    "@types/node": "^16.18.126",
-    "@typescript-eslint/eslint-plugin": "^5.6.0",
-    "@typescript-eslint/parser": "^5.6.0",
-    "babel-jest": "^27.4.4",
-    "eslint": "^8.4.1",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-prettier": "^4.0.0",
-    "jest": "^27.4.4",
+    "@types/node": "^24.8.1",
+    "esbuild": "^0.25.11",
+    "eslint": "^9.38.0",
     "node-notifier": "^10.0.0",
-    "prettier": "^2.5.1",
-    "typescript": "^4.5.2"
+    "typescript": "^5.9.3"
   }
 }

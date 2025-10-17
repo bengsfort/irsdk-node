@@ -14,43 +14,6 @@ env:
   NODE_VERSION: 20
 
 jobs:
-  # Re-enable once eslint is updated. Everything is outdated and a pain.
-  # lint:
-  #   name: Lint
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Checkout repo
-  #       uses: actions/checkout@v4
-
-  #     - name: Setup pnpm
-  #       uses: pnpm/action-setup@v4
-  #       with:
-  #         run_install: false
-
-  #     - name: Setup Node ${{ env.NODE_VERSION }}
-  #       uses: actions/setup-node@v4
-  #       with:
-  #         node-version: ${{ env.NODE_VERSION }}
-  #         cache: "pnpm"
-
-  #     - name: Cache dependencies
-  #       uses: actions/cache@v4
-  #       id: cache
-  #       with:
-  #         path: |
-  #           ~/.pnpm-store
-  #           ./node_modules
-  #         key: pnpm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
-  #         restore-keys: |
-  #           pnpm-${{ runner.os }}-
-
-  #     - name: Init pnpm dependencies
-
-  #       run: pnpm install
-
-  #     - name: Lint codebase
-  #       run: pnpm run lint
-
   build-types:
     name: Build @irsdk-node/types
     runs-on: ubuntu-latest

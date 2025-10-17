@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/main.js ./out"
+    "start": "node ./src/main.js ./out",
+    "lint": "eslint"
   },
+  "prettier": "@bengsfort/eslint-config-flat/prettier.config.js",
   "keywords": [],
   "author": "",
   "license": "MIT",
@@ -13,5 +15,9 @@
   "dependencies": {
     "fs-extra": "^11.3.2",
     "irsdk-node": "workspace:^"
+  },
+  "devDependencies": {
+    "@bengsfort/eslint-config-flat": "^0.2.5",
+    "eslint": "^9.38.0"
   }
 }

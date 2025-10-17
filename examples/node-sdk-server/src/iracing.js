@@ -1,4 +1,4 @@
-import { IRacingSDK } from "irsdk-node";
+import { IRacingSDK } from 'irsdk-node';
 
 const sdk = new IRacingSDK();
 
@@ -31,7 +31,7 @@ export function getSdkState(pollingRate) {
     sessionData: null,
     telemetry: null,
   };
-  
+
   if (!checkSdkSession()) {
     console.log('No iRacing session detected. Aborting data cache.');
     return result;

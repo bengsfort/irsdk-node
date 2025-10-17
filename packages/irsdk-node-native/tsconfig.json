@@ -15,16 +15,13 @@
   ],
   "compilerOptions": {
     "lib": [
-      "DOM",
       "ESNext",
     ],
+    "target": "esnext",
     "allowJs": true,
-    "composite": true,
     "rootDir": "./src",
     "outDir": "./dist",
-    "declarationDir": "./dist",
+    "declarationDir": "./dist/types",
     "resolveJsonModule": true,
-    "skipDefaultLibCheck": true,
-    "skipLibCheck": true,
   }
 }

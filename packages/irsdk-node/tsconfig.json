@@ -9,16 +9,11 @@
     }
   ],
   "include": [
-    "src/**/*.ts",    
-    "src/utils/mock-data/session.json",
-    "src/utils/mock-data/telemetry.json",
+    "src/**/*.ts",
   ],
   "compilerOptions": {
-    "composite": true,
-    "rootDir": "src",
-    "outDir": "dist",
-    "baseUrl": "./src",
-    "declarationDir": "dist",
-    "resolveJsonModule": true,
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "declarationDir": "./dist/types",
   }
 }

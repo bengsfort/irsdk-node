@@ -1,11 +1,7 @@
 {
   "name": "@irsdk-node/native",
   "version": "4.1.1",
-  "author": {
-    "name": "Matt Bengston",
-    "email": "bengsfort@gmail.com",
-    "url": "http://bengsfort.dev/"
-  },
+  "author": "Matt Bengston <bengsfort@gmail.com> (https://bengsfort.dev/)",
   "bugs": {
     "email": "bengsfort@gmail.com",
     "url": "https://github.com/bengsfort/irsdk-node/issues"
@@ -17,55 +13,57 @@
     "package.json",
     "./dist",
     "./lib",
-    "./index.js",
     "./index.d.ts",
     "./prebuilds",
     "./scripts",
     "./binding.gyp",
     "./README.md"
   ],
+  "type": "module",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
-      "types": "./index.d.ts",
-      "default": "./index.js"
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.cjs"
     }
   },
-  "main": "./index.js",
-  "types": "./index.d.ts",
   "scripts": {
     "install": "node-gyp-build",
+    "clean": "pnpm run \"/^clean:.*/\"",
     "clean:ts": "rm -rf dist *.tsbuildinfo",
     "clean:cpp": "rm -rf ./prebuilds ./build",
-    "clean": "pnpm run \"/^clean:.*/\"",
-    "build": "pnpm run clean && pnpm run \"/^build:(ts|cpp)$/\"",
-    "build:ts": "tsc --build --force",
+    "build": "pnpm run clean && pnpm run \"/^build:(ts|types|cpp)$/\"",
+    "build:ts": "node esbuild.js",
     "build:cpp": "prebuildify --napi --electron-compat",
-    "watch": "tsc --watch",
-    "lint": "eslint ./src/**/*.ts --color",
+    "build:types": "tsc --emitDeclarationOnly",
+    "watch": "pnpm run \"/^watch:.*/\"",
+    "watch:ts": "node esbuild.js --watch",
+    "watch:types": "tsc --watch --emitDeclarationOnly",
+    "lint": "eslint",
     "check-types": "tsc --noEmit",
     "generate-types": "node ./scripts/generate-var-types.js"
   },
+  "prettier": "@bengsfort/eslint-config-flat/prettier.config.js",
   "packageManager": "pnpm@10.17.1",
   "dependencies": {
     "@irsdk-node/types": "workspace:^",
     "bindings": "^1.5.0",
     "js-yaml": "^4.1.0",
     "node-addon-api": "^8.2.1",
-    "node-gyp": "^10.2.0",
+    "node-gyp": "^11.5.0",
     "node-gyp-build": "^4.8.4"
   },
   "devDependencies": {
+    "@bengsfort/eslint-config-flat": "^0.2.5",
     "@types/js-yaml": "^4.0.9",
-    "@typescript-eslint/eslint-plugin": "^5.6.0",
-    "@typescript-eslint/parser": "^5.6.0",
-    "concurrently": "^7.0.0",
-    "eslint": "^8.4.1",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-prettier": "^4.0.0",
+    "@types/node": "^24.8.1",
+    "esbuild": "^0.25.11",
+    "eslint": "^9.38.0",
     "node-notifier": "^10.0.0",
     "prebuildify": "^6.0.1",
-    "prettier": "^2.5.1",
-    "typescript": "^4.5.2"
+    "typescript": "^5.9.3"
   }
 }

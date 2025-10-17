@@ -23,10 +23,7 @@ export function formatDuration(durationSecs: number): string {
   // Calculate each individual portion of final time.
   const minutesStr = Math.floor(roundedSecs / 60);
   const seconds = roundedSecs % 60;
-  const [
-    secondsStrRaw = '00',
-    msStrRaw = '000',
-  ] = `${seconds}`.split('.');
+  const [secondsStrRaw = '00', msStrRaw = '000'] = `${seconds}`.split('.');
 
-   return `${minutesStr}:${secondsStrRaw.padStart(2, '0')}.${msStrRaw.slice(0, 3).padEnd(3, '0')}`;
+  return `${minutesStr}:${secondsStrRaw.padStart(2, '0')}.${msStrRaw.slice(0, 3).padEnd(3, '0')}`;
 }

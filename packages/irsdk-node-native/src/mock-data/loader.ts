@@ -1,11 +1,11 @@
 // eslint-disable @typescript-eslint/no-unsafe-return
 
 import { TelemetryVarList } from '@irsdk-node/types';
-import yaml from 'js-yaml';
+import { dump } from 'js-yaml';
 
 export const loadMockSessionData = async (): Promise<string> => {
   const json = await import('./session.json');
-  return yaml.dump(json.default);
+  return dump(json.default);
 };
 
 export const loadMockTelemetry = async (): Promise<TelemetryVarList> => {

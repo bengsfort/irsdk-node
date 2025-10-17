@@ -22,7 +22,11 @@ runs:
       if: ${{ inputs.node-version != 'true' }}
       with:
         node-version: ${{ inputs.node-version }}
-      
+
+    - name: Lint ${{ inputs.package-name }}
+      shell: bash
+      run: pnpm run --filter "${{ inputs.package-name }}" lint
+
     - name: Run build for ${{ inputs.package-name }}
       shell: bash
       run: pnpm run --filter "${{ inputs.package-name }}..." build
