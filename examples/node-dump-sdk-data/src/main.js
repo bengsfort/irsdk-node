@@ -1,6 +1,7 @@
-const fs = require('fs-extra');
 const nodePath = require('node:path');
 const { exit } = require('node:process');
+
+const fs = require('fs-extra');
 const { IRacingSDK } = require('irsdk-node');
 
 /**
@@ -12,7 +13,7 @@ const { IRacingSDK } = require('irsdk-node');
  */
 
 function telemSandbox(varList) {
-  console.log("VARLIST:", varList);
+  console.log('VARLIST:', varList);
   console.log('Got lap distance values (float)', varList.CarIdxLapDistPct.value);
   console.log('Got session time values (double)', varList.SessionTime.value);
   console.log('Got car positions by index (int)', varList.CarIdxPosition.value);
@@ -33,7 +34,7 @@ async function main(out) {
 
     console.log('SDK after startSDK?', sdk._sdk);
     console.log('Triggering SDK wait...?', sdk);
-    
+
     if (sdk.waitForData(1000)) {
       const telem = sdk.getTelemetry();
       telemSandbox(telem);
@@ -42,12 +43,15 @@ async function main(out) {
       console.log('session status ok?', sdk.sessionStatusOK);
 
       // Save
-      const dir = nodePath.dirname(out);
       console.log('Saving in:', out);
 
       await fs.ensureDir(out);
       await Promise.all([
-        await fs.writeFile(`${out}/telemetry.json`, JSON.stringify(telem, null, 2), 'utf-8'),
+        await fs.writeFile(
+          `${out}/telemetry.json`,
+          JSON.stringify(telem, null, 2),
+          'utf-8',
+        ),
         await fs.writeFile(`${out}/session.json`, session, 'utf-8'),
       ]);
       console.log('finished.');
@@ -60,7 +64,7 @@ async function main(out) {
   }
 }
 
-const [,, OUT_FILE] = process.argv;
+const [, , OUT_FILE] = process.argv;
 const TARGET = nodePath.resolve(process.cwd(), OUT_FILE);
 
 console.log('target:', TARGET);

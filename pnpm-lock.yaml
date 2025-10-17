@@ -23,6 +23,13 @@ importers:
       irsdk-node:
         specifier: workspace:^
         version: link:../../packages/irsdk-node
+    devDependencies:
+      '@bengsfort/eslint-config-flat':
+        specifier: ^0.2.5
+        version: 0.2.5(@typescript-eslint/parser@8.46.1(eslint@9.38.0)(typescript@5.9.3))(eslint@9.38.0)(typescript@5.9.3)
+      eslint:
+        specifier: ^9.38.0
+        version: 9.38.0
 
   examples/node-lap-timer:
     dependencies:
