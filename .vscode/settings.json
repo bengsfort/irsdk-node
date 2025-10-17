@@ -8,7 +8,7 @@
     "**/Thumbs.db": true,
     "**/build": true,
     "**/dist": false,
-    "**/node_modules": false,
+    "**/node_modules": true,
   },
   "npm.packageManager": "pnpm",
   "typescript.format.enable": true,

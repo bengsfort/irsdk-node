@@ -15,7 +15,10 @@ export default bengsfort.defineConfig([
 
   // Configs
   {
-    files: ['./*.config.js'],
+    files: ['./*.config.js', './esbuild.js'],
     extends: bengsfort.configs.strict,
+    rules: {
+      '@typescript-eslint/explicit-function-return-type': 'off',
+    },
   },
 ]);

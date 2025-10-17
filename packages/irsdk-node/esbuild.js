@@ -1,18 +1,18 @@
-import * as esbuild from 'esbuild';
 import { parseArgs } from 'node:util';
+
+import * as esbuild from 'esbuild';
 
 const args = parseArgs({
   options: {
-    'watch': {
+    watch: {
       short: 'w',
       type: 'boolean',
     },
   },
 });
 
-
 /**
- * @param {import('esbuild').Format} format 
+ * @param {import('esbuild').Format} format
  */
 async function doBuild(format) {
   const extension = format === 'cjs' ? '.cjs' : '.js';
@@ -27,17 +27,11 @@ async function doBuild(format) {
       '.js': extension,
     },
     bundle: true,
-    external: [
-      '@irsdk-node/types',
-      '@irsdk-node/native',
-    ],
+    external: ['@irsdk-node/types', '@irsdk-node/native'],
   });
 }
 
-const [contextCjs, contextEsm] = await Promise.all([
-  doBuild('cjs'),
-  doBuild('esm'),
-]);
+const [contextCjs, contextEsm] = await Promise.all([doBuild('cjs'), doBuild('esm')]);
 
 if (!args.values.watch) {
   await contextCjs.rebuild();

@@ -59,7 +59,7 @@
   "devDependencies": {
     "@bengsfort/eslint-config-flat": "^0.2.5",
     "@types/js-yaml": "^4.0.9",
-    "@types/node": "^16.18.126",
+    "@types/node": "^24.8.1",
     "esbuild": "^0.25.11",
     "eslint": "^9.38.0",
     "node-notifier": "^10.0.0",

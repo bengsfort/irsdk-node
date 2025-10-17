@@ -5,16 +5,14 @@
 // Import from JS so that we can type the API in a nicer way (without aliases)
 // The alternative would be to somehow get types generated, or use aliases to
 // fake a module and then define that module... but those are gross, so no thanks
-import { dirname, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { join } from 'node:path';
 
 import importNativeModule from 'node-gyp-build';
 
 import { NativeSDKImpl } from './INativeSDK.js';
 import { MockSDK } from './MockSdk.js';
 
-const DIR_NAME =
-  (__dirname as string | undefined) ?? dirname(fileURLToPath(import.meta.url));
+const DIR_NAME = _getDirname();
 
 let sdkBinding: NativeSDKImpl;
 let isMocked: boolean;
