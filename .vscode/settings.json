@@ -19,10 +19,11 @@
     "./examples/**",
   ],
   "eslint.validate": [
-    "javascript, typescript",
+    "javascript",
+    "typescript",
     "json"
   ],
-  "eslint.useFlatConfig": false,
+  "eslint.useFlatConfig": true,
   "[typescript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   },
