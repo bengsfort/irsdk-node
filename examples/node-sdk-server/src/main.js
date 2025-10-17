@@ -1,13 +1,13 @@
+import { parseArgs } from 'node:util';
+
+import { serve } from '@hono/node-server';
 import { Hono } from 'hono';
 import { logger } from 'hono/logger';
 import { streamSSE } from 'hono/streaming';
-import { serve } from '@hono/node-server';
 import { IRacingSDK } from 'irsdk-node';
 
-import { parseArgs } from 'node:util';
-
-import { createConnection, dispatchSSEMesages } from './server-events.js';
 import { getSdkState, close, init, checkSdkSession } from './iracing.js';
+import { createConnection, dispatchSSEMesages } from './server-events.js';
 
 const args = parseArgs({
   options: {
@@ -83,7 +83,7 @@ function pollDataLoop() {
 
     // Clean up stale connections.
     cache.streamConnections = cache.streamConnections.filter(
-      (connection) => !staleConnections.includes(connection)
+      (connection) => !staleConnections.includes(connection),
     );
 
     // Stop polling if all connections have closed.
@@ -127,11 +127,11 @@ app.get('/', (ctx) => {
 
   return ctx.text(
     `iRacing node.js example server\n` +
-    `- iRacing session ${sessionStatus}\n` +
-    `- Session data ${sessionDataStatus}\n` +
-    `- Telemetry data ${telemetryStatus}\n` +
-    `- Polling ${pollStatus}\n` +
-    `- Active connections ${connectionCount}`
+      `- iRacing session ${sessionStatus}\n` +
+      `- Session data ${sessionDataStatus}\n` +
+      `- Telemetry data ${telemetryStatus}\n` +
+      `- Polling ${pollStatus}\n` +
+      `- Active connections ${connectionCount}`,
   );
 });
 
@@ -144,7 +144,7 @@ app.get('/session', (ctx) => {
   const sessionData = cache.pollingData
     ? cache.polledSessionData
     : getSdkState(DATA_POLL_RATE).sessionData;
-  
+
   if (!sessionData) {
     ctx.status(404);
     return ctx.text('No session data found');
@@ -177,7 +177,7 @@ app.get('/telemetry/:varName', (ctx) => {
     ctx.status(404);
     return ctx.text(`Telemetry variable not found ${varName}`);
   }
-  
+
   ctx.status(200);
   return ctx.json(value);
 });
@@ -199,10 +199,10 @@ app.get('/telemetry', (ctx) => {
 
   return ctx.json({
     ...telemetry,
-  }); 
+  });
 });
 
-app.get("/events", (ctx) => {
+app.get('/events', (ctx) => {
   return streamSSE(ctx, (stream) => {
     // Once this Promise resolves, the stream will end. It will be automatically
     // resolved if we use the SSEStreamingApi built-in methods though, so we can
@@ -214,13 +214,15 @@ app.get("/events", (ctx) => {
       cache.streamConnections.push(connection);
       stream.onAbort(() => {
         console.log('Connection aborted');
-        const withoutStream = cache.streamConnections.filter((conn) => conn !== connection);
+        const withoutStream = cache.streamConnections.filter(
+          (conn) => conn !== connection,
+        );
         cache.streamConnections = withoutStream;
       });
 
       pollDataLoop();
     });
-  })
+  });
 });
 
 const instance = serve({ fetch: app.fetch, port: SERVER_PORT }, (info) => {

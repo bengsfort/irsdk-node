@@ -19,5 +19,9 @@
     "fs-extra": "^11.3.2",
     "hono": "^4.10.1",
     "irsdk-node": "workspace:^"
+  },
+  "devDependencies": {
+    "@bengsfort/eslint-config-flat": "^0.2.5",
+    "eslint": "^9.38.0"
   }
 }
