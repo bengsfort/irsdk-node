@@ -1,7 +1,6 @@
 {
   "name": "irsdk-node",
   "version": "4.0.4",
-  "type": "module",
   "author": "Matt Bengston <bengsfort@gmail.com> (https://bengsfort.dev/)",
   "bugs": {
     "email": "bengsfort@gmail.com",
@@ -16,6 +15,7 @@
     "./README.md",
     "./CHANGELOG.md"
   ],
+  "type": "module",
   "main": "./dist/cjs/index.cjs",
   "module": "./dist/esm/index.js",
   "types": "./dist/types/index.d.ts",
@@ -27,7 +27,7 @@
     }
   },
   "scripts": {
-    "clean": "rm -rf dist dist-types *.tsbuildinfo",
+    "clean": "rm -rf dist *.tsbuildinfo",
     "build": "pnpm run \"/^build:.*/\"",
     "build:ts": "node ./esbuild.js",
     "build:types": "tsc --emitDeclarationOnly",
