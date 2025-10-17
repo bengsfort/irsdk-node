@@ -42,10 +42,11 @@
     "watch": "pnpm run \"/^watch:.*/\"",
     "watch:ts": "node esbuild.js --watch",
     "watch:types": "tsc --watch --emitDeclarationOnly",
-    "lint": "eslint ./src/**/*.ts --color",
+    "lint": "eslint",
     "check-types": "tsc --noEmit",
     "generate-types": "node ./scripts/generate-var-types.js"
   },
+  "prettier": "@bengsfort/eslint-config-flat/prettier.config.js",
   "packageManager": "pnpm@10.17.1",
   "dependencies": {
     "@irsdk-node/types": "workspace:^",
@@ -56,8 +57,10 @@
     "node-gyp-build": "^4.8.4"
   },
   "devDependencies": {
+    "@bengsfort/eslint-config-flat": "^0.2.5",
     "@types/js-yaml": "^4.0.9",
     "esbuild": "^0.25.11",
+    "eslint": "^9.38.0",
     "node-notifier": "^10.0.0",
     "prebuildify": "^6.0.1",
     "typescript": "^5.9.3"

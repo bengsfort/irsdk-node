@@ -33,7 +33,7 @@ try {
 } catch (err) {
   warn('Failed to load native iRacing SDK module. Loading mock SDK instead.');
   isMocked = true;
-  sdkBinding = MockSDK;
+  sdkBinding = MockSDK
 }
 
 export const NativeSDK = sdkBinding;
