@@ -1,6 +1,6 @@
 import http from 'node:http';
 
-import { SIM_STATUS_URI } from '../constants';
+const SIM_STATUS_URI = 'http://127.0.0.1:32034/get_sim_status?object=simStatus';
 
 /**
  * Makes an http localhots request to check whether or not the iRacing sim is running.

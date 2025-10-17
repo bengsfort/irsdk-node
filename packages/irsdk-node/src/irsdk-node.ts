@@ -26,7 +26,7 @@ import {
 import type { INativeSDK } from '@irsdk-node/native';
 import { NativeSDK } from '@irsdk-node/native';
 
-import { getSimStatus } from './utils';
+import { getSimStatus } from './utils/sim-status.js';
 
 function copyTelemData<
 K extends keyof TelemetryVarList = keyof TelemetryVarList,

@@ -1,11 +1,8 @@
 {
   "name": "irsdk-node",
   "version": "4.0.4",
-  "author": {
-    "name": "Matt Bengston",
-    "email": "bengsfort@gmail.com",
-    "url": "http://bengsfort.dev/"
-  },
+  "type": "module",
+  "author": "Matt Bengston <bengsfort@gmail.com> (https://bengsfort.dev/)",
   "bugs": {
     "email": "bengsfort@gmail.com",
     "url": "https://github.com/bengsfort/irsdk-node/issues"
@@ -15,18 +12,28 @@
   },
   "files": [
     "package.json",
-    "./tsconfig.json",
-    "./src",
     "./dist",
-    "./README.md"
+    "./README.md",
+    "./CHANGELOG.md"
   ],
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.cjs"
+    }
+  },
   "scripts": {
-    "clean": "rm -rf dist *.tsbuildinfo",
-    "build": "tsc",
-    "watch": "tsc --watch",
-    "check-types": "tsc --noEmit",
+    "clean": "rm -rf dist dist-types *.tsbuildinfo",
+    "build": "pnpm run \"/^build:.*/\"",
+    "build:ts": "node ./esbuild.js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "watch": "pnpm run \"/^watch:.*/\"",
+    "watch:ts": "node ./esbuild.js --watch",
+    "watch:types": "tsc --watch --emitDeclarationOnly",
     "lint": "eslint ./src --color",
     "run-debug": "node ./dist/__tests__/sandbox.js",
     "dump-data": "node ./dist/__tests__/dump-data.js"
@@ -43,6 +50,7 @@
   "devDependencies": {
     "@types/js-yaml": "^4.0.5",
     "@types/node": "^16.18.126",
+    "esbuild": "^0.25.11",
     "node-notifier": "^10.0.0",
     "typescript": "^5.9.3"
   }
