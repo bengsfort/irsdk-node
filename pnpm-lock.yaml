@@ -33,9 +33,15 @@ importers:
         specifier: workspace:^
         version: link:../../packages/irsdk-node
     devDependencies:
+      '@bengsfort/eslint-config-flat':
+        specifier: ^0.2.5
+        version: 0.2.5(@typescript-eslint/parser@8.46.1(eslint@9.38.0)(typescript@5.9.3))(eslint@9.38.0)(typescript@5.9.3)
       '@types/node':
         specifier: ^24.8.1
         version: 24.8.1
+      eslint:
+        specifier: ^9.38.0
+        version: 9.38.0
       tsx:
         specifier: ^4.20.6
         version: 4.20.6
@@ -3112,7 +3118,7 @@ snapshots:
       fast-glob: 3.3.3
       is-glob: 4.0.3
       minimatch: 9.0.5
-      semver: 7.7.2
+      semver: 7.7.3
       ts-api-utils: 2.1.0(typescript@5.9.3)
       typescript: 5.9.3
     transitivePeerDependencies:

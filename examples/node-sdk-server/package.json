@@ -5,8 +5,10 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/main.js"
+    "start": "node ./src/main.js",
+    "lint": "eslint"
   },
+  "prettier": "@bengsfort/eslint-config-flat/prettier.config.js",
   "keywords": [],
   "author": "",
   "license": "MIT",

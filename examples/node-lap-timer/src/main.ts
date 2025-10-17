@@ -1,13 +1,15 @@
-import { exit } from 'node:process';
 import { log } from 'node:console';
+import { exit } from 'node:process';
+
 import { IRacingSDK } from 'irsdk-node';
+
 import { formatDuration } from './utils.js';
 
 const LOG_WAIT_DELAY = 5000; // 5s.
 const DATA_INIT_BUFFER = 1000; // 1s
 const MAX_TICK_LENGTH = 1 / 60; // 60fps
 
-async function main() {
+function main(): void {
   // Init SDK instance.
   const sdk = new IRacingSDK();
   sdk.autoEnableTelemetry = true;
@@ -25,7 +27,7 @@ async function main() {
   // Create a data loop.
   //
   // This is what will be called every tick, and where your actual logic will go.
-  const tick = () => {
+  const tick = (): void => {
     const now = Date.now();
 
     // Wait a maximum of 16ms (60fps) for data.
@@ -38,7 +40,7 @@ async function main() {
       const telemetry = sdk.getTelemetry();
 
       // If our `connected` variable was false, it means we have just connected.
-      // We initialize our 'active session' state. 
+      // We initialize our 'active session' state.
       if (!connected) {
         // When a session starts, this MIGHT toggle quickly between connected
         // and disconnected. To prevent this, the first time we detect data we
@@ -57,7 +59,9 @@ async function main() {
         // Log driver information if data is available.
         if (sessionData) {
           const [driverData] = sessionData.DriverInfo.Drivers;
-          log(`Local driver detected ${driverData.UserName} (${driverData.CarScreenName})`);
+          log(
+            `Local driver detected ${driverData.UserName} (${driverData.CarScreenName})`,
+          );
         } else {
           log('Error: Session data not available!');
           exit(1);
@@ -69,14 +73,17 @@ async function main() {
       const lapTime = telemetry.LapCurrentLapTime.value[0];
       const bestLapTime = telemetry.LapBestLapTime.value[0];
       const deltaToBest = lapTime - bestLapTime;
-      
+
       // If the lap number has increased, log the last lap data.
-      if (lapNum > 0 && currentLapNum != lapNum) {
+      if (lapNum > 0 && currentLapNum !== lapNum) {
         currentLapNum = lapNum;
         const deltaSign = deltaToBest < 0 ? '-' : '';
-        log(`${lapNum}: ${formatDuration(lapTime)} (${deltaSign + formatDuration(Math.abs(deltaToBest))})`);
+        log(
+          `${lapNum}: ${formatDuration(lapTime)} (${deltaSign + formatDuration(Math.abs(deltaToBest))})`,
+        );
       }
-    } else { // User is not in a session.
+    } else {
+      // User is not in a session.
       // If our `connected` variable was true, that means we have just left a
       // session. Reset all of our state variables so they do not corrupt our
       // next session.
