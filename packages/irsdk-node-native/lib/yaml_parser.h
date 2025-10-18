@@ -29,6 +29,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define YAML_PARSER_H
 
 // super simple YAML parser
-bool parseYaml(const char *data, const char* path, const char **val, int *len);
+bool parseYaml(const char* data, const char* path, const char** val, int* len);
 
 #endif //YAML_PARSER_H
