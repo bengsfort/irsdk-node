@@ -84,13 +84,13 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <tchar.h>
 
 static const _TCHAR IRSDK_DATAVALIDEVENTNAME[] = _T("Local\\IRSDKDataValidEvent");
-static const _TCHAR IRSDK_MEMMAPFILENAME[]     = _T("Local\\IRSDKMemMapFileName");
-static const _TCHAR IRSDK_BROADCASTMSGNAME[]   = _T("IRSDK_BROADCASTMSG");
+static const _TCHAR IRSDK_MEMMAPFILENAME[] = _T("Local\\IRSDKMemMapFileName");
+static const _TCHAR IRSDK_BROADCASTMSGNAME[] = _T("IRSDK_BROADCASTMSG");
 
 static const int IRSDK_MAX_BUFS = 4;
 static const int IRSDK_MAX_STRING = 32;
 // descriptions can be longer than max_string!
-static const int IRSDK_MAX_DESC = 64; 
+static const int IRSDK_MAX_DESC = 64;
 
 // define markers for unlimited session lap and time
 static const int IRSDK_UNLIMITED_LAPS = 32767;
@@ -134,60 +134,16 @@ static const int irsdk_VarTypeBytes[irsdk_ETCount] =
 	8		// irsdk_double
 };
 
-// bit fields
-enum irsdk_EngineWarnings 
-{
-	irsdk_waterTempWarning		= 0x01,
-	irsdk_fuelPressureWarning	= 0x02,
-	irsdk_oilPressureWarning	= 0x04,
-	irsdk_engineStalled			= 0x08,
-	irsdk_pitSpeedLimiter		= 0x10,
-	irsdk_revLimiterActive		= 0x20,
-	irsdk_oilTempWarning		= 0x40,
-};
-
-// global flags
-enum irsdk_Flags
-{
-	// global flags
-	irsdk_checkered				= 0x00000001,
-	irsdk_white					= 0x00000002,
-	irsdk_green					= 0x00000004,
-	irsdk_yellow				= 0x00000008,
-	irsdk_red					= 0x00000010,
-	irsdk_blue					= 0x00000020,
-	irsdk_debris				= 0x00000040,
-	irsdk_crossed				= 0x00000080,
-	irsdk_yellowWaving			= 0x00000100,
-	irsdk_oneLapToGreen			= 0x00000200,
-	irsdk_greenHeld				= 0x00000400,
-	irsdk_tenToGo				= 0x00000800,
-	irsdk_fiveToGo				= 0x00001000,
-	irsdk_randomWaving			= 0x00002000,
-	irsdk_caution				= 0x00004000,
-	irsdk_cautionWaving			= 0x00008000,
-
-	// drivers black flags
-	irsdk_black					= 0x00010000,
-	irsdk_disqualify			= 0x00020000,
-	irsdk_servicible			= 0x00040000, // car is allowed service (not a flag)
-	irsdk_furled				= 0x00080000,
-	irsdk_repair				= 0x00100000,
-
-	// start lights
-	irsdk_startHidden			= 0x10000000,
-	irsdk_startReady			= 0x20000000,
-	irsdk_startSet				= 0x40000000,
-	irsdk_startGo				= 0x80000000,
-};
-
+//---
 
 // status 
 enum irsdk_TrkLoc
 {
 	irsdk_NotInWorld = -1,
-	irsdk_OffTrack,
+	irsdk_OffTrack = 0,
 	irsdk_InPitStall,
+	// This indicates the lead in to pit road, as well as the pit road itself (where speed limits are enforced)
+	// if you just want to know that your on the pit road surface look at the live value 'OnPitRoad'
 	irsdk_AproachingPits,
 	irsdk_OnTrack
 };
@@ -240,13 +196,131 @@ enum irsdk_SessionState
 
 enum irsdk_CarLeftRight
 {
-	irsdk_LROff,
+	irsdk_LROff = 0,
 	irsdk_LRClear,			// no cars around us.
 	irsdk_LRCarLeft,		// there is a car to our left.
 	irsdk_LRCarRight,		// there is a car to our right.
 	irsdk_LRCarLeftRight,	// there are cars on each side.
 	irsdk_LR2CarsLeft,		// there are two cars to our left.
 	irsdk_LR2CarsRight		// there are two cars to our right.
+};
+
+enum irsdk_PitSvStatus
+{
+	// status
+	irsdk_PitSvNone = 0,
+	irsdk_PitSvInProgress,
+	irsdk_PitSvComplete,
+
+	// errors
+	irsdk_PitSvTooFarLeft = 100,
+	irsdk_PitSvTooFarRight,
+	irsdk_PitSvTooFarForward,
+	irsdk_PitSvTooFarBack,
+	irsdk_PitSvBadAngle,
+	irsdk_PitSvCantFixThat,
+};
+
+enum irsdk_PaceMode
+{
+	irsdk_PaceModeSingleFileStart = 0,
+	irsdk_PaceModeDoubleFileStart,
+	irsdk_PaceModeSingleFileRestart,
+	irsdk_PaceModeDoubleFileRestart,
+	irsdk_PaceModeNotPacing,
+};
+
+enum irsdk_TrackWetness
+{
+	irsdk_TrackWetness_UNKNOWN = 0,
+	irsdk_TrackWetness_Dry,
+	irsdk_TrackWetness_MostlyDry,
+	irsdk_TrackWetness_VeryLightlyWet,
+	irsdk_TrackWetness_LightlyWet,
+	irsdk_TrackWetness_ModeratelyWet,
+	irsdk_TrackWetness_VeryWet,
+	irsdk_TrackWetness_ExtremelyWet
+};
+
+enum irsdk_IncidentFlags
+{
+	// first byte is incident report flag
+	// only one of these will be used
+	irsdk_Incident_RepNoReport = 0x0000, // no penalty 
+	irsdk_Incident_RepOutOfControl = 0x0001, // "Loss of Control (2x)"
+	irsdk_Incident_RepOffTrack = 0x0002, // "Off Track (1x)"
+	irsdk_Incident_RepOffTrackOngoing = 0x0003, // not currently sent
+	irsdk_Incident_RepContactWithWorld = 0x0004, // "Contact (0x)"
+	irsdk_Incident_RepCollisionWithWorld = 0x0005, // "Contact (2x)"
+	irsdk_Incident_RepCollisionWithWorldOngoing = 0x0006, // not currently sent
+	irsdk_Incident_RepContactWithCar = 0x0007, // "Car Contact (0x)"
+	irsdk_Incident_RepCollisionWithCar = 0x0008, // "Car Contact (4x)"
+
+	// second byte is incident penalty
+	// only one of these will be used
+	irsdk_Incident_PenNoReport = 0x0000, // no penalty
+	irsdk_Incident_PenZeroX = 0x0100, // 0x
+	irsdk_Incident_PenOneX = 0x0200, // 1x
+	irsdk_Incident_PenTwoX = 0x0300, // 2x
+	irsdk_Incident_PenFourX = 0x0400, // 4x
+
+	// not enums, used to seperate the above incident report field
+	// from the incident penalty field
+	IRSDK_INCIDENT_REP_MASK = 0x000000FF,
+	IRSDK_INCIDENT_PEN_MASK = 0x0000FF00,
+};
+
+//---
+
+// bit fields
+enum irsdk_EngineWarnings
+{
+	irsdk_waterTempWarning = 0x0001,
+	irsdk_fuelPressureWarning = 0x0002,
+	irsdk_oilPressureWarning = 0x0004,
+	irsdk_engineStalled = 0x0008,
+	irsdk_pitSpeedLimiter = 0x0010,
+	irsdk_revLimiterActive = 0x0020,
+	irsdk_oilTempWarning = 0x0040,
+
+	irsdk_mandRepNeeded = 0x0080, // car needs mandatory repairs
+	irsdk_optRepNeeded = 0x0100, // car needs optional repairs
+};
+
+// global flags
+enum irsdk_Flags
+{
+	// global flags
+	irsdk_checkered = 0x00000001,
+	irsdk_white = 0x00000002,
+	irsdk_green = 0x00000004,
+	irsdk_yellow = 0x00000008,
+	irsdk_red = 0x00000010,
+	irsdk_blue = 0x00000020,
+	irsdk_debris = 0x00000040,
+	irsdk_crossed = 0x00000080,
+	irsdk_yellowWaving = 0x00000100,
+	irsdk_oneLapToGreen = 0x00000200,
+	irsdk_greenHeld = 0x00000400,
+	irsdk_tenToGo = 0x00000800,
+	irsdk_fiveToGo = 0x00001000,
+	irsdk_randomWaving = 0x00002000,
+	irsdk_caution = 0x00004000,
+	irsdk_cautionWaving = 0x00008000,
+
+	// drivers black flags
+	irsdk_black = 0x00010000,
+	irsdk_disqualify = 0x00020000,
+	irsdk_servicible = 0x00040000, // car is allowed service (not a flag)
+	irsdk_furled = 0x00080000,
+	irsdk_repair = 0x00100000,
+	irsdk_dqScoringInvalid = 0x00200000, // car is disqualified and scoring is disabled
+
+	// start lights
+	irsdk_startHidden = 0x10000000,
+	irsdk_startReady = 0x20000000,
+	irsdk_startSet = 0x40000000,
+	irsdk_startGo = 0x80000000,
 };
 
 enum irsdk_CameraState
@@ -276,36 +350,11 @@ enum irsdk_PitSvFlags
 	irsdk_FastRepair		= 0x0040
 };
 
-enum irsdk_PitSvStatus
-{
-	// status
-	irsdk_PitSvNone = 0,
-	irsdk_PitSvInProgress,
-	irsdk_PitSvComplete,
-
-	// errors
-	irsdk_PitSvTooFarLeft = 100,
-	irsdk_PitSvTooFarRight,
-	irsdk_PitSvTooFarForward,
-	irsdk_PitSvTooFarBack,
-	irsdk_PitSvBadAngle,
-	irsdk_PitSvCantFixThat,
-};
-
-enum irsdk_PaceMode
-{
-	irsdk_PaceModeSingleFileStart = 0,
-	irsdk_PaceModeDoubleFileStart,
-	irsdk_PaceModeSingleFileRestart,
-	irsdk_PaceModeDoubleFileRestart,
-	irsdk_PaceModeNotPacing,
-};
-
 enum irsdk_PaceFlags
 {
-	irsdk_PaceFlagsEndOfLine = 0x01,
-	irsdk_PaceFlagsFreePass = 0x02,
-	irsdk_PaceFlagsWavedAround = 0x04,
+	irsdk_PaceFlagsEndOfLine = 0x0001,
+	irsdk_PaceFlagsFreePass = 0x0002,
+	irsdk_PaceFlagsWavedAround = 0x0004,
 };
 
 //----
@@ -361,6 +410,10 @@ struct irsdk_header
 
 	int numBuf;				// <= IRSDK_MAX_BUFS (3 for now)
 	int bufLen;				// length in bytes for one line
+	//****ToDo, add these in
+	//int curBufTickCount;	// stashed copy of the current tickCount, can read this to see if new data is available
+	//byte curBuf;			// index of the most recently written buffer (0 to IRSDK_MAX_BUFS-1)
+	//byte pad1[3];			// 16 byte align
 	int pad1[2];			// (16 byte align)
 	irsdk_varBuf varBuf[IRSDK_MAX_BUFS]; // buffers of data being written to
 };
@@ -400,13 +453,13 @@ int irsdk_varNameToOffset(const char *name);
 // Remote controll the sim by sending these windows messages
 // camera and replay commands only work when you are out of your car, 
 // pit commands only work when in your car
-enum irsdk_BroadcastMsg 
+enum irsdk_BroadcastMsg
 {
 	irsdk_BroadcastCamSwitchPos = 0,      // car position, group, camera
 	irsdk_BroadcastCamSwitchNum,	      // driver #, group, camera
 	irsdk_BroadcastCamSetState,           // irsdk_CameraState, unused, unused 
 	irsdk_BroadcastReplaySetPlaySpeed,    // speed, slowMotion, unused
-	irskd_BroadcastReplaySetPlayPosition, // irsdk_RpyPosMode, Frame Number (high, low)
+	irsdk_BroadcastReplaySetPlayPosition, // irsdk_RpyPosMode, Frame Number (high, low)
 	irsdk_BroadcastReplaySearch,          // irsdk_RpySrchMode, unused, unused
 	irsdk_BroadcastReplaySetState,        // irsdk_RpyStateMode, unused, unused
 	irsdk_BroadcastReloadTextures,        // irsdk_ReloadTexturesMode, carIdx, unused
@@ -441,6 +494,7 @@ enum irsdk_PitCommandMode				// this only works when the driver is in the car
 	irsdk_PitCommand_ClearWS,			// Uncheck Clean the winshield checkbox
 	irsdk_PitCommand_ClearFR,			// Uncheck request a fast repair
 	irsdk_PitCommand_ClearFuel,			// Uncheck add fuel
+	irsdk_PitCommand_TC,				// Change tire compound
 };
 
 enum irsdk_TelemCommandMode				// You can call this any time, but telemtry only records when driver is in there car

@@ -4,14 +4,14 @@ All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
-    * Redistributions of source code must retain the above copyright
-      notice, this list of conditions and the following disclaimer.
-    * Redistributions in binary form must reproduce the above copyright
-      notice, this list of conditions and the following disclaimer in the
-      documentation and/or other materials provided with the distribution.
-    * Neither the name of iRacing.com Motorsport Simulations nor the
-      names of its contributors may be used to endorse or promote products
-      derived from this software without specific prior written permission.
+	* Redistributions of source code must retain the above copyright
+	  notice, this list of conditions and the following disclaimer.
+	* Redistributions in binary form must reproduce the above copyright
+	  notice, this list of conditions and the following disclaimer in the
+	  documentation and/or other materials provided with the distribution.
+	* Neither the name of iRacing.com Motorsport Simulations nor the
+	  names of its contributors may be used to endorse or promote products
+	  derived from this software without specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
@@ -37,9 +37,9 @@ enum yaml_state {
 };
 
 // super simple YAML parser
-bool parseYaml(const char *data, const char* path, const char **val, int *len)
+bool parseYaml(const char* data, const char* path, const char** val, int* len)
 {
-	if(data && path && val && len)
+	if (data && path && val && len)
 	{
 		// make sure we set this to something
 		*val = NULL;
@@ -48,39 +48,39 @@ bool parseYaml(const char *data, const char* path, const char **val, int *len)
 		int depth = 0;
 		yaml_state state = space;
 
-		const char *keystr = NULL;
+		const char* keystr = NULL;
 		int keylen = 0;
 
-		const char *valuestr = NULL;
+		const char* valuestr = NULL;
 		int valuelen = 0;
 
-		const char *pathptr = path;
+		const char* pathptr = path;
 		int pathdepth = 0;
 
-		while(*data)
+		while (*data)
 		{
-			switch(*data)
+			switch (*data)
 			{
 			case ' ':
-				if(state == newline)
+				if (state == newline)
 					state = space;
-				if(state == space)
+				if (state == space)
 					depth++;
-				else if(state == key)
+				else if (state == key)
 					keylen++;
-				else if(state == value)
+				else if (state == value)
 					valuelen++;
 				break;
 			case '-':
-				if(state == newline)
+				if (state == newline)
 					state = space;
-				if(state == space)
+				if (state == space)
 					depth++;
-				else if(state == key)
+				else if (state == key)
 					keylen++;
-				else if(state == value)
+				else if (state == value)
 					valuelen++;
-				else if(state == keysep)
+				else if (state == keysep)
 				{
 					state = value;
 					valuestr = data;
@@ -88,50 +88,50 @@ bool parseYaml(const char *data, const char* path, const char **val, int *len)
 				}
 				break;
 			case ':':
-				if(state == key)
+				if (state == key)
 				{
 					state = keysep;
 					keylen++;
 				}
-				else if(state == keysep)
+				else if (state == keysep)
 				{
 					state = value;
 					valuestr = data;
 				}
-				else if(state == value)
+				else if (state == value)
 					valuelen++;
 				break;
 			case '\n':
 			case '\r':
-				if(state != newline)
+				if (state != newline)
 				{
-					if(depth < pathdepth)
+					if (depth < pathdepth)
 					{
 						return false;
 					}
-					else if(keylen && 0 == strncmp(keystr, pathptr, keylen))
+					else if (keylen && 0 == strncmp(keystr, pathptr, keylen))
 					{
 						bool found = true;
 						//do we need to test the value?
-						if(*(pathptr+keylen) == '{')
+						if (*(pathptr + keylen) == '{')
 						{
 							//search for closing brace
-							int pathvaluelen = keylen + 1; 
-							while(*(pathptr+pathvaluelen) && *(pathptr+pathvaluelen) != '}')
-								pathvaluelen++; 
+							int pathvaluelen = keylen + 1;
+							while (*(pathptr + pathvaluelen) && *(pathptr + pathvaluelen) != '}')
+								pathvaluelen++;
 
-							if(valuelen == pathvaluelen - (keylen+1) && 0 == strncmp(valuestr, (pathptr+keylen+1), valuelen))
+							if (valuelen == pathvaluelen - (keylen + 1) && 0 == strncmp(valuestr, (pathptr + keylen + 1), valuelen))
 								pathptr += valuelen + 2;
 							else
 								found = false;
 						}
 
-						if(found)
+						if (found)
 						{
 							pathptr += keylen;
 							pathdepth = depth;
 
-							if(*pathptr == '\0')
+							if (*pathptr == '\0')
 							{
 								*val = valuestr;
 								*len = valuelen;
@@ -147,21 +147,21 @@ bool parseYaml(const char *data, const char* path, const char **val, int *len)
 				state = newline;
 				break;
 			default:
-				if(state == space || state == newline)
+				if (state == space || state == newline)
 				{
 					state = key;
 					keystr = data;
 					keylen = 0; //redundant?
 				}
-				else if(state == keysep)
+				else if (state == keysep)
 				{
 					state = value;
 					valuestr = data;
 					valuelen = 0; //redundant?
 				}
-				if(state == key)
+				if (state == key)
 					keylen++;
-				if(state == value)
+				if (state == value)
 					valuelen++;
 				break;
 			}
