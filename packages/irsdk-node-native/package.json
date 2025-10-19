@@ -6,6 +6,9 @@
     "email": "bengsfort@gmail.com",
     "url": "https://github.com/bengsfort/irsdk-node/issues"
   },
+  "os": [
+    "win32"
+  ],
   "engines": {
     "node": ">=18"
   },
