@@ -1,4 +1,4 @@
-export * from './enums.js';
+export * from './defines.js';
 export type * from './camera-info.js';
 export type * from './driver-info.js';
 export type * from './radio-info.js';

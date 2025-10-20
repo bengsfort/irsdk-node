@@ -227,7 +227,7 @@ Napi::Value iRacingSdkNode::BroadcastMessage(const Napi::CallbackInfo &info)
   case irsdk_BroadcastPitCommand: // arg1 == irsdk_PitCommandMode
   case irsdk_BroadcastFFBCommand: // arg1 == irsdk_FFBCommandMode
   case irsdk_BroadcastReplaySearchSessionTime:
-  case irskd_BroadcastReplaySetPlayPosition:
+  case irsdk_BroadcastReplaySetPlayPosition:
     if (this->_loggingEnabled)
       printf("BroadcastMessage(msgType: %d, arg1: %d, arg2: %f)\n", msgType, arg1, (float)arg2.FloatValue());
     irsdk_broadcastMsg(msgType, arg1, (float)arg2.FloatValue());
