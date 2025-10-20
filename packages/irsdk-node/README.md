@@ -45,11 +45,11 @@ if (await IRacingSDK.IsSimRunning()) {
 
 Example apps and scripts can be found in the [examples/](https://github.com/bengsfort/irsdk-node/tree/main/examples/) section on github.
 
-### Why is `@irsdk-node/native` an optional dependency?
+### Why is `@irsdk-node/native` separate dependency?
 
 The original irsdk-node package was split up in to separate packages to solve the issue that this SDK is windows-only, which means that the package wasn't able to be used in any other environment other than node.js on windows devices.
 
-To solve this, the package was split into the main native module, the types module, and the wrapper module. Not only does this allow you to have webview environments that can import the SDK types freely, but it also allows you to iterate on your app on different devices that may not necessarily be windows (For example, if you are iterating on some piece of UI for your Electron app from a mac or linux machine).
+To solve this, the package was split into the main native module, the types module, and the wrapper module. Not only does this allow you to have webview environments that can import the SDK types freely, but it also allows you to iterate on your app on different devices that may not necessarily be windows (For example, if you are iterating on some piece of UI for your Electron app from a mac or linux machine) when a fallback module is provided on non-windows platforms.
 
 An added benefit of this is more freedom: if someone would prefer to create their own wrapping API around the native module, they can do so by consuming just the native module!
 

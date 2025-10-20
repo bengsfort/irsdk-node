@@ -38,10 +38,8 @@
     "lint": "eslint"
   },
   "packageManager": "pnpm@10.17.1",
-  "optionalDependencies": {
-    "@irsdk-node/native": "workspace:^"
-  },
   "dependencies": {
+    "@irsdk-node/native": "workspace:^",
     "@irsdk-node/types": "workspace:^",
     "js-yaml": "^4.1.0",
     "module-alias": "^2.2.2"
