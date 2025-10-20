@@ -86,6 +86,9 @@ importers:
 
   packages/irsdk-node:
     dependencies:
+      '@irsdk-node/native':
+        specifier: workspace:^
+        version: link:../irsdk-node-native
       '@irsdk-node/types':
         specifier: workspace:^
         version: link:../irsdk-node-types
@@ -117,10 +120,6 @@ importers:
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
-    optionalDependencies:
-      '@irsdk-node/native':
-        specifier: workspace:^
-        version: link:../irsdk-node-native
 
   packages/irsdk-node-native:
     dependencies:
