@@ -2,9 +2,12 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
-// Import from JS so that we can type the API in a nicer way (without aliases)
-// The alternative would be to somehow get types generated, or use aliases to
-// fake a module and then define that module... but those are gross, so no thanks
+// TODO: The pre-built binary for non-windows machines is not necessarily needed.
+// For example, only attempting to import the native module if `process.platform`
+// is equal to `win32` otherwise falling back to the mock SDK would achieve the
+// exact same result, with less CI time being used to compile a dummy C++ module.
+// The only thing that needs to be figured out is interop with node-gyp-build.
+
 import { join } from 'node:path';
 
 import importNativeModule from 'node-gyp-build';
