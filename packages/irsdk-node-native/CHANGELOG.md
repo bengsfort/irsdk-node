@@ -1,5 +1,21 @@
 # @irsdk-node/native
 
+## 5.0.0
+
+### Major Changes
+
+- 57c2f2f: Updated SDK implementation to latest (v1.19).
+
+### Minor Changes
+
+- 9c42558: Update to esmodule, revamp build process to support CJS and ESM.
+
+### Patch Changes
+
+- Updated dependencies [75d6955]
+- Updated dependencies [57c2f2f]
+  - @irsdk-node/types@4.0.0
+
 ## 4.1.1
 
 ### Patch Changes

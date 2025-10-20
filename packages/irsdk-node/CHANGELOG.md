@@ -1,5 +1,21 @@
 # Changelog
 
+## 4.1.0
+
+### Minor Changes
+
+- c53a7b4: Switched @irsdk-node/native to a required dependency due to new pre-published binaries and fallbacks.
+- d7e45e5: Revamp internal build system to support both ESM and CJS modules.
+
+### Patch Changes
+
+- Updated dependencies [57c2f2f]
+- Updated dependencies [75d6955]
+- Updated dependencies [9c42558]
+- Updated dependencies [57c2f2f]
+  - @irsdk-node/native@5.0.0
+  - @irsdk-node/types@4.0.0
+
 ## 4.0.4
 
 ### Patch Changes
