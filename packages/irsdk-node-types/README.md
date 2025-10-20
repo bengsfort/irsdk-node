@@ -1,5 +1,7 @@
 # @irsdk-node/types
 
+_Types implemented for **iRacing SDK v1.19**. You can see the latest version of the SDK [on the forums](https://forums.iracing.com/discussion/62/iracing-sdk/p1)._
+
 This package provides TypeScript type definitions and enums that match the data structures and API's of the iRacing SDK, as well as a generated list of telemetry variables available from the SDK.
 
 If you are using `irsdk-node`, you do not need to import this package directly as it gets re-exported via `irsdk-node`.

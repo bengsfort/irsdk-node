@@ -1,5 +1,7 @@
 # @irsdk-node/native
 
+_Currently using **iRacing SDK v1.19**. You can see the latest version of the SDK [on the forums](https://forums.iracing.com/discussion/62/iracing-sdk/p1)._
+
 This is the native bindings package for irsdk-node. This provides near 1:1 bindings to the C++ iRacing SDK, and is consumed as an optional dependency of [irsdk-node](https://github.com/bengsfort/irsdk-node/tree/main/packages/irsdk-node), which provides a handy little wrapper around the API to make it nicer to use and avoid boilerplating.
 
 While you can use this package directly, it is highly recommended to use the [irsdk-node](https://github.com/bengsfort/irsdk-node/tree/main/packages/irsdk-node) package instead. Types for the data exposed via this package can be used independently via [@irsdk-node/types](https://github.com/bengsfort/irsdk-node/tree/main/packages/irsdk-node-native) as well.
