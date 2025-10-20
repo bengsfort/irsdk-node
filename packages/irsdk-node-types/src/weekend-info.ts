@@ -52,6 +52,18 @@ export interface WeekendInfo {
   TrackPitSpeedLimit: string;
   TrackType: string;
   TrackDirection: string;
+  /**
+   * Can be one of the following:
+   *
+   * - Classic Specified / Dynamic Sky
+   * - Classic Generated / Dynamic Sky
+   * - Classic Specified / Static Sky
+   * - Classic Generated / Static Sky
+   * - Realistic
+   * - Static
+   * - Timeline
+   * - Unknown
+   */
   TrackWeatherType: string;
   TrackSkies: string;
   TrackSurfaceTemp: string;

@@ -1,6 +1,9 @@
 // irsdk_defines.h mapping module.
+//
 // The schemas in this module should be defined in the same order as in the
 // sdk header file. This makes it easier to update and maintain.
+//
+// TODO: Try to map each flag to their respective Telemetry variable.
 
 // --- Constants
 
@@ -64,7 +67,7 @@ export const VarTypeBytes = {
   [VarTypes.ETCount]: VarTypes.ETCount,
 } as const;
 
-// --- Status
+// --- Flags
 
 /**
  * Maps the general location within the world a car/driver might be.
@@ -198,7 +201,7 @@ export enum PaceMode {
 }
 
 /**
- * Indicates track wetness.
+ * Indicates track wetness. Used with the `TrackWetness` telemetry variable.
  *
  * Represents irsdk_TrackWetness
  */
@@ -407,6 +410,8 @@ export enum PaceFlags {
   /** Waved around */
   WavedAround = 0x0004,
 }
+
+// --- SDK Commands
 
 /**
  * Messages for controlling the sim via the SDK.
