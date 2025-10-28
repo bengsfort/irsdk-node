@@ -22,7 +22,25 @@
       ],
       "include_dirs": [
         "<!(node -p \"require('node-addon-api').include_dir\")",
-      ]
+      ],
+      'msvs_configuration_attributes': {
+       'SpectreMitigation': 'Spectre'
+      },
+      'msvs_settings': {
+        'VCCLCompilerTool': {
+          'AdditionalOptions': [
+            '/guard:cf',
+            '/w34244',
+            '/we4267',
+            '/ZH:SHA_256'
+          ]
+        },
+        'VCLinkerTool': {
+          'AdditionalOptions': [
+            '/guard:cf'
+          ]
+        }
+      }
     }
   ]
 }
