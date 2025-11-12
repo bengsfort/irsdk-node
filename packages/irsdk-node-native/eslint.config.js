@@ -6,7 +6,7 @@ export default bengsfort.defineConfig([
 
   // Code
   {
-    files: ['./src/**/*.ts'],
+    files: ['./src/**/*.ts', './scripts/*.ts'],
     extends: bengsfort.configs.strictTypeChecked(import.meta.dirname),
   },
 
