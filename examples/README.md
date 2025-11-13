@@ -10,6 +10,7 @@ See the [Test Usage](#Test-usage) section for more details.
 - [node-dump-sdk-data](./node-dump-sdk-data/) - Simple commonjs node.js app that dumps the current SDK data to output files. Useful for generating test data.
 - [node-lap-timer](./node-lap-timer/) - Long-running application example that demonstrates how to detect joining and leaving an iRacing session. Written in TypeScript.
 - [node-sdk-server](./node-sdk-server/) - ESM Node.js server exposing the current SDK data via endpoints, as well as a websocket connection for real-time updates.
+- [test-sandbox](./test-sandbox/) - General purpose sandbox package containing integration test and performance testing scripts.
 
 ## Release testing usage
 
