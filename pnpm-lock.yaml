@@ -84,6 +84,46 @@ importers:
         specifier: ^9.38.0
         version: 9.38.0
 
+  examples/test-sandbox:
+    dependencies:
+      '@bengsfort/stdlib':
+        specifier: ^0.2.0
+        version: 0.2.0
+      '@irsdk-node/native':
+        specifier: workspace:^
+        version: link:../../packages/irsdk-node-native
+      irsdk-node:
+        specifier: workspace:^
+        version: link:../../packages/irsdk-node
+      js-yaml:
+        specifier: ^4.1.0
+        version: 4.1.0
+    devDependencies:
+      '@bengsfort/eslint-config-flat':
+        specifier: ^0.2.5
+        version: 0.2.5(@typescript-eslint/parser@8.46.1(eslint@9.38.0)(typescript@5.9.3))(eslint@9.38.0)(typescript@5.9.3)
+      '@types/fs-extra':
+        specifier: ^11.0.4
+        version: 11.0.4
+      '@types/js-yaml':
+        specifier: ^4.0.9
+        version: 4.0.9
+      '@types/node':
+        specifier: ^24.8.1
+        version: 24.8.1
+      eslint:
+        specifier: ^9.38.0
+        version: 9.38.0
+      fs-extra:
+        specifier: ^11.3.2
+        version: 11.3.2
+      tsx:
+        specifier: ^4.20.6
+        version: 4.20.6
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
   packages/irsdk-node:
     dependencies:
       '@irsdk-node/native':
@@ -194,6 +234,10 @@ packages:
     peerDependencies:
       eslint: ^9.20.1
       typescript: ^5.7.3
+
+  '@bengsfort/stdlib@0.2.0':
+    resolution: {integrity: sha512-Y2dYV3yaE875f9SFtRuaHxPheN8zrvHKxW/MMrWq/YMGOzIDfqU1Ff4gSTxcgrSjVNl2AXiN68Akch7OhPbaIg==}
+    engines: {node: '>=20.0.0'}
 
   '@changesets/apply-release-plan@7.0.13':
     resolution: {integrity: sha512-BIW7bofD2yAWoE8H4V40FikC+1nNFEKBisMECccS16W1rt6qqhNTBDmIw5HaqmMgtLNz9e7oiALiEUuKrQ4oHg==}
@@ -659,6 +703,9 @@ packages:
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
 
+  '@types/fs-extra@11.0.4':
+    resolution: {integrity: sha512-yTbItCNreRooED33qjunPthRcSjERP1r4MqCZc7wv0u2sUkzTFp45tgUfS5+r7FrZPdmCCNflLhVSP/o+SemsQ==}
+
   '@types/js-yaml@4.0.9':
     resolution: {integrity: sha512-k4MGaQl5TGo/iipqb2UDG2UwjXziSWkh0uysQelTlJpX1qGlpUZYm8PnO4DxG1qBomtJUdYJ6qR6xdIah10JLg==}
 
@@ -667,6 +714,9 @@ packages:
 
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+
+  '@types/jsonfile@6.1.4':
+    resolution: {integrity: sha512-D5qGUYwjvnNNextdU59/+fI+spnwtTFmyQP0h+PfIOSkNfpU6AOICUOkm4i0OnSk+NyjdPJrxCDro0sJsWlRpQ==}
 
   '@types/node@12.20.55':
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
@@ -2596,6 +2646,8 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
+  '@bengsfort/stdlib@0.2.0': {}
+
   '@changesets/apply-release-plan@7.0.13':
     dependencies:
       '@changesets/config': 3.1.1
@@ -3048,11 +3100,20 @@ snapshots:
 
   '@types/estree@1.0.8': {}
 
+  '@types/fs-extra@11.0.4':
+    dependencies:
+      '@types/jsonfile': 6.1.4
+      '@types/node': 24.8.1
+
   '@types/js-yaml@4.0.9': {}
 
   '@types/json-schema@7.0.15': {}
 
   '@types/json5@0.0.29': {}
+
+  '@types/jsonfile@6.1.4':
+    dependencies:
+      '@types/node': 24.8.1
 
   '@types/node@12.20.55': {}
 

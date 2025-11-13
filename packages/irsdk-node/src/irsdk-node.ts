@@ -169,7 +169,7 @@ export class IRacingSDK {
 
     try {
       const seshString = this._sdk.getSessionData();
-      this._sessionData = yamlLoad(seshString) as SessionData;
+      this._sessionData = yamlLoad(seshString.replaceAll(': ,', ': 0,')) as SessionData;
       return this._sessionData;
     } catch (err) {
       error('There was an error getting session data:', err);
