@@ -1,5 +1,11 @@
 # @irsdk-node/types
 
+## 4.0.1
+
+### Patch Changes
+
+- 1435d80: Update types for Tires and Aero within SetupInfo session data (Thanks @mikey0000)
+
 ## 4.0.0
 
 ### Major Changes

@@ -1,5 +1,13 @@
 # Changelog
 
+## 4.1.1
+
+### Patch Changes
+
+- 6f81f5b: Add fix for design/color strings that produce invalid yaml. (Thanks @mikey0000)
+- Updated dependencies [1435d80]
+  - @irsdk-node/types@4.0.1
+
 ## 4.1.0
 
 ### Minor Changes
