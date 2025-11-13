@@ -1,0 +1,35 @@
+{
+  "name": "@irsdk-node/test-sandbox",
+  "version": "1.0.1",
+  "description": "",
+  "main": "src/main.ts",
+  "type": "module",
+  "scripts": {
+    "export-yaml": "pnpm tsx ./src/export-session-yaml.ts --out ./out/session.yaml",
+    "parse-yaml:regex": "pnpm tsx ./src/parse-session-yaml.ts --in ./out/session.yaml --out ./out/session.json --mode regex",
+    "parse-yaml:string": "pnpm tsx ./src/parse-session-yaml.ts --in ./out/session.yaml --out ./out/session.json --mode string",
+    "clean": "rm -rf dist *.tsbuildinfo",
+    "lint": "eslint"
+  },
+  "prettier": "@bengsfort/eslint-config-flat/prettier.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.17.1",
+  "dependencies": {
+    "@bengsfort/stdlib": "^0.2.0",
+    "@irsdk-node/native": "workspace:^",
+    "irsdk-node": "workspace:^",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@bengsfort/eslint-config-flat": "^0.2.5",
+    "@types/fs-extra": "^11.0.4",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^24.8.1",
+    "eslint": "^9.38.0",
+    "fs-extra": "^11.3.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}
