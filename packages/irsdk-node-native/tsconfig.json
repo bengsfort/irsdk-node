@@ -1,10 +1,8 @@
 {
   "extends": "../../tsconfig.base.json",
-  "exclude": [
-    "./scripts/**/*"
-  ],
   "include": [
     "./src/**/*.ts",
+    "./scripts/*.ts",
     "./src/mock-data/session.json",
     "./src/mock-data/telemetry.json",
   ],
