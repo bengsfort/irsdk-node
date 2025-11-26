@@ -43,9 +43,7 @@
     "watch:ts": "node esbuild.js --watch",
     "watch:types": "tsc --watch --emitDeclarationOnly",
     "lint": "eslint",
-    "check-types": "tsc --noEmit",
-    "types:generate": "pnpm dlx tsx ./scripts/export-telemetry-vars.ts",
-    "generate-types": "node ./scripts/generate-var-types.js"
+    "check-types": "tsc --noEmit"
   },
   "prettier": "@bengsfort/eslint-config-flat/prettier.config.js",
   "packageManager": "pnpm@10.17.1",
@@ -59,12 +57,10 @@
   },
   "devDependencies": {
     "@bengsfort/eslint-config-flat": "^0.2.5",
-    "@types/fs-extra": "^11.0.4",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^24.8.1",
     "esbuild": "^0.25.11",
     "eslint": "^9.38.0",
-    "fs-extra": "^11.3.2",
     "node-notifier": "^10.0.0",
     "prebuildify": "^6.0.1",
     "typescript": "^5.9.3"

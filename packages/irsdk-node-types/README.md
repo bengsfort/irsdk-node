@@ -54,10 +54,16 @@ $ pnpm lint
 
 Many of the interfaces and enums are hand-converted from the C++ enums SDK defines module. You can find these by looking in the [irsdk_defines.h file of @irsdk-node/native](../irsdk-node-native/lib/irsdk_defines.h).
 
-The telemetry data cannot be converted manually without losing your sanity, so a script has been written to do this automatically. You can run this by joining a session on iRacing, enter the car, and then opening up a terminal to the [@irsdk-node/native](../irsdk-node-native) package and running the following command:
+The telemetry data cannot be converted manually without losing your sanity, so a script has been written to do this automatically. You can run this by joining a session on iRacing, enter the car, and then opening up a terminal to the [irsdk-node](../irsdk-node) package and running the following command:
 
 ```sh
 $ pnpm types:generate
+```
+
+Alternatively, you can run the type generation function from anywhere in the repo via:
+
+```sh
+$ pnpm run -w types:generate
 ```
 
 As the telemetry can be different on a per-car basis, this will take the telemetry variables active in your session and compare them against a cache to determine if there are any new types detected. If some are detected, the typescript file will be updated.

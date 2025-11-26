@@ -1,16 +1,20 @@
 import { error, log } from 'node:console';
+import { writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { exit } from 'node:process';
 import { fileURLToPath } from 'node:url';
-import { writeFile } from 'node:fs/promises';
+import { parseArgs } from 'node:util';
 
 import { getErrorMessage } from '@bengsfort/stdlib/errors/helpers';
 import { formatDuration } from '@bengsfort/stdlib/formatting/numbers';
-import { NativeSDK, type INativeSDK} from '@irsdk-node/native';
-import { VarTypesReadable, type SessionData, type TelemetryVarList } from '@irsdk-node/types';
+import { NativeSDK, type INativeSDK } from '@irsdk-node/native';
+import {
+  VarTypesReadable,
+  type SessionData,
+  type TelemetryVarList,
+} from '@irsdk-node/types';
 import fs from 'fs-extra';
-import yaml from 'js-yaml';
-import { parseArgs } from 'node:util';
+import { load as yamlLoad } from 'js-yaml';
 
 const args = parseArgs({
   options: {
@@ -28,23 +32,25 @@ const args = parseArgs({
 });
 
 if (args.values.help) {
-  log([
-    `-------------------------------------`,
-    `irsdk-node: Export telemetry vaiables`,
-    `-------------------------------------`,
-    ``,
-    `Usage:`,
-    `--------`,
-    `pnpm types:generate`,
-    ``,
-    `Options:`,
-    `--------`,
-    `--help, -h`,
-    `\tPrint command usage and optional arguments.`,
-    ``,
-    `--rerender, -r`,
-    `\tOnly re-render the types file from the current telemetry cache.`,
-  ].join('\n'));
+  log(
+    [
+      `-------------------------------------`,
+      `irsdk-node: Export telemetry vaiables`,
+      `-------------------------------------`,
+      ``,
+      `Usage:`,
+      `--------`,
+      `pnpm types:generate`,
+      ``,
+      `Options:`,
+      `--------`,
+      `--help, -h`,
+      `\tPrint command usage and optional arguments.`,
+      ``,
+      `--rerender, -r`,
+      `\tOnly re-render the types file from the current telemetry cache.`,
+    ].join('\n'),
+  );
   process.exit(0);
 }
 
@@ -78,15 +84,14 @@ async function main(): Promise<void> {
 
     // Load the SDK and run the cache merging logic if not in re-render mode.
     log(
-      (args.values.rerender
+      args.values.rerender
         ? 'Re-render mode active. Skipping all steps and rendering types file from current cache.'
-        : 'Re-render mode inactive, performing all typegen steps.'
-      ),
-    )
+        : 'Re-render mode inactive, performing all typegen steps.',
+    );
     if (!args.values.rerender) {
       // Initialize the SDK and wait for data.
       const sdk = new NativeSDK();
-      if (!await waitForSdkData(sdk, 5, 1000)) {
+      if (!(await waitForSdkData(sdk, 5, 1000))) {
         throw new Error(
           'Failed to connect to SDK. Make sure the sim is running and try again.',
         );
@@ -97,14 +102,18 @@ async function main(): Promise<void> {
       const currentCar = getCurrentCar(sdk);
       const previouslyGeneratedAt = cache.carsGeneratedFrom[currentCar] ?? 'never';
       cache.carsGeneratedFrom[currentCar] = new Date().toISOString();
-      log(`- Current car: ${currentCar} (last used for type gen: ${previouslyGeneratedAt})`);
+      log(
+        `- Current car: ${currentCar} (last used for type gen: ${previouslyGeneratedAt})`,
+      );
 
       // Grab the types and all data for variables.
       const telemVarData = sdk.getTelemetryData();
       log(` - Telemetry fetched.`);
 
       const missingOrUpdatedVars = getMissingVariables(cache, telemVarData);
-      log(`\nFound ${Object.keys(missingOrUpdatedVars).length} missing or updated variables.`);
+      log(
+        `\nFound ${Object.keys(missingOrUpdatedVars).length.toString(10)} missing or updated variables.`,
+      );
 
       if (Object.keys(missingOrUpdatedVars).length === 0) {
         log('No updated or new variables found. Exiting.');
@@ -145,7 +154,9 @@ void main();
 // --------- utils
 function close(startTime: number, code: number): never {
   if (code === 0) {
-    log(`\nCompleted successfully after ${formatDuration(performance.now() - startTime)}.`);
+    log(
+      `\nCompleted successfully after ${formatDuration(performance.now() - startTime)}.`,
+    );
   } else {
     log(`\nFailed after ${formatDuration(performance.now() - startTime)}.`);
   }
@@ -171,16 +182,15 @@ async function loadTelemetryCache(): Promise<TelemetryCache> {
         variables: {},
       };
     }
-    
-    const cache = JSON.parse(cacheDataStr);
-    return cache as TelemetryCache;
+
+    return JSON.parse(cacheDataStr) as TelemetryCache;
   } catch (err) {
-    const errMsg = getErrorMessage(error);
+    const errMsg = getErrorMessage(err);
     error(
       `Error trying to load and parse cache:`,
       `\n${errMsg}`,
       `\nTo avoid loss of data, exiting.`,
-      `Please check for malformed JSON in the cache.`
+      `Please check for malformed JSON in the cache.`,
     );
   }
 
@@ -227,10 +237,12 @@ function waitForSdkData(
 
 function getCurrentCar(sdk: INativeSDK): string {
   const sessionStr = sdk.getSessionData();
-  const { DriverInfo } = yaml.load(sessionStr) as SessionData;
+  const { DriverInfo } = yamlLoad(sessionStr) as SessionData;
   const localDriverIndex = DriverInfo.DriverCarIdx;
   if (localDriverIndex < 0 || localDriverIndex >= DriverInfo.Drivers.length) {
-    throw new Error(`Invalid local driver index encountered: ${localDriverIndex}`);
+    throw new Error(
+      `Invalid local driver index encountered: ${localDriverIndex.toString(10)}`,
+    );
   }
 
   return DriverInfo.Drivers[localDriverIndex].CarScreenName;
@@ -244,7 +256,7 @@ function getMissingVariables(
 
   for (const varName of Object.keys(telemVars)) {
     const varData = telemVars[varName as keyof TelemetryVarList];
-    const varType = VarTypesReadable[varData.varType as keyof typeof VarTypesReadable]
+    const varType = VarTypesReadable[varData.varType as keyof typeof VarTypesReadable];
     const cachedVariable = cache.variables[varName];
 
     // If the variable does not exist in the cache, just add it in directly and move on.
@@ -260,11 +272,12 @@ function getMissingVariables(
     }
 
     // If the variable already exists, check to see if any data must be updated.
-    if (cachedVariable.description !== varData.description
-      || cachedVariable.countAsTime !== varData.countAsTime
-      || cachedVariable.length !== varData.length
-      || cachedVariable.unit !== varData.unit
-      || cachedVariable.type !== varType
+    if (
+      cachedVariable.description !== varData.description ||
+      cachedVariable.countAsTime !== varData.countAsTime ||
+      cachedVariable.length !== varData.length ||
+      cachedVariable.unit !== varData.unit ||
+      cachedVariable.type !== varType
     ) {
       missingVars[varName] = {
         ...cachedVariable,
@@ -289,12 +302,11 @@ function renderVariableTypeScript(cache: TelemetryCache): string {
     const countAsTimeStr = varData.countAsTime
       ? 'This variable counts as a time.'
       : 'This variable does not count as a time.';
-    const unitStr = varData.unit.trim() !== ''
-      ? `Unit of the variable: ${varData.unit}`
-      : 'Variable does not have a unit.'
-    const genericStr = varData.type !== 'number'
-      ? `<${varData.type}[]>`
-      : '';
+    const unitStr =
+      varData.unit.trim() !== ''
+        ? `Unit of the variable: ${varData.unit}`
+        : 'Variable does not have a unit.';
+    const genericStr = varData.type !== 'number' ? `<${varData.type}[]>` : '';
 
     variableTypes.push(
       `  /**`,
@@ -304,7 +316,7 @@ function renderVariableTypeScript(cache: TelemetryCache): string {
       `   * ${varData.description}`,
       `   * ${unitStr}`,
       `   * ${countAsTimeStr}`,
-      `   * Expected data length: ${varData.length}`,
+      `   * Expected data length: ${varData.length.toString(10)}`,
       `   */`,
       `  ${varName}: TelemetryVariable${genericStr};`,
     );
