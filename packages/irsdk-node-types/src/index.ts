@@ -7,4 +7,4 @@ export type * from './setup-info.js';
 export type * from './split-info.js';
 export type * from './weekend-info.js';
 export type * from './session-yaml.js';
-export type * from './_GENERATED_telemetry.js';
+export type * from './telemetry.gen.js';

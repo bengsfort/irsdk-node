@@ -54,26 +54,29 @@ $ pnpm lint
 
 Many of the interfaces and enums are hand-converted from the C++ enums SDK defines module. You can find these by looking in the [irsdk_defines.h file of @irsdk-node/native](../irsdk-node-native/lib/irsdk_defines.h).
 
-The session data and telemetry data cannot be converted manually without losing your sanity, so a script has been written to do this automatically. You can run this by joining a session on iRacing, enter the car, and then opening up a terminal to the [@irsdk-node/native](../irsdk-node-native) package and running the following command:
+The telemetry data cannot be converted manually without losing your sanity, so a script has been written to do this automatically. You can run this by joining a session on iRacing, enter the car, and then opening up a terminal to the [irsdk-node](../irsdk-node) package and running the following command:
 
 ```sh
-$ pnpm generate-types
+$ pnpm types:generate
 ```
 
-Running this will run a helper function in the native SDK that will take all of the telemetry data and dump it as typescript data in the [_GENERATED_telemetry.ts](./src/_GENERATED_telemetry.ts) file. This exports an interface (`TelemetryVarList`) with every available variable typed based on their name. You should be able to have typed results after that, so you can easily find what you need via:
+Alternatively, you can run the type generation function from anywhere in the repo via:
 
-```ts
-const telemetry = sdk.getTelemetry();
-const RPM = telemetry.RPM;
-
-// RPM will contain:
-RPM.name;
-RPM.description;
-RPM.unit;
-RPM.countAsTime;
-RPM.length;
-RPM.varType;
-RPM.value;
+```sh
+$ pnpm run -w types:generate
 ```
 
-> ⚠️ Running this command will replace all of the current types, and this is unfortunately car specific. Basic cars that do not have many features will not have many of the variables, so always try to use a complex car. A better solution for this needs to be figured out in the future.
+As the telemetry can be different on a per-car basis, this will take the telemetry variables active in your session and compare them against a cache to determine if there are any new types detected. If some are detected, the typescript file will be updated.
+
+There _might_ be some missing types since this is car-specific. For ideal coverage, the script should be run agains the following car groups:
+
+- [ ] TCR car
+- [ ] Mercedes W13
+- [ ] Porsche 919
+- [ ] Porsche Mission R
+- [ ] Ferrari 499P
+- [ ] Dallara IR18
+- [ ] Audi 90 GTO
+- [ ] Circle track cars
+
+Please see the responses to [this forum post](https://forums.iracing.com/discussion/comment/739154/#Comment_739154) for more information.

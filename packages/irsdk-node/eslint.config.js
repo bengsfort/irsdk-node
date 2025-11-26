@@ -1,5 +1,10 @@
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
 import bengsfort from '@bengsfort/eslint-config-flat';
 import { globalIgnores } from 'eslint/config';
+
+const pkgRoot = dirname(fileURLToPath(import.meta.url));
 
 export default bengsfort.defineConfig([
   globalIgnores(['./dist/', './out/', 'tsconfig.json']),
@@ -7,9 +12,17 @@ export default bengsfort.defineConfig([
   // Code
   {
     files: ['./src/**/*.ts'],
-    extends: bengsfort.configs.strictTypeChecked(import.meta.dirname),
+    extends: bengsfort.configs.strictTypeChecked(pkgRoot),
     rules: {
       '@typescript-eslint/unified-signatures': 'off',
+    },
+    languageOptions: {
+      parserOptions: {
+        projectService: {
+          allowDefaultProject: ['./scripts/export-telemetry-vars.ts'],
+        },
+        tsconfigRootDir: pkgRoot,
+      },
     },
   },
 

@@ -43,8 +43,7 @@
     "watch:ts": "node esbuild.js --watch",
     "watch:types": "tsc --watch --emitDeclarationOnly",
     "lint": "eslint",
-    "check-types": "tsc --noEmit",
-    "generate-types": "node ./scripts/generate-var-types.js"
+    "check-types": "tsc --noEmit"
   },
   "prettier": "@bengsfort/eslint-config-flat/prettier.config.js",
   "packageManager": "pnpm@10.17.1",

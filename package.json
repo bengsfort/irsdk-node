@@ -22,7 +22,8 @@
     "dev": "pnpm run -r watch",
     "lint": "pnpm run -r lint",
     "clean": "pnpm run -r clean",
-    "build": "pnpm run -r build"
+    "build": "pnpm run -r build",
+    "types:generate": "pnpm run --filter ./packages/irsdk-node types:generate"
   },
   "packageManager": "pnpm@10.17.1",
   "devDependencies": {

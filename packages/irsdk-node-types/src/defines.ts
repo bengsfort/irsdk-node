@@ -45,6 +45,16 @@ interface VarTypesMap {
   [VarTypes.ETCount]: never;
 }
 
+export const VarTypesReadable = {
+  [VarTypes.Character]: 'string',
+  [VarTypes.Boolean]: 'boolean',
+  [VarTypes.Integer]: 'number',
+  [VarTypes.BitField]: 'number',
+  [VarTypes.Float]: 'number',
+  [VarTypes.Double]: 'number',
+  [VarTypes.ETCount]: 'never',
+} as const;
+
 /**
  * Utility type for getting the Typescript type of a telemetry variable type.
  */
