@@ -5,7 +5,8 @@
     "Dallara P217 LMP2": "2025-11-26T12:28:26.585Z",
     "Stock Winged Micro Sprint": "2025-11-26T12:31:55.880Z",
     "Dirt Mini Stock": "2025-11-26T12:37:35.539Z",
-    "Dirt UMP Modified": "2025-11-26T12:40:59.007Z"
+    "Dirt UMP Modified": "2025-11-26T12:40:59.007Z",
+    "Formula Renault 3.5": "2025-11-26T12:49:42.611Z"
   },
   "variables": {
     "SessionTime": {
@@ -2792,6 +2793,13 @@
       "length": 6,
       "countAsTime": true,
       "unit": "m/s",
+      "type": "number"
+    },
+    "DRS_Count": {
+      "description": "Drag Reduction System count of usage",
+      "length": 1,
+      "countAsTime": false,
+      "unit": " ",
       "type": "number"
     }
   }

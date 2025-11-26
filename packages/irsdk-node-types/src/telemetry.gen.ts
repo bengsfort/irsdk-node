@@ -1,6 +1,6 @@
 // ! THIS FILE IS AUTO-GENERATED, EDITS WILL BE NOT PERSIST !
 // ! To generate, run `pnpm types:generate` in the irsdk-node package !
-// Last updated 2025-11-26T12:40:59.009Z
+// Last updated 2025-11-26T12:49:42.613Z
 
 /**
  * A variable representing telemetry data from the iRacing SDK.
@@ -4400,4 +4400,15 @@ export interface TelemetryVarList {
    * Expected data length: 6
    */
   LR2shockVel_ST: TelemetryVariable;
+
+  /**
+   * DRS_Count
+   *
+   * @description
+   * Drag Reduction System count of usage
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  DRS_Count: TelemetryVariable;
 }
