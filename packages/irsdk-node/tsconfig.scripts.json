@@ -9,11 +9,12 @@
     }
   ],
   "include": [
-    "src/**/*.ts",
+    "scripts/*.ts",
   ],
   "compilerOptions": {
     "rootDir": "./src",
     "outDir": "./dist",
     "declarationDir": "./dist/types",
+    "noEmit": true,
   }
 }
