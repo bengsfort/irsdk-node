@@ -3,7 +3,8 @@
     "Acura NSX GT3 EVO 22": "2025-11-26T11:45:06.260Z",
     "Mercedes W12": "2025-11-26T12:10:09.797Z",
     "Dallara P217 LMP2": "2025-11-26T12:28:26.585Z",
-    "Stock Winged Micro Sprint": "2025-11-26T12:31:55.880Z"
+    "Stock Winged Micro Sprint": "2025-11-26T12:31:55.880Z",
+    "Dirt Mini Stock": "2025-11-26T12:37:35.539Z"
   },
   "variables": {
     "SessionTime": {
@@ -2682,6 +2683,76 @@
     },
     "RRSHshockVel_ST": {
       "description": "RRSH shock velocity at 360 Hz",
+      "length": 6,
+      "countAsTime": true,
+      "unit": "m/s",
+      "type": "number"
+    },
+    "dpRTireChange": {
+      "description": "Pitstop right tire change request",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dpLTireChange": {
+      "description": "Pitstop left tire change request",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "LFSHshockDefl": {
+      "description": "LFSH shock deflection",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "m",
+      "type": "number"
+    },
+    "LFSHshockDefl_ST": {
+      "description": "LFSH shock deflection at 360 Hz",
+      "length": 6,
+      "countAsTime": true,
+      "unit": "m",
+      "type": "number"
+    },
+    "LFSHshockVel": {
+      "description": "LFSH shock velocity",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "m/s",
+      "type": "number"
+    },
+    "LFSHshockVel_ST": {
+      "description": "LFSH shock velocity at 360 Hz",
+      "length": 6,
+      "countAsTime": true,
+      "unit": "m/s",
+      "type": "number"
+    },
+    "RFSHshockDefl": {
+      "description": "RFSH shock deflection",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "m",
+      "type": "number"
+    },
+    "RFSHshockDefl_ST": {
+      "description": "RFSH shock deflection at 360 Hz",
+      "length": 6,
+      "countAsTime": true,
+      "unit": "m",
+      "type": "number"
+    },
+    "RFSHshockVel": {
+      "description": "RFSH shock velocity",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "m/s",
+      "type": "number"
+    },
+    "RFSHshockVel_ST": {
+      "description": "RFSH shock velocity at 360 Hz",
       "length": 6,
       "countAsTime": true,
       "unit": "m/s",
