@@ -4,10 +4,11 @@ import { exit } from 'node:process';
 import { fileURLToPath } from 'node:url';
 
 import { formatDuration } from '@bengsfort/stdlib/formatting/numbers';
-import { NativeSDK, type TelemetryTypesDict, type INativeSDK} from '@irsdk-node/native';
+import { NativeSDK, type INativeSDK} from '@irsdk-node/native';
 import { VarTypesReadable, type SessionData, type TelemetryVarList } from '@irsdk-node/types';
 import fs from 'fs-extra';
 import yaml from 'js-yaml';
+import { writeFile } from 'node:fs/promises';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const TYPES_MODULE_DIR = join(SCRIPT_DIR, '../../irsdk-node-types');
@@ -62,10 +63,27 @@ async function main(): Promise<void> {
     const missingOrUpdatedVars = getMissingVariables(cache, telemVarData);
     log(`\nFound ${missingOrUpdatedVars.length} missing or updated variables.`);
 
-    if (missingOrUpdatedVars.length === 0) {
+    if (Object.keys(missingOrUpdatedVars).length === 0) {
       log('No updated or new variables found. Exiting.');
       close(startTime, 0);
     }
+
+    // Add new variables to cache.
+    for (const [varName, varData] of Object.entries(missingOrUpdatedVars)) {
+      cache.variables[varName] = varData;
+    }
+
+    // Render all variables to a string.
+    const generatedTsFile = renderVariableTypeScript(cache);
+    await writeFile(TYPES_GEN_FILE_PATH, generatedTsFile, {
+      encoding: 'utf-8',
+    });
+    log(`Wrote new types file ${TYPES_GEN_FILE_PATH}.`);
+
+    writeFile(CACHE_TELEM_VARS_PATH, JSON.stringify(cache), {
+      encoding: 'utf-8',
+    });
+    log(`Wrote updated telemetry cache to disk.`);
 
     close(startTime, 0);
   } catch (err) {
@@ -152,8 +170,8 @@ function getCurrentCar(sdk: INativeSDK): string {
 function getMissingVariables(
   cache: TelemetryCache,
   telemVars: TelemetryVarList,
-): CachedVariable[] {
-  const missingVars: CachedVariable[] = [];
+): Record<string, CachedVariable> {
+  const missingVars: Record<string, CachedVariable> = {};
 
   for (const varName of Object.keys(telemVars)) {
     const varData = telemVars[varName as keyof TelemetryVarList];
@@ -162,13 +180,13 @@ function getMissingVariables(
 
     // If the variable does not exist in the cache, just add it in directly and move on.
     if (typeof cachedVariable === 'undefined') {
-      missingVars.push({
+      missingVars[varName] = {
         description: varData.description,
         length: varData.length,
         countAsTime: varData.countAsTime,
         unit: varData.unit,
         type: varType,
-      });
+      };
       continue;
     }
 
@@ -179,16 +197,71 @@ function getMissingVariables(
       || cachedVariable.unit !== varData.unit
       || cachedVariable.type !== varType
     ) {
-      missingVars.push({
+      missingVars[varName] = {
         ...cachedVariable,
         description: varData.description,
         length: varData.length,
         countAsTime: varData.countAsTime,
         unit: varData.unit,
         type: varType,
-      });
+      };
     }
   }
 
   return missingVars;
+}
+
+function renderVariableTypeScript(cache: TelemetryCache): string {
+  const variableTypes: string[] = [];
+
+  for (const [varName, varData] of Object.entries(cache.variables)) {
+    const countAsTimeStr = varData.countAsTime
+      ? 'This variable counts as a time.'
+      : 'This variable does not count as a time.';
+    const unitStr = varData.unit !== ''
+      ? `Unit of the variable: ${varData.unit}`
+      : 'Variable does not have a unit.'
+
+    variableTypes.push(
+      `  /**`,
+      `   * ${varName} Telemetry Variable`,
+      `   * ${varData.description}`,
+      `   * ${unitStr}`,
+      `   * ${countAsTimeStr}`,
+      `   * Expected data length: ${varData.length}`,
+      `   */`,
+      `  ${varName}: TelemetryVariable<${varData.type}[]>;`,
+    );
+  }
+
+  return [
+    '// ! THIS FILE IS AUTO-GENERATED, EDITS WILL BE NOT PERSIST !',
+    '// ! To generate, run `pnpm types:generate` in the irsdk-node package !',
+    `// Last updated ${new Date().toISOString()}`,
+    '',
+    '/**',
+    ' * A variable representing telemetry data from the iRacing SDK.',
+    ' */',
+    'export interface TelemetryVariable<VarType = number[]> {',
+    '  /** The name of the variable. */',
+    '  name: string;',
+    '  /** The description. */',
+    '  description: string;',
+    '  /** The unit of the value (ex. "kg/m^2") */',
+    '  unit: string;',
+    '  /** Should it be treated as a time? */',
+    '  countAsTime: boolean;',
+    '  /** The number of values provided. */',
+    '  length: number;',
+    '  /** The native variable type */',
+    '  varType: number;',
+    '  /** The current value of this variable. */',
+    '  value: VarType;',
+    '}',
+    '',
+    'export interface TelemetryVarList {',
+    ...variableTypes,
+    '}',
+    '',
+  ].join('\n');
 }
