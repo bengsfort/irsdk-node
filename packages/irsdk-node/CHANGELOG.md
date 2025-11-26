@@ -1,5 +1,15 @@
 # Changelog
 
+## 4.1.2
+
+### Patch Changes
+
+- 1b04e7c: Added new Telemetry type generation script and updated telemetry variable types. See @irsdk-node/types for more details.
+- Updated dependencies [c161ad9]
+- Updated dependencies [c161ad9]
+- Updated dependencies [939ed4c]
+  - @irsdk-node/types@4.0.2
+
 ## 4.1.1
 
 ### Patch Changes

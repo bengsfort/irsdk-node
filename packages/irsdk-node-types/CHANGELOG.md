@@ -1,5 +1,90 @@
 # @irsdk-node/types
 
+## 4.0.2
+
+### Patch Changes
+
+- c161ad9: Updated available types to include types from GT3 cars, Mercedes W12, LMP2 cars, dirt micro sprint cars, dirt mini stock cars, dirt ump modified cars, and formula renault 3.5.
+
+  **Added variables (73 total)**:
+
+  - SteeringFFBEnabled (boolean)
+  - PlayerIncidents (number)
+  - Shifter (number)
+  - dcLowFuelAccept (boolean)
+  - dcPowerSteering (number)
+  - dcThrottleShape (number)
+  - RFodometer (number)
+  - LFodometer (number)
+  - RRodometer (number)
+  - LRodometer (number)
+  - dcDRSToggle (boolean)
+  - dcTearOffVisor (boolean)
+  - dpTireChange (number)
+  - dpWingFront (number)
+  - dcBrakeBiasFine (number)
+  - dcPeakBrakeBias (number)
+  - dcBrakeMisc (number)
+  - dcEngineBraking (number)
+  - dcMGUKDeployMode (number)
+  - dcMGUKRegenGain (number)
+  - dcDiffEntry (number)
+  - dcDiffMiddle (number)
+  - dcDiffExit (number)
+  - DRS_Status (number)
+  - PowerMGU_K (number)
+  - TorqueMGU_K (number)
+  - PowerMGU_H (number)
+  - EnergyERSBattery (number)
+  - EnergyERSBatteryPct (number)
+  - EnergyBatteryToMGU_KLap (number)
+  - EnergyMGU_KLapDeployPct (number)
+  - Engine1_RPM (number)
+  - CFshockDefl (number)
+  - CFshockDefl_ST (number)
+  - CFshockVel (number)
+  - CFshockVel_ST (number)
+  - ROLLFshockDefl (number)
+  - ROLLFshockDefl_ST (number)
+  - ROLLFshockVel (number)
+  - ROLLFshockVel_ST (number)
+  - CRshockDefl (number)
+  - CRshockDefl_ST (number)
+  - CRshockVel (number)
+  - CRshockVel_ST (number)
+  - ROLLRshockDefl (number)
+  - ROLLRshockDefl_ST (number)
+  - ROLLRshockVel (number)
+  - ROLLRshockVel_ST (number)
+  - dcTractionControl2 (number)
+  - LRSHshockDefl (number)
+  - LRSHshockDefl_ST (number)
+  - LRSHshockVel (number)
+  - LRSHshockVel_ST (number)
+  - RRSHshockDefl (number)
+  - RRSHshockDefl_ST (number)
+  - RRSHshockVel (number)
+  - RRSHshockVel_ST (number)
+  - dpRTireChange (number)
+  - dpLTireChange (number)
+  - LFSHshockDefl (number)
+  - LFSHshockDefl_ST (number)
+  - LFSHshockVel (number)
+  - LFSHshockVel_ST (number)
+  - RFSHshockDefl (number)
+  - RFSHshockDefl_ST (number)
+  - RFSHshockVel (number)
+  - RFSHshockVel_ST (number)
+  - dcRFBrakeAttachedToggle (boolean)
+  - LR2shockDefl (number)
+  - LR2shockDefl_ST (number)
+  - LR2shockVel (number)
+  - LR2shockVel_ST (number)
+  - DRS_Count (number)
+
+- c161ad9: Created new telemetry/live data type generation script that can incrementally add missing or updated types.
+- 939ed4c: Add `VarTypesReadable` helper map, enabling mapping SDK variable types to human-readable strings for things like code generation and debugging.
+
 ## 4.0.1
 
 ### Patch Changes
