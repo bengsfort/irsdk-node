@@ -1,6 +1,6 @@
 // ! THIS FILE IS AUTO-GENERATED, EDITS WILL BE NOT PERSIST !
 // ! To generate, run `pnpm types:generate` in the irsdk-node package !
-// Last updated 2025-11-26T12:49:42.613Z
+// Last updated 2025-11-26T14:52:48.491Z
 
 /**
  * A variable representing telemetry data from the iRacing SDK.
@@ -4411,4 +4411,15 @@ export interface TelemetryVarList {
    * Expected data length: 1
    */
   DRS_Count: TelemetryVariable;
+
+  /**
+   * dcLaunchRPM
+   *
+   * @description
+   * In car launch rpm adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcLaunchRPM: TelemetryVariable;
 }

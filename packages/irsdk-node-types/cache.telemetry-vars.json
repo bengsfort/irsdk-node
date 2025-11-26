@@ -6,7 +6,8 @@
     "Stock Winged Micro Sprint": "2025-11-26T12:31:55.880Z",
     "Dirt Mini Stock": "2025-11-26T12:37:35.539Z",
     "Dirt UMP Modified": "2025-11-26T12:40:59.007Z",
-    "Formula Renault 3.5": "2025-11-26T12:49:42.611Z"
+    "Formula Renault 3.5": "2025-11-26T12:49:42.611Z",
+    "Volkswagen Beetle GRC": "2025-11-26T14:52:48.489Z"
   },
   "variables": {
     "SessionTime": {
@@ -2800,6 +2801,13 @@
       "length": 1,
       "countAsTime": false,
       "unit": " ",
+      "type": "number"
+    },
+    "dcLaunchRPM": {
+      "description": "In car launch rpm adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
       "type": "number"
     }
   }
