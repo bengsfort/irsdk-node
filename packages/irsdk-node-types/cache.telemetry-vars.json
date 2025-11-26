@@ -2,7 +2,8 @@
   "carsGeneratedFrom": {
     "Acura NSX GT3 EVO 22": "2025-11-26T11:45:06.260Z",
     "Mercedes W12": "2025-11-26T12:10:09.797Z",
-    "Dallara P217 LMP2": "2025-11-26T12:28:26.585Z"
+    "Dallara P217 LMP2": "2025-11-26T12:28:26.585Z",
+    "Stock Winged Micro Sprint": "2025-11-26T12:31:55.880Z"
   },
   "variables": {
     "SessionTime": {
@@ -2628,6 +2629,62 @@
       "length": 1,
       "countAsTime": false,
       "unit": "",
+      "type": "number"
+    },
+    "LRSHshockDefl": {
+      "description": "LRSH shock deflection",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "m",
+      "type": "number"
+    },
+    "LRSHshockDefl_ST": {
+      "description": "LRSH shock deflection at 360 Hz",
+      "length": 6,
+      "countAsTime": true,
+      "unit": "m",
+      "type": "number"
+    },
+    "LRSHshockVel": {
+      "description": "LRSH shock velocity",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "m/s",
+      "type": "number"
+    },
+    "LRSHshockVel_ST": {
+      "description": "LRSH shock velocity at 360 Hz",
+      "length": 6,
+      "countAsTime": true,
+      "unit": "m/s",
+      "type": "number"
+    },
+    "RRSHshockDefl": {
+      "description": "RRSH shock deflection",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "m",
+      "type": "number"
+    },
+    "RRSHshockDefl_ST": {
+      "description": "RRSH shock deflection at 360 Hz",
+      "length": 6,
+      "countAsTime": true,
+      "unit": "m",
+      "type": "number"
+    },
+    "RRSHshockVel": {
+      "description": "RRSH shock velocity",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "m/s",
+      "type": "number"
+    },
+    "RRSHshockVel_ST": {
+      "description": "RRSH shock velocity at 360 Hz",
+      "length": 6,
+      "countAsTime": true,
+      "unit": "m/s",
       "type": "number"
     }
   }

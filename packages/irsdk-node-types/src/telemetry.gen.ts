@@ -1,6 +1,6 @@
 // ! THIS FILE IS AUTO-GENERATED, EDITS WILL BE NOT PERSIST !
 // ! To generate, run `pnpm types:generate` in the irsdk-node package !
-// Last updated 2025-11-26T12:29:35.318Z
+// Last updated 2025-11-26T12:31:55.883Z
 
 /**
  * A variable representing telemetry data from the iRacing SDK.
@@ -4147,4 +4147,92 @@ export interface TelemetryVarList {
    * Expected data length: 1
    */
   dcTractionControl2: TelemetryVariable;
+
+  /**
+   * LRSHshockDefl
+   *
+   * @description
+   * LRSH shock deflection
+   * Unit of the variable: m
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  LRSHshockDefl: TelemetryVariable;
+
+  /**
+   * LRSHshockDefl_ST
+   *
+   * @description
+   * LRSH shock deflection at 360 Hz
+   * Unit of the variable: m
+   * This variable counts as a time.
+   * Expected data length: 6
+   */
+  LRSHshockDefl_ST: TelemetryVariable;
+
+  /**
+   * LRSHshockVel
+   *
+   * @description
+   * LRSH shock velocity
+   * Unit of the variable: m/s
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  LRSHshockVel: TelemetryVariable;
+
+  /**
+   * LRSHshockVel_ST
+   *
+   * @description
+   * LRSH shock velocity at 360 Hz
+   * Unit of the variable: m/s
+   * This variable counts as a time.
+   * Expected data length: 6
+   */
+  LRSHshockVel_ST: TelemetryVariable;
+
+  /**
+   * RRSHshockDefl
+   *
+   * @description
+   * RRSH shock deflection
+   * Unit of the variable: m
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  RRSHshockDefl: TelemetryVariable;
+
+  /**
+   * RRSHshockDefl_ST
+   *
+   * @description
+   * RRSH shock deflection at 360 Hz
+   * Unit of the variable: m
+   * This variable counts as a time.
+   * Expected data length: 6
+   */
+  RRSHshockDefl_ST: TelemetryVariable;
+
+  /**
+   * RRSHshockVel
+   *
+   * @description
+   * RRSH shock velocity
+   * Unit of the variable: m/s
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  RRSHshockVel: TelemetryVariable;
+
+  /**
+   * RRSHshockVel_ST
+   *
+   * @description
+   * RRSH shock velocity at 360 Hz
+   * Unit of the variable: m/s
+   * This variable counts as a time.
+   * Expected data length: 6
+   */
+  RRSHshockVel_ST: TelemetryVariable;
 }
