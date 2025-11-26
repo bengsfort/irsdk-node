@@ -3,6 +3,7 @@ import { dirname, join } from 'node:path';
 import { exit } from 'node:process';
 import { fileURLToPath } from 'node:url';
 
+import { getErrorMessage } from '@bengsfort/stdlib/errors/helpers';
 import { formatDuration } from '@bengsfort/stdlib/formatting/numbers';
 import { NativeSDK, type INativeSDK} from '@irsdk-node/native';
 import { VarTypesReadable, type SessionData, type TelemetryVarList } from '@irsdk-node/types';
@@ -14,9 +15,6 @@ const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const TYPES_MODULE_DIR = join(SCRIPT_DIR, '../../irsdk-node-types');
 const CACHE_TELEM_VARS_PATH = join(TYPES_MODULE_DIR, './cache.telemetry-vars.json');
 const TYPES_GEN_FILE_PATH = join(TYPES_MODULE_DIR, './src/telemetry.gen.ts');
-
-// TODO: Move this to irsdk-node package, imports are fucked here.
-// Or switch to non-ts...
 
 interface CachedVariable {
   description: string;
@@ -80,7 +78,8 @@ async function main(): Promise<void> {
     });
     log(`Wrote new types file ${TYPES_GEN_FILE_PATH}.`);
 
-    writeFile(CACHE_TELEM_VARS_PATH, JSON.stringify(cache), {
+    const cacheJson = JSON.stringify(cache, null, 2);
+    await writeFile(CACHE_TELEM_VARS_PATH, cacheJson, {
       encoding: 'utf-8',
     });
     log(`Wrote updated telemetry cache to disk.`);
@@ -115,7 +114,28 @@ async function loadTelemetryCache(): Promise<TelemetryCache> {
     };
   }
 
-  return (await fs.readJSON(CACHE_TELEM_VARS_PATH)) as TelemetryCache;
+  try {
+    const cacheDataStr = await fs.readFile(CACHE_TELEM_VARS_PATH, 'utf-8');
+    if (cacheDataStr.trim() === '') {
+      return {
+        carsGeneratedFrom: {},
+        variables: {},
+      };
+    }
+    
+    const cache = JSON.parse(cacheDataStr);
+    return cache as TelemetryCache;
+  } catch (err) {
+    const errMsg = getErrorMessage(error);
+    error(
+      `Error trying to load and parse cache:`,
+      `\n${errMsg}`,
+      `\nTo avoid loss of data, exiting.`,
+      `Please check for malformed JSON in the cache.`
+    );
+  }
+
+  throw new Error('Malformed cache error: Please check the telemetry cache.');
 }
 
 function waitForSdkData(
@@ -221,16 +241,22 @@ function renderVariableTypeScript(cache: TelemetryCache): string {
     const unitStr = varData.unit !== ''
       ? `Unit of the variable: ${varData.unit}`
       : 'Variable does not have a unit.'
+    const genericStr = varData.type !== 'number'
+      ? `<${varData.type}[]>`
+      : '';
 
     variableTypes.push(
       `  /**`,
-      `   * ${varName} Telemetry Variable`,
+      `   * ${varName}`,
+      `   *`,
+      `   * @description`,
       `   * ${varData.description}`,
       `   * ${unitStr}`,
       `   * ${countAsTimeStr}`,
       `   * Expected data length: ${varData.length}`,
       `   */`,
-      `  ${varName}: TelemetryVariable<${varData.type}[]>;`,
+      `  ${varName}: TelemetryVariable${genericStr};`,
+      ``,
     );
   }
 
