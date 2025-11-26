@@ -1,6 +1,6 @@
 // ! THIS FILE IS AUTO-GENERATED, EDITS WILL BE NOT PERSIST !
 // ! To generate, run `pnpm types:generate` in the irsdk-node package !
-// Last updated 2025-11-26T12:02:52.190Z
+// Last updated 2025-11-26T12:10:09.800Z
 
 /**
  * A variable representing telemetry data from the iRacing SDK.
@@ -3718,4 +3718,422 @@ export interface TelemetryVarList {
    * Expected data length: 6
    */
   RFshockVel_ST: TelemetryVariable;
+
+  /**
+   * dcDRSToggle
+   *
+   * @description
+   * In car toggle DRS
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcDRSToggle: TelemetryVariable<boolean[]>;
+
+  /**
+   * dcTearOffVisor
+   *
+   * @description
+   * In car tear off visor film
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcTearOffVisor: TelemetryVariable<boolean[]>;
+
+  /**
+   * dpTireChange
+   *
+   * @description
+   * Pitstop all tire change request
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dpTireChange: TelemetryVariable;
+
+  /**
+   * dpWingFront
+   *
+   * @description
+   * Pitstop front wing adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dpWingFront: TelemetryVariable;
+
+  /**
+   * dcBrakeBiasFine
+   *
+   * @description
+   * In car brake bias fine adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcBrakeBiasFine: TelemetryVariable;
+
+  /**
+   * dcPeakBrakeBias
+   *
+   * @description
+   * In car peak brake bias adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcPeakBrakeBias: TelemetryVariable;
+
+  /**
+   * dcBrakeMisc
+   *
+   * @description
+   * In car brake misc adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcBrakeMisc: TelemetryVariable;
+
+  /**
+   * dcEngineBraking
+   *
+   * @description
+   * In car engine braking adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcEngineBraking: TelemetryVariable;
+
+  /**
+   * dcMGUKDeployMode
+   *
+   * @description
+   * In car MGU-K deployment mode level adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcMGUKDeployMode: TelemetryVariable;
+
+  /**
+   * dcMGUKRegenGain
+   *
+   * @description
+   * In car MUG-K re-gen gain adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcMGUKRegenGain: TelemetryVariable;
+
+  /**
+   * dcDiffEntry
+   *
+   * @description
+   * In car diff entry adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcDiffEntry: TelemetryVariable;
+
+  /**
+   * dcDiffMiddle
+   *
+   * @description
+   * In car diff middle adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcDiffMiddle: TelemetryVariable;
+
+  /**
+   * dcDiffExit
+   *
+   * @description
+   * In car diff exit adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcDiffExit: TelemetryVariable;
+
+  /**
+   * DRS_Status
+   *
+   * @description
+   * Drag Reduction System Status
+   * Unit of the variable:  
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  DRS_Status: TelemetryVariable;
+
+  /**
+   * PowerMGU_K
+   *
+   * @description
+   * Engine MGU-K mechanical power
+   * Unit of the variable: W
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  PowerMGU_K: TelemetryVariable;
+
+  /**
+   * TorqueMGU_K
+   *
+   * @description
+   * Engine MGU-K mechanical torque
+   * Unit of the variable: Nm
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  TorqueMGU_K: TelemetryVariable;
+
+  /**
+   * PowerMGU_H
+   *
+   * @description
+   * Engine MGU-H mechanical power
+   * Unit of the variable: W
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  PowerMGU_H: TelemetryVariable;
+
+  /**
+   * EnergyERSBattery
+   *
+   * @description
+   * Engine ERS battery charge
+   * Unit of the variable: J
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  EnergyERSBattery: TelemetryVariable;
+
+  /**
+   * EnergyERSBatteryPct
+   *
+   * @description
+   * Engine ERS battery charge as a percent
+   * Unit of the variable: %
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  EnergyERSBatteryPct: TelemetryVariable;
+
+  /**
+   * EnergyBatteryToMGU_KLap
+   *
+   * @description
+   * Electrical energy from battery to MGU-K per lap
+   * Unit of the variable: J
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  EnergyBatteryToMGU_KLap: TelemetryVariable;
+
+  /**
+   * EnergyMGU_KLapDeployPct
+   *
+   * @description
+   * Electrical energy available to MGU-K per lap as a percent
+   * Unit of the variable: %
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  EnergyMGU_KLapDeployPct: TelemetryVariable;
+
+  /**
+   * Engine1_RPM
+   *
+   * @description
+   * Engine1Engine rpm
+   * Unit of the variable: revs/min
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  Engine1_RPM: TelemetryVariable;
+
+  /**
+   * CFshockDefl
+   *
+   * @description
+   * CF shock deflection
+   * Unit of the variable: m
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  CFshockDefl: TelemetryVariable;
+
+  /**
+   * CFshockDefl_ST
+   *
+   * @description
+   * CF shock deflection at 360 Hz
+   * Unit of the variable: m
+   * This variable counts as a time.
+   * Expected data length: 6
+   */
+  CFshockDefl_ST: TelemetryVariable;
+
+  /**
+   * CFshockVel
+   *
+   * @description
+   * CF shock velocity
+   * Unit of the variable: m/s
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  CFshockVel: TelemetryVariable;
+
+  /**
+   * CFshockVel_ST
+   *
+   * @description
+   * CF shock velocity at 360 Hz
+   * Unit of the variable: m/s
+   * This variable counts as a time.
+   * Expected data length: 6
+   */
+  CFshockVel_ST: TelemetryVariable;
+
+  /**
+   * ROLLFshockDefl
+   *
+   * @description
+   * ROLLF shock deflection
+   * Unit of the variable: m
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  ROLLFshockDefl: TelemetryVariable;
+
+  /**
+   * ROLLFshockDefl_ST
+   *
+   * @description
+   * ROLLF shock deflection at 360 Hz
+   * Unit of the variable: m
+   * This variable counts as a time.
+   * Expected data length: 6
+   */
+  ROLLFshockDefl_ST: TelemetryVariable;
+
+  /**
+   * ROLLFshockVel
+   *
+   * @description
+   * ROLLF shock velocity
+   * Unit of the variable: m/s
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  ROLLFshockVel: TelemetryVariable;
+
+  /**
+   * ROLLFshockVel_ST
+   *
+   * @description
+   * ROLLF shock velocity at 360 Hz
+   * Unit of the variable: m/s
+   * This variable counts as a time.
+   * Expected data length: 6
+   */
+  ROLLFshockVel_ST: TelemetryVariable;
+
+  /**
+   * CRshockDefl
+   *
+   * @description
+   * CR shock deflection
+   * Unit of the variable: m
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  CRshockDefl: TelemetryVariable;
+
+  /**
+   * CRshockDefl_ST
+   *
+   * @description
+   * CR shock deflection at 360 Hz
+   * Unit of the variable: m
+   * This variable counts as a time.
+   * Expected data length: 6
+   */
+  CRshockDefl_ST: TelemetryVariable;
+
+  /**
+   * CRshockVel
+   *
+   * @description
+   * CR shock velocity
+   * Unit of the variable: m/s
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  CRshockVel: TelemetryVariable;
+
+  /**
+   * CRshockVel_ST
+   *
+   * @description
+   * CR shock velocity at 360 Hz
+   * Unit of the variable: m/s
+   * This variable counts as a time.
+   * Expected data length: 6
+   */
+  CRshockVel_ST: TelemetryVariable;
+
+  /**
+   * ROLLRshockDefl
+   *
+   * @description
+   * ROLLR shock deflection
+   * Unit of the variable: m
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  ROLLRshockDefl: TelemetryVariable;
+
+  /**
+   * ROLLRshockDefl_ST
+   *
+   * @description
+   * ROLLR shock deflection at 360 Hz
+   * Unit of the variable: m
+   * This variable counts as a time.
+   * Expected data length: 6
+   */
+  ROLLRshockDefl_ST: TelemetryVariable;
+
+  /**
+   * ROLLRshockVel
+   *
+   * @description
+   * ROLLR shock velocity
+   * Unit of the variable: m/s
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  ROLLRshockVel: TelemetryVariable;
+
+  /**
+   * ROLLRshockVel_ST
+   *
+   * @description
+   * ROLLR shock velocity at 360 Hz
+   * Unit of the variable: m/s
+   * This variable counts as a time.
+   * Expected data length: 6
+   */
+  ROLLRshockVel_ST: TelemetryVariable;
 }

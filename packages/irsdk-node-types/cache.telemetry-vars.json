@@ -1,6 +1,7 @@
 {
   "carsGeneratedFrom": {
-    "Acura NSX GT3 EVO 22": "2025-11-26T11:45:06.260Z"
+    "Acura NSX GT3 EVO 22": "2025-11-26T11:45:06.260Z",
+    "Mercedes W12": "2025-11-26T12:10:09.797Z"
   },
   "variables": {
     "SessionTime": {
@@ -2350,6 +2351,272 @@
     },
     "RFshockVel_ST": {
       "description": "RF shock velocity at 360 Hz",
+      "length": 6,
+      "countAsTime": true,
+      "unit": "m/s",
+      "type": "number"
+    },
+    "dcDRSToggle": {
+      "description": "In car toggle DRS",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "boolean"
+    },
+    "dcTearOffVisor": {
+      "description": "In car tear off visor film",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "boolean"
+    },
+    "dpTireChange": {
+      "description": "Pitstop all tire change request",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dpWingFront": {
+      "description": "Pitstop front wing adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dcBrakeBiasFine": {
+      "description": "In car brake bias fine adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dcPeakBrakeBias": {
+      "description": "In car peak brake bias adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dcBrakeMisc": {
+      "description": "In car brake misc adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dcEngineBraking": {
+      "description": "In car engine braking adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dcMGUKDeployMode": {
+      "description": "In car MGU-K deployment mode level adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dcMGUKRegenGain": {
+      "description": "In car MUG-K re-gen gain adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dcDiffEntry": {
+      "description": "In car diff entry adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dcDiffMiddle": {
+      "description": "In car diff middle adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dcDiffExit": {
+      "description": "In car diff exit adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "DRS_Status": {
+      "description": "Drag Reduction System Status",
+      "length": 1,
+      "countAsTime": false,
+      "unit": " ",
+      "type": "number"
+    },
+    "PowerMGU_K": {
+      "description": "Engine MGU-K mechanical power",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "W",
+      "type": "number"
+    },
+    "TorqueMGU_K": {
+      "description": "Engine MGU-K mechanical torque",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "Nm",
+      "type": "number"
+    },
+    "PowerMGU_H": {
+      "description": "Engine MGU-H mechanical power",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "W",
+      "type": "number"
+    },
+    "EnergyERSBattery": {
+      "description": "Engine ERS battery charge",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "J",
+      "type": "number"
+    },
+    "EnergyERSBatteryPct": {
+      "description": "Engine ERS battery charge as a percent",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "%",
+      "type": "number"
+    },
+    "EnergyBatteryToMGU_KLap": {
+      "description": "Electrical energy from battery to MGU-K per lap",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "J",
+      "type": "number"
+    },
+    "EnergyMGU_KLapDeployPct": {
+      "description": "Electrical energy available to MGU-K per lap as a percent",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "%",
+      "type": "number"
+    },
+    "Engine1_RPM": {
+      "description": "Engine1Engine rpm",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "revs/min",
+      "type": "number"
+    },
+    "CFshockDefl": {
+      "description": "CF shock deflection",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "m",
+      "type": "number"
+    },
+    "CFshockDefl_ST": {
+      "description": "CF shock deflection at 360 Hz",
+      "length": 6,
+      "countAsTime": true,
+      "unit": "m",
+      "type": "number"
+    },
+    "CFshockVel": {
+      "description": "CF shock velocity",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "m/s",
+      "type": "number"
+    },
+    "CFshockVel_ST": {
+      "description": "CF shock velocity at 360 Hz",
+      "length": 6,
+      "countAsTime": true,
+      "unit": "m/s",
+      "type": "number"
+    },
+    "ROLLFshockDefl": {
+      "description": "ROLLF shock deflection",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "m",
+      "type": "number"
+    },
+    "ROLLFshockDefl_ST": {
+      "description": "ROLLF shock deflection at 360 Hz",
+      "length": 6,
+      "countAsTime": true,
+      "unit": "m",
+      "type": "number"
+    },
+    "ROLLFshockVel": {
+      "description": "ROLLF shock velocity",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "m/s",
+      "type": "number"
+    },
+    "ROLLFshockVel_ST": {
+      "description": "ROLLF shock velocity at 360 Hz",
+      "length": 6,
+      "countAsTime": true,
+      "unit": "m/s",
+      "type": "number"
+    },
+    "CRshockDefl": {
+      "description": "CR shock deflection",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "m",
+      "type": "number"
+    },
+    "CRshockDefl_ST": {
+      "description": "CR shock deflection at 360 Hz",
+      "length": 6,
+      "countAsTime": true,
+      "unit": "m",
+      "type": "number"
+    },
+    "CRshockVel": {
+      "description": "CR shock velocity",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "m/s",
+      "type": "number"
+    },
+    "CRshockVel_ST": {
+      "description": "CR shock velocity at 360 Hz",
+      "length": 6,
+      "countAsTime": true,
+      "unit": "m/s",
+      "type": "number"
+    },
+    "ROLLRshockDefl": {
+      "description": "ROLLR shock deflection",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "m",
+      "type": "number"
+    },
+    "ROLLRshockDefl_ST": {
+      "description": "ROLLR shock deflection at 360 Hz",
+      "length": 6,
+      "countAsTime": true,
+      "unit": "m",
+      "type": "number"
+    },
+    "ROLLRshockVel": {
+      "description": "ROLLR shock velocity",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "m/s",
+      "type": "number"
+    },
+    "ROLLRshockVel_ST": {
+      "description": "ROLLR shock velocity at 360 Hz",
       "length": 6,
       "countAsTime": true,
       "unit": "m/s",

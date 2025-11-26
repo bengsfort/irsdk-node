@@ -34,6 +34,7 @@ if (args.values.help) {
     `-------------------------------------`,
     ``,
     `Usage:`,
+    `--------`,
     `pnpm types:generate`,
     ``,
     `Options:`,
