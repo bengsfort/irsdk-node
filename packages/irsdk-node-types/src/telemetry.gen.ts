@@ -1,6 +1,6 @@
 // ! THIS FILE IS AUTO-GENERATED, EDITS WILL BE NOT PERSIST !
 // ! To generate, run `pnpm types:generate` in the irsdk-node package !
-// Last updated 2025-11-26T12:10:09.800Z
+// Last updated 2025-11-26T12:29:35.318Z
 
 /**
  * A variable representing telemetry data from the iRacing SDK.
@@ -3867,7 +3867,7 @@ export interface TelemetryVarList {
    *
    * @description
    * Drag Reduction System Status
-   * Unit of the variable:  
+   * Variable does not have a unit.
    * This variable does not count as a time.
    * Expected data length: 1
    */
@@ -4136,4 +4136,15 @@ export interface TelemetryVarList {
    * Expected data length: 6
    */
   ROLLRshockVel_ST: TelemetryVariable;
+
+  /**
+   * dcTractionControl2
+   *
+   * @description
+   * In car traction control 2 adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcTractionControl2: TelemetryVariable;
 }

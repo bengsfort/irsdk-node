@@ -289,7 +289,7 @@ function renderVariableTypeScript(cache: TelemetryCache): string {
     const countAsTimeStr = varData.countAsTime
       ? 'This variable counts as a time.'
       : 'This variable does not count as a time.';
-    const unitStr = varData.unit !== ''
+    const unitStr = varData.unit.trim() !== ''
       ? `Unit of the variable: ${varData.unit}`
       : 'Variable does not have a unit.'
     const genericStr = varData.type !== 'number'

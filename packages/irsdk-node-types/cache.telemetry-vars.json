@@ -1,7 +1,8 @@
 {
   "carsGeneratedFrom": {
     "Acura NSX GT3 EVO 22": "2025-11-26T11:45:06.260Z",
-    "Mercedes W12": "2025-11-26T12:10:09.797Z"
+    "Mercedes W12": "2025-11-26T12:10:09.797Z",
+    "Dallara P217 LMP2": "2025-11-26T12:28:26.585Z"
   },
   "variables": {
     "SessionTime": {
@@ -2620,6 +2621,13 @@
       "length": 6,
       "countAsTime": true,
       "unit": "m/s",
+      "type": "number"
+    },
+    "dcTractionControl2": {
+      "description": "In car traction control 2 adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
       "type": "number"
     }
   }
