@@ -4,7 +4,8 @@
     "Mercedes W12": "2025-11-26T12:10:09.797Z",
     "Dallara P217 LMP2": "2025-11-26T12:28:26.585Z",
     "Stock Winged Micro Sprint": "2025-11-26T12:31:55.880Z",
-    "Dirt Mini Stock": "2025-11-26T12:37:35.539Z"
+    "Dirt Mini Stock": "2025-11-26T12:37:35.539Z",
+    "Dirt UMP Modified": "2025-11-26T12:40:59.007Z"
   },
   "variables": {
     "SessionTime": {
@@ -2753,6 +2754,41 @@
     },
     "RFSHshockVel_ST": {
       "description": "RFSH shock velocity at 360 Hz",
+      "length": 6,
+      "countAsTime": true,
+      "unit": "m/s",
+      "type": "number"
+    },
+    "dcRFBrakeAttachedToggle": {
+      "description": "In car Right Front Brake attached(1) or detached(0)",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "boolean"
+    },
+    "LR2shockDefl": {
+      "description": "LR2 shock deflection",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "m",
+      "type": "number"
+    },
+    "LR2shockDefl_ST": {
+      "description": "LR2 shock deflection at 360 Hz",
+      "length": 6,
+      "countAsTime": true,
+      "unit": "m",
+      "type": "number"
+    },
+    "LR2shockVel": {
+      "description": "LR2 shock velocity",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "m/s",
+      "type": "number"
+    },
+    "LR2shockVel_ST": {
+      "description": "LR2 shock velocity at 360 Hz",
       "length": 6,
       "countAsTime": true,
       "unit": "m/s",

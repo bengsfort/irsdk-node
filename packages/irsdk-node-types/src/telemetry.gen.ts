@@ -1,6 +1,6 @@
 // ! THIS FILE IS AUTO-GENERATED, EDITS WILL BE NOT PERSIST !
 // ! To generate, run `pnpm types:generate` in the irsdk-node package !
-// Last updated 2025-11-26T12:37:35.541Z
+// Last updated 2025-11-26T12:40:59.009Z
 
 /**
  * A variable representing telemetry data from the iRacing SDK.
@@ -4345,4 +4345,59 @@ export interface TelemetryVarList {
    * Expected data length: 6
    */
   RFSHshockVel_ST: TelemetryVariable;
+
+  /**
+   * dcRFBrakeAttachedToggle
+   *
+   * @description
+   * In car Right Front Brake attached(1) or detached(0)
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcRFBrakeAttachedToggle: TelemetryVariable<boolean[]>;
+
+  /**
+   * LR2shockDefl
+   *
+   * @description
+   * LR2 shock deflection
+   * Unit of the variable: m
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  LR2shockDefl: TelemetryVariable;
+
+  /**
+   * LR2shockDefl_ST
+   *
+   * @description
+   * LR2 shock deflection at 360 Hz
+   * Unit of the variable: m
+   * This variable counts as a time.
+   * Expected data length: 6
+   */
+  LR2shockDefl_ST: TelemetryVariable;
+
+  /**
+   * LR2shockVel
+   *
+   * @description
+   * LR2 shock velocity
+   * Unit of the variable: m/s
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  LR2shockVel: TelemetryVariable;
+
+  /**
+   * LR2shockVel_ST
+   *
+   * @description
+   * LR2 shock velocity at 360 Hz
+   * Unit of the variable: m/s
+   * This variable counts as a time.
+   * Expected data length: 6
+   */
+  LR2shockVel_ST: TelemetryVariable;
 }
