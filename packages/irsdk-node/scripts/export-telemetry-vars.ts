@@ -2,6 +2,7 @@ import { error, log } from 'node:console';
 import { dirname, join } from 'node:path';
 import { exit } from 'node:process';
 import { fileURLToPath } from 'node:url';
+import { writeFile } from 'node:fs/promises';
 
 import { getErrorMessage } from '@bengsfort/stdlib/errors/helpers';
 import { formatDuration } from '@bengsfort/stdlib/formatting/numbers';
@@ -9,7 +10,42 @@ import { NativeSDK, type INativeSDK} from '@irsdk-node/native';
 import { VarTypesReadable, type SessionData, type TelemetryVarList } from '@irsdk-node/types';
 import fs from 'fs-extra';
 import yaml from 'js-yaml';
-import { writeFile } from 'node:fs/promises';
+import { parseArgs } from 'node:util';
+
+const args = parseArgs({
+  options: {
+    rerender: {
+      short: 'r',
+      type: 'boolean',
+      default: false,
+    },
+    help: {
+      short: 'h',
+      type: 'boolean',
+      default: false,
+    },
+  },
+});
+
+if (args.values.help) {
+  log([
+    `-------------------------------------`,
+    `irsdk-node: Export telemetry vaiables`,
+    `-------------------------------------`,
+    ``,
+    `Usage:`,
+    `pnpm types:generate`,
+    ``,
+    `Options:`,
+    `--------`,
+    `--help, -h`,
+    `\tPrint command usage and optional arguments.`,
+    ``,
+    `--rerender, -r`,
+    `\tOnly re-render the types file from the current telemetry cache.`,
+  ].join('\n'));
+  process.exit(0);
+}
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const TYPES_MODULE_DIR = join(SCRIPT_DIR, '../../irsdk-node-types');
@@ -39,36 +75,45 @@ async function main(): Promise<void> {
     const cache = await loadTelemetryCache();
     log('Loaded telemetry cache.');
 
-    // Initialize the SDK and wait for data.
-    const sdk = new NativeSDK();
-    if (!await waitForSdkData(sdk, 5, 1000)) {
-      throw new Error(
-        'Failed to connect to SDK. Make sure the sim is running and try again.',
-      );
-    }
+    // Load the SDK and run the cache merging logic if not in re-render mode.
+    log(
+      (args.values.rerender
+        ? 'Re-render mode active. Skipping all steps and rendering types file from current cache.'
+        : 'Re-render mode inactive, performing all typegen steps.'
+      ),
+    )
+    if (!args.values.rerender) {
+      // Initialize the SDK and wait for data.
+      const sdk = new NativeSDK();
+      if (!await waitForSdkData(sdk, 5, 1000)) {
+        throw new Error(
+          'Failed to connect to SDK. Make sure the sim is running and try again.',
+        );
+      }
 
-    log(`SDK connection initialized.`);
+      log(`SDK connection initialized.`);
 
-    const currentCar = getCurrentCar(sdk);
-    const previouslyGeneratedAt = cache.carsGeneratedFrom[currentCar] ?? 'never';
-    cache.carsGeneratedFrom[currentCar] = new Date().toISOString();
-    log(`- Current car: ${currentCar} (last used for type gen: ${previouslyGeneratedAt})`);
+      const currentCar = getCurrentCar(sdk);
+      const previouslyGeneratedAt = cache.carsGeneratedFrom[currentCar] ?? 'never';
+      cache.carsGeneratedFrom[currentCar] = new Date().toISOString();
+      log(`- Current car: ${currentCar} (last used for type gen: ${previouslyGeneratedAt})`);
 
-    // Grab the types and all data for variables.
-    const telemVarData = sdk.getTelemetryData();
-    log(` - Telemetry fetched.`);
+      // Grab the types and all data for variables.
+      const telemVarData = sdk.getTelemetryData();
+      log(` - Telemetry fetched.`);
 
-    const missingOrUpdatedVars = getMissingVariables(cache, telemVarData);
-    log(`\nFound ${missingOrUpdatedVars.length} missing or updated variables.`);
+      const missingOrUpdatedVars = getMissingVariables(cache, telemVarData);
+      log(`\nFound ${Object.keys(missingOrUpdatedVars).length} missing or updated variables.`);
 
-    if (Object.keys(missingOrUpdatedVars).length === 0) {
-      log('No updated or new variables found. Exiting.');
-      close(startTime, 0);
-    }
+      if (Object.keys(missingOrUpdatedVars).length === 0) {
+        log('No updated or new variables found. Exiting.');
+        close(startTime, 0);
+      }
 
-    // Add new variables to cache.
-    for (const [varName, varData] of Object.entries(missingOrUpdatedVars)) {
-      cache.variables[varName] = varData;
+      // Add new variables to cache.
+      for (const [varName, varData] of Object.entries(missingOrUpdatedVars)) {
+        cache.variables[varName] = varData;
+      }
     }
 
     // Render all variables to a string.
@@ -78,11 +123,14 @@ async function main(): Promise<void> {
     });
     log(`Wrote new types file ${TYPES_GEN_FILE_PATH}.`);
 
-    const cacheJson = JSON.stringify(cache, null, 2);
-    await writeFile(CACHE_TELEM_VARS_PATH, cacheJson, {
-      encoding: 'utf-8',
-    });
-    log(`Wrote updated telemetry cache to disk.`);
+    if (!args.values.rerender) {
+      // Render the cache back to JSON.
+      const cacheJson = JSON.stringify(cache, null, 2);
+      await writeFile(CACHE_TELEM_VARS_PATH, cacheJson, {
+        encoding: 'utf-8',
+      });
+      log(`Wrote updated telemetry cache to disk.`);
+    }
 
     close(startTime, 0);
   } catch (err) {
@@ -233,8 +281,10 @@ function getMissingVariables(
 
 function renderVariableTypeScript(cache: TelemetryCache): string {
   const variableTypes: string[] = [];
+  const varEntries = Object.entries(cache.variables);
 
-  for (const [varName, varData] of Object.entries(cache.variables)) {
+  let renderCount = 0;
+  for (const [varName, varData] of varEntries) {
     const countAsTimeStr = varData.countAsTime
       ? 'This variable counts as a time.'
       : 'This variable does not count as a time.';
@@ -256,8 +306,12 @@ function renderVariableTypeScript(cache: TelemetryCache): string {
       `   * Expected data length: ${varData.length}`,
       `   */`,
       `  ${varName}: TelemetryVariable${genericStr};`,
-      ``,
     );
+
+    // Add an empty space in between each variable only if it is NOT last var.
+    if (++renderCount < varEntries.length) {
+      variableTypes.push('');
+    }
   }
 
   return [
