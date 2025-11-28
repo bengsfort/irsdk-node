@@ -1,6 +1,6 @@
 // ! THIS FILE IS AUTO-GENERATED, EDITS WILL BE NOT PERSIST !
 // ! To generate, run `pnpm types:generate` in the irsdk-node package !
-// Last updated 2025-11-26T14:52:48.491Z
+// Last updated 2025-11-28T09:57:39.223Z
 
 /**
  * A variable representing telemetry data from the iRacing SDK.
@@ -4422,4 +4422,323 @@ export interface TelemetryVarList {
    * Expected data length: 1
    */
   dcLaunchRPM: TelemetryVariable;
+
+  /**
+   * dcAntiRollFront
+   *
+   * @description
+   * In car front anti roll bar adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcAntiRollFront: TelemetryVariable;
+
+  /**
+   * dcAntiRollRear
+   *
+   * @description
+   * In car rear anti roll bar adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcAntiRollRear: TelemetryVariable;
+
+  /**
+   * HFshockDefl
+   *
+   * @description
+   * HF shock deflection
+   * Unit of the variable: m
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  HFshockDefl: TelemetryVariable;
+
+  /**
+   * HFshockDefl_ST
+   *
+   * @description
+   * HF shock deflection at 360 Hz
+   * Unit of the variable: m
+   * This variable counts as a time.
+   * Expected data length: 6
+   */
+  HFshockDefl_ST: TelemetryVariable;
+
+  /**
+   * HFshockVel
+   *
+   * @description
+   * HF shock velocity
+   * Unit of the variable: m/s
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  HFshockVel: TelemetryVariable;
+
+  /**
+   * HFshockVel_ST
+   *
+   * @description
+   * HF shock velocity at 360 Hz
+   * Unit of the variable: m/s
+   * This variable counts as a time.
+   * Expected data length: 6
+   */
+  HFshockVel_ST: TelemetryVariable;
+
+  /**
+   * HRshockDefl
+   *
+   * @description
+   * HR shock deflection
+   * Unit of the variable: m
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  HRshockDefl: TelemetryVariable;
+
+  /**
+   * HRshockDefl_ST
+   *
+   * @description
+   * HR shock deflection at 360 Hz
+   * Unit of the variable: m
+   * This variable counts as a time.
+   * Expected data length: 6
+   */
+  HRshockDefl_ST: TelemetryVariable;
+
+  /**
+   * HRshockVel
+   *
+   * @description
+   * HR shock velocity
+   * Unit of the variable: m/s
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  HRshockVel: TelemetryVariable;
+
+  /**
+   * HRshockVel_ST
+   *
+   * @description
+   * HR shock velocity at 360 Hz
+   * Unit of the variable: m/s
+   * This variable counts as a time.
+   * Expected data length: 6
+   */
+  HRshockVel_ST: TelemetryVariable;
+
+  /**
+   * dcPushToPass
+   *
+   * @description
+   * In car trigger push to pass
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcPushToPass: TelemetryVariable<boolean[]>;
+
+  /**
+   * dpWingRear
+   *
+   * @description
+   * Pitstop rear wing adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dpWingRear: TelemetryVariable;
+
+  /**
+   * dcWeightJackerRight
+   *
+   * @description
+   * In car right wedge/weight jacker adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcWeightJackerRight: TelemetryVariable;
+
+  /**
+   * dcFuelMixture
+   *
+   * @description
+   * In car fuel mixture adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcFuelMixture: TelemetryVariable;
+
+  /**
+   * dcDashPage2
+   *
+   * @description
+   * In car second dash display page adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcDashPage2: TelemetryVariable;
+
+  /**
+   * dpQTape
+   *
+   * @description
+   * Pitstop qualify tape adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dpQTape: TelemetryVariable;
+
+  /**
+   * dpWeightJackerLeft
+   *
+   * @description
+   * Pitstop left wedge/weight jacker adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dpWeightJackerLeft: TelemetryVariable;
+
+  /**
+   * dpWeightJackerRight
+   *
+   * @description
+   * Pitstop right wedge/weight jacker adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dpWeightJackerRight: TelemetryVariable;
+
+  /**
+   * dcInLapToggle
+   *
+   * @description
+   * In car toggle in lap settings
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcInLapToggle: TelemetryVariable<boolean[]>;
+
+  /**
+   * dcFCYToggle
+   *
+   * @description
+   * In car toggle full course yellow mode
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcFCYToggle: TelemetryVariable<boolean[]>;
+
+  /**
+   * dcFuelCutPosition
+   *
+   * @description
+   * In car adv end straight fuel cut
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcFuelCutPosition: TelemetryVariable;
+
+  /**
+   * dcFuelNoCutToggle
+   *
+   * @description
+   * In car fuel cut on straight active
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcFuelNoCutToggle: TelemetryVariable<boolean[]>;
+
+  /**
+   * dcMGUKDeployFixed
+   *
+   * @description
+   * In car MGU-K fixed deployment level adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcMGUKDeployFixed: TelemetryVariable;
+
+  /**
+   * dcHysBoostHold
+   *
+   * @description
+   * In car hold HYS deploy
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcHysBoostHold: TelemetryVariable<boolean[]>;
+
+  /**
+   * dpPowerSteering
+   *
+   * @description
+   * Pitstop power steering adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dpPowerSteering: TelemetryVariable;
+
+  /**
+   * dcTractionControl4
+   *
+   * @description
+   * In car traction control 4 adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcTractionControl4: TelemetryVariable;
+
+  /**
+   * dcTractionControl3
+   *
+   * @description
+   * In car traction control 3 adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcTractionControl3: TelemetryVariable;
+
+  /**
+   * dpChargeAddKWh
+   *
+   * @description
+   * Pitstop charge add amount
+   * Unit of the variable: kWh
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dpChargeAddKWh: TelemetryVariable;
+
+  /**
+   * dcEnginePower
+   *
+   * @description
+   * In car engine power adjustment
+   * Variable does not have a unit.
+   * This variable does not count as a time.
+   * Expected data length: 1
+   */
+  dcEnginePower: TelemetryVariable;
 }
