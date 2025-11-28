@@ -7,7 +7,14 @@
     "Dirt Mini Stock": "2025-11-26T12:37:35.539Z",
     "Dirt UMP Modified": "2025-11-26T12:40:59.007Z",
     "Formula Renault 3.5": "2025-11-26T12:49:42.611Z",
-    "Volkswagen Beetle GRC": "2025-11-26T14:52:48.489Z"
+    "Volkswagen Beetle GRC": "2025-11-26T14:52:48.489Z",
+    "Ferrari 499P": "2025-11-28T09:01:58.134Z",
+    "Dallara IR18": "2025-11-28T09:06:41.091Z",
+    "Audi 90 Quattro GTO": "2025-11-28T09:22:18.983Z",
+    "Ford Mustang Class A": "2025-11-28T09:24:26.794Z",
+    "Porsche 919 2016": "2025-11-28T09:55:14.557Z",
+    "Porsche Mission R": "2025-11-28T09:56:28.002Z",
+    "Mercedes-AMG W13 E Performance": "2025-11-28T09:57:39.220Z"
   },
   "variables": {
     "SessionTime": {
@@ -2805,6 +2812,209 @@
     },
     "dcLaunchRPM": {
       "description": "In car launch rpm adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dcAntiRollFront": {
+      "description": "In car front anti roll bar adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dcAntiRollRear": {
+      "description": "In car rear anti roll bar adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "HFshockDefl": {
+      "description": "HF shock deflection",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "m",
+      "type": "number"
+    },
+    "HFshockDefl_ST": {
+      "description": "HF shock deflection at 360 Hz",
+      "length": 6,
+      "countAsTime": true,
+      "unit": "m",
+      "type": "number"
+    },
+    "HFshockVel": {
+      "description": "HF shock velocity",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "m/s",
+      "type": "number"
+    },
+    "HFshockVel_ST": {
+      "description": "HF shock velocity at 360 Hz",
+      "length": 6,
+      "countAsTime": true,
+      "unit": "m/s",
+      "type": "number"
+    },
+    "HRshockDefl": {
+      "description": "HR shock deflection",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "m",
+      "type": "number"
+    },
+    "HRshockDefl_ST": {
+      "description": "HR shock deflection at 360 Hz",
+      "length": 6,
+      "countAsTime": true,
+      "unit": "m",
+      "type": "number"
+    },
+    "HRshockVel": {
+      "description": "HR shock velocity",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "m/s",
+      "type": "number"
+    },
+    "HRshockVel_ST": {
+      "description": "HR shock velocity at 360 Hz",
+      "length": 6,
+      "countAsTime": true,
+      "unit": "m/s",
+      "type": "number"
+    },
+    "dcPushToPass": {
+      "description": "In car trigger push to pass",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "boolean"
+    },
+    "dpWingRear": {
+      "description": "Pitstop rear wing adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dcWeightJackerRight": {
+      "description": "In car right wedge/weight jacker adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dcFuelMixture": {
+      "description": "In car fuel mixture adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dcDashPage2": {
+      "description": "In car second dash display page adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dpQTape": {
+      "description": "Pitstop qualify tape adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dpWeightJackerLeft": {
+      "description": "Pitstop left wedge/weight jacker adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dpWeightJackerRight": {
+      "description": "Pitstop right wedge/weight jacker adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dcInLapToggle": {
+      "description": "In car toggle in lap settings",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "boolean"
+    },
+    "dcFCYToggle": {
+      "description": "In car toggle full course yellow mode",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "boolean"
+    },
+    "dcFuelCutPosition": {
+      "description": "In car adv end straight fuel cut",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dcFuelNoCutToggle": {
+      "description": "In car fuel cut on straight active",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "boolean"
+    },
+    "dcMGUKDeployFixed": {
+      "description": "In car MGU-K fixed deployment level adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dcHysBoostHold": {
+      "description": "In car hold HYS deploy",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "boolean"
+    },
+    "dpPowerSteering": {
+      "description": "Pitstop power steering adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dcTractionControl4": {
+      "description": "In car traction control 4 adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dcTractionControl3": {
+      "description": "In car traction control 3 adjustment",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "",
+      "type": "number"
+    },
+    "dpChargeAddKWh": {
+      "description": "Pitstop charge add amount",
+      "length": 1,
+      "countAsTime": false,
+      "unit": "kWh",
+      "type": "number"
+    },
+    "dcEnginePower": {
+      "description": "In car engine power adjustment",
       "length": 1,
       "countAsTime": false,
       "unit": "",
