@@ -68,15 +68,6 @@ $ pnpm run -w types:generate
 
 As the telemetry can be different on a per-car basis, this will take the telemetry variables active in your session and compare them against a cache to determine if there are any new types detected. If some are detected, the typescript file will be updated.
 
-There _might_ be some missing types since this is car-specific. For ideal coverage, the script should be run agains the following car groups:
-
-- [ ] TCR car
-- [ ] Mercedes W13
-- [ ] Porsche 919
-- [ ] Porsche Mission R
-- [ ] Ferrari 499P
-- [ ] Dallara IR18
-- [ ] Audi 90 GTO
-- [ ] Circle track cars
+There _might_ be some missing types since this is car-specific. While all base cars have been checked, and most categories of road cars, there may be still be some missing variables. If you cannot find a variable for a car you are using, please run this command against the car to get them added, then create a PR!
 
 Please see the responses to [this forum post](https://forums.iracing.com/discussion/comment/739154/#Comment_739154) for more information.
