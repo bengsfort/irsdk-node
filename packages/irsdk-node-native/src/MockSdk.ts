@@ -2,19 +2,10 @@
 import { error, warn, log } from 'node:console';
 
 import {
-  BroadcastMessages,
-  CameraState,
-  ChatCommand,
-  FFBCommand,
-  PitCommand,
-  ReloadTexturesCommand,
-  ReplayPositionCommand,
-  ReplaySearchCommand,
-  ReplayStateCommand,
-  TelemetryCommand,
+  BroadcastCommand,
+  BroadcastCommandArgs,
   TelemetryVariable,
   TelemetryVarList,
-  VideoCaptureCommand,
 } from '@irsdk-node/types';
 
 import type { INativeSDK, TelemetryTypesDict } from './INativeSDK.js';
@@ -114,86 +105,12 @@ export class MockSDK implements INativeSDK {
     return mockTelemetry[name] as TelemetryVariable<T[]>;
   }
 
-  public broadcast(
-    message: BroadcastMessages.CameraSwitchPos,
-    pos: number,
-    group: number,
-    camera: number,
-  ): void;
-
-  public broadcast(
-    message: BroadcastMessages.CameraSwitchNum,
-    driver: number,
-    group: number,
-    camera: number,
-  ): void;
-
-  public broadcast(message: BroadcastMessages.CameraSetState, state: CameraState): void;
-
-  public broadcast(
-    message: BroadcastMessages.ReplaySetPlaySpeed,
-    speed: number,
-    slowMotion: number,
-  ): void;
-
-  public broadcast(
-    message: BroadcastMessages.ReplaySetPlayPosition,
-    pos: ReplayPositionCommand,
-    frame: number,
-  ): void;
-
-  public broadcast(
-    message: BroadcastMessages.ReplaySearch,
-    mode: ReplaySearchCommand,
-  ): void;
-
-  public broadcast(
-    message: BroadcastMessages.ReplaySetState,
-    state: ReplayStateCommand,
-  ): void;
-
-  public broadcast(
-    message: BroadcastMessages.ReloadTextures,
-    command: ReloadTexturesCommand,
-    carIndex?: number,
-  ): void;
-
-  public broadcast(
-    message: BroadcastMessages.ChatCommand,
-    command: ChatCommand,
-    macro?: number,
-  ): void;
-
-  public broadcast(
-    message: BroadcastMessages.PitCommand,
-    command: PitCommand,
-    param?: number,
-  ): void;
-
-  public broadcast(
-    message: BroadcastMessages.TelemCommand,
-    command: TelemetryCommand,
-  ): void;
-
-  public broadcast(
-    message: BroadcastMessages.FFBCommand,
-    command: FFBCommand,
-    value: number,
-  ): void;
-
-  public broadcast(
-    message: BroadcastMessages.ReplaySearchSessionTime,
-    session: number,
-    time: number,
-  ): void;
-
-  public broadcast(
-    message: BroadcastMessages.VideoCapture,
-    command: VideoCaptureCommand,
-  ): void;
-
-  public broadcast(...args: number[]): void {
-    log('Mocking SDK call:', ...args);
+  public broadcast<Command extends BroadcastCommand = BroadcastCommand>(
+    message: Command,
+    ...args: BroadcastCommandArgs<Command>
+  ): boolean {
+    log('Mocking SDK call:', message, ...args);
+    return true;
   }
 
   public __getTelemetryTypes(): TelemetryTypesDict {

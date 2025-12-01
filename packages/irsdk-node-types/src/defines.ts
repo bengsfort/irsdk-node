@@ -456,13 +456,39 @@ export enum BroadcastMessages {
   TelemCommand,
   /** Broadcast a force feedback command. */
   FFBCommand,
-  /** Trigger searching to a replay time. (Requires being outside of the car.) */
+  /**
+   * Trigger searching to a replay time. (Requires being outside of the car.)
+   * This does a search, and not a direct jump, so it may take a while!
+   */
   ReplaySearchSessionTime,
   /** Trigger video capture. */
   VideoCapture,
   /** Unused placeholder - do not use! */
   UnusedPlaceholder,
 }
+
+/**
+ * BroadcastMessage enum key lookup.
+ * This can be indexed by `BroadcastMessages` to get the human-readable name
+ * of the provided broadcast message index.
+ */
+export const BroadcastMessageNames = {
+  [BroadcastMessages.CameraSwitchPos]: 'CameraSwitchPos',
+  [BroadcastMessages.CameraSwitchNum]: 'CameraSwitchNum',
+  [BroadcastMessages.CameraSetState]: 'CameraSetState',
+  [BroadcastMessages.ReplaySetPlaySpeed]: 'ReplaySetPlaySpeed',
+  [BroadcastMessages.ReplaySetPlayPosition]: 'ReplaySetPlayPosition',
+  [BroadcastMessages.ReplaySearch]: 'ReplaySearch',
+  [BroadcastMessages.ReplaySetState]: 'ReplaySetState',
+  [BroadcastMessages.ReloadTextures]: 'ReloadTextures',
+  [BroadcastMessages.ChatCommand]: 'ChatCommand',
+  [BroadcastMessages.PitCommand]: 'PitCommand',
+  [BroadcastMessages.TelemCommand]: 'TelemCommand',
+  [BroadcastMessages.FFBCommand]: 'FFBCommand',
+  [BroadcastMessages.ReplaySearchSessionTime]: 'ReplaySearchSessionTime',
+  [BroadcastMessages.VideoCapture]: 'VideoCapture',
+  [BroadcastMessages.UnusedPlaceholder]: 'UnusedPlaceholder',
+} as const;
 
 /**
  * Available chat command modes, to be used with message broadcasting.
@@ -487,7 +513,7 @@ export enum ChatCommand {
 export enum PitCommand {
   /** Clear all pit checkboxes */
   Clear = 0,
-  /** Clean the winshield, using one tear off */
+  /** Clean the windshield, using one tear off */
   WS,
   /**
    * Add fuel, optionally specify the amount to add in liters or pass '0' to use

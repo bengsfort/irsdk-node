@@ -24,6 +24,8 @@ import {
   SplitTimeInfo,
   WeekendInfo,
   SessionData,
+  BroadcastCommand,
+  BroadcastCommandArgs,
 } from '@irsdk-node/types';
 import { load as yamlLoad } from 'js-yaml';
 
@@ -356,7 +358,7 @@ export class IRacingSDK {
   public triggerChatState(
     state: ChatCommand.BeginChat | ChatCommand.Cancel | ChatCommand.Reply,
   ): void {
-    this._sdk.broadcast(BroadcastMessages.ChatCommand, state, 1);
+    this._sdk.broadcast(BroadcastMessages.ChatCommand, state);
   }
 
   /**
@@ -375,11 +377,11 @@ export class IRacingSDK {
       | PitCommand.ClearFR
       | PitCommand.ClearFuel,
   ): void {
-    this._sdk.broadcast(BroadcastMessages.PitCommand, command);
+    this._sdk.broadcast(BroadcastMessages.PitCommand, command, 0);
   }
 
   public triggerPitCommand(command: PitCommand.WS | PitCommand.FR): void {
-    this._sdk.broadcast(BroadcastMessages.PitCommand, command);
+    this._sdk.broadcast(BroadcastMessages.PitCommand, command, 0);
   }
 
   public triggerPitChange(
@@ -400,5 +402,23 @@ export class IRacingSDK {
 
   public triggerVideoCapture(command: VideoCaptureCommand): void {
     this._sdk.broadcast(BroadcastMessages.VideoCapture, command);
+  }
+
+  /**
+   * Trigger a broadcast manually, without any safety guard rails. Only use if
+   * you know what you are doing!
+   *
+   * The function still uses the SDK type map for type-awareness. If you need to
+   * turn these off for some reason, toss @ts-expect-error in a command on the
+   * line before it to disable the type safety.
+   *
+   * @param {BroadcastMessages} message The Broadcast Message type.
+   * @param args Args for the message. Can be up to 3 numbers.
+   */
+  public broadcastUnsafe<Command extends BroadcastCommand = BroadcastCommand>(
+    message: Command,
+    ...args: BroadcastCommandArgs<Command>
+  ): boolean {
+    return this._sdk.broadcast(message, ...args);
   }
 }
