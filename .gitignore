@@ -1,3 +1,4 @@
+# Node -------------------------------------------------------------------------
 # Build
 dist
 build
@@ -13,5 +14,30 @@ node_modules
 # Coverage
 coverage
 
-# Visual studio stuff
+# Visual studio stuff ----------------------------------------------------------
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio cache files
 .vs/
+
+# Test results
+[Tt]est[Rr]esult*/
+*.trx
+*.VisualState.xml
+
+# Others
+*.log
+*.tmp
+*.pdb
+*.cache

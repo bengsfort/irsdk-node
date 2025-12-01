@@ -456,7 +456,10 @@ export enum BroadcastMessages {
   TelemCommand,
   /** Broadcast a force feedback command. */
   FFBCommand,
-  /** Trigger searching to a replay time. (Requires being outside of the car.) */
+  /**
+   * Trigger searching to a replay time. (Requires being outside of the car.)
+   * This does a search, and not a direct jump, so it may take a while!
+   */
   ReplaySearchSessionTime,
   /** Trigger video capture. */
   VideoCapture,
