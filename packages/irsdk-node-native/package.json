@@ -32,6 +32,7 @@
   },
   "scripts": {
     "install": "node-gyp-build",
+    "configure": "node-gyp rebuild",
     "clean": "pnpm run \"/^clean:.*/\"",
     "clean:ts": "rm -rf dist *.tsbuildinfo",
     "clean:cpp": "rm -rf ./prebuilds ./build",

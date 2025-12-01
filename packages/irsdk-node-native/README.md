@@ -113,3 +113,21 @@ $ pnpm clean
 # Lint package
 $ pnpm lint
 ```
+
+#### ⚠️ C++ Build errors from prebuildify/node-gyp
+
+If the C++ build fails with an error similar to:
+
+```
+gyp: /<path>/<to>/common.gypi not found (cwd: /<cwd>/<path>) while reading includes of binding.gyp...
+```
+
+Then try looking for your global node-gyp and prebuildify caches. On Windows, they should be somewhere around:
+
+- Node-gyp:
+  - `C:\Users\<YourUser>\AppData\Local\node-gyp`
+  - `C:\Users\<YourUser>\AppData\Local\.node-gyp`
+- Prebuildify:
+  - `C:\Users\<YourUser>\AppData\Local\Temp\prebuildify`
+
+Once cleared, you can try running `pnpm clean && pnpm build` again. Prebuildify and Node-GYP should then attempt to do a fresh install before attempting to build.
