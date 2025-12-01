@@ -5,6 +5,7 @@
   "main": "src/main.ts",
   "type": "module",
   "scripts": {
+    "broadcast-test": "pnpm tsx ./src/broadcast-test.ts",
     "export-yaml": "pnpm tsx ./src/export-session-yaml.ts --out ./out/session.yaml",
     "parse-yaml:regex": "pnpm tsx ./src/parse-session-yaml.ts --in ./out/session.yaml --out ./out/session.json --mode regex",
     "parse-yaml:string": "pnpm tsx ./src/parse-session-yaml.ts --in ./out/session.yaml --out ./out/session.json --mode string",
@@ -20,13 +21,15 @@
     "@bengsfort/stdlib": "^0.2.0",
     "@irsdk-node/native": "workspace:^",
     "irsdk-node": "workspace:^",
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.0",
+    "prompts": "^2.4.2"
   },
   "devDependencies": {
     "@bengsfort/eslint-config-flat": "^0.2.5",
     "@types/fs-extra": "^11.0.4",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^24.8.1",
+    "@types/prompts": "^2.4.9",
     "eslint": "^9.38.0",
     "fs-extra": "^11.3.2",
     "tsx": "^4.20.6",
