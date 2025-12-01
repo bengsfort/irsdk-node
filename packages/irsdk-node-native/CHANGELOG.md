@@ -1,5 +1,17 @@
 # @irsdk-node/native
 
+## 5.1.0
+
+### Minor Changes
+
+- a0c6cf9: Update types for broadcast() API to use new strict typings from @irsdk-node/types. Also now returns a boolean which indicates if the message was successful.
+
+### Patch Changes
+
+- d11fbaa: Fix broadcast message implementation, which previously was not fully hooked up.
+- Updated dependencies [a0c6cf9]
+  - @irsdk-node/types@4.0.4
+
 ## 5.0.0
 
 ### Major Changes

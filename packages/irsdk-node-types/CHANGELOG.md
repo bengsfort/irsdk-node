@@ -1,5 +1,11 @@
 # @irsdk-node/types
 
+## 4.0.4
+
+### Patch Changes
+
+- a0c6cf9: Add utility types for broadcast message API's, allowing more strict typing for known broadcast API variants.
+
 ## 4.0.3
 
 ### Patch Changes
