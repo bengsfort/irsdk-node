@@ -1,5 +1,19 @@
 # Changelog
 
+## 4.2.0
+
+### Minor Changes
+
+- a0c6cf9: Updates all wrapped broadcast API messages to follow the correct API signature for their given messages. Also added `broadcastUnsafe` function, allowing to call the full broadcast API without guardrails.
+
+### Patch Changes
+
+- Updated dependencies [d11fbaa]
+- Updated dependencies [a0c6cf9]
+- Updated dependencies [a0c6cf9]
+  - @irsdk-node/native@5.1.0
+  - @irsdk-node/types@4.0.4
+
 ## 4.1.2
 
 ### Patch Changes
