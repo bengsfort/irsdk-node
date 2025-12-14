@@ -1,0 +1,22 @@
+{
+  "name": "@irsdk-node/native-win32-x64-msvc",
+  "version": "0.0.0",
+  "description": "",
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "main": "@irsdk-node+native.node",
+  "files": [
+    "@irsdk-node+native.node"
+  ],
+  "engines": {
+    "node": ">= 24"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bengsfort/irsdk-node.git"
+  }
+}
