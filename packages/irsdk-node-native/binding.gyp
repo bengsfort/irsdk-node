@@ -4,6 +4,7 @@
       "target_name": "irsdk_node",
       "sources": [
           "lib/yaml_parser.cpp",
+          "lib/logger.cpp",
       ],
       "conditions": [
         ["OS=='win'", {

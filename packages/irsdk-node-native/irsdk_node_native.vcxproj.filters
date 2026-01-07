@@ -27,10 +27,13 @@
     <ClCompile Include="lib\yaml_parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="lib\irsdk_node.cc">
+    <ClCompile Include="lib\irsdk_node.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="lib\irsdk_node_mocked.cc">
+    <ClCompile Include="lib\irsdk_node_mocked.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="logger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -48,6 +51,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="lib\yaml_parser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\logger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

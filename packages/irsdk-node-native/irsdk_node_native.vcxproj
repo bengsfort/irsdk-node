@@ -69,6 +69,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <NMakePreprocessorDefinitions>_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
     <NMakeIncludeSearchPath>./node_modules/node-addon-api;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(LOCALAPPDATA)\node-gyp\Cache\20.4.0\include\node;$(SolutionDir)node_modules\node-addon-api\</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
@@ -77,6 +78,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <NMakePreprocessorDefinitions>NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
     <NMakeIncludeSearchPath>./node_modules/node-addon-api;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(LOCALAPPDATA)\node-gyp\Cache\20.4.0\include\node;$(SolutionDir)node_modules\node-addon-api\</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup>
   </ItemDefinitionGroup>
@@ -87,12 +89,14 @@
     <ClCompile Include="lib\irsdk_node_mocked.cpp" />
     <ClCompile Include="lib\irsdk_utils.cpp" />
     <ClCompile Include="lib\yaml_parser.cpp" />
+    <ClCompile Include="lib\logger.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib\irsdk_client.h" />
     <ClInclude Include="lib\irsdk_defines.h" />
     <ClInclude Include="lib\irsdk_diskclient.h" />
     <ClInclude Include="lib\irsdk_node.h" />
+    <ClInclude Include="lib\logger.h" />
     <ClInclude Include="lib\yaml_parser.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
