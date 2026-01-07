@@ -8,13 +8,13 @@
       "conditions": [
         ["OS=='win'", {
           "sources": [
-            "lib/irsdk_node.cc",
+            "lib/irsdk_node.cpp",
             "lib/irsdk_utils.cpp",
             "lib/irsdk_defines.h"
           ]
         }],
         ["OS!='win'", {
-          "sources": ["lib/irsdk_node_mocked.cc"]
+          "sources": ["lib/irsdk_node_mocked.cpp"]
         }]
       ],
       "defines": [

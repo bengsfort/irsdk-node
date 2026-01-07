@@ -83,8 +83,8 @@
   <ItemGroup>
     <ClCompile Include="lib\irsdk_client.cpp" />
     <ClCompile Include="lib\irsdk_diskclient.cpp" />
-    <ClCompile Include="lib\irsdk_node.cc" />
-    <ClCompile Include="lib\irsdk_node_mocked.cc" />
+    <ClCompile Include="lib\irsdk_node.cpp" />
+    <ClCompile Include="lib\irsdk_node_mocked.cpp" />
     <ClCompile Include="lib\irsdk_utils.cpp" />
     <ClCompile Include="lib\yaml_parser.cpp" />
   </ItemGroup>

@@ -1,5 +1,8 @@
 #include "./irsdk_defines.h"
 #include "./irsdk_node.h"
+#include <cstdio>
+#include <napi.h>
+#include <napi-inl.h>
 
 // ---------------------------
 // Constructors
@@ -29,7 +32,7 @@ Napi::Object iRacingSdkNode::Init(Napi::Env env, Napi::Object exports)
 
 	Napi::FunctionReference *constructor = new Napi::FunctionReference();
 	*constructor = Napi::Persistent(func);
-	env.SetInstanceData(constructor);
+	//env.SetInstanceData(constructor);
 
 	exports.Set("iRacingSdkNode", func);
 	return exports;
@@ -119,10 +122,7 @@ Napi::Value iRacingSdkNode::WaitForData(const Napi::CallbackInfo &info)
 		return Napi::Boolean::New(info.Env(), false);
 	}
 
-	// @todo: try to do this async instead
 	const irsdk_header *header = irsdk_getHeader();
-
-	// @todo: This isn't the best way of doing this. Need to improve, but this works for now
 	if (!this->_data)
 	{
 		this->_data = new char[header->bufLen];
@@ -207,90 +207,90 @@ Napi::Value iRacingSdkNode::BroadcastMessage(const Napi::CallbackInfo &info)
 	{
 		// BroadcastCamSwitchPos: car position, group, camera
 		// BroadcastCamSwitchNum: driver #, group, camera
-		case irsdk_BroadcastCamSwitchPos:
-		case irsdk_BroadcastCamSwitchNum:
-			// First arg can be irsdk_csMode enum.
-			// Any value above -1 equates to focusing on a specific driver.
-			irsdk_broadcastMsg(msgType, arg1.Int32Value(), arg2.Int32Value(), arg3.Int32Value());
-			break;
-		
-		// irsdk_CameraState, unused, unused 
-		case irsdk_BroadcastCamSetState:
-			irsdk_broadcastMsg(msgType, static_cast<irsdk_CameraState>(arg1.Int32Value()), 0);
-			break;
+	case irsdk_BroadcastCamSwitchPos:
+	case irsdk_BroadcastCamSwitchNum:
+		// First arg can be irsdk_csMode enum.
+		// Any value above -1 equates to focusing on a specific driver.
+		irsdk_broadcastMsg(msgType, arg1.Int32Value(), arg2.Int32Value(), arg3.Int32Value());
+		break;
 
-		// speed, slowMotion, unused
-		case irsdk_BroadcastReplaySetPlaySpeed:
-			// Speed (arg1) should be multiples of 2 (0, 1, 2, 4, 8, 16), can be negative
-			// Slow mo (arg2) should be 1 | 0
-			irsdk_broadcastMsg(msgType, arg1.Int32Value(), arg2.ToBoolean().Value());
-			break;
+	// irsdk_CameraState, unused, unused 
+	case irsdk_BroadcastCamSetState:
+		irsdk_broadcastMsg(msgType, static_cast<irsdk_CameraState>(arg1.Int32Value()), 0);
+		break;
 
-		// irsdk_RpyPosMode, Frame Number (high, low)
-		case irsdk_BroadcastReplaySetPlayPosition:
-			irsdk_broadcastMsg(msgType, static_cast<irsdk_RpyPosMode>(arg1.Int32Value()), arg2.Int32Value());
-			break;
+	// speed, slowMotion, unused
+	case irsdk_BroadcastReplaySetPlaySpeed:
+		// Speed (arg1) should be multiples of 2 (0, 1, 2, 4, 8, 16), can be negative
+		// Slow mo (arg2) should be 1 | 0
+		irsdk_broadcastMsg(msgType, arg1.Int32Value(), arg2.ToBoolean().Value());
+		break;
 
-		// irsdk_RpySrchMode, unused, unused
-		case irsdk_BroadcastReplaySearch:
-			irsdk_broadcastMsg(msgType, static_cast<irsdk_RpySrchMode>(arg1.Int32Value()), 0, 0);
-			break;
+	// irsdk_RpyPosMode, Frame Number (high, low)
+	case irsdk_BroadcastReplaySetPlayPosition:
+		irsdk_broadcastMsg(msgType, static_cast<irsdk_RpyPosMode>(arg1.Int32Value()), arg2.Int32Value());
+		break;
 
-		// irsdk_RpyStateMode, unused, unused
-		case irsdk_BroadcastReplaySetState:
-			irsdk_broadcastMsg(msgType, static_cast<irsdk_RpyStateMode>(arg1.Int32Value()), 0);
-			break;
+	// irsdk_RpySrchMode, unused, unused
+	case irsdk_BroadcastReplaySearch:
+		irsdk_broadcastMsg(msgType, static_cast<irsdk_RpySrchMode>(arg1.Int32Value()), 0, 0);
+		break;
 
-		// irsdk_ReloadTexturesMode, carIdx, unused
-		case irsdk_BroadcastReloadTextures:
-			irsdk_broadcastMsg(msgType, static_cast<irsdk_ReloadTexturesMode>(arg1.Int32Value()), arg2.Int32Value(), 0);
-			break;
+	// irsdk_RpyStateMode, unused, unused
+	case irsdk_BroadcastReplaySetState:
+		irsdk_broadcastMsg(msgType, static_cast<irsdk_RpyStateMode>(arg1.Int32Value()), 0);
+		break;
 
-		// irsdk_ChatCommandMode, subCommand, unused
-		case irsdk_BroadcastChatComand:
-			chatCommand = static_cast<irsdk_ChatCommandMode>(arg1.Int32Value());
-			if (chatCommand != irsdk_ChatCommand_Macro)
-			{
-				irsdk_broadcastMsg(msgType, chatCommand, 0);
-				break;
-				
-			}
+	// irsdk_ReloadTexturesMode, carIdx, unused
+	case irsdk_BroadcastReloadTextures:
+		irsdk_broadcastMsg(msgType, static_cast<irsdk_ReloadTexturesMode>(arg1.Int32Value()), arg2.Int32Value(), 0);
+		break;
 
-			// If the chat command is to use a macro, parse the macro id (1 - 15) (2nd arg)
-			irsdk_broadcastMsg(msgType, chatCommand, arg2.Int32Value(), 0);
+	// irsdk_ChatCommandMode, subCommand, unused
+	case irsdk_BroadcastChatComand:
+		chatCommand = static_cast<irsdk_ChatCommandMode>(arg1.Int32Value());
+		if (chatCommand != irsdk_ChatCommand_Macro)
+		{
+			irsdk_broadcastMsg(msgType, chatCommand, 0);
 			break;
 
-		// irsdk_PitCommandMode, parameter
-		case irsdk_BroadcastPitCommand:
-			irsdk_broadcastMsg(msgType, static_cast<irsdk_PitCommandMode>(arg1.Int32Value()), arg2.Int32Value());
-			break;
+		}
 
-		// irsdk_TelemCommandMode, unused, unused
-		case irsdk_BroadcastTelemCommand:
-			irsdk_broadcastMsg(msgType, static_cast<irsdk_TelemCommandMode>(arg1.Int32Value()), 0, 0);
-			break;
+		// If the chat command is to use a macro, parse the macro id (1 - 15) (2nd arg)
+		irsdk_broadcastMsg(msgType, chatCommand, arg2.Int32Value(), 0);
+		break;
 
-		// irsdk_FFBCommandMode, value (float, high, low)
-		case irsdk_BroadcastFFBCommand:
-			irsdk_broadcastMsg(msgType, static_cast<irsdk_FFBCommandMode>(arg1.Int32Value()), arg2.FloatValue());
-			break;
+	// irsdk_PitCommandMode, parameter
+	case irsdk_BroadcastPitCommand:
+		irsdk_broadcastMsg(msgType, static_cast<irsdk_PitCommandMode>(arg1.Int32Value()), arg2.Int32Value());
+		break;
 
-		// This does a search and not a direct jump, so it may take a while
-		// sessionNum, sessionTimeMS (high, low)
-		case irsdk_BroadcastReplaySearchSessionTime:
-			irsdk_broadcastMsg(msgType, arg1.Int32Value(), arg2.Int32Value());
-			break;
+	// irsdk_TelemCommandMode, unused, unused
+	case irsdk_BroadcastTelemCommand:
+		irsdk_broadcastMsg(msgType, static_cast<irsdk_TelemCommandMode>(arg1.Int32Value()), 0, 0);
+		break;
 
-		// irsdk_VideoCaptureMode, unused, unused
-		case irsdk_BroadcastVideoCapture:
-			irsdk_broadcastMsg(msgType, static_cast<irsdk_VideoCaptureMode>(arg1.Int32Value()), 0);
-			break;
+	// irsdk_FFBCommandMode, value (float, high, low)
+	case irsdk_BroadcastFFBCommand:
+		irsdk_broadcastMsg(msgType, static_cast<irsdk_FFBCommandMode>(arg1.Int32Value()), arg2.FloatValue());
+		break;
 
-		// Unused + out-of-bounds
-		default:
-			if (this->_loggingEnabled)
-				printf("Attempted to broadcast an unsupported message.\n");
-			return Napi::Boolean::New(env, false);
+	// This does a search and not a direct jump, so it may take a while
+	// sessionNum, sessionTimeMS (high, low)
+	case irsdk_BroadcastReplaySearchSessionTime:
+		irsdk_broadcastMsg(msgType, arg1.Int32Value(), arg2.Int32Value());
+		break;
+
+	// irsdk_VideoCaptureMode, unused, unused
+	case irsdk_BroadcastVideoCapture:
+		irsdk_broadcastMsg(msgType, static_cast<irsdk_VideoCaptureMode>(arg1.Int32Value()), 0);
+		break;
+
+	// Unused + out-of-bounds
+	default:
+		if (this->_loggingEnabled)
+			printf("Attempted to broadcast an unsupported message.\n");
+		return Napi::Boolean::New(env, false);
 	}
 
 	return Napi::Boolean::New(env, true);
