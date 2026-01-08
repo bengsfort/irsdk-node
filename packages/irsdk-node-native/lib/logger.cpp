@@ -7,16 +7,6 @@
 
 using namespace irsdk_node;
 
-
-
-static void forwardArgs(const char *aFormat, ...)
-{
-	va_list args;
-	va_start(args, aFormat);
-	vprintf(aFormat, args);
-	va_end(args);
-}
-
 static std::string makeFormatStr(LogLevel aLevel, const char *aFormat)
 {
 	std::string str;

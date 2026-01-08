@@ -8,7 +8,7 @@ import {
   TelemetryVarList,
 } from '@irsdk-node/types';
 
-import type { INativeSDK, TelemetryTypesDict } from './INativeSDK.js';
+import { LogLevel, type INativeSDK, type TelemetryTypesDict } from './INativeSDK.js';
 import { loadMockSessionData, loadMockTelemetry } from './mock-data/loader.js';
 
 type TelemetryVarKey = keyof TelemetryVarList;
@@ -27,11 +27,9 @@ let mockSession: string | null = null;
  */
 export class MockSDK implements INativeSDK {
   public currDataVersion = 1;
-
   public isMocked = true;
-
   public enableLogging = false;
-
+  public logLevel: LogLevel = LogLevel.None;
   private _isRunning = false;
 
   constructor() {
@@ -73,6 +71,14 @@ export class MockSDK implements INativeSDK {
 
   public getSessionData(): string {
     return mockSession ?? '';
+  }
+
+  public getSessionConnectionID(): number {
+    return 1;
+  }
+
+  public getSessionVersionNum(): number {
+    return 1;
   }
 
   public getTelemetryData(): TelemetryVarList {

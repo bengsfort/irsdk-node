@@ -1,5 +1,6 @@
 #include "./irsdk_defines.h"
 #include "./irsdk_node.h"
+#include "./logger.h"
 #include <cstdio>
 #include <napi.h>
 #include <napi-inl.h>
@@ -11,169 +12,251 @@ Napi::Object iRacingSdkNode::Init(Napi::Env env, Napi::Object exports)
 {
 	Napi::Function func = DefineClass(env, "iRacingSdkNode", {
 		// Properties													  
-		InstanceAccessor<&iRacingSdkNode::GetCurrSessionDataVersion>("currDataVersion"),
-		InstanceAccessor<&iRacingSdkNode::GetEnableLogging, &iRacingSdkNode::SetEnableLogging>("enableLogging"),
-		InstanceAccessor<&iRacingSdkNode::GetIsMocked>("isMocked"),
+		InstanceAccessor<&iRacingSdkNode::_napi_prop_getCurrSessionDataVer>("currDataVersion"),
+		InstanceAccessor<&iRacingSdkNode::_napi_prop_getEnableLogging, &iRacingSdkNode::_napi_prop_setEnableLogging>("enableLogging"),
+		InstanceAccessor<&iRacingSdkNode::_napi_prop_getLogLevel, &iRacingSdkNode::_napi_prop_setLogLevel>("logLevel"),
+		InstanceAccessor<&iRacingSdkNode::_napi_prop_getIsMocked>("isMocked"),
 
 		// Methods
 		// Control
-		InstanceMethod<&iRacingSdkNode::StartSdk>("startSDK"),
-		InstanceMethod("stopSDK", &iRacingSdkNode::StopSdk),
-		InstanceMethod("waitForData", &iRacingSdkNode::WaitForData),
-		InstanceMethod("broadcast", &iRacingSdkNode::BroadcastMessage),
+		InstanceMethod("startSDK", &iRacingSdkNode::_napi_startSdk),
+		InstanceMethod("stopSDK", &iRacingSdkNode::_napi_stopSdk),
+		InstanceMethod("waitForData", &iRacingSdkNode::_napi_waitForData),
+		InstanceMethod("broadcast", &iRacingSdkNode::_napi_broadcastMessage),
 		// Getters
-		InstanceMethod("isRunning", &iRacingSdkNode::IsRunning),
-		InstanceMethod("getSessionVersionNum", &iRacingSdkNode::GetSessionVersionNum),
-		InstanceMethod("getSessionData", &iRacingSdkNode::GetSessionData),
-		InstanceMethod("getTelemetryData", &iRacingSdkNode::GetTelemetryData),
+		InstanceMethod("isRunning", &iRacingSdkNode::_napi_isRunning),
+		InstanceMethod("getSessionVersionNum", &iRacingSdkNode::_napi_getSessionVersionNum),
+		InstanceMethod("getSessionConnectionID", &iRacingSdkNode::_napi_getSessionConnectionID),
+		InstanceMethod("getSessionData", &iRacingSdkNode::_napi_getSessionData),
+		InstanceMethod("getTelemetryData", &iRacingSdkNode::_napi_getTelemetryData),
 		InstanceMethod("getTelemetryVariable", &iRacingSdkNode::GetTelemetryVar),
 		// Helpers
-		InstanceMethod("__getTelemetryTypes", &iRacingSdkNode::__GetTelemetryTypes)});
+		InstanceMethod("__getTelemetryTypes", &iRacingSdkNode::_napi_getTelemetryTypes)
+									  });
 
 	Napi::FunctionReference *constructor = new Napi::FunctionReference();
 	*constructor = Napi::Persistent(func);
-	//env.SetInstanceData(constructor);
+	env.SetInstanceData(constructor);
 
 	exports.Set("iRacingSdkNode", func);
 	return exports;
 }
 
 iRacingSdkNode::iRacingSdkNode(const Napi::CallbackInfo &info)
-	: Napi::ObjectWrap<iRacingSdkNode>(info), _data(NULL), _bufLineLen(0), _sessionStatusID(0), _lastSessionCt(-1), _sessionData(NULL), _loggingEnabled(false)
+	: Napi::ObjectWrap<iRacingSdkNode>(info),
+	_data(NULL),
+	_bufLineLen(0),
+	_sessionStatusID(0),
+	_lastSessionCt(-1),
+	_sessionData(NULL),
+	_logger(irsdk_node::LogLevel_None)
 {
 	printf("Initializing iRacingSdkNode\n");
 }
 
-// ---------------------------
-// Property implementations
-// ---------------------------
-Napi::Value iRacingSdkNode::GetCurrSessionDataVersion(const Napi::CallbackInfo &info)
+// Internal implementation ----------------------------------------------------
+
+// Public API
+// -----------
+
+bool iRacingSdkNode::startup()
 {
-	int ver = this->_lastSessionCt;
-	return Napi::Number::New(info.Env(), ver);
+	_logger.debug("StartSdk: Attempting to connect to SDK");
+
+	if (!irsdk_isConnected())
+	{
+		_logger.debug("iRacing SDK not connected, connecting\n");
+		bool result = irsdk_startup();
+		_logger.info("Attempted SDK startup (result: %i)\n", result);
+
+		return result;
+	}
+
+	return true;
 }
 
-Napi::Value iRacingSdkNode::GetEnableLogging(const Napi::CallbackInfo &info)
+void iRacingSdkNode::shutdown()
 {
-	bool enabled = this->_loggingEnabled;
+	_logger.info("Running irsdk-node shutdown");
+	irsdk_shutdown();
+	_resetData();
+}
+
+bool iRacingSdkNode::isConnected() const
+{
+	return _data != NULL && irsdk_isConnected();
+}
+
+
+bool iRacingSdkNode::waitForData(int aTimeoutMs)
+{
+	// Wait for new data or for a session to start
+	if (irsdk_waitForDataReady(aTimeoutMs, _data) && irsdk_getHeader())
+	{
+		_logger.debug("Got data from iRacing SDK\n");
+		const irsdk_header *header = irsdk_getHeader();
+
+		// New connection or data changed length
+		if (!_data || _bufLineLen != header->bufLen)
+		{
+			_logger.debug("Connection started / data changed length\n");
+
+			// Reset memory to hold incoming data
+			if (_data) delete[] _data;
+			_bufLineLen = header->bufLen;
+			_data = new char[_bufLineLen];
+
+			// Increment connection and reset info string and buffer length
+			_sessionStatusID++;
+			_lastSessionCt = -1;
+
+			// Try to fill in the new data
+			if (irsdk_getNewData(_data))
+			{
+				_logger.debug("New data retrieved successfully\n");
+				return true;
+			}
+		} else if (_data)
+		{
+			_logger.debug("Data already available, ready for processing\n");
+			return true;
+		}
+	} else if (!isConnected())
+	{
+		_logger.debug("Session ended. Cleaning up.\n");
+		_resetData();
+	}
+
+	_logger.debug("No data available.\n");
+	return false;
+}
+
+
+const char *iRacingSdkNode::getSessionStr()
+{
+	if (!isConnected())
+		return NULL;
+
+	// If there is no session data cached or the session string is out of date,
+	// fetch the latest and update the cached session count.
+	if (!_sessionData || wasSessionStrUpdated())
+	{
+		_logger.debug("Invalid session data, fetching latest\n");
+
+		int latestUpdate = getSessionInfoStrCount();
+		_logger.info("Session data has been updated (prev: %d, new: %d)\n", _lastSessionCt, latestUpdate);
+
+		_lastSessionCt = latestUpdate;
+		_sessionData = irsdk_getSessionInfoStr();
+	} else
+	{
+		_logger.debug("Session data is valid, re-using cached\n");
+	}
+
+	return _sessionData;
+}
+
+// Private API
+// -------------
+
+void iRacingSdkNode::_resetData()
+{
+	_logger.debug("Resetting cached data...\n");
+
+	if (_data) delete[] _data;
+	_data = NULL;
+	_sessionData = NULL;
+	_lastSessionCt = -1;
+
+	_logger.info("Finished resetting cached data\n");
+}
+
+// Node API -------------------------------------------------------------------
+
+// Property implementations
+// -------------------------
+
+Napi::Value iRacingSdkNode::_napi_prop_getCurrSessionDataVer(const Napi::CallbackInfo &info)
+{
+	return Napi::Number::New(info.Env(), this->_lastSessionCt);
+}
+
+Napi::Value iRacingSdkNode::_napi_prop_getEnableLogging(const Napi::CallbackInfo &info)
+{
+	bool enabled = this->_logger.logLevel > irsdk_node::LogLevel_None;
 	return Napi::Boolean::New(info.Env(), enabled);
 }
 
-void iRacingSdkNode::SetEnableLogging(const Napi::CallbackInfo &info, const Napi::Value &value)
+void iRacingSdkNode::_napi_prop_setEnableLogging(const Napi::CallbackInfo &info, const Napi::Value &value)
 {
 	Napi::Boolean enable;
-	if (info.Length() <= 0 || !info[0].IsBoolean())
+	if (!value.IsBoolean())
 	{
 		enable = Napi::Boolean::New(info.Env(), false);
 	} else
 	{
-		enable = info[0].As<Napi::Boolean>();
+		enable = value.As<Napi::Boolean>();
 	}
-	this->_loggingEnabled = enable;
-	if (this->_loggingEnabled)
-		printf("iRacingSDK Logging enabled\n");
+
+	this->_logger.logLevel = enable ? irsdk_node::LogLevel_Error : irsdk_node::LogLevel_None;
+	this->_logger.warn("DEPRECATION WARNING: .enableLogging is deprecated, please use .logLevel instead\n");
 }
 
-Napi::Value iRacingSdkNode::GetIsMocked(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_prop_getLogLevel(const Napi::CallbackInfo &info)
+{
+	return Napi::Number::New(info.Env(), this->_logger.logLevel);
+}
+
+void iRacingSdkNode::_napi_prop_setLogLevel(const Napi::CallbackInfo &info, const Napi::Value &value)
+{
+	if (!value.IsNumber())
+	{
+		this->_logger.warn(".logLevel must be given a number (or the LogLevel enum)\n");
+		return;
+	}
+
+	irsdk_node::LogLevel level = static_cast<irsdk_node::LogLevel>(value.As<Napi::Number>().Int32Value());
+	if (level < irsdk_node::LogLevel_None || level > irsdk_node::LogLevel_Debug)
+	{
+		this->_logger.warn("logLevel given an invalid value\n");
+		return;
+	}
+
+	this->_logger.logLevel = level;
+	this->_logger.info("Log level changed to %s\n", irsdk_node::Logger::GetLabelForLevel(level));
+}
+
+Napi::Value iRacingSdkNode::_napi_prop_getIsMocked(const Napi::CallbackInfo &info)
 {
 	return Napi::Boolean::New(info.Env(), false);
 }
 
-// ---------------------------
+
 // Instance implementations
 // ---------------------------
+
 // SDK Control
-Napi::Value iRacingSdkNode::StartSdk(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_startSdk(const Napi::CallbackInfo &info)
 {
-	if (this->_loggingEnabled)
-		printf("Starting SDK...\n");
+	return Napi::Boolean::New(info.Env(), startup());
+}
 
-	if (!irsdk_isConnected())
-	{
-		bool result = irsdk_startup();
-		if (this->_loggingEnabled)
-			printf("Connected to iRacing SDK (%i)\n", result);
-		return Napi::Boolean::New(info.Env(), result);
-	}
+Napi::Value iRacingSdkNode::_napi_stopSdk(const Napi::CallbackInfo &info)
+{
+	shutdown();
 	return Napi::Boolean::New(info.Env(), true);
 }
 
-Napi::Value iRacingSdkNode::StopSdk(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_waitForData(const Napi::CallbackInfo &info)
 {
-	irsdk_shutdown();
-	return Napi::Boolean::New(info.Env(), true);
+	Napi::Number timeout = info.Length() <= 0 || !info[0].IsNumber()
+		? Napi::Number::New(info.Env(), K_DEFAULT_TIMEOUT_MS)
+		: info[0].As<Napi::Number>();
+
+	return Napi::Boolean::New(info.Env(), waitForData(timeout.Int32Value()));
 }
 
-Napi::Value iRacingSdkNode::WaitForData(const Napi::CallbackInfo &info)
-{
-  // Figure out the time to wait
-  // This will default to the timeout set on the class
-	Napi::Number timeout;
-	if (info.Length() <= 0 || !info[0].IsNumber())
-	{
-		timeout = Napi::Number::New(info.Env(), 16);
-	} else
-	{
-		timeout = info[0].As<Napi::Number>();
-	}
-
-	if (!irsdk_isConnected() && !irsdk_startup())
-	{
-		return Napi::Boolean::New(info.Env(), false);
-	}
-
-	const irsdk_header *header = irsdk_getHeader();
-	if (!this->_data)
-	{
-		this->_data = new char[header->bufLen];
-	}
-
-	// wait for start of sesh or new data
-	bool dataReady = irsdk_waitForDataReady(timeout, this->_data);
-	if (dataReady && header)
-	{
-		if (this->_loggingEnabled)
-			("Session started or we have new data.\n");
-
-		  // New connection or data changed length
-		if (this->_bufLineLen != header->bufLen)
-		{
-			if (this->_loggingEnabled)
-				printf("Connection started / data changed length.\n");
-
-			this->_bufLineLen = header->bufLen;
-
-			// Increment connection
-			this->_sessionStatusID++;
-
-			// Reset info str status
-			this->_lastSessionCt = -1;
-			return Napi::Boolean::New(info.Env(), true);
-		} else if (this->_data)
-		{
-			if (this->_loggingEnabled)
-				printf("Data initialized and ready to process.\n");
-			  // already initialized and ready to process
-			return Napi::Boolean::New(info.Env(), true);
-		}
-	} else if (!(this->_data != NULL && irsdk_isConnected()))
-	{
-		if (this->_loggingEnabled)
-			printf("Session ended. Cleaning up.\n");
-		  // Session ended
-		if (this->_data)
-			delete[] this->_data;
-		this->_data = NULL;
-
-		// Reset Info str
-		this->_lastSessionCt = -1;
-	}
-	if (this->_loggingEnabled)
-		printf("Session ended or something went wrong. Not successful.\n");
-	return Napi::Boolean::New(info.Env(), false);
-}
-
-Napi::Value iRacingSdkNode::BroadcastMessage(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_broadcastMessage(const Napi::CallbackInfo &info)
 {
 	auto env = info.Env();
 
@@ -253,7 +336,6 @@ Napi::Value iRacingSdkNode::BroadcastMessage(const Napi::CallbackInfo &info)
 		{
 			irsdk_broadcastMsg(msgType, chatCommand, 0);
 			break;
-
 		}
 
 		// If the chat command is to use a macro, parse the macro id (1 - 15) (2nd arg)
@@ -288,8 +370,7 @@ Napi::Value iRacingSdkNode::BroadcastMessage(const Napi::CallbackInfo &info)
 
 	// Unused + out-of-bounds
 	default:
-		if (this->_loggingEnabled)
-			printf("Attempted to broadcast an unsupported message.\n");
+		this->_logger.error("Attempted to broadcast an unsupported message.\n");
 		return Napi::Boolean::New(env, false);
 	}
 
@@ -297,33 +378,28 @@ Napi::Value iRacingSdkNode::BroadcastMessage(const Napi::CallbackInfo &info)
 }
 
 // SDK State Getters
-Napi::Value iRacingSdkNode::IsRunning(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_isRunning(const Napi::CallbackInfo &info)
 {
-	bool result = irsdk_isConnected();
-	return Napi::Boolean::New(info.Env(), result);
+	return Napi::Boolean::New(info.Env(), isConnected());
 }
 
-Napi::Value iRacingSdkNode::GetSessionVersionNum(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_getSessionVersionNum(const Napi::CallbackInfo &info)
 {
-	int sessVer = irsdk_getSessionInfoStrUpdate();
-	return Napi::Number::New(info.Env(), sessVer);
+	return Napi::Number::New(info.Env(), getSessionInfoStrCount());
 }
 
-Napi::Value iRacingSdkNode::GetSessionData(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_getSessionConnectionID(const Napi::CallbackInfo &info)
 {
-	int latestUpdate = irsdk_getSessionInfoStrUpdate();
-	if (this->_lastSessionCt != latestUpdate)
-	{
-		if (this->_loggingEnabled)
-			printf("Session data has been updated (prev: %d, new: %d)\n", this->_lastSessionCt, latestUpdate);
-		this->_lastSessionCt = latestUpdate;
-		this->_sessionData = irsdk_getSessionInfoStr();
-	}
-	const char *session = this->_sessionData;
+	return Napi::Number::New(info.Env(), this->_sessionStatusID);
+}
+
+Napi::Value iRacingSdkNode::_napi_getSessionData(const Napi::CallbackInfo &info)
+{
+	auto session = getSessionStr();
+
 	if (session == NULL)
-	{
 		return Napi::String::New(info.Env(), "");
-	}
+
 	return Napi::String::New(info.Env(), session);
 }
 
@@ -348,7 +424,7 @@ Napi::Value iRacingSdkNode::GetTelemetryVar(const Napi::CallbackInfo &info)
 	return this->GetTelemetryVarByIndex(env, varIndex);
 }
 
-Napi::Value iRacingSdkNode::GetTelemetryData(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_getTelemetryData(const Napi::CallbackInfo &info)
 {
 	const irsdk_header *header = irsdk_getHeader();
 	auto env = info.Env();
@@ -368,7 +444,7 @@ Napi::Value iRacingSdkNode::GetTelemetryData(const Napi::CallbackInfo &info)
 }
 
 // Helpers
-Napi::Value iRacingSdkNode::__GetTelemetryTypes(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_getTelemetryTypes(const Napi::CallbackInfo &info)
 {
 	auto env = info.Env();
 	auto result = Napi::Object::New(env);

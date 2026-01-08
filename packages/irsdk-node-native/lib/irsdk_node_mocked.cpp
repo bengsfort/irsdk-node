@@ -10,24 +10,24 @@ Napi::Object iRacingSdkNode::Init(Napi::Env env, Napi::Object exports)
 {
   Napi::Function func = DefineClass(env, "iRacingSdkNode", {
                                                                // Properties
-                                                               InstanceAccessor<&iRacingSdkNode::GetCurrSessionDataVersion>("currDataVersion"),
-                                                               InstanceAccessor<&iRacingSdkNode::GetEnableLogging, &iRacingSdkNode::SetEnableLogging>("enableLogging"),
-                                                               InstanceAccessor<&iRacingSdkNode::GetIsMocked>("isMocked"),
+                                                               InstanceAccessor<&iRacingSdkNode::_napi_prop_getCurrSessionDataVer>("currDataVersion"),
+                                                               InstanceAccessor<&iRacingSdkNode::_napi_prop_getEnableLogging, &iRacingSdkNode::_napi_prop_setEnableLogging>("enableLogging"),
+                                                               InstanceAccessor<&iRacingSdkNode::_napi_prop_getIsMocked>("isMocked"),
 
                                                                // Methods
                                                                // Control
-                                                               InstanceMethod<&iRacingSdkNode::StartSdk>("startSDK"),
-                                                               InstanceMethod("stopSDK", &iRacingSdkNode::StopSdk),
-                                                               InstanceMethod("waitForData", &iRacingSdkNode::WaitForData),
-                                                               InstanceMethod("broadcast", &iRacingSdkNode::BroadcastMessage),
+                                                               InstanceMethod<&iRacingSdkNode::_napi_startSdk>("startSDK"),
+                                                               InstanceMethod("stopSDK", &iRacingSdkNode::_napi_stopSdk),
+                                                               InstanceMethod("waitForData", &iRacingSdkNode::_napi_waitForData),
+                                                               InstanceMethod("broadcast", &iRacingSdkNode::_napi_broadcastMessage),
                                                                // Getters
-                                                               InstanceMethod("isRunning", &iRacingSdkNode::IsRunning),
-                                                               InstanceMethod("getSessionVersionNum", &iRacingSdkNode::GetSessionVersionNum),
-                                                               InstanceMethod("getSessionData", &iRacingSdkNode::GetSessionData),
-                                                               InstanceMethod("getTelemetryData", &iRacingSdkNode::GetTelemetryData),
+                                                               InstanceMethod("isRunning", &iRacingSdkNode::_napi_isRunning),
+                                                               InstanceMethod("getSessionVersionNum", &iRacingSdkNode::_napi_getSessionVersionNum),
+                                                               InstanceMethod("getSessionData", &iRacingSdkNode::_napi_getSessionData),
+                                                               InstanceMethod("getTelemetryData", &iRacingSdkNode::_napi_getTelemetryData),
                                                                InstanceMethod("getTelemetryVariable", &iRacingSdkNode::GetTelemetryVar),
                                                                // Helpers
-                                                               InstanceMethod("__getTelemetryTypes", &iRacingSdkNode::__GetTelemetryTypes),
+                                                               InstanceMethod("__getTelemetryTypes", &iRacingSdkNode::_napi_getTelemetryTypes),
                                                            });
 
   Napi::FunctionReference *constructor = new Napi::FunctionReference();
@@ -47,19 +47,19 @@ iRacingSdkNode::iRacingSdkNode(const Napi::CallbackInfo &info)
 // ---------------------------
 // Property implementations
 // ---------------------------
-Napi::Value iRacingSdkNode::GetCurrSessionDataVersion(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_prop_getCurrSessionDataVer(const Napi::CallbackInfo &info)
 {
   int ver = this->_lastSessionCt;
   return Napi::Number::New(info.Env(), ver);
 }
 
-Napi::Value iRacingSdkNode::GetEnableLogging(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_prop_getEnableLogging(const Napi::CallbackInfo &info)
 {
   bool enabled = this->_loggingEnabled;
   return Napi::Boolean::New(info.Env(), enabled);
 }
 
-void iRacingSdkNode::SetEnableLogging(const Napi::CallbackInfo &info, const Napi::Value &value)
+void iRacingSdkNode::_napi_prop_setEnableLogging(const Napi::CallbackInfo &info, const Napi::Value &value)
 {
   Napi::Boolean enable;
   if (info.Length() <= 0 || !info[0].IsBoolean())
@@ -75,7 +75,7 @@ void iRacingSdkNode::SetEnableLogging(const Napi::CallbackInfo &info, const Napi
     printf("iRacingSDK Logging enabled\n");
 }
 
-Napi::Value iRacingSdkNode::GetIsMocked(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_prop_getIsMocked(const Napi::CallbackInfo &info)
 {
   return Napi::Boolean::New(info.Env(), true);
 }
@@ -84,24 +84,24 @@ Napi::Value iRacingSdkNode::GetIsMocked(const Napi::CallbackInfo &info)
 // Instance implementations
 // ---------------------------
 // SDK Control
-Napi::Value iRacingSdkNode::StartSdk(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_startSdk(const Napi::CallbackInfo &info)
 {
   if (this->_loggingEnabled)
     printf("Starting Mock SDK...\n");
   return Napi::Boolean::New(info.Env(), true);
 }
 
-Napi::Value iRacingSdkNode::StopSdk(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_stopSdk(const Napi::CallbackInfo &info)
 {
   return Napi::Boolean::New(info.Env(), true);
 }
 
-Napi::Value iRacingSdkNode::WaitForData(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_waitForData(const Napi::CallbackInfo &info)
 {
   return Napi::Boolean::New(info.Env(), true);
 }
 
-Napi::Value iRacingSdkNode::BroadcastMessage(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_broadcastMessage(const Napi::CallbackInfo &info)
 {
   auto env = info.Env();
 
@@ -120,17 +120,17 @@ Napi::Value iRacingSdkNode::BroadcastMessage(const Napi::CallbackInfo &info)
 }
 
 // SDK State Getters
-Napi::Value iRacingSdkNode::IsRunning(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_isRunning(const Napi::CallbackInfo &info)
 {
   return Napi::Boolean::New(info.Env(), true);
 }
 
-Napi::Value iRacingSdkNode::GetSessionVersionNum(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_getSessionVersionNum(const Napi::CallbackInfo &info)
 {
   return Napi::Number::New(info.Env(), 1);
 }
 
-Napi::Value iRacingSdkNode::GetSessionData(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_getSessionData(const Napi::CallbackInfo &info)
 {
   return Napi::String::New(info.Env(), MOCK_PROP_NAME);
 }
@@ -159,7 +159,7 @@ Napi::Value iRacingSdkNode::GetTelemetryVar(const Napi::CallbackInfo &info)
   return this->GetTelemetryVarByIndex(env, varIndex);
 }
 
-Napi::Value iRacingSdkNode::GetTelemetryData(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_getTelemetryData(const Napi::CallbackInfo &info)
 {
   auto env = info.Env();
   auto telemVars = Napi::Object::New(env);
@@ -168,7 +168,7 @@ Napi::Value iRacingSdkNode::GetTelemetryData(const Napi::CallbackInfo &info)
 }
 
 // Helpers
-Napi::Value iRacingSdkNode::__GetTelemetryTypes(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_getTelemetryTypes(const Napi::CallbackInfo &info)
 {
   auto env = info.Env();
   auto result = Napi::Object::New(env);

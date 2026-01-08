@@ -39,4 +39,6 @@ try {
 export const NativeSDK = sdkBinding;
 // eslint-disable-next-line @typescript-eslint/naming-convention
 export const sdkIsMocked = isMocked;
+
+export { LogLevel } from './INativeSDK.js';
 export type { INativeSDK, TelemetryTypesDict } from './INativeSDK.js';

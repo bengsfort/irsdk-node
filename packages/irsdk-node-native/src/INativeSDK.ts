@@ -8,6 +8,14 @@ import {
 
 export type TelemetryTypesDict = Record<string, number>;
 
+export enum LogLevel {
+  None = 0,
+  Error,
+  Warn,
+  Info,
+  Debug,
+}
+
 /**
  * Interface of the iRacing SDK native module.
  *
@@ -17,7 +25,9 @@ export type TelemetryTypesDict = Record<string, number>;
 export interface INativeSDK {
   readonly currDataVersion: number;
   readonly isMocked: boolean;
+  /** @deprecated use .logLevel instead */
   enableLogging: boolean;
+  logLevel: LogLevel;
 
   // Main API
   // Control
@@ -29,6 +39,8 @@ export interface INativeSDK {
   waitForData(timeout?: number): boolean;
   getSessionData(): string; // full yaml
   getTelemetryData(): TelemetryVarList;
+  getSessionVersionNum(): number; // session data version num
+  getSessionConnectionID(): number; // Internal connection ID
 
   getTelemetryVariable<T>(index: number): TelemetryVariable<T>;
   getTelemetryVariable<T>(name: string): TelemetryVariable<T>;
