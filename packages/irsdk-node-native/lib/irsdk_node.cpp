@@ -8,9 +8,9 @@
 // ---------------------------
 // Constructors
 // ---------------------------
-Napi::Object iRacingSdkNode::Init(Napi::Env env, Napi::Object exports)
+Napi::Object iRacingSdkNode::Init(Napi::Env aEnv, Napi::Object aExports)
 {
-	Napi::Function func = DefineClass(env, "iRacingSdkNode", {
+	Napi::Function func = DefineClass(aEnv, "iRacingSdkNode", {
 		// Properties													  
 		InstanceAccessor<&iRacingSdkNode::_napi_prop_getCurrSessionDataVer>("currDataVersion"),
 		InstanceAccessor<&iRacingSdkNode::_napi_prop_getEnableLogging, &iRacingSdkNode::_napi_prop_setEnableLogging>("enableLogging"),
@@ -36,14 +36,14 @@ Napi::Object iRacingSdkNode::Init(Napi::Env env, Napi::Object exports)
 
 	Napi::FunctionReference *constructor = new Napi::FunctionReference();
 	*constructor = Napi::Persistent(func);
-	env.SetInstanceData(constructor);
+	aEnv.SetInstanceData(constructor);
 
-	exports.Set("iRacingSdkNode", func);
-	return exports;
+	aExports.Set("iRacingSdkNode", func);
+	return aExports;
 }
 
-iRacingSdkNode::iRacingSdkNode(const Napi::CallbackInfo &info)
-	: Napi::ObjectWrap<iRacingSdkNode>(info),
+iRacingSdkNode::iRacingSdkNode(const Napi::CallbackInfo &aInfo)
+	: Napi::ObjectWrap<iRacingSdkNode>(aInfo),
 	_data(NULL),
 	_bufLineLen(0),
 	_sessionStatusID(0),
@@ -176,23 +176,23 @@ void iRacingSdkNode::_resetData()
 // Property implementations
 // -------------------------
 
-Napi::Value iRacingSdkNode::_napi_prop_getCurrSessionDataVer(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_prop_getCurrSessionDataVer(const Napi::CallbackInfo &aInfo)
 {
-	return Napi::Number::New(info.Env(), this->_lastSessionCt);
+	return Napi::Number::New(aInfo.Env(), this->_lastSessionCt);
 }
 
-Napi::Value iRacingSdkNode::_napi_prop_getEnableLogging(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_prop_getEnableLogging(const Napi::CallbackInfo &aInfo)
 {
 	bool enabled = this->_logger.logLevel > irsdk_node::LogLevel_None;
-	return Napi::Boolean::New(info.Env(), enabled);
+	return Napi::Boolean::New(aInfo.Env(), enabled);
 }
 
-void iRacingSdkNode::_napi_prop_setEnableLogging(const Napi::CallbackInfo &info, const Napi::Value &value)
+void iRacingSdkNode::_napi_prop_setEnableLogging(const Napi::CallbackInfo &aInfo, const Napi::Value &value)
 {
 	Napi::Boolean enable;
 	if (!value.IsBoolean())
 	{
-		enable = Napi::Boolean::New(info.Env(), false);
+		enable = Napi::Boolean::New(aInfo.Env(), false);
 	} else
 	{
 		enable = value.As<Napi::Boolean>();
@@ -202,12 +202,12 @@ void iRacingSdkNode::_napi_prop_setEnableLogging(const Napi::CallbackInfo &info,
 	this->_logger.warn("DEPRECATION WARNING: .enableLogging is deprecated, please use .logLevel instead\n");
 }
 
-Napi::Value iRacingSdkNode::_napi_prop_getLogLevel(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_prop_getLogLevel(const Napi::CallbackInfo &aInfo)
 {
-	return Napi::Number::New(info.Env(), this->_logger.logLevel);
+	return Napi::Number::New(aInfo.Env(), this->_logger.logLevel);
 }
 
-void iRacingSdkNode::_napi_prop_setLogLevel(const Napi::CallbackInfo &info, const Napi::Value &value)
+void iRacingSdkNode::_napi_prop_setLogLevel(const Napi::CallbackInfo &aInfo, const Napi::Value &value)
 {
 	if (!value.IsNumber())
 	{
@@ -226,9 +226,9 @@ void iRacingSdkNode::_napi_prop_setLogLevel(const Napi::CallbackInfo &info, cons
 	this->_logger.info("Log level changed to %s\n", irsdk_node::Logger::GetLabelForLevel(level));
 }
 
-Napi::Value iRacingSdkNode::_napi_prop_getIsMocked(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_prop_getIsMocked(const Napi::CallbackInfo &aInfo)
 {
-	return Napi::Boolean::New(info.Env(), false);
+	return Napi::Boolean::New(aInfo.Env(), false);
 }
 
 
@@ -236,48 +236,48 @@ Napi::Value iRacingSdkNode::_napi_prop_getIsMocked(const Napi::CallbackInfo &inf
 // ---------------------------
 
 // SDK Control
-Napi::Value iRacingSdkNode::_napi_startSdk(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_startSdk(const Napi::CallbackInfo &aInfo)
 {
-	return Napi::Boolean::New(info.Env(), startup());
+	return Napi::Boolean::New(aInfo.Env(), startup());
 }
 
-Napi::Value iRacingSdkNode::_napi_stopSdk(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_stopSdk(const Napi::CallbackInfo &aInfo)
 {
 	shutdown();
-	return Napi::Boolean::New(info.Env(), true);
+	return Napi::Boolean::New(aInfo.Env(), true);
 }
 
-Napi::Value iRacingSdkNode::_napi_waitForData(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_waitForData(const Napi::CallbackInfo &aInfo)
 {
-	Napi::Number timeout = info.Length() <= 0 || !info[0].IsNumber()
-		? Napi::Number::New(info.Env(), K_DEFAULT_TIMEOUT_MS)
-		: info[0].As<Napi::Number>();
+	Napi::Number timeout = aInfo.Length() <= 0 || !aInfo[0].IsNumber()
+		? Napi::Number::New(aInfo.Env(), K_DEFAULT_TIMEOUT_MS)
+		: aInfo[0].As<Napi::Number>();
 
-	return Napi::Boolean::New(info.Env(), waitForData(timeout.Int32Value()));
+	return Napi::Boolean::New(aInfo.Env(), waitForData(timeout.Int32Value()));
 }
 
-Napi::Value iRacingSdkNode::_napi_broadcastMessage(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_broadcastMessage(const Napi::CallbackInfo &aInfo)
 {
-	auto env = info.Env();
+	auto env = aInfo.Env();
 
 	// Determine message type
-	if (info.Length() <= 2 || !info[0].IsNumber())
+	if (aInfo.Length() <= 2 || !aInfo[0].IsNumber())
 	{
 		return Napi::Boolean::New(env, false);
 	}
 
-	if (info.Length() == 4 && !info[2].IsNumber())
+	if (aInfo.Length() == 4 && !aInfo[2].IsNumber())
 	{
 		return Napi::Boolean::New(env, false);
 	}
 
-	Napi::Number msgEnumIndex = info[0].As<Napi::Number>();
+	Napi::Number msgEnumIndex = aInfo[0].As<Napi::Number>();
 	irsdk_BroadcastMsg msgType = static_cast<irsdk_BroadcastMsg>(msgEnumIndex.Int32Value());
 
 	// Args
-	Napi::Number arg1 = info[1].As<Napi::Number>();
-	Napi::Number arg2 = info[2].As<Napi::Number>();
-	Napi::Number arg3 = info[3].As<Napi::Number>();
+	Napi::Number arg1 = aInfo[1].As<Napi::Number>();
+	Napi::Number arg2 = aInfo[2].As<Napi::Number>();
+	Napi::Number arg3 = aInfo[3].As<Napi::Number>();
 
 	irsdk_ChatCommandMode chatCommand = irsdk_ChatCommand_Cancel;
 
@@ -378,44 +378,44 @@ Napi::Value iRacingSdkNode::_napi_broadcastMessage(const Napi::CallbackInfo &inf
 }
 
 // SDK State Getters
-Napi::Value iRacingSdkNode::_napi_isRunning(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_isRunning(const Napi::CallbackInfo &aInfo)
 {
-	return Napi::Boolean::New(info.Env(), isConnected());
+	return Napi::Boolean::New(aInfo.Env(), isConnected());
 }
 
-Napi::Value iRacingSdkNode::_napi_getSessionVersionNum(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_getSessionVersionNum(const Napi::CallbackInfo &aInfo)
 {
-	return Napi::Number::New(info.Env(), getSessionInfoStrCount());
+	return Napi::Number::New(aInfo.Env(), getSessionInfoStrCount());
 }
 
-Napi::Value iRacingSdkNode::_napi_getSessionConnectionID(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_getSessionConnectionID(const Napi::CallbackInfo &aInfo)
 {
-	return Napi::Number::New(info.Env(), this->_sessionStatusID);
+	return Napi::Number::New(aInfo.Env(), this->_sessionStatusID);
 }
 
-Napi::Value iRacingSdkNode::_napi_getSessionData(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_getSessionData(const Napi::CallbackInfo &aInfo)
 {
 	auto session = getSessionStr();
 
 	if (session == NULL)
-		return Napi::String::New(info.Env(), "");
+		return Napi::String::New(aInfo.Env(), "");
 
-	return Napi::String::New(info.Env(), session);
+	return Napi::String::New(aInfo.Env(), session);
 }
 
-Napi::Value iRacingSdkNode::GetTelemetryVar(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::GetTelemetryVar(const Napi::CallbackInfo &aInfo)
 {
-	Napi::Env env = info.Env();
+	Napi::Env env = aInfo.Env();
 
 	int varIndex;
-	if (info.Length() <= 0)
+	if (aInfo.Length() <= 0)
 	{
 		varIndex = 0;
-	} else if (!info[0].IsNumber())
+	} else if (!aInfo[0].IsNumber())
 	{
-		if (info[0].IsString())
+		if (aInfo[0].IsString())
 		{
-			const char *name = info[0].As<Napi::String>().Utf8Value().c_str();
+			const char *name = aInfo[0].As<Napi::String>().Utf8Value().c_str();
 			return this->GetTelemetryVar(env, name);
 		}
 		varIndex = 0;
@@ -424,10 +424,10 @@ Napi::Value iRacingSdkNode::GetTelemetryVar(const Napi::CallbackInfo &info)
 	return this->GetTelemetryVarByIndex(env, varIndex);
 }
 
-Napi::Value iRacingSdkNode::_napi_getTelemetryData(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_getTelemetryData(const Napi::CallbackInfo &aInfo)
 {
 	const irsdk_header *header = irsdk_getHeader();
-	auto env = info.Env();
+	auto env = aInfo.Env();
 	auto telemVars = Napi::Object::New(env);
 
 	int count = header->numVars;
@@ -444,9 +444,9 @@ Napi::Value iRacingSdkNode::_napi_getTelemetryData(const Napi::CallbackInfo &inf
 }
 
 // Helpers
-Napi::Value iRacingSdkNode::_napi_getTelemetryTypes(const Napi::CallbackInfo &info)
+Napi::Value iRacingSdkNode::_napi_getTelemetryTypes(const Napi::CallbackInfo &aInfo)
 {
-	auto env = info.Env();
+	auto env = aInfo.Env();
 	auto result = Napi::Object::New(env);
 
 	const int count = irsdk_getHeader()->numVars;
@@ -463,37 +463,37 @@ Napi::Value iRacingSdkNode::_napi_getTelemetryTypes(const Napi::CallbackInfo &in
 // ---------------------------
 // Helper functions
 // ---------------------------
-bool iRacingSdkNode::GetTelemetryBool(int entry, int index)
+bool iRacingSdkNode::GetTelemetryBool(int aEntry, int aIndex)
 {
-	const irsdk_varHeader *headerVar = irsdk_getVarHeaderEntry(entry);
-	return *(reinterpret_cast<bool const *>(_data + headerVar->offset) + index);
+	const irsdk_varHeader *headerVar = irsdk_getVarHeaderEntry(aEntry);
+	return *(reinterpret_cast<bool const *>(_data + headerVar->offset) + aIndex);
 }
 
-int iRacingSdkNode::GetTelemetryInt(int entry, int index)
+int iRacingSdkNode::GetTelemetryInt(int aEntry, int aIndex)
 {
   // Each int is 4 bytes
-	const irsdk_varHeader *headerVar = irsdk_getVarHeaderEntry(entry);
-	return *(reinterpret_cast<int const *>(_data + headerVar->offset) + index * 4);
+	const irsdk_varHeader *headerVar = irsdk_getVarHeaderEntry(aEntry);
+	return *(reinterpret_cast<int const *>(_data + headerVar->offset) + aIndex * 4);
 }
 
-float iRacingSdkNode::GetTelemetryFloat(int entry, int index)
+float iRacingSdkNode::GetTelemetryFloat(int aEntry, int aIndex)
 {
   // Each float is 4 bytes
-	const irsdk_varHeader *headerVar = irsdk_getVarHeaderEntry(entry);
-	return *(reinterpret_cast<float const *>(_data + headerVar->offset) + index * 4);
+	const irsdk_varHeader *headerVar = irsdk_getVarHeaderEntry(aEntry);
+	return *(reinterpret_cast<float const *>(_data + headerVar->offset) + aIndex * 4);
 }
 
-double iRacingSdkNode::GetTelemetryDouble(int entry, int index)
+double iRacingSdkNode::GetTelemetryDouble(int aEntry, int aIndex)
 {
   // Each double is 8 bytes
-	const irsdk_varHeader *headerVar = irsdk_getVarHeaderEntry(entry);
-	return *(reinterpret_cast<double const *>(_data + headerVar->offset) + index * 8);
+	const irsdk_varHeader *headerVar = irsdk_getVarHeaderEntry(aEntry);
+	return *(reinterpret_cast<double const *>(_data + headerVar->offset) + aIndex * 8);
 }
 
-Napi::Object iRacingSdkNode::GetTelemetryVarByIndex(const Napi::Env env, int index)
+Napi::Object iRacingSdkNode::GetTelemetryVarByIndex(const Napi::Env aEnv, int aIndex)
 {
-	auto headerVar = irsdk_getVarHeaderEntry(index);
-	auto telemVar = Napi::Object::New(env);
+	auto headerVar = irsdk_getVarHeaderEntry(aIndex);
+	auto telemVar = Napi::Object::New(aEnv);
 
 	// Create entry object
 	telemVar.Set("countAsTime", headerVar->countAsTime);
@@ -504,30 +504,30 @@ Napi::Object iRacingSdkNode::GetTelemetryVarByIndex(const Napi::Env env, int ind
 	telemVar.Set("varType", headerVar->type);
 
 	int dataSize = headerVar->count * irsdk_VarTypeBytes[headerVar->type];
-	auto entryVal = Napi::ArrayBuffer::New(env, dataSize);
+	auto entryVal = Napi::ArrayBuffer::New(aEnv, dataSize);
 	memcpy(entryVal.Data(), this->_data + headerVar->offset, dataSize);
 
 	telemVar.Set("value", entryVal);
 	return telemVar;
 }
 
-Napi::Object iRacingSdkNode::GetTelemetryVar(const Napi::Env env, const char *varName)
+Napi::Object iRacingSdkNode::GetTelemetryVar(const Napi::Env aEnv, const char *aVarName)
 {
-	int varIndex = irsdk_varNameToIndex(varName);
-	return this->GetTelemetryVarByIndex(env, varIndex);
+	int varIndex = irsdk_varNameToIndex(aVarName);
+	return this->GetTelemetryVarByIndex(aEnv, varIndex);
 }
 
 // ---------------------------
 // Addon init
 // TODO: This should be standardized/shared across the mocked/unmocked modules.
 // ---------------------------
-Napi::Object InitAll(Napi::Env env, Napi::Object exports)
+Napi::Object InitAll(Napi::Env aEnv, Napi::Object aExports)
 {
-	iRacingSdkNode::Init(env, exports);
+	iRacingSdkNode::Init(aEnv, aExports);
 
-	exports.Set("mockedSdk", false);
+	aExports.Set("mockedSdk", false);
 
-	return exports;
+	return aExports;
 }
 
 NODE_API_MODULE(NODE_GYP_MODULE_NAME, InitAll);
