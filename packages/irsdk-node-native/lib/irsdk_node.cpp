@@ -1,5 +1,5 @@
 #include "./irsdk_node.h"
-#include "./irsdk_defines.h"
+#include "./irsdk/irsdk_defines.h"
 #include "./logger.h"
 #include <cstdio>
 #include <napi-inl.h>

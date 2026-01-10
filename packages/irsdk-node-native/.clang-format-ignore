@@ -1,8 +1,1 @@
-lib/irsdk_client.cpp
-lib/irsdk_client.h
-lib/irsdk_defines.h
-lib/irsdk_diskclient.cpp
-lib/irsdk_diskclient.h
-lib/irsdk_utils.cpp
-lib/yaml_parser.cpp
-lib/yaml_parser.h
+lib/irsdk/*
