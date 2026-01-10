@@ -31,7 +31,8 @@
     }
   },
   "scripts": {
-    "configure": "node-gyp rebuild",
+    "install": "node ./install.js",
+    "gyp:configure": "node-gyp rebuild",
     "clean": "pnpm run \"/^clean:.*/\"",
     "clean:ts": "rm -rf dist *.tsbuildinfo",
     "clean:cpp": "rm -rf ./prebuilds ./build",
