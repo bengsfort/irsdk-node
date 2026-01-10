@@ -21,7 +21,7 @@ static std::string makeFormatStr(LogLevel aLevel, const char *aFormat)
 
 void Logger::info(const char *aFormat, ...) const
 {
-	if (this->logLevel < LogLevel_Info) return;
+	if (logLevel < LogLevel_Info) return;
 
 	auto formatStr = makeFormatStr(LogLevel_Info, aFormat);
 
@@ -33,7 +33,7 @@ void Logger::info(const char *aFormat, ...) const
 
 void Logger::warn(const char *aFormat, ...) const
 {
-	if (this->logLevel < LogLevel_Warn) return;
+	if (logLevel < LogLevel_Warn) return;
 
 	auto formatStr = makeFormatStr(LogLevel_Warn, aFormat);
 
@@ -45,7 +45,7 @@ void Logger::warn(const char *aFormat, ...) const
 
 void Logger::error(const char *aFormat, ...) const
 {
-	if (this->logLevel < LogLevel_Error) return;
+	if (logLevel < LogLevel_Error) return;
 
 	auto formatStr = makeFormatStr(LogLevel_Error, aFormat);
 
@@ -57,7 +57,7 @@ void Logger::error(const char *aFormat, ...) const
 
 void Logger::debug(const char *aFormat, ...) const
 {
-	if (this->logLevel < LogLevel_Debug) return;
+	if (logLevel < LogLevel_Debug) return;
 
 	auto formatStr = makeFormatStr(LogLevel_Debug, aFormat);
 

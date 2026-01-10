@@ -2,10 +2,11 @@
 
 namespace irsdk_node
 {
-	static const const char *K_LOGLEVEL_LABEL_INFO = "INFO";
-	static const const char *K_LOGLEVEL_LABEL_WARN = "WARN";
-	static const const char *K_LOGLEVEL_LABEL_ERROR = "ERROR";
-	static const const char *K_LOGLEVEL_LABEL_DEBUG = "DEBUG";
+	static const char *K_LOGLEVEL_LABEL_INFO = "INFO";
+	static const char *K_LOGLEVEL_LABEL_WARN = "WARN";
+	static const char *K_LOGLEVEL_LABEL_ERROR = "ERROR";
+	static const char *K_LOGLEVEL_LABEL_DEBUG = "DEBUG";
+	static const char *K_LOGLEVEL_LABEL_NONE = "";
 
 	enum LogLevel
 	{
@@ -44,9 +45,12 @@ namespace irsdk_node
 
 			case LogLevel_Debug:
 				return K_LOGLEVEL_LABEL_DEBUG;
+
+			default:
+				return K_LOGLEVEL_LABEL_NONE;
 			}
 
-			return "UNKNOWN";
+			return K_LOGLEVEL_LABEL_NONE;
 		}
 	};
 

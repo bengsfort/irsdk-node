@@ -4,6 +4,7 @@
 #include <cstdio>
 #include <napi.h>
 #include <napi-inl.h>
+#include <string.h>
 
 // ---------------------------
 // Constructors
@@ -187,15 +188,15 @@ Napi::Value iRacingSdkNode::_napi_prop_getEnableLogging(const Napi::CallbackInfo
 	return Napi::Boolean::New(aInfo.Env(), enabled);
 }
 
-void iRacingSdkNode::_napi_prop_setEnableLogging(const Napi::CallbackInfo &aInfo, const Napi::Value &value)
+void iRacingSdkNode::_napi_prop_setEnableLogging(const Napi::CallbackInfo &aInfo, const Napi::Value &aValue)
 {
 	Napi::Boolean enable;
-	if (!value.IsBoolean())
+	if (!aValue.IsBoolean())
 	{
 		enable = Napi::Boolean::New(aInfo.Env(), false);
 	} else
 	{
-		enable = value.As<Napi::Boolean>();
+		enable = aValue.As<Napi::Boolean>();
 	}
 
 	this->_logger.logLevel = enable ? irsdk_node::LogLevel_Error : irsdk_node::LogLevel_None;
@@ -207,15 +208,15 @@ Napi::Value iRacingSdkNode::_napi_prop_getLogLevel(const Napi::CallbackInfo &aIn
 	return Napi::Number::New(aInfo.Env(), this->_logger.logLevel);
 }
 
-void iRacingSdkNode::_napi_prop_setLogLevel(const Napi::CallbackInfo &aInfo, const Napi::Value &value)
+void iRacingSdkNode::_napi_prop_setLogLevel(const Napi::CallbackInfo &aInfo, const Napi::Value &aValue)
 {
-	if (!value.IsNumber())
+	if (!aValue.IsNumber())
 	{
 		this->_logger.warn(".logLevel must be given a number (or the LogLevel enum)\n");
 		return;
 	}
 
-	irsdk_node::LogLevel level = static_cast<irsdk_node::LogLevel>(value.As<Napi::Number>().Int32Value());
+	irsdk_node::LogLevel level = static_cast<irsdk_node::LogLevel>(aValue.As<Napi::Number>().Int32Value());
 	if (level < irsdk_node::LogLevel_None || level > irsdk_node::LogLevel_Debug)
 	{
 		this->_logger.warn("logLevel given an invalid value\n");
