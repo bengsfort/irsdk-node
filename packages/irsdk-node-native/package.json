@@ -1,6 +1,6 @@
 {
   "name": "@irsdk-node/native",
-  "version": "5.2.0",
+  "version": "5.2.1",
   "author": "Matt Bengston <bengsfort@gmail.com> (https://bengsfort.dev/)",
   "bugs": {
     "email": "bengsfort@gmail.com",

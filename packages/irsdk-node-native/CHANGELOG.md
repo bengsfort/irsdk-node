@@ -1,5 +1,11 @@
 # @irsdk-node/native
 
+## 5.2.1
+
+### Patch Changes
+
+- 96777ac: Added missing install.js script to package json allowed files list.
+
 ## 5.2.0
 
 ### Minor Changes
