@@ -1,6 +1,6 @@
 # TODO: Use changesets publish instead of manual publishing
 # TODO: Create git tag + release
-name: Release libraries
+name: AUTO - Release libraries
 
 on:
   workflow_call:
@@ -47,7 +47,7 @@ jobs:
     if: ${{ inputs.native == true }}
     strategy:
       matrix:
-        runner: [ubuntu-latest, macos-latest, windows-latest]
+        runner: [windows-latest]
     runs-on: ${{ matrix.runner }}
     steps:
       - uses: actions/checkout@v4
