@@ -36,7 +36,7 @@
     "clean": "pnpm run \"/^clean:.*/\"",
     "clean:ts": "rm -rf dist *.tsbuildinfo",
     "clean:cpp": "rm -rf ./prebuilds ./build",
-    "build": "pnpm run clean && pnpm run \"/^build:(ts|types|cpp)$/\"",
+    "build": "pnpm run clean && pnpm run \"/^build:(ts|types)$/\"",
     "build:ts": "node esbuild.js",
     "build:cpp": "prebuildify --napi --electron-compat",
     "build:types": "tsc --emitDeclarationOnly",
