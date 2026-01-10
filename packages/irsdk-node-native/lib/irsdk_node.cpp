@@ -180,7 +180,7 @@ void iRacingSdkNode::_resetData()
 	_sessionData = NULL;
 	_lastSessionCt = -1;
 
-	_logger.info("Finished resetting cached data\n");
+	_logger.debug("Finished resetting cached data\n");
 }
 
 // Node API -------------------------------------------------------------------

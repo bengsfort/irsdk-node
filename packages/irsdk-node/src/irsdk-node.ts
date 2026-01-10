@@ -62,10 +62,12 @@ function copyTelemData<K extends keyof TelemetryVarList = keyof TelemetryVarList
 
 export interface Config {
   logLevel?: LogLevel;
+  autoEnableTelemetry?: boolean;
 }
 
 const DefaultConfig: Required<Config> = {
   logLevel: LogLevel.None,
+  autoEnableTelemetry: false,
 };
 
 export class IRacingSDK {
@@ -88,10 +90,15 @@ export class IRacingSDK {
       ...DefaultConfig,
       ...(config ?? {}),
     };
+
     const loggingLevel = this._resolvedConfig.logLevel ?? DefaultConfig.logLevel;
+    const autoEnableTelemetry =
+      this._resolvedConfig.autoEnableTelemetry ?? DefaultConfig.autoEnableTelemetry;
 
     this._sdk = new NativeSDK();
     this._sdk.logLevel = loggingLevel;
+    this.autoEnableTelemetry = autoEnableTelemetry;
+
     void IRacingSDK.IsSimRunning();
   }
 
