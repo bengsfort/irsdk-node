@@ -1,17 +1,19 @@
 import { log } from 'node:console';
 import { exit } from 'node:process';
 
-import { IRacingSDK } from 'irsdk-node';
+import { IRacingSDK, LogLevel } from 'irsdk-node';
 
 import { formatDuration } from './utils.js';
 
 const LOG_WAIT_DELAY = 5000; // 5s.
 const DATA_INIT_BUFFER = 1000; // 1s
-const MAX_TICK_LENGTH = 1 / 60; // 60fps
+const MAX_TICK_LENGTH = (1 / 60) * 1000; // 60fps
 
 function main(): void {
   // Init SDK instance.
-  const sdk = new IRacingSDK();
+  const sdk = new IRacingSDK({
+    logLevel: LogLevel.Info,
+  });
   sdk.autoEnableTelemetry = true;
 
   // Initialize state.

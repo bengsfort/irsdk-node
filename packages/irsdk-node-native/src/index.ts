@@ -18,18 +18,13 @@ import { MockSDK } from './MockSdk.js';
 const DIR_NAME = _getDirname();
 
 let sdkBinding: NativeSDKImpl;
-let isMocked: boolean;
+let isMocked = false;
 
 try {
   const rootDir = join(DIR_NAME, '../..');
   const binding = importNativeModule(rootDir);
-  isMocked = binding.mockedSdk;
 
-  if (isMocked) {
-    sdkBinding = MockSDK;
-  } else {
-    sdkBinding = binding.iRacingSdkNode;
-  }
+  sdkBinding = binding.iRacingSdkNode;
 } catch {
   console.warn('Failed to load native iRacing SDK module. Loading mock SDK instead.');
   isMocked = true;
@@ -39,4 +34,6 @@ try {
 export const NativeSDK = sdkBinding;
 // eslint-disable-next-line @typescript-eslint/naming-convention
 export const sdkIsMocked = isMocked;
+
+export { LogLevel } from './INativeSDK.js';
 export type { INativeSDK, TelemetryTypesDict } from './INativeSDK.js';

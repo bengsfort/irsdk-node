@@ -9,15 +9,15 @@ on:
         type: boolean
       native:
         required: true
-        description: Publish @irsdk-sandbox/native
+        description: Publish @irsdk-node/native
         type: boolean
       types:
         required: true
-        description: Publish @irsdk-sandbox/types
+        description: Publish @irsdk-node/types
         type: boolean
       lib:
         required: true
-        description: Publish @irsdk-sandbox/lib
+        description: Publish irsdk-node
         type: boolean
       node-version:
         required: true

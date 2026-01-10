@@ -1,7 +1,7 @@
 import { error } from 'node:console';
 
 import type { INativeSDK } from '@irsdk-node/native';
-import { NativeSDK } from '@irsdk-node/native';
+import { NativeSDK, LogLevel } from '@irsdk-node/native';
 import {
   BroadcastMessages,
   CameraState,
@@ -60,6 +60,16 @@ function copyTelemData<K extends keyof TelemetryVarList = keyof TelemetryVarList
   }
 }
 
+export interface Config {
+  logLevel?: LogLevel;
+  autoEnableTelemetry?: boolean;
+}
+
+const DefaultConfig: Required<Config> = {
+  logLevel: LogLevel.None,
+  autoEnableTelemetry: false,
+};
+
 export class IRacingSDK {
   // Public
   /**
@@ -67,16 +77,28 @@ export class IRacingSDK {
    * @default false
    */
   public autoEnableTelemetry = false;
+  public logLevel: LogLevel = LogLevel.None;
 
   // Private
   private _dataVer = -1;
-
   private _sessionData: SessionData | null = null;
-
   private _sdk: INativeSDK;
+  private _resolvedConfig: Config;
 
-  constructor() {
+  constructor(config?: Config) {
+    this._resolvedConfig = {
+      ...DefaultConfig,
+      ...(config ?? {}),
+    };
+
+    const loggingLevel = this._resolvedConfig.logLevel ?? DefaultConfig.logLevel;
+    const autoEnableTelemetry =
+      this._resolvedConfig.autoEnableTelemetry ?? DefaultConfig.autoEnableTelemetry;
+
     this._sdk = new NativeSDK();
+    this._sdk.logLevel = loggingLevel;
+    this.autoEnableTelemetry = autoEnableTelemetry;
+
     void IRacingSDK.IsSimRunning();
   }
 
@@ -101,11 +123,11 @@ export class IRacingSDK {
    * @property {boolean}
    */
   public get enableLogging(): boolean {
-    return this._sdk.enableLogging;
+    return this._sdk.logLevel !== LogLevel.None;
   }
 
   public set enableLogging(value: boolean) {
-    this._sdk.enableLogging = value;
+    this._sdk.logLevel = value ? LogLevel.Error : LogLevel.None;
   }
 
   // @todo: add getter for current session string version
@@ -158,7 +180,14 @@ export class IRacingSDK {
    * @param {number} timeout Timeout (in ms). Max is 60fps (1/60)
    */
   public waitForData(timeout?: number): boolean {
-    return this._sdk.waitForData(timeout);
+    const result = this._sdk.waitForData(timeout);
+
+    if (!result && this._sdk.currDataVersion === -1) {
+      this._dataVer = -1;
+      this._sessionData = null;
+    }
+
+    return result;
   }
 
   /**
@@ -178,6 +207,20 @@ export class IRacingSDK {
     }
 
     return null;
+  }
+
+  /**
+   * Gets the version number of the latest session data from the SDK.
+   */
+  public getSessionVersionNum(): number {
+    return this._sdk.getSessionVersionNum();
+  }
+
+  /**
+   * Gets the ID for the current (or previous, if none active) connection.
+   */
+  public getSessionConnectionID(): number {
+    return this._sdk.getSessionConnectionID();
   }
 
   /**

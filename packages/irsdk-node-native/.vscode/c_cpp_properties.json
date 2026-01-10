@@ -3,9 +3,9 @@
     {
       "name": "Win32",
       "includePath": [
-        "${workspaceFolder}/packages/irsdk-node-native/lib",
-        "${workspaceFolder}/packages/irsdk-node-native/node_modules/node-addon-api/**",
-        "${env:USERPROFILE}/AppData/Local/node-gyp/Cache/**",
+        "${workspaceFolder}/lib",
+        "${workspaceFolder}/node_modules/node-addon-api/**",
+        "${env:USERPROFILE}/AppData/Local/node-gyp/Cache/*/include/node",
         "${workspaceFolder}/node_modules/**"
       ],
       "defines": [
@@ -22,8 +22,8 @@
     {
       "name": "Mac",
       "includePath": [
-        "${workspaceFolder}/packages/irsdk-node-native/lib",
-        "${workspaceFolder}/packages/irsdk-node-native/node_modules/node-addon-api/**",
+        "${workspaceFolder}/lib",
+        "${workspaceFolder}/node_modules/node-addon-api/**",
         "${env:USERPROFILE}/Library/Caches/node-gyp/**/include",
         "${workspaceFolder}/node_modules/**",
         "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include"
