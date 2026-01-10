@@ -86,7 +86,6 @@
     <ClCompile Include="lib\irsdk_client.cpp" />
     <ClCompile Include="lib\irsdk_diskclient.cpp" />
     <ClCompile Include="lib\irsdk_node.cpp" />
-    <ClCompile Include="lib\irsdk_node_mocked.cpp" />
     <ClCompile Include="lib\irsdk_utils.cpp" />
     <ClCompile Include="lib\yaml_parser.cpp" />
     <ClCompile Include="lib\logger.cpp" />

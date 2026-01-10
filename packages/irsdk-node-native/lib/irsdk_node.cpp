@@ -261,11 +261,13 @@ Napi::Value iRacingSdkNode::_napi_stopSdk(const Napi::CallbackInfo &aInfo)
 
 Napi::Value iRacingSdkNode::_napi_waitForData(const Napi::CallbackInfo &aInfo)
 {
-	Napi::Number timeout = aInfo.Length() <= 0 || !aInfo[0].IsNumber()
-		? Napi::Number::New(aInfo.Env(), K_DEFAULT_TIMEOUT_MS)
-		: aInfo[0].As<Napi::Number>();
+	int timeout = aInfo.Length() <= 0 || !aInfo[0].IsNumber()
+		? K_DEFAULT_TIMEOUT_MS
+		: aInfo[0].As<Napi::Number>().Int32Value();
 
-	return Napi::Boolean::New(aInfo.Env(), waitForData(timeout.Int32Value()));
+	if (timeout < 16) timeout = 16;
+
+	return Napi::Boolean::New(aInfo.Env(), waitForData(timeout));
 }
 
 Napi::Value iRacingSdkNode::_napi_broadcastMessage(const Napi::CallbackInfo &aInfo)
