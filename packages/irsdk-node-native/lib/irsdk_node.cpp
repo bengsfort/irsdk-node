@@ -6,12 +6,14 @@
 #include <napi-inl.h>
 #include <string.h>
 
+static const char *K_IRSDK_CLASS_EXPORT_NAME = "iRacingSdkNode";
+
 // ---------------------------
 // Constructors
 // ---------------------------
 Napi::Object iRacingSdkNode::Init(Napi::Env aEnv, Napi::Object aExports)
 {
-	Napi::Function func = DefineClass(aEnv, "iRacingSdkNode", {
+	Napi::Function func = DefineClass(aEnv, K_IRSDK_CLASS_EXPORT_NAME, {
 		// Properties													  
 		InstanceAccessor<&iRacingSdkNode::_napi_prop_getCurrSessionDataVer>("currDataVersion"),
 		InstanceAccessor<&iRacingSdkNode::_napi_prop_getEnableLogging, &iRacingSdkNode::_napi_prop_setEnableLogging>("enableLogging"),
@@ -39,7 +41,7 @@ Napi::Object iRacingSdkNode::Init(Napi::Env aEnv, Napi::Object aExports)
 	*constructor = Napi::Persistent(func);
 	aEnv.SetInstanceData(constructor);
 
-	aExports.Set("iRacingSdkNode", func);
+	aExports.Set(K_IRSDK_CLASS_EXPORT_NAME, func);
 	return aExports;
 }
 
@@ -88,6 +90,15 @@ bool iRacingSdkNode::isConnected() const
 	return _data != NULL && irsdk_isConnected();
 }
 
+int iRacingSdkNode::getSessionInfoStrCount()
+{
+	return irsdk_getSessionInfoStrUpdate();
+}
+
+bool iRacingSdkNode::wasSessionStrUpdated()
+{
+	return _lastSessionCt != getSessionInfoStrCount();
+}
 
 bool iRacingSdkNode::waitForData(int aTimeoutMs)
 {
@@ -518,17 +529,3 @@ Napi::Object iRacingSdkNode::GetTelemetryVar(const Napi::Env aEnv, const char *a
 	return this->GetTelemetryVarByIndex(aEnv, varIndex);
 }
 
-// ---------------------------
-// Addon init
-// TODO: This should be standardized/shared across the mocked/unmocked modules.
-// ---------------------------
-Napi::Object InitAll(Napi::Env aEnv, Napi::Object aExports)
-{
-	iRacingSdkNode::Init(aEnv, aExports);
-
-	aExports.Set("mockedSdk", false);
-
-	return aExports;
-}
-
-NODE_API_MODULE(NODE_GYP_MODULE_NAME, InitAll);

@@ -1,8 +1,7 @@
 #ifndef IRSDK_NODE_H
 #define IRSDK_NODE_H
 
-#include "./logger.h";
-#include "irsdk_defines.h"
+#include "./logger.h"
 #include <napi.h>
 
 static const int K_DEFAULT_TIMEOUT_MS = 16;
@@ -51,19 +50,13 @@ public:
 	/// (see irsdk_getSessionInfoStrUpdate() in irsdk_defines.h)
 	///
 	/// @return The current session info version.
-	inline int getSessionInfoStrCount()
-	{
-		return irsdk_getSessionInfoStrUpdate();
-	}
+	inline int getSessionInfoStrCount();
 
 	/// @brief Checks the current SDK session info string version vs. this
 	/// class instances session info string version.
 	///
 	/// @return True if the session info string versions do not match.
-	inline bool wasSessionStrUpdated()
-	{
-		return _lastSessionCt != getSessionInfoStrCount();
-	}
+	inline bool wasSessionStrUpdated();
 
 private:
 	// Properties
