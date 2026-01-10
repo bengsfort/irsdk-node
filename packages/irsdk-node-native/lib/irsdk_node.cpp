@@ -483,21 +483,21 @@ bool iRacingSdkNode::GetTelemetryBool(int aEntry, int aIndex)
 
 int iRacingSdkNode::GetTelemetryInt(int aEntry, int aIndex)
 {
-  // Each int is 4 bytes
+	// Each int is 4 bytes
 	const irsdk_varHeader *headerVar = irsdk_getVarHeaderEntry(aEntry);
 	return *(reinterpret_cast<int const *>(_data + headerVar->offset) + aIndex * 4);
 }
 
 float iRacingSdkNode::GetTelemetryFloat(int aEntry, int aIndex)
 {
-  // Each float is 4 bytes
+	  // Each float is 4 bytes
 	const irsdk_varHeader *headerVar = irsdk_getVarHeaderEntry(aEntry);
 	return *(reinterpret_cast<float const *>(_data + headerVar->offset) + aIndex * 4);
 }
 
 double iRacingSdkNode::GetTelemetryDouble(int aEntry, int aIndex)
 {
-  // Each double is 8 bytes
+	// Each double is 8 bytes
 	const irsdk_varHeader *headerVar = irsdk_getVarHeaderEntry(aEntry);
 	return *(reinterpret_cast<double const *>(_data + headerVar->offset) + aIndex * 8);
 }

@@ -66,7 +66,8 @@ export class MockSDK implements INativeSDK {
   }
 
   public waitForData(_timeout?: number): boolean {
-    return this._isRunning;
+    const dataNotReady = !mockSession || !mockTelemetry;
+    return this._isRunning && !dataNotReady;
   }
 
   public getSessionData(): string {
@@ -74,16 +75,16 @@ export class MockSDK implements INativeSDK {
   }
 
   public getSessionConnectionID(): number {
-    return 1;
+    return mockSession ? 1 : -1;
   }
 
   public getSessionVersionNum(): number {
-    return 1;
+    return mockSession ? 1 : -1;
   }
 
   public getTelemetryData(): TelemetryVarList {
     if (!mockTelemetry) {
-      throw new Error('Attempted accessing mock telemetry before it was loaded.');
+      return {} as TelemetryVarList;
     }
 
     return mockTelemetry;
