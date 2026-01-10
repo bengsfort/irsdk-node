@@ -4,6 +4,9 @@
 #include "./logger.h"
 #include <napi.h>
 
+namespace irsdk_node
+{
+
 static const int K_DEFAULT_TIMEOUT_MS = 16;
 
 class iRacingSdkNode : public Napi::ObjectWrap<iRacingSdkNode>
@@ -100,7 +103,9 @@ private:
     int _sessionStatusID;
     int _lastSessionCt;
     const char* _sessionData;
-    irsdk_node::Logger _logger;
+    Logger _logger;
 };
+
+} // namespace irsdk_node
 
 #endif

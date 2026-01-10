@@ -6,6 +6,8 @@
 #include <napi.h>
 #include <string.h>
 
+using namespace irsdk_node;
+
 static const char* K_IRSDK_CLASS_EXPORT_NAME = "iRacingSdkNode";
 
 // ---------------------------

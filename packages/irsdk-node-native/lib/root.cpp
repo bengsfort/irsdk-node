@@ -3,7 +3,7 @@
 
 Napi::Object registerBindings(Napi::Env aEnv, Napi::Object aExports)
 {
-    iRacingSdkNode::Init(aEnv, aExports);
+    irsdk_node::iRacingSdkNode::Init(aEnv, aExports);
 
     return aExports;
 }

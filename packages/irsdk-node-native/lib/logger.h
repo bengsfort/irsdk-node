@@ -2,6 +2,7 @@
 
 namespace irsdk_node
 {
+
 static const char* K_LOGLEVEL_LABEL_INFO = "INFO";
 static const char* K_LOGLEVEL_LABEL_WARN = "WARN";
 static const char* K_LOGLEVEL_LABEL_ERROR = "ERROR";
@@ -50,4 +51,4 @@ public:
     }
 };
 
-}
+} // namespace irsdk_node
