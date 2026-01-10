@@ -3,9 +3,9 @@
 
 Napi::Object registerBindings(Napi::Env aEnv, Napi::Object aExports)
 {
-	iRacingSdkNode::Init(aEnv, aExports);
+    iRacingSdkNode::Init(aEnv, aExports);
 
-	return aExports;
+    return aExports;
 }
 
 NODE_API_MODULE(NODE_GYP_MODULE_NAME, registerBindings);
