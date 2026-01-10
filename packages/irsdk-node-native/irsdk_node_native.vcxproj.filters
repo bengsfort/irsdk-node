@@ -15,39 +15,42 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="lib\irsdk_client.cpp">
+    <ClCompile Include="lib\irsdk\irsdk_client.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="lib\irsdk_diskclient.cpp">
+    <ClCompile Include="lib\irsdk\irsdk_diskclient.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="lib\irsdk_utils.cpp">
+    <ClCompile Include="lib\irsdk\irsdk_utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="lib\yaml_parser.cpp">
+    <ClCompile Include="lib\irsdk\yaml_parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="lib\irsdk_node.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="logger.cpp">
+    <ClCompile Include="lib\logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\root.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="lib\irsdk_client.h">
+    <ClInclude Include="lib\irsdk\irsdk_client.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="lib\irsdk_defines.h">
+    <ClInclude Include="lib\irsdk\irsdk_defines.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="lib\irsdk_diskclient.h">
+    <ClInclude Include="lib\irsdk\irsdk_diskclient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\irsdk\yaml_parser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="lib\irsdk_node.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="lib\yaml_parser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="lib\logger.h">
