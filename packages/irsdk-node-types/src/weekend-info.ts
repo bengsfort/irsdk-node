@@ -39,6 +39,7 @@ export interface WeekendInfo {
   TrackName: string;
   TrackID: number;
   TrackLength: string;
+  TrackLengthOfficial: string;
   TrackDisplayName: string;
   TrackDisplayShortName: string;
   TrackConfigName: string | null;
