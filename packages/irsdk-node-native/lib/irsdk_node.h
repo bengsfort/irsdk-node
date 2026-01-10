@@ -81,16 +81,16 @@ private:
     Napi::Value _napi_getSessionConnectionID(const Napi::CallbackInfo& aInfo);
     Napi::Value _napi_getSessionData(const Napi::CallbackInfo& aInfo);
     Napi::Value _napi_getTelemetryData(const Napi::CallbackInfo& aInfo);
-    // Helpers
     Napi::Value _napi_getTelemetryTypes(const Napi::CallbackInfo& aInfo);
-    Napi::Value GetTelemetryVar(const Napi::CallbackInfo& aInfo);
+    Napi::Value _napi_getTelemetryVar(const Napi::CallbackInfo& aInfo);
 
-    bool GetTelemetryBool(int entry, int index);
-    int GetTelemetryInt(int entry, int index);
-    float GetTelemetryFloat(int entry, int index);
-    double GetTelemetryDouble(int entry, int index);
-    Napi::Object GetTelemetryVarByIndex(const Napi::Env env, int index);
-    Napi::Object GetTelemetryVar(const Napi::Env env, const char* varName);
+    // Helpers
+    Napi::Object _getTelemetryVarByName(const Napi::Env aEnv, const char* aVarName);
+    Napi::Object _getTelemetryVarByIndex(const Napi::Env aEnv, int aIndex);
+    bool _getTelemetryBool(int aEntry, int aIndex);
+    int _getTelemetryInt(int aEntry, int aIndex);
+    float _getTelemetryFloat(int aEntry, int aIndex);
+    double _getTelemetryDouble(int aEntry, int aIndex);
 
     /// @brief Resets the current session data / session data status count.
     void _resetData();
