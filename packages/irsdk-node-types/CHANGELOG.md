@@ -1,5 +1,11 @@
 # @irsdk-node/types
 
+## 4.0.5
+
+### Patch Changes
+
+- 5535e1c: Added TrackLengthOfficial property to WeekendInfo.
+
 ## 4.0.4
 
 ### Patch Changes
