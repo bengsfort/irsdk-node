@@ -11,9 +11,9 @@
   },
   "files": [
     "package.json",
+    "./install.js",
     "./dist",
     "./lib",
-    "./index.d.ts",
     "./prebuilds",
     "./scripts",
     "./binding.gyp",
