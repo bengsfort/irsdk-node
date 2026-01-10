@@ -1,5 +1,28 @@
 # Changelog
 
+## 4.3.0
+
+### Minor Changes
+
+- 28f85ea: Add leveled logging support. Native and TS API's now expose a LogLevel API that can be used to control SDK logging output more granularly, allowing filtering logs between debug, error, warn, info, and silent.
+
+  .enableLogging is now deprecated, but remains a part of the API and uses the new API underneath. It is recommended to migrate to the .logLevel prop (or use the new config object passed to the irsdk-node constructor) instead.
+
+- 802e32f: The timeout parameter provided to .waitForData now gets clamped to a minimum of 16 (aka 16ms/~60fps). This iRacing SDK only supports pulling data at 60fps or slower, and attempting to pull data out faster than that can cause unwanted functionality where the SDK will rapidly swap between getting data and being disconnected.
+
+### Patch Changes
+
+- 28f85ea: Expose SDK session data version number (.getSessionVersionNum()) and session connection ID (.getSessionConnectionID())
+- 28f85ea: IRacingSDK class constructor now accepts an optional configuration object. (see irsdk-node.Config interface)
+- Updated dependencies [28f85ea]
+- Updated dependencies [28f85ea]
+- Updated dependencies [802e32f]
+- Updated dependencies [5535e1c]
+- Updated dependencies [28f85ea]
+- Updated dependencies [802e32f]
+  - @irsdk-node/native@5.2.0
+  - @irsdk-node/types@4.0.5
+
 ## 4.2.0
 
 ### Minor Changes
