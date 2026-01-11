@@ -40,7 +40,7 @@ jobs:
     needs: build-native-ts
     strategy:
       matrix:
-        runner: [windows-latest]
+        runner: [windows-latest, windows-11-arm]
     runs-on: ${{ matrix.runner }}
     steps:
       - uses: actions/checkout@v4
