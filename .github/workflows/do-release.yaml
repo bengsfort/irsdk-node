@@ -47,6 +47,11 @@ jobs:
     if: ${{ inputs.native == true }}
     strategy:
       matrix:
+        # This needs to have more than 1 runner, otherwise the 'move' step will be broken as the
+        # download-artifacts step will download the one binary to the root of the 'prebuilds/' dir,
+        # instead of downloading each binary to a correctly named subdirectoy of 'prebuilds/' (for ex.
+        # win32-arm64 or win32-x64). This leads to node-gyp-build not finding a suitable binary, and
+        # the native SDK falling back to the mock sdk even if a correct binary is bundled.
         runner: [windows-latest, windows-11-arm]
     runs-on: ${{ matrix.runner }}
     steps:
