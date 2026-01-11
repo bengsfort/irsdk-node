@@ -1,5 +1,11 @@
 # @irsdk-node/native
 
+## 5.2.2
+
+### Patch Changes
+
+- e8ed80f: Add windows-arm prebuilt binary to `@irsdk-node/native`.
+
 ## 5.2.1
 
 ### Patch Changes
