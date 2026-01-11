@@ -7,62 +7,66 @@
 
 using namespace irsdk_node;
 
-static std::string makeFormatStr(LogLevel aLevel, const char *aFormat)
+static std::string makeFormatStr(LogLevel aLevel, const char* aFormat)
 {
-	std::string str;
+    std::string str;
 
-	str += "(irsdk-node)(";
-	str += Logger::GetLabelForLevel(aLevel);
-	str += ") ";
-	str += aFormat;
+    str += "(irsdk-node)(";
+    str += Logger::GetLabelForLevel(aLevel);
+    str += ") ";
+    str += aFormat;
 
-	return str;
+    return str;
 }
 
-void Logger::info(const char *aFormat, ...) const
+void Logger::info(const char* aFormat, ...) const
 {
-	if (logLevel < LogLevel_Info) return;
+    if (logLevel < LogLevel_Info)
+        return;
 
-	auto formatStr = makeFormatStr(LogLevel_Info, aFormat);
+    auto formatStr = makeFormatStr(LogLevel_Info, aFormat);
 
-	va_list args;
-	va_start(args, aFormat);
-	vprintf(formatStr.c_str(), args);
-	va_end(args);
+    va_list args;
+    va_start(args, aFormat);
+    vprintf(formatStr.c_str(), args);
+    va_end(args);
 }
 
-void Logger::warn(const char *aFormat, ...) const
+void Logger::warn(const char* aFormat, ...) const
 {
-	if (logLevel < LogLevel_Warn) return;
+    if (logLevel < LogLevel_Warn)
+        return;
 
-	auto formatStr = makeFormatStr(LogLevel_Warn, aFormat);
+    auto formatStr = makeFormatStr(LogLevel_Warn, aFormat);
 
-	va_list args;
-	va_start(args, aFormat);
-	vprintf(formatStr.c_str(), args);
-	va_end(args);
+    va_list args;
+    va_start(args, aFormat);
+    vprintf(formatStr.c_str(), args);
+    va_end(args);
 }
 
-void Logger::error(const char *aFormat, ...) const
+void Logger::error(const char* aFormat, ...) const
 {
-	if (logLevel < LogLevel_Error) return;
+    if (logLevel < LogLevel_Error)
+        return;
 
-	auto formatStr = makeFormatStr(LogLevel_Error, aFormat);
+    auto formatStr = makeFormatStr(LogLevel_Error, aFormat);
 
-	va_list args;
-	va_start(args, aFormat);
-	vprintf(formatStr.c_str(), args);
-	va_end(args);
+    va_list args;
+    va_start(args, aFormat);
+    vprintf(formatStr.c_str(), args);
+    va_end(args);
 }
 
-void Logger::debug(const char *aFormat, ...) const
+void Logger::debug(const char* aFormat, ...) const
 {
-	if (logLevel < LogLevel_Debug) return;
+    if (logLevel < LogLevel_Debug)
+        return;
 
-	auto formatStr = makeFormatStr(LogLevel_Debug, aFormat);
+    auto formatStr = makeFormatStr(LogLevel_Debug, aFormat);
 
-	va_list args;
-	va_start(args, aFormat);
-	vprintf(formatStr.c_str(), args);
-	va_end(args);
+    va_list args;
+    va_start(args, aFormat);
+    vprintf(formatStr.c_str(), args);
+    va_end(args);
 }
