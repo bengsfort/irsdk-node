@@ -17,7 +17,8 @@
     "./prebuilds",
     "./scripts",
     "./binding.gyp",
-    "./README.md"
+    "./README.md",
+    "./LICENSE"
   ],
   "type": "module",
   "main": "./dist/cjs/index.cjs",
