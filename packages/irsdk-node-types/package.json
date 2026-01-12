@@ -13,7 +13,8 @@
     "package.json",
     "./dist",
     "./README.md",
-    "./CHANGELOG.md"
+    "./CHANGELOG.md",
+    "./LICENSE"
   ],
   "type": "module",
   "main": "./dist/cjs/index.cjs",
