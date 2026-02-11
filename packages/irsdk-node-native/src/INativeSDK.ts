@@ -45,6 +45,8 @@ export interface INativeSDK {
   getTelemetryVariable<T>(index: number): TelemetryVariable<T> | null;
   getTelemetryVariable<T>(name: string): TelemetryVariable<T> | null;
 
+  getTelemetryVariableIndex(name: string): number | null;
+
   // Debug utility used for type generation purposes.
   __getTelemetryTypes(): TelemetryTypesDict;
 

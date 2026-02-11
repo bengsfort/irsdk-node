@@ -45,6 +45,7 @@ Napi::Object iRacingSdkNode::Init(Napi::Env aEnv, Napi::Object aExports)
           InstanceMethod("getSessionData", &iRacingSdkNode::_napi_getSessionData),
           InstanceMethod("getTelemetryData", &iRacingSdkNode::_napi_getTelemetryData),
           InstanceMethod("getTelemetryVariable", &iRacingSdkNode::_napi_getTelemetryVar),
+          InstanceMethod("getTelemetryVariableIndex", &iRacingSdkNode::_napi_getTelemetryVarIndex),
           // Helpers
           InstanceMethod("__getTelemetryTypes", &iRacingSdkNode::_napi_getTelemetryTypes) }
     );
@@ -428,6 +429,21 @@ Napi::Value iRacingSdkNode::_napi_getTelemetryVar(const Napi::CallbackInfo& aInf
 
     // All other inputs are invalid, return null.
     return env.Null();
+}
+
+Napi::Value iRacingSdkNode::_napi_getTelemetryVarIndex(const Napi::CallbackInfo& aInfo)
+{
+    Napi::Env env = aInfo.Env();
+
+    // Null if given malformed input (expects one string).
+    if (aInfo.Length() <= 0 || !aInfo[0].IsString()) {
+        return env.Null();
+    }
+
+    auto napiStr = aInfo[0].ToString().Utf8Value();
+    auto cStr = napiStr.c_str();
+
+    return Napi::Number::New(env, irsdk_varNameToIndex(cStr));
 }
 
 Napi::Value iRacingSdkNode::_napi_getTelemetryData(const Napi::CallbackInfo& aInfo)
