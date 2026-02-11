@@ -29,9 +29,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <string.h>
 
 #include <assert.h>
-#include "irsdk_defines.h"
-#include "yaml_parser.h"
-#include "irsdk_client.h"
+#include "./irsdk_defines.h"
+#include "./yaml_parser.h"
+#include "./irsdk_client.h"
 
 #pragma warning(disable:4996)
 

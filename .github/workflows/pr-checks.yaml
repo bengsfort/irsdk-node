@@ -35,9 +35,23 @@ jobs:
           package-name: "@irsdk-node/native"
           node-version: 20
 
+  format-native-modules:
+    name: Formatting check @irsdk-node/native
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run clang-format@v21 on @irsdk-node/native package
+        uses: jidicula/clang-format-action@v4.16.0
+        with:
+          clang-format-version: "21"
+          check-path: "packages/irsdk-node-native/lib"
+          exclude-regex: '(\/irsdk\/)'
+
   build-native-modules:
     name: Build @irsdk-node/native ${{ matrix.runner }}
-    needs: build-native-ts
+    needs:
+      - build-native-ts
+      - format-native-modules
     strategy:
       matrix:
         runner: [windows-latest, windows-11-arm]

@@ -44,7 +44,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <crtdbg.h>
 #endif
 
-#include "irsdk_defines.h"
+#include "./irsdk_defines.h"
 
 // for timeBeginPeriod()
 #pragma comment(lib, "Winmm")
