@@ -39,7 +39,6 @@ function main(): void {
       // Try to cache the session and telemetry immediately, and use the cached
       // data for the remainder of the tick.
       const sessionData = sdk.getSessionData();
-      // const telemetry = sdk.getTelemetry();
 
       // If our `connected` variable was false, it means we have just connected.
       // We initialize our 'active session' state.
@@ -79,9 +78,6 @@ function main(): void {
         9999,
       ];
 
-      // const lapNum = telemetry.LapCompleted.value[0];
-      // const lapTime = telemetry.LapCurrentLapTime.value[0];
-      // const bestLapTime = telemetry.LapBestLapTime.value[0];
       const deltaToBest = lapTime - bestLapTime;
 
       // If the lap number has increased, log the last lap data.
