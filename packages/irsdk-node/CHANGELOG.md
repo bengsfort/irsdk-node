@@ -1,5 +1,16 @@
 # Changelog
 
+## 4.3.1
+
+### Patch Changes
+
+- 9636379: Fix faulty logic for the getTelemetryVariable() function on the native side, which was previously not working.
+- 9636379: The `.getTelemetryVariable()` native function now returns `null` if given invalid arguments, and the `INativeSDK` API has been updated to reflect this. `.getTelemetryVariable()` in `irsdk-node` has been updated to early return `null` when this case occurs.
+- Updated dependencies [fb7d0ac]
+- Updated dependencies [9636379]
+- Updated dependencies [9636379]
+  - @irsdk-node/native@5.3.0
+
 ## 4.3.0
 
 ### Minor Changes

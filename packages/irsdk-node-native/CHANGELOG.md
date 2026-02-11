@@ -1,5 +1,16 @@
 # @irsdk-node/native
 
+## 5.3.0
+
+### Minor Changes
+
+- 9636379: Fix faulty logic for the getTelemetryVariable() function on the native side, which was previously not working.
+
+### Patch Changes
+
+- fb7d0ac: Internal restructure and cleanup of the native codebase, along with externalization of the official irsdk code to provide clear separation between node module code and irsdk internal code. Should not have an effect on consuming libraries.
+- 9636379: The `.getTelemetryVariable()` native function now returns `null` if given invalid arguments, and the `INativeSDK` API has been updated to reflect this. `.getTelemetryVariable()` in `irsdk-node` has been updated to early return `null` when this case occurs.
+
 ## 5.2.2
 
 ### Patch Changes
