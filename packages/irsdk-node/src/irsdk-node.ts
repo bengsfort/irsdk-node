@@ -63,11 +63,13 @@ function copyTelemData<K extends keyof TelemetryVarList = keyof TelemetryVarList
 export interface Config {
   logLevel?: LogLevel;
   autoEnableTelemetry?: boolean;
+  useTelemVariableCache?: boolean;
 }
 
 const DefaultConfig: Required<Config> = {
   logLevel: LogLevel.None,
   autoEnableTelemetry: false,
+  useTelemVariableCache: true,
 };
 
 export class IRacingSDK {
@@ -76,14 +78,33 @@ export class IRacingSDK {
    * Enable attempting to auto-start telemetry when starting the SDK (if it is not running).
    * @default false
    */
-  public autoEnableTelemetry = false;
-  public logLevel: LogLevel = LogLevel.None;
+  public autoEnableTelemetry = DefaultConfig.autoEnableTelemetry;
+
+  /**
+   * The logging level to use when calling irsdk-node API's. Defaults to 0 (LogLevel.None).
+   * @default 0
+   */
+  public logLevel: LogLevel = DefaultConfig.logLevel;
+
+  /**
+   * Whether or not to use an internal look-up cache when fetching Telemetry Variables by
+   * name. This can provide a performance benefit, but may produce unwanted behaviour when
+   * enabled in long-running processes where access of niche, car-specific variables over
+   * multiple sessions is common.
+   *
+   * When enabled, if being used in long-running processes it is recommended to clear the
+   * cache whenever you detect the player has changed cars.
+   *
+   * @default true
+   */
+  public useTelemVariableCache = DefaultConfig.useTelemVariableCache;
 
   // Private
   private _dataVer = -1;
   private _sessionData: SessionData | null = null;
   private _sdk: INativeSDK;
   private _resolvedConfig: Config;
+  private _variableIndexCache: Partial<Record<keyof TelemetryVarList, number>> = {};
 
   constructor(config?: Config) {
     this._resolvedConfig = {
@@ -94,12 +115,38 @@ export class IRacingSDK {
     const loggingLevel = this._resolvedConfig.logLevel ?? DefaultConfig.logLevel;
     const autoEnableTelemetry =
       this._resolvedConfig.autoEnableTelemetry ?? DefaultConfig.autoEnableTelemetry;
+    const useTelemVariableCache =
+      this._resolvedConfig.useTelemVariableCache ?? DefaultConfig.useTelemVariableCache;
 
     this._sdk = new NativeSDK();
     this._sdk.logLevel = loggingLevel;
     this.autoEnableTelemetry = autoEnableTelemetry;
+    this.useTelemVariableCache = useTelemVariableCache;
 
     void IRacingSDK.IsSimRunning();
+  }
+
+  /**
+   * Gets the cached variable index from the internal cache, if it exists, otherwise
+   * requests the index from the native module.
+   *
+   * @param varName The variable to grab from the cache.
+   * @returns The index of the variable in the variable list.
+   */
+  private _fetchVariableIndexFromCache(varName: keyof TelemetryVarList): number | null {
+    const cachedIndex = this._variableIndexCache[varName];
+
+    if (typeof cachedIndex === 'number') {
+      return cachedIndex;
+    }
+
+    const currentIndex = this._sdk.getTelemetryVariableIndex(varName);
+    if (currentIndex === null) {
+      return null;
+    }
+
+    this._variableIndexCache[varName] = currentIndex;
+    return currentIndex;
   }
 
   /**
@@ -155,6 +202,8 @@ export class IRacingSDK {
    * @returns {boolean} If the SDK started successfully.
    */
   public startSDK(): boolean {
+    this.resetTelemetryVariableCache();
+
     if (!this._sdk.isRunning()) {
       const successful = this._sdk.startSDK();
       if (this.autoEnableTelemetry) {
@@ -173,6 +222,7 @@ export class IRacingSDK {
   public stopSDK(): void {
     this._sdk.stopSDK();
     this._dataVer = -1;
+    this.resetTelemetryVariableCache();
   }
 
   /**
@@ -329,8 +379,19 @@ export class IRacingSDK {
   public getTelemetryVariable<T extends boolean | number | string>(
     telemVar: number | keyof TelemetryVarList,
   ): TelemetryVariable<T[]> | null {
+    let resolvedTelemVar: number | keyof TelemetryVarList = telemVar;
+
+    if (this.useTelemVariableCache && typeof telemVar === 'string') {
+      const cachedIndex = this._fetchVariableIndexFromCache(telemVar);
+      if (cachedIndex === null) {
+        return null;
+      }
+
+      resolvedTelemVar = cachedIndex;
+    }
+
     // @todo Need to fix this type.
-    const rawData = this._sdk.getTelemetryVariable(telemVar as string);
+    const rawData = this._sdk.getTelemetryVariable(resolvedTelemVar as string);
     if (!rawData) {
       return null;
     }
@@ -345,6 +406,23 @@ export class IRacingSDK {
     );
 
     return parsed[rawData.name as keyof TelemetryVarList] as TelemetryVariable<T[]>;
+  }
+
+  /**
+   * Resets the internal telemetry variable lookup cache. This occurs automatically
+   * whenever the SDK starts and stops, and is only necessary to call if:
+   *
+   * - `.useTelemVariableCache` is enabled via the `Config` passed to the `IRacingSDK` constructor
+   * or by the propertyy on the IRacingSDK instance.
+   * - The SDK is being used in a long-running process where potentially niche variables (variables
+   * only available for one car) are frequently accessed and the player changes between cars with
+   * these niche variables frequently.
+   *
+   * If that is the case, this function should be called whenever it is detected that the player
+   * has changed cars, to make sure there are no stale variables in the cache.
+   */
+  public resetTelemetryVariableCache(): void {
+    this._variableIndexCache = {};
   }
 
   // Broadcast commands
