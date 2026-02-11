@@ -42,8 +42,8 @@ export interface INativeSDK {
   getSessionVersionNum(): number; // session data version num
   getSessionConnectionID(): number; // Internal connection ID
 
-  getTelemetryVariable<T>(index: number): TelemetryVariable<T>;
-  getTelemetryVariable<T>(name: string): TelemetryVariable<T>;
+  getTelemetryVariable<T>(index: number): TelemetryVariable<T> | null;
+  getTelemetryVariable<T>(name: string): TelemetryVariable<T> | null;
 
   // Debug utility used for type generation purposes.
   __getTelemetryTypes(): TelemetryTypesDict;

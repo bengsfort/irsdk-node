@@ -12,7 +12,7 @@ const MAX_TICK_LENGTH = (1 / 60) * 1000; // 60fps
 function main(): void {
   // Init SDK instance.
   const sdk = new IRacingSDK({
-    logLevel: LogLevel.Info,
+    logLevel: LogLevel.None,
   });
   sdk.autoEnableTelemetry = true;
 
@@ -39,7 +39,6 @@ function main(): void {
       // Try to cache the session and telemetry immediately, and use the cached
       // data for the remainder of the tick.
       const sessionData = sdk.getSessionData();
-      const telemetry = sdk.getTelemetry();
 
       // If our `connected` variable was false, it means we have just connected.
       // We initialize our 'active session' state.
@@ -71,9 +70,14 @@ function main(): void {
       }
 
       // Cache telemetry variables.
-      const lapNum = telemetry.LapCompleted.value[0];
-      const lapTime = telemetry.LapCurrentLapTime.value[0];
-      const bestLapTime = telemetry.LapBestLapTime.value[0];
+      const [lapNum] = sdk.getTelemetryVariable<number>('LapCompleted')?.value ?? [9999];
+      const [lapTime] = sdk.getTelemetryVariable<number>('LapCurrentLapTime')?.value ?? [
+        9999,
+      ];
+      const [bestLapTime] = sdk.getTelemetryVariable<number>('LapBestLapTime')?.value ?? [
+        9999,
+      ];
+
       const deltaToBest = lapTime - bestLapTime;
 
       // If the lap number has increased, log the last lap data.
