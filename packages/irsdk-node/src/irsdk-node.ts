@@ -331,6 +331,10 @@ export class IRacingSDK {
   ): TelemetryVariable<T[]> | null {
     // @todo Need to fix this type.
     const rawData = this._sdk.getTelemetryVariable(telemVar as string);
+    if (!rawData) {
+      return null;
+    }
+
     const parsed: Partial<TelemetryVarList> = {};
 
     // @todo good grief these types need to be fixed asap

@@ -12,7 +12,7 @@ const MAX_TICK_LENGTH = (1 / 60) * 1000; // 60fps
 function main(): void {
   // Init SDK instance.
   const sdk = new IRacingSDK({
-    logLevel: LogLevel.Info,
+    logLevel: LogLevel.None,
   });
   sdk.autoEnableTelemetry = true;
 

@@ -401,23 +401,33 @@ Napi::Value iRacingSdkNode::_napi_getSessionData(const Napi::CallbackInfo& aInfo
     return Napi::String::New(aInfo.Env(), session);
 }
 
-// TODO: This should return null if the var is not found.
 Napi::Value iRacingSdkNode::_napi_getTelemetryVar(const Napi::CallbackInfo& aInfo)
 {
     Napi::Env env = aInfo.Env();
 
-    int varIndex;
+    // If given malformed input, return null
     if (aInfo.Length() <= 0) {
-        varIndex = 0;
-    } else if (!aInfo[0].IsNumber()) {
-        if (aInfo[0].IsString()) {
-            const char* name = aInfo[0].As<Napi::String>().Utf8Value().c_str();
-            return _getTelemetryVarByName(env, name);
-        }
-        varIndex = 0;
+        return env.Null();
     }
 
-    return _getTelemetryVarByIndex(env, varIndex);
+    auto arg = aInfo[0];
+
+    // When given a number, it should just be converted to an int and used as
+    // the index.
+    if (arg.IsNumber()) {
+        return _getTelemetryVarByIndex(env, arg.ToNumber().Int32Value());
+    }
+
+    // If given a string, we are searching by name. Convert to a c string so we
+    // can use it for lookup.
+    if (arg.IsString()) {
+        auto nameNapiStr = arg.ToString().Utf8Value();
+        auto nameCStr = nameNapiStr.c_str();
+        return _getTelemetryVarByName(env, nameCStr);
+    }
+
+    // All other inputs are invalid, return null.
+    return env.Null();
 }
 
 Napi::Value iRacingSdkNode::_napi_getTelemetryData(const Napi::CallbackInfo& aInfo)
