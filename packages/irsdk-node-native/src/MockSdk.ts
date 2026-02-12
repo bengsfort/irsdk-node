@@ -112,6 +112,10 @@ export class MockSDK implements INativeSDK {
     return mockTelemetry[name] as TelemetryVariable<T[]>;
   }
 
+  public getTelemetryVariableIndex(_name: TelemetryVarKey): number | null {
+    return 0;
+  }
+
   public broadcast<Command extends BroadcastCommand = BroadcastCommand>(
     message: Command,
     ...args: BroadcastCommandArgs<Command>

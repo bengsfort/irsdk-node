@@ -86,6 +86,7 @@ private:
     Napi::Value _napi_getTelemetryData(const Napi::CallbackInfo& aInfo);
     Napi::Value _napi_getTelemetryTypes(const Napi::CallbackInfo& aInfo);
     Napi::Value _napi_getTelemetryVar(const Napi::CallbackInfo& aInfo);
+    Napi::Value _napi_getTelemetryVarIndex(const Napi::CallbackInfo& aInfo);
 
     // Helpers
     Napi::Object _getTelemetryVarByName(const Napi::Env aEnv, const char* aVarName);
