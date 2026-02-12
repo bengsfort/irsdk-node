@@ -1,5 +1,16 @@
 # Changelog
 
+## 4.4.0
+
+### Minor Changes
+
+- de22e68: Adds `useTelemVariableCache` option to the `Config` object that can be passed to `IRacingSDK` during initialisation. This option defaults to true and can be controlled after initialization via `IRacingSDK.useTelemVariableCache`. This option enables a performance optimisation where telemetry variables fetched by name (as a string) through `IRacingSDK.getTelemetryVariable()` will lookup and cache their variable index, which is used to get the variable data instead of the name string. This prevents every name string call of `IRacingSDK.getTelemetryVariable()` from performing a linear search to find the variable with the matching name, which can add up when fetching larger number of variables. In testing, this saw a consistent improvement of 0.01ms when fetching only 10 variables every frame, and 0.02ms when fetching 20 variables every frame. Also added is a `IRacingSDK.resetTelemetryVariableCache()` method for programmatically resetting this variable cache, which can be used in situations where a large number of niche variables for single cars may be accessed frequently, with the process never closing in between.
+
+### Patch Changes
+
+- Updated dependencies [de22e68]
+  - @irsdk-node/native@5.4.0
+
 ## 4.3.1
 
 ### Patch Changes
