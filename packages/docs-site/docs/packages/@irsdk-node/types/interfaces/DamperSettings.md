@@ -1,0 +1,37 @@
+[Packages](../../../README.md) / [@irsdk-node/types](../README.md) / DamperSettings
+
+# Interface: DamperSettings
+
+Defined in: [setup-info.ts:169](https://github.com/bengsfort/irsdk-node/blob/9e4ddd3ce228f719c6a1ab94e7bc0aead0533b07/packages/irsdk-node-types/src/setup-info.ts#L169)
+
+## Properties
+
+### HighSpeedComp
+
+> **HighSpeedComp**: `string`
+
+Defined in: [setup-info.ts:171](https://github.com/bengsfort/irsdk-node/blob/9e4ddd3ce228f719c6a1ab94e7bc0aead0533b07/packages/irsdk-node-types/src/setup-info.ts#L171)
+
+***
+
+### HighSpeedRebound
+
+> **HighSpeedRebound**: `string`
+
+Defined in: [setup-info.ts:173](https://github.com/bengsfort/irsdk-node/blob/9e4ddd3ce228f719c6a1ab94e7bc0aead0533b07/packages/irsdk-node-types/src/setup-info.ts#L173)
+
+***
+
+### LowSpeedComp
+
+> **LowSpeedComp**: `string`
+
+Defined in: [setup-info.ts:170](https://github.com/bengsfort/irsdk-node/blob/9e4ddd3ce228f719c6a1ab94e7bc0aead0533b07/packages/irsdk-node-types/src/setup-info.ts#L170)
+
+***
+
+### LowSpeedRebound
+
+> **LowSpeedRebound**: `string`
+
+Defined in: [setup-info.ts:172](https://github.com/bengsfort/irsdk-node/blob/9e4ddd3ce228f719c6a1ab94e7bc0aead0533b07/packages/irsdk-node-types/src/setup-info.ts#L172)
