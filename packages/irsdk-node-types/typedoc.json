@@ -1,0 +1,12 @@
+{
+  "$schema": "https://typedoc-plugin-markdown.org/schema.json",
+  "name": "@irsdk-node/types",
+  "includeVersion": true,
+  "entryPoints": [
+    "./src/index.ts"
+  ],
+  "json": "./dist/docs.json",
+  "readme": "none",
+  "excludeExternals": true,
+  "excludeInternal": true,
+}

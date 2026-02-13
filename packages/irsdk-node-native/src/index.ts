@@ -31,7 +31,17 @@ try {
   sdkBinding = MockSDK;
 }
 
+/**
+ * Binding class to the native iRacing SDK module.
+ *
+ * See {@link INativeSDK} for documentation.
+ */
 export const NativeSDK = sdkBinding;
+
+/**
+ * Whether or not the SDK is currently being mocked. This is only true on non
+ * Windows platforms where the SDK is not currently supported.
+ */
 // eslint-disable-next-line @typescript-eslint/naming-convention
 export const sdkIsMocked = isMocked;
 
