@@ -8,5 +8,5 @@
   "json": "./dist/docs.json",
   "readme": "none",
   "excludeExternals": true,
-  "excludeInternal": true
+  "excludeInternal": true,
 }

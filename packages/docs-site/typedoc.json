@@ -7,7 +7,7 @@
     "../irsdk-node-types/dist/docs.json",
   ],
   "entryPointStrategy": "merge",
-  "out": "./docs/packages",
+  "out": "./_gen_",
   "cleanOutputDir": true,
   "plugin": [
     "typedoc-plugin-markdown"
@@ -16,4 +16,6 @@
   "classPropertiesFormat": "list",
   "hidePageHeader": true,
   "readme": "none",
+  "hideBreadcrumbs": true,
+  "hidePageTitle": true,
 }
