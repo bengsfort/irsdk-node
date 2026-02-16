@@ -1,4 +1,4 @@
-Defined in: [split-info.ts:1](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/split-info.ts#L1)
+Defined in: [split-info.ts:1](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/split-info.ts#L1)
 
 ## Properties
 
@@ -6,7 +6,7 @@ Defined in: [split-info.ts:1](https://github.com/bengsfort/irsdk-node/blob/3414e
 
 > **SectorNum**: `number`
 
-Defined in: [split-info.ts:2](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/split-info.ts#L2)
+Defined in: [split-info.ts:2](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/split-info.ts#L2)
 
 ***
 
@@ -14,6 +14,6 @@ Defined in: [split-info.ts:2](https://github.com/bengsfort/irsdk-node/blob/3414e
 
 > **SectorStartPct**: `number`
 
-Defined in: [split-info.ts:4](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/split-info.ts#L4)
+Defined in: [split-info.ts:4](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/split-info.ts#L4)
 
 0 - 1 range; 50% is 0.5

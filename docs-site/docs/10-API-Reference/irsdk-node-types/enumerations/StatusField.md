@@ -1,4 +1,4 @@
-Defined in: [defines.ts:18](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/defines.ts#L18)
+Defined in: [defines.ts:18](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L18)
 
 ## Enumeration Members
 
@@ -6,4 +6,4 @@ Defined in: [defines.ts:18](https://github.com/bengsfort/irsdk-node/blob/3414e35
 
 > **Connected**: `1`
 
-Defined in: [defines.ts:19](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/defines.ts#L19)
+Defined in: [defines.ts:19](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L19)

@@ -1,4 +1,4 @@
-Defined in: [irsdk-node.ts:75](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L75)
+Defined in: [irsdk-node.ts:75](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L75)
 
 ## Constructors
 
@@ -6,7 +6,7 @@ Defined in: [irsdk-node.ts:75](https://github.com/bengsfort/irsdk-node/blob/3414
 
 > **new IRacingSDK**(`config?`): `IRacingSDK`
 
-Defined in: [irsdk-node.ts:109](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L109)
+Defined in: [irsdk-node.ts:109](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L109)
 
 #### Parameters
 
@@ -24,7 +24,7 @@ Defined in: [irsdk-node.ts:109](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **autoEnableTelemetry**: `boolean` = `DefaultConfig.autoEnableTelemetry`
 
-Defined in: [irsdk-node.ts:81](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L81)
+Defined in: [irsdk-node.ts:81](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L81)
 
 Enable attempting to auto-start telemetry when starting the SDK (if it is not running).
 
@@ -40,7 +40,7 @@ false
 
 > **logLevel**: `LogLevel` = `DefaultConfig.logLevel`
 
-Defined in: [irsdk-node.ts:87](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L87)
+Defined in: [irsdk-node.ts:87](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L87)
 
 The logging level to use when calling irsdk-node API's. Defaults to 0 (LogLevel.None).
 
@@ -56,7 +56,7 @@ The logging level to use when calling irsdk-node API's. Defaults to 0 (LogLevel.
 
 > **useTelemVariableCache**: `boolean` = `DefaultConfig.useTelemVariableCache`
 
-Defined in: [irsdk-node.ts:100](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L100)
+Defined in: [irsdk-node.ts:100](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L100)
 
 Whether or not to use an internal look-up cache when fetching Telemetry Variables by
 name. This can provide a performance benefit, but may produce unwanted behaviour when
@@ -80,7 +80,7 @@ true
 
 > **get** **currDataVersion**(): `number`
 
-Defined in: [irsdk-node.ts:165](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L165)
+Defined in: [irsdk-node.ts:165](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L165)
 
 The current version number of the session data. Increments internally every time data changes.
 
@@ -96,7 +96,7 @@ The current version number of the session data. Increments internally every time
 
 > **get** **enableLogging**(): `boolean`
 
-Defined in: [irsdk-node.ts:172](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L172)
+Defined in: [irsdk-node.ts:172](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L172)
 
 Whether or not to enable verbose logging in the SDK.
 
@@ -108,7 +108,7 @@ Whether or not to enable verbose logging in the SDK.
 
 > **set** **enableLogging**(`value`): `void`
 
-Defined in: [irsdk-node.ts:176](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L176)
+Defined in: [irsdk-node.ts:176](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L176)
 
 ##### Parameters
 
@@ -128,7 +128,7 @@ Defined in: [irsdk-node.ts:176](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **get** **sessionStatusOK**(): `boolean`
 
-Defined in: [irsdk-node.ts:196](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L196)
+Defined in: [irsdk-node.ts:196](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L196)
 
 ##### Returns
 
@@ -140,7 +140,7 @@ Defined in: [irsdk-node.ts:196](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **broadcastUnsafe**\<`Command`\>(`message`, ...`args`): `boolean`
 
-Defined in: [irsdk-node.ts:543](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L543)
+Defined in: [irsdk-node.ts:543](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L543)
 
 Trigger a broadcast manually, without any safety guard rails. Only use if
 you know what you are doing!
@@ -176,7 +176,7 @@ line before it to disable the type safety.
 
 > **changeCameraNumber**(`driver`, `group`, `camera`): `void`
 
-Defined in: [irsdk-node.ts:443](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L443)
+Defined in: [irsdk-node.ts:443](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L443)
 
 #### Parameters
 
@@ -196,7 +196,7 @@ Defined in: [irsdk-node.ts:443](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **changeCameraPosition**(`position`, `group`, `camera`): `void`
 
-Defined in: [irsdk-node.ts:438](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L438)
+Defined in: [irsdk-node.ts:438](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L438)
 
 #### Parameters
 
@@ -216,7 +216,7 @@ Defined in: [irsdk-node.ts:438](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **changeCameraState**(`state`): `void`
 
-Defined in: [irsdk-node.ts:447](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L447)
+Defined in: [irsdk-node.ts:447](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L447)
 
 #### Parameters
 
@@ -234,7 +234,7 @@ Defined in: [irsdk-node.ts:447](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **changeFFB**(`mode`, `amount`): `void`
 
-Defined in: [irsdk-node.ts:524](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L524)
+Defined in: [irsdk-node.ts:524](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L524)
 
 #### Parameters
 
@@ -253,7 +253,7 @@ Defined in: [irsdk-node.ts:524](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **changeReplayPosition**(`position`, `frame`): `void`
 
-Defined in: [irsdk-node.ts:455](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L455)
+Defined in: [irsdk-node.ts:455](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L455)
 
 #### Parameters
 
@@ -272,7 +272,7 @@ Defined in: [irsdk-node.ts:455](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **changeReplaySpeed**(`speed`, `slowMotion`): `void`
 
-Defined in: [irsdk-node.ts:451](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L451)
+Defined in: [irsdk-node.ts:451](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L451)
 
 #### Parameters
 
@@ -291,7 +291,7 @@ Defined in: [irsdk-node.ts:451](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **changeReplayState**(`state`): `void`
 
-Defined in: [irsdk-node.ts:463](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L463)
+Defined in: [irsdk-node.ts:463](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L463)
 
 #### Parameters
 
@@ -309,7 +309,7 @@ Defined in: [irsdk-node.ts:463](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **enableTelemetry**(`enabled`): `void`
 
-Defined in: [irsdk-node.ts:429](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L429)
+Defined in: [irsdk-node.ts:429](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L429)
 
 #### Parameters
 
@@ -327,7 +327,7 @@ Defined in: [irsdk-node.ts:429](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **getCameraInfo**(): `CameraInfo` \| `null`
 
-Defined in: [irsdk-node.ts:298](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L298)
+Defined in: [irsdk-node.ts:298](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L298)
 
 Gets the current camera info from the session data.
 
@@ -341,7 +341,7 @@ Gets the current camera info from the session data.
 
 > **getCarSetupInfo**(): `CarSetupInfo` \| `null`
 
-Defined in: [irsdk-node.ts:334](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L334)
+Defined in: [irsdk-node.ts:334](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L334)
 
 Gets the current session info from the session data.
 
@@ -355,7 +355,7 @@ Gets the current session info from the session data.
 
 > **getDriverInfo**(): `DriverInfo` \| `null`
 
-Defined in: [irsdk-node.ts:316](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L316)
+Defined in: [irsdk-node.ts:316](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L316)
 
 Gets the current driver info from the session data.
 
@@ -369,7 +369,7 @@ Gets the current driver info from the session data.
 
 > **getRadioInfo**(): `RadioInfo` \| `null`
 
-Defined in: [irsdk-node.ts:307](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L307)
+Defined in: [irsdk-node.ts:307](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L307)
 
 Gets the current radio info from the session data.
 
@@ -383,7 +383,7 @@ Gets the current radio info from the session data.
 
 > **getSessionConnectionID**(): `number`
 
-Defined in: [irsdk-node.ts:272](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L272)
+Defined in: [irsdk-node.ts:272](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L272)
 
 Gets the ID for the current (or previous, if none active) connection.
 
@@ -397,7 +397,7 @@ Gets the ID for the current (or previous, if none active) connection.
 
 > **getSessionData**(): `SessionData` \| `null`
 
-Defined in: [irsdk-node.ts:247](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L247)
+Defined in: [irsdk-node.ts:247](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L247)
 
 Gets the current session data (from yaml format).
 
@@ -411,7 +411,7 @@ Gets the current session data (from yaml format).
 
 > **getSessionInfo**(): `SessionList` \| `null`
 
-Defined in: [irsdk-node.ts:289](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L289)
+Defined in: [irsdk-node.ts:289](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L289)
 
 Gets the current session info from the session data.
 
@@ -425,7 +425,7 @@ Gets the current session info from the session data.
 
 > **getSessionVersionNum**(): `number`
 
-Defined in: [irsdk-node.ts:265](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L265)
+Defined in: [irsdk-node.ts:265](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L265)
 
 Gets the version number of the latest session data from the SDK.
 
@@ -439,7 +439,7 @@ Gets the version number of the latest session data from the SDK.
 
 > **getSplitInfo**(): `SplitTimeInfo` \| `null`
 
-Defined in: [irsdk-node.ts:325](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L325)
+Defined in: [irsdk-node.ts:325](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L325)
 
 Gets the current split time info from the session data.
 
@@ -453,7 +453,7 @@ Gets the current split time info from the session data.
 
 > **getTelemetry**(): `TelemetryVarList`
 
-Defined in: [irsdk-node.ts:346](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L346)
+Defined in: [irsdk-node.ts:346](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L346)
 
 Get the current value of the telemetry variables.
 
@@ -473,7 +473,7 @@ re-requesting it via this function.
 
 > **getTelemetryVariable**\<`T`\>(`index`): `TelemetryVariable`\<`T`[]\> \| `null`
 
-Defined in: [irsdk-node.ts:367](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L367)
+Defined in: [irsdk-node.ts:367](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L367)
 
 Request the value of the given telemetry variable.
 
@@ -497,7 +497,7 @@ Request the value of the given telemetry variable.
 
 > **getTelemetryVariable**\<`T`\>(`varName`): `TelemetryVariable`\<`T`[]\> \| `null`
 
-Defined in: [irsdk-node.ts:375](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L375)
+Defined in: [irsdk-node.ts:375](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L375)
 
 Request the value of the given telemetry variable.
 
@@ -523,7 +523,7 @@ Request the value of the given telemetry variable.
 
 > **getWeekendInfo**(): `WeekendInfo` \| `null`
 
-Defined in: [irsdk-node.ts:280](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L280)
+Defined in: [irsdk-node.ts:280](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L280)
 
 Gets the current weekend info from the session data
 
@@ -537,7 +537,7 @@ Gets the current weekend info from the session data
 
 > **ready**(): `Promise`\<`boolean`\>
 
-Defined in: [irsdk-node.ts:156](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L156)
+Defined in: [irsdk-node.ts:156](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L156)
 
 Wait for the SDK module to resolve and load.
 
@@ -555,7 +555,7 @@ This is no longer needed as of v4.0.3. Please remove.
 
 > **reloadAllTextures**(): `void`
 
-Defined in: [irsdk-node.ts:471](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L471)
+Defined in: [irsdk-node.ts:471](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L471)
 
 #### Returns
 
@@ -567,7 +567,7 @@ Defined in: [irsdk-node.ts:471](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **reloadCarTextures**(`car`): `void`
 
-Defined in: [irsdk-node.ts:475](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L475)
+Defined in: [irsdk-node.ts:475](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L475)
 
 #### Parameters
 
@@ -585,7 +585,7 @@ Defined in: [irsdk-node.ts:475](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **resetTelemetryVariableCache**(): `void`
 
-Defined in: [irsdk-node.ts:424](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L424)
+Defined in: [irsdk-node.ts:424](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L424)
 
 Resets the internal telemetry variable lookup cache. This occurs automatically
 whenever the SDK starts and stops, and is only necessary to call if:
@@ -609,7 +609,7 @@ has changed cars, to make sure there are no stale variables in the cache.
 
 > **restartTelemetry**(): `void`
 
-Defined in: [irsdk-node.ts:434](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L434)
+Defined in: [irsdk-node.ts:434](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L434)
 
 #### Returns
 
@@ -621,7 +621,7 @@ Defined in: [irsdk-node.ts:434](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **searchReplay**(`command`): `void`
 
-Defined in: [irsdk-node.ts:459](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L459)
+Defined in: [irsdk-node.ts:459](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L459)
 
 #### Parameters
 
@@ -639,7 +639,7 @@ Defined in: [irsdk-node.ts:459](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **startSDK**(): `boolean`
 
-Defined in: [irsdk-node.ts:204](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L204)
+Defined in: [irsdk-node.ts:204](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L204)
 
 Starts the native iRacing SDK and begins subscribing for data.
 
@@ -655,7 +655,7 @@ If the SDK started successfully.
 
 > **stopSDK**(): `void`
 
-Defined in: [irsdk-node.ts:222](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L222)
+Defined in: [irsdk-node.ts:222](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L222)
 
 Stops the SDK from running and resets the data version.
 
@@ -669,7 +669,7 @@ Stops the SDK from running and resets the data version.
 
 > **triggerChatMacro**(`macro`): `void`
 
-Defined in: [irsdk-node.ts:492](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L492)
+Defined in: [irsdk-node.ts:492](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L492)
 
 #### Parameters
 
@@ -687,7 +687,7 @@ Defined in: [irsdk-node.ts:492](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **triggerChatState**(`state`): `void`
 
-Defined in: [irsdk-node.ts:483](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L483)
+Defined in: [irsdk-node.ts:483](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L483)
 
 #### Parameters
 
@@ -705,7 +705,7 @@ Defined in: [irsdk-node.ts:483](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **triggerPitChange**(`command`, `amount`): `void`
 
-Defined in: [irsdk-node.ts:512](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L512)
+Defined in: [irsdk-node.ts:512](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L512)
 
 #### Parameters
 
@@ -724,7 +724,7 @@ Defined in: [irsdk-node.ts:512](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **triggerPitClearCommand**(`command`): `void`
 
-Defined in: [irsdk-node.ts:497](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L497)
+Defined in: [irsdk-node.ts:497](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L497)
 
 #### Parameters
 
@@ -742,7 +742,7 @@ Defined in: [irsdk-node.ts:497](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **triggerPitCommand**(`command`): `void`
 
-Defined in: [irsdk-node.ts:508](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L508)
+Defined in: [irsdk-node.ts:508](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L508)
 
 #### Parameters
 
@@ -760,7 +760,7 @@ Defined in: [irsdk-node.ts:508](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **triggerReplaySessionSearch**(`session`, `time`): `void`
 
-Defined in: [irsdk-node.ts:467](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L467)
+Defined in: [irsdk-node.ts:467](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L467)
 
 #### Parameters
 
@@ -779,7 +779,7 @@ Defined in: [irsdk-node.ts:467](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **triggerVideoCapture**(`command`): `void`
 
-Defined in: [irsdk-node.ts:528](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L528)
+Defined in: [irsdk-node.ts:528](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L528)
 
 #### Parameters
 
@@ -797,7 +797,7 @@ Defined in: [irsdk-node.ts:528](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **waitForData**(`timeout?`): `boolean`
 
-Defined in: [irsdk-node.ts:232](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L232)
+Defined in: [irsdk-node.ts:232](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L232)
 
 Wait for new data from the sdk.
 
@@ -817,7 +817,7 @@ Wait for new data from the sdk.
 
 > `static` **IsSimRunning**(): `Promise`\<`boolean`\>
 
-Defined in: [irsdk-node.ts:186](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node/src/irsdk-node.ts#L186)
+Defined in: [irsdk-node.ts:186](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L186)
 
 Checks whether the simulation service is running.
 

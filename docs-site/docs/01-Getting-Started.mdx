@@ -1,0 +1,105 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Getting Started
+
+`irsdk-node` is a [Node.js](https://nodejs.org/) library for consuming data from and dispatching commands to [iRacing](https://www.iracing.com/) via JavaScript and [TypeScript](https://www.typescriptlang.org/). It is written in TypeScript and C++ and aims to hide the complexity of consuming data from the iRacing SDK, creating an easy-to-use and safe interface to consume iRacing SDK data without worrying about the details.
+
+## Quickstart
+
+Install using your projects package manager.
+
+<Tabs>
+<TabItem value="npm" label="npm">
+
+```shell
+npm install irsdk-node
+```
+
+</TabItem>
+<TabItem value="yarn" label="Yarn">
+
+```shell
+yarn add irsdk-node
+```
+
+</TabItem>
+<TabItem value="pnpm" label="pnpm">
+
+```shell
+pnpm add irsdk-node
+```
+
+</TabItem>
+</Tabs>
+
+Once added to your project, import the `IRacingSDK` class and start consuming data.
+
+<Tabs>
+<TabItem value="single" label="One-time use">
+
+```ts
+import { IRacingSDK } from "irsdk-node";
+
+// Check the iRacing service is running.
+if (await IRacingSDK.IsSimRunning()) {
+  const sdk = new IRacingSDK();
+  
+  // Wait for data from iRacing. By default, it will wait for 16ms (60fps) for data.
+  if (sdk.waitForData()) {
+    const session = sdk.getSessionData();
+    const telemetry = sdk.getTelemetry();
+
+    // Do something with data.
+  } else {
+    // No data found, sim is not running or iRacing session not active.
+  }
+}
+```
+
+</TabItem>
+<TabItem value="loop" label="Continuous loop">
+
+```ts
+import { IRacingSDK } from "irsdk-node";
+
+const TIMEOUT = Math.floor((1 / 60) * 1000); // 60fps
+const sdk = new IRacingSDK({
+  // You can also configure auto-enabling telemetry.
+  autoEnableTelemetry: true,
+});
+
+// Create a loop to use if the service is running.
+function tick(): void {
+  if (sdk.waitForData(TIMEOUT)) {
+    const session = sdk.getSessionData();
+    const telemetry = sdk.getTelemetry();
+
+    // Do something with the data.
+  } else {
+    // Disconnected.
+  }
+
+  // Schedule another tick after a short delay.
+  setTimeout(tick, TIMEOUT);
+}
+
+// Check if iRacing is installed and running on the current machine.
+// There is no need to run the loop if iRacing is not installed or running.
+if (await IRacingSDK.IsSimRunning()) {
+  tick();
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Advanced usage
+
+### Custom abstractions (`@irsdk-node/native`)
+
+While `irsdk-node` will provided baked-in optimisations for consuming iRacing data and work with most use cases, in some cases it might be valuable to create your own wrapper that better suits your applications needs. The native module that interfaces with the iRacing SDK directly is available for exactly this use case through the [`@irsdk-node/native`](https://www.npmjs.com/package/@irsdk-node/native) package. This is the same package that `irsdk-node` is built on and provides you with a way to interact with the SDK directly and build your own abstractions on top of it.
+
+### Full type access (`@irsdk-node/types`)
+
+All of the iRacing SDK types are also independently exposed to allow for building type-safe custom abstractions as well as accessing types in environments where the main libraries cannot be used, for example Electron renderer processes. The [@irsdk-node/types](https://www.npmjs.com/package/@irsdk-node/types) package is available for these use cases and offers all of the core typings, enums, and structures that `irsdk-node` provides while remaining completely environment agnostic.

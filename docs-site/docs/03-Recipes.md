@@ -1,0 +1,151 @@
+# Recipes
+
+When creating applications based on iRacing data you have access to a lot of data, and knowing where that data is and how to access it is half of the battle. Here you can find some common patterns that may help jumpstart your project.
+
+## Detecting joining/leaving an iRacing session
+
+For long running processes a common need is to detect when the local player has joined an iRacing session so you can start processing data. Similarly, once they leave the session you need to detect it so that you can stop your session processing logic.
+
+This can easily be done by tracking the result of [`sdk.waitForData()`](./10-API-Reference/irsdk-node/classes/IRacingSDK.md#waitfordata) as it directly tells when a session is active, meaning: if it returns the `true` after previously returning `false` then the player has joined a session, and if it returns `false` after previously returning `true` the player has left a session.
+
+```ts
+let isInSession = false;
+
+if (sdk.waitForData()) {
+  if (!isInSession) {
+    isInSession = true;
+
+    // Perform your 'join session' logic.
+  }
+
+  // ...
+} else {
+  if (isInSession) {
+    isInSession = false;
+
+    // Perform your 'left session' logic.
+  }
+
+  // ...
+}
+```
+
+Because of the way pulling SDK data works, attempting to pull data from the SDK too quickly can result in false positives where [`sdk.waitForData()`](./10-API-Reference/irsdk-node/classes/IRacingSDK.md#waitfordata)  can return false when the player is actually connected. For this to be reliable it's important to make sure you don't attempt to pull data from the SDK faster than 60 fps (~16ms) to avoid these false positives.
+
+## Getting the local players Driver Info
+
+Most data provided by the SDK is stored in arrays, and driver data is no different. This means that when it comes to pulling the local players driver info for example, you need to first identify what their _car index_ is. The car index is simply the index that particular players is located within the arrays. This can be done in two ways:
+
+```ts
+// Via the DriverInfo within session data.
+const sessionData = sdk.getSessionData();
+const localDriverIndex = sessionData.DriverInfo.DriverCarIdx;
+
+// Via the `PlayerCarIdx` telemetry variable.
+const [ localDriverIndex ] = sdk.getTelemetryVariable<number>('PlayerCarIdx').value;
+```
+
+Once you have the local drivers index, it is possible to use it both in session data as well as telemetry variables to access data about the player.
+
+```ts
+// Example: Get the local players current car from session data.
+const sessionData = sdk.getSessionData();
+const localDriver = sessionData.DriverInfo.Drivers[localDriverIndex];
+const currentCar = localDriver.CarScreenName;
+
+// Example: Get the local players percentage distance around the lap from telemetry.
+//
+// Telemetry variables starting with 'CarIdx' generally return an array of data for
+// every car in the server, accessible via their car index.
+const lapDistancePct = sdk.getTelemetryVariable<number>('CarIdxLapDistPct').value;
+const localDriverDistance = lapDistancePct[localDriverIndex];
+```
+
+## Identifying a specific iRacing session
+
+Sometimes you want to avoid cleanup until you know the player is not returning back to the same session they were previously in. This is different then general session detection in that on top of detecting whether the player is in a server or not, you need to also keep track of the ID of the current iRacing session so you can identify when they have gone to a different server/race.
+
+```ts
+// Store the session ID somewhere.
+let cachedSessionID: number;
+
+// Check to see if the session ID changed.
+const currentSessionID = sdk.getWeekendInfo().SessionID;
+if (currentSessionID !== currentSessionID) {
+  // Update cached session ID.
+  cachedSessionID = currentSessionID;
+
+  // The player has joined a different server/race than previously.
+}
+```
+
+There are technically other ways to detect this as well, for example tracking the current track, race type, or car, but those can easily lead to false-positives.
+
+## Incident detection & Parsing
+
+Incident information is exposed via bit flags, and require bit masking to extract the underlying information. This can easily be abstracted into helper functions for getting the incident points as well as incident reasons.
+
+```ts
+import { IncidentFlags, IncidentFlagMask } from 'irsdk-node';
+
+// Helper for extracting the incident points of a given incident.
+function getIncidentPenalty(flags: IncidentFlags): number {
+  const penalty = flags & IncidentFlagMask.Penalty;
+
+  switch (penalty) {
+    case IncidentFlags.PenaltyOneX:
+      return 1;
+
+    case IncidentFlags.PenaltyTwoX:
+      return 2;
+
+    case IncidentFlags.PenaltyFourX:
+      return 4;
+
+    case IncidentFlags.NoReport:
+    case IncidentFlags.PenaltyZeroX:
+    default:
+      return 0;
+  }
+}
+
+// Helper for extracting the reason of an accident.
+function getIncidentReason(flags: IncidentFlags): string | undefined {
+  const reason = flags & IncidentFlagMask.Report;
+
+  switch (reason) {
+    case IncidentFlags.ReportCollisionWithCar:
+      return 'Collision with car';
+
+    case IncidentFlags.ReportCollisionWithWorld:
+      return 'Collision with world';
+
+    case IncidentFlags.ReportCollisionWithWorldOngoing:
+      return 'Collision with world (ongoing)';
+
+    case IncidentFlags.ReportContactWithCar:
+      return 'Contact with car';
+
+    case IncidentFlags.ReportContactWithWorld:
+      return 'Contact with world';
+
+    case IncidentFlags.ReportOffTrack:
+      return 'Off track';
+
+    case IncidentFlags.ReportOffTrackOngoing:
+      return 'Off track (ongoing)';
+
+    case IncidentFlags.ReportOutOfControl:
+      return 'Out of control';
+
+    case IncidentFlags.NoReport:
+    default:
+      return;
+  }
+}
+
+const [ incident ] = sdk.getTelemetryVariable("PlayerIncidents").value;
+
+const penalty = getIncidentPenalty(incident);
+const reason = getIncidentReason(incident);
+```

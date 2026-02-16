@@ -1,4 +1,4 @@
-Defined in: [setup-info.ts:109](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/setup-info.ts#L109)
+Defined in: [setup-info.ts:109](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/setup-info.ts#L109)
 
 ## Properties
 
@@ -6,7 +6,7 @@ Defined in: [setup-info.ts:109](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **BrakePressure**: `string`
 
-Defined in: [setup-info.ts:111](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/setup-info.ts#L111)
+Defined in: [setup-info.ts:111](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/setup-info.ts#L111)
 
 ***
 
@@ -14,7 +14,7 @@ Defined in: [setup-info.ts:111](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **BrakePressureBias**: `string`
 
-Defined in: [setup-info.ts:112](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/setup-info.ts#L112)
+Defined in: [setup-info.ts:112](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/setup-info.ts#L112)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [setup-info.ts:112](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **CrossWeight**: `string`
 
-Defined in: [setup-info.ts:116](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/setup-info.ts#L116)
+Defined in: [setup-info.ts:116](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/setup-info.ts#L116)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [setup-info.ts:116](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **NoseWeight**: `string`
 
-Defined in: [setup-info.ts:115](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/setup-info.ts#L115)
+Defined in: [setup-info.ts:115](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/setup-info.ts#L115)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [setup-info.ts:115](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **SteeringOffset**: `string`
 
-Defined in: [setup-info.ts:114](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/setup-info.ts#L114)
+Defined in: [setup-info.ts:114](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/setup-info.ts#L114)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [setup-info.ts:114](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **SteeringPinion**: `string`
 
-Defined in: [setup-info.ts:113](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/setup-info.ts#L113)
+Defined in: [setup-info.ts:113](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/setup-info.ts#L113)
 
 ***
 
@@ -54,4 +54,4 @@ Defined in: [setup-info.ts:113](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **Wheelbase**: `string`
 
-Defined in: [setup-info.ts:110](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/setup-info.ts#L110)
+Defined in: [setup-info.ts:110](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/setup-info.ts#L110)

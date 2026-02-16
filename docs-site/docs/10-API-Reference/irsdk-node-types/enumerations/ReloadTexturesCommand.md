@@ -1,4 +1,4 @@
-Defined in: [defines.ts:579](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/defines.ts#L579)
+Defined in: [defines.ts:579](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L579)
 
 Available texture reload commands, to be used with message broadcasting.
 Represents `irsdk_ReloadTexturesMode`
@@ -9,7 +9,7 @@ Represents `irsdk_ReloadTexturesMode`
 
 > **All**: `0`
 
-Defined in: [defines.ts:581](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/defines.ts#L581)
+Defined in: [defines.ts:581](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L581)
 
 reload all textures
 
@@ -19,6 +19,6 @@ reload all textures
 
 > **CarIndex**: `1`
 
-Defined in: [defines.ts:583](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/defines.ts#L583)
+Defined in: [defines.ts:583](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L583)
 
 reload only textures for the specific car index

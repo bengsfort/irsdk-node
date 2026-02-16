@@ -1,4 +1,4 @@
-Defined in: [defines.ts:660](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/defines.ts#L660)
+Defined in: [defines.ts:660](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L660)
 
 Available video capture commands, to be used with message broadcasting.
 Represents `irsdk_VideoCaptureMode`
@@ -9,7 +9,7 @@ Represents `irsdk_VideoCaptureMode`
 
 > **EndVideoCapture**: `2`
 
-Defined in: [defines.ts:666](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/defines.ts#L666)
+Defined in: [defines.ts:666](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L666)
 
 stop capturing video
 
@@ -19,7 +19,7 @@ stop capturing video
 
 > **HideVideoTimer**: `5`
 
-Defined in: [defines.ts:672](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/defines.ts#L672)
+Defined in: [defines.ts:672](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L672)
 
 hide video timer
 
@@ -29,7 +29,7 @@ hide video timer
 
 > **ShowVideoTimer**: `4`
 
-Defined in: [defines.ts:670](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/defines.ts#L670)
+Defined in: [defines.ts:670](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L670)
 
 show video timer in upper left corner of display
 
@@ -39,7 +39,7 @@ show video timer in upper left corner of display
 
 > **StartVideoCapture**: `1`
 
-Defined in: [defines.ts:664](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/defines.ts#L664)
+Defined in: [defines.ts:664](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L664)
 
 start capturing video
 
@@ -49,7 +49,7 @@ start capturing video
 
 > **ToggleVideoCapture**: `3`
 
-Defined in: [defines.ts:668](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/defines.ts#L668)
+Defined in: [defines.ts:668](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L668)
 
 toggle video capture on/off
 
@@ -59,6 +59,6 @@ toggle video capture on/off
 
 > **TriggerScreenShot**: `0`
 
-Defined in: [defines.ts:662](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/defines.ts#L662)
+Defined in: [defines.ts:662](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L662)
 
 save a screenshot to disk

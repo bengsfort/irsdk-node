@@ -1,4 +1,4 @@
-Defined in: [session-yaml.ts:14](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/session-yaml.ts#L14)
+Defined in: [session-yaml.ts:14](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/session-yaml.ts#L14)
 
 Information about the current session, stored as yaml.
 Does not update as much as telemetry.
@@ -13,7 +13,7 @@ the CarSetup types are incomplete. Help wanted!
 
 > **CameraInfo**: [`CameraInfo`](CameraInfo.md)
 
-Defined in: [session-yaml.ts:17](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/session-yaml.ts#L17)
+Defined in: [session-yaml.ts:17](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/session-yaml.ts#L17)
 
 ***
 
@@ -21,7 +21,7 @@ Defined in: [session-yaml.ts:17](https://github.com/bengsfort/irsdk-node/blob/34
 
 > **CarSetup**: [`CarSetupInfo`](CarSetupInfo.md)
 
-Defined in: [session-yaml.ts:21](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/session-yaml.ts#L21)
+Defined in: [session-yaml.ts:21](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/session-yaml.ts#L21)
 
 ***
 
@@ -29,7 +29,7 @@ Defined in: [session-yaml.ts:21](https://github.com/bengsfort/irsdk-node/blob/34
 
 > **DriverInfo**: [`DriverInfo`](DriverInfo.md)
 
-Defined in: [session-yaml.ts:19](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/session-yaml.ts#L19)
+Defined in: [session-yaml.ts:19](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/session-yaml.ts#L19)
 
 ***
 
@@ -37,7 +37,7 @@ Defined in: [session-yaml.ts:19](https://github.com/bengsfort/irsdk-node/blob/34
 
 > **RadioInfo**: [`RadioInfo`](RadioInfo.md)
 
-Defined in: [session-yaml.ts:18](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/session-yaml.ts#L18)
+Defined in: [session-yaml.ts:18](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/session-yaml.ts#L18)
 
 ***
 
@@ -45,7 +45,7 @@ Defined in: [session-yaml.ts:18](https://github.com/bengsfort/irsdk-node/blob/34
 
 > **SessionInfo**: [`SessionList`](SessionList.md)
 
-Defined in: [session-yaml.ts:16](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/session-yaml.ts#L16)
+Defined in: [session-yaml.ts:16](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/session-yaml.ts#L16)
 
 ***
 
@@ -53,7 +53,7 @@ Defined in: [session-yaml.ts:16](https://github.com/bengsfort/irsdk-node/blob/34
 
 > **SplitTimeInfo**: [`SplitTimeInfo`](SplitTimeInfo.md)
 
-Defined in: [session-yaml.ts:20](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/session-yaml.ts#L20)
+Defined in: [session-yaml.ts:20](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/session-yaml.ts#L20)
 
 ***
 
@@ -61,4 +61,4 @@ Defined in: [session-yaml.ts:20](https://github.com/bengsfort/irsdk-node/blob/34
 
 > **WeekendInfo**: [`WeekendInfo`](WeekendInfo.md)
 
-Defined in: [session-yaml.ts:15](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/session-yaml.ts#L15)
+Defined in: [session-yaml.ts:15](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/session-yaml.ts#L15)

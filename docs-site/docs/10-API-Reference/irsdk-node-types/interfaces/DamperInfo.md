@@ -1,4 +1,4 @@
-Defined in: [setup-info.ts:176](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/setup-info.ts#L176)
+Defined in: [setup-info.ts:176](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/setup-info.ts#L176)
 
 ## Properties
 
@@ -6,7 +6,7 @@ Defined in: [setup-info.ts:176](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **LeftFrontDamper**: [`DamperSettings`](DamperSettings.md)
 
-Defined in: [setup-info.ts:177](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/setup-info.ts#L177)
+Defined in: [setup-info.ts:177](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/setup-info.ts#L177)
 
 ***
 
@@ -14,7 +14,7 @@ Defined in: [setup-info.ts:177](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **LeftRearDamper**: [`DamperSettings`](DamperSettings.md)
 
-Defined in: [setup-info.ts:178](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/setup-info.ts#L178)
+Defined in: [setup-info.ts:178](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/setup-info.ts#L178)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [setup-info.ts:178](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **RightFrontDamper**: [`DamperSettings`](DamperSettings.md)
 
-Defined in: [setup-info.ts:179](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/setup-info.ts#L179)
+Defined in: [setup-info.ts:179](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/setup-info.ts#L179)
 
 ***
 
@@ -30,4 +30,4 @@ Defined in: [setup-info.ts:179](https://github.com/bengsfort/irsdk-node/blob/341
 
 > **RightRearDamper**: [`DamperSettings`](DamperSettings.md)
 
-Defined in: [setup-info.ts:180](https://github.com/bengsfort/irsdk-node/blob/3414e3512ef94d855dcb9b1b26e3e21ded3dddfc/packages/irsdk-node-types/src/setup-info.ts#L180)
+Defined in: [setup-info.ts:180](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/setup-info.ts#L180)
