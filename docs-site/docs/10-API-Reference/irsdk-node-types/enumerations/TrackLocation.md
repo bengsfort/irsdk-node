@@ -1,4 +1,4 @@
-Defined in: [defines.ts:87](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L87)
+Defined in: [defines.ts:87](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L87)
 
 Maps the general location within the world a car/driver might be.
 
@@ -10,7 +10,7 @@ Represents irsdk_TrkLoc
 
 > **ApproachingPits**: `2`
 
-Defined in: [defines.ts:96](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L96)
+Defined in: [defines.ts:96](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L96)
 
 Indicates the lead in to pit road, as well as pit road itself (where limits
 are enforced). If you just want to know that your on the pit road surface,
@@ -22,7 +22,7 @@ look at the 'OnPitRoad' telemetry variable.
 
 > **InPitStall**: `1`
 
-Defined in: [defines.ts:90](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L90)
+Defined in: [defines.ts:90](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L90)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [defines.ts:90](https://github.com/bengsfort/irsdk-node/blob/e132d1e
 
 > **NotInWorld**: `-1`
 
-Defined in: [defines.ts:88](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L88)
+Defined in: [defines.ts:88](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L88)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [defines.ts:88](https://github.com/bengsfort/irsdk-node/blob/e132d1e
 
 > **OffTrack**: `0`
 
-Defined in: [defines.ts:89](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L89)
+Defined in: [defines.ts:89](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L89)
 
 ***
 
@@ -46,4 +46,4 @@ Defined in: [defines.ts:89](https://github.com/bengsfort/irsdk-node/blob/e132d1e
 
 > **OnTrack**: `3`
 
-Defined in: [defines.ts:97](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L97)
+Defined in: [defines.ts:97](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L97)

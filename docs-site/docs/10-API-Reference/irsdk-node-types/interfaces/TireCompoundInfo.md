@@ -1,4 +1,4 @@
-Defined in: [setup-info.ts:8](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/setup-info.ts#L8)
+Defined in: [setup-info.ts:8](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/setup-info.ts#L8)
 
 ## Properties
 
@@ -6,4 +6,4 @@ Defined in: [setup-info.ts:8](https://github.com/bengsfort/irsdk-node/blob/e132d
 
 > **TireCompound**: `string`
 
-Defined in: [setup-info.ts:9](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/setup-info.ts#L9)
+Defined in: [setup-info.ts:9](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/setup-info.ts#L9)

@@ -63,7 +63,7 @@ if (sdk.waitForData()) {
 }
 ```
 
-2. Disable variable lookup caching completely.
+1. Disable variable lookup caching completely.
 
 ```ts
 // At runtime:
@@ -75,4 +75,4 @@ const sdk = new IRacingSDK({
 });
 ```
 
-You can find more information and more patterns in the [Recipes](./03-Recipes.md) section.
+You can find more information and more patterns in the [Common Patterns](./03-Common-Patterns.mdx) section, or take a look at the API's directly within the [API Reference](./10-API-Reference/irsdk-node/classes/IRacingSDK.md).

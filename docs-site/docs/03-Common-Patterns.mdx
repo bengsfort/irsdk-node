@@ -1,6 +1,11 @@
-# Recipes
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Common Patterns
 
 When creating applications based on iRacing data you have access to a lot of data, and knowing where that data is and how to access it is half of the battle. Here you can find some common patterns that may help jumpstart your project.
+
+For more common patterns and to see fully working references, check out the [examples](https://github.com/bengsfort/irsdk-node/tree/main/examples) directory on Github.
 
 ## Detecting joining/leaving an iRacing session
 
@@ -83,11 +88,24 @@ There are technically other ways to detect this as well, for example tracking th
 
 ## Incident detection & Parsing
 
-Incident information is exposed via bit flags, and require bit masking to extract the underlying information. This can easily be abstracted into helper functions for getting the incident points as well as incident reasons.
+Incident information is exposed via bit flags, and require bit masking to extract the underlying information.
 
 ```ts
 import { IncidentFlags, IncidentFlagMask } from 'irsdk-node';
 
+const [ incident ] = sdk.getTelemetryVariable("PlayerIncidents").value;
+
+// Apply the Penalty and Report masks to the incident flag to extract the penalty/reason.
+const penalty = incident & IncidentFlagMask.Penalty;
+const reason = incident & IncidentFlagMask.Report;
+```
+
+After masking, you will have variables that can be checked against the [`IncidentFlags`](./10-API-Reference/irsdk-node-types/enumerations/IncidentFlags.md) enum to determine the exact incident points given and reason. This can easily be abstracted to helper functions, allowing you to express the values as you like.
+
+<Tabs>
+<TabItem value="penalty" label="Penalty points helper">
+
+```ts
 // Helper for extracting the incident points of a given incident.
 function getIncidentPenalty(flags: IncidentFlags): number {
   const penalty = flags & IncidentFlagMask.Penalty;
@@ -109,6 +127,14 @@ function getIncidentPenalty(flags: IncidentFlags): number {
   }
 }
 
+const [ incident ] = sdk.getTelemetryVariable("PlayerIncidents").value;
+const penalty = getIncidentPenalty(incident);
+```
+
+</TabItem>
+<TabItem value="reason" label="Incident reason helper">
+
+```ts
 // Helper for extracting the reason of an accident.
 function getIncidentReason(flags: IncidentFlags): string | undefined {
   const reason = flags & IncidentFlagMask.Report;
@@ -145,7 +171,8 @@ function getIncidentReason(flags: IncidentFlags): string | undefined {
 }
 
 const [ incident ] = sdk.getTelemetryVariable("PlayerIncidents").value;
-
-const penalty = getIncidentPenalty(incident);
 const reason = getIncidentReason(incident);
 ```
+
+</TabItem>
+</Tabs>

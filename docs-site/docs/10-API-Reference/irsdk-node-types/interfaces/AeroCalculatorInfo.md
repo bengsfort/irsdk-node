@@ -1,4 +1,4 @@
-Defined in: [setup-info.ts:19](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/setup-info.ts#L19)
+Defined in: [setup-info.ts:19](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/setup-info.ts#L19)
 
 ## Properties
 
@@ -6,7 +6,7 @@ Defined in: [setup-info.ts:19](https://github.com/bengsfort/irsdk-node/blob/e132
 
 > **AeroBalance**: `string`
 
-Defined in: [setup-info.ts:22](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/setup-info.ts#L22)
+Defined in: [setup-info.ts:22](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/setup-info.ts#L22)
 
 ***
 
@@ -14,7 +14,7 @@ Defined in: [setup-info.ts:22](https://github.com/bengsfort/irsdk-node/blob/e132
 
 > **DownforceToDrag**: `string`
 
-Defined in: [setup-info.ts:23](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/setup-info.ts#L23)
+Defined in: [setup-info.ts:23](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/setup-info.ts#L23)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [setup-info.ts:23](https://github.com/bengsfort/irsdk-node/blob/e132
 
 > **FrontRhAtSpeed**: `string`
 
-Defined in: [setup-info.ts:20](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/setup-info.ts#L20)
+Defined in: [setup-info.ts:20](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/setup-info.ts#L20)
 
 ***
 
@@ -30,4 +30,4 @@ Defined in: [setup-info.ts:20](https://github.com/bengsfort/irsdk-node/blob/e132
 
 > **RearRhAtSpeed**: `string`
 
-Defined in: [setup-info.ts:21](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/setup-info.ts#L21)
+Defined in: [setup-info.ts:21](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/setup-info.ts#L21)

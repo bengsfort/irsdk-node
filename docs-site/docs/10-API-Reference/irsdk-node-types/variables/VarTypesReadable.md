@@ -1,6 +1,6 @@
 > `const` **VarTypesReadable**: `object`
 
-Defined in: [defines.ts:48](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L48)
+Defined in: [defines.ts:48](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L48)
 
 ## Type Declaration
 

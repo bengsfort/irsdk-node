@@ -1,4 +1,4 @@
-Defined in: [irsdk-node.ts:63](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L63)
+Defined in: [irsdk-node.ts:63](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node/src/irsdk-node.ts#L63)
 
 ## Properties
 
@@ -6,7 +6,7 @@ Defined in: [irsdk-node.ts:63](https://github.com/bengsfort/irsdk-node/blob/e132
 
 > `optional` **autoEnableTelemetry**: `boolean`
 
-Defined in: [irsdk-node.ts:65](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L65)
+Defined in: [irsdk-node.ts:65](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node/src/irsdk-node.ts#L65)
 
 ***
 
@@ -14,7 +14,7 @@ Defined in: [irsdk-node.ts:65](https://github.com/bengsfort/irsdk-node/blob/e132
 
 > `optional` **logLevel**: `LogLevel`
 
-Defined in: [irsdk-node.ts:64](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L64)
+Defined in: [irsdk-node.ts:64](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node/src/irsdk-node.ts#L64)
 
 ***
 
@@ -22,4 +22,4 @@ Defined in: [irsdk-node.ts:64](https://github.com/bengsfort/irsdk-node/blob/e132
 
 > `optional` **useTelemVariableCache**: `boolean`
 
-Defined in: [irsdk-node.ts:66](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node/src/irsdk-node.ts#L66)
+Defined in: [irsdk-node.ts:66](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node/src/irsdk-node.ts#L66)

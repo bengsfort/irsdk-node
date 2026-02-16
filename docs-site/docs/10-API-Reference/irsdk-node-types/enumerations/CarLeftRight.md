@@ -1,4 +1,4 @@
-Defined in: [defines.ts:159](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L159)
+Defined in: [defines.ts:159](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L159)
 
 Indicator for cars being around a driver.
 
@@ -10,7 +10,7 @@ Represents irsdk_CarLeftRight
 
 > **CarLeft**: `2`
 
-Defined in: [defines.ts:162](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L162)
+Defined in: [defines.ts:162](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L162)
 
 ***
 
@@ -18,7 +18,7 @@ Defined in: [defines.ts:162](https://github.com/bengsfort/irsdk-node/blob/e132d1
 
 > **CarLeftRight**: `4`
 
-Defined in: [defines.ts:165](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L165)
+Defined in: [defines.ts:165](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L165)
 
 Cars on both sides
 
@@ -28,7 +28,7 @@ Cars on both sides
 
 > **CarRight**: `3`
 
-Defined in: [defines.ts:163](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L163)
+Defined in: [defines.ts:163](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L163)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: [defines.ts:163](https://github.com/bengsfort/irsdk-node/blob/e132d1
 
 > **Cars2Left**: `5`
 
-Defined in: [defines.ts:167](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L167)
+Defined in: [defines.ts:167](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L167)
 
 2 cars to our left
 
@@ -46,7 +46,7 @@ Defined in: [defines.ts:167](https://github.com/bengsfort/irsdk-node/blob/e132d1
 
 > **Cars2Right**: `6`
 
-Defined in: [defines.ts:169](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L169)
+Defined in: [defines.ts:169](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L169)
 
 2 cars to our right
 
@@ -56,7 +56,7 @@ Defined in: [defines.ts:169](https://github.com/bengsfort/irsdk-node/blob/e132d1
 
 > **Clear**: `1`
 
-Defined in: [defines.ts:161](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L161)
+Defined in: [defines.ts:161](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L161)
 
 ***
 
@@ -64,4 +64,4 @@ Defined in: [defines.ts:161](https://github.com/bengsfort/irsdk-node/blob/e132d1
 
 > **Off**: `0`
 
-Defined in: [defines.ts:160](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/defines.ts#L160)
+Defined in: [defines.ts:160](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L160)

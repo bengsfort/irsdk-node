@@ -1,4 +1,4 @@
-Defined in: [weekend-info.ts:34](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/weekend-info.ts#L34)
+Defined in: [weekend-info.ts:34](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/weekend-info.ts#L34)
 
 ## Properties
 
@@ -6,4 +6,4 @@ Defined in: [weekend-info.ts:34](https://github.com/bengsfort/irsdk-node/blob/e1
 
 > **TelemetryDiskFile**: `string`
 
-Defined in: [weekend-info.ts:35](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/weekend-info.ts#L35)
+Defined in: [weekend-info.ts:35](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/weekend-info.ts#L35)

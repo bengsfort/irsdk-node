@@ -1,4 +1,4 @@
-Defined in: [radio-info.ts:15](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/radio-info.ts#L15)
+Defined in: [radio-info.ts:15](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/radio-info.ts#L15)
 
 ## Properties
 
@@ -6,7 +6,7 @@ Defined in: [radio-info.ts:15](https://github.com/bengsfort/irsdk-node/blob/e132
 
 > **Frequencies**: [`RadioFrequency`](RadioFrequency.md)[]
 
-Defined in: [radio-info.ts:21](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/radio-info.ts#L21)
+Defined in: [radio-info.ts:21](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/radio-info.ts#L21)
 
 ***
 
@@ -14,7 +14,7 @@ Defined in: [radio-info.ts:21](https://github.com/bengsfort/irsdk-node/blob/e132
 
 > **HopCount**: `number`
 
-Defined in: [radio-info.ts:17](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/radio-info.ts#L17)
+Defined in: [radio-info.ts:17](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/radio-info.ts#L17)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [radio-info.ts:17](https://github.com/bengsfort/irsdk-node/blob/e132
 
 > **NumFrequencies**: `number`
 
-Defined in: [radio-info.ts:18](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/radio-info.ts#L18)
+Defined in: [radio-info.ts:18](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/radio-info.ts#L18)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [radio-info.ts:18](https://github.com/bengsfort/irsdk-node/blob/e132
 
 > **RadioNum**: `number`
 
-Defined in: [radio-info.ts:16](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/radio-info.ts#L16)
+Defined in: [radio-info.ts:16](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/radio-info.ts#L16)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [radio-info.ts:16](https://github.com/bengsfort/irsdk-node/blob/e132
 
 > **ScanningIsOn**: `number`
 
-Defined in: [radio-info.ts:20](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/radio-info.ts#L20)
+Defined in: [radio-info.ts:20](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/radio-info.ts#L20)
 
 ***
 
@@ -46,4 +46,4 @@ Defined in: [radio-info.ts:20](https://github.com/bengsfort/irsdk-node/blob/e132
 
 > **TunedToFrequencyNum**: `number`
 
-Defined in: [radio-info.ts:19](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/radio-info.ts#L19)
+Defined in: [radio-info.ts:19](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/radio-info.ts#L19)

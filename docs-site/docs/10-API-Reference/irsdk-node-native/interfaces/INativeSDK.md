@@ -1,4 +1,4 @@
-Defined in: [INativeSDK.ts:57](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-native/src/INativeSDK.ts#L57)
+Defined in: [INativeSDK.ts:57](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-native/src/INativeSDK.ts#L57)
 
 Interface of the iRacing SDK native module.
 
@@ -32,7 +32,7 @@ if (sdk.waitForData()) {
 
 > `readonly` **currDataVersion**: `number`
 
-Defined in: [INativeSDK.ts:69](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-native/src/INativeSDK.ts#L69)
+Defined in: [INativeSDK.ts:69](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-native/src/INativeSDK.ts#L69)
 
 The current session data string version. This value increments every time
 the session data string changes, and is a reliable way to detect changes.
@@ -50,7 +50,7 @@ instead.
 
 > **enableLogging**: `boolean`
 
-Defined in: [INativeSDK.ts:84](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-native/src/INativeSDK.ts#L84)
+Defined in: [INativeSDK.ts:84](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-native/src/INativeSDK.ts#L84)
 
 Flag indicating whether to enable logging or not. `true` will set the LogLevel
 to `Error`, while `false` will set it to `None`. Do not use.
@@ -65,7 +65,7 @@ use [INativeSDK.logLevel](#loglevel) instead.
 
 > `readonly` **isMocked**: `boolean`
 
-Defined in: [INativeSDK.ts:76](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-native/src/INativeSDK.ts#L76)
+Defined in: [INativeSDK.ts:76](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-native/src/INativeSDK.ts#L76)
 
 Flag indicating if this SDK instance is mocked. This is only true whenever
 the SDK is being run on a non-Windows platform where the SDK is not currently
@@ -77,7 +77,7 @@ supported.
 
 > **logLevel**: [`LogLevel`](../enumerations/LogLevel.md)
 
-Defined in: [INativeSDK.ts:90](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-native/src/INativeSDK.ts#L90)
+Defined in: [INativeSDK.ts:90](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-native/src/INativeSDK.ts#L90)
 
 The currently active logging level.
 
@@ -91,7 +91,7 @@ The currently active logging level.
 
 > **broadcast**\<`Command`\>(`message`, ...`args`): `boolean`
 
-Defined in: [INativeSDK.ts:278](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-native/src/INativeSDK.ts#L278)
+Defined in: [INativeSDK.ts:278](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-native/src/INativeSDK.ts#L278)
 
 Broadcast a message to iRacing.
 
@@ -125,7 +125,7 @@ should only be used after a connection to iRacing has been established.
 
 > **getSessionConnectionID**(): `number`
 
-Defined in: [INativeSDK.ts:189](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-native/src/INativeSDK.ts#L189)
+Defined in: [INativeSDK.ts:189](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-native/src/INativeSDK.ts#L189)
 
 Gets the ID of the native SDK's connection to the current iRacing session.
 
@@ -139,7 +139,7 @@ Gets the ID of the native SDK's connection to the current iRacing session.
 
 > **getSessionData**(): `string`
 
-Defined in: [INativeSDK.ts:157](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-native/src/INativeSDK.ts#L157)
+Defined in: [INativeSDK.ts:157](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-native/src/INativeSDK.ts#L157)
 
 Returns the latest version of the Session Data string as raw YAML. This should
 only be called after [INativeSDK.waitForData](#waitfordata) has successfully retrieved
@@ -163,7 +163,7 @@ returned from this can be assumed to be the most up to date data.
 
 > **getSessionVersionNum**(): `number`
 
-Defined in: [INativeSDK.ts:184](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-native/src/INativeSDK.ts#L184)
+Defined in: [INativeSDK.ts:184](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-native/src/INativeSDK.ts#L184)
 
 Gets the current Session Data version directly from the iRacing SDK, ignoring
 the cached [INativeSDK.currDataVersion](#currdataversion) property. This can be used to
@@ -179,7 +179,7 @@ detect data updates manually.
 
 > **getTelemetryData**(): `TelemetryVarList`
 
-Defined in: [INativeSDK.ts:177](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-native/src/INativeSDK.ts#L177)
+Defined in: [INativeSDK.ts:177](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-native/src/INativeSDK.ts#L177)
 
 Returns an object containing the current value of every available telemetry
 variable. This should only be called after [INativeSDK.waitForData](#waitfordata)
@@ -210,7 +210,7 @@ result until your next [INativeSDK.waitForData](#waitfordata) call completes.
 
 > **getTelemetryVariable**\<`T`\>(`index`): `TelemetryVariable`\<`T`\> \| `null`
 
-Defined in: [INativeSDK.ts:208](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-native/src/INativeSDK.ts#L208)
+Defined in: [INativeSDK.ts:208](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-native/src/INativeSDK.ts#L208)
 
 Get the current data for the given Telemetry variable by index. The index
 for a given Telemetry variable can be fetched by name via the helper
@@ -247,7 +247,7 @@ version in performance-critical projects.
 
 > **getTelemetryVariable**\<`T`\>(`name`): `TelemetryVariable`\<`T`\> \| `null`
 
-Defined in: [INativeSDK.ts:232](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-native/src/INativeSDK.ts#L232)
+Defined in: [INativeSDK.ts:232](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-native/src/INativeSDK.ts#L232)
 
 Get the current data for the given Telemetry variable by name. This is more
 convenient than by index, but is significantly slower. The keys of the
@@ -291,7 +291,7 @@ at the beginning of a session, and then re-using that index instead.
 
 > **getTelemetryVariableIndex**(`name`): `number` \| `null`
 
-Defined in: [INativeSDK.ts:255](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-native/src/INativeSDK.ts#L255)
+Defined in: [INativeSDK.ts:255](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-native/src/INativeSDK.ts#L255)
 
 Returns the index of the variable with the provided name, or null if not found.
 
@@ -328,7 +328,7 @@ changed cars.
 
 > **isRunning**(): `boolean`
 
-Defined in: [INativeSDK.ts:122](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-native/src/INativeSDK.ts#L122)
+Defined in: [INativeSDK.ts:122](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-native/src/INativeSDK.ts#L122)
 
 Returns whether or not the SDK is actively receiving iRacing data. If true,
 you can assume the player is actively in an iRacing session.
@@ -343,7 +343,7 @@ you can assume the player is actively in an iRacing session.
 
 > **startSDK**(): `boolean`
 
-Defined in: [INativeSDK.ts:105](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-native/src/INativeSDK.ts#L105)
+Defined in: [INativeSDK.ts:105](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-native/src/INativeSDK.ts#L105)
 
 Attempts to initialize the SDK, returning the status of whether or not it
 was successful.
@@ -366,7 +366,7 @@ is ready to request data.
 
 > **stopSDK**(): `void`
 
-Defined in: [INativeSDK.ts:116](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-native/src/INativeSDK.ts#L116)
+Defined in: [INativeSDK.ts:116](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-native/src/INativeSDK.ts#L116)
 
 De-initializes and cleans up the active SDK instance.
 
@@ -386,7 +386,7 @@ be called whenever you are done with the SDK, or want to do a full reset.
 
 > **waitForData**(`timeout?`): `boolean`
 
-Defined in: [INativeSDK.ts:142](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-native/src/INativeSDK.ts#L142)
+Defined in: [INativeSDK.ts:142](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-native/src/INativeSDK.ts#L142)
 
 Attempts to pull data from the iRacing SDK, waiting for a maximum of the
 provided timeout for new data if none is available when called.

@@ -1,0 +1,153 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Usage with Electron
+
+A common use case for `irsdk-node` is to ship it within an [Electron](https://www.electronjs.org) project, allowing your users to run and configure the application. This is supported, but there are some considerations you need to make when integrating the library into your [Electron](https://www.electronjs.org) application, both towards your architecture and when bundling.
+
+## In your app
+
+### Run the `irsdk-node` in a child process
+
+It's important not to block your main process in Electron apps as it will cause the app to stutter and lag, leading to a poor user experience. Because of this it is recommended to implement your `irsdk-node` integration as an isolated, independent [child process](https://www.electronjs.org/docs/latest/tutorial/process-model#the-utility-process) and communicate to/from that process over [IPC (inter-process communication)](https://www.electronjs.org/docs/latest/tutorial/ipc), to avoid the [`sdk.waitForData()`](./10-API-Reference/irsdk-node/classes/IRacingSDK.md#waitfordata) function degrading the performance of your application as it must block the current process to wait for data from iRacing.
+
+While this increases complexity of your app, it increases performance and provides a clear separation of concerns that as your codebase grows will make it more manageable. It also enables your application to be more fault proof -- having this complex logic isolated in a child process means you can implement error handling on the process level and restart the SDK process if something goes wrong, making your app more resilient.
+
+<Tabs>
+<TabItem value="main" label="main.js">
+
+```ts
+import { utilityProcess } from 'electron';
+
+// ...
+
+// Spawn the utility process with the path to the SDK module, giving it a descriptive
+// 'serviceName' for debugging and clarity. This should point to the module relative
+// to the built/compiled version of your main process.
+const sdkProcess = utilityProcess.fork('./sdk.js', [], {
+  stdio: 'inherit',
+  serviceName: 'irsdk-node',
+});
+
+// You can subscribe for messages from the process. Remember to clean up the handlers
+// after you are done to avoid memory leaks!
+sdkProcess.on('message', (sdkMessage) => {
+  // ...
+});
+
+// You can also send data to the process, for example to use `sdk.broadcast()`.
+sdkProcess.postMessage({ /* ... */ });
+
+// ...
+```
+
+</TabItem>
+<TabItem value="sdk" label="sdk.js">
+
+```ts
+import { IRacingSDK } from 'irsdk-node';
+
+// Spawn the SDK
+const sdk = new IRacingSDK();
+const tickRateMS = Math.floor((1 / 60) * 1000); // 60fps
+let isInSession = false;
+
+// You can listen for messages from the main process to enable 2-way communication,
+// allowing buttons in your app to propagate messages to control the SDK.
+process.parentPort.addListener('message', (msg) => {
+  if (msg.event === 'enable-telemetry') {
+    sdk.enableTelemetry(msg.value);
+  }
+});
+
+// You can send data back to the main process. You can also use a MessagePort
+// which has the added benefit of enabling sending messages directly to your
+// renderer process, although it adds extra complexity in management.
+const sendToMainProcess = (msg) => {
+  process.parentPort.postMessage(msg);
+};
+
+// Write your standard data loop.
+const tick = () => {
+  if (sdk.waitForData(tickRateMS)) {
+    if (!isInSession) {
+      isInSession = true;
+      sendToMainProcess({
+        event: 'joined-session',
+      });
+    }
+
+    // Process other data...
+  } else {
+    if (isInSession) {
+      isInSession = false;
+      sendToMainProcess({
+        event: 'left-session',
+      });
+    }
+  }
+
+  setTimeout(tick, tickRateMS);
+};
+
+tick();
+```
+
+</TabItem>
+</Tabs>
+
+<details>
+  <summary>Note about this example code</summary>
+
+  The above code is untested psuedocode inspired by real working codebases. Please refer to the relevant Electron documentation for more info and insights when implementing into your own application.
+  
+  IPC in Electron applications can be frustrating, but this architecture is proven to work in large-scale applications. Don't give up!
+</details>
+
+### Use `@irsdk-node/types` in your Renderer
+
+When integrating into an Electron app, it can be very tempting to not create your own data structures on top of the iRacing SDK data structures. This is fine in some cases, but it's important to note that the `irsdk-node` package **is not compatible** with the Electron render process, as it depends on the native Node.js module.
+
+Instead, manually add `@irsdk-node/types` as a dependency and import the types from there. It has no dependencies and is environment agnostic, so it fully compatible with the Electron render process.
+
+### Only expose the data/API's that you need
+
+For the security of your applications users, when creating your API's to enable communication between your renderer and the SDK make sure to only expose the data that is absolutely necessary. Avoid creating API's that allow the renderer process to fully control the SDK, as it creates an unnecessary attack vector and can also lead to greater instability of the application when running on your users machines.
+
+This also has the added benefit of being a net positive for performance, as serializing, dispatching, and deserializing large amounts of data can quickly degrade performance of your application. Try to keep API calls and events minimal.
+
+## Bundling your app
+
+### Treat `@irsdk-node/native` as an external dependency
+
+If you are using a bundler such as [Vite](https://vite.dev), [esbuild](https://esbuild.github.io), or others, make sure to mark `@irsdk-node/native` / `irsdk-node` as an **external** dependency. `@irsdk-node/native` is a _native node.js addon_, which are not possible to bundle and will break the bundled code if included.
+
+Marking the library as **external** will tell the bundler to ignore it, instead expecting it to be importable at runtime. This means that the library must still be available at runtime, so you may have to adjust your bundling pipeline to ensure that the library is copied over to your applications final `node_modules` directory.
+
+### Make sure child process paths work in dev _and_ prod builds
+
+A common hiccup when shipping more complex Electron applications that make use of child processes is path management per-build. Because the production build of Electron apps is so different to the development environment in terms of how it is packaged and ran, it is very common to have a scenario where your application works in dev, but prod builds error due to not finding the child process.
+
+```ts
+// If your js bundles move around during bundling, this might fail in prod if the
+// relative path does not match anymore!
+const sdkProcess = utilityProcess.fork('./sdk.js', [], {
+  stdio: 'inherit',
+  serviceName: 'irsdk-node',
+});
+```
+
+To resolve this, you may have to add support for injecting environment variables into your applications runtime that allow you to easily configure what path to use based on the type of build it is. This is supported by most bundlers out-of-the-box, so consult your projects bundler documentation for more information.
+
+```ts
+// If using an environment variable or bundle-time 'define', you can adjust the path
+// per-build and remove a lot of potential debugging headaches.
+//
+// Vite for example can be configured to replace all instances of `SDK_PROCESS_PATH`
+// with a configurable string at build-time via the `define` option. This enables
+// us to adjust the path to the SDK in our vite config based on the type of build.
+const sdkProcess = utilityProcess.fork(SDK_PROCESS_PATH, [], {
+  stdio: 'inherit',
+  serviceName: 'irsdk-node',
+});
+```

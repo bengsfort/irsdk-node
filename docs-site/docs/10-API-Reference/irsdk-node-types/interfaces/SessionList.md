@@ -1,4 +1,4 @@
-Defined in: [session-info.ts:46](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/session-info.ts#L46)
+Defined in: [session-info.ts:46](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/session-info.ts#L46)
 
 ## Properties
 
@@ -6,4 +6,4 @@ Defined in: [session-info.ts:46](https://github.com/bengsfort/irsdk-node/blob/e1
 
 > **Sessions**: [`SessionInfo`](SessionInfo.md)[]
 
-Defined in: [session-info.ts:47](https://github.com/bengsfort/irsdk-node/blob/e132d1efb51a68bc5bb535f34ca70a1e09912640/packages/irsdk-node-types/src/session-info.ts#L47)
+Defined in: [session-info.ts:47](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/session-info.ts#L47)
