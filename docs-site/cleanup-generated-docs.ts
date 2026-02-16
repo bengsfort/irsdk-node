@@ -9,23 +9,20 @@ import { join, relative } from 'node:path';
 // Constants
 const CATEGORY_FILE_NAME = '_category_.json';
 const DOCS_ROOT_DIR = join(__dirname, './docs');
-const PACKAGES_ROOT_DIR = join(DOCS_ROOT_DIR, './10-Packages');
+const PACKAGES_ROOT_DIR = join(DOCS_ROOT_DIR, './10-API-Reference');
 const GEN_FOLDER_DIR = join(__dirname, '_gen_');
-const GEN_DOCS_OUTDIR = 'API-Reference';
 
 interface PackageDefinition {
   readonly name: string;
   readonly generatedDocs: string;
   readonly docsRoot: string;
-  readonly sidebarOrder?: number;
 }
 
 const Packages = {
   IrsdkNode: {
     name: 'irsdk-node',
     generatedDocs: join(GEN_FOLDER_DIR, 'irsdk-node'),
-    docsRoot: DOCS_ROOT_DIR,
-    sidebarOrder: 9,
+    docsRoot: join(PACKAGES_ROOT_DIR, 'irsdk-node'),
   } satisfies PackageDefinition,
   Native: {
     name: '@irsdk-node/native',
@@ -46,27 +43,19 @@ interface CategoryFile {
   collapsed?: boolean;
 }
 
-// Utils
-const getGenDocsPath = (base: string, order?: number): string => {
-  const outDir = typeof order === 'number'
-    ? `${order}-${GEN_DOCS_OUTDIR}`
-    : GEN_DOCS_OUTDIR;
-  return join(base, outDir);
-};
-
 // Write category definition files.
 async function writeCategoryFiles(packages: PackageDefinition[]): Promise<void> {
   console.log('Writing docusaurus category files:');
 
   const promises = packages.map((packageDef) => {
     const contents: CategoryFile = {
-      label: "API Reference",
+      label: packageDef.name,
       collapsed: true,
       collapsible: true,
     };
 
-    const filePath = join(getGenDocsPath(packageDef.docsRoot, packageDef.sidebarOrder), CATEGORY_FILE_NAME);
-    console.log(` - ${contents.label} -> ${relative(__dirname, filePath)}`);
+    const filePath = join(packageDef.docsRoot, CATEGORY_FILE_NAME);
+    console.log(` - Writing ${contents.label} -> ${relative(__dirname, filePath)}`);
     return writeFile(filePath, JSON.stringify(contents, null, 2), {
       encoding: 'utf-8',
     });
@@ -79,12 +68,14 @@ async function writeCategoryFiles(packages: PackageDefinition[]): Promise<void> 
 async function movePackageFolders(packages: PackageDefinition[]): Promise<void> {
   console.log('Moving generated docs to docusaurus docs:');
 
-  const promises = packages.map((packageDef) => {
+  const promises = packages.map(async (packageDef) => {
     const src = packageDef.generatedDocs;
-    const dest = getGenDocsPath(packageDef.docsRoot, packageDef.sidebarOrder);
+    const dest = packageDef.docsRoot;
     
-    console.log(` - ${relative(__dirname, src)} -> ${relative(__dirname, dest)}`);
-    return cp(src, dest, { recursive: true });
+    console.log(` - Cleaning ${relative(__dirname, dest)}`);
+    await rm(dest, { recursive: true, force: true });
+    console.log(` - Moving ${relative(__dirname, src)} -> ${relative(__dirname, dest)}`);
+    await cp(src, dest, { recursive: true });
   });
 
   await Promise.all(promises);
@@ -99,19 +90,19 @@ async function injectIndexFrontmatter(packages: PackageDefinition[]): Promise<vo
   console.log('Injecting frontmatter into each generated docs root file:');
 
   const promises = packages.map(async (packageDef) => {
-    const docsRoot = getGenDocsPath(packageDef.docsRoot, packageDef.sidebarOrder);
+    const docsRoot = packageDef.docsRoot;
     const readmePath = join(docsRoot, 'README.md');
-    console.log(` - ${relative(__dirname, readmePath)}`);
+    console.log(` - Editing ${relative(__dirname, readmePath)}`);
 
     const contents = await readFile(readmePath, { encoding: 'utf-8' });
     const header = [
       '---',
-      `title: "API Reference"`,
+      `title: "${packageDef.name}"`,
       '---',
       '',
       '<!-- NOTE: THIS FILE IS AUTO-GENERATED VIA `pnpm docs:gen`, DO NOT EDIT! -->',
       '',
-      '# API Reference',
+      `# ${packageDef.name}`,
       '',
       `Generated API reference for the \`${packageDef.name}\` package.`,
       '\n',

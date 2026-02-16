@@ -1,3 +1,0 @@
-# @irsdk-node/native
-
-Package.

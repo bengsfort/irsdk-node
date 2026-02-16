@@ -15,7 +15,7 @@
     "typecheck": "tsc",
     "docs:gen": "pnpm docs:package-docs && pnpm docs:merge && pnpm docs:cleanup",
     "docs:merge": "typedoc",
-    "docs:package-docs": "pnpm run --parallel --filter \"../{irsdk-node,irsdk-node-*}\" gen-docs",
+    "docs:package-docs": "pnpm run --parallel --filter \"../packages/{irsdk-node,irsdk-node-*}\" gen-docs",
     "docs:cleanup": "tsx ./cleanup-generated-docs.ts"
   },
   "dependencies": {
