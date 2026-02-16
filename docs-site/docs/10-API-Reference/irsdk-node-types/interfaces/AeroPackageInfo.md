@@ -1,4 +1,4 @@
-Defined in: [setup-info.ts:13](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/setup-info.ts#L13)
+Defined in: [setup-info.ts:13](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L13)
 
 ## Properties
 
@@ -6,7 +6,7 @@ Defined in: [setup-info.ts:13](https://github.com/bengsfort/irsdk-node/blob/e31a
 
 > **DownforceTrim**: `string`
 
-Defined in: [setup-info.ts:14](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/setup-info.ts#L14)
+Defined in: [setup-info.ts:14](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L14)
 
 ***
 
@@ -14,7 +14,7 @@ Defined in: [setup-info.ts:14](https://github.com/bengsfort/irsdk-node/blob/e31a
 
 > **FrontFlapOffset**: `string`
 
-Defined in: [setup-info.ts:15](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/setup-info.ts#L15)
+Defined in: [setup-info.ts:15](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L15)
 
 ***
 
@@ -22,4 +22,4 @@ Defined in: [setup-info.ts:15](https://github.com/bengsfort/irsdk-node/blob/e31a
 
 > **RearWingGurney**: `string`
 
-Defined in: [setup-info.ts:16](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/setup-info.ts#L16)
+Defined in: [setup-info.ts:16](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L16)

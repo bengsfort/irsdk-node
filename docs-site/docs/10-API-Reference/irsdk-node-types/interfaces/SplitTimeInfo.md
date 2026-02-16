@@ -1,4 +1,4 @@
-Defined in: [split-info.ts:7](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/split-info.ts#L7)
+Defined in: [split-info.ts:7](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/split-info.ts#L7)
 
 ## Properties
 
@@ -6,4 +6,4 @@ Defined in: [split-info.ts:7](https://github.com/bengsfort/irsdk-node/blob/e31ad
 
 > **Sectors**: [`Sector`](Sector.md)[]
 
-Defined in: [split-info.ts:8](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/split-info.ts#L8)
+Defined in: [split-info.ts:8](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/split-info.ts#L8)

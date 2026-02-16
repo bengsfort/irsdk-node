@@ -1,4 +1,4 @@
-Defined in: [setup-info.ts:169](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/setup-info.ts#L169)
+Defined in: [setup-info.ts:169](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L169)
 
 ## Properties
 
@@ -6,7 +6,7 @@ Defined in: [setup-info.ts:169](https://github.com/bengsfort/irsdk-node/blob/e31
 
 > **HighSpeedComp**: `string`
 
-Defined in: [setup-info.ts:171](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/setup-info.ts#L171)
+Defined in: [setup-info.ts:171](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L171)
 
 ***
 
@@ -14,7 +14,7 @@ Defined in: [setup-info.ts:171](https://github.com/bengsfort/irsdk-node/blob/e31
 
 > **HighSpeedRebound**: `string`
 
-Defined in: [setup-info.ts:173](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/setup-info.ts#L173)
+Defined in: [setup-info.ts:173](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L173)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [setup-info.ts:173](https://github.com/bengsfort/irsdk-node/blob/e31
 
 > **LowSpeedComp**: `string`
 
-Defined in: [setup-info.ts:170](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/setup-info.ts#L170)
+Defined in: [setup-info.ts:170](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L170)
 
 ***
 
@@ -30,4 +30,4 @@ Defined in: [setup-info.ts:170](https://github.com/bengsfort/irsdk-node/blob/e31
 
 > **LowSpeedRebound**: `string`
 
-Defined in: [setup-info.ts:172](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/setup-info.ts#L172)
+Defined in: [setup-info.ts:172](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L172)

@@ -1,4 +1,4 @@
-Defined in: [defines.ts:144](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L144)
+Defined in: [defines.ts:144](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L144)
 
 The state of the sim session.
 
@@ -10,7 +10,7 @@ Represents irsdk_SessionState
 
 > **Checkered**: `5`
 
-Defined in: [defines.ts:150](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L150)
+Defined in: [defines.ts:150](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L150)
 
 ***
 
@@ -18,7 +18,7 @@ Defined in: [defines.ts:150](https://github.com/bengsfort/irsdk-node/blob/e31ad6
 
 > **CoolDown**: `6`
 
-Defined in: [defines.ts:151](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L151)
+Defined in: [defines.ts:151](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L151)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [defines.ts:151](https://github.com/bengsfort/irsdk-node/blob/e31ad6
 
 > **GetInCar**: `1`
 
-Defined in: [defines.ts:146](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L146)
+Defined in: [defines.ts:146](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L146)
 
 ***
 
@@ -34,7 +34,7 @@ Defined in: [defines.ts:146](https://github.com/bengsfort/irsdk-node/blob/e31ad6
 
 > **Invalid**: `0`
 
-Defined in: [defines.ts:145](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L145)
+Defined in: [defines.ts:145](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L145)
 
 ***
 
@@ -42,7 +42,7 @@ Defined in: [defines.ts:145](https://github.com/bengsfort/irsdk-node/blob/e31ad6
 
 > **ParadeLaps**: `3`
 
-Defined in: [defines.ts:148](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L148)
+Defined in: [defines.ts:148](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L148)
 
 ***
 
@@ -50,7 +50,7 @@ Defined in: [defines.ts:148](https://github.com/bengsfort/irsdk-node/blob/e31ad6
 
 > **Racing**: `4`
 
-Defined in: [defines.ts:149](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L149)
+Defined in: [defines.ts:149](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L149)
 
 ***
 
@@ -58,4 +58,4 @@ Defined in: [defines.ts:149](https://github.com/bengsfort/irsdk-node/blob/e31ad6
 
 > **Warmup**: `2`
 
-Defined in: [defines.ts:147](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L147)
+Defined in: [defines.ts:147](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L147)

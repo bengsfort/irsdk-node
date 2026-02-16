@@ -1,4 +1,4 @@
-Defined in: [defines.ts:28](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L28)
+Defined in: [defines.ts:28](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L28)
 
 Telemetry Variable type map.
 Maps human-friendly names to the number ID for a telemetry variable.
@@ -11,7 +11,7 @@ Represents irsdk_VarType
 
 > **BitField**: `3`
 
-Defined in: [defines.ts:32](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L32)
+Defined in: [defines.ts:32](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L32)
 
 ***
 
@@ -19,7 +19,7 @@ Defined in: [defines.ts:32](https://github.com/bengsfort/irsdk-node/blob/e31ad69
 
 > **Boolean**: `1`
 
-Defined in: [defines.ts:30](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L30)
+Defined in: [defines.ts:30](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L30)
 
 ***
 
@@ -27,7 +27,7 @@ Defined in: [defines.ts:30](https://github.com/bengsfort/irsdk-node/blob/e31ad69
 
 > **Character**: `0`
 
-Defined in: [defines.ts:29](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L29)
+Defined in: [defines.ts:29](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L29)
 
 ***
 
@@ -35,7 +35,7 @@ Defined in: [defines.ts:29](https://github.com/bengsfort/irsdk-node/blob/e31ad69
 
 > **Double**: `5`
 
-Defined in: [defines.ts:34](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L34)
+Defined in: [defines.ts:34](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L34)
 
 ***
 
@@ -43,7 +43,7 @@ Defined in: [defines.ts:34](https://github.com/bengsfort/irsdk-node/blob/e31ad69
 
 > **ETCount**: `6`
 
-Defined in: [defines.ts:35](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L35)
+Defined in: [defines.ts:35](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L35)
 
 ***
 
@@ -51,7 +51,7 @@ Defined in: [defines.ts:35](https://github.com/bengsfort/irsdk-node/blob/e31ad69
 
 > **Float**: `4`
 
-Defined in: [defines.ts:33](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L33)
+Defined in: [defines.ts:33](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L33)
 
 ***
 
@@ -59,4 +59,4 @@ Defined in: [defines.ts:33](https://github.com/bengsfort/irsdk-node/blob/e31ad69
 
 > **Integer**: `2`
 
-Defined in: [defines.ts:31](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L31)
+Defined in: [defines.ts:31](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L31)

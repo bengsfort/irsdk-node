@@ -1,4 +1,4 @@
-Defined in: [defines.ts:513](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L513)
+Defined in: [defines.ts:513](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L513)
 
 Available pit command modes, to be used with message broadcasting. Only works
 when the driver is in the car!
@@ -10,7 +10,7 @@ Represents `irsdk_PitCommandMode`
 
 > **ChangeTireCompound**: `12`
 
-Defined in: [defines.ts:545](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L545)
+Defined in: [defines.ts:545](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L545)
 
 Change tire compound
 
@@ -20,7 +20,7 @@ Change tire compound
 
 > **Clear**: `0`
 
-Defined in: [defines.ts:515](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L515)
+Defined in: [defines.ts:515](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L515)
 
 Clear all pit checkboxes
 
@@ -30,7 +30,7 @@ Clear all pit checkboxes
 
 > **ClearFR**: `10`
 
-Defined in: [defines.ts:541](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L541)
+Defined in: [defines.ts:541](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L541)
 
 Uncheck request a fast repair
 
@@ -40,7 +40,7 @@ Uncheck request a fast repair
 
 > **ClearFuel**: `11`
 
-Defined in: [defines.ts:543](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L543)
+Defined in: [defines.ts:543](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L543)
 
 Uncheck add fuel
 
@@ -50,7 +50,7 @@ Uncheck add fuel
 
 > **ClearTires**: `7`
 
-Defined in: [defines.ts:535](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L535)
+Defined in: [defines.ts:535](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L535)
 
 Clear tire pit checkboxes
 
@@ -60,7 +60,7 @@ Clear tire pit checkboxes
 
 > **ClearWS**: `9`
 
-Defined in: [defines.ts:539](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L539)
+Defined in: [defines.ts:539](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L539)
 
 Uncheck Clean the windshield checkbox
 
@@ -70,7 +70,7 @@ Uncheck Clean the windshield checkbox
 
 > **FR**: `8`
 
-Defined in: [defines.ts:537](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L537)
+Defined in: [defines.ts:537](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L537)
 
 Request a fast repair
 
@@ -80,7 +80,7 @@ Request a fast repair
 
 > **Fuel**: `2`
 
-Defined in: [defines.ts:522](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L522)
+Defined in: [defines.ts:522](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L522)
 
 Add fuel, optionally specify the amount to add in liters or pass '0' to use
 existing amount
@@ -91,7 +91,7 @@ existing amount
 
 > **LF**: `3`
 
-Defined in: [defines.ts:527](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L527)
+Defined in: [defines.ts:527](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L527)
 
 Change the left front tire, optionally specifying the pressure in KPa or
 pass '0' to use existing pressure
@@ -102,7 +102,7 @@ pass '0' to use existing pressure
 
 > **LR**: `5`
 
-Defined in: [defines.ts:531](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L531)
+Defined in: [defines.ts:531](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L531)
 
 left rear
 
@@ -112,7 +112,7 @@ left rear
 
 > **RF**: `4`
 
-Defined in: [defines.ts:529](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L529)
+Defined in: [defines.ts:529](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L529)
 
 right front
 
@@ -122,7 +122,7 @@ right front
 
 > **RR**: `6`
 
-Defined in: [defines.ts:533](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L533)
+Defined in: [defines.ts:533](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L533)
 
 right rear
 
@@ -132,6 +132,6 @@ right rear
 
 > **WS**: `1`
 
-Defined in: [defines.ts:517](https://github.com/bengsfort/irsdk-node/blob/e31ad69b01f0f14c3ee73901deaaec7bd46e32d7/packages/irsdk-node-types/src/defines.ts#L517)
+Defined in: [defines.ts:517](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L517)
 
 Clean the windshield, using one tear off

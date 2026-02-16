@@ -96,9 +96,9 @@ export interface INativeSDK {
    *
    * @remarks
    *
-   * This happens implicitly whenever {@link INativeSDK.waitForData}
-   * is called, but can safely be called for clarity and to check whether the sdk
-   * is ready to request data.
+   * This happens implicitly whenever {@link INativeSDK.waitForData} is called,
+   * but can safely be called for clarity and to check whether the sdk is ready
+   * to request data.
    *
    * @returns True if the iRacing has been detected and the SDK was initialized.
    */
