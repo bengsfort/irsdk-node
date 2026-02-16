@@ -1,4 +1,4 @@
-Defined in: [telemetry.gen.ts:8](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/telemetry.gen.ts#L8)
+Defined in: [telemetry.gen.ts:8](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/telemetry.gen.ts#L8)
 
 A variable representing telemetry data from the iRacing SDK.
 
@@ -14,7 +14,7 @@ A variable representing telemetry data from the iRacing SDK.
 
 > **countAsTime**: `boolean`
 
-Defined in: [telemetry.gen.ts:16](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/telemetry.gen.ts#L16)
+Defined in: [telemetry.gen.ts:16](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/telemetry.gen.ts#L16)
 
 Should it be treated as a time?
 
@@ -24,7 +24,7 @@ Should it be treated as a time?
 
 > **description**: `string`
 
-Defined in: [telemetry.gen.ts:12](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/telemetry.gen.ts#L12)
+Defined in: [telemetry.gen.ts:12](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/telemetry.gen.ts#L12)
 
 The description.
 
@@ -34,7 +34,7 @@ The description.
 
 > **length**: `number`
 
-Defined in: [telemetry.gen.ts:18](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/telemetry.gen.ts#L18)
+Defined in: [telemetry.gen.ts:18](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/telemetry.gen.ts#L18)
 
 The number of values provided.
 
@@ -44,7 +44,7 @@ The number of values provided.
 
 > **name**: `string`
 
-Defined in: [telemetry.gen.ts:10](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/telemetry.gen.ts#L10)
+Defined in: [telemetry.gen.ts:10](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/telemetry.gen.ts#L10)
 
 The name of the variable.
 
@@ -54,7 +54,7 @@ The name of the variable.
 
 > **unit**: `string`
 
-Defined in: [telemetry.gen.ts:14](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/telemetry.gen.ts#L14)
+Defined in: [telemetry.gen.ts:14](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/telemetry.gen.ts#L14)
 
 The unit of the value (ex. "kg/m^2")
 
@@ -64,7 +64,7 @@ The unit of the value (ex. "kg/m^2")
 
 > **value**: `VarType`
 
-Defined in: [telemetry.gen.ts:22](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/telemetry.gen.ts#L22)
+Defined in: [telemetry.gen.ts:22](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/telemetry.gen.ts#L22)
 
 The current value of this variable.
 
@@ -74,6 +74,6 @@ The current value of this variable.
 
 > **varType**: `number`
 
-Defined in: [telemetry.gen.ts:20](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/telemetry.gen.ts#L20)
+Defined in: [telemetry.gen.ts:20](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/telemetry.gen.ts#L20)
 
 The native variable type

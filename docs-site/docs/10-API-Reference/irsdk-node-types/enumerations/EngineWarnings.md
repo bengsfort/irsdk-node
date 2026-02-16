@@ -1,4 +1,4 @@
-Defined in: [defines.ts:288](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L288)
+Defined in: [defines.ts:288](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L288)
 
 Flags indicating an engine warning.
 Represents `irsdk_EngineWarnings`
@@ -9,7 +9,7 @@ Represents `irsdk_EngineWarnings`
 
 > **EngineStalled**: `8`
 
-Defined in: [defines.ts:292](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L292)
+Defined in: [defines.ts:292](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L292)
 
 ***
 
@@ -17,7 +17,7 @@ Defined in: [defines.ts:292](https://github.com/bengsfort/irsdk-node/blob/a2b43f
 
 > **FuelPressureWarning**: `2`
 
-Defined in: [defines.ts:290](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L290)
+Defined in: [defines.ts:290](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L290)
 
 ***
 
@@ -25,7 +25,7 @@ Defined in: [defines.ts:290](https://github.com/bengsfort/irsdk-node/blob/a2b43f
 
 > **MandatoryRepairsNeeded**: `128`
 
-Defined in: [defines.ts:298](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L298)
+Defined in: [defines.ts:298](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L298)
 
 Car needs mandatory repairs
 
@@ -35,7 +35,7 @@ Car needs mandatory repairs
 
 > **OilPressureWarning**: `4`
 
-Defined in: [defines.ts:291](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L291)
+Defined in: [defines.ts:291](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L291)
 
 ***
 
@@ -43,7 +43,7 @@ Defined in: [defines.ts:291](https://github.com/bengsfort/irsdk-node/blob/a2b43f
 
 > **OilTempWarning**: `64`
 
-Defined in: [defines.ts:295](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L295)
+Defined in: [defines.ts:295](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L295)
 
 ***
 
@@ -51,7 +51,7 @@ Defined in: [defines.ts:295](https://github.com/bengsfort/irsdk-node/blob/a2b43f
 
 > **OptionalRepairsNeeded**: `256`
 
-Defined in: [defines.ts:300](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L300)
+Defined in: [defines.ts:300](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L300)
 
 Car needs optional repairs
 
@@ -61,7 +61,7 @@ Car needs optional repairs
 
 > **PitSpeedLimiter**: `16`
 
-Defined in: [defines.ts:293](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L293)
+Defined in: [defines.ts:293](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L293)
 
 ***
 
@@ -69,7 +69,7 @@ Defined in: [defines.ts:293](https://github.com/bengsfort/irsdk-node/blob/a2b43f
 
 > **RevLimiterActive**: `32`
 
-Defined in: [defines.ts:294](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L294)
+Defined in: [defines.ts:294](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L294)
 
 ***
 
@@ -77,4 +77,4 @@ Defined in: [defines.ts:294](https://github.com/bengsfort/irsdk-node/blob/a2b43f
 
 > **WaterTempWarning**: `1`
 
-Defined in: [defines.ts:289](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L289)
+Defined in: [defines.ts:289](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L289)

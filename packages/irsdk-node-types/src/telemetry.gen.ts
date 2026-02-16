@@ -1,6 +1,6 @@
 // ! THIS FILE IS AUTO-GENERATED, EDITS WILL BE NOT PERSIST !
 // ! To generate, run `pnpm types:generate` in the irsdk-node package !
-// Last updated 2025-11-28T09:57:39.223Z
+// Last updated 2026-02-16T23:12:27.397Z
 
 /**
  * A variable representing telemetry data from the iRacing SDK.
@@ -24,4721 +24,4721 @@ export interface TelemetryVariable<VarType = number[]> {
 
 export interface TelemetryVarList {
   /**
-   * SessionTime
+   * SessionTime - Seconds since session start
    *
-   * @description
-   * Seconds since session start
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SessionTime: TelemetryVariable;
 
   /**
-   * SessionTick
+   * SessionTick - Current update number
    *
-   * @description
-   * Current update number
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SessionTick: TelemetryVariable;
 
   /**
-   * SessionNum
+   * SessionNum - Session number
    *
-   * @description
-   * Session number
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SessionNum: TelemetryVariable;
 
   /**
-   * SessionState
+   * SessionState - Session state
    *
-   * @description
-   * Session state
-   * Unit of the variable: irsdk_SessionState
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: irsdk_SessionState
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SessionState: TelemetryVariable;
 
   /**
-   * SessionUniqueID
+   * SessionUniqueID - Session ID
    *
-   * @description
-   * Session ID
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SessionUniqueID: TelemetryVariable;
 
   /**
-   * SessionFlags
+   * SessionFlags - Session flags
    *
-   * @description
-   * Session flags
-   * Unit of the variable: irsdk_Flags
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: irsdk_Flags
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SessionFlags: TelemetryVariable;
 
   /**
-   * SessionTimeRemain
+   * SessionTimeRemain - Seconds left till session ends
    *
-   * @description
-   * Seconds left till session ends
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SessionTimeRemain: TelemetryVariable;
 
   /**
-   * SessionLapsRemain
+   * SessionLapsRemain - Old laps left till session ends use SessionLapsRemainEx
    *
-   * @description
-   * Old laps left till session ends use SessionLapsRemainEx
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SessionLapsRemain: TelemetryVariable;
 
   /**
-   * SessionLapsRemainEx
+   * SessionLapsRemainEx - New improved laps left till session ends
    *
-   * @description
-   * New improved laps left till session ends
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SessionLapsRemainEx: TelemetryVariable;
 
   /**
-   * SessionTimeTotal
+   * SessionTimeTotal - Total number of seconds in session
    *
-   * @description
-   * Total number of seconds in session
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SessionTimeTotal: TelemetryVariable;
 
   /**
-   * SessionLapsTotal
+   * SessionLapsTotal - Total number of laps in session
    *
-   * @description
-   * Total number of laps in session
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SessionLapsTotal: TelemetryVariable;
 
   /**
-   * SessionJokerLapsRemain
+   * SessionJokerLapsRemain - Joker laps remaining to be taken
    *
-   * @description
-   * Joker laps remaining to be taken
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SessionJokerLapsRemain: TelemetryVariable;
 
   /**
-   * SessionOnJokerLap
+   * SessionOnJokerLap - Player is currently completing a joker lap
    *
-   * @description
-   * Player is currently completing a joker lap
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SessionOnJokerLap: TelemetryVariable<boolean[]>;
 
   /**
-   * SessionTimeOfDay
+   * SessionTimeOfDay - Time of day in seconds
    *
-   * @description
-   * Time of day in seconds
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SessionTimeOfDay: TelemetryVariable;
 
   /**
-   * RadioTransmitCarIdx
+   * RadioTransmitCarIdx - The car index of the current person speaking on the radio
    *
-   * @description
-   * The car index of the current person speaking on the radio
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RadioTransmitCarIdx: TelemetryVariable;
 
   /**
-   * RadioTransmitRadioIdx
+   * RadioTransmitRadioIdx - The radio index of the current person speaking on the radio
    *
-   * @description
-   * The radio index of the current person speaking on the radio
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RadioTransmitRadioIdx: TelemetryVariable;
 
   /**
-   * RadioTransmitFrequencyIdx
+   * RadioTransmitFrequencyIdx - The frequency index of the current person speaking on the radio
    *
-   * @description
-   * The frequency index of the current person speaking on the radio
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RadioTransmitFrequencyIdx: TelemetryVariable;
 
   /**
-   * DisplayUnits
+   * DisplayUnits - Default units for the user interface 0 = english 1 = metric
    *
-   * @description
-   * Default units for the user interface 0 = english 1 = metric
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   DisplayUnits: TelemetryVariable;
 
   /**
-   * DriverMarker
+   * DriverMarker - Driver activated flag
    *
-   * @description
-   * Driver activated flag
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   DriverMarker: TelemetryVariable<boolean[]>;
 
   /**
-   * PushToTalk
+   * PushToTalk - Push to talk button state
    *
-   * @description
-   * Push to talk button state
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PushToTalk: TelemetryVariable<boolean[]>;
 
   /**
-   * PushToPass
+   * PushToPass - Push to pass button state
    *
-   * @description
-   * Push to pass button state
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PushToPass: TelemetryVariable<boolean[]>;
 
   /**
-   * ManualBoost
+   * ManualBoost - Hybrid manual boost state
    *
-   * @description
-   * Hybrid manual boost state
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   ManualBoost: TelemetryVariable<boolean[]>;
 
   /**
-   * ManualNoBoost
+   * ManualNoBoost - Hybrid manual no boost state
    *
-   * @description
-   * Hybrid manual no boost state
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   ManualNoBoost: TelemetryVariable<boolean[]>;
 
   /**
-   * IsOnTrack
+   * IsOnTrack - 1=Car on track physics running with player in car
    *
-   * @description
-   * 1=Car on track physics running with player in car
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   IsOnTrack: TelemetryVariable<boolean[]>;
 
   /**
-   * IsReplayPlaying
+   * IsReplayPlaying - 0=replay not playing  1=replay playing
    *
-   * @description
-   * 0=replay not playing  1=replay playing
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   IsReplayPlaying: TelemetryVariable<boolean[]>;
 
   /**
-   * ReplayFrameNum
+   * ReplayFrameNum - Integer replay frame number (60 per second)
    *
-   * @description
-   * Integer replay frame number (60 per second)
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   ReplayFrameNum: TelemetryVariable;
 
   /**
-   * ReplayFrameNumEnd
+   * ReplayFrameNumEnd - Integer replay frame number from end of tape
    *
-   * @description
-   * Integer replay frame number from end of tape
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   ReplayFrameNumEnd: TelemetryVariable;
 
   /**
-   * IsDiskLoggingEnabled
+   * IsDiskLoggingEnabled - 0=disk based telemetry turned off  1=turned on
    *
-   * @description
-   * 0=disk based telemetry turned off  1=turned on
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   IsDiskLoggingEnabled: TelemetryVariable<boolean[]>;
 
   /**
-   * IsDiskLoggingActive
+   * IsDiskLoggingActive - 0=disk based telemetry file not being written  1=being written
    *
-   * @description
-   * 0=disk based telemetry file not being written  1=being written
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   IsDiskLoggingActive: TelemetryVariable<boolean[]>;
 
   /**
-   * FrameRate
+   * FrameRate - Average frames per second
    *
-   * @description
-   * Average frames per second
-   * Unit of the variable: fps
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: fps
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   FrameRate: TelemetryVariable;
 
   /**
-   * CpuUsageFG
+   * CpuUsageFG - Percent of available time fg thread took with a 1 sec avg
    *
-   * @description
-   * Percent of available time fg thread took with a 1 sec avg
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   CpuUsageFG: TelemetryVariable;
 
   /**
-   * GpuUsage
+   * GpuUsage - Percent of available time gpu took with a 1 sec avg
    *
-   * @description
-   * Percent of available time gpu took with a 1 sec avg
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   GpuUsage: TelemetryVariable;
 
   /**
-   * ChanAvgLatency
+   * ChanAvgLatency - Communications average latency
    *
-   * @description
-   * Communications average latency
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   ChanAvgLatency: TelemetryVariable;
 
   /**
-   * ChanLatency
+   * ChanLatency - Communications latency
    *
-   * @description
-   * Communications latency
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   ChanLatency: TelemetryVariable;
 
   /**
-   * ChanQuality
+   * ChanQuality - Communications quality
    *
-   * @description
-   * Communications quality
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   ChanQuality: TelemetryVariable;
 
   /**
-   * ChanPartnerQuality
+   * ChanPartnerQuality - Partner communications quality
    *
-   * @description
-   * Partner communications quality
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   ChanPartnerQuality: TelemetryVariable;
 
   /**
-   * CpuUsageBG
+   * CpuUsageBG - Percent of available time bg thread took with a 1 sec avg
    *
-   * @description
-   * Percent of available time bg thread took with a 1 sec avg
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   CpuUsageBG: TelemetryVariable;
 
   /**
-   * ChanClockSkew
+   * ChanClockSkew - Communications server clock skew
    *
-   * @description
-   * Communications server clock skew
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   ChanClockSkew: TelemetryVariable;
 
   /**
-   * MemPageFaultSec
+   * MemPageFaultSec - Memory page faults per second
    *
-   * @description
-   * Memory page faults per second
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   MemPageFaultSec: TelemetryVariable;
 
   /**
-   * MemSoftPageFaultSec
+   * MemSoftPageFaultSec - Memory soft page faults per second
    *
-   * @description
-   * Memory soft page faults per second
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   MemSoftPageFaultSec: TelemetryVariable;
 
   /**
-   * PlayerCarPosition
+   * PlayerCarPosition - Players position in race
    *
-   * @description
-   * Players position in race
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PlayerCarPosition: TelemetryVariable;
 
   /**
-   * PlayerCarClassPosition
+   * PlayerCarClassPosition - Players class position in race
    *
-   * @description
-   * Players class position in race
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PlayerCarClassPosition: TelemetryVariable;
 
   /**
-   * PlayerCarClass
+   * PlayerCarClass - Player car class id
    *
-   * @description
-   * Player car class id
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PlayerCarClass: TelemetryVariable;
 
   /**
-   * PlayerTrackSurface
+   * PlayerTrackSurface - Players car track surface type
    *
-   * @description
-   * Players car track surface type
-   * Unit of the variable: irsdk_TrkLoc
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: irsdk_TrkLoc
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PlayerTrackSurface: TelemetryVariable;
 
   /**
-   * PlayerTrackSurfaceMaterial
+   * PlayerTrackSurfaceMaterial - Players car track surface material type
    *
-   * @description
-   * Players car track surface material type
-   * Unit of the variable: irsdk_TrkSurf
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: irsdk_TrkSurf
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PlayerTrackSurfaceMaterial: TelemetryVariable;
 
   /**
-   * PlayerCarIdx
+   * PlayerCarIdx - Players carIdx
    *
-   * @description
-   * Players carIdx
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PlayerCarIdx: TelemetryVariable;
 
   /**
-   * PlayerCarTeamIncidentCount
+   * PlayerCarTeamIncidentCount - Players team incident count for this session
    *
-   * @description
-   * Players team incident count for this session
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PlayerCarTeamIncidentCount: TelemetryVariable;
 
   /**
-   * PlayerCarMyIncidentCount
+   * PlayerCarMyIncidentCount - Players own incident count for this session
    *
-   * @description
-   * Players own incident count for this session
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PlayerCarMyIncidentCount: TelemetryVariable;
 
   /**
-   * PlayerCarDriverIncidentCount
+   * PlayerCarDriverIncidentCount - Teams current drivers incident count for this session
    *
-   * @description
-   * Teams current drivers incident count for this session
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PlayerCarDriverIncidentCount: TelemetryVariable;
 
   /**
-   * PlayerCarWeightPenalty
+   * PlayerCarWeightPenalty - Players weight penalty
    *
-   * @description
-   * Players weight penalty
-   * Unit of the variable: kg
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: kg
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PlayerCarWeightPenalty: TelemetryVariable;
 
   /**
-   * PlayerCarPowerAdjust
+   * PlayerCarPowerAdjust - Players power adjust
    *
-   * @description
-   * Players power adjust
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PlayerCarPowerAdjust: TelemetryVariable;
 
   /**
-   * PlayerCarDryTireSetLimit
+   * PlayerCarDryTireSetLimit - Players dry tire set limit
    *
-   * @description
-   * Players dry tire set limit
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PlayerCarDryTireSetLimit: TelemetryVariable;
 
   /**
-   * PlayerCarTowTime
+   * PlayerCarTowTime - Players car is being towed if time is greater than zero
    *
-   * @description
-   * Players car is being towed if time is greater than zero
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PlayerCarTowTime: TelemetryVariable;
 
   /**
-   * PlayerCarInPitStall
+   * PlayerCarInPitStall - Players car is properly in their pitstall
    *
-   * @description
-   * Players car is properly in their pitstall
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PlayerCarInPitStall: TelemetryVariable<boolean[]>;
 
   /**
-   * PlayerCarPitSvStatus
+   * PlayerCarPitSvStatus - Players car pit service status bits
    *
-   * @description
-   * Players car pit service status bits
-   * Unit of the variable: irsdk_PitSvStatus
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: irsdk_PitSvStatus
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PlayerCarPitSvStatus: TelemetryVariable;
 
   /**
-   * PlayerTireCompound
+   * PlayerTireCompound - Players car current tire compound
    *
-   * @description
-   * Players car current tire compound
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PlayerTireCompound: TelemetryVariable;
 
   /**
-   * PlayerFastRepairsUsed
+   * PlayerFastRepairsUsed - Players car number of fast repairs used
    *
-   * @description
-   * Players car number of fast repairs used
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PlayerFastRepairsUsed: TelemetryVariable;
 
   /**
-   * CarIdxLap
+   * CarIdxLap - Laps started by car index
    *
-   * @description
-   * Laps started by car index
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxLap: TelemetryVariable;
 
   /**
-   * CarIdxLapCompleted
+   * CarIdxLapCompleted - Laps completed by car index
    *
-   * @description
-   * Laps completed by car index
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxLapCompleted: TelemetryVariable;
 
   /**
-   * CarIdxLapDistPct
+   * CarIdxLapDistPct - Percentage distance around lap by car index
    *
-   * @description
-   * Percentage distance around lap by car index
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxLapDistPct: TelemetryVariable;
 
   /**
-   * CarIdxTrackSurface
+   * CarIdxTrackSurface - Track surface type by car index
    *
-   * @description
-   * Track surface type by car index
-   * Unit of the variable: irsdk_TrkLoc
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Unit of the variable: irsdk_TrkLoc
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxTrackSurface: TelemetryVariable;
 
   /**
-   * CarIdxTrackSurfaceMaterial
+   * CarIdxTrackSurfaceMaterial - Track surface material type by car index
    *
-   * @description
-   * Track surface material type by car index
-   * Unit of the variable: irsdk_TrkSurf
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Unit of the variable: irsdk_TrkSurf
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxTrackSurfaceMaterial: TelemetryVariable;
 
   /**
-   * CarIdxOnPitRoad
+   * CarIdxOnPitRoad - On pit road between the cones by car index
    *
-   * @description
-   * On pit road between the cones by car index
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxOnPitRoad: TelemetryVariable<boolean[]>;
 
   /**
-   * CarIdxPosition
+   * CarIdxPosition - Cars position in race by car index
    *
-   * @description
-   * Cars position in race by car index
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxPosition: TelemetryVariable;
 
   /**
-   * CarIdxClassPosition
+   * CarIdxClassPosition - Cars class position in race by car index
    *
-   * @description
-   * Cars class position in race by car index
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxClassPosition: TelemetryVariable;
 
   /**
-   * CarIdxClass
+   * CarIdxClass - Cars class id by car index
    *
-   * @description
-   * Cars class id by car index
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxClass: TelemetryVariable;
 
   /**
-   * CarIdxF2Time
+   * CarIdxF2Time - Race time behind leader or fastest lap time otherwise
    *
-   * @description
-   * Race time behind leader or fastest lap time otherwise
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxF2Time: TelemetryVariable;
 
   /**
-   * CarIdxEstTime
+   * CarIdxEstTime - Estimated time to reach current location on track
    *
-   * @description
-   * Estimated time to reach current location on track
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxEstTime: TelemetryVariable;
 
   /**
-   * CarIdxLastLapTime
+   * CarIdxLastLapTime - Cars last lap time
    *
-   * @description
-   * Cars last lap time
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxLastLapTime: TelemetryVariable;
 
   /**
-   * CarIdxBestLapTime
+   * CarIdxBestLapTime - Cars best lap time
    *
-   * @description
-   * Cars best lap time
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxBestLapTime: TelemetryVariable;
 
   /**
-   * CarIdxBestLapNum
+   * CarIdxBestLapNum - Cars best lap number
    *
-   * @description
-   * Cars best lap number
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxBestLapNum: TelemetryVariable;
 
   /**
-   * CarIdxTireCompound
+   * CarIdxTireCompound - Cars current tire compound
    *
-   * @description
-   * Cars current tire compound
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxTireCompound: TelemetryVariable;
 
   /**
-   * CarIdxQualTireCompound
+   * CarIdxQualTireCompound - Cars Qual tire compound
    *
-   * @description
-   * Cars Qual tire compound
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxQualTireCompound: TelemetryVariable;
 
   /**
-   * CarIdxQualTireCompoundLocked
+   * CarIdxQualTireCompoundLocked - Cars Qual tire compound is locked-in
    *
-   * @description
-   * Cars Qual tire compound is locked-in
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxQualTireCompoundLocked: TelemetryVariable<boolean[]>;
 
   /**
-   * CarIdxFastRepairsUsed
+   * CarIdxFastRepairsUsed - How many fast repairs each car has used
    *
-   * @description
-   * How many fast repairs each car has used
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxFastRepairsUsed: TelemetryVariable;
 
   /**
-   * CarIdxSessionFlags
+   * CarIdxSessionFlags - Session flags for each player
    *
-   * @description
-   * Session flags for each player
-   * Unit of the variable: irsdk_Flags
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Unit of the variable: irsdk_Flags
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxSessionFlags: TelemetryVariable;
 
   /**
-   * PaceMode
+   * PaceMode - Are we pacing or not
    *
-   * @description
-   * Are we pacing or not
-   * Unit of the variable: irsdk_PaceMode
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: irsdk_PaceMode
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PaceMode: TelemetryVariable;
 
   /**
-   * CarIdxPaceLine
+   * CarIdxPaceLine - What line cars are pacing in  or -1 if not pacing
    *
-   * @description
-   * What line cars are pacing in  or -1 if not pacing
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxPaceLine: TelemetryVariable;
 
   /**
-   * CarIdxPaceRow
+   * CarIdxPaceRow - What row cars are pacing in  or -1 if not pacing
    *
-   * @description
-   * What row cars are pacing in  or -1 if not pacing
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxPaceRow: TelemetryVariable;
 
   /**
-   * CarIdxPaceFlags
+   * CarIdxPaceFlags - Pacing status flags for each car
    *
-   * @description
-   * Pacing status flags for each car
-   * Unit of the variable: irsdk_PaceFlags
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Unit of the variable: irsdk_PaceFlags
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxPaceFlags: TelemetryVariable;
 
   /**
-   * OnPitRoad
+   * OnPitRoad - Is the player car on pit road between the cones
    *
-   * @description
-   * Is the player car on pit road between the cones
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   OnPitRoad: TelemetryVariable<boolean[]>;
 
   /**
-   * CarIdxSteer
+   * CarIdxSteer - Steering wheel angle by car index
    *
-   * @description
-   * Steering wheel angle by car index
-   * Unit of the variable: rad
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Unit of the variable: rad
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxSteer: TelemetryVariable;
 
   /**
-   * CarIdxRPM
+   * CarIdxRPM - Engine rpm by car index
    *
-   * @description
-   * Engine rpm by car index
-   * Unit of the variable: revs/min
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Unit of the variable: revs/min
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxRPM: TelemetryVariable;
 
   /**
-   * CarIdxGear
+   * CarIdxGear - -1=reverse  0=neutral  1..n=current gear by car index
    *
-   * @description
-   * -1=reverse  0=neutral  1..n=current gear by car index
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxGear: TelemetryVariable;
 
   /**
-   * SteeringWheelAngle
+   * SteeringWheelAngle - Steering wheel angle
    *
-   * @description
-   * Steering wheel angle
-   * Unit of the variable: rad
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: rad
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SteeringWheelAngle: TelemetryVariable;
 
   /**
-   * Throttle
+   * Throttle - 0=off throttle to 1=full throttle
    *
-   * @description
-   * 0=off throttle to 1=full throttle
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   Throttle: TelemetryVariable;
 
   /**
-   * Brake
+   * Brake - 0=brake released to 1=max pedal force
    *
-   * @description
-   * 0=brake released to 1=max pedal force
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   Brake: TelemetryVariable;
 
   /**
-   * Clutch
+   * Clutch - 0=disengaged to 1=fully engaged
    *
-   * @description
-   * 0=disengaged to 1=fully engaged
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   Clutch: TelemetryVariable;
 
   /**
-   * Gear
+   * Gear - -1=reverse  0=neutral  1..n=current gear
    *
-   * @description
-   * -1=reverse  0=neutral  1..n=current gear
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   Gear: TelemetryVariable;
 
   /**
-   * RPM
+   * RPM - Engine rpm
    *
-   * @description
-   * Engine rpm
-   * Unit of the variable: revs/min
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: revs/min
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RPM: TelemetryVariable;
 
   /**
-   * PlayerCarSLFirstRPM
+   * PlayerCarSLFirstRPM - Shift light first light rpm
    *
-   * @description
-   * Shift light first light rpm
-   * Unit of the variable: revs/min
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: revs/min
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PlayerCarSLFirstRPM: TelemetryVariable;
 
   /**
-   * PlayerCarSLShiftRPM
+   * PlayerCarSLShiftRPM - Shift light shift rpm
    *
-   * @description
-   * Shift light shift rpm
-   * Unit of the variable: revs/min
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: revs/min
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PlayerCarSLShiftRPM: TelemetryVariable;
 
   /**
-   * PlayerCarSLLastRPM
+   * PlayerCarSLLastRPM - Shift light last light rpm
    *
-   * @description
-   * Shift light last light rpm
-   * Unit of the variable: revs/min
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: revs/min
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PlayerCarSLLastRPM: TelemetryVariable;
 
   /**
-   * PlayerCarSLBlinkRPM
+   * PlayerCarSLBlinkRPM - Shift light blink rpm
    *
-   * @description
-   * Shift light blink rpm
-   * Unit of the variable: revs/min
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: revs/min
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PlayerCarSLBlinkRPM: TelemetryVariable;
 
   /**
-   * Lap
+   * Lap - Laps started count
    *
-   * @description
-   * Laps started count
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   Lap: TelemetryVariable;
 
   /**
-   * LapCompleted
+   * LapCompleted - Laps completed count
    *
-   * @description
-   * Laps completed count
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapCompleted: TelemetryVariable;
 
   /**
-   * LapDist
+   * LapDist - Meters traveled from S/F this lap
    *
-   * @description
-   * Meters traveled from S/F this lap
-   * Unit of the variable: m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapDist: TelemetryVariable;
 
   /**
-   * LapDistPct
+   * LapDistPct - Percentage distance around lap
    *
-   * @description
-   * Percentage distance around lap
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapDistPct: TelemetryVariable;
 
   /**
-   * RaceLaps
+   * RaceLaps - Laps completed in race
    *
-   * @description
-   * Laps completed in race
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RaceLaps: TelemetryVariable;
 
   /**
-   * CarDistAhead
+   * CarDistAhead - Distance to first car in front of player in meters
    *
-   * @description
-   * Distance to first car in front of player in meters
-   * Unit of the variable: m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   CarDistAhead: TelemetryVariable;
 
   /**
-   * CarDistBehind
+   * CarDistBehind - Distance to first car behind player in meters
    *
-   * @description
-   * Distance to first car behind player in meters
-   * Unit of the variable: m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   CarDistBehind: TelemetryVariable;
 
   /**
-   * LapBestLap
+   * LapBestLap - Players best lap number
    *
-   * @description
-   * Players best lap number
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapBestLap: TelemetryVariable;
 
   /**
-   * LapBestLapTime
+   * LapBestLapTime - Players best lap time
    *
-   * @description
-   * Players best lap time
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapBestLapTime: TelemetryVariable;
 
   /**
-   * LapLastLapTime
+   * LapLastLapTime - Players last lap time
    *
-   * @description
-   * Players last lap time
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapLastLapTime: TelemetryVariable;
 
   /**
-   * LapCurrentLapTime
+   * LapCurrentLapTime - Estimate of players current lap time as shown in F3 box
    *
-   * @description
-   * Estimate of players current lap time as shown in F3 box
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapCurrentLapTime: TelemetryVariable;
 
   /**
-   * LapLasNLapSeq
+   * LapLasNLapSeq - Player num consecutive clean laps completed for N average
    *
-   * @description
-   * Player num consecutive clean laps completed for N average
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapLasNLapSeq: TelemetryVariable;
 
   /**
-   * LapLastNLapTime
+   * LapLastNLapTime - Player last N average lap time
    *
-   * @description
-   * Player last N average lap time
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapLastNLapTime: TelemetryVariable;
 
   /**
-   * LapBestNLapLap
+   * LapBestNLapLap - Player last lap in best N average lap time
    *
-   * @description
-   * Player last lap in best N average lap time
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapBestNLapLap: TelemetryVariable;
 
   /**
-   * LapBestNLapTime
+   * LapBestNLapTime - Player best N average lap time
    *
-   * @description
-   * Player best N average lap time
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapBestNLapTime: TelemetryVariable;
 
   /**
-   * LapDeltaToBestLap
+   * LapDeltaToBestLap - Delta time for best lap
    *
-   * @description
-   * Delta time for best lap
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapDeltaToBestLap: TelemetryVariable;
 
   /**
-   * LapDeltaToBestLap_DD
+   * LapDeltaToBestLap_DD - Rate of change of delta time for best lap
    *
-   * @description
-   * Rate of change of delta time for best lap
-   * Unit of the variable: s/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapDeltaToBestLap_DD: TelemetryVariable;
 
   /**
-   * LapDeltaToBestLap_OK
+   * LapDeltaToBestLap_OK - Delta time for best lap is valid
    *
-   * @description
-   * Delta time for best lap is valid
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapDeltaToBestLap_OK: TelemetryVariable<boolean[]>;
 
   /**
-   * LapDeltaToOptimalLap
+   * LapDeltaToOptimalLap - Delta time for optimal lap
    *
-   * @description
-   * Delta time for optimal lap
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapDeltaToOptimalLap: TelemetryVariable;
 
   /**
-   * LapDeltaToOptimalLap_DD
+   * LapDeltaToOptimalLap_DD - Rate of change of delta time for optimal lap
    *
-   * @description
-   * Rate of change of delta time for optimal lap
-   * Unit of the variable: s/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapDeltaToOptimalLap_DD: TelemetryVariable;
 
   /**
-   * LapDeltaToOptimalLap_OK
+   * LapDeltaToOptimalLap_OK - Delta time for optimal lap is valid
    *
-   * @description
-   * Delta time for optimal lap is valid
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapDeltaToOptimalLap_OK: TelemetryVariable<boolean[]>;
 
   /**
-   * LapDeltaToSessionBestLap
+   * LapDeltaToSessionBestLap - Delta time for session best lap
    *
-   * @description
-   * Delta time for session best lap
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapDeltaToSessionBestLap: TelemetryVariable;
 
   /**
-   * LapDeltaToSessionBestLap_DD
+   * LapDeltaToSessionBestLap_DD - Rate of change of delta time for session best lap
    *
-   * @description
-   * Rate of change of delta time for session best lap
-   * Unit of the variable: s/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapDeltaToSessionBestLap_DD: TelemetryVariable;
 
   /**
-   * LapDeltaToSessionBestLap_OK
+   * LapDeltaToSessionBestLap_OK - Delta time for session best lap is valid
    *
-   * @description
-   * Delta time for session best lap is valid
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapDeltaToSessionBestLap_OK: TelemetryVariable<boolean[]>;
 
   /**
-   * LapDeltaToSessionOptimalLap
+   * LapDeltaToSessionOptimalLap - Delta time for session optimal lap
    *
-   * @description
-   * Delta time for session optimal lap
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapDeltaToSessionOptimalLap: TelemetryVariable;
 
   /**
-   * LapDeltaToSessionOptimalLap_DD
+   * LapDeltaToSessionOptimalLap_DD - Rate of change of delta time for session optimal lap
    *
-   * @description
-   * Rate of change of delta time for session optimal lap
-   * Unit of the variable: s/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapDeltaToSessionOptimalLap_DD: TelemetryVariable;
 
   /**
-   * LapDeltaToSessionOptimalLap_OK
+   * LapDeltaToSessionOptimalLap_OK - Delta time for session optimal lap is valid
    *
-   * @description
-   * Delta time for session optimal lap is valid
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapDeltaToSessionOptimalLap_OK: TelemetryVariable<boolean[]>;
 
   /**
-   * LapDeltaToSessionLastlLap
+   * LapDeltaToSessionLastlLap - Delta time for session last lap
    *
-   * @description
-   * Delta time for session last lap
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapDeltaToSessionLastlLap: TelemetryVariable;
 
   /**
-   * LapDeltaToSessionLastlLap_DD
+   * LapDeltaToSessionLastlLap_DD - Rate of change of delta time for session last lap
    *
-   * @description
-   * Rate of change of delta time for session last lap
-   * Unit of the variable: s/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapDeltaToSessionLastlLap_DD: TelemetryVariable;
 
   /**
-   * LapDeltaToSessionLastlLap_OK
+   * LapDeltaToSessionLastlLap_OK - Delta time for session last lap is valid
    *
-   * @description
-   * Delta time for session last lap is valid
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LapDeltaToSessionLastlLap_OK: TelemetryVariable<boolean[]>;
 
   /**
-   * Speed
+   * Speed - GPS vehicle speed
    *
-   * @description
-   * GPS vehicle speed
-   * Unit of the variable: m/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   Speed: TelemetryVariable;
 
   /**
-   * Yaw
+   * Yaw - Yaw orientation
    *
-   * @description
-   * Yaw orientation
-   * Unit of the variable: rad
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: rad
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   Yaw: TelemetryVariable;
 
   /**
-   * YawNorth
+   * YawNorth - Yaw orientation relative to north
    *
-   * @description
-   * Yaw orientation relative to north
-   * Unit of the variable: rad
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: rad
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   YawNorth: TelemetryVariable;
 
   /**
-   * Pitch
+   * Pitch - Pitch orientation
    *
-   * @description
-   * Pitch orientation
-   * Unit of the variable: rad
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: rad
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   Pitch: TelemetryVariable;
 
   /**
-   * Roll
+   * Roll - Roll orientation
    *
-   * @description
-   * Roll orientation
-   * Unit of the variable: rad
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: rad
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   Roll: TelemetryVariable;
 
   /**
-   * EnterExitReset
+   * EnterExitReset - Indicate action the reset key will take 0 enter 1 exit 2 reset
    *
-   * @description
-   * Indicate action the reset key will take 0 enter 1 exit 2 reset
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   EnterExitReset: TelemetryVariable;
 
   /**
-   * TrackTemp
+   * TrackTemp - Deprecated  set to TrackTempCrew
    *
-   * @description
-   * Deprecated  set to TrackTempCrew
-   * Unit of the variable: C
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: C
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   TrackTemp: TelemetryVariable;
 
   /**
-   * TrackTempCrew
+   * TrackTempCrew - Temperature of track measured by crew around track
    *
-   * @description
-   * Temperature of track measured by crew around track
-   * Unit of the variable: C
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: C
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   TrackTempCrew: TelemetryVariable;
 
   /**
-   * AirTemp
+   * AirTemp - Temperature of air at start/finish line
    *
-   * @description
-   * Temperature of air at start/finish line
-   * Unit of the variable: C
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: C
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   AirTemp: TelemetryVariable;
 
   /**
-   * TrackWetness
+   * TrackWetness - How wet is the average track surface
    *
-   * @description
-   * How wet is the average track surface
-   * Unit of the variable: irsdk_TrackWetness
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: irsdk_TrackWetness
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   TrackWetness: TelemetryVariable;
 
   /**
-   * Skies
+   * Skies - Skies (0=clear/1=p cloudy/2=m cloudy/3=overcast)
    *
-   * @description
-   * Skies (0=clear/1=p cloudy/2=m cloudy/3=overcast)
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   Skies: TelemetryVariable;
 
   /**
-   * AirDensity
+   * AirDensity - Density of air at start/finish line
    *
-   * @description
-   * Density of air at start/finish line
-   * Unit of the variable: kg/m^3
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: kg/m^3
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   AirDensity: TelemetryVariable;
 
   /**
-   * AirPressure
+   * AirPressure - Pressure of air at start/finish line
    *
-   * @description
-   * Pressure of air at start/finish line
-   * Unit of the variable: Pa
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: Pa
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   AirPressure: TelemetryVariable;
 
   /**
-   * WindVel
+   * WindVel - Wind velocity at start/finish line
    *
-   * @description
-   * Wind velocity at start/finish line
-   * Unit of the variable: m/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   WindVel: TelemetryVariable;
 
   /**
-   * WindDir
+   * WindDir - Wind direction at start/finish line
    *
-   * @description
-   * Wind direction at start/finish line
-   * Unit of the variable: rad
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: rad
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   WindDir: TelemetryVariable;
 
   /**
-   * RelativeHumidity
+   * RelativeHumidity - Relative Humidity at start/finish line
    *
-   * @description
-   * Relative Humidity at start/finish line
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RelativeHumidity: TelemetryVariable;
 
   /**
-   * FogLevel
+   * FogLevel - Fog level at start/finish line
    *
-   * @description
-   * Fog level at start/finish line
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   FogLevel: TelemetryVariable;
 
   /**
-   * Precipitation
+   * Precipitation - Precipitation at start/finish line
    *
-   * @description
-   * Precipitation at start/finish line
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   Precipitation: TelemetryVariable;
 
   /**
-   * SolarAltitude
+   * SolarAltitude - Sun angle above horizon in radians
    *
-   * @description
-   * Sun angle above horizon in radians
-   * Unit of the variable: rad
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: rad
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SolarAltitude: TelemetryVariable;
 
   /**
-   * SolarAzimuth
+   * SolarAzimuth - Sun angle clockwise from north in radians
    *
-   * @description
-   * Sun angle clockwise from north in radians
-   * Unit of the variable: rad
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: rad
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SolarAzimuth: TelemetryVariable;
 
   /**
-   * WeatherDeclaredWet
+   * WeatherDeclaredWet - The steward says rain tires can be used
    *
-   * @description
-   * The steward says rain tires can be used
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   WeatherDeclaredWet: TelemetryVariable<boolean[]>;
 
   /**
-   * SteeringFFBEnabled
+   * SteeringFFBEnabled - Force feedback is enabled
    *
-   * @description
-   * Force feedback is enabled
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SteeringFFBEnabled: TelemetryVariable<boolean[]>;
 
   /**
-   * DCLapStatus
+   * DCLapStatus - Status of driver change lap requirements
    *
-   * @description
-   * Status of driver change lap requirements
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   DCLapStatus: TelemetryVariable;
 
   /**
-   * DCDriversSoFar
+   * DCDriversSoFar - Number of team drivers who have run a stint
    *
-   * @description
-   * Number of team drivers who have run a stint
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   DCDriversSoFar: TelemetryVariable;
 
   /**
-   * OkToReloadTextures
+   * OkToReloadTextures - True if it is ok to reload car textures at this time
    *
-   * @description
-   * True if it is ok to reload car textures at this time
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   OkToReloadTextures: TelemetryVariable<boolean[]>;
 
   /**
-   * LoadNumTextures
+   * LoadNumTextures - True if the car_num texture will be loaded
    *
-   * @description
-   * True if the car_num texture will be loaded
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LoadNumTextures: TelemetryVariable<boolean[]>;
 
   /**
-   * CarLeftRight
+   * CarLeftRight - Notify if car is to the left or right of driver
    *
-   * @description
-   * Notify if car is to the left or right of driver
-   * Unit of the variable: irsdk_CarLeftRight
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: irsdk_CarLeftRight
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   CarLeftRight: TelemetryVariable;
 
   /**
-   * PitsOpen
+   * PitsOpen - True if pit stop is allowed for the current player
    *
-   * @description
-   * True if pit stop is allowed for the current player
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PitsOpen: TelemetryVariable<boolean[]>;
 
   /**
-   * VidCapEnabled
+   * VidCapEnabled - True if video capture system is enabled
    *
-   * @description
-   * True if video capture system is enabled
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   VidCapEnabled: TelemetryVariable<boolean[]>;
 
   /**
-   * VidCapActive
+   * VidCapActive - True if video currently being captured
    *
-   * @description
-   * True if video currently being captured
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   VidCapActive: TelemetryVariable<boolean[]>;
 
   /**
-   * PlayerIncidents
+   * PlayerIncidents - Log incidents that the player recieved
    *
-   * @description
-   * Log incidents that the player recieved
-   * Unit of the variable: irsdk_IncidentFlags
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: irsdk_IncidentFlags
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PlayerIncidents: TelemetryVariable;
 
   /**
-   * PitRepairLeft
+   * PitRepairLeft - Time left for mandatory pit repairs if repairs are active
    *
-   * @description
-   * Time left for mandatory pit repairs if repairs are active
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PitRepairLeft: TelemetryVariable;
 
   /**
-   * PitOptRepairLeft
+   * PitOptRepairLeft - Time left for optional repairs if repairs are active
    *
-   * @description
-   * Time left for optional repairs if repairs are active
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PitOptRepairLeft: TelemetryVariable;
 
   /**
-   * PitstopActive
+   * PitstopActive - Is the player getting pit stop service
    *
-   * @description
-   * Is the player getting pit stop service
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PitstopActive: TelemetryVariable<boolean[]>;
 
   /**
-   * FastRepairUsed
+   * FastRepairUsed - How many fast repairs used so far
    *
-   * @description
-   * How many fast repairs used so far
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   FastRepairUsed: TelemetryVariable;
 
   /**
-   * FastRepairAvailable
+   * FastRepairAvailable - How many fast repairs left  255 is unlimited
    *
-   * @description
-   * How many fast repairs left  255 is unlimited
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   FastRepairAvailable: TelemetryVariable;
 
   /**
-   * LFTiresUsed
+   * LFTiresUsed - How many left front tires used so far
    *
-   * @description
-   * How many left front tires used so far
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LFTiresUsed: TelemetryVariable;
 
   /**
-   * RFTiresUsed
+   * RFTiresUsed - How many right front tires used so far
    *
-   * @description
-   * How many right front tires used so far
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RFTiresUsed: TelemetryVariable;
 
   /**
-   * LRTiresUsed
+   * LRTiresUsed - How many left rear tires used so far
    *
-   * @description
-   * How many left rear tires used so far
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LRTiresUsed: TelemetryVariable;
 
   /**
-   * RRTiresUsed
+   * RRTiresUsed - How many right rear tires used so far
    *
-   * @description
-   * How many right rear tires used so far
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RRTiresUsed: TelemetryVariable;
 
   /**
-   * LeftTireSetsUsed
+   * LeftTireSetsUsed - How many left tire sets used so far
    *
-   * @description
-   * How many left tire sets used so far
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LeftTireSetsUsed: TelemetryVariable;
 
   /**
-   * RightTireSetsUsed
+   * RightTireSetsUsed - How many right tire sets used so far
    *
-   * @description
-   * How many right tire sets used so far
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RightTireSetsUsed: TelemetryVariable;
 
   /**
-   * FrontTireSetsUsed
+   * FrontTireSetsUsed - How many front tire sets used so far
    *
-   * @description
-   * How many front tire sets used so far
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   FrontTireSetsUsed: TelemetryVariable;
 
   /**
-   * RearTireSetsUsed
+   * RearTireSetsUsed - How many rear tire sets used so far
    *
-   * @description
-   * How many rear tire sets used so far
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RearTireSetsUsed: TelemetryVariable;
 
   /**
-   * TireSetsUsed
+   * TireSetsUsed - How many tire sets used so far
    *
-   * @description
-   * How many tire sets used so far
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   TireSetsUsed: TelemetryVariable;
 
   /**
-   * LFTiresAvailable
+   * LFTiresAvailable - How many left front tires are remaining  255 is unlimited
    *
-   * @description
-   * How many left front tires are remaining  255 is unlimited
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LFTiresAvailable: TelemetryVariable;
 
   /**
-   * RFTiresAvailable
+   * RFTiresAvailable - How many right front tires are remaining  255 is unlimited
    *
-   * @description
-   * How many right front tires are remaining  255 is unlimited
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RFTiresAvailable: TelemetryVariable;
 
   /**
-   * LRTiresAvailable
+   * LRTiresAvailable - How many left rear tires are remaining  255 is unlimited
    *
-   * @description
-   * How many left rear tires are remaining  255 is unlimited
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LRTiresAvailable: TelemetryVariable;
 
   /**
-   * RRTiresAvailable
+   * RRTiresAvailable - How many right rear tires are remaining  255 is unlimited
    *
-   * @description
-   * How many right rear tires are remaining  255 is unlimited
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RRTiresAvailable: TelemetryVariable;
 
   /**
-   * LeftTireSetsAvailable
+   * LeftTireSetsAvailable - How many left tire sets are remaining  255 is unlimited
    *
-   * @description
-   * How many left tire sets are remaining  255 is unlimited
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LeftTireSetsAvailable: TelemetryVariable;
 
   /**
-   * RightTireSetsAvailable
+   * RightTireSetsAvailable - How many right tire sets are remaining  255 is unlimited
    *
-   * @description
-   * How many right tire sets are remaining  255 is unlimited
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RightTireSetsAvailable: TelemetryVariable;
 
   /**
-   * FrontTireSetsAvailable
+   * FrontTireSetsAvailable - How many front tire sets are remaining  255 is unlimited
    *
-   * @description
-   * How many front tire sets are remaining  255 is unlimited
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   FrontTireSetsAvailable: TelemetryVariable;
 
   /**
-   * RearTireSetsAvailable
+   * RearTireSetsAvailable - How many rear tire sets are remaining  255 is unlimited
    *
-   * @description
-   * How many rear tire sets are remaining  255 is unlimited
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RearTireSetsAvailable: TelemetryVariable;
 
   /**
-   * TireSetsAvailable
+   * TireSetsAvailable - How many tire sets are remaining  255 is unlimited
    *
-   * @description
-   * How many tire sets are remaining  255 is unlimited
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   TireSetsAvailable: TelemetryVariable;
 
   /**
-   * CamCarIdx
+   * CamCarIdx - Active camera's focus car index
    *
-   * @description
-   * Active camera's focus car index
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   CamCarIdx: TelemetryVariable;
 
   /**
-   * CamCameraNumber
+   * CamCameraNumber - Active camera number
    *
-   * @description
-   * Active camera number
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   CamCameraNumber: TelemetryVariable;
 
   /**
-   * CamGroupNumber
+   * CamGroupNumber - Active camera group number
    *
-   * @description
-   * Active camera group number
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   CamGroupNumber: TelemetryVariable;
 
   /**
-   * CamCameraState
+   * CamCameraState - State of camera system
    *
-   * @description
-   * State of camera system
-   * Unit of the variable: irsdk_CameraState
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: irsdk_CameraState
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   CamCameraState: TelemetryVariable;
 
   /**
-   * IsOnTrackCar
+   * IsOnTrackCar - 1=Car on track physics running
    *
-   * @description
-   * 1=Car on track physics running
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   IsOnTrackCar: TelemetryVariable<boolean[]>;
 
   /**
-   * IsInGarage
+   * IsInGarage - 1=Car in garage physics running
    *
-   * @description
-   * 1=Car in garage physics running
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   IsInGarage: TelemetryVariable<boolean[]>;
 
   /**
-   * SteeringWheelAngleMax
+   * SteeringWheelAngleMax - Steering wheel max angle
    *
-   * @description
-   * Steering wheel max angle
-   * Unit of the variable: rad
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: rad
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SteeringWheelAngleMax: TelemetryVariable;
 
   /**
-   * ShiftPowerPct
+   * ShiftPowerPct - Friction torque applied to gears when shifting or grinding
    *
-   * @description
-   * Friction torque applied to gears when shifting or grinding
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   ShiftPowerPct: TelemetryVariable;
 
   /**
-   * ShiftGrindRPM
+   * ShiftGrindRPM - RPM of shifter grinding noise
    *
-   * @description
-   * RPM of shifter grinding noise
-   * Unit of the variable: RPM
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: RPM
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   ShiftGrindRPM: TelemetryVariable;
 
   /**
-   * ThrottleRaw
+   * ThrottleRaw - Raw throttle input 0=off throttle to 1=full throttle
    *
-   * @description
-   * Raw throttle input 0=off throttle to 1=full throttle
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   ThrottleRaw: TelemetryVariable;
 
   /**
-   * BrakeRaw
+   * BrakeRaw - Raw brake input 0=brake released to 1=max pedal force
    *
-   * @description
-   * Raw brake input 0=brake released to 1=max pedal force
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   BrakeRaw: TelemetryVariable;
 
   /**
-   * ClutchRaw
+   * ClutchRaw - Raw clutch input 0=disengaged to 1=fully engaged
    *
-   * @description
-   * Raw clutch input 0=disengaged to 1=fully engaged
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   ClutchRaw: TelemetryVariable;
 
   /**
-   * HandbrakeRaw
+   * HandbrakeRaw - Raw handbrake input 0=handbrake released to 1=max force
    *
-   * @description
-   * Raw handbrake input 0=handbrake released to 1=max force
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   HandbrakeRaw: TelemetryVariable;
 
   /**
-   * BrakeABSactive
+   * BrakeABSactive - true if abs is currently reducing brake force pressure
    *
-   * @description
-   * true if abs is currently reducing brake force pressure
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   BrakeABSactive: TelemetryVariable<boolean[]>;
 
   /**
-   * Shifter
+   * Shifter - Log inputs from the players shifter control
    *
-   * @description
-   * Log inputs from the players shifter control
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   Shifter: TelemetryVariable;
 
   /**
-   * EngineWarnings
+   * EngineWarnings - Bitfield for warning lights
    *
-   * @description
-   * Bitfield for warning lights
-   * Unit of the variable: irsdk_EngineWarnings
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: irsdk_EngineWarnings
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   EngineWarnings: TelemetryVariable;
 
   /**
-   * FuelLevelPct
+   * FuelLevelPct - Percent fuel remaining
    *
-   * @description
-   * Percent fuel remaining
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   FuelLevelPct: TelemetryVariable;
 
   /**
-   * PitSvFlags
+   * PitSvFlags - Bitfield of pit service checkboxes
    *
-   * @description
-   * Bitfield of pit service checkboxes
-   * Unit of the variable: irsdk_PitSvFlags
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: irsdk_PitSvFlags
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PitSvFlags: TelemetryVariable;
 
   /**
-   * PitSvLFP
+   * PitSvLFP - Pit service left front tire pressure
    *
-   * @description
-   * Pit service left front tire pressure
-   * Unit of the variable: kPa
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: kPa
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PitSvLFP: TelemetryVariable;
 
   /**
-   * PitSvRFP
+   * PitSvRFP - Pit service right front tire pressure
    *
-   * @description
-   * Pit service right front tire pressure
-   * Unit of the variable: kPa
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: kPa
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PitSvRFP: TelemetryVariable;
 
   /**
-   * PitSvLRP
+   * PitSvLRP - Pit service left rear tire pressure
    *
-   * @description
-   * Pit service left rear tire pressure
-   * Unit of the variable: kPa
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: kPa
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PitSvLRP: TelemetryVariable;
 
   /**
-   * PitSvRRP
+   * PitSvRRP - Pit service right rear tire pressure
    *
-   * @description
-   * Pit service right rear tire pressure
-   * Unit of the variable: kPa
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: kPa
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PitSvRRP: TelemetryVariable;
 
   /**
-   * PitSvFuel
+   * PitSvFuel - Pit service fuel add amount
    *
-   * @description
-   * Pit service fuel add amount
-   * Unit of the variable: l or kWh
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: l or kWh
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PitSvFuel: TelemetryVariable;
 
   /**
-   * PitSvTireCompound
+   * PitSvTireCompound - Pit service pending tire compound
    *
-   * @description
-   * Pit service pending tire compound
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PitSvTireCompound: TelemetryVariable;
 
   /**
-   * CarIdxP2P_Status
+   * CarIdxP2P_Status - Push2Pass active or not
    *
-   * @description
-   * Push2Pass active or not
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxP2P_Status: TelemetryVariable<boolean[]>;
 
   /**
-   * CarIdxP2P_Count
+   * CarIdxP2P_Count - Push2Pass count of usage (or remaining in Race)
    *
-   * @description
-   * Push2Pass count of usage (or remaining in Race)
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 64
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 64
    */
   CarIdxP2P_Count: TelemetryVariable;
 
   /**
-   * P2P_Status
+   * P2P_Status - Push2Pass active or not on your car
    *
-   * @description
-   * Push2Pass active or not on your car
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   P2P_Status: TelemetryVariable<boolean[]>;
 
   /**
-   * P2P_Count
+   * P2P_Count - Push2Pass count of usage (or remaining in Race) on your car
    *
-   * @description
-   * Push2Pass count of usage (or remaining in Race) on your car
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   P2P_Count: TelemetryVariable;
 
   /**
-   * SteeringWheelPctTorque
+   * SteeringWheelPctTorque - Force feedback % max torque on steering shaft unsigned
    *
-   * @description
-   * Force feedback % max torque on steering shaft unsigned
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SteeringWheelPctTorque: TelemetryVariable;
 
   /**
-   * SteeringWheelPctTorqueSign
+   * SteeringWheelPctTorqueSign - Force feedback % max torque on steering shaft signed
    *
-   * @description
-   * Force feedback % max torque on steering shaft signed
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SteeringWheelPctTorqueSign: TelemetryVariable;
 
   /**
-   * SteeringWheelPctTorqueSignStops
+   * SteeringWheelPctTorqueSignStops - Force feedback % max torque on steering shaft signed stops
    *
-   * @description
-   * Force feedback % max torque on steering shaft signed stops
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SteeringWheelPctTorqueSignStops: TelemetryVariable;
 
   /**
-   * SteeringWheelPctIntensity
+   * SteeringWheelPctIntensity - Force feedback % max intensity
    *
-   * @description
-   * Force feedback % max intensity
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SteeringWheelPctIntensity: TelemetryVariable;
 
   /**
-   * SteeringWheelPctSmoothing
+   * SteeringWheelPctSmoothing - Force feedback % max smoothing
    *
-   * @description
-   * Force feedback % max smoothing
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SteeringWheelPctSmoothing: TelemetryVariable;
 
   /**
-   * SteeringWheelPctDamper
+   * SteeringWheelPctDamper - Force feedback % max damping
    *
-   * @description
-   * Force feedback % max damping
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SteeringWheelPctDamper: TelemetryVariable;
 
   /**
-   * SteeringWheelLimiter
+   * SteeringWheelLimiter - Force feedback limiter strength limits impacts and oscillation
    *
-   * @description
-   * Force feedback limiter strength limits impacts and oscillation
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SteeringWheelLimiter: TelemetryVariable;
 
   /**
-   * SteeringWheelMaxForceNm
+   * SteeringWheelMaxForceNm - Value of strength or max force slider in Nm for FFB
    *
-   * @description
-   * Value of strength or max force slider in Nm for FFB
-   * Unit of the variable: N*m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: N*m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SteeringWheelMaxForceNm: TelemetryVariable;
 
   /**
-   * SteeringWheelPeakForceNm
+   * SteeringWheelPeakForceNm - Peak torque mapping to direct input units for FFB
    *
-   * @description
-   * Peak torque mapping to direct input units for FFB
-   * Unit of the variable: N*m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: N*m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SteeringWheelPeakForceNm: TelemetryVariable;
 
   /**
-   * SteeringWheelUseLinear
+   * SteeringWheelUseLinear - True if steering wheel force is using linear mode
    *
-   * @description
-   * True if steering wheel force is using linear mode
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SteeringWheelUseLinear: TelemetryVariable<boolean[]>;
 
   /**
-   * ShiftIndicatorPct
+   * ShiftIndicatorPct - DEPRECATED use DriverCarSLBlinkRPM instead
    *
-   * @description
-   * DEPRECATED use DriverCarSLBlinkRPM instead
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   ShiftIndicatorPct: TelemetryVariable;
 
   /**
-   * IsGarageVisible
+   * IsGarageVisible - 1=Garage screen is visible
    *
-   * @description
-   * 1=Garage screen is visible
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   IsGarageVisible: TelemetryVariable<boolean[]>;
 
   /**
-   * ReplayPlaySpeed
+   * ReplayPlaySpeed - Replay playback speed
    *
-   * @description
-   * Replay playback speed
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   ReplayPlaySpeed: TelemetryVariable;
 
   /**
-   * ReplayPlaySlowMotion
+   * ReplayPlaySlowMotion - 0=not slow motion  1=replay is in slow motion
    *
-   * @description
-   * 0=not slow motion  1=replay is in slow motion
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   ReplayPlaySlowMotion: TelemetryVariable<boolean[]>;
 
   /**
-   * ReplaySessionTime
+   * ReplaySessionTime - Seconds since replay session start
    *
-   * @description
-   * Seconds since replay session start
-   * Unit of the variable: s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   ReplaySessionTime: TelemetryVariable;
 
   /**
-   * ReplaySessionNum
+   * ReplaySessionNum - Replay session number
    *
-   * @description
-   * Replay session number
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   ReplaySessionNum: TelemetryVariable;
 
   /**
-   * TireLF_RumblePitch
+   * TireLF_RumblePitch - Players LF Tire Sound rumblestrip pitch
    *
-   * @description
-   * Players LF Tire Sound rumblestrip pitch
-   * Unit of the variable: Hz
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: Hz
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   TireLF_RumblePitch: TelemetryVariable;
 
   /**
-   * TireRF_RumblePitch
+   * TireRF_RumblePitch - Players RF Tire Sound rumblestrip pitch
    *
-   * @description
-   * Players RF Tire Sound rumblestrip pitch
-   * Unit of the variable: Hz
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: Hz
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   TireRF_RumblePitch: TelemetryVariable;
 
   /**
-   * TireLR_RumblePitch
+   * TireLR_RumblePitch - Players LR Tire Sound rumblestrip pitch
    *
-   * @description
-   * Players LR Tire Sound rumblestrip pitch
-   * Unit of the variable: Hz
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: Hz
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   TireLR_RumblePitch: TelemetryVariable;
 
   /**
-   * TireRR_RumblePitch
+   * TireRR_RumblePitch - Players RR Tire Sound rumblestrip pitch
    *
-   * @description
-   * Players RR Tire Sound rumblestrip pitch
-   * Unit of the variable: Hz
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: Hz
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   TireRR_RumblePitch: TelemetryVariable;
 
   /**
-   * SteeringWheelTorque_ST
+   * SteeringWheelTorque_ST - Output torque on steering shaft at 360 Hz
    *
-   * @description
-   * Output torque on steering shaft at 360 Hz
-   * Unit of the variable: N*m
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: N*m
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   SteeringWheelTorque_ST: TelemetryVariable;
 
   /**
-   * SteeringWheelTorque
+   * SteeringWheelTorque - Output torque on steering shaft
    *
-   * @description
-   * Output torque on steering shaft
-   * Unit of the variable: N*m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: N*m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   SteeringWheelTorque: TelemetryVariable;
 
   /**
-   * VelocityZ_ST
+   * VelocityZ_ST - Z velocity
    *
-   * @description
-   * Z velocity
-   * Unit of the variable: m/s at 360 Hz
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m/s at 360 Hz
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   VelocityZ_ST: TelemetryVariable;
 
   /**
-   * VelocityY_ST
+   * VelocityY_ST - Y velocity
    *
-   * @description
-   * Y velocity
-   * Unit of the variable: m/s at 360 Hz
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m/s at 360 Hz
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   VelocityY_ST: TelemetryVariable;
 
   /**
-   * VelocityX_ST
+   * VelocityX_ST - X velocity
    *
-   * @description
-   * X velocity
-   * Unit of the variable: m/s at 360 Hz
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m/s at 360 Hz
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   VelocityX_ST: TelemetryVariable;
 
   /**
-   * VelocityZ
+   * VelocityZ - Z velocity
    *
-   * @description
-   * Z velocity
-   * Unit of the variable: m/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   VelocityZ: TelemetryVariable;
 
   /**
-   * VelocityY
+   * VelocityY - Y velocity
    *
-   * @description
-   * Y velocity
-   * Unit of the variable: m/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   VelocityY: TelemetryVariable;
 
   /**
-   * VelocityX
+   * VelocityX - X velocity
    *
-   * @description
-   * X velocity
-   * Unit of the variable: m/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   VelocityX: TelemetryVariable;
 
   /**
-   * YawRate_ST
+   * YawRate_ST - Yaw rate at 360 Hz
    *
-   * @description
-   * Yaw rate at 360 Hz
-   * Unit of the variable: rad/s
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: rad/s
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   YawRate_ST: TelemetryVariable;
 
   /**
-   * PitchRate_ST
+   * PitchRate_ST - Pitch rate at 360 Hz
    *
-   * @description
-   * Pitch rate at 360 Hz
-   * Unit of the variable: rad/s
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: rad/s
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   PitchRate_ST: TelemetryVariable;
 
   /**
-   * RollRate_ST
+   * RollRate_ST - Roll rate at 360 Hz
    *
-   * @description
-   * Roll rate at 360 Hz
-   * Unit of the variable: rad/s
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: rad/s
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   RollRate_ST: TelemetryVariable;
 
   /**
-   * YawRate
+   * YawRate - Yaw rate
    *
-   * @description
-   * Yaw rate
-   * Unit of the variable: rad/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: rad/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   YawRate: TelemetryVariable;
 
   /**
-   * PitchRate
+   * PitchRate - Pitch rate
    *
-   * @description
-   * Pitch rate
-   * Unit of the variable: rad/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: rad/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PitchRate: TelemetryVariable;
 
   /**
-   * RollRate
+   * RollRate - Roll rate
    *
-   * @description
-   * Roll rate
-   * Unit of the variable: rad/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: rad/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RollRate: TelemetryVariable;
 
   /**
-   * VertAccel_ST
+   * VertAccel_ST - Vertical acceleration (including gravity) at 360 Hz
    *
-   * @description
-   * Vertical acceleration (including gravity) at 360 Hz
-   * Unit of the variable: m/s^2
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m/s^2
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   VertAccel_ST: TelemetryVariable;
 
   /**
-   * LatAccel_ST
+   * LatAccel_ST - Lateral acceleration (including gravity) at 360 Hz
    *
-   * @description
-   * Lateral acceleration (including gravity) at 360 Hz
-   * Unit of the variable: m/s^2
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m/s^2
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   LatAccel_ST: TelemetryVariable;
 
   /**
-   * LongAccel_ST
+   * LongAccel_ST - Longitudinal acceleration (including gravity) at 360 Hz
    *
-   * @description
-   * Longitudinal acceleration (including gravity) at 360 Hz
-   * Unit of the variable: m/s^2
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m/s^2
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   LongAccel_ST: TelemetryVariable;
 
   /**
-   * VertAccel
+   * VertAccel - Vertical acceleration (including gravity)
    *
-   * @description
-   * Vertical acceleration (including gravity)
-   * Unit of the variable: m/s^2
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m/s^2
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   VertAccel: TelemetryVariable;
 
   /**
-   * LatAccel
+   * LatAccel - Lateral acceleration (including gravity)
    *
-   * @description
-   * Lateral acceleration (including gravity)
-   * Unit of the variable: m/s^2
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m/s^2
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LatAccel: TelemetryVariable;
 
   /**
-   * LongAccel
+   * LongAccel - Longitudinal acceleration (including gravity)
    *
-   * @description
-   * Longitudinal acceleration (including gravity)
-   * Unit of the variable: m/s^2
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m/s^2
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LongAccel: TelemetryVariable;
 
   /**
-   * dcStarter
+   * dcStarter - In car trigger car starter
    *
-   * @description
-   * In car trigger car starter
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcStarter: TelemetryVariable<boolean[]>;
 
   /**
-   * dcPitSpeedLimiterToggle
+   * dcPitSpeedLimiterToggle - Track if pit speed limiter system is enabled
    *
-   * @description
-   * Track if pit speed limiter system is enabled
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcPitSpeedLimiterToggle: TelemetryVariable<boolean[]>;
 
   /**
-   * dcTractionControlToggle
+   * dcTractionControlToggle - In car traction control active
    *
-   * @description
-   * In car traction control active
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcTractionControlToggle: TelemetryVariable<boolean[]>;
 
   /**
-   * dcHeadlightFlash
+   * dcHeadlightFlash - In car headlight flash control active
    *
-   * @description
-   * In car headlight flash control active
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcHeadlightFlash: TelemetryVariable<boolean[]>;
 
   /**
-   * dcLowFuelAccept
+   * dcLowFuelAccept - In car low fuel accept
    *
-   * @description
-   * In car low fuel accept
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcLowFuelAccept: TelemetryVariable<boolean[]>;
 
   /**
-   * dpRFTireChange
+   * dpRFTireChange - Pitstop rf tire change request
    *
-   * @description
-   * Pitstop rf tire change request
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dpRFTireChange: TelemetryVariable;
 
   /**
-   * dpLFTireChange
+   * dpLFTireChange - Pitstop lf tire change request
    *
-   * @description
-   * Pitstop lf tire change request
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dpLFTireChange: TelemetryVariable;
 
   /**
-   * dpRRTireChange
+   * dpRRTireChange - Pitstop rr tire change request
    *
-   * @description
-   * Pitstop rr tire change request
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dpRRTireChange: TelemetryVariable;
 
   /**
-   * dpLRTireChange
+   * dpLRTireChange - Pitstop lr tire change request
    *
-   * @description
-   * Pitstop lr tire change request
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dpLRTireChange: TelemetryVariable;
 
   /**
-   * dpFuelFill
+   * dpFuelFill - Pitstop fuel fill flag
    *
-   * @description
-   * Pitstop fuel fill flag
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dpFuelFill: TelemetryVariable;
 
   /**
-   * dpFuelAutoFillEnabled
+   * dpFuelAutoFillEnabled - Pitstop auto fill fuel system enabled
    *
-   * @description
-   * Pitstop auto fill fuel system enabled
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dpFuelAutoFillEnabled: TelemetryVariable;
 
   /**
-   * dpFuelAutoFillActive
+   * dpFuelAutoFillActive - Pitstop auto fill fuel next stop flag
    *
-   * @description
-   * Pitstop auto fill fuel next stop flag
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dpFuelAutoFillActive: TelemetryVariable;
 
   /**
-   * dpWindshieldTearoff
+   * dpWindshieldTearoff - Pitstop windshield tearoff
    *
-   * @description
-   * Pitstop windshield tearoff
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dpWindshieldTearoff: TelemetryVariable;
 
   /**
-   * dpFuelAddKg
+   * dpFuelAddKg - Pitstop fuel add amount
    *
-   * @description
-   * Pitstop fuel add amount
-   * Unit of the variable: kg
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: kg
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dpFuelAddKg: TelemetryVariable;
 
   /**
-   * dpFastRepair
+   * dpFastRepair - Pitstop fast repair set
    *
-   * @description
-   * Pitstop fast repair set
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dpFastRepair: TelemetryVariable;
 
   /**
-   * dcDashPage
+   * dcDashPage - In car dash display page adjustment
    *
-   * @description
-   * In car dash display page adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcDashPage: TelemetryVariable;
 
   /**
-   * dcPowerSteering
+   * dcPowerSteering - In car power steering adjustment
    *
-   * @description
-   * In car power steering adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcPowerSteering: TelemetryVariable;
 
   /**
-   * dcBrakeBias
+   * dcBrakeBias - In car brake bias adjustment
    *
-   * @description
-   * In car brake bias adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcBrakeBias: TelemetryVariable;
 
   /**
-   * dpLFTireColdPress
+   * dpLFTireColdPress - Pitstop lf tire cold pressure adjustment
    *
-   * @description
-   * Pitstop lf tire cold pressure adjustment
-   * Unit of the variable: Pa
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: Pa
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dpLFTireColdPress: TelemetryVariable;
 
   /**
-   * dpRFTireColdPress
+   * dpRFTireColdPress - Pitstop rf cold tire pressure adjustment
    *
-   * @description
-   * Pitstop rf cold tire pressure adjustment
-   * Unit of the variable: Pa
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: Pa
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dpRFTireColdPress: TelemetryVariable;
 
   /**
-   * dpLRTireColdPress
+   * dpLRTireColdPress - Pitstop lr tire cold pressure adjustment
    *
-   * @description
-   * Pitstop lr tire cold pressure adjustment
-   * Unit of the variable: Pa
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: Pa
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dpLRTireColdPress: TelemetryVariable;
 
   /**
-   * dpRRTireColdPress
+   * dpRRTireColdPress - Pitstop rr cold tire pressure adjustment
    *
-   * @description
-   * Pitstop rr cold tire pressure adjustment
-   * Unit of the variable: Pa
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: Pa
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dpRRTireColdPress: TelemetryVariable;
 
   /**
-   * dcTractionControl
+   * dcTractionControl - In car traction control adjustment
    *
-   * @description
-   * In car traction control adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcTractionControl: TelemetryVariable;
 
   /**
-   * dcABS
+   * dcABS - In car abs adjustment
    *
-   * @description
-   * In car abs adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcABS: TelemetryVariable;
 
   /**
-   * dcThrottleShape
+   * dcThrottleShape - In car throttle shape adjustment
    *
-   * @description
-   * In car throttle shape adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcThrottleShape: TelemetryVariable;
 
   /**
-   * dcToggleWindshieldWipers
+   * dcToggleWindshieldWipers - In car turn wipers on or off
    *
-   * @description
-   * In car turn wipers on or off
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcToggleWindshieldWipers: TelemetryVariable<boolean[]>;
 
   /**
-   * dcTriggerWindshieldWipers
+   * dcTriggerWindshieldWipers - In car momentarily turn on wipers
    *
-   * @description
-   * In car momentarily turn on wipers
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcTriggerWindshieldWipers: TelemetryVariable<boolean[]>;
 
   /**
-   * RFbrakeLinePress
+   * RFbrakeLinePress - RF brake line pressure
    *
-   * @description
-   * RF brake line pressure
-   * Unit of the variable: bar
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: bar
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RFbrakeLinePress: TelemetryVariable;
 
   /**
-   * RFcoldPressure
+   * RFcoldPressure - RF tire cold pressure  as set in the garage
    *
-   * @description
-   * RF tire cold pressure  as set in the garage
-   * Unit of the variable: kPa
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: kPa
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RFcoldPressure: TelemetryVariable;
 
   /**
-   * RFodometer
+   * RFodometer - RF distance tire traveled since being placed on car
    *
-   * @description
-   * RF distance tire traveled since being placed on car
-   * Unit of the variable: m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RFodometer: TelemetryVariable;
 
   /**
-   * RFtempCL
+   * RFtempCL - RF tire left carcass temperature
    *
-   * @description
-   * RF tire left carcass temperature
-   * Unit of the variable: C
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: C
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RFtempCL: TelemetryVariable;
 
   /**
-   * RFtempCM
+   * RFtempCM - RF tire middle carcass temperature
    *
-   * @description
-   * RF tire middle carcass temperature
-   * Unit of the variable: C
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: C
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RFtempCM: TelemetryVariable;
 
   /**
-   * RFtempCR
+   * RFtempCR - RF tire right carcass temperature
    *
-   * @description
-   * RF tire right carcass temperature
-   * Unit of the variable: C
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: C
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RFtempCR: TelemetryVariable;
 
   /**
-   * RFwearL
+   * RFwearL - RF tire left percent tread remaining
    *
-   * @description
-   * RF tire left percent tread remaining
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RFwearL: TelemetryVariable;
 
   /**
-   * RFwearM
+   * RFwearM - RF tire middle percent tread remaining
    *
-   * @description
-   * RF tire middle percent tread remaining
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RFwearM: TelemetryVariable;
 
   /**
-   * RFwearR
+   * RFwearR - RF tire right percent tread remaining
    *
-   * @description
-   * RF tire right percent tread remaining
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RFwearR: TelemetryVariable;
 
   /**
-   * LFbrakeLinePress
+   * LFbrakeLinePress - LF brake line pressure
    *
-   * @description
-   * LF brake line pressure
-   * Unit of the variable: bar
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: bar
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LFbrakeLinePress: TelemetryVariable;
 
   /**
-   * LFcoldPressure
+   * LFcoldPressure - LF tire cold pressure  as set in the garage
    *
-   * @description
-   * LF tire cold pressure  as set in the garage
-   * Unit of the variable: kPa
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: kPa
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LFcoldPressure: TelemetryVariable;
 
   /**
-   * LFodometer
+   * LFodometer - LF distance tire traveled since being placed on car
    *
-   * @description
-   * LF distance tire traveled since being placed on car
-   * Unit of the variable: m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LFodometer: TelemetryVariable;
 
   /**
-   * LFtempCL
+   * LFtempCL - LF tire left carcass temperature
    *
-   * @description
-   * LF tire left carcass temperature
-   * Unit of the variable: C
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: C
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LFtempCL: TelemetryVariable;
 
   /**
-   * LFtempCM
+   * LFtempCM - LF tire middle carcass temperature
    *
-   * @description
-   * LF tire middle carcass temperature
-   * Unit of the variable: C
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: C
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LFtempCM: TelemetryVariable;
 
   /**
-   * LFtempCR
+   * LFtempCR - LF tire right carcass temperature
    *
-   * @description
-   * LF tire right carcass temperature
-   * Unit of the variable: C
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: C
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LFtempCR: TelemetryVariable;
 
   /**
-   * LFwearL
+   * LFwearL - LF tire left percent tread remaining
    *
-   * @description
-   * LF tire left percent tread remaining
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LFwearL: TelemetryVariable;
 
   /**
-   * LFwearM
+   * LFwearM - LF tire middle percent tread remaining
    *
-   * @description
-   * LF tire middle percent tread remaining
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LFwearM: TelemetryVariable;
 
   /**
-   * LFwearR
+   * LFwearR - LF tire right percent tread remaining
    *
-   * @description
-   * LF tire right percent tread remaining
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LFwearR: TelemetryVariable;
 
   /**
-   * FuelUsePerHour
+   * FuelUsePerHour - Engine fuel used instantaneous
    *
-   * @description
-   * Engine fuel used instantaneous
-   * Unit of the variable: kg/h
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: kg/h
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   FuelUsePerHour: TelemetryVariable;
 
   /**
-   * Voltage
+   * Voltage - Engine voltage
    *
-   * @description
-   * Engine voltage
-   * Unit of the variable: V
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: V
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   Voltage: TelemetryVariable;
 
   /**
-   * WaterTemp
+   * WaterTemp - Engine coolant temp
    *
-   * @description
-   * Engine coolant temp
-   * Unit of the variable: C
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: C
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   WaterTemp: TelemetryVariable;
 
   /**
-   * WaterLevel
+   * WaterLevel - Engine coolant level
    *
-   * @description
-   * Engine coolant level
-   * Unit of the variable: l
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: l
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   WaterLevel: TelemetryVariable;
 
   /**
-   * FuelPress
+   * FuelPress - Engine fuel pressure
    *
-   * @description
-   * Engine fuel pressure
-   * Unit of the variable: bar
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: bar
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   FuelPress: TelemetryVariable;
 
   /**
-   * OilTemp
+   * OilTemp - Engine oil temperature
    *
-   * @description
-   * Engine oil temperature
-   * Unit of the variable: C
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: C
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   OilTemp: TelemetryVariable;
 
   /**
-   * OilPress
+   * OilPress - Engine oil pressure
    *
-   * @description
-   * Engine oil pressure
-   * Unit of the variable: bar
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: bar
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   OilPress: TelemetryVariable;
 
   /**
-   * OilLevel
+   * OilLevel - Engine oil level
    *
-   * @description
-   * Engine oil level
-   * Unit of the variable: l
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: l
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   OilLevel: TelemetryVariable;
 
   /**
-   * ManifoldPress
+   * ManifoldPress - Engine manifold pressure
    *
-   * @description
-   * Engine manifold pressure
-   * Unit of the variable: bar
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: bar
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   ManifoldPress: TelemetryVariable;
 
   /**
-   * FuelLevel
+   * FuelLevel - Liters of fuel remaining
    *
-   * @description
-   * Liters of fuel remaining
-   * Unit of the variable: l
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: l
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   FuelLevel: TelemetryVariable;
 
   /**
-   * Engine0_RPM
+   * Engine0_RPM - Engine0Engine rpm
    *
-   * @description
-   * Engine0Engine rpm
-   * Unit of the variable: revs/min
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: revs/min
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   Engine0_RPM: TelemetryVariable;
 
   /**
-   * RRbrakeLinePress
+   * RRbrakeLinePress - RR brake line pressure
    *
-   * @description
-   * RR brake line pressure
-   * Unit of the variable: bar
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: bar
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RRbrakeLinePress: TelemetryVariable;
 
   /**
-   * RRcoldPressure
+   * RRcoldPressure - RR tire cold pressure  as set in the garage
    *
-   * @description
-   * RR tire cold pressure  as set in the garage
-   * Unit of the variable: kPa
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: kPa
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RRcoldPressure: TelemetryVariable;
 
   /**
-   * RRodometer
+   * RRodometer - RR distance tire traveled since being placed on car
    *
-   * @description
-   * RR distance tire traveled since being placed on car
-   * Unit of the variable: m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RRodometer: TelemetryVariable;
 
   /**
-   * RRtempCL
+   * RRtempCL - RR tire left carcass temperature
    *
-   * @description
-   * RR tire left carcass temperature
-   * Unit of the variable: C
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: C
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RRtempCL: TelemetryVariable;
 
   /**
-   * RRtempCM
+   * RRtempCM - RR tire middle carcass temperature
    *
-   * @description
-   * RR tire middle carcass temperature
-   * Unit of the variable: C
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: C
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RRtempCM: TelemetryVariable;
 
   /**
-   * RRtempCR
+   * RRtempCR - RR tire right carcass temperature
    *
-   * @description
-   * RR tire right carcass temperature
-   * Unit of the variable: C
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: C
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RRtempCR: TelemetryVariable;
 
   /**
-   * RRwearL
+   * RRwearL - RR tire left percent tread remaining
    *
-   * @description
-   * RR tire left percent tread remaining
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RRwearL: TelemetryVariable;
 
   /**
-   * RRwearM
+   * RRwearM - RR tire middle percent tread remaining
    *
-   * @description
-   * RR tire middle percent tread remaining
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RRwearM: TelemetryVariable;
 
   /**
-   * RRwearR
+   * RRwearR - RR tire right percent tread remaining
    *
-   * @description
-   * RR tire right percent tread remaining
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RRwearR: TelemetryVariable;
 
   /**
-   * LRbrakeLinePress
+   * LRbrakeLinePress - LR brake line pressure
    *
-   * @description
-   * LR brake line pressure
-   * Unit of the variable: bar
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: bar
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LRbrakeLinePress: TelemetryVariable;
 
   /**
-   * LRcoldPressure
+   * LRcoldPressure - LR tire cold pressure  as set in the garage
    *
-   * @description
-   * LR tire cold pressure  as set in the garage
-   * Unit of the variable: kPa
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: kPa
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LRcoldPressure: TelemetryVariable;
 
   /**
-   * LRodometer
+   * LRodometer - LR distance tire traveled since being placed on car
    *
-   * @description
-   * LR distance tire traveled since being placed on car
-   * Unit of the variable: m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LRodometer: TelemetryVariable;
 
   /**
-   * LRtempCL
+   * LRtempCL - LR tire left carcass temperature
    *
-   * @description
-   * LR tire left carcass temperature
-   * Unit of the variable: C
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: C
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LRtempCL: TelemetryVariable;
 
   /**
-   * LRtempCM
+   * LRtempCM - LR tire middle carcass temperature
    *
-   * @description
-   * LR tire middle carcass temperature
-   * Unit of the variable: C
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: C
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LRtempCM: TelemetryVariable;
 
   /**
-   * LRtempCR
+   * LRtempCR - LR tire right carcass temperature
    *
-   * @description
-   * LR tire right carcass temperature
-   * Unit of the variable: C
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: C
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LRtempCR: TelemetryVariable;
 
   /**
-   * LRwearL
+   * LRwearL - LR tire left percent tread remaining
    *
-   * @description
-   * LR tire left percent tread remaining
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LRwearL: TelemetryVariable;
 
   /**
-   * LRwearM
+   * LRwearM - LR tire middle percent tread remaining
    *
-   * @description
-   * LR tire middle percent tread remaining
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LRwearM: TelemetryVariable;
 
   /**
-   * LRwearR
+   * LRwearR - LR tire right percent tread remaining
    *
-   * @description
-   * LR tire right percent tread remaining
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LRwearR: TelemetryVariable;
 
   /**
-   * LRshockDefl
+   * LRshockDefl - LR shock deflection
    *
-   * @description
-   * LR shock deflection
-   * Unit of the variable: m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LRshockDefl: TelemetryVariable;
 
   /**
-   * LRshockDefl_ST
+   * LRshockDefl_ST - LR shock deflection at 360 Hz
    *
-   * @description
-   * LR shock deflection at 360 Hz
-   * Unit of the variable: m
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   LRshockDefl_ST: TelemetryVariable;
 
   /**
-   * LRshockVel
+   * LRshockVel - LR shock velocity
    *
-   * @description
-   * LR shock velocity
-   * Unit of the variable: m/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LRshockVel: TelemetryVariable;
 
   /**
-   * LRshockVel_ST
+   * LRshockVel_ST - LR shock velocity at 360 Hz
    *
-   * @description
-   * LR shock velocity at 360 Hz
-   * Unit of the variable: m/s
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   LRshockVel_ST: TelemetryVariable;
 
   /**
-   * RRshockDefl
+   * RRshockDefl - RR shock deflection
    *
-   * @description
-   * RR shock deflection
-   * Unit of the variable: m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RRshockDefl: TelemetryVariable;
 
   /**
-   * RRshockDefl_ST
+   * RRshockDefl_ST - RR shock deflection at 360 Hz
    *
-   * @description
-   * RR shock deflection at 360 Hz
-   * Unit of the variable: m
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   RRshockDefl_ST: TelemetryVariable;
 
   /**
-   * RRshockVel
+   * RRshockVel - RR shock velocity
    *
-   * @description
-   * RR shock velocity
-   * Unit of the variable: m/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RRshockVel: TelemetryVariable;
 
   /**
-   * RRshockVel_ST
+   * RRshockVel_ST - RR shock velocity at 360 Hz
    *
-   * @description
-   * RR shock velocity at 360 Hz
-   * Unit of the variable: m/s
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   RRshockVel_ST: TelemetryVariable;
 
   /**
-   * LFshockDefl
+   * LFshockDefl - LF shock deflection
    *
-   * @description
-   * LF shock deflection
-   * Unit of the variable: m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LFshockDefl: TelemetryVariable;
 
   /**
-   * LFshockDefl_ST
+   * LFshockDefl_ST - LF shock deflection at 360 Hz
    *
-   * @description
-   * LF shock deflection at 360 Hz
-   * Unit of the variable: m
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   LFshockDefl_ST: TelemetryVariable;
 
   /**
-   * LFshockVel
+   * LFshockVel - LF shock velocity
    *
-   * @description
-   * LF shock velocity
-   * Unit of the variable: m/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LFshockVel: TelemetryVariable;
 
   /**
-   * LFshockVel_ST
+   * LFshockVel_ST - LF shock velocity at 360 Hz
    *
-   * @description
-   * LF shock velocity at 360 Hz
-   * Unit of the variable: m/s
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   LFshockVel_ST: TelemetryVariable;
 
   /**
-   * RFshockDefl
+   * RFshockDefl - RF shock deflection
    *
-   * @description
-   * RF shock deflection
-   * Unit of the variable: m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RFshockDefl: TelemetryVariable;
 
   /**
-   * RFshockDefl_ST
+   * RFshockDefl_ST - RF shock deflection at 360 Hz
    *
-   * @description
-   * RF shock deflection at 360 Hz
-   * Unit of the variable: m
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   RFshockDefl_ST: TelemetryVariable;
 
   /**
-   * RFshockVel
+   * RFshockVel - RF shock velocity
    *
-   * @description
-   * RF shock velocity
-   * Unit of the variable: m/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RFshockVel: TelemetryVariable;
 
   /**
-   * RFshockVel_ST
+   * RFshockVel_ST - RF shock velocity at 360 Hz
    *
-   * @description
-   * RF shock velocity at 360 Hz
-   * Unit of the variable: m/s
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   RFshockVel_ST: TelemetryVariable;
 
   /**
-   * dcDRSToggle
+   * dcDRSToggle - In car toggle DRS
    *
-   * @description
-   * In car toggle DRS
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcDRSToggle: TelemetryVariable<boolean[]>;
 
   /**
-   * dcTearOffVisor
+   * dcTearOffVisor - In car tear off visor film
    *
-   * @description
-   * In car tear off visor film
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcTearOffVisor: TelemetryVariable<boolean[]>;
 
   /**
-   * dpTireChange
+   * dpTireChange - Pitstop all tire change request
    *
-   * @description
-   * Pitstop all tire change request
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dpTireChange: TelemetryVariable;
 
   /**
-   * dpWingFront
+   * dpWingFront - Pitstop front wing adjustment
    *
-   * @description
-   * Pitstop front wing adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dpWingFront: TelemetryVariable;
 
   /**
-   * dcBrakeBiasFine
+   * dcBrakeBiasFine - In car brake bias fine adjustment
    *
-   * @description
-   * In car brake bias fine adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcBrakeBiasFine: TelemetryVariable;
 
   /**
-   * dcPeakBrakeBias
+   * dcPeakBrakeBias - In car peak brake bias adjustment
    *
-   * @description
-   * In car peak brake bias adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcPeakBrakeBias: TelemetryVariable;
 
   /**
-   * dcBrakeMisc
+   * dcBrakeMisc - In car brake misc adjustment
    *
-   * @description
-   * In car brake misc adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcBrakeMisc: TelemetryVariable;
 
   /**
-   * dcEngineBraking
+   * dcEngineBraking - In car engine braking adjustment
    *
-   * @description
-   * In car engine braking adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcEngineBraking: TelemetryVariable;
 
   /**
-   * dcMGUKDeployMode
+   * dcMGUKDeployMode - In car MGU-K deployment mode level adjustment
    *
-   * @description
-   * In car MGU-K deployment mode level adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcMGUKDeployMode: TelemetryVariable;
 
   /**
-   * dcMGUKRegenGain
+   * dcMGUKRegenGain - In car MUG-K re-gen gain adjustment
    *
-   * @description
-   * In car MUG-K re-gen gain adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcMGUKRegenGain: TelemetryVariable;
 
   /**
-   * dcDiffEntry
+   * dcDiffEntry - In car diff entry adjustment
    *
-   * @description
-   * In car diff entry adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcDiffEntry: TelemetryVariable;
 
   /**
-   * dcDiffMiddle
+   * dcDiffMiddle - In car diff middle adjustment
    *
-   * @description
-   * In car diff middle adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcDiffMiddle: TelemetryVariable;
 
   /**
-   * dcDiffExit
+   * dcDiffExit - In car diff exit adjustment
    *
-   * @description
-   * In car diff exit adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcDiffExit: TelemetryVariable;
 
   /**
-   * DRS_Status
+   * DRS_Status - Drag Reduction System Status
    *
-   * @description
-   * Drag Reduction System Status
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   DRS_Status: TelemetryVariable;
 
   /**
-   * PowerMGU_K
+   * PowerMGU_K - Engine MGU-K mechanical power
    *
-   * @description
-   * Engine MGU-K mechanical power
-   * Unit of the variable: W
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: W
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PowerMGU_K: TelemetryVariable;
 
   /**
-   * TorqueMGU_K
+   * TorqueMGU_K - Engine MGU-K mechanical torque
    *
-   * @description
-   * Engine MGU-K mechanical torque
-   * Unit of the variable: Nm
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: Nm
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   TorqueMGU_K: TelemetryVariable;
 
   /**
-   * PowerMGU_H
+   * PowerMGU_H - Engine MGU-H mechanical power
    *
-   * @description
-   * Engine MGU-H mechanical power
-   * Unit of the variable: W
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: W
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   PowerMGU_H: TelemetryVariable;
 
   /**
-   * EnergyERSBattery
+   * EnergyERSBattery - Engine ERS battery charge
    *
-   * @description
-   * Engine ERS battery charge
-   * Unit of the variable: J
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: J
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   EnergyERSBattery: TelemetryVariable;
 
   /**
-   * EnergyERSBatteryPct
+   * EnergyERSBatteryPct - Engine ERS battery charge as a percent
    *
-   * @description
-   * Engine ERS battery charge as a percent
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   EnergyERSBatteryPct: TelemetryVariable;
 
   /**
-   * EnergyBatteryToMGU_KLap
+   * EnergyBatteryToMGU_KLap - Electrical energy from battery to MGU-K per lap
    *
-   * @description
-   * Electrical energy from battery to MGU-K per lap
-   * Unit of the variable: J
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: J
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   EnergyBatteryToMGU_KLap: TelemetryVariable;
 
   /**
-   * EnergyMGU_KLapDeployPct
+   * EnergyMGU_KLapDeployPct - Electrical energy available to MGU-K per lap as a percent
    *
-   * @description
-   * Electrical energy available to MGU-K per lap as a percent
-   * Unit of the variable: %
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: %
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   EnergyMGU_KLapDeployPct: TelemetryVariable;
 
   /**
-   * Engine1_RPM
+   * Engine1_RPM - Engine1Engine rpm
    *
-   * @description
-   * Engine1Engine rpm
-   * Unit of the variable: revs/min
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: revs/min
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   Engine1_RPM: TelemetryVariable;
 
   /**
-   * CFshockDefl
+   * CFshockDefl - CF shock deflection
    *
-   * @description
-   * CF shock deflection
-   * Unit of the variable: m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   CFshockDefl: TelemetryVariable;
 
   /**
-   * CFshockDefl_ST
+   * CFshockDefl_ST - CF shock deflection at 360 Hz
    *
-   * @description
-   * CF shock deflection at 360 Hz
-   * Unit of the variable: m
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   CFshockDefl_ST: TelemetryVariable;
 
   /**
-   * CFshockVel
+   * CFshockVel - CF shock velocity
    *
-   * @description
-   * CF shock velocity
-   * Unit of the variable: m/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   CFshockVel: TelemetryVariable;
 
   /**
-   * CFshockVel_ST
+   * CFshockVel_ST - CF shock velocity at 360 Hz
    *
-   * @description
-   * CF shock velocity at 360 Hz
-   * Unit of the variable: m/s
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   CFshockVel_ST: TelemetryVariable;
 
   /**
-   * ROLLFshockDefl
+   * ROLLFshockDefl - ROLLF shock deflection
    *
-   * @description
-   * ROLLF shock deflection
-   * Unit of the variable: m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   ROLLFshockDefl: TelemetryVariable;
 
   /**
-   * ROLLFshockDefl_ST
+   * ROLLFshockDefl_ST - ROLLF shock deflection at 360 Hz
    *
-   * @description
-   * ROLLF shock deflection at 360 Hz
-   * Unit of the variable: m
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   ROLLFshockDefl_ST: TelemetryVariable;
 
   /**
-   * ROLLFshockVel
+   * ROLLFshockVel - ROLLF shock velocity
    *
-   * @description
-   * ROLLF shock velocity
-   * Unit of the variable: m/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   ROLLFshockVel: TelemetryVariable;
 
   /**
-   * ROLLFshockVel_ST
+   * ROLLFshockVel_ST - ROLLF shock velocity at 360 Hz
    *
-   * @description
-   * ROLLF shock velocity at 360 Hz
-   * Unit of the variable: m/s
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   ROLLFshockVel_ST: TelemetryVariable;
 
   /**
-   * CRshockDefl
+   * CRshockDefl - CR shock deflection
    *
-   * @description
-   * CR shock deflection
-   * Unit of the variable: m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   CRshockDefl: TelemetryVariable;
 
   /**
-   * CRshockDefl_ST
+   * CRshockDefl_ST - CR shock deflection at 360 Hz
    *
-   * @description
-   * CR shock deflection at 360 Hz
-   * Unit of the variable: m
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   CRshockDefl_ST: TelemetryVariable;
 
   /**
-   * CRshockVel
+   * CRshockVel - CR shock velocity
    *
-   * @description
-   * CR shock velocity
-   * Unit of the variable: m/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   CRshockVel: TelemetryVariable;
 
   /**
-   * CRshockVel_ST
+   * CRshockVel_ST - CR shock velocity at 360 Hz
    *
-   * @description
-   * CR shock velocity at 360 Hz
-   * Unit of the variable: m/s
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   CRshockVel_ST: TelemetryVariable;
 
   /**
-   * ROLLRshockDefl
+   * ROLLRshockDefl - ROLLR shock deflection
    *
-   * @description
-   * ROLLR shock deflection
-   * Unit of the variable: m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   ROLLRshockDefl: TelemetryVariable;
 
   /**
-   * ROLLRshockDefl_ST
+   * ROLLRshockDefl_ST - ROLLR shock deflection at 360 Hz
    *
-   * @description
-   * ROLLR shock deflection at 360 Hz
-   * Unit of the variable: m
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   ROLLRshockDefl_ST: TelemetryVariable;
 
   /**
-   * ROLLRshockVel
+   * ROLLRshockVel - ROLLR shock velocity
    *
-   * @description
-   * ROLLR shock velocity
-   * Unit of the variable: m/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   ROLLRshockVel: TelemetryVariable;
 
   /**
-   * ROLLRshockVel_ST
+   * ROLLRshockVel_ST - ROLLR shock velocity at 360 Hz
    *
-   * @description
-   * ROLLR shock velocity at 360 Hz
-   * Unit of the variable: m/s
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   ROLLRshockVel_ST: TelemetryVariable;
 
   /**
-   * dcTractionControl2
+   * dcTractionControl2 - In car traction control 2 adjustment
    *
-   * @description
-   * In car traction control 2 adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcTractionControl2: TelemetryVariable;
 
   /**
-   * LRSHshockDefl
+   * LRSHshockDefl - LRSH shock deflection
    *
-   * @description
-   * LRSH shock deflection
-   * Unit of the variable: m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LRSHshockDefl: TelemetryVariable;
 
   /**
-   * LRSHshockDefl_ST
+   * LRSHshockDefl_ST - LRSH shock deflection at 360 Hz
    *
-   * @description
-   * LRSH shock deflection at 360 Hz
-   * Unit of the variable: m
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   LRSHshockDefl_ST: TelemetryVariable;
 
   /**
-   * LRSHshockVel
+   * LRSHshockVel - LRSH shock velocity
    *
-   * @description
-   * LRSH shock velocity
-   * Unit of the variable: m/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LRSHshockVel: TelemetryVariable;
 
   /**
-   * LRSHshockVel_ST
+   * LRSHshockVel_ST - LRSH shock velocity at 360 Hz
    *
-   * @description
-   * LRSH shock velocity at 360 Hz
-   * Unit of the variable: m/s
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   LRSHshockVel_ST: TelemetryVariable;
 
   /**
-   * RRSHshockDefl
+   * RRSHshockDefl - RRSH shock deflection
    *
-   * @description
-   * RRSH shock deflection
-   * Unit of the variable: m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RRSHshockDefl: TelemetryVariable;
 
   /**
-   * RRSHshockDefl_ST
+   * RRSHshockDefl_ST - RRSH shock deflection at 360 Hz
    *
-   * @description
-   * RRSH shock deflection at 360 Hz
-   * Unit of the variable: m
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   RRSHshockDefl_ST: TelemetryVariable;
 
   /**
-   * RRSHshockVel
+   * RRSHshockVel - RRSH shock velocity
    *
-   * @description
-   * RRSH shock velocity
-   * Unit of the variable: m/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RRSHshockVel: TelemetryVariable;
 
   /**
-   * RRSHshockVel_ST
+   * RRSHshockVel_ST - RRSH shock velocity at 360 Hz
    *
-   * @description
-   * RRSH shock velocity at 360 Hz
-   * Unit of the variable: m/s
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   RRSHshockVel_ST: TelemetryVariable;
 
   /**
-   * dpRTireChange
+   * dpRTireChange - Pitstop right tire change request
    *
-   * @description
-   * Pitstop right tire change request
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dpRTireChange: TelemetryVariable;
 
   /**
-   * dpLTireChange
+   * dpLTireChange - Pitstop left tire change request
    *
-   * @description
-   * Pitstop left tire change request
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dpLTireChange: TelemetryVariable;
 
   /**
-   * LFSHshockDefl
+   * LFSHshockDefl - LFSH shock deflection
    *
-   * @description
-   * LFSH shock deflection
-   * Unit of the variable: m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LFSHshockDefl: TelemetryVariable;
 
   /**
-   * LFSHshockDefl_ST
+   * LFSHshockDefl_ST - LFSH shock deflection at 360 Hz
    *
-   * @description
-   * LFSH shock deflection at 360 Hz
-   * Unit of the variable: m
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   LFSHshockDefl_ST: TelemetryVariable;
 
   /**
-   * LFSHshockVel
+   * LFSHshockVel - LFSH shock velocity
    *
-   * @description
-   * LFSH shock velocity
-   * Unit of the variable: m/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LFSHshockVel: TelemetryVariable;
 
   /**
-   * LFSHshockVel_ST
+   * LFSHshockVel_ST - LFSH shock velocity at 360 Hz
    *
-   * @description
-   * LFSH shock velocity at 360 Hz
-   * Unit of the variable: m/s
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   LFSHshockVel_ST: TelemetryVariable;
 
   /**
-   * RFSHshockDefl
+   * RFSHshockDefl - RFSH shock deflection
    *
-   * @description
-   * RFSH shock deflection
-   * Unit of the variable: m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RFSHshockDefl: TelemetryVariable;
 
   /**
-   * RFSHshockDefl_ST
+   * RFSHshockDefl_ST - RFSH shock deflection at 360 Hz
    *
-   * @description
-   * RFSH shock deflection at 360 Hz
-   * Unit of the variable: m
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   RFSHshockDefl_ST: TelemetryVariable;
 
   /**
-   * RFSHshockVel
+   * RFSHshockVel - RFSH shock velocity
    *
-   * @description
-   * RFSH shock velocity
-   * Unit of the variable: m/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   RFSHshockVel: TelemetryVariable;
 
   /**
-   * RFSHshockVel_ST
+   * RFSHshockVel_ST - RFSH shock velocity at 360 Hz
    *
-   * @description
-   * RFSH shock velocity at 360 Hz
-   * Unit of the variable: m/s
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   RFSHshockVel_ST: TelemetryVariable;
 
   /**
-   * dcRFBrakeAttachedToggle
+   * dcRFBrakeAttachedToggle - In car Right Front Brake attached(1) or detached(0)
    *
-   * @description
-   * In car Right Front Brake attached(1) or detached(0)
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcRFBrakeAttachedToggle: TelemetryVariable<boolean[]>;
 
   /**
-   * LR2shockDefl
+   * LR2shockDefl - LR2 shock deflection
    *
-   * @description
-   * LR2 shock deflection
-   * Unit of the variable: m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LR2shockDefl: TelemetryVariable;
 
   /**
-   * LR2shockDefl_ST
+   * LR2shockDefl_ST - LR2 shock deflection at 360 Hz
    *
-   * @description
-   * LR2 shock deflection at 360 Hz
-   * Unit of the variable: m
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   LR2shockDefl_ST: TelemetryVariable;
 
   /**
-   * LR2shockVel
+   * LR2shockVel - LR2 shock velocity
    *
-   * @description
-   * LR2 shock velocity
-   * Unit of the variable: m/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   LR2shockVel: TelemetryVariable;
 
   /**
-   * LR2shockVel_ST
+   * LR2shockVel_ST - LR2 shock velocity at 360 Hz
    *
-   * @description
-   * LR2 shock velocity at 360 Hz
-   * Unit of the variable: m/s
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   LR2shockVel_ST: TelemetryVariable;
 
   /**
-   * DRS_Count
+   * DRS_Count - Drag Reduction System count of usage
    *
-   * @description
-   * Drag Reduction System count of usage
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   DRS_Count: TelemetryVariable;
 
   /**
-   * dcLaunchRPM
+   * dcLaunchRPM - In car launch rpm adjustment
    *
-   * @description
-   * In car launch rpm adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcLaunchRPM: TelemetryVariable;
 
   /**
-   * dcAntiRollFront
+   * dcAntiRollFront - In car front anti roll bar adjustment
    *
-   * @description
-   * In car front anti roll bar adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcAntiRollFront: TelemetryVariable;
 
   /**
-   * dcAntiRollRear
+   * dcAntiRollRear - In car rear anti roll bar adjustment
    *
-   * @description
-   * In car rear anti roll bar adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcAntiRollRear: TelemetryVariable;
 
   /**
-   * HFshockDefl
+   * HFshockDefl - HF shock deflection
    *
-   * @description
-   * HF shock deflection
-   * Unit of the variable: m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   HFshockDefl: TelemetryVariable;
 
   /**
-   * HFshockDefl_ST
+   * HFshockDefl_ST - HF shock deflection at 360 Hz
    *
-   * @description
-   * HF shock deflection at 360 Hz
-   * Unit of the variable: m
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   HFshockDefl_ST: TelemetryVariable;
 
   /**
-   * HFshockVel
+   * HFshockVel - HF shock velocity
    *
-   * @description
-   * HF shock velocity
-   * Unit of the variable: m/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   HFshockVel: TelemetryVariable;
 
   /**
-   * HFshockVel_ST
+   * HFshockVel_ST - HF shock velocity at 360 Hz
    *
-   * @description
-   * HF shock velocity at 360 Hz
-   * Unit of the variable: m/s
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   HFshockVel_ST: TelemetryVariable;
 
   /**
-   * HRshockDefl
+   * HRshockDefl - HR shock deflection
    *
-   * @description
-   * HR shock deflection
-   * Unit of the variable: m
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   HRshockDefl: TelemetryVariable;
 
   /**
-   * HRshockDefl_ST
+   * HRshockDefl_ST - HR shock deflection at 360 Hz
    *
-   * @description
-   * HR shock deflection at 360 Hz
-   * Unit of the variable: m
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   HRshockDefl_ST: TelemetryVariable;
 
   /**
-   * HRshockVel
+   * HRshockVel - HR shock velocity
    *
-   * @description
-   * HR shock velocity
-   * Unit of the variable: m/s
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   HRshockVel: TelemetryVariable;
 
   /**
-   * HRshockVel_ST
+   * HRshockVel_ST - HR shock velocity at 360 Hz
    *
-   * @description
-   * HR shock velocity at 360 Hz
-   * Unit of the variable: m/s
-   * This variable counts as a time.
-   * Expected data length: 6
+   * @remarks
+   *
+   * - Unit of the variable: m/s
+   * - This variable counts as a time.
+   * - Expected data length: 6
    */
   HRshockVel_ST: TelemetryVariable;
 
   /**
-   * dcPushToPass
+   * dcPushToPass - In car trigger push to pass
    *
-   * @description
-   * In car trigger push to pass
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcPushToPass: TelemetryVariable<boolean[]>;
 
   /**
-   * dpWingRear
+   * dpWingRear - Pitstop rear wing adjustment
    *
-   * @description
-   * Pitstop rear wing adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dpWingRear: TelemetryVariable;
 
   /**
-   * dcWeightJackerRight
+   * dcWeightJackerRight - In car right wedge/weight jacker adjustment
    *
-   * @description
-   * In car right wedge/weight jacker adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcWeightJackerRight: TelemetryVariable;
 
   /**
-   * dcFuelMixture
+   * dcFuelMixture - In car fuel mixture adjustment
    *
-   * @description
-   * In car fuel mixture adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcFuelMixture: TelemetryVariable;
 
   /**
-   * dcDashPage2
+   * dcDashPage2 - In car second dash display page adjustment
    *
-   * @description
-   * In car second dash display page adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcDashPage2: TelemetryVariable;
 
   /**
-   * dpQTape
+   * dpQTape - Pitstop qualify tape adjustment
    *
-   * @description
-   * Pitstop qualify tape adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dpQTape: TelemetryVariable;
 
   /**
-   * dpWeightJackerLeft
+   * dpWeightJackerLeft - Pitstop left wedge/weight jacker adjustment
    *
-   * @description
-   * Pitstop left wedge/weight jacker adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dpWeightJackerLeft: TelemetryVariable;
 
   /**
-   * dpWeightJackerRight
+   * dpWeightJackerRight - Pitstop right wedge/weight jacker adjustment
    *
-   * @description
-   * Pitstop right wedge/weight jacker adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dpWeightJackerRight: TelemetryVariable;
 
   /**
-   * dcInLapToggle
+   * dcInLapToggle - In car toggle in lap settings
    *
-   * @description
-   * In car toggle in lap settings
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcInLapToggle: TelemetryVariable<boolean[]>;
 
   /**
-   * dcFCYToggle
+   * dcFCYToggle - In car toggle full course yellow mode
    *
-   * @description
-   * In car toggle full course yellow mode
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcFCYToggle: TelemetryVariable<boolean[]>;
 
   /**
-   * dcFuelCutPosition
+   * dcFuelCutPosition - In car adv end straight fuel cut
    *
-   * @description
-   * In car adv end straight fuel cut
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcFuelCutPosition: TelemetryVariable;
 
   /**
-   * dcFuelNoCutToggle
+   * dcFuelNoCutToggle - In car fuel cut on straight active
    *
-   * @description
-   * In car fuel cut on straight active
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcFuelNoCutToggle: TelemetryVariable<boolean[]>;
 
   /**
-   * dcMGUKDeployFixed
+   * dcMGUKDeployFixed - In car MGU-K fixed deployment level adjustment
    *
-   * @description
-   * In car MGU-K fixed deployment level adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcMGUKDeployFixed: TelemetryVariable;
 
   /**
-   * dcHysBoostHold
+   * dcHysBoostHold - In car hold HYS deploy
    *
-   * @description
-   * In car hold HYS deploy
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcHysBoostHold: TelemetryVariable<boolean[]>;
 
   /**
-   * dpPowerSteering
+   * dpPowerSteering - Pitstop power steering adjustment
    *
-   * @description
-   * Pitstop power steering adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dpPowerSteering: TelemetryVariable;
 
   /**
-   * dcTractionControl4
+   * dcTractionControl4 - In car traction control 4 adjustment
    *
-   * @description
-   * In car traction control 4 adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcTractionControl4: TelemetryVariable;
 
   /**
-   * dcTractionControl3
+   * dcTractionControl3 - In car traction control 3 adjustment
    *
-   * @description
-   * In car traction control 3 adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcTractionControl3: TelemetryVariable;
 
   /**
-   * dpChargeAddKWh
+   * dpChargeAddKWh - Pitstop charge add amount
    *
-   * @description
-   * Pitstop charge add amount
-   * Unit of the variable: kWh
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Unit of the variable: kWh
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dpChargeAddKWh: TelemetryVariable;
 
   /**
-   * dcEnginePower
+   * dcEnginePower - In car engine power adjustment
    *
-   * @description
-   * In car engine power adjustment
-   * Variable does not have a unit.
-   * This variable does not count as a time.
-   * Expected data length: 1
+   * @remarks
+   *
+   * - Variable does not have a unit.
+   * - This variable does not count as a time.
+   * - Expected data length: 1
    */
   dcEnginePower: TelemetryVariable;
 }

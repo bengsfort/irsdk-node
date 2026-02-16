@@ -1,4 +1,4 @@
-Defined in: [defines.ts:621](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L621)
+Defined in: [defines.ts:621](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L621)
 
 Available replay positioning commands, to be used with message broadcasting.
 Only usable outside of the car.
@@ -10,7 +10,7 @@ Represents `irsdk_RpyPosMode`
 
 > **Begin**: `0`
 
-Defined in: [defines.ts:623](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L623)
+Defined in: [defines.ts:623](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L623)
 
 Beginning of the replay
 
@@ -20,7 +20,7 @@ Beginning of the replay
 
 > **Current**: `1`
 
-Defined in: [defines.ts:625](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L625)
+Defined in: [defines.ts:625](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L625)
 
 Current position in the replay
 
@@ -30,7 +30,7 @@ Current position in the replay
 
 > **End**: `2`
 
-Defined in: [defines.ts:627](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L627)
+Defined in: [defines.ts:627](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L627)
 
 End of the replay
 
@@ -40,6 +40,6 @@ End of the replay
 
 > **UnusedPlaceholder**: `3`
 
-Defined in: [defines.ts:629](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L629)
+Defined in: [defines.ts:629](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L629)
 
 Unused placeholder - do not use!

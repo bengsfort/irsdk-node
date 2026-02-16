@@ -1,4 +1,4 @@
-Defined in: [defines.ts:205](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L205)
+Defined in: [defines.ts:205](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L205)
 
 Indicates the mode being used when the pace car is out.
 
@@ -10,7 +10,7 @@ Represents irsdk_PaceMode
 
 > **DoubleFileRestart**: `3`
 
-Defined in: [defines.ts:209](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L209)
+Defined in: [defines.ts:209](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L209)
 
 ***
 
@@ -18,7 +18,7 @@ Defined in: [defines.ts:209](https://github.com/bengsfort/irsdk-node/blob/a2b43f
 
 > **DoubleFileStart**: `1`
 
-Defined in: [defines.ts:207](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L207)
+Defined in: [defines.ts:207](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L207)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [defines.ts:207](https://github.com/bengsfort/irsdk-node/blob/a2b43f
 
 > **NotPacing**: `4`
 
-Defined in: [defines.ts:210](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L210)
+Defined in: [defines.ts:210](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L210)
 
 ***
 
@@ -34,7 +34,7 @@ Defined in: [defines.ts:210](https://github.com/bengsfort/irsdk-node/blob/a2b43f
 
 > **SingleFileRestart**: `2`
 
-Defined in: [defines.ts:208](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L208)
+Defined in: [defines.ts:208](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L208)
 
 ***
 
@@ -42,4 +42,4 @@ Defined in: [defines.ts:208](https://github.com/bengsfort/irsdk-node/blob/a2b43f
 
 > **SingleFileStart**: `0`
 
-Defined in: [defines.ts:206](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L206)
+Defined in: [defines.ts:206](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L206)

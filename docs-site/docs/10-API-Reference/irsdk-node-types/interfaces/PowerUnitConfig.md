@@ -1,4 +1,4 @@
-Defined in: [setup-info.ts:150](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L150)
+Defined in: [setup-info.ts:150](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L150)
 
 ## Properties
 
@@ -6,7 +6,7 @@ Defined in: [setup-info.ts:150](https://github.com/bengsfort/irsdk-node/blob/a2b
 
 > **EngineBraking**: `string`
 
-Defined in: [setup-info.ts:152](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L152)
+Defined in: [setup-info.ts:152](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L152)
 
 ***
 
@@ -14,4 +14,4 @@ Defined in: [setup-info.ts:152](https://github.com/bengsfort/irsdk-node/blob/a2b
 
 > **MguKDeployMode**: `string`
 
-Defined in: [setup-info.ts:151](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L151)
+Defined in: [setup-info.ts:151](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L151)

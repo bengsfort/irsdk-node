@@ -1,4 +1,4 @@
-Defined in: [defines.ts:434](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L434)
+Defined in: [defines.ts:434](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L434)
 
 Messages for controlling the sim via the SDK.
 
@@ -13,7 +13,7 @@ Represents `irsdk_BroadcastMsg`
 
 > **CameraSetState**: `2`
 
-Defined in: [defines.ts:440](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L440)
+Defined in: [defines.ts:440](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L440)
 
 Change the camera state. (Requires being outside of the car.)
 
@@ -23,7 +23,7 @@ Change the camera state. (Requires being outside of the car.)
 
 > **CameraSwitchNum**: `1`
 
-Defined in: [defines.ts:438](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L438)
+Defined in: [defines.ts:438](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L438)
 
 Switch the driver number to follow. (Requires being outside of the car.)
 
@@ -33,7 +33,7 @@ Switch the driver number to follow. (Requires being outside of the car.)
 
 > **CameraSwitchPos**: `0`
 
-Defined in: [defines.ts:436](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L436)
+Defined in: [defines.ts:436](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L436)
 
 Switch the camera position. (Requires being outside of the car.)
 
@@ -43,7 +43,7 @@ Switch the camera position. (Requires being outside of the car.)
 
 > **ChatCommand**: `8`
 
-Defined in: [defines.ts:452](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L452)
+Defined in: [defines.ts:452](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L452)
 
 Broadcast a chat command.
 
@@ -53,7 +53,7 @@ Broadcast a chat command.
 
 > **FFBCommand**: `11`
 
-Defined in: [defines.ts:458](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L458)
+Defined in: [defines.ts:458](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L458)
 
 Broadcast a force feedback command.
 
@@ -63,7 +63,7 @@ Broadcast a force feedback command.
 
 > **PitCommand**: `9`
 
-Defined in: [defines.ts:454](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L454)
+Defined in: [defines.ts:454](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L454)
 
 Broadcast a pit command. (Requires being in the car.)
 
@@ -73,7 +73,7 @@ Broadcast a pit command. (Requires being in the car.)
 
 > **ReloadTextures**: `7`
 
-Defined in: [defines.ts:450](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L450)
+Defined in: [defines.ts:450](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L450)
 
 Trigger a texture reload.
 
@@ -83,7 +83,7 @@ Trigger a texture reload.
 
 > **ReplaySearch**: `5`
 
-Defined in: [defines.ts:446](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L446)
+Defined in: [defines.ts:446](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L446)
 
 Enter replay search mode. (Requires being outside of the car.)
 
@@ -93,7 +93,7 @@ Enter replay search mode. (Requires being outside of the car.)
 
 > **ReplaySearchSessionTime**: `12`
 
-Defined in: [defines.ts:463](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L463)
+Defined in: [defines.ts:463](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L463)
 
 Trigger searching to a replay time. (Requires being outside of the car.)
 This does a search, and not a direct jump, so it may take a while!
@@ -104,7 +104,7 @@ This does a search, and not a direct jump, so it may take a while!
 
 > **ReplaySetPlayPosition**: `4`
 
-Defined in: [defines.ts:444](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L444)
+Defined in: [defines.ts:444](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L444)
 
 Jump to a different part of the replay. (Requires being outside of the car.)
 
@@ -114,7 +114,7 @@ Jump to a different part of the replay. (Requires being outside of the car.)
 
 > **ReplaySetPlaySpeed**: `3`
 
-Defined in: [defines.ts:442](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L442)
+Defined in: [defines.ts:442](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L442)
 
 Change the play speed of a replay. (Requires being outside of the car.)
 
@@ -124,7 +124,7 @@ Change the play speed of a replay. (Requires being outside of the car.)
 
 > **ReplaySetState**: `6`
 
-Defined in: [defines.ts:448](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L448)
+Defined in: [defines.ts:448](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L448)
 
 Change the replay state.  (Requires being outside of the car.)
 
@@ -134,7 +134,7 @@ Change the replay state.  (Requires being outside of the car.)
 
 > **TelemCommand**: `10`
 
-Defined in: [defines.ts:456](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L456)
+Defined in: [defines.ts:456](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L456)
 
 Broadcast a telemetry command.
 
@@ -144,7 +144,7 @@ Broadcast a telemetry command.
 
 > **UnusedPlaceholder**: `14`
 
-Defined in: [defines.ts:467](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L467)
+Defined in: [defines.ts:467](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L467)
 
 Unused placeholder - do not use!
 
@@ -154,6 +154,6 @@ Unused placeholder - do not use!
 
 > **VideoCapture**: `13`
 
-Defined in: [defines.ts:465](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L465)
+Defined in: [defines.ts:465](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L465)
 
 Trigger video capture.

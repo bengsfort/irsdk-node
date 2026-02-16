@@ -1,4 +1,4 @@
-Defined in: [radio-info.ts:24](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/radio-info.ts#L24)
+Defined in: [radio-info.ts:24](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/radio-info.ts#L24)
 
 ## Properties
 
@@ -6,7 +6,7 @@ Defined in: [radio-info.ts:24](https://github.com/bengsfort/irsdk-node/blob/a2b4
 
 > **Radios**: [`Radio`](Radio.md)[]
 
-Defined in: [radio-info.ts:26](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/radio-info.ts#L26)
+Defined in: [radio-info.ts:26](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/radio-info.ts#L26)
 
 ***
 
@@ -14,4 +14,4 @@ Defined in: [radio-info.ts:26](https://github.com/bengsfort/irsdk-node/blob/a2b4
 
 > **SelectedRadioNum**: `number`
 
-Defined in: [radio-info.ts:25](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/radio-info.ts#L25)
+Defined in: [radio-info.ts:25](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/radio-info.ts#L25)

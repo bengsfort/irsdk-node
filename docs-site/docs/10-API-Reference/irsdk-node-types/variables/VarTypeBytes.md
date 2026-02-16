@@ -1,6 +1,6 @@
 > `const` **VarTypeBytes**: `object`
 
-Defined in: [defines.ts:68](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L68)
+Defined in: [defines.ts:68](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L68)
 
 The number of bytes making up each telemetry variable type (VarTypes).
 

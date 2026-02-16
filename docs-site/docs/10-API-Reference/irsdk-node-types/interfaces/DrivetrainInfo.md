@@ -1,4 +1,4 @@
-Defined in: [setup-info.ts:183](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L183)
+Defined in: [setup-info.ts:183](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L183)
 
 ## Properties
 
@@ -6,7 +6,7 @@ Defined in: [setup-info.ts:183](https://github.com/bengsfort/irsdk-node/blob/a2b
 
 > **Differential\_RcOnly**: `object`
 
-Defined in: [setup-info.ts:197](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L197)
+Defined in: [setup-info.ts:197](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L197)
 
 #### ClutchPlates
 
@@ -26,7 +26,7 @@ Defined in: [setup-info.ts:197](https://github.com/bengsfort/irsdk-node/blob/a2b
 
 > **Engine**: `object`
 
-Defined in: [setup-info.ts:184](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L184)
+Defined in: [setup-info.ts:184](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L184)
 
 #### EngineMapSetting
 
@@ -42,7 +42,7 @@ Defined in: [setup-info.ts:184](https://github.com/bengsfort/irsdk-node/blob/a2b
 
 > **Gearbox**: `object`
 
-Defined in: [setup-info.ts:188](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L188)
+Defined in: [setup-info.ts:188](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L188)
 
 #### FifthGear
 

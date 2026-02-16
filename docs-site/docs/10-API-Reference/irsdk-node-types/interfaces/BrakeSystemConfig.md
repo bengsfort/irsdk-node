@@ -1,4 +1,4 @@
-Defined in: [setup-info.ts:155](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L155)
+Defined in: [setup-info.ts:155](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L155)
 
 ## Properties
 
@@ -6,7 +6,7 @@ Defined in: [setup-info.ts:155](https://github.com/bengsfort/irsdk-node/blob/a2b
 
 > **BaseBrakeBias**: `string`
 
-Defined in: [setup-info.ts:156](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L156)
+Defined in: [setup-info.ts:156](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L156)
 
 ***
 
@@ -14,7 +14,7 @@ Defined in: [setup-info.ts:156](https://github.com/bengsfort/irsdk-node/blob/a2b
 
 > **BrakeMagicModifier**: `number`
 
-Defined in: [setup-info.ts:160](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L160)
+Defined in: [setup-info.ts:160](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L160)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [setup-info.ts:160](https://github.com/bengsfort/irsdk-node/blob/a2b
 
 > **BrakeMigration**: `string`
 
-Defined in: [setup-info.ts:158](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L158)
+Defined in: [setup-info.ts:158](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L158)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [setup-info.ts:158](https://github.com/bengsfort/irsdk-node/blob/a2b
 
 > **DynamicRamping**: `string`
 
-Defined in: [setup-info.ts:157](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L157)
+Defined in: [setup-info.ts:157](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L157)
 
 ***
 
@@ -38,4 +38,4 @@ Defined in: [setup-info.ts:157](https://github.com/bengsfort/irsdk-node/blob/a2b
 
 > **TotalBrakeBias**: `string`
 
-Defined in: [setup-info.ts:159](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L159)
+Defined in: [setup-info.ts:159](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L159)

@@ -1,4 +1,4 @@
-Defined in: [defines.ts:218](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L218)
+Defined in: [defines.ts:218](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L218)
 
 Indicates track wetness. Used with the `TrackWetness` telemetry variable.
 
@@ -10,7 +10,7 @@ Represents irsdk_TrackWetness
 
 > **Dry**: `1`
 
-Defined in: [defines.ts:220](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L220)
+Defined in: [defines.ts:220](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L220)
 
 ***
 
@@ -18,7 +18,7 @@ Defined in: [defines.ts:220](https://github.com/bengsfort/irsdk-node/blob/a2b43f
 
 > **ExtremelyWet**: `7`
 
-Defined in: [defines.ts:226](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L226)
+Defined in: [defines.ts:226](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L226)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [defines.ts:226](https://github.com/bengsfort/irsdk-node/blob/a2b43f
 
 > **LightlyWet**: `4`
 
-Defined in: [defines.ts:223](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L223)
+Defined in: [defines.ts:223](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L223)
 
 ***
 
@@ -34,7 +34,7 @@ Defined in: [defines.ts:223](https://github.com/bengsfort/irsdk-node/blob/a2b43f
 
 > **ModeratelyWet**: `5`
 
-Defined in: [defines.ts:224](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L224)
+Defined in: [defines.ts:224](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L224)
 
 ***
 
@@ -42,7 +42,7 @@ Defined in: [defines.ts:224](https://github.com/bengsfort/irsdk-node/blob/a2b43f
 
 > **MostlyDry**: `2`
 
-Defined in: [defines.ts:221](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L221)
+Defined in: [defines.ts:221](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L221)
 
 ***
 
@@ -50,7 +50,7 @@ Defined in: [defines.ts:221](https://github.com/bengsfort/irsdk-node/blob/a2b43f
 
 > **UNKNOWN**: `0`
 
-Defined in: [defines.ts:219](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L219)
+Defined in: [defines.ts:219](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L219)
 
 ***
 
@@ -58,7 +58,7 @@ Defined in: [defines.ts:219](https://github.com/bengsfort/irsdk-node/blob/a2b43f
 
 > **VeryLightlyWet**: `3`
 
-Defined in: [defines.ts:222](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L222)
+Defined in: [defines.ts:222](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L222)
 
 ***
 
@@ -66,4 +66,4 @@ Defined in: [defines.ts:222](https://github.com/bengsfort/irsdk-node/blob/a2b43f
 
 > **VeryWet**: `6`
 
-Defined in: [defines.ts:225](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/defines.ts#L225)
+Defined in: [defines.ts:225](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L225)

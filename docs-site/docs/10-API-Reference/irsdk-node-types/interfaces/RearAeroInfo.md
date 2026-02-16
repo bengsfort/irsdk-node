@@ -1,4 +1,4 @@
-Defined in: [setup-info.ts:41](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L41)
+Defined in: [setup-info.ts:41](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L41)
 
 ## Properties
 
@@ -6,7 +6,7 @@ Defined in: [setup-info.ts:41](https://github.com/bengsfort/irsdk-node/blob/a2b4
 
 > **WingAngle**: `string`
 
-Defined in: [setup-info.ts:43](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L43)
+Defined in: [setup-info.ts:43](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L43)
 
 ***
 
@@ -14,7 +14,7 @@ Defined in: [setup-info.ts:43](https://github.com/bengsfort/irsdk-node/blob/a2b4
 
 > **WingFlapConfig**: `string`
 
-Defined in: [setup-info.ts:42](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L42)
+Defined in: [setup-info.ts:42](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L42)
 
 ***
 
@@ -22,4 +22,4 @@ Defined in: [setup-info.ts:42](https://github.com/bengsfort/irsdk-node/blob/a2b4
 
 > **WingWicker**: `string`
 
-Defined in: [setup-info.ts:44](https://github.com/bengsfort/irsdk-node/blob/a2b43f2f04d651e31708a537154c2c9959148812/packages/irsdk-node-types/src/setup-info.ts#L44)
+Defined in: [setup-info.ts:44](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L44)
