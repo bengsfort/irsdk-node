@@ -25,7 +25,7 @@ jobs:
           PACKAGES="(irsdk-node|irsdk-node-native|irsdk-node-types)"
           SEARCH_PATTERN="^(docs-site|packages/$PACKAGES/)"
 
-          if [ "${{ github.event_name }} == "pull_request" ]; then
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
             CHANGED_FILES=$(jq -r '.pull_request.changed_files' "$GITHUB_EVENT_PATH")
 
             # Get the actual file list from the API
