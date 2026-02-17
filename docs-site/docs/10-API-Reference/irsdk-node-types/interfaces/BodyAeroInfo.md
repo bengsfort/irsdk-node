@@ -1,4 +1,4 @@
-Defined in: [setup-info.ts:34](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L34)
+Defined in: [setup-info.ts:34](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L34)
 
 ## Properties
 
@@ -6,7 +6,7 @@ Defined in: [setup-info.ts:34](https://github.com/bengsfort/irsdk-node/blob/ed60
 
 > **BargeBoards**: `string`
 
-Defined in: [setup-info.ts:37](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L37)
+Defined in: [setup-info.ts:37](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L37)
 
 ***
 
@@ -14,7 +14,7 @@ Defined in: [setup-info.ts:37](https://github.com/bengsfort/irsdk-node/blob/ed60
 
 > **RadiatorInlet**: `string`
 
-Defined in: [setup-info.ts:35](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L35)
+Defined in: [setup-info.ts:35](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L35)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [setup-info.ts:35](https://github.com/bengsfort/irsdk-node/blob/ed60
 
 > **TrailingEdgeWicker**: `string`
 
-Defined in: [setup-info.ts:36](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L36)
+Defined in: [setup-info.ts:36](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L36)
 
 ***
 
@@ -30,4 +30,4 @@ Defined in: [setup-info.ts:36](https://github.com/bengsfort/irsdk-node/blob/ed60
 
 > **Underwing**: `string`
 
-Defined in: [setup-info.ts:38](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L38)
+Defined in: [setup-info.ts:38](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L38)

@@ -1,4 +1,4 @@
-Defined in: [weekend-info.ts:38](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L38)
+Defined in: [weekend-info.ts:38](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L38)
 
 ## Properties
 
@@ -6,7 +6,7 @@ Defined in: [weekend-info.ts:38](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **BuildTarget**: `string`
 
-Defined in: [weekend-info.ts:99](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L99)
+Defined in: [weekend-info.ts:99](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L99)
 
 ***
 
@@ -14,7 +14,7 @@ Defined in: [weekend-info.ts:99](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **BuildType**: `string`
 
-Defined in: [weekend-info.ts:98](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L98)
+Defined in: [weekend-info.ts:98](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L98)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [weekend-info.ts:98](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **BuildVersion**: `string`
 
-Defined in: [weekend-info.ts:100](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L100)
+Defined in: [weekend-info.ts:100](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L100)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [weekend-info.ts:100](https://github.com/bengsfort/irsdk-node/blob/e
 
 > **Category**: `string`
 
-Defined in: [weekend-info.ts:88](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L88)
+Defined in: [weekend-info.ts:88](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L88)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [weekend-info.ts:88](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **DCRuleSet**: `string`
 
-Defined in: [weekend-info.ts:93](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L93)
+Defined in: [weekend-info.ts:93](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L93)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [weekend-info.ts:93](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **EventType**: `string`
 
-Defined in: [weekend-info.ts:87](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L87)
+Defined in: [weekend-info.ts:87](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L87)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [weekend-info.ts:87](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **HeatRacing**: `number`
 
-Defined in: [weekend-info.ts:97](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L97)
+Defined in: [weekend-info.ts:97](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L97)
 
 ***
 
@@ -62,7 +62,7 @@ Defined in: [weekend-info.ts:97](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **LeagueID**: `number`
 
-Defined in: [weekend-info.ts:84](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L84)
+Defined in: [weekend-info.ts:84](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L84)
 
 ***
 
@@ -70,7 +70,7 @@ Defined in: [weekend-info.ts:84](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **MaxDrivers**: `number`
 
-Defined in: [weekend-info.ts:92](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L92)
+Defined in: [weekend-info.ts:92](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L92)
 
 ***
 
@@ -78,7 +78,7 @@ Defined in: [weekend-info.ts:92](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **MinDrivers**: `number`
 
-Defined in: [weekend-info.ts:91](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L91)
+Defined in: [weekend-info.ts:91](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L91)
 
 ***
 
@@ -86,7 +86,7 @@ Defined in: [weekend-info.ts:91](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **NumCarClasses**: `number`
 
-Defined in: [weekend-info.ts:95](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L95)
+Defined in: [weekend-info.ts:95](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L95)
 
 ***
 
@@ -94,7 +94,7 @@ Defined in: [weekend-info.ts:95](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **NumCarTypes**: `number`
 
-Defined in: [weekend-info.ts:96](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L96)
+Defined in: [weekend-info.ts:96](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L96)
 
 ***
 
@@ -102,7 +102,7 @@ Defined in: [weekend-info.ts:96](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **Official**: `number`
 
-Defined in: [weekend-info.ts:85](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L85)
+Defined in: [weekend-info.ts:85](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L85)
 
 ***
 
@@ -110,7 +110,7 @@ Defined in: [weekend-info.ts:85](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **QualifierMustStartRace**: `number`
 
-Defined in: [weekend-info.ts:94](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L94)
+Defined in: [weekend-info.ts:94](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L94)
 
 ***
 
@@ -118,7 +118,7 @@ Defined in: [weekend-info.ts:94](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **RaceWeek**: `number`
 
-Defined in: [weekend-info.ts:86](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L86)
+Defined in: [weekend-info.ts:86](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L86)
 
 ***
 
@@ -126,7 +126,7 @@ Defined in: [weekend-info.ts:86](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **SeasonID**: `number`
 
-Defined in: [weekend-info.ts:81](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L81)
+Defined in: [weekend-info.ts:81](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L81)
 
 ***
 
@@ -134,7 +134,7 @@ Defined in: [weekend-info.ts:81](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **SeriesID**: `number`
 
-Defined in: [weekend-info.ts:80](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L80)
+Defined in: [weekend-info.ts:80](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L80)
 
 ***
 
@@ -142,7 +142,7 @@ Defined in: [weekend-info.ts:80](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **SessionID**: `number`
 
-Defined in: [weekend-info.ts:82](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L82)
+Defined in: [weekend-info.ts:82](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L82)
 
 ***
 
@@ -150,7 +150,7 @@ Defined in: [weekend-info.ts:82](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **SimMode**: `string`
 
-Defined in: [weekend-info.ts:89](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L89)
+Defined in: [weekend-info.ts:89](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L89)
 
 ***
 
@@ -158,7 +158,7 @@ Defined in: [weekend-info.ts:89](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **SubSessionID**: `number`
 
-Defined in: [weekend-info.ts:83](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L83)
+Defined in: [weekend-info.ts:83](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L83)
 
 ***
 
@@ -166,7 +166,7 @@ Defined in: [weekend-info.ts:83](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TeamRacing**: `number`
 
-Defined in: [weekend-info.ts:90](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L90)
+Defined in: [weekend-info.ts:90](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L90)
 
 ***
 
@@ -174,7 +174,7 @@ Defined in: [weekend-info.ts:90](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TelemetryOptions**: [`TelemetryOptions`](TelemetryOptions.md)
 
-Defined in: [weekend-info.ts:102](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L102)
+Defined in: [weekend-info.ts:102](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L102)
 
 ***
 
@@ -182,7 +182,7 @@ Defined in: [weekend-info.ts:102](https://github.com/bengsfort/irsdk-node/blob/e
 
 > **TrackAirPressure**: `string`
 
-Defined in: [weekend-info.ts:72](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L72)
+Defined in: [weekend-info.ts:72](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L72)
 
 ***
 
@@ -190,7 +190,7 @@ Defined in: [weekend-info.ts:72](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackAirTemp**: `string`
 
-Defined in: [weekend-info.ts:71](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L71)
+Defined in: [weekend-info.ts:71](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L71)
 
 ***
 
@@ -198,7 +198,7 @@ Defined in: [weekend-info.ts:71](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackAltitude**: `string`
 
-Defined in: [weekend-info.ts:48](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L48)
+Defined in: [weekend-info.ts:48](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L48)
 
 ***
 
@@ -206,7 +206,7 @@ Defined in: [weekend-info.ts:48](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackCity**: `string`
 
-Defined in: [weekend-info.ts:46](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L46)
+Defined in: [weekend-info.ts:46](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L46)
 
 ***
 
@@ -214,7 +214,7 @@ Defined in: [weekend-info.ts:46](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackCleanup**: `number`
 
-Defined in: [weekend-info.ts:77](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L77)
+Defined in: [weekend-info.ts:77](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L77)
 
 ***
 
@@ -222,7 +222,7 @@ Defined in: [weekend-info.ts:77](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackConfigName**: `string` \| `null`
 
-Defined in: [weekend-info.ts:45](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L45)
+Defined in: [weekend-info.ts:45](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L45)
 
 ***
 
@@ -230,7 +230,7 @@ Defined in: [weekend-info.ts:45](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackCountry**: `string`
 
-Defined in: [weekend-info.ts:47](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L47)
+Defined in: [weekend-info.ts:47](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L47)
 
 ***
 
@@ -238,7 +238,7 @@ Defined in: [weekend-info.ts:47](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackDirection**: `string`
 
-Defined in: [weekend-info.ts:55](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L55)
+Defined in: [weekend-info.ts:55](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L55)
 
 ***
 
@@ -246,7 +246,7 @@ Defined in: [weekend-info.ts:55](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackDisplayName**: `string`
 
-Defined in: [weekend-info.ts:43](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L43)
+Defined in: [weekend-info.ts:43](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L43)
 
 ***
 
@@ -254,7 +254,7 @@ Defined in: [weekend-info.ts:43](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackDisplayShortName**: `string`
 
-Defined in: [weekend-info.ts:44](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L44)
+Defined in: [weekend-info.ts:44](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L44)
 
 ***
 
@@ -262,7 +262,7 @@ Defined in: [weekend-info.ts:44](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackDynamicTrack**: `number`
 
-Defined in: [weekend-info.ts:78](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L78)
+Defined in: [weekend-info.ts:78](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L78)
 
 ***
 
@@ -270,7 +270,7 @@ Defined in: [weekend-info.ts:78](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackFogLevel**: `string`
 
-Defined in: [weekend-info.ts:76](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L76)
+Defined in: [weekend-info.ts:76](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L76)
 
 ***
 
@@ -278,7 +278,7 @@ Defined in: [weekend-info.ts:76](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackID**: `number`
 
-Defined in: [weekend-info.ts:40](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L40)
+Defined in: [weekend-info.ts:40](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L40)
 
 ***
 
@@ -286,7 +286,7 @@ Defined in: [weekend-info.ts:40](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackLatitude**: `string`
 
-Defined in: [weekend-info.ts:49](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L49)
+Defined in: [weekend-info.ts:49](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L49)
 
 ***
 
@@ -294,7 +294,7 @@ Defined in: [weekend-info.ts:49](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackLength**: `string`
 
-Defined in: [weekend-info.ts:41](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L41)
+Defined in: [weekend-info.ts:41](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L41)
 
 ***
 
@@ -302,7 +302,7 @@ Defined in: [weekend-info.ts:41](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackLengthOfficial**: `string`
 
-Defined in: [weekend-info.ts:42](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L42)
+Defined in: [weekend-info.ts:42](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L42)
 
 ***
 
@@ -310,7 +310,7 @@ Defined in: [weekend-info.ts:42](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackLongitude**: `string`
 
-Defined in: [weekend-info.ts:50](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L50)
+Defined in: [weekend-info.ts:50](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L50)
 
 ***
 
@@ -318,7 +318,7 @@ Defined in: [weekend-info.ts:50](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackName**: `string`
 
-Defined in: [weekend-info.ts:39](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L39)
+Defined in: [weekend-info.ts:39](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L39)
 
 ***
 
@@ -326,7 +326,7 @@ Defined in: [weekend-info.ts:39](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackNorthOffset**: `string`
 
-Defined in: [weekend-info.ts:51](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L51)
+Defined in: [weekend-info.ts:51](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L51)
 
 ***
 
@@ -334,7 +334,7 @@ Defined in: [weekend-info.ts:51](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackNumTurns**: `number`
 
-Defined in: [weekend-info.ts:52](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L52)
+Defined in: [weekend-info.ts:52](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L52)
 
 ***
 
@@ -342,7 +342,7 @@ Defined in: [weekend-info.ts:52](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackPitSpeedLimit**: `string`
 
-Defined in: [weekend-info.ts:53](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L53)
+Defined in: [weekend-info.ts:53](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L53)
 
 ***
 
@@ -350,7 +350,7 @@ Defined in: [weekend-info.ts:53](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackRelativeHumidity**: `string`
 
-Defined in: [weekend-info.ts:75](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L75)
+Defined in: [weekend-info.ts:75](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L75)
 
 ***
 
@@ -358,7 +358,7 @@ Defined in: [weekend-info.ts:75](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackSkies**: `string`
 
-Defined in: [weekend-info.ts:69](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L69)
+Defined in: [weekend-info.ts:69](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L69)
 
 ***
 
@@ -366,7 +366,7 @@ Defined in: [weekend-info.ts:69](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackSurfaceTemp**: `string`
 
-Defined in: [weekend-info.ts:70](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L70)
+Defined in: [weekend-info.ts:70](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L70)
 
 ***
 
@@ -374,7 +374,7 @@ Defined in: [weekend-info.ts:70](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackType**: `string`
 
-Defined in: [weekend-info.ts:54](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L54)
+Defined in: [weekend-info.ts:54](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L54)
 
 ***
 
@@ -382,7 +382,7 @@ Defined in: [weekend-info.ts:54](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackVersion**: `string`
 
-Defined in: [weekend-info.ts:79](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L79)
+Defined in: [weekend-info.ts:79](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L79)
 
 ***
 
@@ -390,7 +390,7 @@ Defined in: [weekend-info.ts:79](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackWeatherType**: `string`
 
-Defined in: [weekend-info.ts:68](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L68)
+Defined in: [weekend-info.ts:68](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L68)
 
 Can be one of the following:
 
@@ -409,7 +409,7 @@ Can be one of the following:
 
 > **TrackWindDir**: `string`
 
-Defined in: [weekend-info.ts:74](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L74)
+Defined in: [weekend-info.ts:74](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L74)
 
 ***
 
@@ -417,7 +417,7 @@ Defined in: [weekend-info.ts:74](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **TrackWindVel**: `string`
 
-Defined in: [weekend-info.ts:73](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L73)
+Defined in: [weekend-info.ts:73](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L73)
 
 ***
 
@@ -425,4 +425,4 @@ Defined in: [weekend-info.ts:73](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **WeekendOptions**: [`WeekendOptions`](WeekendOptions.md)
 
-Defined in: [weekend-info.ts:101](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/weekend-info.ts#L101)
+Defined in: [weekend-info.ts:101](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/weekend-info.ts#L101)

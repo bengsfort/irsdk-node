@@ -1,4 +1,4 @@
-Defined in: [irsdk-node.ts:115](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L115)
+Defined in: [irsdk-node.ts:115](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L115)
 
 Type-safe, performant wrapper class around the iRacing SDK. Can be used for
 safely consuming data from and dispatching commands to the iRacing SDK.
@@ -17,7 +17,7 @@ for a more bare bindings API or to have more control over your own abstractions.
 
 > **new IRacingSDK**(`config?`): `IRacingSDK`
 
-Defined in: [irsdk-node.ts:153](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L153)
+Defined in: [irsdk-node.ts:153](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L153)
 
 Instantiate an instance of this SDK wrapper.
 
@@ -37,7 +37,7 @@ Instantiate an instance of this SDK wrapper.
 
 > **autoEnableTelemetry**: `boolean` = `DefaultConfig.autoEnableTelemetry`
 
-Defined in: [irsdk-node.ts:121](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L121)
+Defined in: [irsdk-node.ts:121](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L121)
 
 Enable attempting to auto-start telemetry when starting the SDK (if it is not running).
 
@@ -53,7 +53,7 @@ false
 
 > **logLevel**: `LogLevel` = `DefaultConfig.logLevel`
 
-Defined in: [irsdk-node.ts:127](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L127)
+Defined in: [irsdk-node.ts:127](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L127)
 
 The logging level to use when calling irsdk-node API's. Defaults to 0 (LogLevel.None).
 
@@ -69,7 +69,7 @@ LogLevel.None
 
 > **useTelemVariableCache**: `boolean` = `DefaultConfig.useTelemVariableCache`
 
-Defined in: [irsdk-node.ts:140](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L140)
+Defined in: [irsdk-node.ts:140](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L140)
 
 Whether or not to use an internal look-up cache when fetching Telemetry Variables by
 name. This can provide a performance benefit, but may produce unwanted behaviour when
@@ -93,7 +93,7 @@ true
 
 > **get** **currDataVersion**(): `number`
 
-Defined in: [irsdk-node.ts:206](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L206)
+Defined in: [irsdk-node.ts:206](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L206)
 
 The current version number of the session data. Increments internally every time data changes.
 
@@ -109,7 +109,7 @@ The current version number of the session data. Increments internally every time
 
 > **get** **enableLogging**(): `boolean`
 
-Defined in: [irsdk-node.ts:214](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L214)
+Defined in: [irsdk-node.ts:214](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L214)
 
 Whether or not to enable logging in the SDK.
 
@@ -125,7 +125,7 @@ v4.3.0 - Please use [IRacingSDK.logLevel](#loglevel) is instead.
 
 > **set** **enableLogging**(`value`): `void`
 
-Defined in: [irsdk-node.ts:218](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L218)
+Defined in: [irsdk-node.ts:218](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L218)
 
 ##### Parameters
 
@@ -145,7 +145,7 @@ Defined in: [irsdk-node.ts:218](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > **get** **sessionStatusOK**(): `boolean`
 
-Defined in: [irsdk-node.ts:249](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L249)
+Defined in: [irsdk-node.ts:249](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L249)
 
 Retrieves from the native SDK whether it is actively connected and receiving
 data. Must be used in conjunction with [IRacingSDK.waitForData](#waitfordata).
@@ -163,7 +163,7 @@ session.
 
 > **broadcastUnsafe**\<`Command`\>(`message`, ...`args`): `boolean`
 
-Defined in: [irsdk-node.ts:859](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L859)
+Defined in: [irsdk-node.ts:859](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L859)
 
 Trigger a broadcast manually, without any safety guard rails. Only use if
 you know what you are doing!
@@ -199,7 +199,7 @@ line before it to disable the type safety.
 
 > **changeCameraNumber**(`driver`, `group`, `camera`): `void`
 
-Defined in: [irsdk-node.ts:648](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L648)
+Defined in: [irsdk-node.ts:648](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L648)
 
 Broadcast a command to iRacing to change the driver the camera is focusing.
 
@@ -230,7 +230,7 @@ otherwise.
 
 > **changeCameraPosition**(`focusMode`, `group`, `camera`): `void`
 
-Defined in: [irsdk-node.ts:631](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L631)
+Defined in: [irsdk-node.ts:631](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L631)
 
 Broadcast a command to iRacing to switch the current camera mode, which
 allows you to pick what car or group to focus at, and with what camera.
@@ -267,7 +267,7 @@ This broadcast message has changed over time and the name is very outdated.
 
 > **changeCameraState**(`state`): `void`
 
-Defined in: [irsdk-node.ts:661](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L661)
+Defined in: [irsdk-node.ts:661](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L661)
 
 Broadcast a command to iRacing to update the camera state.
 
@@ -292,7 +292,7 @@ otherwise.
 
 > **changeFFB**(`mode`, `amount`): `void`
 
-Defined in: [irsdk-node.ts:835](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L835)
+Defined in: [irsdk-node.ts:835](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L835)
 
 Broadcast to iRacing to change the current force feedback strength.
 
@@ -315,7 +315,7 @@ Broadcast to iRacing to change the current force feedback strength.
 
 > **changeReplayPosition**(`position`, `frame`): `void`
 
-Defined in: [irsdk-node.ts:690](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L690)
+Defined in: [irsdk-node.ts:690](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L690)
 
 Broadcast a command to iRacing to set the current position in the replay.
 
@@ -341,7 +341,7 @@ via frames, so to jump forward 1 second it would be 66 frames.
 
 > **changeReplaySpeed**(`speed`, `slowMotion`): `void`
 
-Defined in: [irsdk-node.ts:675](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L675)
+Defined in: [irsdk-node.ts:675](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L675)
 
 Broadcast a command to iRacing to set the current replay speed.
 
@@ -367,7 +367,7 @@ The speed should be a power of 2, and can be negative. Ex:
 
 > **changeReplayState**(`state`): `void`
 
-Defined in: [irsdk-node.ts:713](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L713)
+Defined in: [irsdk-node.ts:713](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L713)
 
 Broadcast a message to iRacing to adjust the replay state. This is only used
 to erase the replay data via `ReplayStateCommand.EraseTape`.
@@ -388,7 +388,7 @@ to erase the replay data via `ReplayStateCommand.EraseTape`.
 
 > **enableTelemetry**(`enabled`): `void`
 
-Defined in: [irsdk-node.ts:601](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L601)
+Defined in: [irsdk-node.ts:601](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L601)
 
 Broadcast a command to iRacing to enable or disable telemetry recording.
 
@@ -408,7 +408,7 @@ Broadcast a command to iRacing to enable or disable telemetry recording.
 
 > **getCameraInfo**(): `CameraInfo` \| `null`
 
-Defined in: [irsdk-node.ts:410](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L410)
+Defined in: [irsdk-node.ts:410](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L410)
 
 Helper utility for getting the current camera info from the Session Data.
 
@@ -435,7 +435,7 @@ broadcasting.
 
 > **getCarSetupInfo**(): `CarSetupInfo` \| `null`
 
-Defined in: [irsdk-node.ts:458](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L458)
+Defined in: [irsdk-node.ts:458](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L458)
 
 Helper utility for getting car setup information from the Session Data. This
 can be used to retrieve all available car setup information for the current
@@ -453,7 +453,7 @@ The car setup info, or null if no session active.
 
 > **getDriverInfo**(): `DriverInfo` \| `null`
 
-Defined in: [irsdk-node.ts:434](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L434)
+Defined in: [irsdk-node.ts:434](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L434)
 
 Helper utility for getting the current driver info from the Session Data.
 This can be used to get generic data about the local driver data as well as
@@ -471,7 +471,7 @@ The current DriverInfo, or null if no session is active.
 
 > **getRadioInfo**(): `RadioInfo` \| `null`
 
-Defined in: [irsdk-node.ts:422](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L422)
+Defined in: [irsdk-node.ts:422](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L422)
 
 Helper utility for getting the current radio info from the Session Data,
 providing a way to crawl the available radio channels for the current
@@ -489,7 +489,7 @@ The current RadioInfo, or null if no session is active.
 
 > **getSessionConnectionID**(): `number`
 
-Defined in: [irsdk-node.ts:367](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L367)
+Defined in: [irsdk-node.ts:367](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L367)
 
 Gets the ID for the current (or previous, if none active) iRacing connection.
 
@@ -503,7 +503,7 @@ Gets the ID for the current (or previous, if none active) iRacing connection.
 
 > **getSessionData**(): `SessionData` \| `null`
 
-Defined in: [irsdk-node.ts:340](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L340)
+Defined in: [irsdk-node.ts:340](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L340)
 
 Returns the latest version of the Session Data object. This should only be
 called after INativeSDK.waitForData has successfully retrieved data
@@ -531,7 +531,7 @@ minimized and this function is generally safe to call multiple times per frame.
 
 > **getSessionInfo**(): `SessionList` \| `null`
 
-Defined in: [irsdk-node.ts:391](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L391)
+Defined in: [irsdk-node.ts:391](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L391)
 
 Helper utility for retrieving the current SessionInfo from the Session Data.
 This includes a list of all of the Sessions of the current iRacing instance,
@@ -550,7 +550,7 @@ The current session list, or null if no session is active.
 
 > **getSessionVersionNum**(): `number`
 
-Defined in: [irsdk-node.ts:360](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L360)
+Defined in: [irsdk-node.ts:360](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L360)
 
 Gets the version number of the latest session data from the SDK. Skips all
 caches. This can be used to independently check version numbers if performing
@@ -566,7 +566,7 @@ custom cache-busting.
 
 > **getSplitInfo**(): `SplitTimeInfo` \| `null`
 
-Defined in: [irsdk-node.ts:446](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L446)
+Defined in: [irsdk-node.ts:446](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L446)
 
 Helper utility for getting the Sector information for the current session
 from Session Data. This provides the definition of where each sector for
@@ -584,7 +584,7 @@ The sector configuration, or null if no session is active.
 
 > **getTelemetry**(): `TelemetryVarList`
 
-Defined in: [irsdk-node.ts:481](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L481)
+Defined in: [irsdk-node.ts:481](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L481)
 
 Returns an object containing the current value of every available telemetry
 variable. This should only be called after [IRacingSDK.waitForData](#waitfordata)
@@ -615,7 +615,7 @@ result until your next [IRacingSDK.waitForData](#waitfordata) call completes.
 
 > **getTelemetryVariable**\<`T`\>(`index`): `TelemetryVariable`\<`T`[]\> \| `null`
 
-Defined in: [irsdk-node.ts:516](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L516)
+Defined in: [irsdk-node.ts:516](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L516)
 
 Get the current data for the given Telemetry variable by index. The index
 for a given Telemetry variable can be fetched by name via the helper
@@ -652,7 +652,7 @@ version in performance-critical projects.
 
 > **getTelemetryVariable**\<`T`\>(`varName`): `TelemetryVariable`\<`T`[]\> \| `null`
 
-Defined in: [irsdk-node.ts:542](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L542)
+Defined in: [irsdk-node.ts:542](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L542)
 
 Get the current data for the given Telemetry variable by name. This is more
 convenient than by index, but is significantly slower. The keys of the
@@ -696,7 +696,7 @@ at the beginning of a session, and then re-using that index instead.
 
 > **getWeekendInfo**(): `WeekendInfo` \| `null`
 
-Defined in: [irsdk-node.ts:378](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L378)
+Defined in: [irsdk-node.ts:378](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L378)
 
 Helper utility for retrieving the current WeekendInfo from the Session Data.
 This includes general information about the current sessions configuration,
@@ -714,7 +714,7 @@ Current Weekend Info data or null, if no session is active.
 
 > **ready**(): `Promise`\<`boolean`\>
 
-Defined in: [irsdk-node.ts:198](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L198)
+Defined in: [irsdk-node.ts:198](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L198)
 
 Wait for the SDK module to resolve and load.
 
@@ -732,7 +732,7 @@ This is no longer needed as of v4.0.3. Please remove.
 
 > **reloadAllTextures**(): `void`
 
-Defined in: [irsdk-node.ts:735](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L735)
+Defined in: [irsdk-node.ts:735](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L735)
 
 Broadcast to iRacing to reload all car textures.
 
@@ -746,7 +746,7 @@ Broadcast to iRacing to reload all car textures.
 
 > **reloadCarTextures**(`car`): `void`
 
-Defined in: [irsdk-node.ts:744](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L744)
+Defined in: [irsdk-node.ts:744](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L744)
 
 Broadcast to iRacing to reload only the given cars textures.
 
@@ -766,7 +766,7 @@ Broadcast to iRacing to reload only the given cars textures.
 
 > **resetTelemetryVariableCache**(): `void`
 
-Defined in: [irsdk-node.ts:591](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L591)
+Defined in: [irsdk-node.ts:591](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L591)
 
 Resets the internal telemetry variable lookup cache. This occurs automatically
 whenever the SDK starts and stops, and is only necessary to call if:
@@ -790,7 +790,7 @@ has changed cars, to make sure there are no stale variables in the cache.
 
 > **restartTelemetry**(): `void`
 
-Defined in: [irsdk-node.ts:610](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L610)
+Defined in: [irsdk-node.ts:610](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L610)
 
 Broadcast a command to iRacing to write the current telemetry file to disk
 and start a new one.
@@ -805,7 +805,7 @@ and start a new one.
 
 > **searchReplay**(`command`): `void`
 
-Defined in: [irsdk-node.ts:703](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L703)
+Defined in: [irsdk-node.ts:703](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L703)
 
 Broadcast a command to iRacing to seek through the replay to the given target.
 
@@ -829,7 +829,7 @@ Requires you to be outside of the car.
 
 > **startSDK**(): `boolean`
 
-Defined in: [irsdk-node.ts:265](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L265)
+Defined in: [irsdk-node.ts:265](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L265)
 
 Attempts to initialize the native SDK and necessary buffers to receive data,
 returning if it was successful or not.
@@ -853,7 +853,7 @@ initialization is successful.
 
 > **stopSDK**(): `void`
 
-Defined in: [irsdk-node.ts:285](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L285)
+Defined in: [irsdk-node.ts:285](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L285)
 
 Closes and cleans up the currently active SDK instance, resetting the internal
 telemetry caches and data versions. Should always be called whenever you are
@@ -869,7 +869,7 @@ done with the SDK or want a full state reset.
 
 > **triggerChatMacro**(`macro`): `void`
 
-Defined in: [irsdk-node.ts:768](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L768)
+Defined in: [irsdk-node.ts:768](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L768)
 
 Broadcast to iRacing to trigger the given chat macro.
 
@@ -889,7 +889,7 @@ Broadcast to iRacing to trigger the given chat macro.
 
 > **triggerChatState**(`state`): `void`
 
-Defined in: [irsdk-node.ts:757](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L757)
+Defined in: [irsdk-node.ts:757](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L757)
 
 Broadcast to iRacing to update the chat state to the provided state.
 
@@ -909,7 +909,7 @@ Broadcast to iRacing to update the chat state to the provided state.
 
 > **triggerPitChange**(`command`, `amount`): `void`
 
-Defined in: [irsdk-node.ts:816](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L816)
+Defined in: [irsdk-node.ts:816](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L816)
 
 Broadcast to iRacing to change the amount to apply to a given command.
 
@@ -938,7 +938,7 @@ next pit stop:
 
 > **triggerPitClearCommand**(`command`): `void`
 
-Defined in: [irsdk-node.ts:778](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L778)
+Defined in: [irsdk-node.ts:778](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L778)
 
 Broadcast to iRacing to clear the given pit command.
 
@@ -958,7 +958,7 @@ Broadcast to iRacing to clear the given pit command.
 
 > **triggerPitCommand**(`command`): `void`
 
-Defined in: [irsdk-node.ts:798](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L798)
+Defined in: [irsdk-node.ts:798](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L798)
 
 Broadcast to iRacing to trigger the given pit command.
 
@@ -982,7 +982,7 @@ This command can then be cleared by [IRacingSDK.triggerPitClearCommand](#trigger
 
 > **triggerReplaySessionSearch**(`session`, `time`): `void`
 
-Defined in: [irsdk-node.ts:728](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L728)
+Defined in: [irsdk-node.ts:728](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L728)
 
 Broadcast a message to iRacing to seek to the provided session time.
 
@@ -1008,7 +1008,7 @@ a while!
 
 > **triggerVideoCapture**(`command`): `void`
 
-Defined in: [irsdk-node.ts:844](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L844)
+Defined in: [irsdk-node.ts:844](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L844)
 
 Broadcast to iRacing to trigger the given video capture mode.
 
@@ -1028,7 +1028,7 @@ Broadcast to iRacing to trigger the given video capture mode.
 
 > **waitForData**(`timeout?`): `boolean`
 
-Defined in: [irsdk-node.ts:312](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L312)
+Defined in: [irsdk-node.ts:312](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L312)
 
 Attempts to pull data from the iRacing SDK, waiting for a maximum of the
 provided timeout for new data if none is available when called.
@@ -1066,7 +1066,7 @@ Internally calls [IRacingSDK.startSDK](#startsdk) to lazily initialize the SDK.
 
 > `static` **IsSimRunning**(): `Promise`\<`boolean`\>
 
-Defined in: [irsdk-node.ts:230](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node/src/irsdk-node.ts#L230)
+Defined in: [irsdk-node.ts:230](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node/src/irsdk-node.ts#L230)
 
 Makes a request to the endpoint the iRacing service exposes when installed
 and running to check if it is available. This can be used to determine if

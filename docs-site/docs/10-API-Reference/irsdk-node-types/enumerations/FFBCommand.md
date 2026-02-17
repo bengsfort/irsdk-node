@@ -1,4 +1,4 @@
-Defined in: [defines.ts:636](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L636)
+Defined in: [defines.ts:636](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L636)
 
 Available force-feedback commands, to be used with message broadcasting.
 Represents `irsdk_FFBCommandMode`
@@ -9,7 +9,7 @@ Represents `irsdk_FFBCommandMode`
 
 > **MaxForce**: `0`
 
-Defined in: [defines.ts:638](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L638)
+Defined in: [defines.ts:638](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L638)
 
 Set the maximum force when mapping steering torque force to direct input units (float in Nm)
 
@@ -19,6 +19,6 @@ Set the maximum force when mapping steering torque force to direct input units (
 
 > **UnusedPlaceholder**: `1`
 
-Defined in: [defines.ts:640](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L640)
+Defined in: [defines.ts:640](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L640)
 
 Unused placeholder - do not use!

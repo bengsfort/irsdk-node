@@ -1,4 +1,4 @@
-Defined in: [defines.ts:648](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L648)
+Defined in: [defines.ts:648](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L648)
 
 Used with BroadcastMessages.CameraSwitchPos and BroadcastMessages.CameraSwitchNum.
 Pass these in for the first parameter to select the 'focus at' types in the camera system.
@@ -10,7 +10,7 @@ Represents `irsdk_csMode`
 
 > **FocusAtDriver**: `0`
 
-Defined in: [defines.ts:653](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L653)
+Defined in: [defines.ts:653](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L653)
 
 When using .FocusAtDriver, add the car number to it to specify which car.
 
@@ -20,7 +20,7 @@ When using .FocusAtDriver, add the car number to it to specify which car.
 
 > **FocusAtExiting**: `-1`
 
-Defined in: [defines.ts:651](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L651)
+Defined in: [defines.ts:651](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L651)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [defines.ts:651](https://github.com/bengsfort/irsdk-node/blob/ed605e
 
 > **FocusAtIncident**: `-3`
 
-Defined in: [defines.ts:649](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L649)
+Defined in: [defines.ts:649](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L649)
 
 ***
 
@@ -36,4 +36,4 @@ Defined in: [defines.ts:649](https://github.com/bengsfort/irsdk-node/blob/ed605e
 
 > **FocusAtLeader**: `-2`
 
-Defined in: [defines.ts:650](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L650)
+Defined in: [defines.ts:650](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L650)

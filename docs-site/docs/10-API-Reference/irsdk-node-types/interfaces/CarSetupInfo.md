@@ -1,4 +1,4 @@
-Defined in: [setup-info.ts:204](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L204)
+Defined in: [setup-info.ts:204](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L204)
 
 ## Properties
 
@@ -6,7 +6,7 @@ Defined in: [setup-info.ts:204](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > `optional` **Chassis**: [`ChassisInfo`](ChassisInfo.md)
 
-Defined in: [setup-info.ts:208](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L208)
+Defined in: [setup-info.ts:208](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L208)
 
 ***
 
@@ -14,7 +14,7 @@ Defined in: [setup-info.ts:208](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > **Dampers**: [`DamperInfo`](DamperInfo.md)
 
-Defined in: [setup-info.ts:210](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L210)
+Defined in: [setup-info.ts:210](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L210)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [setup-info.ts:210](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > `optional` **DriveBrake**: [`DriveBrakeInfo`](DriveBrakeInfo.md)
 
-Defined in: [setup-info.ts:209](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L209)
+Defined in: [setup-info.ts:209](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L209)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [setup-info.ts:209](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > `optional` **Drivetrain**: [`DrivetrainInfo`](DrivetrainInfo.md)
 
-Defined in: [setup-info.ts:211](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L211)
+Defined in: [setup-info.ts:211](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L211)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [setup-info.ts:211](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > `optional` **Suspension**: [`ChassisInfo`](ChassisInfo.md)
 
-Defined in: [setup-info.ts:206](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L206)
+Defined in: [setup-info.ts:206](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L206)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [setup-info.ts:206](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > `optional` **TiresAero**: [`TiresAeroInfo`](TiresAeroInfo.md)
 
-Defined in: [setup-info.ts:207](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L207)
+Defined in: [setup-info.ts:207](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L207)
 
 ***
 
@@ -54,4 +54,4 @@ Defined in: [setup-info.ts:207](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > **UpdateCount**: `number`
 
-Defined in: [setup-info.ts:205](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L205)
+Defined in: [setup-info.ts:205](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L205)

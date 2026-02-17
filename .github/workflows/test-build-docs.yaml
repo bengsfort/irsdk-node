@@ -1,0 +1,47 @@
+name: AUTO - Validate docs site build
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check-pkgs-changed:
+    name: Check if packages have changed
+    outputs:
+      has_changes: ${{ steps.pkg_change_check.outputs.has_changes }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PNPM
+        uses: ./.github/actions/setup-packages
+        with:
+          node-version: 20
+
+      - name: Detect changed packages
+        id: pkg_change_check
+        run: |
+          if pnpm install --fail-if-no-match --filter "./{docs-site,packages/**}[origin/main]"; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          fi
+      
+  build-docs:
+    name: Build docs site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PNPM
+        uses: ./.github/actions/setup-packages
+        with:
+          node-version: 20
+
+      - name: Generate docs markdown
+        run: pnpm run --filter "docs-site" docs:gen
+
+      - name: Build docusaurus site
+        run: pnpm run --filter "docs-site" build
+      

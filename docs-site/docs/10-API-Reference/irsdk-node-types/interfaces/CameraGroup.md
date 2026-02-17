@@ -1,4 +1,4 @@
-Defined in: [camera-info.ts:6](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/camera-info.ts#L6)
+Defined in: [camera-info.ts:6](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/camera-info.ts#L6)
 
 ## Properties
 
@@ -6,7 +6,7 @@ Defined in: [camera-info.ts:6](https://github.com/bengsfort/irsdk-node/blob/ed60
 
 > **Cameras**: [`Camera`](Camera.md)[]
 
-Defined in: [camera-info.ts:10](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/camera-info.ts#L10)
+Defined in: [camera-info.ts:10](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/camera-info.ts#L10)
 
 ***
 
@@ -14,7 +14,7 @@ Defined in: [camera-info.ts:10](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > **GroupName**: `string`
 
-Defined in: [camera-info.ts:8](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/camera-info.ts#L8)
+Defined in: [camera-info.ts:8](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/camera-info.ts#L8)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [camera-info.ts:8](https://github.com/bengsfort/irsdk-node/blob/ed60
 
 > **GroupNum**: `number`
 
-Defined in: [camera-info.ts:7](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/camera-info.ts#L7)
+Defined in: [camera-info.ts:7](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/camera-info.ts#L7)
 
 ***
 
@@ -30,4 +30,4 @@ Defined in: [camera-info.ts:7](https://github.com/bengsfort/irsdk-node/blob/ed60
 
 > `optional` **IsScenic**: `boolean`
 
-Defined in: [camera-info.ts:9](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/camera-info.ts#L9)
+Defined in: [camera-info.ts:9](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/camera-info.ts#L9)

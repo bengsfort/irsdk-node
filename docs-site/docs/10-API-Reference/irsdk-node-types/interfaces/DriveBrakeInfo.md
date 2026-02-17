@@ -1,4 +1,4 @@
-Defined in: [setup-info.ts:163](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L163)
+Defined in: [setup-info.ts:163](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L163)
 
 ## Properties
 
@@ -6,7 +6,7 @@ Defined in: [setup-info.ts:163](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > **BrakeSystemConfig**: [`BrakeSystemConfig`](BrakeSystemConfig.md)
 
-Defined in: [setup-info.ts:166](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L166)
+Defined in: [setup-info.ts:166](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L166)
 
 ***
 
@@ -14,7 +14,7 @@ Defined in: [setup-info.ts:166](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > **Differential**: [`DifferentialInfo`](DifferentialInfo.md)
 
-Defined in: [setup-info.ts:164](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L164)
+Defined in: [setup-info.ts:164](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L164)
 
 ***
 
@@ -22,4 +22,4 @@ Defined in: [setup-info.ts:164](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > **PowerUnitConfig**: [`PowerUnitConfig`](PowerUnitConfig.md)
 
-Defined in: [setup-info.ts:165](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L165)
+Defined in: [setup-info.ts:165](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L165)

@@ -1,4 +1,4 @@
-Defined in: [session-info.ts:1](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/session-info.ts#L1)
+Defined in: [session-info.ts:1](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/session-info.ts#L1)
 
 ## Properties
 
@@ -6,7 +6,7 @@ Defined in: [session-info.ts:1](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > **CarIdx**: `number`
 
-Defined in: [session-info.ts:4](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/session-info.ts#L4)
+Defined in: [session-info.ts:4](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/session-info.ts#L4)
 
 ***
 
@@ -14,7 +14,7 @@ Defined in: [session-info.ts:4](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > **ClassPosition**: `number`
 
-Defined in: [session-info.ts:3](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/session-info.ts#L3)
+Defined in: [session-info.ts:3](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/session-info.ts#L3)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [session-info.ts:3](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > **FastestLap**: `number`
 
-Defined in: [session-info.ts:7](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/session-info.ts#L7)
+Defined in: [session-info.ts:7](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/session-info.ts#L7)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [session-info.ts:7](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > **FastestTime**: `number`
 
-Defined in: [session-info.ts:8](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/session-info.ts#L8)
+Defined in: [session-info.ts:8](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/session-info.ts#L8)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [session-info.ts:8](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > **Incidents**: `number`
 
-Defined in: [session-info.ts:14](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/session-info.ts#L14)
+Defined in: [session-info.ts:14](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/session-info.ts#L14)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [session-info.ts:14](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **JokerLapsComplete**: `number`
 
-Defined in: [session-info.ts:12](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/session-info.ts#L12)
+Defined in: [session-info.ts:12](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/session-info.ts#L12)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [session-info.ts:12](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **Lap**: `number`
 
-Defined in: [session-info.ts:5](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/session-info.ts#L5)
+Defined in: [session-info.ts:5](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/session-info.ts#L5)
 
 ***
 
@@ -62,7 +62,7 @@ Defined in: [session-info.ts:5](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > **LapsComplete**: `number`
 
-Defined in: [session-info.ts:11](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/session-info.ts#L11)
+Defined in: [session-info.ts:11](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/session-info.ts#L11)
 
 ***
 
@@ -70,7 +70,7 @@ Defined in: [session-info.ts:11](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **LapsDriven**: `number`
 
-Defined in: [session-info.ts:13](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/session-info.ts#L13)
+Defined in: [session-info.ts:13](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/session-info.ts#L13)
 
 ***
 
@@ -78,7 +78,7 @@ Defined in: [session-info.ts:13](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **LapsLed**: `number`
 
-Defined in: [session-info.ts:10](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/session-info.ts#L10)
+Defined in: [session-info.ts:10](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/session-info.ts#L10)
 
 ***
 
@@ -86,7 +86,7 @@ Defined in: [session-info.ts:10](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **LastTime**: `number`
 
-Defined in: [session-info.ts:9](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/session-info.ts#L9)
+Defined in: [session-info.ts:9](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/session-info.ts#L9)
 
 ***
 
@@ -94,7 +94,7 @@ Defined in: [session-info.ts:9](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > **Position**: `number`
 
-Defined in: [session-info.ts:2](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/session-info.ts#L2)
+Defined in: [session-info.ts:2](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/session-info.ts#L2)
 
 ***
 
@@ -102,7 +102,7 @@ Defined in: [session-info.ts:2](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > **ReasonOutId**: `number`
 
-Defined in: [session-info.ts:15](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/session-info.ts#L15)
+Defined in: [session-info.ts:15](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/session-info.ts#L15)
 
 ***
 
@@ -110,7 +110,7 @@ Defined in: [session-info.ts:15](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **ReasonOutStr**: `string`
 
-Defined in: [session-info.ts:16](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/session-info.ts#L16)
+Defined in: [session-info.ts:16](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/session-info.ts#L16)
 
 ***
 
@@ -118,4 +118,4 @@ Defined in: [session-info.ts:16](https://github.com/bengsfort/irsdk-node/blob/ed
 
 > **Time**: `number`
 
-Defined in: [session-info.ts:6](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/session-info.ts#L6)
+Defined in: [session-info.ts:6](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/session-info.ts#L6)

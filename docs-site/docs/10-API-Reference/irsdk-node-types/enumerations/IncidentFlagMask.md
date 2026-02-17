@@ -1,4 +1,4 @@
-Defined in: [defines.ts:279](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L279)
+Defined in: [defines.ts:279](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L279)
 
 Masks which can be used to separate the report and penalty information from
 `IncidentFlags` values.
@@ -10,7 +10,7 @@ Represents *_MASK values from `irsdkIncidentFlags`
 
 > **Penalty**: `65280`
 
-Defined in: [defines.ts:281](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L281)
+Defined in: [defines.ts:281](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L281)
 
 ***
 
@@ -18,4 +18,4 @@ Defined in: [defines.ts:281](https://github.com/bengsfort/irsdk-node/blob/ed605e
 
 > **Report**: `255`
 
-Defined in: [defines.ts:280](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L280)
+Defined in: [defines.ts:280](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L280)

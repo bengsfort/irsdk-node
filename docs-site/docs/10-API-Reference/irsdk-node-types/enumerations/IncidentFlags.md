@@ -1,4 +1,4 @@
-Defined in: [defines.ts:240](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L240)
+Defined in: [defines.ts:240](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L240)
 
 Bit flags for describing incidents. These can be used to extract info about
 an incident in the sim.
@@ -16,7 +16,7 @@ Represents irsdk_IncidentFlags
 
 > **NoReport**: `0`
 
-Defined in: [defines.ts:241](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L241)
+Defined in: [defines.ts:241](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L241)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [defines.ts:241](https://github.com/bengsfort/irsdk-node/blob/ed605e
 
 > **PenaltyFourX**: `1024`
 
-Defined in: [defines.ts:271](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L271)
+Defined in: [defines.ts:271](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L271)
 
 4x
 
@@ -34,7 +34,7 @@ Defined in: [defines.ts:271](https://github.com/bengsfort/irsdk-node/blob/ed605e
 
 > **PenaltyOneX**: `512`
 
-Defined in: [defines.ts:267](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L267)
+Defined in: [defines.ts:267](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L267)
 
 1x
 
@@ -44,7 +44,7 @@ Defined in: [defines.ts:267](https://github.com/bengsfort/irsdk-node/blob/ed605e
 
 > **PenaltyTwoX**: `768`
 
-Defined in: [defines.ts:269](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L269)
+Defined in: [defines.ts:269](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L269)
 
 2x
 
@@ -54,7 +54,7 @@ Defined in: [defines.ts:269](https://github.com/bengsfort/irsdk-node/blob/ed605e
 
 > **PenaltyZeroX**: `256`
 
-Defined in: [defines.ts:265](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L265)
+Defined in: [defines.ts:265](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L265)
 
 0x
 
@@ -64,7 +64,7 @@ Defined in: [defines.ts:265](https://github.com/bengsfort/irsdk-node/blob/ed605e
 
 > **ReportCollisionWithCar**: `8`
 
-Defined in: [defines.ts:260](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L260)
+Defined in: [defines.ts:260](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L260)
 
 "Car Contact (4x)"
 
@@ -74,7 +74,7 @@ Defined in: [defines.ts:260](https://github.com/bengsfort/irsdk-node/blob/ed605e
 
 > **ReportCollisionWithWorld**: `5`
 
-Defined in: [defines.ts:254](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L254)
+Defined in: [defines.ts:254](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L254)
 
 "Contact (2x)"
 
@@ -84,7 +84,7 @@ Defined in: [defines.ts:254](https://github.com/bengsfort/irsdk-node/blob/ed605e
 
 > **ReportCollisionWithWorldOngoing**: `6`
 
-Defined in: [defines.ts:256](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L256)
+Defined in: [defines.ts:256](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L256)
 
 not currently sent
 
@@ -94,7 +94,7 @@ not currently sent
 
 > **ReportContactWithCar**: `7`
 
-Defined in: [defines.ts:258](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L258)
+Defined in: [defines.ts:258](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L258)
 
 "Car Contact (0x)"
 
@@ -104,7 +104,7 @@ Defined in: [defines.ts:258](https://github.com/bengsfort/irsdk-node/blob/ed605e
 
 > **ReportContactWithWorld**: `4`
 
-Defined in: [defines.ts:252](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L252)
+Defined in: [defines.ts:252](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L252)
 
 "Contact (0x)"
 
@@ -114,7 +114,7 @@ Defined in: [defines.ts:252](https://github.com/bengsfort/irsdk-node/blob/ed605e
 
 > **ReportOffTrack**: `2`
 
-Defined in: [defines.ts:248](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L248)
+Defined in: [defines.ts:248](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L248)
 
 "Off Track (1x)"
 
@@ -124,7 +124,7 @@ Defined in: [defines.ts:248](https://github.com/bengsfort/irsdk-node/blob/ed605e
 
 > **ReportOffTrackOngoing**: `3`
 
-Defined in: [defines.ts:250](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L250)
+Defined in: [defines.ts:250](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L250)
 
 not currently sent
 
@@ -134,6 +134,6 @@ not currently sent
 
 > **ReportOutOfControl**: `1`
 
-Defined in: [defines.ts:246](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L246)
+Defined in: [defines.ts:246](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L246)
 
 "Loss of Control (2x)"

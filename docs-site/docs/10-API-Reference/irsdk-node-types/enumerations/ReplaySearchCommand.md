@@ -1,4 +1,4 @@
-Defined in: [defines.ts:591](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L591)
+Defined in: [defines.ts:591](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L591)
 
 Available replay search commands, to be used with message broadcasting. Only
 usable outside of the car.
@@ -10,7 +10,7 @@ Represents `irsdk_RpySrchMode`
 
 > **NextFrame**: `7`
 
-Defined in: [defines.ts:607](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L607)
+Defined in: [defines.ts:607](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L607)
 
 Next frame
 
@@ -20,7 +20,7 @@ Next frame
 
 > **NextIncident**: `9`
 
-Defined in: [defines.ts:611](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L611)
+Defined in: [defines.ts:611](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L611)
 
 Next incident
 
@@ -30,7 +30,7 @@ Next incident
 
 > **NextLap**: `5`
 
-Defined in: [defines.ts:603](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L603)
+Defined in: [defines.ts:603](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L603)
 
 Next lap
 
@@ -40,7 +40,7 @@ Next lap
 
 > **NextSession**: `3`
 
-Defined in: [defines.ts:599](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L599)
+Defined in: [defines.ts:599](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L599)
 
 Next session
 
@@ -50,7 +50,7 @@ Next session
 
 > **PrevFrame**: `6`
 
-Defined in: [defines.ts:605](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L605)
+Defined in: [defines.ts:605](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L605)
 
 Previous frame
 
@@ -60,7 +60,7 @@ Previous frame
 
 > **PrevIncident**: `8`
 
-Defined in: [defines.ts:609](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L609)
+Defined in: [defines.ts:609](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L609)
 
 Previous incident
 
@@ -70,7 +70,7 @@ Previous incident
 
 > **PrevLap**: `4`
 
-Defined in: [defines.ts:601](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L601)
+Defined in: [defines.ts:601](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L601)
 
 Previous lap
 
@@ -80,7 +80,7 @@ Previous lap
 
 > **PrevSession**: `2`
 
-Defined in: [defines.ts:597](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L597)
+Defined in: [defines.ts:597](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L597)
 
 Previous session
 
@@ -90,7 +90,7 @@ Previous session
 
 > **ToEnd**: `1`
 
-Defined in: [defines.ts:595](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L595)
+Defined in: [defines.ts:595](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L595)
 
 End of session
 
@@ -100,7 +100,7 @@ End of session
 
 > **ToStart**: `0`
 
-Defined in: [defines.ts:593](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L593)
+Defined in: [defines.ts:593](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L593)
 
 Start of session
 
@@ -110,6 +110,6 @@ Start of session
 
 > **UnusedPlaceholder**: `10`
 
-Defined in: [defines.ts:613](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L613)
+Defined in: [defines.ts:613](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/defines.ts#L613)
 
 Unused placeholder - do not use!

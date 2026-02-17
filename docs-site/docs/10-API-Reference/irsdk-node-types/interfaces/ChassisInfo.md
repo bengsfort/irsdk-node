@@ -1,4 +1,4 @@
-Defined in: [setup-info.ts:131](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L131)
+Defined in: [setup-info.ts:131](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L131)
 
 ## Properties
 
@@ -6,7 +6,7 @@ Defined in: [setup-info.ts:131](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > **Front**: [`ChassisFrontInfo`](ChassisFrontInfo.md)
 
-Defined in: [setup-info.ts:133](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L133)
+Defined in: [setup-info.ts:133](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L133)
 
 ***
 
@@ -14,7 +14,7 @@ Defined in: [setup-info.ts:133](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > **General**: [`ChassisGeneralInfo`](ChassisGeneralInfo.md)
 
-Defined in: [setup-info.ts:132](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L132)
+Defined in: [setup-info.ts:132](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L132)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [setup-info.ts:132](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > **Graphics**: [`GraphicsInfo`](GraphicsInfo.md)
 
-Defined in: [setup-info.ts:140](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L140)
+Defined in: [setup-info.ts:140](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L140)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [setup-info.ts:140](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > **LeftFront**: [`ChassisCornerInfo`](ChassisCornerInfo.md)
 
-Defined in: [setup-info.ts:134](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L134)
+Defined in: [setup-info.ts:134](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L134)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [setup-info.ts:134](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > **LeftRear**: [`ChassisCornerInfo`](ChassisCornerInfo.md)
 
-Defined in: [setup-info.ts:135](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L135)
+Defined in: [setup-info.ts:135](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L135)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [setup-info.ts:135](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > **Rear**: [`ChassisRearInfo`](ChassisRearInfo.md)
 
-Defined in: [setup-info.ts:138](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L138)
+Defined in: [setup-info.ts:138](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L138)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [setup-info.ts:138](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > **RearArb**: [`RearArbInfo`](RearArbInfo.md)
 
-Defined in: [setup-info.ts:139](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L139)
+Defined in: [setup-info.ts:139](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L139)
 
 ***
 
@@ -62,7 +62,7 @@ Defined in: [setup-info.ts:139](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > **RightFront**: [`ChassisCornerInfo`](ChassisCornerInfo.md)
 
-Defined in: [setup-info.ts:136](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L136)
+Defined in: [setup-info.ts:136](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L136)
 
 ***
 
@@ -70,4 +70,4 @@ Defined in: [setup-info.ts:136](https://github.com/bengsfort/irsdk-node/blob/ed6
 
 > **RightRear**: [`ChassisCornerInfo`](ChassisCornerInfo.md)
 
-Defined in: [setup-info.ts:137](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L137)
+Defined in: [setup-info.ts:137](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/setup-info.ts#L137)

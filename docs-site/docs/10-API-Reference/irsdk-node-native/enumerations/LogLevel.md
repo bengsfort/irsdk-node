@@ -1,4 +1,4 @@
-Defined in: [INativeSDK.ts:17](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-native/src/INativeSDK.ts#L17)
+Defined in: [INativeSDK.ts:17](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-native/src/INativeSDK.ts#L17)
 
 Logging Levels available for configuring the logging output of the native module.
 Each level includes the previous, for example `LogLevel.Error` will only log
@@ -10,7 +10,7 @@ errors, however `LogLevel.Warn` will log warnings, AND errors.
 
 > **Debug**: `4`
 
-Defined in: [INativeSDK.ts:27](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-native/src/INativeSDK.ts#L27)
+Defined in: [INativeSDK.ts:27](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-native/src/INativeSDK.ts#L27)
 
 Log everything. Only use if you are ok with spammy logs!
 
@@ -20,7 +20,7 @@ Log everything. Only use if you are ok with spammy logs!
 
 > **Error**: `1`
 
-Defined in: [INativeSDK.ts:21](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-native/src/INativeSDK.ts#L21)
+Defined in: [INativeSDK.ts:21](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-native/src/INativeSDK.ts#L21)
 
 Log only errors.
 
@@ -30,7 +30,7 @@ Log only errors.
 
 > **Info**: `3`
 
-Defined in: [INativeSDK.ts:25](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-native/src/INativeSDK.ts#L25)
+Defined in: [INativeSDK.ts:25](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-native/src/INativeSDK.ts#L25)
 
 Log info, warnings, and errors.
 
@@ -40,7 +40,7 @@ Log info, warnings, and errors.
 
 > **None**: `0`
 
-Defined in: [INativeSDK.ts:19](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-native/src/INativeSDK.ts#L19)
+Defined in: [INativeSDK.ts:19](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-native/src/INativeSDK.ts#L19)
 
 Log nothing to console.
 
@@ -50,6 +50,6 @@ Log nothing to console.
 
 > **Warn**: `2`
 
-Defined in: [INativeSDK.ts:23](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-native/src/INativeSDK.ts#L23)
+Defined in: [INativeSDK.ts:23](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-native/src/INativeSDK.ts#L23)
 
 Log warnings and errors.

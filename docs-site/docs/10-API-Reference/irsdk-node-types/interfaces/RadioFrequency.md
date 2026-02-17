@@ -1,4 +1,4 @@
-Defined in: [radio-info.ts:1](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/radio-info.ts#L1)
+Defined in: [radio-info.ts:1](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/radio-info.ts#L1)
 
 ## Properties
 
@@ -6,7 +6,7 @@ Defined in: [radio-info.ts:1](https://github.com/bengsfort/irsdk-node/blob/ed605
 
 > **CanScan**: `number`
 
-Defined in: [radio-info.ts:8](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/radio-info.ts#L8)
+Defined in: [radio-info.ts:8](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/radio-info.ts#L8)
 
 ***
 
@@ -14,7 +14,7 @@ Defined in: [radio-info.ts:8](https://github.com/bengsfort/irsdk-node/blob/ed605
 
 > **CanSquawk**: `number`
 
-Defined in: [radio-info.ts:9](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/radio-info.ts#L9)
+Defined in: [radio-info.ts:9](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/radio-info.ts#L9)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [radio-info.ts:9](https://github.com/bengsfort/irsdk-node/blob/ed605
 
 > **CarIdx**: `number`
 
-Defined in: [radio-info.ts:5](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/radio-info.ts#L5)
+Defined in: [radio-info.ts:5](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/radio-info.ts#L5)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [radio-info.ts:5](https://github.com/bengsfort/irsdk-node/blob/ed605
 
 > **ClubID**: `number`
 
-Defined in: [radio-info.ts:7](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/radio-info.ts#L7)
+Defined in: [radio-info.ts:7](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/radio-info.ts#L7)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [radio-info.ts:7](https://github.com/bengsfort/irsdk-node/blob/ed605
 
 > **EntryIdx**: `number`
 
-Defined in: [radio-info.ts:6](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/radio-info.ts#L6)
+Defined in: [radio-info.ts:6](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/radio-info.ts#L6)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [radio-info.ts:6](https://github.com/bengsfort/irsdk-node/blob/ed605
 
 > **FrequencyName**: `string`
 
-Defined in: [radio-info.ts:3](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/radio-info.ts#L3)
+Defined in: [radio-info.ts:3](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/radio-info.ts#L3)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [radio-info.ts:3](https://github.com/bengsfort/irsdk-node/blob/ed605
 
 > **FrequencyNum**: `number`
 
-Defined in: [radio-info.ts:2](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/radio-info.ts#L2)
+Defined in: [radio-info.ts:2](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/radio-info.ts#L2)
 
 ***
 
@@ -62,7 +62,7 @@ Defined in: [radio-info.ts:2](https://github.com/bengsfort/irsdk-node/blob/ed605
 
 > **IsDeletable**: `number`
 
-Defined in: [radio-info.ts:12](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/radio-info.ts#L12)
+Defined in: [radio-info.ts:12](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/radio-info.ts#L12)
 
 ***
 
@@ -70,7 +70,7 @@ Defined in: [radio-info.ts:12](https://github.com/bengsfort/irsdk-node/blob/ed60
 
 > **IsMutable**: `number`
 
-Defined in: [radio-info.ts:11](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/radio-info.ts#L11)
+Defined in: [radio-info.ts:11](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/radio-info.ts#L11)
 
 ***
 
@@ -78,7 +78,7 @@ Defined in: [radio-info.ts:11](https://github.com/bengsfort/irsdk-node/blob/ed60
 
 > **Muted**: `number`
 
-Defined in: [radio-info.ts:10](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/radio-info.ts#L10)
+Defined in: [radio-info.ts:10](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/radio-info.ts#L10)
 
 ***
 
@@ -86,4 +86,4 @@ Defined in: [radio-info.ts:10](https://github.com/bengsfort/irsdk-node/blob/ed60
 
 > **Priority**: `number`
 
-Defined in: [radio-info.ts:4](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/radio-info.ts#L4)
+Defined in: [radio-info.ts:4](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/radio-info.ts#L4)

@@ -1,4 +1,4 @@
-Defined in: [telemetry.gen.ts:25](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L25)
+Defined in: [telemetry.gen.ts:25](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L25)
 
 ## Properties
 
@@ -6,7 +6,7 @@ Defined in: [telemetry.gen.ts:25](https://github.com/bengsfort/irsdk-node/blob/e
 
 > **AirDensity**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1520](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1520)
+Defined in: [telemetry.gen.ts:1520](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1520)
 
 AirDensity - Density of air at start/finish line
 
@@ -22,7 +22,7 @@ AirDensity - Density of air at start/finish line
 
 > **AirPressure**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1531](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1531)
+Defined in: [telemetry.gen.ts:1531](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1531)
 
 AirPressure - Pressure of air at start/finish line
 
@@ -38,7 +38,7 @@ AirPressure - Pressure of air at start/finish line
 
 > **AirTemp**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1487](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1487)
+Defined in: [telemetry.gen.ts:1487](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1487)
 
 AirTemp - Temperature of air at start/finish line
 
@@ -54,7 +54,7 @@ AirTemp - Temperature of air at start/finish line
 
 > **Brake**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:981](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L981)
+Defined in: [telemetry.gen.ts:981](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L981)
 
 Brake - 0=brake released to 1=max pedal force
 
@@ -70,7 +70,7 @@ Brake - 0=brake released to 1=max pedal force
 
 > **BrakeABSactive**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:2136](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2136)
+Defined in: [telemetry.gen.ts:2136](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2136)
 
 BrakeABSactive - true if abs is currently reducing brake force pressure
 
@@ -86,7 +86,7 @@ BrakeABSactive - true if abs is currently reducing brake force pressure
 
 > **BrakeRaw**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2103](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2103)
+Defined in: [telemetry.gen.ts:2103](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2103)
 
 BrakeRaw - Raw brake input 0=brake released to 1=max pedal force
 
@@ -102,7 +102,7 @@ BrakeRaw - Raw brake input 0=brake released to 1=max pedal force
 
 > **CamCameraNumber**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2004](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2004)
+Defined in: [telemetry.gen.ts:2004](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2004)
 
 CamCameraNumber - Active camera number
 
@@ -118,7 +118,7 @@ CamCameraNumber - Active camera number
 
 > **CamCameraState**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2026](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2026)
+Defined in: [telemetry.gen.ts:2026](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2026)
 
 CamCameraState - State of camera system
 
@@ -134,7 +134,7 @@ CamCameraState - State of camera system
 
 > **CamCarIdx**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1993](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1993)
+Defined in: [telemetry.gen.ts:1993](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1993)
 
 CamCarIdx - Active camera's focus car index
 
@@ -150,7 +150,7 @@ CamCarIdx - Active camera's focus car index
 
 > **CamGroupNumber**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2015](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2015)
+Defined in: [telemetry.gen.ts:2015](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2015)
 
 CamGroupNumber - Active camera group number
 
@@ -166,7 +166,7 @@ CamGroupNumber - Active camera group number
 
 > **CarDistAhead**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1124](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1124)
+Defined in: [telemetry.gen.ts:1124](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1124)
 
 CarDistAhead - Distance to first car in front of player in meters
 
@@ -182,7 +182,7 @@ CarDistAhead - Distance to first car in front of player in meters
 
 > **CarDistBehind**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1135](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1135)
+Defined in: [telemetry.gen.ts:1135](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1135)
 
 CarDistBehind - Distance to first car behind player in meters
 
@@ -198,7 +198,7 @@ CarDistBehind - Distance to first car behind player in meters
 
 > **CarIdxBestLapNum**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:805](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L805)
+Defined in: [telemetry.gen.ts:805](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L805)
 
 CarIdxBestLapNum - Cars best lap number
 
@@ -214,7 +214,7 @@ CarIdxBestLapNum - Cars best lap number
 
 > **CarIdxBestLapTime**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:794](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L794)
+Defined in: [telemetry.gen.ts:794](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L794)
 
 CarIdxBestLapTime - Cars best lap time
 
@@ -230,7 +230,7 @@ CarIdxBestLapTime - Cars best lap time
 
 > **CarIdxClass**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:750](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L750)
+Defined in: [telemetry.gen.ts:750](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L750)
 
 CarIdxClass - Cars class id by car index
 
@@ -246,7 +246,7 @@ CarIdxClass - Cars class id by car index
 
 > **CarIdxClassPosition**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:739](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L739)
+Defined in: [telemetry.gen.ts:739](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L739)
 
 CarIdxClassPosition - Cars class position in race by car index
 
@@ -262,7 +262,7 @@ CarIdxClassPosition - Cars class position in race by car index
 
 > **CarIdxEstTime**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:772](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L772)
+Defined in: [telemetry.gen.ts:772](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L772)
 
 CarIdxEstTime - Estimated time to reach current location on track
 
@@ -278,7 +278,7 @@ CarIdxEstTime - Estimated time to reach current location on track
 
 > **CarIdxF2Time**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:761](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L761)
+Defined in: [telemetry.gen.ts:761](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L761)
 
 CarIdxF2Time - Race time behind leader or fastest lap time otherwise
 
@@ -294,7 +294,7 @@ CarIdxF2Time - Race time behind leader or fastest lap time otherwise
 
 > **CarIdxFastRepairsUsed**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:849](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L849)
+Defined in: [telemetry.gen.ts:849](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L849)
 
 CarIdxFastRepairsUsed - How many fast repairs each car has used
 
@@ -310,7 +310,7 @@ CarIdxFastRepairsUsed - How many fast repairs each car has used
 
 > **CarIdxGear**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:948](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L948)
+Defined in: [telemetry.gen.ts:948](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L948)
 
 CarIdxGear - -1=reverse  0=neutral  1..n=current gear by car index
 
@@ -326,7 +326,7 @@ CarIdxGear - -1=reverse  0=neutral  1..n=current gear by car index
 
 > **CarIdxLap**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:662](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L662)
+Defined in: [telemetry.gen.ts:662](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L662)
 
 CarIdxLap - Laps started by car index
 
@@ -342,7 +342,7 @@ CarIdxLap - Laps started by car index
 
 > **CarIdxLapCompleted**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:673](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L673)
+Defined in: [telemetry.gen.ts:673](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L673)
 
 CarIdxLapCompleted - Laps completed by car index
 
@@ -358,7 +358,7 @@ CarIdxLapCompleted - Laps completed by car index
 
 > **CarIdxLapDistPct**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:684](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L684)
+Defined in: [telemetry.gen.ts:684](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L684)
 
 CarIdxLapDistPct - Percentage distance around lap by car index
 
@@ -374,7 +374,7 @@ CarIdxLapDistPct - Percentage distance around lap by car index
 
 > **CarIdxLastLapTime**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:783](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L783)
+Defined in: [telemetry.gen.ts:783](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L783)
 
 CarIdxLastLapTime - Cars last lap time
 
@@ -390,7 +390,7 @@ CarIdxLastLapTime - Cars last lap time
 
 > **CarIdxOnPitRoad**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:717](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L717)
+Defined in: [telemetry.gen.ts:717](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L717)
 
 CarIdxOnPitRoad - On pit road between the cones by car index
 
@@ -406,7 +406,7 @@ CarIdxOnPitRoad - On pit road between the cones by car index
 
 > **CarIdxP2P\_Count**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2268](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2268)
+Defined in: [telemetry.gen.ts:2268](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2268)
 
 CarIdxP2P_Count - Push2Pass count of usage (or remaining in Race)
 
@@ -422,7 +422,7 @@ CarIdxP2P_Count - Push2Pass count of usage (or remaining in Race)
 
 > **CarIdxP2P\_Status**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:2257](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2257)
+Defined in: [telemetry.gen.ts:2257](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2257)
 
 CarIdxP2P_Status - Push2Pass active or not
 
@@ -438,7 +438,7 @@ CarIdxP2P_Status - Push2Pass active or not
 
 > **CarIdxPaceFlags**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:904](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L904)
+Defined in: [telemetry.gen.ts:904](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L904)
 
 CarIdxPaceFlags - Pacing status flags for each car
 
@@ -454,7 +454,7 @@ CarIdxPaceFlags - Pacing status flags for each car
 
 > **CarIdxPaceLine**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:882](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L882)
+Defined in: [telemetry.gen.ts:882](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L882)
 
 CarIdxPaceLine - What line cars are pacing in  or -1 if not pacing
 
@@ -470,7 +470,7 @@ CarIdxPaceLine - What line cars are pacing in  or -1 if not pacing
 
 > **CarIdxPaceRow**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:893](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L893)
+Defined in: [telemetry.gen.ts:893](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L893)
 
 CarIdxPaceRow - What row cars are pacing in  or -1 if not pacing
 
@@ -486,7 +486,7 @@ CarIdxPaceRow - What row cars are pacing in  or -1 if not pacing
 
 > **CarIdxPosition**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:728](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L728)
+Defined in: [telemetry.gen.ts:728](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L728)
 
 CarIdxPosition - Cars position in race by car index
 
@@ -502,7 +502,7 @@ CarIdxPosition - Cars position in race by car index
 
 > **CarIdxQualTireCompound**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:827](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L827)
+Defined in: [telemetry.gen.ts:827](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L827)
 
 CarIdxQualTireCompound - Cars Qual tire compound
 
@@ -518,7 +518,7 @@ CarIdxQualTireCompound - Cars Qual tire compound
 
 > **CarIdxQualTireCompoundLocked**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:838](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L838)
+Defined in: [telemetry.gen.ts:838](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L838)
 
 CarIdxQualTireCompoundLocked - Cars Qual tire compound is locked-in
 
@@ -534,7 +534,7 @@ CarIdxQualTireCompoundLocked - Cars Qual tire compound is locked-in
 
 > **CarIdxRPM**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:937](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L937)
+Defined in: [telemetry.gen.ts:937](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L937)
 
 CarIdxRPM - Engine rpm by car index
 
@@ -550,7 +550,7 @@ CarIdxRPM - Engine rpm by car index
 
 > **CarIdxSessionFlags**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:860](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L860)
+Defined in: [telemetry.gen.ts:860](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L860)
 
 CarIdxSessionFlags - Session flags for each player
 
@@ -566,7 +566,7 @@ CarIdxSessionFlags - Session flags for each player
 
 > **CarIdxSteer**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:926](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L926)
+Defined in: [telemetry.gen.ts:926](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L926)
 
 CarIdxSteer - Steering wheel angle by car index
 
@@ -582,7 +582,7 @@ CarIdxSteer - Steering wheel angle by car index
 
 > **CarIdxTireCompound**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:816](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L816)
+Defined in: [telemetry.gen.ts:816](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L816)
 
 CarIdxTireCompound - Cars current tire compound
 
@@ -598,7 +598,7 @@ CarIdxTireCompound - Cars current tire compound
 
 > **CarIdxTrackSurface**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:695](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L695)
+Defined in: [telemetry.gen.ts:695](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L695)
 
 CarIdxTrackSurface - Track surface type by car index
 
@@ -614,7 +614,7 @@ CarIdxTrackSurface - Track surface type by car index
 
 > **CarIdxTrackSurfaceMaterial**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:706](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L706)
+Defined in: [telemetry.gen.ts:706](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L706)
 
 CarIdxTrackSurfaceMaterial - Track surface material type by car index
 
@@ -630,7 +630,7 @@ CarIdxTrackSurfaceMaterial - Track surface material type by car index
 
 > **CarLeftRight**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1685](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1685)
+Defined in: [telemetry.gen.ts:1685](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1685)
 
 CarLeftRight - Notify if car is to the left or right of driver
 
@@ -646,7 +646,7 @@ CarLeftRight - Notify if car is to the left or right of driver
 
 > **CFshockDefl**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3973](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3973)
+Defined in: [telemetry.gen.ts:3973](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3973)
 
 CFshockDefl - CF shock deflection
 
@@ -662,7 +662,7 @@ CFshockDefl - CF shock deflection
 
 > **CFshockDefl\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3984](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3984)
+Defined in: [telemetry.gen.ts:3984](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3984)
 
 CFshockDefl_ST - CF shock deflection at 360 Hz
 
@@ -678,7 +678,7 @@ CFshockDefl_ST - CF shock deflection at 360 Hz
 
 > **CFshockVel**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3995](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3995)
+Defined in: [telemetry.gen.ts:3995](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3995)
 
 CFshockVel - CF shock velocity
 
@@ -694,7 +694,7 @@ CFshockVel - CF shock velocity
 
 > **CFshockVel\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4006](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4006)
+Defined in: [telemetry.gen.ts:4006](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4006)
 
 CFshockVel_ST - CF shock velocity at 360 Hz
 
@@ -710,7 +710,7 @@ CFshockVel_ST - CF shock velocity at 360 Hz
 
 > **ChanAvgLatency**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:387](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L387)
+Defined in: [telemetry.gen.ts:387](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L387)
 
 ChanAvgLatency - Communications average latency
 
@@ -726,7 +726,7 @@ ChanAvgLatency - Communications average latency
 
 > **ChanClockSkew**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:442](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L442)
+Defined in: [telemetry.gen.ts:442](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L442)
 
 ChanClockSkew - Communications server clock skew
 
@@ -742,7 +742,7 @@ ChanClockSkew - Communications server clock skew
 
 > **ChanLatency**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:398](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L398)
+Defined in: [telemetry.gen.ts:398](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L398)
 
 ChanLatency - Communications latency
 
@@ -758,7 +758,7 @@ ChanLatency - Communications latency
 
 > **ChanPartnerQuality**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:420](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L420)
+Defined in: [telemetry.gen.ts:420](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L420)
 
 ChanPartnerQuality - Partner communications quality
 
@@ -774,7 +774,7 @@ ChanPartnerQuality - Partner communications quality
 
 > **ChanQuality**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:409](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L409)
+Defined in: [telemetry.gen.ts:409](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L409)
 
 ChanQuality - Communications quality
 
@@ -790,7 +790,7 @@ ChanQuality - Communications quality
 
 > **Clutch**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:992](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L992)
+Defined in: [telemetry.gen.ts:992](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L992)
 
 Clutch - 0=disengaged to 1=fully engaged
 
@@ -806,7 +806,7 @@ Clutch - 0=disengaged to 1=fully engaged
 
 > **ClutchRaw**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2114](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2114)
+Defined in: [telemetry.gen.ts:2114](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2114)
 
 ClutchRaw - Raw clutch input 0=disengaged to 1=fully engaged
 
@@ -822,7 +822,7 @@ ClutchRaw - Raw clutch input 0=disengaged to 1=fully engaged
 
 > **CpuUsageBG**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:431](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L431)
+Defined in: [telemetry.gen.ts:431](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L431)
 
 CpuUsageBG - Percent of available time bg thread took with a 1 sec avg
 
@@ -838,7 +838,7 @@ CpuUsageBG - Percent of available time bg thread took with a 1 sec avg
 
 > **CpuUsageFG**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:365](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L365)
+Defined in: [telemetry.gen.ts:365](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L365)
 
 CpuUsageFG - Percent of available time fg thread took with a 1 sec avg
 
@@ -854,7 +854,7 @@ CpuUsageFG - Percent of available time fg thread took with a 1 sec avg
 
 > **CRshockDefl**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4061](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4061)
+Defined in: [telemetry.gen.ts:4061](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4061)
 
 CRshockDefl - CR shock deflection
 
@@ -870,7 +870,7 @@ CRshockDefl - CR shock deflection
 
 > **CRshockDefl\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4072](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4072)
+Defined in: [telemetry.gen.ts:4072](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4072)
 
 CRshockDefl_ST - CR shock deflection at 360 Hz
 
@@ -886,7 +886,7 @@ CRshockDefl_ST - CR shock deflection at 360 Hz
 
 > **CRshockVel**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4083](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4083)
+Defined in: [telemetry.gen.ts:4083](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4083)
 
 CRshockVel - CR shock velocity
 
@@ -902,7 +902,7 @@ CRshockVel - CR shock velocity
 
 > **CRshockVel\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4094](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4094)
+Defined in: [telemetry.gen.ts:4094](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4094)
 
 CRshockVel_ST - CR shock velocity at 360 Hz
 
@@ -918,7 +918,7 @@ CRshockVel_ST - CR shock velocity at 360 Hz
 
 > **dcABS**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2994](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2994)
+Defined in: [telemetry.gen.ts:2994](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2994)
 
 dcABS - In car abs adjustment
 
@@ -934,7 +934,7 @@ dcABS - In car abs adjustment
 
 > **dcAntiRollFront**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4435](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4435)
+Defined in: [telemetry.gen.ts:4435](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4435)
 
 dcAntiRollFront - In car front anti roll bar adjustment
 
@@ -950,7 +950,7 @@ dcAntiRollFront - In car front anti roll bar adjustment
 
 > **dcAntiRollRear**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4446](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4446)
+Defined in: [telemetry.gen.ts:4446](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4446)
 
 dcAntiRollRear - In car rear anti roll bar adjustment
 
@@ -966,7 +966,7 @@ dcAntiRollRear - In car rear anti roll bar adjustment
 
 > **dcBrakeBias**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2928](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2928)
+Defined in: [telemetry.gen.ts:2928](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2928)
 
 dcBrakeBias - In car brake bias adjustment
 
@@ -982,7 +982,7 @@ dcBrakeBias - In car brake bias adjustment
 
 > **dcBrakeBiasFine**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3775](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3775)
+Defined in: [telemetry.gen.ts:3775](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3775)
 
 dcBrakeBiasFine - In car brake bias fine adjustment
 
@@ -998,7 +998,7 @@ dcBrakeBiasFine - In car brake bias fine adjustment
 
 > **dcBrakeMisc**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3797](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3797)
+Defined in: [telemetry.gen.ts:3797](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3797)
 
 dcBrakeMisc - In car brake misc adjustment
 
@@ -1014,7 +1014,7 @@ dcBrakeMisc - In car brake misc adjustment
 
 > **dcDashPage**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2906](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2906)
+Defined in: [telemetry.gen.ts:2906](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2906)
 
 dcDashPage - In car dash display page adjustment
 
@@ -1030,7 +1030,7 @@ dcDashPage - In car dash display page adjustment
 
 > **dcDashPage2**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4589](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4589)
+Defined in: [telemetry.gen.ts:4589](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4589)
 
 dcDashPage2 - In car second dash display page adjustment
 
@@ -1046,7 +1046,7 @@ dcDashPage2 - In car second dash display page adjustment
 
 > **dcDiffEntry**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3841](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3841)
+Defined in: [telemetry.gen.ts:3841](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3841)
 
 dcDiffEntry - In car diff entry adjustment
 
@@ -1062,7 +1062,7 @@ dcDiffEntry - In car diff entry adjustment
 
 > **dcDiffExit**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3863](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3863)
+Defined in: [telemetry.gen.ts:3863](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3863)
 
 dcDiffExit - In car diff exit adjustment
 
@@ -1078,7 +1078,7 @@ dcDiffExit - In car diff exit adjustment
 
 > **dcDiffMiddle**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3852](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3852)
+Defined in: [telemetry.gen.ts:3852](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3852)
 
 dcDiffMiddle - In car diff middle adjustment
 
@@ -1094,7 +1094,7 @@ dcDiffMiddle - In car diff middle adjustment
 
 > **DCDriversSoFar**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1652](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1652)
+Defined in: [telemetry.gen.ts:1652](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1652)
 
 DCDriversSoFar - Number of team drivers who have run a stint
 
@@ -1110,7 +1110,7 @@ DCDriversSoFar - Number of team drivers who have run a stint
 
 > **dcDRSToggle**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:3731](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3731)
+Defined in: [telemetry.gen.ts:3731](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3731)
 
 dcDRSToggle - In car toggle DRS
 
@@ -1126,7 +1126,7 @@ dcDRSToggle - In car toggle DRS
 
 > **dcEngineBraking**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3808](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3808)
+Defined in: [telemetry.gen.ts:3808](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3808)
 
 dcEngineBraking - In car engine braking adjustment
 
@@ -1142,7 +1142,7 @@ dcEngineBraking - In car engine braking adjustment
 
 > **dcEnginePower**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4743](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4743)
+Defined in: [telemetry.gen.ts:4743](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4743)
 
 dcEnginePower - In car engine power adjustment
 
@@ -1158,7 +1158,7 @@ dcEnginePower - In car engine power adjustment
 
 > **dcFCYToggle**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:4644](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4644)
+Defined in: [telemetry.gen.ts:4644](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4644)
 
 dcFCYToggle - In car toggle full course yellow mode
 
@@ -1174,7 +1174,7 @@ dcFCYToggle - In car toggle full course yellow mode
 
 > **dcFuelCutPosition**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4655](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4655)
+Defined in: [telemetry.gen.ts:4655](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4655)
 
 dcFuelCutPosition - In car adv end straight fuel cut
 
@@ -1190,7 +1190,7 @@ dcFuelCutPosition - In car adv end straight fuel cut
 
 > **dcFuelMixture**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4578](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4578)
+Defined in: [telemetry.gen.ts:4578](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4578)
 
 dcFuelMixture - In car fuel mixture adjustment
 
@@ -1206,7 +1206,7 @@ dcFuelMixture - In car fuel mixture adjustment
 
 > **dcFuelNoCutToggle**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:4666](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4666)
+Defined in: [telemetry.gen.ts:4666](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4666)
 
 dcFuelNoCutToggle - In car fuel cut on straight active
 
@@ -1222,7 +1222,7 @@ dcFuelNoCutToggle - In car fuel cut on straight active
 
 > **dcHeadlightFlash**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:2774](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2774)
+Defined in: [telemetry.gen.ts:2774](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2774)
 
 dcHeadlightFlash - In car headlight flash control active
 
@@ -1238,7 +1238,7 @@ dcHeadlightFlash - In car headlight flash control active
 
 > **dcHysBoostHold**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:4688](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4688)
+Defined in: [telemetry.gen.ts:4688](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4688)
 
 dcHysBoostHold - In car hold HYS deploy
 
@@ -1254,7 +1254,7 @@ dcHysBoostHold - In car hold HYS deploy
 
 > **dcInLapToggle**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:4633](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4633)
+Defined in: [telemetry.gen.ts:4633](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4633)
 
 dcInLapToggle - In car toggle in lap settings
 
@@ -1270,7 +1270,7 @@ dcInLapToggle - In car toggle in lap settings
 
 > **DCLapStatus**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1641](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1641)
+Defined in: [telemetry.gen.ts:1641](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1641)
 
 DCLapStatus - Status of driver change lap requirements
 
@@ -1286,7 +1286,7 @@ DCLapStatus - Status of driver change lap requirements
 
 > **dcLaunchRPM**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4424](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4424)
+Defined in: [telemetry.gen.ts:4424](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4424)
 
 dcLaunchRPM - In car launch rpm adjustment
 
@@ -1302,7 +1302,7 @@ dcLaunchRPM - In car launch rpm adjustment
 
 > **dcLowFuelAccept**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:2785](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2785)
+Defined in: [telemetry.gen.ts:2785](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2785)
 
 dcLowFuelAccept - In car low fuel accept
 
@@ -1318,7 +1318,7 @@ dcLowFuelAccept - In car low fuel accept
 
 > **dcMGUKDeployFixed**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4677](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4677)
+Defined in: [telemetry.gen.ts:4677](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4677)
 
 dcMGUKDeployFixed - In car MGU-K fixed deployment level adjustment
 
@@ -1334,7 +1334,7 @@ dcMGUKDeployFixed - In car MGU-K fixed deployment level adjustment
 
 > **dcMGUKDeployMode**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3819](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3819)
+Defined in: [telemetry.gen.ts:3819](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3819)
 
 dcMGUKDeployMode - In car MGU-K deployment mode level adjustment
 
@@ -1350,7 +1350,7 @@ dcMGUKDeployMode - In car MGU-K deployment mode level adjustment
 
 > **dcMGUKRegenGain**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3830](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3830)
+Defined in: [telemetry.gen.ts:3830](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3830)
 
 dcMGUKRegenGain - In car MUG-K re-gen gain adjustment
 
@@ -1366,7 +1366,7 @@ dcMGUKRegenGain - In car MUG-K re-gen gain adjustment
 
 > **dcPeakBrakeBias**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3786](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3786)
+Defined in: [telemetry.gen.ts:3786](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3786)
 
 dcPeakBrakeBias - In car peak brake bias adjustment
 
@@ -1382,7 +1382,7 @@ dcPeakBrakeBias - In car peak brake bias adjustment
 
 > **dcPitSpeedLimiterToggle**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:2752](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2752)
+Defined in: [telemetry.gen.ts:2752](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2752)
 
 dcPitSpeedLimiterToggle - Track if pit speed limiter system is enabled
 
@@ -1398,7 +1398,7 @@ dcPitSpeedLimiterToggle - Track if pit speed limiter system is enabled
 
 > **dcPowerSteering**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2917](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2917)
+Defined in: [telemetry.gen.ts:2917](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2917)
 
 dcPowerSteering - In car power steering adjustment
 
@@ -1414,7 +1414,7 @@ dcPowerSteering - In car power steering adjustment
 
 > **dcPushToPass**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:4545](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4545)
+Defined in: [telemetry.gen.ts:4545](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4545)
 
 dcPushToPass - In car trigger push to pass
 
@@ -1430,7 +1430,7 @@ dcPushToPass - In car trigger push to pass
 
 > **dcRFBrakeAttachedToggle**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:4358](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4358)
+Defined in: [telemetry.gen.ts:4358](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4358)
 
 dcRFBrakeAttachedToggle - In car Right Front Brake attached(1) or detached(0)
 
@@ -1446,7 +1446,7 @@ dcRFBrakeAttachedToggle - In car Right Front Brake attached(1) or detached(0)
 
 > **dcStarter**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:2741](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2741)
+Defined in: [telemetry.gen.ts:2741](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2741)
 
 dcStarter - In car trigger car starter
 
@@ -1462,7 +1462,7 @@ dcStarter - In car trigger car starter
 
 > **dcTearOffVisor**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:3742](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3742)
+Defined in: [telemetry.gen.ts:3742](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3742)
 
 dcTearOffVisor - In car tear off visor film
 
@@ -1478,7 +1478,7 @@ dcTearOffVisor - In car tear off visor film
 
 > **dcThrottleShape**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3005](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3005)
+Defined in: [telemetry.gen.ts:3005](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3005)
 
 dcThrottleShape - In car throttle shape adjustment
 
@@ -1494,7 +1494,7 @@ dcThrottleShape - In car throttle shape adjustment
 
 > **dcToggleWindshieldWipers**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:3016](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3016)
+Defined in: [telemetry.gen.ts:3016](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3016)
 
 dcToggleWindshieldWipers - In car turn wipers on or off
 
@@ -1510,7 +1510,7 @@ dcToggleWindshieldWipers - In car turn wipers on or off
 
 > **dcTractionControl**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2983](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2983)
+Defined in: [telemetry.gen.ts:2983](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2983)
 
 dcTractionControl - In car traction control adjustment
 
@@ -1526,7 +1526,7 @@ dcTractionControl - In car traction control adjustment
 
 > **dcTractionControl2**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4149](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4149)
+Defined in: [telemetry.gen.ts:4149](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4149)
 
 dcTractionControl2 - In car traction control 2 adjustment
 
@@ -1542,7 +1542,7 @@ dcTractionControl2 - In car traction control 2 adjustment
 
 > **dcTractionControl3**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4721](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4721)
+Defined in: [telemetry.gen.ts:4721](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4721)
 
 dcTractionControl3 - In car traction control 3 adjustment
 
@@ -1558,7 +1558,7 @@ dcTractionControl3 - In car traction control 3 adjustment
 
 > **dcTractionControl4**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4710](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4710)
+Defined in: [telemetry.gen.ts:4710](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4710)
 
 dcTractionControl4 - In car traction control 4 adjustment
 
@@ -1574,7 +1574,7 @@ dcTractionControl4 - In car traction control 4 adjustment
 
 > **dcTractionControlToggle**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:2763](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2763)
+Defined in: [telemetry.gen.ts:2763](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2763)
 
 dcTractionControlToggle - In car traction control active
 
@@ -1590,7 +1590,7 @@ dcTractionControlToggle - In car traction control active
 
 > **dcTriggerWindshieldWipers**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:3027](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3027)
+Defined in: [telemetry.gen.ts:3027](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3027)
 
 dcTriggerWindshieldWipers - In car momentarily turn on wipers
 
@@ -1606,7 +1606,7 @@ dcTriggerWindshieldWipers - In car momentarily turn on wipers
 
 > **dcWeightJackerRight**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4567](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4567)
+Defined in: [telemetry.gen.ts:4567](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4567)
 
 dcWeightJackerRight - In car right wedge/weight jacker adjustment
 
@@ -1622,7 +1622,7 @@ dcWeightJackerRight - In car right wedge/weight jacker adjustment
 
 > **DisplayUnits**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:222](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L222)
+Defined in: [telemetry.gen.ts:222](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L222)
 
 DisplayUnits - Default units for the user interface 0 = english 1 = metric
 
@@ -1638,7 +1638,7 @@ DisplayUnits - Default units for the user interface 0 = english 1 = metric
 
 > **dpChargeAddKWh**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4732](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4732)
+Defined in: [telemetry.gen.ts:4732](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4732)
 
 dpChargeAddKWh - Pitstop charge add amount
 
@@ -1654,7 +1654,7 @@ dpChargeAddKWh - Pitstop charge add amount
 
 > **dpFastRepair**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2895](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2895)
+Defined in: [telemetry.gen.ts:2895](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2895)
 
 dpFastRepair - Pitstop fast repair set
 
@@ -1670,7 +1670,7 @@ dpFastRepair - Pitstop fast repair set
 
 > **dpFuelAddKg**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2884](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2884)
+Defined in: [telemetry.gen.ts:2884](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2884)
 
 dpFuelAddKg - Pitstop fuel add amount
 
@@ -1686,7 +1686,7 @@ dpFuelAddKg - Pitstop fuel add amount
 
 > **dpFuelAutoFillActive**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2862](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2862)
+Defined in: [telemetry.gen.ts:2862](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2862)
 
 dpFuelAutoFillActive - Pitstop auto fill fuel next stop flag
 
@@ -1702,7 +1702,7 @@ dpFuelAutoFillActive - Pitstop auto fill fuel next stop flag
 
 > **dpFuelAutoFillEnabled**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2851](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2851)
+Defined in: [telemetry.gen.ts:2851](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2851)
 
 dpFuelAutoFillEnabled - Pitstop auto fill fuel system enabled
 
@@ -1718,7 +1718,7 @@ dpFuelAutoFillEnabled - Pitstop auto fill fuel system enabled
 
 > **dpFuelFill**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2840](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2840)
+Defined in: [telemetry.gen.ts:2840](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2840)
 
 dpFuelFill - Pitstop fuel fill flag
 
@@ -1734,7 +1734,7 @@ dpFuelFill - Pitstop fuel fill flag
 
 > **dpLFTireChange**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2807](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2807)
+Defined in: [telemetry.gen.ts:2807](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2807)
 
 dpLFTireChange - Pitstop lf tire change request
 
@@ -1750,7 +1750,7 @@ dpLFTireChange - Pitstop lf tire change request
 
 > **dpLFTireColdPress**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2939](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2939)
+Defined in: [telemetry.gen.ts:2939](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2939)
 
 dpLFTireColdPress - Pitstop lf tire cold pressure adjustment
 
@@ -1766,7 +1766,7 @@ dpLFTireColdPress - Pitstop lf tire cold pressure adjustment
 
 > **dpLRTireChange**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2829](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2829)
+Defined in: [telemetry.gen.ts:2829](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2829)
 
 dpLRTireChange - Pitstop lr tire change request
 
@@ -1782,7 +1782,7 @@ dpLRTireChange - Pitstop lr tire change request
 
 > **dpLRTireColdPress**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2961](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2961)
+Defined in: [telemetry.gen.ts:2961](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2961)
 
 dpLRTireColdPress - Pitstop lr tire cold pressure adjustment
 
@@ -1798,7 +1798,7 @@ dpLRTireColdPress - Pitstop lr tire cold pressure adjustment
 
 > **dpLTireChange**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4259](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4259)
+Defined in: [telemetry.gen.ts:4259](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4259)
 
 dpLTireChange - Pitstop left tire change request
 
@@ -1814,7 +1814,7 @@ dpLTireChange - Pitstop left tire change request
 
 > **dpPowerSteering**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4699](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4699)
+Defined in: [telemetry.gen.ts:4699](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4699)
 
 dpPowerSteering - Pitstop power steering adjustment
 
@@ -1830,7 +1830,7 @@ dpPowerSteering - Pitstop power steering adjustment
 
 > **dpQTape**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4600](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4600)
+Defined in: [telemetry.gen.ts:4600](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4600)
 
 dpQTape - Pitstop qualify tape adjustment
 
@@ -1846,7 +1846,7 @@ dpQTape - Pitstop qualify tape adjustment
 
 > **dpRFTireChange**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2796](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2796)
+Defined in: [telemetry.gen.ts:2796](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2796)
 
 dpRFTireChange - Pitstop rf tire change request
 
@@ -1862,7 +1862,7 @@ dpRFTireChange - Pitstop rf tire change request
 
 > **dpRFTireColdPress**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2950](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2950)
+Defined in: [telemetry.gen.ts:2950](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2950)
 
 dpRFTireColdPress - Pitstop rf cold tire pressure adjustment
 
@@ -1878,7 +1878,7 @@ dpRFTireColdPress - Pitstop rf cold tire pressure adjustment
 
 > **dpRRTireChange**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2818](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2818)
+Defined in: [telemetry.gen.ts:2818](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2818)
 
 dpRRTireChange - Pitstop rr tire change request
 
@@ -1894,7 +1894,7 @@ dpRRTireChange - Pitstop rr tire change request
 
 > **dpRRTireColdPress**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2972](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2972)
+Defined in: [telemetry.gen.ts:2972](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2972)
 
 dpRRTireColdPress - Pitstop rr cold tire pressure adjustment
 
@@ -1910,7 +1910,7 @@ dpRRTireColdPress - Pitstop rr cold tire pressure adjustment
 
 > **dpRTireChange**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4248](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4248)
+Defined in: [telemetry.gen.ts:4248](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4248)
 
 dpRTireChange - Pitstop right tire change request
 
@@ -1926,7 +1926,7 @@ dpRTireChange - Pitstop right tire change request
 
 > **dpTireChange**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3753](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3753)
+Defined in: [telemetry.gen.ts:3753](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3753)
 
 dpTireChange - Pitstop all tire change request
 
@@ -1942,7 +1942,7 @@ dpTireChange - Pitstop all tire change request
 
 > **dpWeightJackerLeft**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4611](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4611)
+Defined in: [telemetry.gen.ts:4611](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4611)
 
 dpWeightJackerLeft - Pitstop left wedge/weight jacker adjustment
 
@@ -1958,7 +1958,7 @@ dpWeightJackerLeft - Pitstop left wedge/weight jacker adjustment
 
 > **dpWeightJackerRight**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4622](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4622)
+Defined in: [telemetry.gen.ts:4622](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4622)
 
 dpWeightJackerRight - Pitstop right wedge/weight jacker adjustment
 
@@ -1974,7 +1974,7 @@ dpWeightJackerRight - Pitstop right wedge/weight jacker adjustment
 
 > **dpWindshieldTearoff**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2873](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2873)
+Defined in: [telemetry.gen.ts:2873](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2873)
 
 dpWindshieldTearoff - Pitstop windshield tearoff
 
@@ -1990,7 +1990,7 @@ dpWindshieldTearoff - Pitstop windshield tearoff
 
 > **dpWingFront**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3764](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3764)
+Defined in: [telemetry.gen.ts:3764](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3764)
 
 dpWingFront - Pitstop front wing adjustment
 
@@ -2006,7 +2006,7 @@ dpWingFront - Pitstop front wing adjustment
 
 > **dpWingRear**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4556](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4556)
+Defined in: [telemetry.gen.ts:4556](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4556)
 
 dpWingRear - Pitstop rear wing adjustment
 
@@ -2022,7 +2022,7 @@ dpWingRear - Pitstop rear wing adjustment
 
 > **DriverMarker**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:233](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L233)
+Defined in: [telemetry.gen.ts:233](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L233)
 
 DriverMarker - Driver activated flag
 
@@ -2038,7 +2038,7 @@ DriverMarker - Driver activated flag
 
 > **DRS\_Count**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4413](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4413)
+Defined in: [telemetry.gen.ts:4413](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4413)
 
 DRS_Count - Drag Reduction System count of usage
 
@@ -2054,7 +2054,7 @@ DRS_Count - Drag Reduction System count of usage
 
 > **DRS\_Status**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3874](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3874)
+Defined in: [telemetry.gen.ts:3874](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3874)
 
 DRS_Status - Drag Reduction System Status
 
@@ -2070,7 +2070,7 @@ DRS_Status - Drag Reduction System Status
 
 > **EnergyBatteryToMGU\_KLap**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3940](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3940)
+Defined in: [telemetry.gen.ts:3940](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3940)
 
 EnergyBatteryToMGU_KLap - Electrical energy from battery to MGU-K per lap
 
@@ -2086,7 +2086,7 @@ EnergyBatteryToMGU_KLap - Electrical energy from battery to MGU-K per lap
 
 > **EnergyERSBattery**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3918](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3918)
+Defined in: [telemetry.gen.ts:3918](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3918)
 
 EnergyERSBattery - Engine ERS battery charge
 
@@ -2102,7 +2102,7 @@ EnergyERSBattery - Engine ERS battery charge
 
 > **EnergyERSBatteryPct**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3929](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3929)
+Defined in: [telemetry.gen.ts:3929](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3929)
 
 EnergyERSBatteryPct - Engine ERS battery charge as a percent
 
@@ -2118,7 +2118,7 @@ EnergyERSBatteryPct - Engine ERS battery charge as a percent
 
 > **EnergyMGU\_KLapDeployPct**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3951](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3951)
+Defined in: [telemetry.gen.ts:3951](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3951)
 
 EnergyMGU_KLapDeployPct - Electrical energy available to MGU-K per lap as a percent
 
@@ -2134,7 +2134,7 @@ EnergyMGU_KLapDeployPct - Electrical energy available to MGU-K per lap as a perc
 
 > **Engine0\_RPM**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3346](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3346)
+Defined in: [telemetry.gen.ts:3346](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3346)
 
 Engine0_RPM - Engine0Engine rpm
 
@@ -2150,7 +2150,7 @@ Engine0_RPM - Engine0Engine rpm
 
 > **Engine1\_RPM**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3962](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3962)
+Defined in: [telemetry.gen.ts:3962](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3962)
 
 Engine1_RPM - Engine1Engine rpm
 
@@ -2166,7 +2166,7 @@ Engine1_RPM - Engine1Engine rpm
 
 > **EngineWarnings**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2158](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2158)
+Defined in: [telemetry.gen.ts:2158](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2158)
 
 EngineWarnings - Bitfield for warning lights
 
@@ -2182,7 +2182,7 @@ EngineWarnings - Bitfield for warning lights
 
 > **EnterExitReset**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1454](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1454)
+Defined in: [telemetry.gen.ts:1454](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1454)
 
 EnterExitReset - Indicate action the reset key will take 0 enter 1 exit 2 reset
 
@@ -2198,7 +2198,7 @@ EnterExitReset - Indicate action the reset key will take 0 enter 1 exit 2 reset
 
 > **FastRepairAvailable**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1784](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1784)
+Defined in: [telemetry.gen.ts:1784](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1784)
 
 FastRepairAvailable - How many fast repairs left  255 is unlimited
 
@@ -2214,7 +2214,7 @@ FastRepairAvailable - How many fast repairs left  255 is unlimited
 
 > **FastRepairUsed**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1773](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1773)
+Defined in: [telemetry.gen.ts:1773](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1773)
 
 FastRepairUsed - How many fast repairs used so far
 
@@ -2230,7 +2230,7 @@ FastRepairUsed - How many fast repairs used so far
 
 > **FogLevel**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1575](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1575)
+Defined in: [telemetry.gen.ts:1575](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1575)
 
 FogLevel - Fog level at start/finish line
 
@@ -2246,7 +2246,7 @@ FogLevel - Fog level at start/finish line
 
 > **FrameRate**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:354](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L354)
+Defined in: [telemetry.gen.ts:354](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L354)
 
 FrameRate - Average frames per second
 
@@ -2262,7 +2262,7 @@ FrameRate - Average frames per second
 
 > **FrontTireSetsAvailable**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1960](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1960)
+Defined in: [telemetry.gen.ts:1960](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1960)
 
 FrontTireSetsAvailable - How many front tire sets are remaining  255 is unlimited
 
@@ -2278,7 +2278,7 @@ FrontTireSetsAvailable - How many front tire sets are remaining  255 is unlimite
 
 > **FrontTireSetsUsed**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1861](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1861)
+Defined in: [telemetry.gen.ts:1861](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1861)
 
 FrontTireSetsUsed - How many front tire sets used so far
 
@@ -2294,7 +2294,7 @@ FrontTireSetsUsed - How many front tire sets used so far
 
 > **FuelLevel**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3335](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3335)
+Defined in: [telemetry.gen.ts:3335](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3335)
 
 FuelLevel - Liters of fuel remaining
 
@@ -2310,7 +2310,7 @@ FuelLevel - Liters of fuel remaining
 
 > **FuelLevelPct**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2169](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2169)
+Defined in: [telemetry.gen.ts:2169](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2169)
 
 FuelLevelPct - Percent fuel remaining
 
@@ -2326,7 +2326,7 @@ FuelLevelPct - Percent fuel remaining
 
 > **FuelPress**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3280](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3280)
+Defined in: [telemetry.gen.ts:3280](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3280)
 
 FuelPress - Engine fuel pressure
 
@@ -2342,7 +2342,7 @@ FuelPress - Engine fuel pressure
 
 > **FuelUsePerHour**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3236](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3236)
+Defined in: [telemetry.gen.ts:3236](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3236)
 
 FuelUsePerHour - Engine fuel used instantaneous
 
@@ -2358,7 +2358,7 @@ FuelUsePerHour - Engine fuel used instantaneous
 
 > **Gear**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1003](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1003)
+Defined in: [telemetry.gen.ts:1003](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1003)
 
 Gear - -1=reverse  0=neutral  1..n=current gear
 
@@ -2374,7 +2374,7 @@ Gear - -1=reverse  0=neutral  1..n=current gear
 
 > **GpuUsage**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:376](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L376)
+Defined in: [telemetry.gen.ts:376](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L376)
 
 GpuUsage - Percent of available time gpu took with a 1 sec avg
 
@@ -2390,7 +2390,7 @@ GpuUsage - Percent of available time gpu took with a 1 sec avg
 
 > **HandbrakeRaw**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2125](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2125)
+Defined in: [telemetry.gen.ts:2125](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2125)
 
 HandbrakeRaw - Raw handbrake input 0=handbrake released to 1=max force
 
@@ -2406,7 +2406,7 @@ HandbrakeRaw - Raw handbrake input 0=handbrake released to 1=max force
 
 > **HFshockDefl**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4457](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4457)
+Defined in: [telemetry.gen.ts:4457](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4457)
 
 HFshockDefl - HF shock deflection
 
@@ -2422,7 +2422,7 @@ HFshockDefl - HF shock deflection
 
 > **HFshockDefl\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4468](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4468)
+Defined in: [telemetry.gen.ts:4468](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4468)
 
 HFshockDefl_ST - HF shock deflection at 360 Hz
 
@@ -2438,7 +2438,7 @@ HFshockDefl_ST - HF shock deflection at 360 Hz
 
 > **HFshockVel**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4479](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4479)
+Defined in: [telemetry.gen.ts:4479](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4479)
 
 HFshockVel - HF shock velocity
 
@@ -2454,7 +2454,7 @@ HFshockVel - HF shock velocity
 
 > **HFshockVel\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4490](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4490)
+Defined in: [telemetry.gen.ts:4490](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4490)
 
 HFshockVel_ST - HF shock velocity at 360 Hz
 
@@ -2470,7 +2470,7 @@ HFshockVel_ST - HF shock velocity at 360 Hz
 
 > **HRshockDefl**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4501](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4501)
+Defined in: [telemetry.gen.ts:4501](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4501)
 
 HRshockDefl - HR shock deflection
 
@@ -2486,7 +2486,7 @@ HRshockDefl - HR shock deflection
 
 > **HRshockDefl\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4512](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4512)
+Defined in: [telemetry.gen.ts:4512](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4512)
 
 HRshockDefl_ST - HR shock deflection at 360 Hz
 
@@ -2502,7 +2502,7 @@ HRshockDefl_ST - HR shock deflection at 360 Hz
 
 > **HRshockVel**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4523](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4523)
+Defined in: [telemetry.gen.ts:4523](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4523)
 
 HRshockVel - HR shock velocity
 
@@ -2518,7 +2518,7 @@ HRshockVel - HR shock velocity
 
 > **HRshockVel\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4534](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4534)
+Defined in: [telemetry.gen.ts:4534](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4534)
 
 HRshockVel_ST - HR shock velocity at 360 Hz
 
@@ -2534,7 +2534,7 @@ HRshockVel_ST - HR shock velocity at 360 Hz
 
 > **IsDiskLoggingActive**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:343](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L343)
+Defined in: [telemetry.gen.ts:343](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L343)
 
 IsDiskLoggingActive - 0=disk based telemetry file not being written  1=being written
 
@@ -2550,7 +2550,7 @@ IsDiskLoggingActive - 0=disk based telemetry file not being written  1=being wri
 
 > **IsDiskLoggingEnabled**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:332](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L332)
+Defined in: [telemetry.gen.ts:332](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L332)
 
 IsDiskLoggingEnabled - 0=disk based telemetry turned off  1=turned on
 
@@ -2566,7 +2566,7 @@ IsDiskLoggingEnabled - 0=disk based telemetry turned off  1=turned on
 
 > **IsGarageVisible**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:2422](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2422)
+Defined in: [telemetry.gen.ts:2422](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2422)
 
 IsGarageVisible - 1=Garage screen is visible
 
@@ -2582,7 +2582,7 @@ IsGarageVisible - 1=Garage screen is visible
 
 > **IsInGarage**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:2048](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2048)
+Defined in: [telemetry.gen.ts:2048](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2048)
 
 IsInGarage - 1=Car in garage physics running
 
@@ -2598,7 +2598,7 @@ IsInGarage - 1=Car in garage physics running
 
 > **IsOnTrack**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:288](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L288)
+Defined in: [telemetry.gen.ts:288](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L288)
 
 IsOnTrack - 1=Car on track physics running with player in car
 
@@ -2614,7 +2614,7 @@ IsOnTrack - 1=Car on track physics running with player in car
 
 > **IsOnTrackCar**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:2037](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2037)
+Defined in: [telemetry.gen.ts:2037](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2037)
 
 IsOnTrackCar - 1=Car on track physics running
 
@@ -2630,7 +2630,7 @@ IsOnTrackCar - 1=Car on track physics running
 
 > **IsReplayPlaying**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:299](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L299)
+Defined in: [telemetry.gen.ts:299](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L299)
 
 IsReplayPlaying - 0=replay not playing  1=replay playing
 
@@ -2646,7 +2646,7 @@ IsReplayPlaying - 0=replay not playing  1=replay playing
 
 > **Lap**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1069](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1069)
+Defined in: [telemetry.gen.ts:1069](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1069)
 
 Lap - Laps started count
 
@@ -2662,7 +2662,7 @@ Lap - Laps started count
 
 > **LapBestLap**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1146](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1146)
+Defined in: [telemetry.gen.ts:1146](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1146)
 
 LapBestLap - Players best lap number
 
@@ -2678,7 +2678,7 @@ LapBestLap - Players best lap number
 
 > **LapBestLapTime**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1157](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1157)
+Defined in: [telemetry.gen.ts:1157](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1157)
 
 LapBestLapTime - Players best lap time
 
@@ -2694,7 +2694,7 @@ LapBestLapTime - Players best lap time
 
 > **LapBestNLapLap**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1212](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1212)
+Defined in: [telemetry.gen.ts:1212](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1212)
 
 LapBestNLapLap - Player last lap in best N average lap time
 
@@ -2710,7 +2710,7 @@ LapBestNLapLap - Player last lap in best N average lap time
 
 > **LapBestNLapTime**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1223](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1223)
+Defined in: [telemetry.gen.ts:1223](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1223)
 
 LapBestNLapTime - Player best N average lap time
 
@@ -2726,7 +2726,7 @@ LapBestNLapTime - Player best N average lap time
 
 > **LapCompleted**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1080](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1080)
+Defined in: [telemetry.gen.ts:1080](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1080)
 
 LapCompleted - Laps completed count
 
@@ -2742,7 +2742,7 @@ LapCompleted - Laps completed count
 
 > **LapCurrentLapTime**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1179](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1179)
+Defined in: [telemetry.gen.ts:1179](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1179)
 
 LapCurrentLapTime - Estimate of players current lap time as shown in F3 box
 
@@ -2758,7 +2758,7 @@ LapCurrentLapTime - Estimate of players current lap time as shown in F3 box
 
 > **LapDeltaToBestLap**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1234](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1234)
+Defined in: [telemetry.gen.ts:1234](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1234)
 
 LapDeltaToBestLap - Delta time for best lap
 
@@ -2774,7 +2774,7 @@ LapDeltaToBestLap - Delta time for best lap
 
 > **LapDeltaToBestLap\_DD**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1245](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1245)
+Defined in: [telemetry.gen.ts:1245](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1245)
 
 LapDeltaToBestLap_DD - Rate of change of delta time for best lap
 
@@ -2790,7 +2790,7 @@ LapDeltaToBestLap_DD - Rate of change of delta time for best lap
 
 > **LapDeltaToBestLap\_OK**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:1256](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1256)
+Defined in: [telemetry.gen.ts:1256](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1256)
 
 LapDeltaToBestLap_OK - Delta time for best lap is valid
 
@@ -2806,7 +2806,7 @@ LapDeltaToBestLap_OK - Delta time for best lap is valid
 
 > **LapDeltaToOptimalLap**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1267](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1267)
+Defined in: [telemetry.gen.ts:1267](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1267)
 
 LapDeltaToOptimalLap - Delta time for optimal lap
 
@@ -2822,7 +2822,7 @@ LapDeltaToOptimalLap - Delta time for optimal lap
 
 > **LapDeltaToOptimalLap\_DD**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1278](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1278)
+Defined in: [telemetry.gen.ts:1278](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1278)
 
 LapDeltaToOptimalLap_DD - Rate of change of delta time for optimal lap
 
@@ -2838,7 +2838,7 @@ LapDeltaToOptimalLap_DD - Rate of change of delta time for optimal lap
 
 > **LapDeltaToOptimalLap\_OK**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:1289](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1289)
+Defined in: [telemetry.gen.ts:1289](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1289)
 
 LapDeltaToOptimalLap_OK - Delta time for optimal lap is valid
 
@@ -2854,7 +2854,7 @@ LapDeltaToOptimalLap_OK - Delta time for optimal lap is valid
 
 > **LapDeltaToSessionBestLap**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1300](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1300)
+Defined in: [telemetry.gen.ts:1300](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1300)
 
 LapDeltaToSessionBestLap - Delta time for session best lap
 
@@ -2870,7 +2870,7 @@ LapDeltaToSessionBestLap - Delta time for session best lap
 
 > **LapDeltaToSessionBestLap\_DD**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1311](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1311)
+Defined in: [telemetry.gen.ts:1311](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1311)
 
 LapDeltaToSessionBestLap_DD - Rate of change of delta time for session best lap
 
@@ -2886,7 +2886,7 @@ LapDeltaToSessionBestLap_DD - Rate of change of delta time for session best lap
 
 > **LapDeltaToSessionBestLap\_OK**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:1322](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1322)
+Defined in: [telemetry.gen.ts:1322](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1322)
 
 LapDeltaToSessionBestLap_OK - Delta time for session best lap is valid
 
@@ -2902,7 +2902,7 @@ LapDeltaToSessionBestLap_OK - Delta time for session best lap is valid
 
 > **LapDeltaToSessionLastlLap**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1366](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1366)
+Defined in: [telemetry.gen.ts:1366](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1366)
 
 LapDeltaToSessionLastlLap - Delta time for session last lap
 
@@ -2918,7 +2918,7 @@ LapDeltaToSessionLastlLap - Delta time for session last lap
 
 > **LapDeltaToSessionLastlLap\_DD**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1377](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1377)
+Defined in: [telemetry.gen.ts:1377](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1377)
 
 LapDeltaToSessionLastlLap_DD - Rate of change of delta time for session last lap
 
@@ -2934,7 +2934,7 @@ LapDeltaToSessionLastlLap_DD - Rate of change of delta time for session last lap
 
 > **LapDeltaToSessionLastlLap\_OK**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:1388](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1388)
+Defined in: [telemetry.gen.ts:1388](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1388)
 
 LapDeltaToSessionLastlLap_OK - Delta time for session last lap is valid
 
@@ -2950,7 +2950,7 @@ LapDeltaToSessionLastlLap_OK - Delta time for session last lap is valid
 
 > **LapDeltaToSessionOptimalLap**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1333](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1333)
+Defined in: [telemetry.gen.ts:1333](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1333)
 
 LapDeltaToSessionOptimalLap - Delta time for session optimal lap
 
@@ -2966,7 +2966,7 @@ LapDeltaToSessionOptimalLap - Delta time for session optimal lap
 
 > **LapDeltaToSessionOptimalLap\_DD**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1344](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1344)
+Defined in: [telemetry.gen.ts:1344](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1344)
 
 LapDeltaToSessionOptimalLap_DD - Rate of change of delta time for session optimal lap
 
@@ -2982,7 +2982,7 @@ LapDeltaToSessionOptimalLap_DD - Rate of change of delta time for session optima
 
 > **LapDeltaToSessionOptimalLap\_OK**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:1355](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1355)
+Defined in: [telemetry.gen.ts:1355](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1355)
 
 LapDeltaToSessionOptimalLap_OK - Delta time for session optimal lap is valid
 
@@ -2998,7 +2998,7 @@ LapDeltaToSessionOptimalLap_OK - Delta time for session optimal lap is valid
 
 > **LapDist**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1091](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1091)
+Defined in: [telemetry.gen.ts:1091](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1091)
 
 LapDist - Meters traveled from S/F this lap
 
@@ -3014,7 +3014,7 @@ LapDist - Meters traveled from S/F this lap
 
 > **LapDistPct**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1102](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1102)
+Defined in: [telemetry.gen.ts:1102](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1102)
 
 LapDistPct - Percentage distance around lap
 
@@ -3030,7 +3030,7 @@ LapDistPct - Percentage distance around lap
 
 > **LapLasNLapSeq**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1190](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1190)
+Defined in: [telemetry.gen.ts:1190](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1190)
 
 LapLasNLapSeq - Player num consecutive clean laps completed for N average
 
@@ -3046,7 +3046,7 @@ LapLasNLapSeq - Player num consecutive clean laps completed for N average
 
 > **LapLastLapTime**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1168](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1168)
+Defined in: [telemetry.gen.ts:1168](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1168)
 
 LapLastLapTime - Players last lap time
 
@@ -3062,7 +3062,7 @@ LapLastLapTime - Players last lap time
 
 > **LapLastNLapTime**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1201](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1201)
+Defined in: [telemetry.gen.ts:1201](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1201)
 
 LapLastNLapTime - Player last N average lap time
 
@@ -3078,7 +3078,7 @@ LapLastNLapTime - Player last N average lap time
 
 > **LatAccel**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2719](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2719)
+Defined in: [telemetry.gen.ts:2719](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2719)
 
 LatAccel - Lateral acceleration (including gravity)
 
@@ -3094,7 +3094,7 @@ LatAccel - Lateral acceleration (including gravity)
 
 > **LatAccel\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2686](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2686)
+Defined in: [telemetry.gen.ts:2686](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2686)
 
 LatAccel_ST - Lateral acceleration (including gravity) at 360 Hz
 
@@ -3110,7 +3110,7 @@ LatAccel_ST - Lateral acceleration (including gravity) at 360 Hz
 
 > **LeftTireSetsAvailable**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1938](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1938)
+Defined in: [telemetry.gen.ts:1938](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1938)
 
 LeftTireSetsAvailable - How many left tire sets are remaining  255 is unlimited
 
@@ -3126,7 +3126,7 @@ LeftTireSetsAvailable - How many left tire sets are remaining  255 is unlimited
 
 > **LeftTireSetsUsed**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1839](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1839)
+Defined in: [telemetry.gen.ts:1839](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1839)
 
 LeftTireSetsUsed - How many left tire sets used so far
 
@@ -3142,7 +3142,7 @@ LeftTireSetsUsed - How many left tire sets used so far
 
 > **LFbrakeLinePress**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3137](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3137)
+Defined in: [telemetry.gen.ts:3137](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3137)
 
 LFbrakeLinePress - LF brake line pressure
 
@@ -3158,7 +3158,7 @@ LFbrakeLinePress - LF brake line pressure
 
 > **LFcoldPressure**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3148](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3148)
+Defined in: [telemetry.gen.ts:3148](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3148)
 
 LFcoldPressure - LF tire cold pressure  as set in the garage
 
@@ -3174,7 +3174,7 @@ LFcoldPressure - LF tire cold pressure  as set in the garage
 
 > **LFodometer**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3159](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3159)
+Defined in: [telemetry.gen.ts:3159](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3159)
 
 LFodometer - LF distance tire traveled since being placed on car
 
@@ -3190,7 +3190,7 @@ LFodometer - LF distance tire traveled since being placed on car
 
 > **LFshockDefl**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3643](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3643)
+Defined in: [telemetry.gen.ts:3643](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3643)
 
 LFshockDefl - LF shock deflection
 
@@ -3206,7 +3206,7 @@ LFshockDefl - LF shock deflection
 
 > **LFshockDefl\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3654](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3654)
+Defined in: [telemetry.gen.ts:3654](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3654)
 
 LFshockDefl_ST - LF shock deflection at 360 Hz
 
@@ -3222,7 +3222,7 @@ LFshockDefl_ST - LF shock deflection at 360 Hz
 
 > **LFshockVel**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3665](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3665)
+Defined in: [telemetry.gen.ts:3665](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3665)
 
 LFshockVel - LF shock velocity
 
@@ -3238,7 +3238,7 @@ LFshockVel - LF shock velocity
 
 > **LFshockVel\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3676](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3676)
+Defined in: [telemetry.gen.ts:3676](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3676)
 
 LFshockVel_ST - LF shock velocity at 360 Hz
 
@@ -3254,7 +3254,7 @@ LFshockVel_ST - LF shock velocity at 360 Hz
 
 > **LFSHshockDefl**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4270](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4270)
+Defined in: [telemetry.gen.ts:4270](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4270)
 
 LFSHshockDefl - LFSH shock deflection
 
@@ -3270,7 +3270,7 @@ LFSHshockDefl - LFSH shock deflection
 
 > **LFSHshockDefl\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4281](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4281)
+Defined in: [telemetry.gen.ts:4281](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4281)
 
 LFSHshockDefl_ST - LFSH shock deflection at 360 Hz
 
@@ -3286,7 +3286,7 @@ LFSHshockDefl_ST - LFSH shock deflection at 360 Hz
 
 > **LFSHshockVel**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4292](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4292)
+Defined in: [telemetry.gen.ts:4292](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4292)
 
 LFSHshockVel - LFSH shock velocity
 
@@ -3302,7 +3302,7 @@ LFSHshockVel - LFSH shock velocity
 
 > **LFSHshockVel\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4303](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4303)
+Defined in: [telemetry.gen.ts:4303](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4303)
 
 LFSHshockVel_ST - LFSH shock velocity at 360 Hz
 
@@ -3318,7 +3318,7 @@ LFSHshockVel_ST - LFSH shock velocity at 360 Hz
 
 > **LFtempCL**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3170](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3170)
+Defined in: [telemetry.gen.ts:3170](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3170)
 
 LFtempCL - LF tire left carcass temperature
 
@@ -3334,7 +3334,7 @@ LFtempCL - LF tire left carcass temperature
 
 > **LFtempCM**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3181](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3181)
+Defined in: [telemetry.gen.ts:3181](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3181)
 
 LFtempCM - LF tire middle carcass temperature
 
@@ -3350,7 +3350,7 @@ LFtempCM - LF tire middle carcass temperature
 
 > **LFtempCR**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3192](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3192)
+Defined in: [telemetry.gen.ts:3192](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3192)
 
 LFtempCR - LF tire right carcass temperature
 
@@ -3366,7 +3366,7 @@ LFtempCR - LF tire right carcass temperature
 
 > **LFTiresAvailable**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1894](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1894)
+Defined in: [telemetry.gen.ts:1894](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1894)
 
 LFTiresAvailable - How many left front tires are remaining  255 is unlimited
 
@@ -3382,7 +3382,7 @@ LFTiresAvailable - How many left front tires are remaining  255 is unlimited
 
 > **LFTiresUsed**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1795](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1795)
+Defined in: [telemetry.gen.ts:1795](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1795)
 
 LFTiresUsed - How many left front tires used so far
 
@@ -3398,7 +3398,7 @@ LFTiresUsed - How many left front tires used so far
 
 > **LFwearL**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3203](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3203)
+Defined in: [telemetry.gen.ts:3203](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3203)
 
 LFwearL - LF tire left percent tread remaining
 
@@ -3414,7 +3414,7 @@ LFwearL - LF tire left percent tread remaining
 
 > **LFwearM**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3214](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3214)
+Defined in: [telemetry.gen.ts:3214](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3214)
 
 LFwearM - LF tire middle percent tread remaining
 
@@ -3430,7 +3430,7 @@ LFwearM - LF tire middle percent tread remaining
 
 > **LFwearR**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3225](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3225)
+Defined in: [telemetry.gen.ts:3225](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3225)
 
 LFwearR - LF tire right percent tread remaining
 
@@ -3446,7 +3446,7 @@ LFwearR - LF tire right percent tread remaining
 
 > **LoadNumTextures**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:1674](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1674)
+Defined in: [telemetry.gen.ts:1674](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1674)
 
 LoadNumTextures - True if the car_num texture will be loaded
 
@@ -3462,7 +3462,7 @@ LoadNumTextures - True if the car_num texture will be loaded
 
 > **LongAccel**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2730](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2730)
+Defined in: [telemetry.gen.ts:2730](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2730)
 
 LongAccel - Longitudinal acceleration (including gravity)
 
@@ -3478,7 +3478,7 @@ LongAccel - Longitudinal acceleration (including gravity)
 
 > **LongAccel\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2697](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2697)
+Defined in: [telemetry.gen.ts:2697](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2697)
 
 LongAccel_ST - Longitudinal acceleration (including gravity) at 360 Hz
 
@@ -3494,7 +3494,7 @@ LongAccel_ST - Longitudinal acceleration (including gravity) at 360 Hz
 
 > **LR2shockDefl**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4369](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4369)
+Defined in: [telemetry.gen.ts:4369](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4369)
 
 LR2shockDefl - LR2 shock deflection
 
@@ -3510,7 +3510,7 @@ LR2shockDefl - LR2 shock deflection
 
 > **LR2shockDefl\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4380](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4380)
+Defined in: [telemetry.gen.ts:4380](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4380)
 
 LR2shockDefl_ST - LR2 shock deflection at 360 Hz
 
@@ -3526,7 +3526,7 @@ LR2shockDefl_ST - LR2 shock deflection at 360 Hz
 
 > **LR2shockVel**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4391](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4391)
+Defined in: [telemetry.gen.ts:4391](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4391)
 
 LR2shockVel - LR2 shock velocity
 
@@ -3542,7 +3542,7 @@ LR2shockVel - LR2 shock velocity
 
 > **LR2shockVel\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4402](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4402)
+Defined in: [telemetry.gen.ts:4402](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4402)
 
 LR2shockVel_ST - LR2 shock velocity at 360 Hz
 
@@ -3558,7 +3558,7 @@ LR2shockVel_ST - LR2 shock velocity at 360 Hz
 
 > **LRbrakeLinePress**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3456](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3456)
+Defined in: [telemetry.gen.ts:3456](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3456)
 
 LRbrakeLinePress - LR brake line pressure
 
@@ -3574,7 +3574,7 @@ LRbrakeLinePress - LR brake line pressure
 
 > **LRcoldPressure**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3467](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3467)
+Defined in: [telemetry.gen.ts:3467](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3467)
 
 LRcoldPressure - LR tire cold pressure  as set in the garage
 
@@ -3590,7 +3590,7 @@ LRcoldPressure - LR tire cold pressure  as set in the garage
 
 > **LRodometer**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3478](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3478)
+Defined in: [telemetry.gen.ts:3478](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3478)
 
 LRodometer - LR distance tire traveled since being placed on car
 
@@ -3606,7 +3606,7 @@ LRodometer - LR distance tire traveled since being placed on car
 
 > **LRshockDefl**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3555](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3555)
+Defined in: [telemetry.gen.ts:3555](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3555)
 
 LRshockDefl - LR shock deflection
 
@@ -3622,7 +3622,7 @@ LRshockDefl - LR shock deflection
 
 > **LRshockDefl\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3566](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3566)
+Defined in: [telemetry.gen.ts:3566](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3566)
 
 LRshockDefl_ST - LR shock deflection at 360 Hz
 
@@ -3638,7 +3638,7 @@ LRshockDefl_ST - LR shock deflection at 360 Hz
 
 > **LRshockVel**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3577](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3577)
+Defined in: [telemetry.gen.ts:3577](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3577)
 
 LRshockVel - LR shock velocity
 
@@ -3654,7 +3654,7 @@ LRshockVel - LR shock velocity
 
 > **LRshockVel\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3588](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3588)
+Defined in: [telemetry.gen.ts:3588](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3588)
 
 LRshockVel_ST - LR shock velocity at 360 Hz
 
@@ -3670,7 +3670,7 @@ LRshockVel_ST - LR shock velocity at 360 Hz
 
 > **LRSHshockDefl**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4160](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4160)
+Defined in: [telemetry.gen.ts:4160](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4160)
 
 LRSHshockDefl - LRSH shock deflection
 
@@ -3686,7 +3686,7 @@ LRSHshockDefl - LRSH shock deflection
 
 > **LRSHshockDefl\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4171](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4171)
+Defined in: [telemetry.gen.ts:4171](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4171)
 
 LRSHshockDefl_ST - LRSH shock deflection at 360 Hz
 
@@ -3702,7 +3702,7 @@ LRSHshockDefl_ST - LRSH shock deflection at 360 Hz
 
 > **LRSHshockVel**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4182](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4182)
+Defined in: [telemetry.gen.ts:4182](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4182)
 
 LRSHshockVel - LRSH shock velocity
 
@@ -3718,7 +3718,7 @@ LRSHshockVel - LRSH shock velocity
 
 > **LRSHshockVel\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4193](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4193)
+Defined in: [telemetry.gen.ts:4193](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4193)
 
 LRSHshockVel_ST - LRSH shock velocity at 360 Hz
 
@@ -3734,7 +3734,7 @@ LRSHshockVel_ST - LRSH shock velocity at 360 Hz
 
 > **LRtempCL**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3489](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3489)
+Defined in: [telemetry.gen.ts:3489](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3489)
 
 LRtempCL - LR tire left carcass temperature
 
@@ -3750,7 +3750,7 @@ LRtempCL - LR tire left carcass temperature
 
 > **LRtempCM**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3500](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3500)
+Defined in: [telemetry.gen.ts:3500](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3500)
 
 LRtempCM - LR tire middle carcass temperature
 
@@ -3766,7 +3766,7 @@ LRtempCM - LR tire middle carcass temperature
 
 > **LRtempCR**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3511](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3511)
+Defined in: [telemetry.gen.ts:3511](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3511)
 
 LRtempCR - LR tire right carcass temperature
 
@@ -3782,7 +3782,7 @@ LRtempCR - LR tire right carcass temperature
 
 > **LRTiresAvailable**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1916](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1916)
+Defined in: [telemetry.gen.ts:1916](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1916)
 
 LRTiresAvailable - How many left rear tires are remaining  255 is unlimited
 
@@ -3798,7 +3798,7 @@ LRTiresAvailable - How many left rear tires are remaining  255 is unlimited
 
 > **LRTiresUsed**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1817](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1817)
+Defined in: [telemetry.gen.ts:1817](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1817)
 
 LRTiresUsed - How many left rear tires used so far
 
@@ -3814,7 +3814,7 @@ LRTiresUsed - How many left rear tires used so far
 
 > **LRwearL**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3522](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3522)
+Defined in: [telemetry.gen.ts:3522](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3522)
 
 LRwearL - LR tire left percent tread remaining
 
@@ -3830,7 +3830,7 @@ LRwearL - LR tire left percent tread remaining
 
 > **LRwearM**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3533](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3533)
+Defined in: [telemetry.gen.ts:3533](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3533)
 
 LRwearM - LR tire middle percent tread remaining
 
@@ -3846,7 +3846,7 @@ LRwearM - LR tire middle percent tread remaining
 
 > **LRwearR**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3544](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3544)
+Defined in: [telemetry.gen.ts:3544](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3544)
 
 LRwearR - LR tire right percent tread remaining
 
@@ -3862,7 +3862,7 @@ LRwearR - LR tire right percent tread remaining
 
 > **ManifoldPress**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3324](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3324)
+Defined in: [telemetry.gen.ts:3324](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3324)
 
 ManifoldPress - Engine manifold pressure
 
@@ -3878,7 +3878,7 @@ ManifoldPress - Engine manifold pressure
 
 > **ManualBoost**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:266](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L266)
+Defined in: [telemetry.gen.ts:266](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L266)
 
 ManualBoost - Hybrid manual boost state
 
@@ -3894,7 +3894,7 @@ ManualBoost - Hybrid manual boost state
 
 > **ManualNoBoost**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:277](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L277)
+Defined in: [telemetry.gen.ts:277](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L277)
 
 ManualNoBoost - Hybrid manual no boost state
 
@@ -3910,7 +3910,7 @@ ManualNoBoost - Hybrid manual no boost state
 
 > **MemPageFaultSec**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:453](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L453)
+Defined in: [telemetry.gen.ts:453](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L453)
 
 MemPageFaultSec - Memory page faults per second
 
@@ -3926,7 +3926,7 @@ MemPageFaultSec - Memory page faults per second
 
 > **MemSoftPageFaultSec**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:464](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L464)
+Defined in: [telemetry.gen.ts:464](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L464)
 
 MemSoftPageFaultSec - Memory soft page faults per second
 
@@ -3942,7 +3942,7 @@ MemSoftPageFaultSec - Memory soft page faults per second
 
 > **OilLevel**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3313](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3313)
+Defined in: [telemetry.gen.ts:3313](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3313)
 
 OilLevel - Engine oil level
 
@@ -3958,7 +3958,7 @@ OilLevel - Engine oil level
 
 > **OilPress**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3302](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3302)
+Defined in: [telemetry.gen.ts:3302](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3302)
 
 OilPress - Engine oil pressure
 
@@ -3974,7 +3974,7 @@ OilPress - Engine oil pressure
 
 > **OilTemp**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3291](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3291)
+Defined in: [telemetry.gen.ts:3291](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3291)
 
 OilTemp - Engine oil temperature
 
@@ -3990,7 +3990,7 @@ OilTemp - Engine oil temperature
 
 > **OkToReloadTextures**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:1663](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1663)
+Defined in: [telemetry.gen.ts:1663](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1663)
 
 OkToReloadTextures - True if it is ok to reload car textures at this time
 
@@ -4006,7 +4006,7 @@ OkToReloadTextures - True if it is ok to reload car textures at this time
 
 > **OnPitRoad**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:915](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L915)
+Defined in: [telemetry.gen.ts:915](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L915)
 
 OnPitRoad - Is the player car on pit road between the cones
 
@@ -4022,7 +4022,7 @@ OnPitRoad - Is the player car on pit road between the cones
 
 > **P2P\_Count**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2290](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2290)
+Defined in: [telemetry.gen.ts:2290](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2290)
 
 P2P_Count - Push2Pass count of usage (or remaining in Race) on your car
 
@@ -4038,7 +4038,7 @@ P2P_Count - Push2Pass count of usage (or remaining in Race) on your car
 
 > **P2P\_Status**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:2279](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2279)
+Defined in: [telemetry.gen.ts:2279](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2279)
 
 P2P_Status - Push2Pass active or not on your car
 
@@ -4054,7 +4054,7 @@ P2P_Status - Push2Pass active or not on your car
 
 > **PaceMode**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:871](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L871)
+Defined in: [telemetry.gen.ts:871](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L871)
 
 PaceMode - Are we pacing or not
 
@@ -4070,7 +4070,7 @@ PaceMode - Are we pacing or not
 
 > **Pitch**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1432](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1432)
+Defined in: [telemetry.gen.ts:1432](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1432)
 
 Pitch - Pitch orientation
 
@@ -4086,7 +4086,7 @@ Pitch - Pitch orientation
 
 > **PitchRate**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2653](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2653)
+Defined in: [telemetry.gen.ts:2653](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2653)
 
 PitchRate - Pitch rate
 
@@ -4102,7 +4102,7 @@ PitchRate - Pitch rate
 
 > **PitchRate\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2620](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2620)
+Defined in: [telemetry.gen.ts:2620](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2620)
 
 PitchRate_ST - Pitch rate at 360 Hz
 
@@ -4118,7 +4118,7 @@ PitchRate_ST - Pitch rate at 360 Hz
 
 > **PitOptRepairLeft**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1751](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1751)
+Defined in: [telemetry.gen.ts:1751](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1751)
 
 PitOptRepairLeft - Time left for optional repairs if repairs are active
 
@@ -4134,7 +4134,7 @@ PitOptRepairLeft - Time left for optional repairs if repairs are active
 
 > **PitRepairLeft**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1740](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1740)
+Defined in: [telemetry.gen.ts:1740](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1740)
 
 PitRepairLeft - Time left for mandatory pit repairs if repairs are active
 
@@ -4150,7 +4150,7 @@ PitRepairLeft - Time left for mandatory pit repairs if repairs are active
 
 > **PitsOpen**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:1696](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1696)
+Defined in: [telemetry.gen.ts:1696](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1696)
 
 PitsOpen - True if pit stop is allowed for the current player
 
@@ -4166,7 +4166,7 @@ PitsOpen - True if pit stop is allowed for the current player
 
 > **PitstopActive**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:1762](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1762)
+Defined in: [telemetry.gen.ts:1762](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1762)
 
 PitstopActive - Is the player getting pit stop service
 
@@ -4182,7 +4182,7 @@ PitstopActive - Is the player getting pit stop service
 
 > **PitSvFlags**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2180](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2180)
+Defined in: [telemetry.gen.ts:2180](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2180)
 
 PitSvFlags - Bitfield of pit service checkboxes
 
@@ -4198,7 +4198,7 @@ PitSvFlags - Bitfield of pit service checkboxes
 
 > **PitSvFuel**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2235](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2235)
+Defined in: [telemetry.gen.ts:2235](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2235)
 
 PitSvFuel - Pit service fuel add amount
 
@@ -4214,7 +4214,7 @@ PitSvFuel - Pit service fuel add amount
 
 > **PitSvLFP**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2191](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2191)
+Defined in: [telemetry.gen.ts:2191](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2191)
 
 PitSvLFP - Pit service left front tire pressure
 
@@ -4230,7 +4230,7 @@ PitSvLFP - Pit service left front tire pressure
 
 > **PitSvLRP**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2213](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2213)
+Defined in: [telemetry.gen.ts:2213](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2213)
 
 PitSvLRP - Pit service left rear tire pressure
 
@@ -4246,7 +4246,7 @@ PitSvLRP - Pit service left rear tire pressure
 
 > **PitSvRFP**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2202](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2202)
+Defined in: [telemetry.gen.ts:2202](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2202)
 
 PitSvRFP - Pit service right front tire pressure
 
@@ -4262,7 +4262,7 @@ PitSvRFP - Pit service right front tire pressure
 
 > **PitSvRRP**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2224](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2224)
+Defined in: [telemetry.gen.ts:2224](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2224)
 
 PitSvRRP - Pit service right rear tire pressure
 
@@ -4278,7 +4278,7 @@ PitSvRRP - Pit service right rear tire pressure
 
 > **PitSvTireCompound**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2246](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2246)
+Defined in: [telemetry.gen.ts:2246](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2246)
 
 PitSvTireCompound - Pit service pending tire compound
 
@@ -4294,7 +4294,7 @@ PitSvTireCompound - Pit service pending tire compound
 
 > **PlayerCarClass**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:497](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L497)
+Defined in: [telemetry.gen.ts:497](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L497)
 
 PlayerCarClass - Player car class id
 
@@ -4310,7 +4310,7 @@ PlayerCarClass - Player car class id
 
 > **PlayerCarClassPosition**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:486](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L486)
+Defined in: [telemetry.gen.ts:486](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L486)
 
 PlayerCarClassPosition - Players class position in race
 
@@ -4326,7 +4326,7 @@ PlayerCarClassPosition - Players class position in race
 
 > **PlayerCarDriverIncidentCount**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:563](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L563)
+Defined in: [telemetry.gen.ts:563](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L563)
 
 PlayerCarDriverIncidentCount - Teams current drivers incident count for this session
 
@@ -4342,7 +4342,7 @@ PlayerCarDriverIncidentCount - Teams current drivers incident count for this ses
 
 > **PlayerCarDryTireSetLimit**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:596](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L596)
+Defined in: [telemetry.gen.ts:596](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L596)
 
 PlayerCarDryTireSetLimit - Players dry tire set limit
 
@@ -4358,7 +4358,7 @@ PlayerCarDryTireSetLimit - Players dry tire set limit
 
 > **PlayerCarIdx**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:530](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L530)
+Defined in: [telemetry.gen.ts:530](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L530)
 
 PlayerCarIdx - Players carIdx
 
@@ -4374,7 +4374,7 @@ PlayerCarIdx - Players carIdx
 
 > **PlayerCarInPitStall**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:618](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L618)
+Defined in: [telemetry.gen.ts:618](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L618)
 
 PlayerCarInPitStall - Players car is properly in their pitstall
 
@@ -4390,7 +4390,7 @@ PlayerCarInPitStall - Players car is properly in their pitstall
 
 > **PlayerCarMyIncidentCount**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:552](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L552)
+Defined in: [telemetry.gen.ts:552](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L552)
 
 PlayerCarMyIncidentCount - Players own incident count for this session
 
@@ -4406,7 +4406,7 @@ PlayerCarMyIncidentCount - Players own incident count for this session
 
 > **PlayerCarPitSvStatus**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:629](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L629)
+Defined in: [telemetry.gen.ts:629](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L629)
 
 PlayerCarPitSvStatus - Players car pit service status bits
 
@@ -4422,7 +4422,7 @@ PlayerCarPitSvStatus - Players car pit service status bits
 
 > **PlayerCarPosition**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:475](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L475)
+Defined in: [telemetry.gen.ts:475](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L475)
 
 PlayerCarPosition - Players position in race
 
@@ -4438,7 +4438,7 @@ PlayerCarPosition - Players position in race
 
 > **PlayerCarPowerAdjust**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:585](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L585)
+Defined in: [telemetry.gen.ts:585](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L585)
 
 PlayerCarPowerAdjust - Players power adjust
 
@@ -4454,7 +4454,7 @@ PlayerCarPowerAdjust - Players power adjust
 
 > **PlayerCarSLBlinkRPM**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1058](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1058)
+Defined in: [telemetry.gen.ts:1058](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1058)
 
 PlayerCarSLBlinkRPM - Shift light blink rpm
 
@@ -4470,7 +4470,7 @@ PlayerCarSLBlinkRPM - Shift light blink rpm
 
 > **PlayerCarSLFirstRPM**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1025](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1025)
+Defined in: [telemetry.gen.ts:1025](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1025)
 
 PlayerCarSLFirstRPM - Shift light first light rpm
 
@@ -4486,7 +4486,7 @@ PlayerCarSLFirstRPM - Shift light first light rpm
 
 > **PlayerCarSLLastRPM**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1047](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1047)
+Defined in: [telemetry.gen.ts:1047](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1047)
 
 PlayerCarSLLastRPM - Shift light last light rpm
 
@@ -4502,7 +4502,7 @@ PlayerCarSLLastRPM - Shift light last light rpm
 
 > **PlayerCarSLShiftRPM**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1036](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1036)
+Defined in: [telemetry.gen.ts:1036](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1036)
 
 PlayerCarSLShiftRPM - Shift light shift rpm
 
@@ -4518,7 +4518,7 @@ PlayerCarSLShiftRPM - Shift light shift rpm
 
 > **PlayerCarTeamIncidentCount**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:541](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L541)
+Defined in: [telemetry.gen.ts:541](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L541)
 
 PlayerCarTeamIncidentCount - Players team incident count for this session
 
@@ -4534,7 +4534,7 @@ PlayerCarTeamIncidentCount - Players team incident count for this session
 
 > **PlayerCarTowTime**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:607](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L607)
+Defined in: [telemetry.gen.ts:607](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L607)
 
 PlayerCarTowTime - Players car is being towed if time is greater than zero
 
@@ -4550,7 +4550,7 @@ PlayerCarTowTime - Players car is being towed if time is greater than zero
 
 > **PlayerCarWeightPenalty**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:574](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L574)
+Defined in: [telemetry.gen.ts:574](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L574)
 
 PlayerCarWeightPenalty - Players weight penalty
 
@@ -4566,7 +4566,7 @@ PlayerCarWeightPenalty - Players weight penalty
 
 > **PlayerFastRepairsUsed**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:651](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L651)
+Defined in: [telemetry.gen.ts:651](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L651)
 
 PlayerFastRepairsUsed - Players car number of fast repairs used
 
@@ -4582,7 +4582,7 @@ PlayerFastRepairsUsed - Players car number of fast repairs used
 
 > **PlayerIncidents**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1729](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1729)
+Defined in: [telemetry.gen.ts:1729](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1729)
 
 PlayerIncidents - Log incidents that the player recieved
 
@@ -4598,7 +4598,7 @@ PlayerIncidents - Log incidents that the player recieved
 
 > **PlayerTireCompound**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:640](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L640)
+Defined in: [telemetry.gen.ts:640](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L640)
 
 PlayerTireCompound - Players car current tire compound
 
@@ -4614,7 +4614,7 @@ PlayerTireCompound - Players car current tire compound
 
 > **PlayerTrackSurface**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:508](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L508)
+Defined in: [telemetry.gen.ts:508](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L508)
 
 PlayerTrackSurface - Players car track surface type
 
@@ -4630,7 +4630,7 @@ PlayerTrackSurface - Players car track surface type
 
 > **PlayerTrackSurfaceMaterial**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:519](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L519)
+Defined in: [telemetry.gen.ts:519](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L519)
 
 PlayerTrackSurfaceMaterial - Players car track surface material type
 
@@ -4646,7 +4646,7 @@ PlayerTrackSurfaceMaterial - Players car track surface material type
 
 > **PowerMGU\_H**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3907](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3907)
+Defined in: [telemetry.gen.ts:3907](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3907)
 
 PowerMGU_H - Engine MGU-H mechanical power
 
@@ -4662,7 +4662,7 @@ PowerMGU_H - Engine MGU-H mechanical power
 
 > **PowerMGU\_K**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3885](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3885)
+Defined in: [telemetry.gen.ts:3885](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3885)
 
 PowerMGU_K - Engine MGU-K mechanical power
 
@@ -4678,7 +4678,7 @@ PowerMGU_K - Engine MGU-K mechanical power
 
 > **Precipitation**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1586](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1586)
+Defined in: [telemetry.gen.ts:1586](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1586)
 
 Precipitation - Precipitation at start/finish line
 
@@ -4694,7 +4694,7 @@ Precipitation - Precipitation at start/finish line
 
 > **PushToPass**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:255](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L255)
+Defined in: [telemetry.gen.ts:255](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L255)
 
 PushToPass - Push to pass button state
 
@@ -4710,7 +4710,7 @@ PushToPass - Push to pass button state
 
 > **PushToTalk**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:244](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L244)
+Defined in: [telemetry.gen.ts:244](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L244)
 
 PushToTalk - Push to talk button state
 
@@ -4726,7 +4726,7 @@ PushToTalk - Push to talk button state
 
 > **RaceLaps**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1113](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1113)
+Defined in: [telemetry.gen.ts:1113](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1113)
 
 RaceLaps - Laps completed in race
 
@@ -4742,7 +4742,7 @@ RaceLaps - Laps completed in race
 
 > **RadioTransmitCarIdx**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:189](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L189)
+Defined in: [telemetry.gen.ts:189](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L189)
 
 RadioTransmitCarIdx - The car index of the current person speaking on the radio
 
@@ -4758,7 +4758,7 @@ RadioTransmitCarIdx - The car index of the current person speaking on the radio
 
 > **RadioTransmitFrequencyIdx**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:211](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L211)
+Defined in: [telemetry.gen.ts:211](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L211)
 
 RadioTransmitFrequencyIdx - The frequency index of the current person speaking on the radio
 
@@ -4774,7 +4774,7 @@ RadioTransmitFrequencyIdx - The frequency index of the current person speaking o
 
 > **RadioTransmitRadioIdx**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:200](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L200)
+Defined in: [telemetry.gen.ts:200](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L200)
 
 RadioTransmitRadioIdx - The radio index of the current person speaking on the radio
 
@@ -4790,7 +4790,7 @@ RadioTransmitRadioIdx - The radio index of the current person speaking on the ra
 
 > **RearTireSetsAvailable**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1971](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1971)
+Defined in: [telemetry.gen.ts:1971](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1971)
 
 RearTireSetsAvailable - How many rear tire sets are remaining  255 is unlimited
 
@@ -4806,7 +4806,7 @@ RearTireSetsAvailable - How many rear tire sets are remaining  255 is unlimited
 
 > **RearTireSetsUsed**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1872](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1872)
+Defined in: [telemetry.gen.ts:1872](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1872)
 
 RearTireSetsUsed - How many rear tire sets used so far
 
@@ -4822,7 +4822,7 @@ RearTireSetsUsed - How many rear tire sets used so far
 
 > **RelativeHumidity**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1564](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1564)
+Defined in: [telemetry.gen.ts:1564](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1564)
 
 RelativeHumidity - Relative Humidity at start/finish line
 
@@ -4838,7 +4838,7 @@ RelativeHumidity - Relative Humidity at start/finish line
 
 > **ReplayFrameNum**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:310](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L310)
+Defined in: [telemetry.gen.ts:310](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L310)
 
 ReplayFrameNum - Integer replay frame number (60 per second)
 
@@ -4854,7 +4854,7 @@ ReplayFrameNum - Integer replay frame number (60 per second)
 
 > **ReplayFrameNumEnd**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:321](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L321)
+Defined in: [telemetry.gen.ts:321](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L321)
 
 ReplayFrameNumEnd - Integer replay frame number from end of tape
 
@@ -4870,7 +4870,7 @@ ReplayFrameNumEnd - Integer replay frame number from end of tape
 
 > **ReplayPlaySlowMotion**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:2444](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2444)
+Defined in: [telemetry.gen.ts:2444](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2444)
 
 ReplayPlaySlowMotion - 0=not slow motion  1=replay is in slow motion
 
@@ -4886,7 +4886,7 @@ ReplayPlaySlowMotion - 0=not slow motion  1=replay is in slow motion
 
 > **ReplayPlaySpeed**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2433](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2433)
+Defined in: [telemetry.gen.ts:2433](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2433)
 
 ReplayPlaySpeed - Replay playback speed
 
@@ -4902,7 +4902,7 @@ ReplayPlaySpeed - Replay playback speed
 
 > **ReplaySessionNum**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2466](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2466)
+Defined in: [telemetry.gen.ts:2466](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2466)
 
 ReplaySessionNum - Replay session number
 
@@ -4918,7 +4918,7 @@ ReplaySessionNum - Replay session number
 
 > **ReplaySessionTime**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2455](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2455)
+Defined in: [telemetry.gen.ts:2455](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2455)
 
 ReplaySessionTime - Seconds since replay session start
 
@@ -4934,7 +4934,7 @@ ReplaySessionTime - Seconds since replay session start
 
 > **RFbrakeLinePress**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3038](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3038)
+Defined in: [telemetry.gen.ts:3038](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3038)
 
 RFbrakeLinePress - RF brake line pressure
 
@@ -4950,7 +4950,7 @@ RFbrakeLinePress - RF brake line pressure
 
 > **RFcoldPressure**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3049](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3049)
+Defined in: [telemetry.gen.ts:3049](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3049)
 
 RFcoldPressure - RF tire cold pressure  as set in the garage
 
@@ -4966,7 +4966,7 @@ RFcoldPressure - RF tire cold pressure  as set in the garage
 
 > **RFodometer**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3060](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3060)
+Defined in: [telemetry.gen.ts:3060](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3060)
 
 RFodometer - RF distance tire traveled since being placed on car
 
@@ -4982,7 +4982,7 @@ RFodometer - RF distance tire traveled since being placed on car
 
 > **RFshockDefl**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3687](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3687)
+Defined in: [telemetry.gen.ts:3687](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3687)
 
 RFshockDefl - RF shock deflection
 
@@ -4998,7 +4998,7 @@ RFshockDefl - RF shock deflection
 
 > **RFshockDefl\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3698](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3698)
+Defined in: [telemetry.gen.ts:3698](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3698)
 
 RFshockDefl_ST - RF shock deflection at 360 Hz
 
@@ -5014,7 +5014,7 @@ RFshockDefl_ST - RF shock deflection at 360 Hz
 
 > **RFshockVel**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3709](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3709)
+Defined in: [telemetry.gen.ts:3709](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3709)
 
 RFshockVel - RF shock velocity
 
@@ -5030,7 +5030,7 @@ RFshockVel - RF shock velocity
 
 > **RFshockVel\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3720](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3720)
+Defined in: [telemetry.gen.ts:3720](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3720)
 
 RFshockVel_ST - RF shock velocity at 360 Hz
 
@@ -5046,7 +5046,7 @@ RFshockVel_ST - RF shock velocity at 360 Hz
 
 > **RFSHshockDefl**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4314](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4314)
+Defined in: [telemetry.gen.ts:4314](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4314)
 
 RFSHshockDefl - RFSH shock deflection
 
@@ -5062,7 +5062,7 @@ RFSHshockDefl - RFSH shock deflection
 
 > **RFSHshockDefl\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4325](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4325)
+Defined in: [telemetry.gen.ts:4325](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4325)
 
 RFSHshockDefl_ST - RFSH shock deflection at 360 Hz
 
@@ -5078,7 +5078,7 @@ RFSHshockDefl_ST - RFSH shock deflection at 360 Hz
 
 > **RFSHshockVel**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4336](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4336)
+Defined in: [telemetry.gen.ts:4336](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4336)
 
 RFSHshockVel - RFSH shock velocity
 
@@ -5094,7 +5094,7 @@ RFSHshockVel - RFSH shock velocity
 
 > **RFSHshockVel\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4347](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4347)
+Defined in: [telemetry.gen.ts:4347](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4347)
 
 RFSHshockVel_ST - RFSH shock velocity at 360 Hz
 
@@ -5110,7 +5110,7 @@ RFSHshockVel_ST - RFSH shock velocity at 360 Hz
 
 > **RFtempCL**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3071](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3071)
+Defined in: [telemetry.gen.ts:3071](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3071)
 
 RFtempCL - RF tire left carcass temperature
 
@@ -5126,7 +5126,7 @@ RFtempCL - RF tire left carcass temperature
 
 > **RFtempCM**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3082](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3082)
+Defined in: [telemetry.gen.ts:3082](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3082)
 
 RFtempCM - RF tire middle carcass temperature
 
@@ -5142,7 +5142,7 @@ RFtempCM - RF tire middle carcass temperature
 
 > **RFtempCR**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3093](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3093)
+Defined in: [telemetry.gen.ts:3093](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3093)
 
 RFtempCR - RF tire right carcass temperature
 
@@ -5158,7 +5158,7 @@ RFtempCR - RF tire right carcass temperature
 
 > **RFTiresAvailable**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1905](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1905)
+Defined in: [telemetry.gen.ts:1905](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1905)
 
 RFTiresAvailable - How many right front tires are remaining  255 is unlimited
 
@@ -5174,7 +5174,7 @@ RFTiresAvailable - How many right front tires are remaining  255 is unlimited
 
 > **RFTiresUsed**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1806](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1806)
+Defined in: [telemetry.gen.ts:1806](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1806)
 
 RFTiresUsed - How many right front tires used so far
 
@@ -5190,7 +5190,7 @@ RFTiresUsed - How many right front tires used so far
 
 > **RFwearL**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3104](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3104)
+Defined in: [telemetry.gen.ts:3104](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3104)
 
 RFwearL - RF tire left percent tread remaining
 
@@ -5206,7 +5206,7 @@ RFwearL - RF tire left percent tread remaining
 
 > **RFwearM**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3115](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3115)
+Defined in: [telemetry.gen.ts:3115](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3115)
 
 RFwearM - RF tire middle percent tread remaining
 
@@ -5222,7 +5222,7 @@ RFwearM - RF tire middle percent tread remaining
 
 > **RFwearR**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3126](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3126)
+Defined in: [telemetry.gen.ts:3126](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3126)
 
 RFwearR - RF tire right percent tread remaining
 
@@ -5238,7 +5238,7 @@ RFwearR - RF tire right percent tread remaining
 
 > **RightTireSetsAvailable**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1949](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1949)
+Defined in: [telemetry.gen.ts:1949](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1949)
 
 RightTireSetsAvailable - How many right tire sets are remaining  255 is unlimited
 
@@ -5254,7 +5254,7 @@ RightTireSetsAvailable - How many right tire sets are remaining  255 is unlimite
 
 > **RightTireSetsUsed**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1850](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1850)
+Defined in: [telemetry.gen.ts:1850](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1850)
 
 RightTireSetsUsed - How many right tire sets used so far
 
@@ -5270,7 +5270,7 @@ RightTireSetsUsed - How many right tire sets used so far
 
 > **Roll**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1443](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1443)
+Defined in: [telemetry.gen.ts:1443](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1443)
 
 Roll - Roll orientation
 
@@ -5286,7 +5286,7 @@ Roll - Roll orientation
 
 > **ROLLFshockDefl**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4017](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4017)
+Defined in: [telemetry.gen.ts:4017](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4017)
 
 ROLLFshockDefl - ROLLF shock deflection
 
@@ -5302,7 +5302,7 @@ ROLLFshockDefl - ROLLF shock deflection
 
 > **ROLLFshockDefl\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4028](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4028)
+Defined in: [telemetry.gen.ts:4028](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4028)
 
 ROLLFshockDefl_ST - ROLLF shock deflection at 360 Hz
 
@@ -5318,7 +5318,7 @@ ROLLFshockDefl_ST - ROLLF shock deflection at 360 Hz
 
 > **ROLLFshockVel**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4039](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4039)
+Defined in: [telemetry.gen.ts:4039](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4039)
 
 ROLLFshockVel - ROLLF shock velocity
 
@@ -5334,7 +5334,7 @@ ROLLFshockVel - ROLLF shock velocity
 
 > **ROLLFshockVel\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4050](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4050)
+Defined in: [telemetry.gen.ts:4050](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4050)
 
 ROLLFshockVel_ST - ROLLF shock velocity at 360 Hz
 
@@ -5350,7 +5350,7 @@ ROLLFshockVel_ST - ROLLF shock velocity at 360 Hz
 
 > **RollRate**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2664](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2664)
+Defined in: [telemetry.gen.ts:2664](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2664)
 
 RollRate - Roll rate
 
@@ -5366,7 +5366,7 @@ RollRate - Roll rate
 
 > **RollRate\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2631](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2631)
+Defined in: [telemetry.gen.ts:2631](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2631)
 
 RollRate_ST - Roll rate at 360 Hz
 
@@ -5382,7 +5382,7 @@ RollRate_ST - Roll rate at 360 Hz
 
 > **ROLLRshockDefl**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4105](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4105)
+Defined in: [telemetry.gen.ts:4105](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4105)
 
 ROLLRshockDefl - ROLLR shock deflection
 
@@ -5398,7 +5398,7 @@ ROLLRshockDefl - ROLLR shock deflection
 
 > **ROLLRshockDefl\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4116](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4116)
+Defined in: [telemetry.gen.ts:4116](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4116)
 
 ROLLRshockDefl_ST - ROLLR shock deflection at 360 Hz
 
@@ -5414,7 +5414,7 @@ ROLLRshockDefl_ST - ROLLR shock deflection at 360 Hz
 
 > **ROLLRshockVel**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4127](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4127)
+Defined in: [telemetry.gen.ts:4127](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4127)
 
 ROLLRshockVel - ROLLR shock velocity
 
@@ -5430,7 +5430,7 @@ ROLLRshockVel - ROLLR shock velocity
 
 > **ROLLRshockVel\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4138](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4138)
+Defined in: [telemetry.gen.ts:4138](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4138)
 
 ROLLRshockVel_ST - ROLLR shock velocity at 360 Hz
 
@@ -5446,7 +5446,7 @@ ROLLRshockVel_ST - ROLLR shock velocity at 360 Hz
 
 > **RPM**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1014](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1014)
+Defined in: [telemetry.gen.ts:1014](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1014)
 
 RPM - Engine rpm
 
@@ -5462,7 +5462,7 @@ RPM - Engine rpm
 
 > **RRbrakeLinePress**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3357](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3357)
+Defined in: [telemetry.gen.ts:3357](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3357)
 
 RRbrakeLinePress - RR brake line pressure
 
@@ -5478,7 +5478,7 @@ RRbrakeLinePress - RR brake line pressure
 
 > **RRcoldPressure**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3368](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3368)
+Defined in: [telemetry.gen.ts:3368](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3368)
 
 RRcoldPressure - RR tire cold pressure  as set in the garage
 
@@ -5494,7 +5494,7 @@ RRcoldPressure - RR tire cold pressure  as set in the garage
 
 > **RRodometer**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3379](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3379)
+Defined in: [telemetry.gen.ts:3379](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3379)
 
 RRodometer - RR distance tire traveled since being placed on car
 
@@ -5510,7 +5510,7 @@ RRodometer - RR distance tire traveled since being placed on car
 
 > **RRshockDefl**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3599](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3599)
+Defined in: [telemetry.gen.ts:3599](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3599)
 
 RRshockDefl - RR shock deflection
 
@@ -5526,7 +5526,7 @@ RRshockDefl - RR shock deflection
 
 > **RRshockDefl\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3610](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3610)
+Defined in: [telemetry.gen.ts:3610](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3610)
 
 RRshockDefl_ST - RR shock deflection at 360 Hz
 
@@ -5542,7 +5542,7 @@ RRshockDefl_ST - RR shock deflection at 360 Hz
 
 > **RRshockVel**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3621](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3621)
+Defined in: [telemetry.gen.ts:3621](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3621)
 
 RRshockVel - RR shock velocity
 
@@ -5558,7 +5558,7 @@ RRshockVel - RR shock velocity
 
 > **RRshockVel\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3632](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3632)
+Defined in: [telemetry.gen.ts:3632](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3632)
 
 RRshockVel_ST - RR shock velocity at 360 Hz
 
@@ -5574,7 +5574,7 @@ RRshockVel_ST - RR shock velocity at 360 Hz
 
 > **RRSHshockDefl**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4204](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4204)
+Defined in: [telemetry.gen.ts:4204](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4204)
 
 RRSHshockDefl - RRSH shock deflection
 
@@ -5590,7 +5590,7 @@ RRSHshockDefl - RRSH shock deflection
 
 > **RRSHshockDefl\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4215](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4215)
+Defined in: [telemetry.gen.ts:4215](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4215)
 
 RRSHshockDefl_ST - RRSH shock deflection at 360 Hz
 
@@ -5606,7 +5606,7 @@ RRSHshockDefl_ST - RRSH shock deflection at 360 Hz
 
 > **RRSHshockVel**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4226](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4226)
+Defined in: [telemetry.gen.ts:4226](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4226)
 
 RRSHshockVel - RRSH shock velocity
 
@@ -5622,7 +5622,7 @@ RRSHshockVel - RRSH shock velocity
 
 > **RRSHshockVel\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:4237](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L4237)
+Defined in: [telemetry.gen.ts:4237](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L4237)
 
 RRSHshockVel_ST - RRSH shock velocity at 360 Hz
 
@@ -5638,7 +5638,7 @@ RRSHshockVel_ST - RRSH shock velocity at 360 Hz
 
 > **RRtempCL**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3390](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3390)
+Defined in: [telemetry.gen.ts:3390](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3390)
 
 RRtempCL - RR tire left carcass temperature
 
@@ -5654,7 +5654,7 @@ RRtempCL - RR tire left carcass temperature
 
 > **RRtempCM**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3401](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3401)
+Defined in: [telemetry.gen.ts:3401](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3401)
 
 RRtempCM - RR tire middle carcass temperature
 
@@ -5670,7 +5670,7 @@ RRtempCM - RR tire middle carcass temperature
 
 > **RRtempCR**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3412](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3412)
+Defined in: [telemetry.gen.ts:3412](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3412)
 
 RRtempCR - RR tire right carcass temperature
 
@@ -5686,7 +5686,7 @@ RRtempCR - RR tire right carcass temperature
 
 > **RRTiresAvailable**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1927](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1927)
+Defined in: [telemetry.gen.ts:1927](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1927)
 
 RRTiresAvailable - How many right rear tires are remaining  255 is unlimited
 
@@ -5702,7 +5702,7 @@ RRTiresAvailable - How many right rear tires are remaining  255 is unlimited
 
 > **RRTiresUsed**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1828](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1828)
+Defined in: [telemetry.gen.ts:1828](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1828)
 
 RRTiresUsed - How many right rear tires used so far
 
@@ -5718,7 +5718,7 @@ RRTiresUsed - How many right rear tires used so far
 
 > **RRwearL**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3423](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3423)
+Defined in: [telemetry.gen.ts:3423](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3423)
 
 RRwearL - RR tire left percent tread remaining
 
@@ -5734,7 +5734,7 @@ RRwearL - RR tire left percent tread remaining
 
 > **RRwearM**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3434](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3434)
+Defined in: [telemetry.gen.ts:3434](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3434)
 
 RRwearM - RR tire middle percent tread remaining
 
@@ -5750,7 +5750,7 @@ RRwearM - RR tire middle percent tread remaining
 
 > **RRwearR**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3445](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3445)
+Defined in: [telemetry.gen.ts:3445](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3445)
 
 RRwearR - RR tire right percent tread remaining
 
@@ -5766,7 +5766,7 @@ RRwearR - RR tire right percent tread remaining
 
 > **SessionFlags**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:90](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L90)
+Defined in: [telemetry.gen.ts:90](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L90)
 
 SessionFlags - Session flags
 
@@ -5782,7 +5782,7 @@ SessionFlags - Session flags
 
 > **SessionJokerLapsRemain**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:156](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L156)
+Defined in: [telemetry.gen.ts:156](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L156)
 
 SessionJokerLapsRemain - Joker laps remaining to be taken
 
@@ -5798,7 +5798,7 @@ SessionJokerLapsRemain - Joker laps remaining to be taken
 
 > **SessionLapsRemain**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:112](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L112)
+Defined in: [telemetry.gen.ts:112](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L112)
 
 SessionLapsRemain - Old laps left till session ends use SessionLapsRemainEx
 
@@ -5814,7 +5814,7 @@ SessionLapsRemain - Old laps left till session ends use SessionLapsRemainEx
 
 > **SessionLapsRemainEx**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:123](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L123)
+Defined in: [telemetry.gen.ts:123](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L123)
 
 SessionLapsRemainEx - New improved laps left till session ends
 
@@ -5830,7 +5830,7 @@ SessionLapsRemainEx - New improved laps left till session ends
 
 > **SessionLapsTotal**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:145](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L145)
+Defined in: [telemetry.gen.ts:145](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L145)
 
 SessionLapsTotal - Total number of laps in session
 
@@ -5846,7 +5846,7 @@ SessionLapsTotal - Total number of laps in session
 
 > **SessionNum**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:57](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L57)
+Defined in: [telemetry.gen.ts:57](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L57)
 
 SessionNum - Session number
 
@@ -5862,7 +5862,7 @@ SessionNum - Session number
 
 > **SessionOnJokerLap**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:167](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L167)
+Defined in: [telemetry.gen.ts:167](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L167)
 
 SessionOnJokerLap - Player is currently completing a joker lap
 
@@ -5878,7 +5878,7 @@ SessionOnJokerLap - Player is currently completing a joker lap
 
 > **SessionState**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:68](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L68)
+Defined in: [telemetry.gen.ts:68](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L68)
 
 SessionState - Session state
 
@@ -5894,7 +5894,7 @@ SessionState - Session state
 
 > **SessionTick**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:46](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L46)
+Defined in: [telemetry.gen.ts:46](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L46)
 
 SessionTick - Current update number
 
@@ -5910,7 +5910,7 @@ SessionTick - Current update number
 
 > **SessionTime**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:35](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L35)
+Defined in: [telemetry.gen.ts:35](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L35)
 
 SessionTime - Seconds since session start
 
@@ -5926,7 +5926,7 @@ SessionTime - Seconds since session start
 
 > **SessionTimeOfDay**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:178](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L178)
+Defined in: [telemetry.gen.ts:178](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L178)
 
 SessionTimeOfDay - Time of day in seconds
 
@@ -5942,7 +5942,7 @@ SessionTimeOfDay - Time of day in seconds
 
 > **SessionTimeRemain**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:101](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L101)
+Defined in: [telemetry.gen.ts:101](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L101)
 
 SessionTimeRemain - Seconds left till session ends
 
@@ -5958,7 +5958,7 @@ SessionTimeRemain - Seconds left till session ends
 
 > **SessionTimeTotal**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:134](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L134)
+Defined in: [telemetry.gen.ts:134](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L134)
 
 SessionTimeTotal - Total number of seconds in session
 
@@ -5974,7 +5974,7 @@ SessionTimeTotal - Total number of seconds in session
 
 > **SessionUniqueID**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:79](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L79)
+Defined in: [telemetry.gen.ts:79](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L79)
 
 SessionUniqueID - Session ID
 
@@ -5990,7 +5990,7 @@ SessionUniqueID - Session ID
 
 > **Shifter**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2147](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2147)
+Defined in: [telemetry.gen.ts:2147](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2147)
 
 Shifter - Log inputs from the players shifter control
 
@@ -6006,7 +6006,7 @@ Shifter - Log inputs from the players shifter control
 
 > **ShiftGrindRPM**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2081](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2081)
+Defined in: [telemetry.gen.ts:2081](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2081)
 
 ShiftGrindRPM - RPM of shifter grinding noise
 
@@ -6022,7 +6022,7 @@ ShiftGrindRPM - RPM of shifter grinding noise
 
 > **ShiftIndicatorPct**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2411](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2411)
+Defined in: [telemetry.gen.ts:2411](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2411)
 
 ShiftIndicatorPct - DEPRECATED use DriverCarSLBlinkRPM instead
 
@@ -6038,7 +6038,7 @@ ShiftIndicatorPct - DEPRECATED use DriverCarSLBlinkRPM instead
 
 > **ShiftPowerPct**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2070](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2070)
+Defined in: [telemetry.gen.ts:2070](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2070)
 
 ShiftPowerPct - Friction torque applied to gears when shifting or grinding
 
@@ -6054,7 +6054,7 @@ ShiftPowerPct - Friction torque applied to gears when shifting or grinding
 
 > **Skies**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1509](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1509)
+Defined in: [telemetry.gen.ts:1509](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1509)
 
 Skies - Skies (0=clear/1=p cloudy/2=m cloudy/3=overcast)
 
@@ -6070,7 +6070,7 @@ Skies - Skies (0=clear/1=p cloudy/2=m cloudy/3=overcast)
 
 > **SolarAltitude**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1597](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1597)
+Defined in: [telemetry.gen.ts:1597](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1597)
 
 SolarAltitude - Sun angle above horizon in radians
 
@@ -6086,7 +6086,7 @@ SolarAltitude - Sun angle above horizon in radians
 
 > **SolarAzimuth**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1608](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1608)
+Defined in: [telemetry.gen.ts:1608](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1608)
 
 SolarAzimuth - Sun angle clockwise from north in radians
 
@@ -6102,7 +6102,7 @@ SolarAzimuth - Sun angle clockwise from north in radians
 
 > **Speed**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1399](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1399)
+Defined in: [telemetry.gen.ts:1399](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1399)
 
 Speed - GPS vehicle speed
 
@@ -6118,7 +6118,7 @@ Speed - GPS vehicle speed
 
 > **SteeringFFBEnabled**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:1630](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1630)
+Defined in: [telemetry.gen.ts:1630](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1630)
 
 SteeringFFBEnabled - Force feedback is enabled
 
@@ -6134,7 +6134,7 @@ SteeringFFBEnabled - Force feedback is enabled
 
 > **SteeringWheelAngle**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:959](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L959)
+Defined in: [telemetry.gen.ts:959](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L959)
 
 SteeringWheelAngle - Steering wheel angle
 
@@ -6150,7 +6150,7 @@ SteeringWheelAngle - Steering wheel angle
 
 > **SteeringWheelAngleMax**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2059](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2059)
+Defined in: [telemetry.gen.ts:2059](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2059)
 
 SteeringWheelAngleMax - Steering wheel max angle
 
@@ -6166,7 +6166,7 @@ SteeringWheelAngleMax - Steering wheel max angle
 
 > **SteeringWheelLimiter**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2367](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2367)
+Defined in: [telemetry.gen.ts:2367](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2367)
 
 SteeringWheelLimiter - Force feedback limiter strength limits impacts and oscillation
 
@@ -6182,7 +6182,7 @@ SteeringWheelLimiter - Force feedback limiter strength limits impacts and oscill
 
 > **SteeringWheelMaxForceNm**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2378](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2378)
+Defined in: [telemetry.gen.ts:2378](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2378)
 
 SteeringWheelMaxForceNm - Value of strength or max force slider in Nm for FFB
 
@@ -6198,7 +6198,7 @@ SteeringWheelMaxForceNm - Value of strength or max force slider in Nm for FFB
 
 > **SteeringWheelPctDamper**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2356](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2356)
+Defined in: [telemetry.gen.ts:2356](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2356)
 
 SteeringWheelPctDamper - Force feedback % max damping
 
@@ -6214,7 +6214,7 @@ SteeringWheelPctDamper - Force feedback % max damping
 
 > **SteeringWheelPctIntensity**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2334](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2334)
+Defined in: [telemetry.gen.ts:2334](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2334)
 
 SteeringWheelPctIntensity - Force feedback % max intensity
 
@@ -6230,7 +6230,7 @@ SteeringWheelPctIntensity - Force feedback % max intensity
 
 > **SteeringWheelPctSmoothing**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2345](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2345)
+Defined in: [telemetry.gen.ts:2345](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2345)
 
 SteeringWheelPctSmoothing - Force feedback % max smoothing
 
@@ -6246,7 +6246,7 @@ SteeringWheelPctSmoothing - Force feedback % max smoothing
 
 > **SteeringWheelPctTorque**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2301](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2301)
+Defined in: [telemetry.gen.ts:2301](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2301)
 
 SteeringWheelPctTorque - Force feedback % max torque on steering shaft unsigned
 
@@ -6262,7 +6262,7 @@ SteeringWheelPctTorque - Force feedback % max torque on steering shaft unsigned
 
 > **SteeringWheelPctTorqueSign**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2312](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2312)
+Defined in: [telemetry.gen.ts:2312](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2312)
 
 SteeringWheelPctTorqueSign - Force feedback % max torque on steering shaft signed
 
@@ -6278,7 +6278,7 @@ SteeringWheelPctTorqueSign - Force feedback % max torque on steering shaft signe
 
 > **SteeringWheelPctTorqueSignStops**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2323](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2323)
+Defined in: [telemetry.gen.ts:2323](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2323)
 
 SteeringWheelPctTorqueSignStops - Force feedback % max torque on steering shaft signed stops
 
@@ -6294,7 +6294,7 @@ SteeringWheelPctTorqueSignStops - Force feedback % max torque on steering shaft 
 
 > **SteeringWheelPeakForceNm**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2389](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2389)
+Defined in: [telemetry.gen.ts:2389](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2389)
 
 SteeringWheelPeakForceNm - Peak torque mapping to direct input units for FFB
 
@@ -6310,7 +6310,7 @@ SteeringWheelPeakForceNm - Peak torque mapping to direct input units for FFB
 
 > **SteeringWheelTorque**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2532](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2532)
+Defined in: [telemetry.gen.ts:2532](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2532)
 
 SteeringWheelTorque - Output torque on steering shaft
 
@@ -6326,7 +6326,7 @@ SteeringWheelTorque - Output torque on steering shaft
 
 > **SteeringWheelTorque\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2521](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2521)
+Defined in: [telemetry.gen.ts:2521](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2521)
 
 SteeringWheelTorque_ST - Output torque on steering shaft at 360 Hz
 
@@ -6342,7 +6342,7 @@ SteeringWheelTorque_ST - Output torque on steering shaft at 360 Hz
 
 > **SteeringWheelUseLinear**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:2400](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2400)
+Defined in: [telemetry.gen.ts:2400](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2400)
 
 SteeringWheelUseLinear - True if steering wheel force is using linear mode
 
@@ -6358,7 +6358,7 @@ SteeringWheelUseLinear - True if steering wheel force is using linear mode
 
 > **Throttle**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:970](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L970)
+Defined in: [telemetry.gen.ts:970](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L970)
 
 Throttle - 0=off throttle to 1=full throttle
 
@@ -6374,7 +6374,7 @@ Throttle - 0=off throttle to 1=full throttle
 
 > **ThrottleRaw**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2092](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2092)
+Defined in: [telemetry.gen.ts:2092](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2092)
 
 ThrottleRaw - Raw throttle input 0=off throttle to 1=full throttle
 
@@ -6390,7 +6390,7 @@ ThrottleRaw - Raw throttle input 0=off throttle to 1=full throttle
 
 > **TireLF\_RumblePitch**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2477](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2477)
+Defined in: [telemetry.gen.ts:2477](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2477)
 
 TireLF_RumblePitch - Players LF Tire Sound rumblestrip pitch
 
@@ -6406,7 +6406,7 @@ TireLF_RumblePitch - Players LF Tire Sound rumblestrip pitch
 
 > **TireLR\_RumblePitch**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2499](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2499)
+Defined in: [telemetry.gen.ts:2499](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2499)
 
 TireLR_RumblePitch - Players LR Tire Sound rumblestrip pitch
 
@@ -6422,7 +6422,7 @@ TireLR_RumblePitch - Players LR Tire Sound rumblestrip pitch
 
 > **TireRF\_RumblePitch**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2488](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2488)
+Defined in: [telemetry.gen.ts:2488](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2488)
 
 TireRF_RumblePitch - Players RF Tire Sound rumblestrip pitch
 
@@ -6438,7 +6438,7 @@ TireRF_RumblePitch - Players RF Tire Sound rumblestrip pitch
 
 > **TireRR\_RumblePitch**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2510](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2510)
+Defined in: [telemetry.gen.ts:2510](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2510)
 
 TireRR_RumblePitch - Players RR Tire Sound rumblestrip pitch
 
@@ -6454,7 +6454,7 @@ TireRR_RumblePitch - Players RR Tire Sound rumblestrip pitch
 
 > **TireSetsAvailable**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1982](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1982)
+Defined in: [telemetry.gen.ts:1982](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1982)
 
 TireSetsAvailable - How many tire sets are remaining  255 is unlimited
 
@@ -6470,7 +6470,7 @@ TireSetsAvailable - How many tire sets are remaining  255 is unlimited
 
 > **TireSetsUsed**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1883](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1883)
+Defined in: [telemetry.gen.ts:1883](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1883)
 
 TireSetsUsed - How many tire sets used so far
 
@@ -6486,7 +6486,7 @@ TireSetsUsed - How many tire sets used so far
 
 > **TorqueMGU\_K**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3896](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3896)
+Defined in: [telemetry.gen.ts:3896](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3896)
 
 TorqueMGU_K - Engine MGU-K mechanical torque
 
@@ -6502,7 +6502,7 @@ TorqueMGU_K - Engine MGU-K mechanical torque
 
 > **TrackTemp**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1465](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1465)
+Defined in: [telemetry.gen.ts:1465](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1465)
 
 TrackTemp - Deprecated  set to TrackTempCrew
 
@@ -6518,7 +6518,7 @@ TrackTemp - Deprecated  set to TrackTempCrew
 
 > **TrackTempCrew**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1476](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1476)
+Defined in: [telemetry.gen.ts:1476](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1476)
 
 TrackTempCrew - Temperature of track measured by crew around track
 
@@ -6534,7 +6534,7 @@ TrackTempCrew - Temperature of track measured by crew around track
 
 > **TrackWetness**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1498](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1498)
+Defined in: [telemetry.gen.ts:1498](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1498)
 
 TrackWetness - How wet is the average track surface
 
@@ -6550,7 +6550,7 @@ TrackWetness - How wet is the average track surface
 
 > **VelocityX**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2598](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2598)
+Defined in: [telemetry.gen.ts:2598](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2598)
 
 VelocityX - X velocity
 
@@ -6566,7 +6566,7 @@ VelocityX - X velocity
 
 > **VelocityX\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2565](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2565)
+Defined in: [telemetry.gen.ts:2565](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2565)
 
 VelocityX_ST - X velocity
 
@@ -6582,7 +6582,7 @@ VelocityX_ST - X velocity
 
 > **VelocityY**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2587](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2587)
+Defined in: [telemetry.gen.ts:2587](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2587)
 
 VelocityY - Y velocity
 
@@ -6598,7 +6598,7 @@ VelocityY - Y velocity
 
 > **VelocityY\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2554](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2554)
+Defined in: [telemetry.gen.ts:2554](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2554)
 
 VelocityY_ST - Y velocity
 
@@ -6614,7 +6614,7 @@ VelocityY_ST - Y velocity
 
 > **VelocityZ**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2576](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2576)
+Defined in: [telemetry.gen.ts:2576](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2576)
 
 VelocityZ - Z velocity
 
@@ -6630,7 +6630,7 @@ VelocityZ - Z velocity
 
 > **VelocityZ\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2543](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2543)
+Defined in: [telemetry.gen.ts:2543](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2543)
 
 VelocityZ_ST - Z velocity
 
@@ -6646,7 +6646,7 @@ VelocityZ_ST - Z velocity
 
 > **VertAccel**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2708](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2708)
+Defined in: [telemetry.gen.ts:2708](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2708)
 
 VertAccel - Vertical acceleration (including gravity)
 
@@ -6662,7 +6662,7 @@ VertAccel - Vertical acceleration (including gravity)
 
 > **VertAccel\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2675](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2675)
+Defined in: [telemetry.gen.ts:2675](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2675)
 
 VertAccel_ST - Vertical acceleration (including gravity) at 360 Hz
 
@@ -6678,7 +6678,7 @@ VertAccel_ST - Vertical acceleration (including gravity) at 360 Hz
 
 > **VidCapActive**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:1718](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1718)
+Defined in: [telemetry.gen.ts:1718](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1718)
 
 VidCapActive - True if video currently being captured
 
@@ -6694,7 +6694,7 @@ VidCapActive - True if video currently being captured
 
 > **VidCapEnabled**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:1707](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1707)
+Defined in: [telemetry.gen.ts:1707](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1707)
 
 VidCapEnabled - True if video capture system is enabled
 
@@ -6710,7 +6710,7 @@ VidCapEnabled - True if video capture system is enabled
 
 > **Voltage**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3247](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3247)
+Defined in: [telemetry.gen.ts:3247](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3247)
 
 Voltage - Engine voltage
 
@@ -6726,7 +6726,7 @@ Voltage - Engine voltage
 
 > **WaterLevel**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3269](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3269)
+Defined in: [telemetry.gen.ts:3269](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3269)
 
 WaterLevel - Engine coolant level
 
@@ -6742,7 +6742,7 @@ WaterLevel - Engine coolant level
 
 > **WaterTemp**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:3258](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L3258)
+Defined in: [telemetry.gen.ts:3258](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L3258)
 
 WaterTemp - Engine coolant temp
 
@@ -6758,7 +6758,7 @@ WaterTemp - Engine coolant temp
 
 > **WeatherDeclaredWet**: [`TelemetryVariable`](TelemetryVariable.md)\<`boolean`[]\>
 
-Defined in: [telemetry.gen.ts:1619](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1619)
+Defined in: [telemetry.gen.ts:1619](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1619)
 
 WeatherDeclaredWet - The steward says rain tires can be used
 
@@ -6774,7 +6774,7 @@ WeatherDeclaredWet - The steward says rain tires can be used
 
 > **WindDir**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1553](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1553)
+Defined in: [telemetry.gen.ts:1553](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1553)
 
 WindDir - Wind direction at start/finish line
 
@@ -6790,7 +6790,7 @@ WindDir - Wind direction at start/finish line
 
 > **WindVel**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1542](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1542)
+Defined in: [telemetry.gen.ts:1542](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1542)
 
 WindVel - Wind velocity at start/finish line
 
@@ -6806,7 +6806,7 @@ WindVel - Wind velocity at start/finish line
 
 > **Yaw**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1410](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1410)
+Defined in: [telemetry.gen.ts:1410](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1410)
 
 Yaw - Yaw orientation
 
@@ -6822,7 +6822,7 @@ Yaw - Yaw orientation
 
 > **YawNorth**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:1421](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L1421)
+Defined in: [telemetry.gen.ts:1421](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L1421)
 
 YawNorth - Yaw orientation relative to north
 
@@ -6838,7 +6838,7 @@ YawNorth - Yaw orientation relative to north
 
 > **YawRate**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2642](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2642)
+Defined in: [telemetry.gen.ts:2642](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2642)
 
 YawRate - Yaw rate
 
@@ -6854,7 +6854,7 @@ YawRate - Yaw rate
 
 > **YawRate\_ST**: [`TelemetryVariable`](TelemetryVariable.md)
 
-Defined in: [telemetry.gen.ts:2609](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/telemetry.gen.ts#L2609)
+Defined in: [telemetry.gen.ts:2609](https://github.com/bengsfort/irsdk-node/blob/143c732935572eda2b1dcfcac2953a5daba537f8/packages/irsdk-node-types/src/telemetry.gen.ts#L2609)
 
 YawRate_ST - Yaw rate at 360 Hz
 
