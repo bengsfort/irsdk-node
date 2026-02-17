@@ -46,7 +46,8 @@
     "watch:types": "tsc --watch --emitDeclarationOnly",
     "lint": "eslint",
     "check-types": "tsc --noEmit",
-    "format:cpp": "clang-format --sort-includes -i --style=file:.clang-format --verbose lib/*.cpp lib/*.h"
+    "clang-format": "clang-format --sort-includes -i --style=file:.clang-format --verbose lib/*.cpp lib/*.h",
+    "clang-format-check": "clang-format -Werror --dry-run --sort-includes -i --style=file:.clang-format --verbose lib/*.cpp lib/*.h"
   },
   "prettier": "@bengsfort/eslint-config-flat/prettier.config.js",
   "packageManager": "pnpm@10.17.1",
