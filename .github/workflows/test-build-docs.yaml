@@ -27,7 +27,7 @@ jobs:
           SEARCH_PATTERN="^(docs-site|packages/$PACKAGES/)"           # full regex capture to check for changes with
 
           # Check if any changed files match the search pattern
-          if git diff main...HEAD --name-only | grep -E $SEARCH_PATTERN; then
+          if CHANGED_FILES | grep -E $SEARCH_PATTERN; then
             echo "has_changes=true" >> $GITHUB_OUTPUT
           else
             echo "has_changes=false" >> $GITHUB_OUTPUT
