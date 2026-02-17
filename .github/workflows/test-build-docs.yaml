@@ -22,12 +22,17 @@ jobs:
       - name: Detect changed packages
         id: pkg_change_check
         run: |
-          if pnpm install --fail-if-no-match --filter "./{docs-site,packages/**}[origin/main]"; then
+          CHANGED_FILES=$(git diff main...HEAD --name-only)           # Get list of all files changed in branch
+          PACKAGES="(irsdk-node|irsdk-node-native|irsdk-node-types)"  # regex capture for packages to check
+          SEARCH_PATTERN="^(docs-site|packages/$PACKAGES/)"           # full regex capture to check for changes with
+
+          # Check if any changed files match the search pattern
+          if git diff main...HEAD --name-only | grep -E $SEARCH_PATTERN; then
             echo "has_changes=true" >> $GITHUB_OUTPUT
           else
             echo "has_changes=false" >> $GITHUB_OUTPUT
           fi
-      
+
   build-docs:
     name: Build docs site
     runs-on: ubuntu-latest
@@ -46,4 +51,3 @@ jobs:
 
       - name: Build docusaurus site
         run: pnpm run --filter "docs-site" build
-      
