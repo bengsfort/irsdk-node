@@ -40,12 +40,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Run clang-format@v21 on @irsdk-node/native package
-        uses: jidicula/clang-format-action@v4.16.0
+
+      - name: Setup PNPM
+        uses: ./.github/actions/setup-packages
         with:
-          clang-format-version: "21"
-          check-path: "packages/irsdk-node-native/lib"
-          exclude-regex: '(\/irsdk\/)'
+          node-version: 20
+
+      - name: Setup clang-format
+        run: |
+          CLANG_FORMAT_VERSION="21"
+
+          # Install clang-format
+          wget -qO- https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
+          sudo add-apt-repository -y "deb http://apt.llvm.org/$(lsb_release -cs)/ llvm-toolchain-$(lsb_release -cs)-${CLANG_FORMAT_VERSION} main"
+          sudo apt-get update
+          sudo apt-get install -y clang-format-${CLANG_FORMAT_VERSION}
+
+          # Print version
+          clang-format-${CLANG_FORMAT_VERSION} --version
+
+      - name: Run clang-format on @irsdk-node/native package
+        run: pnpm run --filter "packages/irsdk-node-native" clang-format-check
 
   build-native-modules:
     name: Build @irsdk-node/native ${{ matrix.runner }}
