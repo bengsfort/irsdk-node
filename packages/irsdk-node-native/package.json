@@ -47,7 +47,8 @@
     "lint": "eslint",
     "check-types": "tsc --noEmit",
     "clang-format": "clang-format --sort-includes -i --style=file:.clang-format --verbose lib/*.cpp lib/*.h",
-    "clang-format-check": "clang-format -Werror --dry-run --sort-includes -i --style=file:.clang-format --verbose lib/*.cpp lib/*.h"
+    "clang-format-check": "clang-format -Werror --dry-run --sort-includes -i --style=file:.clang-format --verbose lib/*.cpp lib/*.h",
+    "gen-docs": "typedoc"
   },
   "prettier": "@bengsfort/eslint-config-flat/prettier.config.js",
   "packageManager": "pnpm@10.17.1",
@@ -67,6 +68,7 @@
     "eslint": "^9.38.0",
     "node-notifier": "^10.0.0",
     "prebuildify": "^6.0.1",
+    "typedoc": "^0.28.16",
     "typescript": "^5.9.3"
   }
 }

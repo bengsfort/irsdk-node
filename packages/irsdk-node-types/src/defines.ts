@@ -230,8 +230,8 @@ export enum TrackWetness {
  * Bit flags for describing incidents. These can be used to extract info about
  * an incident in the sim.
  *
- * - The first byte indicates the incident type. ('Report<type>' values)
- * - Second byte indicates the penalty. ('Penalty<type>' values)
+ * - The first byte indicates the incident type. ('Report*' values)
+ * - Second byte indicates the penalty. ('Penalty*' values)
  *
  * To separate these, use a mask from the `IncidentFlagMask` enum.
  *

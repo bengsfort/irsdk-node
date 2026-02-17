@@ -1,0 +1,1 @@
+This folder gets generated via `pnpm docs:gen`, which gets ran before each deploy. Do not edit manually!

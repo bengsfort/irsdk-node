@@ -36,13 +36,15 @@
     "watch:ts": "node ./esbuild.js --watch",
     "watch:types": "tsc --watch --emitDeclarationOnly",
     "clean": "rm -rf build dist .tsbuildinfo/*",
-    "lint": "eslint"
+    "lint": "eslint",
+    "gen-docs": "typedoc"
   },
   "packageManager": "pnpm@10.17.1",
   "devDependencies": {
     "@bengsfort/eslint-config-flat": "^0.2.5",
     "esbuild": "^0.25.11",
     "eslint": "^9.38.0",
+    "typedoc": "^0.28.16",
     "typescript": "^5.9.3"
   }
 }

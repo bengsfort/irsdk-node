@@ -1,0 +1,66 @@
+# TODO: Only re-generate the docs for packages that have changed.
+
+name: AUTO - Validate docs site build
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check-pkgs-changed:
+    name: Check if packages have changed
+    outputs:
+      has_changes: ${{ steps.pkg_change_check.outputs.has_changes }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PNPM
+        uses: ./.github/actions/setup-packages
+        with:
+          node-version: 20
+
+      - name: Detect changed packages
+        id: pkg_change_check
+        run: |
+          PACKAGES="(irsdk-node|irsdk-node-native|irsdk-node-types)"
+          SEARCH_PATTERN="^(docs-site|packages/$PACKAGES/)"
+
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+            CHANGED_FILES=$(jq -r '.pull_request.changed_files' "$GITHUB_EVENT_PATH")
+
+            # Get the actual file list from the API
+            gh api repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/files \
+              --jq '.[].filename' > changed_files.txt
+            
+            if grep -qE $SEARCH_PATTERN changed_files.txt; then
+              echo "has_changes=true" >> $GITHUB_OUTPUT
+            else
+              echo "has_changes=false" >> $GITHUB_OUTPUT
+            fi
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+  build-docs:
+    name: Build docs site
+    runs-on: ubuntu-latest
+    needs: check-pkgs-changed
+    if: needs.check-pkgs-changed.outputs.has_changes == 'true'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PNPM
+        uses: ./.github/actions/setup-packages
+        with:
+          node-version: 20
+
+      - name: Build package type definitions
+        run: pnpm run --filter "./packages/**" build:types
+
+      - name: Generate docs markdown
+        run: pnpm run --filter "docs-site" docs:gen
+
+      - name: Build docusaurus site
+        run: pnpm run --filter "docs-site" build

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://typedoc-plugin-markdown.org/schema.json",
+  "name": "Packages",
+  "entryPoints": [
+    "../packages/irsdk-node/dist/docs.json",
+    "../packages/irsdk-node-native/dist/docs.json",
+    "../packages/irsdk-node-types/dist/docs.json",
+  ],
+  "entryPointStrategy": "merge",
+  "out": "./_gen_",
+  "cleanOutputDir": true,
+  "plugin": [
+    "typedoc-plugin-markdown"
+  ],
+  "parametersFormat": "table",
+  "classPropertiesFormat": "list",
+  "hidePageHeader": true,
+  "readme": "none",
+  "hideBreadcrumbs": true,
+  "hidePageTitle": true,
+}

@@ -1,0 +1,10 @@
+# Production
+build
+
+# Generated files
+.docusaurus
+.cache-loader
+
+# Generated docs
+docs/10-API-Reference/**/*
+!docs/10-API-Reference/.generated_folder_dont_edit

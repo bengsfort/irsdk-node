@@ -310,13 +310,13 @@ function renderVariableTypeScript(cache: TelemetryCache): string {
 
     variableTypes.push(
       `  /**`,
-      `   * ${varName}`,
+      `   * ${varName} - ${varData.description}`,
       `   *`,
-      `   * @description`,
-      `   * ${varData.description}`,
-      `   * ${unitStr}`,
-      `   * ${countAsTimeStr}`,
-      `   * Expected data length: ${varData.length.toString(10)}`,
+      `   * @remarks`,
+      `   *`,
+      `   * - ${unitStr}`,
+      `   * - ${countAsTimeStr}`,
+      `   * - Expected data length: ${varData.length.toString(10)}`,
       `   */`,
       `  ${varName}: TelemetryVariable${genericStr};`,
     );
