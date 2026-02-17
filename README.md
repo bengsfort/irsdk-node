@@ -6,6 +6,8 @@ This monorepo contains all of the packages that make up `irsdk-node`, a node.js 
 
 This library provides near-1:1 bindings to the native iRacing SDK via a node.js native addon module, allowing you to easily initialize and consume the SDK data from javascript/typescript with full type-safety and type support. All underlying data exposed via the SDK (except for a small handful of telemetry variables, which can be overidden) have types via the [`@irsdk-node/types`](./packages/irsdk-node-types/) package which can either be used directly via npm, or indirectly via [`irsdk-node`](./packages/irsdk-node/).
 
+More in-depth documentation is available at [the documentation site](https://irsdk-node.bengsfort.dev/).
+
 ## Packages
 
 This library is split up into several packages to provide more freedom and to allow the individual features to be used completely independently.
@@ -31,7 +33,7 @@ Due to the This monorepo uses [pnpm](https://pnpm.io/workspaces) for workspace m
 Whenever a new feature, bug fix, or tooling change is complete the a changeset describing it should be created:
 
 ```shell
-$ pnpm run changes:add
+pnpm run changes:add
 ```
 
 This can be run from the root of the monorepo, and the `.changeset/*.yaml` file that it creates should be committed. When the PR including this changeset lands in `main`, CI will detect the changeset and either create a new _versioning pr_ or update an existing one. This PR will keep track of all the changesets between releases, and have `package.json` updates for all packages affected by the changesets (as well as their dependencies).

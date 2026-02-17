@@ -4,7 +4,9 @@ This package provides a fully type-safe thin wrapper around node.js bindings for
 
 If you want to use the SDK bindings _without_ any wrapper class, you can use the backing [`@irsdk-node/native`](https://github.com/bengsfort/irsdk-node/tree/main/packages/irsdk-node-native) package directly. If you do use the native module directly, it is recommended to use [`@irsdk-node/types`](https://github.com/bengsfort/irsdk-node/tree/main/packages/irsdk-node-types) for a better experience.
 
-> ⚠️ **Node Version support** v4.0.0 updates all native dependencies to modern NodeJS API's, and as such the minimum Node version supported has been increased to v18. For v16 environments, please use the last 3.x.x release (3.3.0).
+More in-depth documentation is available at [the documentation site](https://irsdk-node.bengsfort.dev/).
+
+> ⚠️ **Node Version support** v4.0.0 updates all native dependencies to modern NodeJS API's, and as such the minimum Node version supported has been increased to v18. For v16 environments, please use the last 3.x.x release (3.3.0). Node v20+ is recommended.
 
 ## Usage
 
