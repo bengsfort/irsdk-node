@@ -22,16 +22,24 @@ jobs:
       - name: Detect changed packages
         id: pkg_change_check
         run: |
-          CHANGED_FILES=$(git diff origin/${{ github.base_ref }}...HEAD --name-only)  # Get list of all files changed in branch
-          PACKAGES="(irsdk-node|irsdk-node-native|irsdk-node-types)"                  # regex capture for packages to check
-          SEARCH_PATTERN="^(docs-site|packages/$PACKAGES/)"                           # full regex capture to check for changes with
+          PACKAGES="(irsdk-node|irsdk-node-native|irsdk-node-types)"
+          SEARCH_PATTERN="^(docs-site|packages/$PACKAGES/)"
 
-          # Check if any changed files match the search pattern
-          if CHANGED_FILES | grep -qE $SEARCH_PATTERN; then
-            echo "has_changes=true" >> $GITHUB_OUTPUT
-          else
-            echo "has_changes=false" >> $GITHUB_OUTPUT
+          if [ "${{ github.event_name }} == "pull_request" ]; then
+            CHANGED_FILES=$(jq -r '.pull_request.changed_files' "$GITHUB_EVENT_PATH")
+
+            # Get the actual file list from the API
+            gh api repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/files \
+              --jq '.[].filename' > changed_files.txt
+            
+            if grep -qE $SEARCH_PATTERN changed_files.txt; then
+              echo "has_changes=true" >> $GITHUB_OUTPUT
+            else
+              echo "has_changes=false" >> $GITHUB_OUTPUT
+            fi
           fi
+        env:
+          GH_TOKEN: ${{ github.token }}
 
   build-docs:
     name: Build docs site
