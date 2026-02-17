@@ -25,7 +25,6 @@ AlignTrailingComments:
   OverEmptyLines: 2
 AlignAfterOpenBracket: BlockIndent
 BinPackArguments: false
-BinPackLongBracedList: false
 AllowAllArgumentsOnNextLine: false
 FixNamespaceComments: true
 ---
