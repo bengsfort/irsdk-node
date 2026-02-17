@@ -6,7 +6,10 @@ This is the native bindings package for irsdk-node. This provides near 1:1 bindi
 
 While you can use this package directly, it is highly recommended to use the [irsdk-node](https://github.com/bengsfort/irsdk-node/tree/main/packages/irsdk-node) package instead. Types for the data exposed via this package can be used independently via [@irsdk-node/types](https://github.com/bengsfort/irsdk-node/tree/main/packages/irsdk-node-native) as well.
 
+You can read the API reference at the [`irsdk-node` documentation site](https://irsdk-node.bengsfort.dev/API-Reference/irsdk-node-native/).
+
 ## Usage
+
 Install as a dependency.
 
 ```sh
