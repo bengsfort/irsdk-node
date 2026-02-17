@@ -60,7 +60,7 @@ jobs:
           clang-format-${CLANG_FORMAT_VERSION} --version
 
       - name: Run clang-format on @irsdk-node/native package
-        run: pnpm run --filter "packages/irsdk-node-native" clang-format-check
+        run: pnpm run --filter "{packages/irsdk-node-native}" clang-format-check
 
   build-native-modules:
     name: Build @irsdk-node/native ${{ matrix.runner }}
