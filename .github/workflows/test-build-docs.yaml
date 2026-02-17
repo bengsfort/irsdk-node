@@ -54,6 +54,9 @@ jobs:
         with:
           node-version: 20
 
+      - name: Build package type definitions
+        run: pnpm run --filter "./packages/**" build:types
+
       - name: Generate docs markdown
         run: pnpm run --filter "docs-site" docs:gen
 
