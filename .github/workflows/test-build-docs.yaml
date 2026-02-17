@@ -1,3 +1,5 @@
+# TODO: Only re-generate the docs for packages that have changed.
+
 name: AUTO - Validate docs site build
 
 on:
