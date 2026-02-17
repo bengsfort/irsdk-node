@@ -22,7 +22,10 @@ jobs:
       - name: Detect changed packages
         id: pkg_change_check
         run: |
-          CHANGED_FILES=$(git diff main...HEAD --name-only)           # Get list of all files changed in branch
+          # Fetch main since GH actions don't by default
+          git fetch origin main
+
+          CHANGED_FILES=$(git diff origin/main...HEAD --name-only)    # Get list of all files changed in branch
           PACKAGES="(irsdk-node|irsdk-node-native|irsdk-node-types)"  # regex capture for packages to check
           SEARCH_PATTERN="^(docs-site|packages/$PACKAGES/)"           # full regex capture to check for changes with
 
