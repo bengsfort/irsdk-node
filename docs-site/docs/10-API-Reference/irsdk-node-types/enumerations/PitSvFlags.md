@@ -1,4 +1,4 @@
-Defined in: [defines.ts:393](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L393)
+Defined in: [defines.ts:393](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L393)
 
 Flag representing the changes to be done during a pit stop.
 Represents `irsdk_PitSvFlags`
@@ -9,7 +9,7 @@ Represents `irsdk_PitSvFlags`
 
 > **FastRepair**: `64`
 
-Defined in: [defines.ts:408](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L408)
+Defined in: [defines.ts:408](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L408)
 
 Fast repair
 
@@ -19,7 +19,7 @@ Fast repair
 
 > **FuelFill**: `16`
 
-Defined in: [defines.ts:404](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L404)
+Defined in: [defines.ts:404](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L404)
 
 Re-fuel
 
@@ -29,7 +29,7 @@ Re-fuel
 
 > **LFTireChange**: `1`
 
-Defined in: [defines.ts:395](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L395)
+Defined in: [defines.ts:395](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L395)
 
 Left front tire
 
@@ -39,7 +39,7 @@ Left front tire
 
 > **LRTireChange**: `4`
 
-Defined in: [defines.ts:399](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L399)
+Defined in: [defines.ts:399](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L399)
 
 Left rear tire
 
@@ -49,7 +49,7 @@ Left rear tire
 
 > **RFTireChange**: `2`
 
-Defined in: [defines.ts:397](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L397)
+Defined in: [defines.ts:397](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L397)
 
 Right front tire
 
@@ -59,7 +59,7 @@ Right front tire
 
 > **RRTireChange**: `8`
 
-Defined in: [defines.ts:401](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L401)
+Defined in: [defines.ts:401](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L401)
 
 Right rear tire
 
@@ -69,6 +69,6 @@ Right rear tire
 
 > **WindshieldTearoff**: `32`
 
-Defined in: [defines.ts:406](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L406)
+Defined in: [defines.ts:406](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L406)
 
 Tearoff windshield

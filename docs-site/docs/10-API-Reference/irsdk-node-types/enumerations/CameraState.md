@@ -1,4 +1,4 @@
-Defined in: [defines.ts:368](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L368)
+Defined in: [defines.ts:368](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L368)
 
 Flag representing the current camera state.
 Represents `irsdk_CameraState`.
@@ -9,7 +9,7 @@ Represents `irsdk_CameraState`.
 
 > **CamToolActive**: `4`
 
-Defined in: [defines.ts:374](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L374)
+Defined in: [defines.ts:374](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L374)
 
 CAN be changed with a broadcast message
 
@@ -19,7 +19,7 @@ CAN be changed with a broadcast message
 
 > **IsScenicActive**: `2`
 
-Defined in: [defines.ts:372](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L372)
+Defined in: [defines.ts:372](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L372)
 
 the scenic camera is active (no focus car)
 
@@ -29,7 +29,7 @@ the scenic camera is active (no focus car)
 
 > **IsSessionScreen**: `1`
 
-Defined in: [defines.ts:370](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L370)
+Defined in: [defines.ts:370](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L370)
 
 the camera tool can only be activated if viewing the session screen (out of car)
 
@@ -39,7 +39,7 @@ the camera tool can only be activated if viewing the session screen (out of car)
 
 > **UIHidden**: `8`
 
-Defined in: [defines.ts:376](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L376)
+Defined in: [defines.ts:376](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L376)
 
 CAN be changed with a broadcast message
 
@@ -49,7 +49,7 @@ CAN be changed with a broadcast message
 
 > **UseAutoShotSelection**: `16`
 
-Defined in: [defines.ts:378](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L378)
+Defined in: [defines.ts:378](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L378)
 
 CAN be changed with a broadcast message
 
@@ -59,7 +59,7 @@ CAN be changed with a broadcast message
 
 > **UseKey10xAcceleration**: `128`
 
-Defined in: [defines.ts:384](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L384)
+Defined in: [defines.ts:384](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L384)
 
 CAN be changed with a broadcast message
 
@@ -69,7 +69,7 @@ CAN be changed with a broadcast message
 
 > **UseKeyAcceleration**: `64`
 
-Defined in: [defines.ts:382](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L382)
+Defined in: [defines.ts:382](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L382)
 
 CAN be changed with a broadcast message
 
@@ -79,7 +79,7 @@ CAN be changed with a broadcast message
 
 > **UseMouseAimMode**: `256`
 
-Defined in: [defines.ts:386](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L386)
+Defined in: [defines.ts:386](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L386)
 
 CAN be changed with a broadcast message
 
@@ -89,6 +89,6 @@ CAN be changed with a broadcast message
 
 > **UseTemporaryEdits**: `32`
 
-Defined in: [defines.ts:380](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L380)
+Defined in: [defines.ts:380](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L380)
 
 CAN be changed with a broadcast message

@@ -1,4 +1,4 @@
-Defined in: [camera-info.ts:13](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/camera-info.ts#L13)
+Defined in: [camera-info.ts:13](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/camera-info.ts#L13)
 
 ## Properties
 
@@ -6,4 +6,4 @@ Defined in: [camera-info.ts:13](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **Groups**: [`CameraGroup`](CameraGroup.md)[]
 
-Defined in: [camera-info.ts:14](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/camera-info.ts#L14)
+Defined in: [camera-info.ts:14](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/camera-info.ts#L14)

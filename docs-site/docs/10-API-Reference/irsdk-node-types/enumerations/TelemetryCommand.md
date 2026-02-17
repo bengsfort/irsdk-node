@@ -1,4 +1,4 @@
-Defined in: [defines.ts:554](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L554)
+Defined in: [defines.ts:554](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L554)
 
 Available telemetry command modes, to be used with message broadcasting.
 This can be called at any time, but telemetry only records when driver is in
@@ -11,7 +11,7 @@ Represents `irsdk_TelemCommandMode`
 
 > **Restart**: `2`
 
-Defined in: [defines.ts:560](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L560)
+Defined in: [defines.ts:560](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L560)
 
 Write current file to disk and start a new one
 
@@ -21,7 +21,7 @@ Write current file to disk and start a new one
 
 > **Start**: `1`
 
-Defined in: [defines.ts:558](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L558)
+Defined in: [defines.ts:558](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L558)
 
 Turn telemetry recording on
 
@@ -31,6 +31,6 @@ Turn telemetry recording on
 
 > **Stop**: `0`
 
-Defined in: [defines.ts:556](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L556)
+Defined in: [defines.ts:556](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L556)
 
 Turn telemetry recording off

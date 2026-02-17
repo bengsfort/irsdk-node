@@ -1,4 +1,4 @@
-Defined in: [setup-info.ts:47](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L47)
+Defined in: [setup-info.ts:47](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L47)
 
 ## Properties
 
@@ -6,7 +6,7 @@ Defined in: [setup-info.ts:47](https://github.com/bengsfort/irsdk-node/blob/43c6
 
 > **AeroCalculator**: [`AeroCalculatorInfo`](AeroCalculatorInfo.md)
 
-Defined in: [setup-info.ts:57](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L57)
+Defined in: [setup-info.ts:57](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L57)
 
 ***
 
@@ -14,7 +14,7 @@ Defined in: [setup-info.ts:57](https://github.com/bengsfort/irsdk-node/blob/43c6
 
 > `optional` **AeroPackage**: [`AeroPackageInfo`](AeroPackageInfo.md)
 
-Defined in: [setup-info.ts:53](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L53)
+Defined in: [setup-info.ts:53](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L53)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [setup-info.ts:53](https://github.com/bengsfort/irsdk-node/blob/43c6
 
 > **BodyAero**: [`BodyAeroInfo`](BodyAeroInfo.md)
 
-Defined in: [setup-info.ts:55](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L55)
+Defined in: [setup-info.ts:55](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L55)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [setup-info.ts:55](https://github.com/bengsfort/irsdk-node/blob/43c6
 
 > **FrontAero**: [`FrontAeroInfo`](FrontAeroInfo.md)
 
-Defined in: [setup-info.ts:54](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L54)
+Defined in: [setup-info.ts:54](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L54)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [setup-info.ts:54](https://github.com/bengsfort/irsdk-node/blob/43c6
 
 > **LeftFront**: [`TireInfo`](TireInfo.md)
 
-Defined in: [setup-info.ts:49](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L49)
+Defined in: [setup-info.ts:49](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L49)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [setup-info.ts:49](https://github.com/bengsfort/irsdk-node/blob/43c6
 
 > **LeftRear**: [`TireInfo`](TireInfo.md)
 
-Defined in: [setup-info.ts:50](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L50)
+Defined in: [setup-info.ts:50](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L50)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [setup-info.ts:50](https://github.com/bengsfort/irsdk-node/blob/43c6
 
 > **RearAero**: [`RearAeroInfo`](RearAeroInfo.md)
 
-Defined in: [setup-info.ts:56](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L56)
+Defined in: [setup-info.ts:56](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L56)
 
 ***
 
@@ -62,7 +62,7 @@ Defined in: [setup-info.ts:56](https://github.com/bengsfort/irsdk-node/blob/43c6
 
 > **RightFront**: [`TireInfo`](TireInfo.md)
 
-Defined in: [setup-info.ts:51](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L51)
+Defined in: [setup-info.ts:51](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L51)
 
 ***
 
@@ -70,7 +70,7 @@ Defined in: [setup-info.ts:51](https://github.com/bengsfort/irsdk-node/blob/43c6
 
 > **RightRear**: [`TireInfo`](TireInfo.md)
 
-Defined in: [setup-info.ts:52](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L52)
+Defined in: [setup-info.ts:52](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L52)
 
 ***
 
@@ -78,4 +78,4 @@ Defined in: [setup-info.ts:52](https://github.com/bengsfort/irsdk-node/blob/43c6
 
 > **TireCompound**: [`TireCompoundInfo`](TireCompoundInfo.md)
 
-Defined in: [setup-info.ts:48](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/setup-info.ts#L48)
+Defined in: [setup-info.ts:48](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/setup-info.ts#L48)

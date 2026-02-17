@@ -1,4 +1,4 @@
-Defined in: [defines.ts:105](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L105)
+Defined in: [defines.ts:105](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L105)
 
 Maps the track surfaces.
 
@@ -10,7 +10,7 @@ Represents irsdk_TrkSurf
 
 > **Asphalt1Material**: `1`
 
-Defined in: [defines.ts:109](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L109)
+Defined in: [defines.ts:109](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L109)
 
 ***
 
@@ -18,7 +18,7 @@ Defined in: [defines.ts:109](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **Asphalt2Material**: `2`
 
-Defined in: [defines.ts:110](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L110)
+Defined in: [defines.ts:110](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L110)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [defines.ts:110](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **Asphalt3Material**: `3`
 
-Defined in: [defines.ts:111](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L111)
+Defined in: [defines.ts:111](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L111)
 
 ***
 
@@ -34,7 +34,7 @@ Defined in: [defines.ts:111](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **Asphalt4Material**: `4`
 
-Defined in: [defines.ts:112](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L112)
+Defined in: [defines.ts:112](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L112)
 
 ***
 
@@ -42,7 +42,7 @@ Defined in: [defines.ts:112](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **AstroturfMaterial**: `27`
 
-Defined in: [defines.ts:136](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L136)
+Defined in: [defines.ts:136](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L136)
 
 ***
 
@@ -50,7 +50,7 @@ Defined in: [defines.ts:136](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **Concrete1Material**: `5`
 
-Defined in: [defines.ts:113](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L113)
+Defined in: [defines.ts:113](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L113)
 
 ***
 
@@ -58,7 +58,7 @@ Defined in: [defines.ts:113](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **Concrete2Material**: `6`
 
-Defined in: [defines.ts:114](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L114)
+Defined in: [defines.ts:114](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L114)
 
 ***
 
@@ -66,7 +66,7 @@ Defined in: [defines.ts:114](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **Dirt1Material**: `19`
 
-Defined in: [defines.ts:128](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L128)
+Defined in: [defines.ts:128](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L128)
 
 ***
 
@@ -74,7 +74,7 @@ Defined in: [defines.ts:128](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **Dirt2Material**: `20`
 
-Defined in: [defines.ts:129](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L129)
+Defined in: [defines.ts:129](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L129)
 
 ***
 
@@ -82,7 +82,7 @@ Defined in: [defines.ts:129](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **Dirt3Material**: `21`
 
-Defined in: [defines.ts:130](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L130)
+Defined in: [defines.ts:130](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L130)
 
 ***
 
@@ -90,7 +90,7 @@ Defined in: [defines.ts:130](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **Dirt4Material**: `22`
 
-Defined in: [defines.ts:131](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L131)
+Defined in: [defines.ts:131](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L131)
 
 ***
 
@@ -98,7 +98,7 @@ Defined in: [defines.ts:131](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **Grass1Material**: `15`
 
-Defined in: [defines.ts:124](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L124)
+Defined in: [defines.ts:124](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L124)
 
 ***
 
@@ -106,7 +106,7 @@ Defined in: [defines.ts:124](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **Grass2Material**: `16`
 
-Defined in: [defines.ts:125](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L125)
+Defined in: [defines.ts:125](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L125)
 
 ***
 
@@ -114,7 +114,7 @@ Defined in: [defines.ts:125](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **Grass3Material**: `17`
 
-Defined in: [defines.ts:126](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L126)
+Defined in: [defines.ts:126](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L126)
 
 ***
 
@@ -122,7 +122,7 @@ Defined in: [defines.ts:126](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **Grass4Material**: `18`
 
-Defined in: [defines.ts:127](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L127)
+Defined in: [defines.ts:127](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L127)
 
 ***
 
@@ -130,7 +130,7 @@ Defined in: [defines.ts:127](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **GrasscreteMaterial**: `26`
 
-Defined in: [defines.ts:135](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L135)
+Defined in: [defines.ts:135](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L135)
 
 ***
 
@@ -138,7 +138,7 @@ Defined in: [defines.ts:135](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **Gravel1Material**: `24`
 
-Defined in: [defines.ts:133](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L133)
+Defined in: [defines.ts:133](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L133)
 
 ***
 
@@ -146,7 +146,7 @@ Defined in: [defines.ts:133](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **Gravel2Material**: `25`
 
-Defined in: [defines.ts:134](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L134)
+Defined in: [defines.ts:134](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L134)
 
 ***
 
@@ -154,7 +154,7 @@ Defined in: [defines.ts:134](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **Paint1Material**: `9`
 
-Defined in: [defines.ts:117](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L117)
+Defined in: [defines.ts:117](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L117)
 
 ***
 
@@ -162,7 +162,7 @@ Defined in: [defines.ts:117](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **Paint2Material**: `10`
 
-Defined in: [defines.ts:118](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L118)
+Defined in: [defines.ts:118](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L118)
 
 ***
 
@@ -170,7 +170,7 @@ Defined in: [defines.ts:118](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **RacingDirt1Material**: `7`
 
-Defined in: [defines.ts:115](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L115)
+Defined in: [defines.ts:115](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L115)
 
 ***
 
@@ -178,7 +178,7 @@ Defined in: [defines.ts:115](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **RacingDirt2Material**: `8`
 
-Defined in: [defines.ts:116](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L116)
+Defined in: [defines.ts:116](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L116)
 
 ***
 
@@ -186,7 +186,7 @@ Defined in: [defines.ts:116](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **Rumble1Material**: `11`
 
-Defined in: [defines.ts:119](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L119)
+Defined in: [defines.ts:119](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L119)
 
 ***
 
@@ -194,7 +194,7 @@ Defined in: [defines.ts:119](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **Rumble2Material**: `12`
 
-Defined in: [defines.ts:120](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L120)
+Defined in: [defines.ts:120](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L120)
 
 ***
 
@@ -202,7 +202,7 @@ Defined in: [defines.ts:120](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **Rumble3Material**: `13`
 
-Defined in: [defines.ts:121](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L121)
+Defined in: [defines.ts:121](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L121)
 
 ***
 
@@ -210,7 +210,7 @@ Defined in: [defines.ts:121](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **Rumble4Material**: `14`
 
-Defined in: [defines.ts:122](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L122)
+Defined in: [defines.ts:122](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L122)
 
 ***
 
@@ -218,7 +218,7 @@ Defined in: [defines.ts:122](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **SandMaterial**: `23`
 
-Defined in: [defines.ts:132](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L132)
+Defined in: [defines.ts:132](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L132)
 
 ***
 
@@ -226,7 +226,7 @@ Defined in: [defines.ts:132](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **SurfaceNotInWorld**: `-1`
 
-Defined in: [defines.ts:106](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L106)
+Defined in: [defines.ts:106](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L106)
 
 ***
 
@@ -234,4 +234,4 @@ Defined in: [defines.ts:106](https://github.com/bengsfort/irsdk-node/blob/43c64b
 
 > **UndefinedMaterial**: `0`
 
-Defined in: [defines.ts:107](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L107)
+Defined in: [defines.ts:107](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L107)

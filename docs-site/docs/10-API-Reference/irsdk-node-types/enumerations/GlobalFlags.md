@@ -1,4 +1,4 @@
-Defined in: [defines.ts:307](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L307)
+Defined in: [defines.ts:307](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L307)
 
 Flags indicating session state.
 Represents `irsdk_Flags`.
@@ -9,7 +9,7 @@ Represents `irsdk_Flags`.
 
 > **Black**: `65536`
 
-Defined in: [defines.ts:342](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L342)
+Defined in: [defines.ts:342](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L342)
 
 Driver black flags - black flag for driver
 
@@ -19,7 +19,7 @@ Driver black flags - black flag for driver
 
 > **Blue**: `32`
 
-Defined in: [defines.ts:319](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L319)
+Defined in: [defines.ts:319](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L319)
 
 Global - Blue flag active
 
@@ -29,7 +29,7 @@ Global - Blue flag active
 
 > **Caution**: `16384`
 
-Defined in: [defines.ts:337](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L337)
+Defined in: [defines.ts:337](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L337)
 
 Global - Caution flag active
 
@@ -39,7 +39,7 @@ Global - Caution flag active
 
 > **CautionWaving**: `32768`
 
-Defined in: [defines.ts:339](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L339)
+Defined in: [defines.ts:339](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L339)
 
 Global - Caution flag being waved
 
@@ -49,7 +49,7 @@ Global - Caution flag being waved
 
 > **Checkered**: `1`
 
-Defined in: [defines.ts:309](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L309)
+Defined in: [defines.ts:309](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L309)
 
 Global - Checkered flag active
 
@@ -59,7 +59,7 @@ Global - Checkered flag active
 
 > **Crossed**: `128`
 
-Defined in: [defines.ts:323](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L323)
+Defined in: [defines.ts:323](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L323)
 
 Global - Crossed flag active
 
@@ -69,7 +69,7 @@ Global - Crossed flag active
 
 > **Debris**: `64`
 
-Defined in: [defines.ts:321](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L321)
+Defined in: [defines.ts:321](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L321)
 
 Global - Debris on track
 
@@ -79,7 +79,7 @@ Global - Debris on track
 
 > **Disqualify**: `131072`
 
-Defined in: [defines.ts:344](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L344)
+Defined in: [defines.ts:344](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L344)
 
 Driver black flags - driver disqualified
 
@@ -89,7 +89,7 @@ Driver black flags - driver disqualified
 
 > **DqScoringInvalid**: `2097152`
 
-Defined in: [defines.ts:352](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L352)
+Defined in: [defines.ts:352](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L352)
 
 Driver black flags - car is disqualified and scoring is disabled
 
@@ -99,7 +99,7 @@ Driver black flags - car is disqualified and scoring is disabled
 
 > **FiveToGo**: `4096`
 
-Defined in: [defines.ts:333](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L333)
+Defined in: [defines.ts:333](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L333)
 
 Global - Five laps left
 
@@ -109,7 +109,7 @@ Global - Five laps left
 
 > **Furled**: `524288`
 
-Defined in: [defines.ts:348](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L348)
+Defined in: [defines.ts:348](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L348)
 
 Driver black flags - Furled flag
 
@@ -119,7 +119,7 @@ Driver black flags - Furled flag
 
 > **Green**: `4`
 
-Defined in: [defines.ts:313](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L313)
+Defined in: [defines.ts:313](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L313)
 
 Global - Green flag active
 
@@ -129,7 +129,7 @@ Global - Green flag active
 
 > **GreenHeld**: `1024`
 
-Defined in: [defines.ts:329](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L329)
+Defined in: [defines.ts:329](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L329)
 
 Global - Green flag held
 
@@ -139,7 +139,7 @@ Global - Green flag held
 
 > **OneLapToGreen**: `512`
 
-Defined in: [defines.ts:327](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L327)
+Defined in: [defines.ts:327](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L327)
 
 Global - One lap left until green
 
@@ -149,7 +149,7 @@ Global - One lap left until green
 
 > **RandomWaving**: `8192`
 
-Defined in: [defines.ts:335](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L335)
+Defined in: [defines.ts:335](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L335)
 
 Global - Random waving active
 
@@ -159,7 +159,7 @@ Global - Random waving active
 
 > **Red**: `16`
 
-Defined in: [defines.ts:317](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L317)
+Defined in: [defines.ts:317](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L317)
 
 Global - Red flag active
 
@@ -169,7 +169,7 @@ Global - Red flag active
 
 > **Repair**: `1048576`
 
-Defined in: [defines.ts:350](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L350)
+Defined in: [defines.ts:350](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L350)
 
 Driver black flags - car must be repaired
 
@@ -179,7 +179,7 @@ Driver black flags - car must be repaired
 
 > **Servicible**: `262144`
 
-Defined in: [defines.ts:346](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L346)
+Defined in: [defines.ts:346](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L346)
 
 Driver black flags - car is allowed
 
@@ -189,7 +189,7 @@ Driver black flags - car is allowed
 
 > **StartGo**: `2147483648`
 
-Defined in: [defines.ts:361](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L361)
+Defined in: [defines.ts:361](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L361)
 
 Start lights - Lights go
 
@@ -199,7 +199,7 @@ Start lights - Lights go
 
 > **StartHidden**: `268435456`
 
-Defined in: [defines.ts:355](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L355)
+Defined in: [defines.ts:355](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L355)
 
 Start lights - Lights hidden
 
@@ -209,7 +209,7 @@ Start lights - Lights hidden
 
 > **StartReady**: `536870912`
 
-Defined in: [defines.ts:357](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L357)
+Defined in: [defines.ts:357](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L357)
 
 Start lights - Lights ready
 
@@ -219,7 +219,7 @@ Start lights - Lights ready
 
 > **StartSet**: `1073741824`
 
-Defined in: [defines.ts:359](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L359)
+Defined in: [defines.ts:359](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L359)
 
 Start lights - Lights set
 
@@ -229,7 +229,7 @@ Start lights - Lights set
 
 > **TenToGo**: `2048`
 
-Defined in: [defines.ts:331](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L331)
+Defined in: [defines.ts:331](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L331)
 
 Global - Ten more laps left
 
@@ -239,7 +239,7 @@ Global - Ten more laps left
 
 > **White**: `2`
 
-Defined in: [defines.ts:311](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L311)
+Defined in: [defines.ts:311](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L311)
 
 Global - White flag active
 
@@ -249,7 +249,7 @@ Global - White flag active
 
 > **Yellow**: `8`
 
-Defined in: [defines.ts:315](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L315)
+Defined in: [defines.ts:315](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L315)
 
 Global - Yellow flag active
 
@@ -259,6 +259,6 @@ Global - Yellow flag active
 
 > **YellowWaving**: `256`
 
-Defined in: [defines.ts:325](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L325)
+Defined in: [defines.ts:325](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L325)
 
 Global - Yellow flag waving

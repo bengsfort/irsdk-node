@@ -1,4 +1,4 @@
-Defined in: [defines.ts:497](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L497)
+Defined in: [defines.ts:497](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L497)
 
 Available chat command modes, to be used with message broadcasting.
 Represents `irsdk_ChatCommandMode`.
@@ -9,7 +9,7 @@ Represents `irsdk_ChatCommandMode`.
 
 > **BeginChat**: `1`
 
-Defined in: [defines.ts:501](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L501)
+Defined in: [defines.ts:501](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L501)
 
 Open up new chat window.
 
@@ -19,7 +19,7 @@ Open up new chat window.
 
 > **Cancel**: `3`
 
-Defined in: [defines.ts:505](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L505)
+Defined in: [defines.ts:505](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L505)
 
 Close chat.
 
@@ -29,7 +29,7 @@ Close chat.
 
 > **Macro**: `0`
 
-Defined in: [defines.ts:499](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L499)
+Defined in: [defines.ts:499](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L499)
 
 Number from 1-15, representing the chat macros.
 
@@ -39,6 +39,6 @@ Number from 1-15, representing the chat macros.
 
 > **Reply**: `2`
 
-Defined in: [defines.ts:503](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/defines.ts#L503)
+Defined in: [defines.ts:503](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/defines.ts#L503)
 
 Reply to last private chat.

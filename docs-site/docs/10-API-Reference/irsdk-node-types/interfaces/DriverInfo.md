@@ -1,4 +1,4 @@
-Defined in: [driver-info.ts:43](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L43)
+Defined in: [driver-info.ts:43](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L43)
 
 ## Properties
 
@@ -6,7 +6,7 @@ Defined in: [driver-info.ts:43](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverCarEngCylinderCount**: `number`
 
-Defined in: [driver-info.ts:52](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L52)
+Defined in: [driver-info.ts:52](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L52)
 
 ***
 
@@ -14,7 +14,7 @@ Defined in: [driver-info.ts:52](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverCarEstLapTime**: `number`
 
-Defined in: [driver-info.ts:65](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L65)
+Defined in: [driver-info.ts:65](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L65)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [driver-info.ts:65](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverCarFuelKgPerLtr**: `number`
 
-Defined in: [driver-info.ts:53](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L53)
+Defined in: [driver-info.ts:53](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L53)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [driver-info.ts:53](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverCarFuelMaxLtr**: `number`
 
-Defined in: [driver-info.ts:54](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L54)
+Defined in: [driver-info.ts:54](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L54)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [driver-info.ts:54](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverCarGearNeutral**: `number`
 
-Defined in: [driver-info.ts:57](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L57)
+Defined in: [driver-info.ts:57](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L57)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [driver-info.ts:57](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverCarGearNumForward**: `number`
 
-Defined in: [driver-info.ts:56](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L56)
+Defined in: [driver-info.ts:56](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L56)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [driver-info.ts:56](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverCarGearReverse**: `number`
 
-Defined in: [driver-info.ts:58](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L58)
+Defined in: [driver-info.ts:58](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L58)
 
 ***
 
@@ -62,7 +62,7 @@ Defined in: [driver-info.ts:58](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverCarIdleRPM**: `number`
 
-Defined in: [driver-info.ts:50](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L50)
+Defined in: [driver-info.ts:50](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L50)
 
 ***
 
@@ -70,7 +70,7 @@ Defined in: [driver-info.ts:50](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverCarIdx**: `number`
 
-Defined in: [driver-info.ts:44](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L44)
+Defined in: [driver-info.ts:44](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L44)
 
 ***
 
@@ -78,7 +78,7 @@ Defined in: [driver-info.ts:44](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverCarMaxFuelPct**: `number`
 
-Defined in: [driver-info.ts:55](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L55)
+Defined in: [driver-info.ts:55](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L55)
 
 ***
 
@@ -86,7 +86,7 @@ Defined in: [driver-info.ts:55](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverCarRedLine**: `number`
 
-Defined in: [driver-info.ts:51](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L51)
+Defined in: [driver-info.ts:51](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L51)
 
 ***
 
@@ -94,7 +94,7 @@ Defined in: [driver-info.ts:51](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverCarSLBlinkRPM**: `number`
 
-Defined in: [driver-info.ts:62](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L62)
+Defined in: [driver-info.ts:62](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L62)
 
 ***
 
@@ -102,7 +102,7 @@ Defined in: [driver-info.ts:62](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverCarSLFirstRPM**: `number`
 
-Defined in: [driver-info.ts:59](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L59)
+Defined in: [driver-info.ts:59](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L59)
 
 ***
 
@@ -110,7 +110,7 @@ Defined in: [driver-info.ts:59](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverCarSLLastRPM**: `number`
 
-Defined in: [driver-info.ts:61](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L61)
+Defined in: [driver-info.ts:61](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L61)
 
 ***
 
@@ -118,7 +118,7 @@ Defined in: [driver-info.ts:61](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverCarSLShiftRPM**: `number`
 
-Defined in: [driver-info.ts:60](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L60)
+Defined in: [driver-info.ts:60](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L60)
 
 ***
 
@@ -126,7 +126,7 @@ Defined in: [driver-info.ts:60](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverCarVersion**: `string`
 
-Defined in: [driver-info.ts:63](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L63)
+Defined in: [driver-info.ts:63](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L63)
 
 ***
 
@@ -134,7 +134,7 @@ Defined in: [driver-info.ts:63](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverHeadPosX**: `number`
 
-Defined in: [driver-info.ts:47](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L47)
+Defined in: [driver-info.ts:47](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L47)
 
 ***
 
@@ -142,7 +142,7 @@ Defined in: [driver-info.ts:47](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverHeadPosY**: `number`
 
-Defined in: [driver-info.ts:48](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L48)
+Defined in: [driver-info.ts:48](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L48)
 
 ***
 
@@ -150,7 +150,7 @@ Defined in: [driver-info.ts:48](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverHeadPosZ**: `number`
 
-Defined in: [driver-info.ts:49](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L49)
+Defined in: [driver-info.ts:49](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L49)
 
 ***
 
@@ -158,7 +158,7 @@ Defined in: [driver-info.ts:49](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverIncidentCount**: `number`
 
-Defined in: [driver-info.ts:70](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L70)
+Defined in: [driver-info.ts:70](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L70)
 
 ***
 
@@ -166,7 +166,7 @@ Defined in: [driver-info.ts:70](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverPitTrkPct**: `number`
 
-Defined in: [driver-info.ts:64](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L64)
+Defined in: [driver-info.ts:64](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L64)
 
 ***
 
@@ -174,7 +174,7 @@ Defined in: [driver-info.ts:64](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **Drivers**: [`Driver`](Driver.md)[]
 
-Defined in: [driver-info.ts:71](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L71)
+Defined in: [driver-info.ts:71](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L71)
 
 ***
 
@@ -182,7 +182,7 @@ Defined in: [driver-info.ts:71](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverSetupIsModified**: `number`
 
-Defined in: [driver-info.ts:67](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L67)
+Defined in: [driver-info.ts:67](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L67)
 
 ***
 
@@ -190,7 +190,7 @@ Defined in: [driver-info.ts:67](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverSetupLoadTypeName**: `string`
 
-Defined in: [driver-info.ts:68](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L68)
+Defined in: [driver-info.ts:68](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L68)
 
 ***
 
@@ -198,7 +198,7 @@ Defined in: [driver-info.ts:68](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverSetupName**: `string`
 
-Defined in: [driver-info.ts:66](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L66)
+Defined in: [driver-info.ts:66](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L66)
 
 ***
 
@@ -206,7 +206,7 @@ Defined in: [driver-info.ts:66](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverSetupPassedTech**: `number`
 
-Defined in: [driver-info.ts:69](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L69)
+Defined in: [driver-info.ts:69](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L69)
 
 ***
 
@@ -214,7 +214,7 @@ Defined in: [driver-info.ts:69](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **DriverUserID**: `number`
 
-Defined in: [driver-info.ts:45](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L45)
+Defined in: [driver-info.ts:45](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L45)
 
 ***
 
@@ -222,4 +222,4 @@ Defined in: [driver-info.ts:45](https://github.com/bengsfort/irsdk-node/blob/43c
 
 > **PaceCarIdx**: `number`
 
-Defined in: [driver-info.ts:46](https://github.com/bengsfort/irsdk-node/blob/43c64b9cbe3e5098afd8e262803e04b02d7d0a5d/packages/irsdk-node-types/src/driver-info.ts#L46)
+Defined in: [driver-info.ts:46](https://github.com/bengsfort/irsdk-node/blob/ed605e3e870d97f50850c55eb0b50a1bc8e88cac/packages/irsdk-node-types/src/driver-info.ts#L46)
