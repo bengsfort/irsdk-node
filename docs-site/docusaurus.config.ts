@@ -86,6 +86,24 @@ const config: Config = {
             },
           ],
         },
+
+        {
+          title: 'Site analytics',
+          items: [
+            {
+              html: `
+<a href="https://librecounter.org/referer/show" class="footer__link-item libre-counter-link">
+  <img
+    src="https://librecounter.org/counter.svg"
+    referrerpolicy="unsafe-url"
+    alt="Logo for librecounter"
+    class="librecounter-logo"
+  /> via LibreCounter
+</a>
+`,
+            },
+          ],
+        }
       ],
 
       copyright: `Copyright © ${new Date().getFullYear()} bengsfort`,
