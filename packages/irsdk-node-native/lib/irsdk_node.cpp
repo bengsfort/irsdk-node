@@ -5,10 +5,13 @@
 #include <napi-inl.h>
 #include <napi.h>
 #include <string.h>
+#include <string>
+#include <windows.h>
 
 using namespace irsdk_node;
 
 static const char* K_IRSDK_CLASS_EXPORT_NAME = "iRacingSdkNode";
+static const UINT K_IRSDK_SESSION_CODEPAGE = 28591; // ISO 8859-1
 
 // ---------------------------
 // Constructors
@@ -399,6 +402,9 @@ Napi::Value iRacingSdkNode::_napi_getSessionData(const Napi::CallbackInfo& aInfo
     if (session == NULL)
         return Napi::String::New(aInfo.Env(), "");
 
+    if (isIso8859_1Encoded(session))
+        return Napi::String::New(aInfo.Env(), iso8859_1ToUtf8(session));
+
     return Napi::String::New(aInfo.Env(), session);
 }
 
@@ -533,4 +539,34 @@ Napi::Object iRacingSdkNode::_getTelemetryVarByIndex(const Napi::Env aEnv, int a
 
     telemVar.Set("value", entryVal);
     return telemVar;
+}
+
+static bool isIso8859_1Encoded(const char* aInput)
+{
+    return strstr(aInput, "8859") != NULL;
+}
+
+static std::string iso8859_1ToUtf8(const char* aInput)
+{
+    if (aInput == NULL || aInput[0] == '\0')
+        return std::string();
+
+    int wideLen = MultiByteToWideChar(K_IRSDK_SESSION_CODEPAGE, 0, aInput, -1, NULL, 0);
+    if (wideLen <= 0)
+        return std::string(aInput);
+
+    std::wstring wide(wideLen, L'\0');
+    MultiByteToWideChar(K_IRSDK_SESSION_CODEPAGE, 0, aInput, -1, &wide[0], wideLen);
+
+    int utf8Len = WideCharToMultiByte(CP_UTF8, 0, wide.c_str(), -1, NULL, 0, NULL, NULL);
+    if (utf8Len <= 0)
+        return std::string(aInput);
+
+    std::string utf8(utf8Len, '\0');
+    WideCharToMultiByte(CP_UTF8, 0, wide.c_str(), -1, &utf8[0], utf8Len, NULL, NULL);
+
+    if (!utf8.empty() && utf8.back() == '\0')
+        utf8.pop_back();
+
+    return utf8;
 }
