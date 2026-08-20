@@ -27,6 +27,8 @@ export interface WeekendOptions {
   HardcoreLevel: number;
   NumJokerLaps: number;
   IncidentLimit: string;
+  IncidentWarningInitialLimit: string;
+  IncidentWarningSubsequentLimit: string;
   FastRepairsLimit: number;
   GreenWhiteCheckeredLimit: number;
 }
@@ -36,6 +38,7 @@ export interface TelemetryOptions {
 }
 
 export interface WeekendInfo {
+  Encoding: 'ISO_8859_1' | 'UTF_8';
   TrackName: string;
   TrackID: number;
   TrackLength: string;
@@ -44,6 +47,7 @@ export interface WeekendInfo {
   TrackDisplayShortName: string;
   TrackConfigName: string | null;
   TrackCity: string;
+  TrackState: string;
   TrackCountry: string;
   TrackAltitude: string;
   TrackLatitude: string;
@@ -51,6 +55,8 @@ export interface WeekendInfo {
   TrackNorthOffset: string;
   TrackNumTurns: number;
   TrackPitSpeedLimit: string;
+  TrackPaceSpeed: string;
+  TrackNumPitStalls: number;
   TrackType: string;
   TrackDirection: string;
   /**
@@ -74,6 +80,8 @@ export interface WeekendInfo {
   TrackWindDir: string;
   TrackRelativeHumidity: string;
   TrackFogLevel: string;
+  /** String representing a percentage (ie. 0 %) */
+  TrackPrecipitation: string;
   TrackCleanup: number;
   TrackDynamicTrack: number;
   TrackVersion: string;
@@ -98,6 +106,7 @@ export interface WeekendInfo {
   BuildType: string;
   BuildTarget: string;
   BuildVersion: string;
+  RaceFarm: string;
   WeekendOptions: WeekendOptions;
   TelemetryOptions: TelemetryOptions;
 }
