@@ -71,6 +71,7 @@ private:
     Napi::Value _napi_prop_getLogLevel(const Napi::CallbackInfo& aInfo);
     void _napi_prop_setLogLevel(const Napi::CallbackInfo& aInfo, const Napi::Value& aValue);
     Napi::Value _napi_prop_getIsMocked(const Napi::CallbackInfo& aInfo);
+    Napi::Value _napi_prop_getIsUtf8SessionString(const Napi::CallbackInfo& aInfo);
 
     // Methods
     // Control
@@ -104,6 +105,7 @@ private:
     int _sessionStatusID;
     int _lastSessionCt;
     const char* _sessionData;
+    bool _isUtf8SessionData;
     Logger _logger;
 };
 

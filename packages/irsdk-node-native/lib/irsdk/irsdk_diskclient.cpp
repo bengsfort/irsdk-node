@@ -25,14 +25,12 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-#include <stdio.h>
 #include <string.h>
-#include <time.h>
 
-#include <assert.h>
-#include "./irsdk_defines.h"
-#include "./yaml_parser.h"
-#include "./irsdk_diskclient.h"
+#include "irsdk_defines.h"
+#include "irsdk_diskclient.h"
+#include <cassert>
+#include <cstdio>
 
 #pragma warning(disable:4996)
 
@@ -482,6 +480,21 @@ int irsdkDiskClient::getSessionStrVal(const char *path, char *val, int valLen)
 
 	return 0;
 }
+
+bool irsdkDiskClient::isSessionStrUTF8()
+{
+	const int MAX_STR = 1024;
+	char tstr[MAX_STR];
+
+	if(getSessionStrVal("WeekendInfo:Encoding:", tstr, MAX_STR)) 
+	{
+		if(0 == strncmp(tstr, "UTF8", MAX_STR))
+			return true;
+	}
+
+	return false;
+}
+
 
 //-----------------
 
