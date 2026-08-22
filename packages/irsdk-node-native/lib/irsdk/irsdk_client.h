@@ -4,14 +4,14 @@ All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
-	* Redistributions of source code must retain the above copyright
-	  notice, this list of conditions and the following disclaimer.
-	* Redistributions in binary form must reproduce the above copyright
-	  notice, this list of conditions and the following disclaimer in the
-	  documentation and/or other materials provided with the distribution.
-	* Neither the name of iRacing.com Motorsport Simulations nor the
-	  names of its contributors may be used to endorse or promote products
-	  derived from this software without specific prior written permission.
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+    * Neither the name of iRacing.com Motorsport Simulations nor the
+      names of its contributors may be used to endorse or promote products
+      derived from this software without specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
@@ -25,6 +25,7 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+#include "irsdk_defines.h"
 #ifndef IRSDKCLIENT_H
 #define IRSDKCLIENT_H
 
@@ -43,30 +44,30 @@ public:
 	bool isConnected();
 	int getStatusID() { return m_statusID; }
 
-	int getVarIdx(const char* name);
+	int getVarIdx(const char*name);
 
 	// what is the base type of the data
 	// returns irsdk_VarType as int so we don't depend on irsdk_defines.h
 	int getVarType(int idx);
-	int getVarType(const char* name) { return getVarType(getVarIdx(name)); }
+	int getVarType(const char *name) { return getVarType(getVarIdx(name)); }
 
 	// how many elements in array, or 1 if not an array
 	int getVarCount(int idx);
-	int getVarCount(const char* name) { return getVarCount(getVarIdx(name)); }
+	int getVarCount(const char *name) { return getVarCount(getVarIdx(name)); }
 
 	// idx is the variables index, entry is the array offset, or 0 if not an array element
 	// will convert data to requested type
 	bool getVarBool(int idx, int entry = 0);
-	bool getVarBool(const char* name, int entry = 0) { return getVarBool(getVarIdx(name), entry); }
+	bool getVarBool(const char *name, int entry = 0) { return getVarBool(getVarIdx(name), entry); }
 
 	int getVarInt(int idx, int entry = 0);
-	int getVarInt(const char* name, int entry = 0) { return getVarInt(getVarIdx(name), entry); }
-
+	int getVarInt(const char *name, int entry = 0) { return getVarInt(getVarIdx(name), entry); }
+	
 	float getVarFloat(int idx, int entry = 0);
-	float getVarFloat(const char* name, int entry = 0) { return getVarFloat(getVarIdx(name), entry); }
+	float getVarFloat(const char *name, int entry = 0) { return getVarFloat(getVarIdx(name), entry); }
 
 	double getVarDouble(int idx, int entry = 0);
-	double getVarDouble(const char* name, int entry = 0) { return getVarDouble(getVarIdx(name), entry); }
+	double getVarDouble(const char *name, int entry = 0) { return getVarDouble(getVarIdx(name), entry); }
 
 	//---
 
@@ -74,14 +75,18 @@ public:
 	int getSessionCt() { return irsdk_getSessionInfoStrUpdate(); }
 
 	// has string changed since we last read any values from it
-	bool wasSessionStrUpdated() { return m_lastSessionCt != getSessionCt(); }
+	bool wasSessionStrUpdated() { return m_lastSessionCt != getSessionCt(); } 
 
 	// pars string for individual value, 1 success, 0 failure, -n minimum buffer size
 	//****Note, this is a linear parser, so it is slow!
-	int getSessionStrVal(const char* path, char* val, int valLen);
+	int getSessionStrVal(const char *path, char *val, int valLen);
+
+	// if true, the session string is in UTF8 format, otherwise it is the old iso-8859-1 format
+	//****Note, this will return false if we are not yet connected to the sim
+	bool isSessionStrUTF8();
 
 	// get the whole string
-	const char* getSessionStr();
+	const char *getSessionStr();
 
 protected:
 
@@ -96,13 +101,13 @@ protected:
 
 	void shutdown();
 
-	char* m_data;
+	char *m_data;
 	int m_nData;
 	int m_statusID;
 
 	int m_lastSessionCt;
 
-	static irsdkClient* m_instance;
+	static irsdkClient *m_instance;
 };
 
 
@@ -112,9 +117,9 @@ class irsdkCVar
 {
 public:
 	irsdkCVar();
-	irsdkCVar(const char* name);
+	irsdkCVar(const char *name);
 
-	void setVarName(const char* name);
+	void setVarName(const char *name);
 
 	// returns irsdk_VarType as int so we don't depend on irsdk_defines.h
 	int getType();

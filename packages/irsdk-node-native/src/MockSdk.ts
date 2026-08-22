@@ -28,6 +28,7 @@ let mockSession: string | null = null;
 export class MockSDK implements INativeSDK {
   public currDataVersion = 1;
   public isMocked = true;
+  public isUtf8SessionString = false;
   public enableLogging = false;
   public logLevel: LogLevel = LogLevel.None;
   private _isRunning = false;
@@ -70,8 +71,8 @@ export class MockSDK implements INativeSDK {
     return this._isRunning && !dataNotReady;
   }
 
-  public getSessionData(): string {
-    return mockSession ?? '';
+  public getSessionData(): Buffer {
+    return Buffer.from(mockSession ?? '', 'latin1');
   }
 
   public getSessionConnectionID(): number {

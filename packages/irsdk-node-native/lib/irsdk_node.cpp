@@ -1,7 +1,6 @@
 #include "./irsdk_node.h"
 #include "./irsdk/irsdk_defines.h"
 #include "./logger.h"
-#include <cstdio>
 #include <napi-inl.h>
 #include <napi.h>
 #include <string.h>
@@ -9,6 +8,15 @@
 using namespace irsdk_node;
 
 static const char* K_IRSDK_CLASS_EXPORT_NAME = "iRacingSdkNode";
+
+// ---------------------------
+// Helpers
+// ---------------------------
+
+// Check if the given string contains "ISO_8859". This should only occur when irsdkUTF8SessionStr is set to 0,
+// which would cause the WeekendInfo.Encoding value to be "ISO_8859_1".
+// See: https://github.com/bengsfort/irsdk-node/issues/54
+static bool irsdkIsStrIso8859_1Encoded(const char* aInput) { return strstr(aInput, "ISO_8859") != NULL; };
 
 // ---------------------------
 // Constructors
@@ -31,6 +39,7 @@ Napi::Object iRacingSdkNode::Init(Napi::Env aEnv, Napi::Object aExports)
               &iRacingSdkNode::_napi_prop_setLogLevel
           ),
           InstanceAccessor<&iRacingSdkNode::_napi_prop_getIsMocked>("isMocked"),
+          InstanceAccessor<&iRacingSdkNode::_napi_prop_getIsUtf8SessionString>("isUtf8SessionString"),
 
           // Methods
           // Control
@@ -66,6 +75,7 @@ iRacingSdkNode::iRacingSdkNode(const Napi::CallbackInfo& aInfo)
     , _lastSessionCt(-1)
     , _sessionData(NULL)
     , _logger(irsdk_node::LogLevel_None)
+    , _isUtf8SessionData(false)
 { }
 
 // Internal implementation ----------------------------------------------------
@@ -155,6 +165,7 @@ const char* iRacingSdkNode::getSessionStr()
 
         _lastSessionCt = latestUpdate;
         _sessionData = irsdk_getSessionInfoStr();
+        _isUtf8SessionData = irsdkIsStrIso8859_1Encoded(_sessionData);
     } else {
         _logger.debug("Session data is valid, re-using cached\n");
     }
@@ -232,6 +243,11 @@ void iRacingSdkNode::_napi_prop_setLogLevel(const Napi::CallbackInfo& aInfo, con
 Napi::Value iRacingSdkNode::_napi_prop_getIsMocked(const Napi::CallbackInfo& aInfo)
 {
     return Napi::Boolean::New(aInfo.Env(), false);
+}
+
+Napi::Value iRacingSdkNode::_napi_prop_getIsUtf8SessionString(const Napi::CallbackInfo& aInfo)
+{
+    return Napi::Boolean::New(aInfo.Env(), _isUtf8SessionData);
 }
 
 // Instance implementations
@@ -396,10 +412,11 @@ Napi::Value iRacingSdkNode::_napi_getSessionData(const Napi::CallbackInfo& aInfo
 {
     auto session = getSessionStr();
 
-    if (session == NULL)
-        return Napi::String::New(aInfo.Env(), "");
+    if (session == NULL) {
+        return Napi::Buffer<char>::New(aInfo.Env(), 0);
+    }
 
-    return Napi::String::New(aInfo.Env(), session);
+    return Napi::Buffer<char>::Copy(aInfo.Env(), session, strlen(session));
 }
 
 Napi::Value iRacingSdkNode::_napi_getTelemetryVar(const Napi::CallbackInfo& aInfo)

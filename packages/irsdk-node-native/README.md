@@ -1,6 +1,6 @@
 # @irsdk-node/native
 
-_Currently using **iRacing SDK v1.19**. You can see the latest version of the SDK [on the forums](https://forums.iracing.com/discussion/62/iracing-sdk/p1)._
+_Currently using **iRacing SDK v1.20**. You can see the latest version of the SDK [on the forums](https://forums.iracing.com/discussion/62/iracing-sdk/p1)._
 
 This is the native bindings package for irsdk-node. This provides near 1:1 bindings to the C++ iRacing SDK, and is consumed as a dependency of [irsdk-node](https://github.com/bengsfort/irsdk-node/tree/main/packages/irsdk-node), which provides a handy little wrapper around the API to make it nicer to use and avoid boilerplating.
 
@@ -28,12 +28,11 @@ Then you can use the SDK bindings directly.
 ```ts
 import { NativeSDK } from '@irsdk-node/native';
 import {
-    SessionData,
     TelemetryVarList,
     TelemetryVariable,
     BroadcastMessages,
     TelemetryCommand,
-    } from '@irsdk-node/types';
+} from '@irsdk-node/types';
 
 const sdk = new NativeSDK();
 
@@ -50,14 +49,24 @@ if (!sdk.startSDK()) {
 sdk.broadcast(BroadcastMessages.TelemCommand, TelemetryCommand.Start);
 
 // Grab data from the SDK.
-const TICK_RATE = 1 / 60; // 60fps, the max
+const TICK_RATE = 16; // 16ms / ~60fps, the max
 if (sdk.waitForData(TICK_RATE)) {
-    // This is a YAML string of more static data. Every time this changes,
+
+    // This is a buffer of a YAML string of static data. Every time this changes,
     // sdk.currDataVersion will be incremented by 1. -1 is the default value.
     //
     // This object is BIG. It is recommended to only fetch when currDataVersion
     // changes to avoid performance issues.
-    const sessionData: SessionData = sdk.getSessionData();
+    const sessionBuf = sdk.getSessionData();
+
+    // The buffer can be converted into a usable string, but the encoding of the
+    // string configurable on the users side via a property in app.ini.
+    //
+    // Make sure to check if the session string is in utf-8 or iso-8859-1 when
+    // converting to a string.
+    const sessionYaml = sessionBuf.toString(
+      sdk.isUtf8SessionString ? 'utf8' : 'latin1'
+    );
 
     // Telemetry needs to be massaged using var.varType to their correct types,
     // for example, varType 4 (float32) should be parsed as Float32Array.
@@ -74,6 +83,21 @@ if (sdk.waitForData(TICK_RATE)) {
 // Close the SDK once you are done.
 sdk.stopSDK();
 ```
+
+### Note about session data format
+
+As of SDK v1.20, the session data string was changed from `utf-8` encoding to
+defaulting to `ISO-8859-1` encoding, known as `latin1` encoding in Node.js. This
+is configurable by each user via their app.ini config on their machine
+(`irsdkUTF8SessionStr`). From the SDK side, the encoding is only exposed via
+the very same session data string.
+
+To simplify handling this, during internal caching of the session data string
+the native side will search for this encoding value and store whether it is in
+utf-8, exposed as `sdk.isUtf8SessionString`. To prevent mangling the data, the
+raw session data string is sent to the JS as a Buffer, which can simply be converted
+to a string via `.toString()`. Make sure to check the utf8 flag while doing this
+to ensure you convert with the correct encoding.
 
 ## Distribution
 

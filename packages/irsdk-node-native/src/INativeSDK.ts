@@ -76,6 +76,12 @@ export interface INativeSDK {
   readonly isMocked: boolean;
 
   /**
+   * Flag indicating if the current SDK Session Data string is in UTF-8 format.
+   * This is useful for determining how to parse the session data string.
+   */
+  readonly isUtf8SessionString: boolean;
+
+  /**
    * Flag indicating whether to enable logging or not. `true` will set the LogLevel
    * to `Error`, while `false` will set it to `None`. Do not use.
    *
@@ -142,19 +148,22 @@ export interface INativeSDK {
   waitForData(timeout?: number): boolean;
 
   /**
-   * Returns the latest version of the Session Data string as raw YAML. This should
+   * Returns the latest version of the Session Data string as a raw buffer. This should
    * only be called after {@link INativeSDK.waitForData} has successfully retrieved
    * data from iRacing.
    *
    * @remarks
    *
    * This internally caches the session data version and will automatically fetch
-   * and return the latest version if the cached data is out of date. The string
-   * returned from this can be assumed to be the most up to date data.
+   * and return the latest version if the cached data is out of date. The buffer
+   * returned from this can be assumed to be the most up to date data. Determine
+   * how to parse the string using {@link INativeSDK.isUtf8SessionString}. If
+   * {@link INativeSDK.isUtf8SessionString} is true, the encoding is `utf-8`.
+   * Otherwise, it is `latin1` (`ISO-8859-1`).
    *
-   * @returns The current session data as YAML, or an empty string if none available.
+   * @returns The current session data as a buffer (empty if none).
    */
-  getSessionData(): string;
+  getSessionData(): Buffer;
 
   /**
    * Returns an object containing the current value of every available telemetry
