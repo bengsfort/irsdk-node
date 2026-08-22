@@ -11,7 +11,7 @@ on:
 
 env:
   CI: true
-  NODE_VERSION: 20
+  NODE_VERSION: 24
 
 jobs:
   build-types:
@@ -22,7 +22,7 @@ jobs:
       - uses: ./.github/actions/build-library
         with:
           package-name: "@irsdk-node/types"
-          node-version: 20
+          node-version: 24
 
   build-native-ts:
     name: Build @irsdk-node/native
@@ -33,7 +33,7 @@ jobs:
       - uses: ./.github/actions/build-library
         with:
           package-name: "@irsdk-node/native"
-          node-version: 20
+          node-version: 24
 
   format-native-modules:
     name: Formatting check @irsdk-node/native
@@ -44,7 +44,7 @@ jobs:
       - name: Setup PNPM
         uses: ./.github/actions/setup-packages
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Setup clang-format
         run: |
@@ -76,7 +76,7 @@ jobs:
       - uses: ./.github/actions/build-native-library
         with:
           package-name: "@irsdk-node/native"
-          node-version: 20
+          node-version: 24
           artifact-dir: ./packages/irsdk-node-native/prebuilds
 
   build-core-lib:
@@ -90,4 +90,4 @@ jobs:
       - uses: ./.github/actions/build-library
         with:
           package-name: "irsdk-node"
-          node-version: 20
+          node-version: 24

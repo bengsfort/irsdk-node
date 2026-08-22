@@ -157,7 +157,9 @@ export interface INativeSDK {
    * This internally caches the session data version and will automatically fetch
    * and return the latest version if the cached data is out of date. The buffer
    * returned from this can be assumed to be the most up to date data. Determine
-   * how to parse the string using {@link INativeSDK.isUtf8SessionString}.
+   * how to parse the string using {@link INativeSDK.isUtf8SessionString}. If
+   * {@link INativeSDK.isUtf8SessionString} is true, the encoding is `utf-8`.
+   * Otherwise, it is `latin1` (`ISO-8859-1`).
    *
    * @returns The current session data as a buffer (empty if none).
    */

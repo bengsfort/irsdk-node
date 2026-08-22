@@ -35,6 +35,6 @@ jobs:
       types: ${{ inputs.types }}
       lib: ${{ inputs.lib }}
       dry-run: ${{ inputs.dry-run }}
-      node-version: 20
+      node-version: 24
     secrets:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

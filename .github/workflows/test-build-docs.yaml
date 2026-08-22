@@ -19,7 +19,7 @@ jobs:
       - name: Setup PNPM
         uses: ./.github/actions/setup-packages
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Detect changed packages
         id: pkg_change_check
@@ -54,7 +54,7 @@ jobs:
       - name: Setup PNPM
         uses: ./.github/actions/setup-packages
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Build package type definitions
         run: pnpm run --filter "./packages/**" build:types
